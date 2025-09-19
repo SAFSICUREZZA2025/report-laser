@@ -1,0 +1,30 @@
+:root { --bg:#0b1c2c; --brand:#2f89ff; --card:#ffffff; --ink:#0e1a24; }
+*{box-sizing:border-box}
+body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#f3f6fb; color:#14202b;}
+header{ background:#0b1c2c; color:#fff; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; }
+.tools .tool{ margin-left:6px; padding:8px 10px; border-radius:8px; border:0; background:#19324a; color:#fff; cursor:pointer }
+.tools .tool.active{ background:#2f89ff; }
+main{max-width:1100px; margin:20px auto; padding:0 12px;}
+.doc{background:#fff; padding:16px; border-radius:10px; margin-bottom:18px; box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.page{border:1px solid #ddd; border-radius:8px; margin:12px 0; position:relative; background:#fff;}
+.canvas-holder canvas{width:100%; display:block;}
+.overlay{position:absolute; inset:0;}
+.field{position:absolute; border:1px dashed var(--brand); background:#fff; min-width:80px; min-height:24px; padding:2px 4px;}
+.checkbox{position:absolute; width:20px; height:20px; border:2px solid var(--brand); background:#fff;}
+.checkbox.checked{background:var(--brand);}
+.btn{background:#eef4ff; border:1px solid #d7e5ff; color:#0b3d91; border-radius:8px; padding:8px 12px; cursor:pointer}
+.btn-sec{background:#fff; border:1px solid #ccc; border-radius:8px; padding:6px 10px; cursor:pointer}
+.btn-primary{background:#2f89ff; color:#fff; border:0; border-radius:8px; padding:10px 16px; cursor:pointer}
+.photos{display:flex; align-items:center; gap:10px}
+.thumbs{display:flex; gap:6px; flex-wrap:wrap}
+.thumbs .thumb{width:110px; height:80px; object-fit:cover; border:1px solid #ddd; border-radius:6px}
+.notes-sign{background:#fff; padding:16px; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,.06);}
+textarea{width:100%; min-height:120px; padding:10px; border:1px solid #d9d9d9; border-radius:8px;}
+.sign-row{display:grid; grid-template-columns:1.3fr 1fr; gap:14px; align-items:start}
+.sign-box{border:1px dashed #ccc; padding:10px; border-radius:8px;}
+#sign{width:100%; height:200px; border:1px solid #ddd; border-radius:6px; background:#fff;}
+.statement{font-size:.95rem; color:#334}
+.final-actions{text-align:center; margin:20px 0}
+footer{color:#577; text-align:center; margin:12px 0}
+body.signing{touch-action:none; overscroll-behavior:none;}
+

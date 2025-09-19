@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Editor PDF – Modelli integrati v2.1</title>
+  <link rel="manifest" href="manifest.json?v=2">
+  <meta name="theme-color" content="#2f89ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css?v=2" />
+  <script src="libs/pdfjs/pdf.js" defer></script>
+  <script defer>
+    window.addEventListener("error", function(e){
+      if (String(e.filename||"").includes("libs/pdfjs/pdf.js")) {
+        var s = document.createElement("script");
+        s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+        document.head.appendChild(s);
+      }
+    }, true);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="script.js?v=2" defer></script>
+  <style>
+    .ver{position:fixed;right:10px;bottom:10px;font-size:12px;color:#9db6e6}
+    .banner{position:sticky;top:0;background:#062041;color:#9db6e6;padding:6px 10px;border-bottom:1px solid #1a3350}
+    .bigbtn{display:inline-block;margin-right:8px}
+  </style>
+</head>
+<body>
+<div class="banner">Build: <strong>v2.1</strong> • Questa versione deve mostrare <b>Carica PDF 1</b> e <b>Carica PDF 2</b>.</div>
+<header>
+  <h1>Editor PDF – Modelli integrati</h1>
+</header>
+
+<main>
+  <section class="controls">
+    <div class="row">
+      <div class="col">
+        <h3>Documento 1</h3>
+        <div class="btns">
+          <button id="btn-file1" class="bigbtn">Carica PDF 1</button>
+          <button id="autoDoc1" disabled>Evidenzia → Campi</button>
+        </div>
+        <input id="file1" type="file" accept="application/pdf" hidden>
+      </div>
+      <div class="col">
+        <h3>Documento 2</h3>
+        <div class="btns">
+          <button id="btn-file2" class="bigbtn">Carica PDF 2</button>
+          <button id="autoDoc2" disabled>Evidenzia → Campi</button>
+        </div>
+        <input id="file2" type="file" accept="application/pdf" hidden>
+      </div>
+    </div>
+
+    <div class="row tools">
+      <button class="tool active" id="tool-text">Testo</button>
+      <button class="tool" id="tool-check">✔</button>
+      <button class="tool" id="tool-move">Sposta</button>
+      <button class="tool" id="tool-del">Elimina</button>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label class="lbl">Foto sezione 1</label>
+        <input id="photos1" type="file" accept="image/*" multiple capture="environment">
+        <div id="photos1-preview" class="preview"></div>
+      </div>
+      <div class="col">
+        <label class="lbl">Foto sezione 2</label>
+        <input id="photos2" type="file" accept="image/*" multiple capture="environment">
+        <div id="photos2-preview" class="preview"></div>
+      </div>
+    </div>
+
+    <div class="row notes">
+      <label for="notes">Note</label>
+      <textarea id="notes" rows="5" placeholder="Annotazioni operative..."></textarea>
+    </div>
+
+    <div class="row sign">
+      <div class="col">
+        <label>Firma Datore di Lavoro</label>
+        <canvas id="sign" width="820" height="180"></canvas>
+        <div class="btns"><button id="sign-clear">Pulisci firma</button></div>
+      </div>
+    </div>
+
+    <div class="row final">
+      <button id="make-pdf">Genera PDF Unico</button>
+    </div>
+  </section>
+
+  <section class="docs">
+    <div id="doc1" class="doc"></div>
+    <div id="doc2" class="doc"></div>
+  </section>
+</main>
+
+<footer>
+  <small>v2.1 • Offline dopo primo avvio. Su iOS: aggiungi alla Home.</small>
+</footer>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker-v3.js?v=3");
+    });
+  }
+</script>
+<div class="ver">SW v3 • cache-busting attivo</div>
+</body>
+</html>
