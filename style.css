@@ -27,3 +27,20 @@ section.docs{overflow:auto;max-height:calc(100dvh - 24px)}
 footer{padding:10px 16px;color:#9db6e6}
 .signing{cursor:crosshair}
 .bigbtn{min-width:130px}
+.field{
+  position:absolute;
+  min-width:120px;
+  min-height:22px;
+  border:1px dashed #2f89ff;
+  border-radius:6px;
+  padding:2px 6px;
+  background:rgba(255,255,255,0.75);   /* leggibile su evidenziatore */
+  color:#111;                           /* testo scuro */
+  font-size:14px;
+  line-height:1.25;
+  outline:none;
+}
+.field:focus{
+  background:rgba(255,255,255,0.92);
+  box-shadow:0 0 0 2px rgba(47,137,255,.25) inset;
+}
