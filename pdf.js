@@ -1,339 +1,339 @@
 /**
- * @licstart Di seguito è riportato l'intero avviso di licenza per il
- * Codice JavaScript in questa pagina
+ * @licstart The following is the entire license notice for the
+ * JavaScript code in this page
  *
  * Copyright 2023 Mozilla Foundation
  *
- * Concesso in licenza secondo i termini della licenza Apache, versione 2.0 (la "Licenza");
- * Non è possibile utilizzare questo file se non in conformità con la licenza.
- * È possibile ottenere una copia della licenza presso
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * Salvo quanto richiesto dalla legge applicabile o concordato per iscritto, il software
- * distribuito sotto la licenza è distribuito "COSÌ COM'È",
- * SENZA GARANZIE O CONDIZIONI DI ALCUN TIPO, esplicite o implicite.
- * Consultare la Licenza per la lingua specifica che regola i permessi e
- * limitazioni previste dalla Licenza.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
- * @licend Quanto sopra è l'intero avviso di licenza per il
- * Codice JavaScript in questa pagina
+ * @licend The above is the entire license notice for the
+ * JavaScript code in this page
  */
 
-(funzione webpackUniversalModuleDefinition(root, factory) {
+(function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		modulo.esportazioni = root.pdfjsLib = factory();
-	altrimenti se(tipo di definizione === 'funzione' && definisci.amd)
+		module.exports = root.pdfjsLib = factory();
+	else if(typeof define === 'function' && define.amd)
 		define("pdfjs-dist/build/pdf", [], () => { return (root.pdfjsLib = factory()); });
-	altrimenti se(tipo di esportazioni === 'oggetto')
-		esportazioni["pdfjs-dist/build/pdf"] = root.pdfjsLib = factory();
-	altro
+	else if(typeof exports === 'object')
+		exports["pdfjs-dist/build/pdf"] = root.pdfjsLib = factory();
+	else
 		root["pdfjs-dist/build/pdf"] = root.pdfjsLib = factory();
-})(globaleQuesto, () => {
-restituisci /******/ (() => { // webpackBootstrap
-/******/ "usa rigoroso";
-/******/ var __webpack_modules__ = ([
+})(globalThis, () => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
 exports.VerbosityLevel = exports.Util = exports.UnknownErrorException = exports.UnexpectedResponseException = exports.TextRenderingMode = exports.RenderingIntentFlag = exports.PromiseCapability = exports.PermissionFlag = exports.PasswordResponses = exports.PasswordException = exports.PageActionEventType = exports.OPS = exports.MissingPDFException = exports.MAX_IMAGE_SIZE_TO_CACHE = exports.LINE_FACTOR = exports.LINE_DESCENT_FACTOR = exports.InvalidPDFException = exports.ImageKind = exports.IDENTITY_MATRIX = exports.FormatError = exports.FeatureTest = exports.FONT_IDENTITY_MATRIX = exports.DocumentActionEventType = exports.CMapCompressionType = exports.BaseException = exports.BASELINE_FACTOR = exports.AnnotationType = exports.AnnotationReplyType = exports.AnnotationPrefix = exports.AnnotationMode = exports.AnnotationFlag = exports.AnnotationFieldFlag = exports.AnnotationEditorType = exports.AnnotationEditorPrefix = exports.AnnotationEditorParamsType = exports.AnnotationBorderStyleType = exports.AnnotationActionEventType = exports.AbortException = void 0;
-esportazioni.asserzione = asserzione;
-esportazioni.bytesToString = bytesToString;
-esportazioni.createValidAbsoluteUrl = createValidAbsoluteUrl;
+exports.assert = assert;
+exports.bytesToString = bytesToString;
+exports.createValidAbsoluteUrl = createValidAbsoluteUrl;
 exports.getModificationDate = getModificationDate;
-esportazioni.getUuid = getUuid;
-esportazioni.getVerbosityLevel = getVerbosityLevel;
-exports.info = informazioni;
-esportazioni.isArrayBuffer = isArrayBuffer;
-esportazioni.isArrayEqual = isArrayEqual;
-esportazioni.isNodeJS = void 0;
-esportazioni.normalizeUnicode = normalizeUnicode;
-esportazioni.objectFromMap = objectFromMap;
-esportazioni.objectSize = objectSize;
-esportazioni.setVerbosityLevel = setVerbosityLevel;
-esportazioni.ombra = ombra;
-esportazioni.string32 = string32;
-esportazioni.stringToBytes = stringToBytes;
-esportazioni.stringToPDFString = stringToPDFString;
-esportazioni.stringToUTF8String = stringToUTF8String;
-exports.unreachable = irraggiungibile;
-esportazioni.utf8StringToString = utf8StringToString;
-exports.warn = avvisa;
-const isNodeJS = typeof process === "oggetto" && processo + "" === "[oggetto processo]" && !process.versions.nw && !(process.versions.electron && process.type && process.type !== "browser");
-esportazioni.isNodeJS = isNodeJS;
+exports.getUuid = getUuid;
+exports.getVerbosityLevel = getVerbosityLevel;
+exports.info = info;
+exports.isArrayBuffer = isArrayBuffer;
+exports.isArrayEqual = isArrayEqual;
+exports.isNodeJS = void 0;
+exports.normalizeUnicode = normalizeUnicode;
+exports.objectFromMap = objectFromMap;
+exports.objectSize = objectSize;
+exports.setVerbosityLevel = setVerbosityLevel;
+exports.shadow = shadow;
+exports.string32 = string32;
+exports.stringToBytes = stringToBytes;
+exports.stringToPDFString = stringToPDFString;
+exports.stringToUTF8String = stringToUTF8String;
+exports.unreachable = unreachable;
+exports.utf8StringToString = utf8StringToString;
+exports.warn = warn;
+const isNodeJS = typeof process === "object" && process + "" === "[object process]" && !process.versions.nw && !(process.versions.electron && process.type && process.type !== "browser");
+exports.isNodeJS = isNodeJS;
 const IDENTITY_MATRIX = [1, 0, 0, 1, 0, 0];
-esportazioni.IDENTITY_MATRIX = IDENTITY_MATRIX;
-const FONT_IDENTITY_MATRIX = [0,001, 0, 0, 0,001, 0, 0];
-esportazioni.FONT_IDENTITY_MATRIX = FONT_IDENTITY_MATRIX;
+exports.IDENTITY_MATRIX = IDENTITY_MATRIX;
+const FONT_IDENTITY_MATRIX = [0.001, 0, 0, 0.001, 0, 0];
+exports.FONT_IDENTITY_MATRIX = FONT_IDENTITY_MATRIX;
 const MAX_IMAGE_SIZE_TO_CACHE = 10e6;
-esportazioni.MAX_IMAGE_SIZE_TO_CACHE = MAX_IMAGE_SIZE_TO_CACHE;
+exports.MAX_IMAGE_SIZE_TO_CACHE = MAX_IMAGE_SIZE_TO_CACHE;
 const LINE_FACTOR = 1.35;
-esportazioni.LINE_FACTOR = LINE_FACTOR;
-const FATTORE_DI_discesa_LINEA = 0,35;
-esportazioni.LINE_DESCENT_FACTOR = LINE_DESCENT_FACTOR;
+exports.LINE_FACTOR = LINE_FACTOR;
+const LINE_DESCENT_FACTOR = 0.35;
+exports.LINE_DESCENT_FACTOR = LINE_DESCENT_FACTOR;
 const BASELINE_FACTOR = LINE_DESCENT_FACTOR / LINE_FACTOR;
-esportazioni.BASELINE_FACTOR = BASELINE_FACTOR;
+exports.BASELINE_FACTOR = BASELINE_FACTOR;
 const RenderingIntentFlag = {
-  QUALSIASI: 0x01,
-  VISUALIZZAZIONE: 0x02,
-  STAMPA: 0x04,
-  SALVA: 0x08,
-  ANNOTAZIONI_FORM: 0x10,
-  ANNOTAZIONI_ARCHIVIAZIONE: 0x20,
+  ANY: 0x01,
+  DISPLAY: 0x02,
+  PRINT: 0x04,
+  SAVE: 0x08,
+  ANNOTATIONS_FORMS: 0x10,
+  ANNOTATIONS_STORAGE: 0x20,
   ANNOTATIONS_DISABLE: 0x40,
   OPLIST: 0x100
 };
-esportazioni.RenderingIntentFlag = RenderingIntentFlag;
+exports.RenderingIntentFlag = RenderingIntentFlag;
 const AnnotationMode = {
-  DISABILITA: 0,
-  ABILITA: 1,
-  ABILITA_FORME: 2,
-  ABILITA_ARCHIVIAZIONE: 3
+  DISABLE: 0,
+  ENABLE: 1,
+  ENABLE_FORMS: 2,
+  ENABLE_STORAGE: 3
 };
 exports.AnnotationMode = AnnotationMode;
 const AnnotationEditorPrefix = "pdfjs_internal_editor_";
-esportazioni.AnnotationEditorPrefix = AnnotationEditorPrefix;
+exports.AnnotationEditorPrefix = AnnotationEditorPrefix;
 const AnnotationEditorType = {
-  DISABILITA: -1,
-  NESSUNO: 0,
-  TESTO LIBERO: 3,
-  FRANCOBOLLO: 13,
-  INCHIOSTRO: 15
+  DISABLE: -1,
+  NONE: 0,
+  FREETEXT: 3,
+  STAMP: 13,
+  INK: 15
 };
-esportazioni.AnnotationEditorType = AnnotationEditorType;
+exports.AnnotationEditorType = AnnotationEditorType;
 const AnnotationEditorParamsType = {
-  RIDIMENSIONA: 1,
-  CREA: 2,
-  DIMENSIONE_TESTO LIBERO: 11,
-  COLORE_TESTO_GRATIS: 12,
-  OPACITÀ DEL TESTO LIBERO: 13,
-  COLORE INCHIOSTRO: 21,
-  SPESSORE INCHIOSTRO: 22,
+  RESIZE: 1,
+  CREATE: 2,
+  FREETEXT_SIZE: 11,
+  FREETEXT_COLOR: 12,
+  FREETEXT_OPACITY: 13,
+  INK_COLOR: 21,
+  INK_THICKNESS: 22,
   INK_OPACITY: 23
 };
-esportazioni.AnnotationEditorParamsType = AnnotationEditorParamsType;
+exports.AnnotationEditorParamsType = AnnotationEditorParamsType;
 const PermissionFlag = {
-  STAMPA: 0x04,
-  MODIFICA_CONTENUTO: 0x08,
-  COPIA: 0x10,
-  MODIFICA_ANNOTAZIONI: 0x20,
-  COMPILA_MODULI_INTERATTIVI: 0x100,
-  COPIA_PER_ACCESSIBILITÀ: 0x200,
-  ASSEMBLAGGIO: 0x400,
-  STAMPA_ALTA_QUALITÀ: 0x800
+  PRINT: 0x04,
+  MODIFY_CONTENTS: 0x08,
+  COPY: 0x10,
+  MODIFY_ANNOTATIONS: 0x20,
+  FILL_INTERACTIVE_FORMS: 0x100,
+  COPY_FOR_ACCESSIBILITY: 0x200,
+  ASSEMBLE: 0x400,
+  PRINT_HIGH_QUALITY: 0x800
 };
-esportazioni.PermissionFlag = PermissionFlag;
+exports.PermissionFlag = PermissionFlag;
 const TextRenderingMode = {
-  RIEMPIMENTO: 0,
-  CORSA: 1,
+  FILL: 0,
+  STROKE: 1,
   FILL_STROKE: 2,
-  INVISIBILE: 3,
+  INVISIBLE: 3,
   FILL_ADD_TO_PATH: 4,
   STROKE_ADD_TO_PATH: 5,
-  FILL_STROKE_AGGIUNGI_AL_PERCORSO: 6,
-  AGGIUNGI AL PERCORSO: 7,
+  FILL_STROKE_ADD_TO_PATH: 6,
+  ADD_TO_PATH: 7,
   FILL_STROKE_MASK: 3,
-  AGGIUNGI_AL_FLAG_DEL_PERCORSO: 4
+  ADD_TO_PATH_FLAG: 4
 };
-esportazioni.TextRenderingMode = TextRenderingMode;
-const TipoImmagine = {
+exports.TextRenderingMode = TextRenderingMode;
+const ImageKind = {
   GRAYSCALE_1BPP: 1,
   RGB_24BPP: 2,
   RGBA_32BPP: 3
 };
-esportazioni.ImageKind = ImmagineKind;
-const Tipo di annotazione = {
-  TESTO 1,
-  COLLEGAMENTO: 2,
-  TESTO LIBERO: 3,
-  LINEA: 4,
-  QUADRATO: 5,
-  CERCHIO: 6,
-  POLIGONO: 7,
-  POLILINEA: 8,
-  IN EVIDENZA: 9,
-  SOTTOLINEARE: 10,
+exports.ImageKind = ImageKind;
+const AnnotationType = {
+  TEXT: 1,
+  LINK: 2,
+  FREETEXT: 3,
+  LINE: 4,
+  SQUARE: 5,
+  CIRCLE: 6,
+  POLYGON: 7,
+  POLYLINE: 8,
+  HIGHLIGHT: 9,
+  UNDERLINE: 10,
   SQUIGGLY: 11,
   STRIKEOUT: 12,
-  FRANCOBOLLO: 13,
-  ACCENTO: 14,
-  INCHIOSTRO: 15,
+  STAMP: 13,
+  CARET: 14,
+  INK: 15,
   POPUP: 16,
-  FILEALLEGATO: 17,
-  SUONO: 18,
-  FILM: 19,
+  FILEATTACHMENT: 17,
+  SOUND: 18,
+  MOVIE: 19,
   WIDGET: 20,
-  SCHERMO: 21,
-  SEGNO DI STAMPA: 22,
-  TRAPPOLA: 23,
-  FILIGRANA: 24,
-  TRE: 25,
-  REDATTO: 26
+  SCREEN: 21,
+  PRINTERMARK: 22,
+  TRAPNET: 23,
+  WATERMARK: 24,
+  THREED: 25,
+  REDACT: 26
 };
-esportazioni.AnnotationType = AnnotationType;
+exports.AnnotationType = AnnotationType;
 const AnnotationReplyType = {
-  GRUPPO: "Gruppo",
-  RISPOSTA: "R"
+  GROUP: "Group",
+  REPLY: "R"
 };
-esportazioni.AnnotationReplyType = AnnotationReplyType;
+exports.AnnotationReplyType = AnnotationReplyType;
 const AnnotationFlag = {
-  INVISIBILE: 0x01,
-  NASCOSTO: 0x02,
-  STAMPA: 0x04,
+  INVISIBLE: 0x01,
+  HIDDEN: 0x02,
+  PRINT: 0x04,
   NOZOOM: 0x08,
   NOROTATE: 0x10,
-  NESSUNA VISUALIZZAZIONE: 0x20,
-  SOLA LETTURA: 0x40,
-  BLOCCATO: 0x80,
+  NOVIEW: 0x20,
+  READONLY: 0x40,
+  LOCKED: 0x80,
   TOGGLENOVIEW: 0x100,
-  CONTENUTI BLOCCATI: 0x200
+  LOCKEDCONTENTS: 0x200
 };
-esportazioni.AnnotationFlag = AnnotationFlag;
+exports.AnnotationFlag = AnnotationFlag;
 const AnnotationFieldFlag = {
-  SOLA LETTURA: 0x0000001,
-  OBBLIGATORIO: 0x0000002,
+  READONLY: 0x0000001,
+  REQUIRED: 0x0000002,
   NOEXPORT: 0x0000004,
-  MULTILINEA: 0x0001000,
+  MULTILINE: 0x0001000,
   PASSWORD: 0x0002000,
   NOTOGGLETOOFF: 0x0004000,
   RADIO: 0x0008000,
-  PULSANTE: 0x0010000,
+  PUSHBUTTON: 0x0010000,
   COMBO: 0x0020000,
-  MODIFICA: 0x0040000,
-  ORDINA: 0x0080000,
-  SELEZIONA FILE: 0x0100000,
-  SELEZIONE MULTIPLA: 0x0200000,
-  NON ESEGUIRE IL CONTROLLO ORTOGRAFICO: 0x0400000,
+  EDIT: 0x0040000,
+  SORT: 0x0080000,
+  FILESELECT: 0x0100000,
+  MULTISELECT: 0x0200000,
+  DONOTSPELLCHECK: 0x0400000,
   DONOTSCROLL: 0x0800000,
-  PETTINE: 0x1000000,
+  COMB: 0x1000000,
   RICHTEXT: 0x2000000,
   RADIOSINUNISON: 0x2000000,
-  COMMITTONSELCHANGE: 0x4000000
+  COMMITONSELCHANGE: 0x4000000
 };
-esportazioni.AnnotationFieldFlag = AnnotationFieldFlag;
+exports.AnnotationFieldFlag = AnnotationFieldFlag;
 const AnnotationBorderStyleType = {
-  SOLIDO: 1,
-  TRATTEGGIATO: 2,
-  SMUSSATO: 3,
-  RIQUADRO: 4,
-  SOTTOLINEARE: 5
+  SOLID: 1,
+  DASHED: 2,
+  BEVELED: 3,
+  INSET: 4,
+  UNDERLINE: 5
 };
-esportazioni.AnnotationBorderStyleType = AnnotationBorderStyleType;
+exports.AnnotationBorderStyleType = AnnotationBorderStyleType;
 const AnnotationActionEventType = {
-  E: "Invio del mouse",
-  X: "Uscita del mouse",
-  D: "Mouse giù",
-  U: "Mouse su",
-  Fo: "Concentrarsi",
-  Bl: "Sfocatura",
-  PO: "Pagina aperta",
-  PC: "ChiudiPagina",
-  PV: "Pagina visibile",
-  PI: "PaginaInvisibile",
-  K: "Battitura di tasti",
-  F: "Formato",
-  V: "Convalida",
-  C: "Calcola"
+  E: "Mouse Enter",
+  X: "Mouse Exit",
+  D: "Mouse Down",
+  U: "Mouse Up",
+  Fo: "Focus",
+  Bl: "Blur",
+  PO: "PageOpen",
+  PC: "PageClose",
+  PV: "PageVisible",
+  PI: "PageInvisible",
+  K: "Keystroke",
+  F: "Format",
+  V: "Validate",
+  C: "Calculate"
 };
-esportazioni.AnnotationActionEventType = AnnotationActionEventType;
+exports.AnnotationActionEventType = AnnotationActionEventType;
 const DocumentActionEventType = {
   WC: "WillClose",
-  WS: "Salverà",
+  WS: "WillSave",
   DS: "DidSave",
   WP: "WillPrint",
   DP: "DidPrint"
 };
-esportazioni.DocumentActionEventType = DocumentActionEventType;
+exports.DocumentActionEventType = DocumentActionEventType;
 const PageActionEventType = {
-  O: "Pagina aperta",
-  C: "ChiudiPagina"
+  O: "PageOpen",
+  C: "PageClose"
 };
-esportazioni.PageActionEventType = PageActionEventType;
-const Livello di Verbosità = {
-  ERRORI: 0,
-  AVVERTENZE: 1,
-  INFORMAZIONI: 5
+exports.PageActionEventType = PageActionEventType;
+const VerbosityLevel = {
+  ERRORS: 0,
+  WARNINGS: 1,
+  INFOS: 5
 };
-esportazioni.Livello di verbosità = Livello di verbosità;
+exports.VerbosityLevel = VerbosityLevel;
 const CMapCompressionType = {
-  NESSUNO: 0,
-  BINARIO: 1
+  NONE: 0,
+  BINARY: 1
 };
-esportazioni.CMapCompressionType = CMapCompressionType;
+exports.CMapCompressionType = CMapCompressionType;
 const OPS = {
-  dipendenza: 1,
-  imposta larghezza riga: 2,
+  dependency: 1,
+  setLineWidth: 2,
   setLineCap: 3,
   setLineJoin: 4,
-  impostaMiterLimit: 5,
-  imposta trattino: 6,
-  impostaRenderingIntent: 7,
-  setPlaneità: 8,
-  impostaGState: 9,
-  risparmia: 10,
-  ripristinare: 11,
-  trasformare: 12,
-  sposta a: 13,
-  lineaA: 14,
-  curvaA: 15,
+  setMiterLimit: 5,
+  setDash: 6,
+  setRenderingIntent: 7,
+  setFlatness: 8,
+  setGState: 9,
+  save: 10,
+  restore: 11,
+  transform: 12,
+  moveTo: 13,
+  lineTo: 14,
+  curveTo: 15,
   curveTo2: 16,
   curveTo3: 17,
-  chiudiPercorso: 18,
-  rettangolo: 19,
-  ictus: 20,
-  chiudiColpo: 21,
-  riempimento: 22,
+  closePath: 18,
+  rectangle: 19,
+  stroke: 20,
+  closeStroke: 21,
+  fill: 22,
   eoFill: 23,
   fillStroke: 24,
   eoFillStroke: 25,
-  chiudiFillStroke: 26,
+  closeFillStroke: 26,
   closeEOFillStroke: 27,
   endPath: 28,
   clip: 29,
   eoClip: 30,
-  inizioTesto: 31,
-  fineTesto: 32,
-  imposta spaziatura caratteri: 33,
-  impostaSpaziaturaParole: 34,
+  beginText: 31,
+  endText: 32,
+  setCharSpacing: 33,
+  setWordSpacing: 34,
   setHScale: 35,
   setLeading: 36,
-  impostaFont: 37,
-  imposta la modalità di rendering del testo: 38,
-  impostaAumentoTesto: 39,
-  spostaTesto: 40,
+  setFont: 37,
+  setTextRenderingMode: 38,
+  setTextRise: 39,
+  moveText: 40,
   setLeadingMoveText: 41,
-  impostaMatriceTesto: 42,
-  riga successiva: 43,
-  mostraTesto: 44,
-  mostraTesto distanziato: 45,
+  setTextMatrix: 42,
+  nextLine: 43,
+  showText: 44,
+  showSpacedText: 45,
   nextLineShowText: 46,
   nextLineSetSpacingShowText: 47,
-  impostaCarattereLarghezza: 48,
-  imposta larghezza carattere e limiti: 49,
-  impostaStrokeColorSpace: 50,
-  impostaFillColorSpace: 51,
-  impostaColoreTratto: 52,
+  setCharWidth: 48,
+  setCharWidthAndBounds: 49,
+  setStrokeColorSpace: 50,
+  setFillColorSpace: 51,
+  setStrokeColor: 52,
   setStrokeColorN: 53,
-  imposta colore di riempimento: 54,
-  impostaFillColorN: 55,
+  setFillColor: 54,
+  setFillColorN: 55,
   setStrokeGray: 56,
-  impostaFillGray: 57,
-  impostaStrokeRGBColor: 58,
-  impostaRiempimentoRGBColore: 59,
+  setFillGray: 57,
+  setStrokeRGBColor: 58,
+  setFillRGBColor: 59,
   setStrokeCMYKColor: 60,
-  impostaFillCMYKColor: 61,
-  ombreggiaturaRiempimento: 62,
+  setFillCMYKColor: 61,
+  shadingFill: 62,
   beginInlineImage: 63,
   beginImageData: 64,
   endInlineImage: 65,
   paintXObject: 66,
-  Punto di riferimento: 67,
+  markPoint: 67,
   markPointProps: 68,
   beginMarkedContent: 69,
   beginMarkedContentProps: 70,
@@ -343,8 +343,8 @@ const OPS = {
   paintFormXObjectBegin: 74,
   paintFormXObjectEnd: 75,
   beginGroup: 76,
-  gruppo finale: 77,
-  inizioAnnotazione: 80,
+  endGroup: 77,
+  beginAnnotation: 80,
   endAnnotation: 81,
   paintImageMaskXObject: 83,
   paintImageMaskXObjectGroup: 84,
@@ -354,494 +354,494 @@ const OPS = {
   paintImageXObjectRepeat: 88,
   paintImageMaskXObjectRepeat: 89,
   paintSolidColorImageMask: 90,
-  Percorso di costruzione: 91
+  constructPath: 91
 };
-esportazioni.OPS = OPS;
-const Risposte alla password = {
-  PASSWORD NECESSARIA: 1,
-  PASSWORD_ERRATA: 2
+exports.OPS = OPS;
+const PasswordResponses = {
+  NEED_PASSWORD: 1,
+  INCORRECT_PASSWORD: 2
 };
-esportazioni.PasswordResponses = PasswordResponses;
-lascia che verbosità = VerbosityLevel.WARNINGS;
-funzione setVerbosityLevel(livello) {
-  se (Numero.èIntero(livello)) {
-    verbosità = livello;
+exports.PasswordResponses = PasswordResponses;
+let verbosity = VerbosityLevel.WARNINGS;
+function setVerbosityLevel(level) {
+  if (Number.isInteger(level)) {
+    verbosity = level;
   }
 }
-funzione getVerbosityLevel() {
-  restituire verbosità;
+function getVerbosityLevel() {
+  return verbosity;
 }
-funzione info(msg) {
-  se (verbosità >= VerbosityLevel.INFOS) {
-    console.log(`Informazioni: ${msg}`);
+function info(msg) {
+  if (verbosity >= VerbosityLevel.INFOS) {
+    console.log(`Info: ${msg}`);
   }
 }
-funzione warn(msg) {
-  se (verbosità >= VerbosityLevel.WARNINGS) {
-    console.log(`Avviso: ${msg}`);
+function warn(msg) {
+  if (verbosity >= VerbosityLevel.WARNINGS) {
+    console.log(`Warning: ${msg}`);
   }
 }
-funzione irraggiungibile(msg) {
-  lancia un nuovo errore (msg);
+function unreachable(msg) {
+  throw new Error(msg);
 }
-funzione assert(cond, msg) {
-  se (!cond) {
-    irraggiungibile(msg);
+function assert(cond, msg) {
+  if (!cond) {
+    unreachable(msg);
   }
 }
-funzione _isValidProtocol(url) {
-  switch (url?.protocollo) {
-    caso "http:":
-    caso "https:":
-    caso "ftp:":
-    caso "mailto:":
-    caso "tel:":
-      restituisci vero;
-    predefinito:
-      restituisci falso;
+function _isValidProtocol(url) {
+  switch (url?.protocol) {
+    case "http:":
+    case "https:":
+    case "ftp:":
+    case "mailto:":
+    case "tel:":
+      return true;
+    default:
+      return false;
   }
 }
-funzione createValidAbsoluteUrl(url, baseUrl = null, opzioni = null) {
-  se (!url) {
-    restituisci null;
+function createValidAbsoluteUrl(url, baseUrl = null, options = null) {
+  if (!url) {
+    return null;
   }
-  Tentativo {
-    se (opzioni e tipo di URL === "stringa") {
-      se (opzioni.aggiungiProtocolloPredefinito && url.avviaCon("www.")) {
+  try {
+    if (options && typeof url === "string") {
+      if (options.addDefaultProtocol && url.startsWith("www.")) {
         const dots = url.match(/\./g);
-        se (punti?.lunghezza >= 2) {
+        if (dots?.length >= 2) {
           url = `http://${url}`;
         }
       }
-      se (opzioni.tryConvertEncoding) {
-        Tentativo {
+      if (options.tryConvertEncoding) {
+        try {
           url = stringToUTF8String(url);
-        } presa {}
+        } catch {}
       }
     }
-    const absoluteUrl = baseUrl ? nuovo URL(url, baseUrl) : nuovo URL(url);
-    se (_isValidProtocol(absoluteUrl)) {
-      restituisci URL assoluto;
+    const absoluteUrl = baseUrl ? new URL(url, baseUrl) : new URL(url);
+    if (_isValidProtocol(absoluteUrl)) {
+      return absoluteUrl;
     }
-  } presa {}
-  restituisci null;
+  } catch {}
+  return null;
 }
-funzione shadow(obj, prop, valore, nonSerializable = false) {
+function shadow(obj, prop, value, nonSerializable = false) {
   Object.defineProperty(obj, prop, {
-    valore,
-    enumerabile: !nonSerializable,
-    configurabile: vero,
-    scrivibile: falso
+    value,
+    enumerable: !nonSerializable,
+    configurable: true,
+    writable: false
   });
-  valore di ritorno;
+  return value;
 }
-const BaseException = funzione BaseExceptionClosure() {
-  funzione BaseException(messaggio, nome) {
-    se (questo.costruttore === BaseException) {
-      unreachable("Impossibile inizializzare BaseException.");
+const BaseException = function BaseExceptionClosure() {
+  function BaseException(message, name) {
+    if (this.constructor === BaseException) {
+      unreachable("Cannot initialize BaseException.");
     }
-    this.message = messaggio;
-    questo.nome = nome;
+    this.message = message;
+    this.name = name;
   }
-  BaseException.prototype = nuovo Errore();
+  BaseException.prototype = new Error();
   BaseException.constructor = BaseException;
-  restituisci BaseException;
+  return BaseException;
 }();
-esportazioni.BaseException = BaseException;
-classe PasswordException estende BaseException {
-  costruttore(msg, codice) {
+exports.BaseException = BaseException;
+class PasswordException extends BaseException {
+  constructor(msg, code) {
     super(msg, "PasswordException");
-    questo.codice = codice;
+    this.code = code;
   }
 }
-esportazioni.PasswordException = PasswordException;
-classe UnknownErrorException estende BaseException {
-  costruttore(msg, dettagli) {
+exports.PasswordException = PasswordException;
+class UnknownErrorException extends BaseException {
+  constructor(msg, details) {
     super(msg, "UnknownErrorException");
-    this.details = dettagli;
+    this.details = details;
   }
 }
-esportazioni.UnknownErrorException = UnknownErrorException;
-classe InvalidPDFException estende BaseException {
-  costruttore(msg) {
+exports.UnknownErrorException = UnknownErrorException;
+class InvalidPDFException extends BaseException {
+  constructor(msg) {
     super(msg, "InvalidPDFException");
   }
 }
-esportazioni.InvalidPDFException = InvalidPDFException;
-classe MissingPDFException estende BaseException {
-  costruttore(msg) {
+exports.InvalidPDFException = InvalidPDFException;
+class MissingPDFException extends BaseException {
+  constructor(msg) {
     super(msg, "MissingPDFException");
   }
 }
-esportazioni.MissingPDFException = MissingPDFException;
-classe UnexpectedResponseException estende BaseException {
-  costruttore(msg, stato) {
+exports.MissingPDFException = MissingPDFException;
+class UnexpectedResponseException extends BaseException {
+  constructor(msg, status) {
     super(msg, "UnexpectedResponseException");
-    questo.stato = stato;
+    this.status = status;
   }
 }
-esportazioni.UnexpectedResponseException = UnexpectedResponseException;
-classe FormatError estende BaseException {
-  costruttore(msg) {
-    super(msg, "Errore di formato");
+exports.UnexpectedResponseException = UnexpectedResponseException;
+class FormatError extends BaseException {
+  constructor(msg) {
+    super(msg, "FormatError");
   }
 }
-esportazioni.FormatError = FormatError;
-classe AbortException estende BaseException {
-  costruttore(msg) {
+exports.FormatError = FormatError;
+class AbortException extends BaseException {
+  constructor(msg) {
     super(msg, "AbortException");
   }
 }
-esportazioni.AbortException = AbortException;
-funzione bytesToString(byte) {
-  se (tipo di byte !== "oggetto" || byte?.lunghezza === indefinito) {
-    unreachable("Argomento non valido per bytesToString");
+exports.AbortException = AbortException;
+function bytesToString(bytes) {
+  if (typeof bytes !== "object" || bytes?.length === undefined) {
+    unreachable("Invalid argument for bytesToString");
   }
-  lunghezza costante = byte.lunghezza;
+  const length = bytes.length;
   const MAX_ARGUMENT_COUNT = 8192;
-  se (lunghezza < MAX_ARGUMENT_COUNT) {
-    restituisci String.fromCharCode.apply(null, byte);
+  if (length < MAX_ARGUMENT_COUNT) {
+    return String.fromCharCode.apply(null, bytes);
   }
   const strBuf = [];
-  per (lascia che i = 0; i < lunghezza; i += MAX_ARGUMENT_COUNT) {
-    const chunkEnd = Math.min(i + MAX_ARGUMENT_COUNT, lunghezza);
+  for (let i = 0; i < length; i += MAX_ARGUMENT_COUNT) {
+    const chunkEnd = Math.min(i + MAX_ARGUMENT_COUNT, length);
     const chunk = bytes.subarray(i, chunkEnd);
     strBuf.push(String.fromCharCode.apply(null, chunk));
   }
-  restituisci strBuf.join("");
+  return strBuf.join("");
 }
-funzione stringToBytes(str) {
-  se (tipo di str !== "stringa") {
-    unreachable("Argomento non valido per stringToBytes");
+function stringToBytes(str) {
+  if (typeof str !== "string") {
+    unreachable("Invalid argument for stringToBytes");
   }
-  lunghezza costante = str.length;
-  const byte = new Uint8Array(lunghezza);
-  per (lascia che i = 0; i < lunghezza; ++i) {
-    byte[i] = str.charCodeAt(i) & 0xff;
+  const length = str.length;
+  const bytes = new Uint8Array(length);
+  for (let i = 0; i < length; ++i) {
+    bytes[i] = str.charCodeAt(i) & 0xff;
   }
-  restituire byte;
+  return bytes;
 }
-funzione string32(valore) {
-  return String.fromCharCode(valore >> 24 & 0xff, valore >> 16 & 0xff, valore >> 8 & 0xff, valore & 0xff);
+function string32(value) {
+  return String.fromCharCode(value >> 24 & 0xff, value >> 16 & 0xff, value >> 8 & 0xff, value & 0xff);
 }
-funzione objectSize(obj) {
-  restituisci Object.keys(obj).length;
+function objectSize(obj) {
+  return Object.keys(obj).length;
 }
-funzione objectFromMap(mappa) {
+function objectFromMap(map) {
   const obj = Object.create(null);
-  per (const [chiave, valore] della mappa) {
-    obj[chiave] = valore;
+  for (const [key, value] of map) {
+    obj[key] = value;
   }
-  restituisci oggetto;
+  return obj;
 }
-funzione isLittleEndian() {
+function isLittleEndian() {
   const buffer8 = new Uint8Array(4);
   buffer8[0] = 1;
   const view32 = new Uint32Array(buffer8.buffer, 0, 1);
-  torna view32[0] === 1;
+  return view32[0] === 1;
 }
-funzione isEvalSupported() {
-  Tentativo {
-    nuova funzione("");
-    restituisci vero;
-  } presa {
-    restituisci falso;
+function isEvalSupported() {
+  try {
+    new Function("");
+    return true;
+  } catch {
+    return false;
   }
 }
-classe FeatureTest {
+class FeatureTest {
   static get isLittleEndian() {
-    return shadow(questo, "isLittleEndian", isLittleEndian());
+    return shadow(this, "isLittleEndian", isLittleEndian());
   }
   static get isEvalSupported() {
-    restituisci shadow(questo, "isEvalSupported", isEvalSupported());
+    return shadow(this, "isEvalSupported", isEvalSupported());
   }
   static get isOffscreenCanvasSupported() {
     return shadow(this, "isOffscreenCanvasSupported", typeof OffscreenCanvas !== "undefined");
   }
-  piattaforma statica get() {
-    se (tipo di navigatore === "non definito") {
-      restituisci shadow(questo, "piattaforma", {
-        isWin: falso,
-        isMac: falso
+  static get platform() {
+    if (typeof navigator === "undefined") {
+      return shadow(this, "platform", {
+        isWin: false,
+        isMac: false
       });
     }
-    restituisci shadow(questo, "piattaforma", {
+    return shadow(this, "platform", {
       isWin: navigator.platform.includes("Win"),
       isMac: navigator.platform.includes("Mac")
     });
   }
   static get isCSSRoundSupported() {
-    return shadow(this, "isCSSSroundSupported", globalThis.CSS?.supports?.("width: round(1.5px, 1px)"));
+    return shadow(this, "isCSSRoundSupported", globalThis.CSS?.supports?.("width: round(1.5px, 1px)"));
   }
 }
-esportazioni.FeatureTest = FeatureTest;
+exports.FeatureTest = FeatureTest;
 const hexNumbers = [...Array(256).keys()].map(n => n.toString(16).padStart(2, "0"));
-classe Util {
-  statico makeHexColor(r, g, b) {
-    restituisci `#${hexNumbers[r]}${hexNumbers[g]}${hexNumbers[b]}`;
+class Util {
+  static makeHexColor(r, g, b) {
+    return `#${hexNumbers[r]}${hexNumbers[g]}${hexNumbers[b]}`;
   }
-  scala staticaMinMax(trasforma, minMax) {
-    lasciare la temperatura;
-    se (trasforma[0]) {
-      se (trasforma[0] < 0) {
-        temperatura = minMax[0];
+  static scaleMinMax(transform, minMax) {
+    let temp;
+    if (transform[0]) {
+      if (transform[0] < 0) {
+        temp = minMax[0];
         minMax[0] = minMax[1];
-        minMax[1] = temperatura;
+        minMax[1] = temp;
       }
-      minMax[0] *= trasforma[0];
-      minMax[1] *= trasforma[0];
-      se (trasforma[3] < 0) {
-        temperatura = minMax[2];
+      minMax[0] *= transform[0];
+      minMax[1] *= transform[0];
+      if (transform[3] < 0) {
+        temp = minMax[2];
         minMax[2] = minMax[3];
-        minMax[3] = temperatura;
+        minMax[3] = temp;
       }
-      minMax[2] *= trasforma[3];
-      minMax[3] *= trasforma[3];
-    } altro {
-      temperatura = minMax[0];
+      minMax[2] *= transform[3];
+      minMax[3] *= transform[3];
+    } else {
+      temp = minMax[0];
       minMax[0] = minMax[2];
-      minMax[2] = temperatura;
-      temperatura = minMax[1];
+      minMax[2] = temp;
+      temp = minMax[1];
       minMax[1] = minMax[3];
-      minMax[3] = temperatura;
-      se (trasforma[1] < 0) {
-        temperatura = minMax[2];
+      minMax[3] = temp;
+      if (transform[1] < 0) {
+        temp = minMax[2];
         minMax[2] = minMax[3];
-        minMax[3] = temperatura;
+        minMax[3] = temp;
       }
-      minMax[2] *= trasforma[1];
-      minMax[3] *= trasforma[1];
-      se (trasforma[2] < 0) {
-        temperatura = minMax[0];
+      minMax[2] *= transform[1];
+      minMax[3] *= transform[1];
+      if (transform[2] < 0) {
+        temp = minMax[0];
         minMax[0] = minMax[1];
-        minMax[1] = temperatura;
+        minMax[1] = temp;
       }
-      minMax[0] *= trasforma[2];
-      minMax[1] *= trasforma[2];
+      minMax[0] *= transform[2];
+      minMax[1] *= transform[2];
     }
-    minMax[0] += trasforma[4];
-    minMax[1] += trasforma[4];
-    minMax[2] += trasforma[5];
-    minMax[3] += trasforma[5];
+    minMax[0] += transform[4];
+    minMax[1] += transform[4];
+    minMax[2] += transform[5];
+    minMax[3] += transform[5];
   }
-  trasformata statica(m1, m2) {
-    ritorno [m1[0] * m2[0] + m1[2] * m2[1], m1[1] * m2[0] + m1[3] * m2[1], m1[0] * m2[2] + m1[2] * m2[3], m1[1] * m2[2] + m1[3] * m2[3], m1[0] * m2[4] + m1[2] * m2[5] + m1[4], m1[1] * m2[4] + m1[3] * m2[5] + m1[5]];
+  static transform(m1, m2) {
+    return [m1[0] * m2[0] + m1[2] * m2[1], m1[1] * m2[0] + m1[3] * m2[1], m1[0] * m2[2] + m1[2] * m2[3], m1[1] * m2[2] + m1[3] * m2[3], m1[0] * m2[4] + m1[2] * m2[5] + m1[4], m1[1] * m2[4] + m1[3] * m2[5] + m1[5]];
   }
-  statico applicaTrasforma(p, m) {
-    costante xt = p[0] * m[0] + p[1] * m[2] + m[4];
-    costante yt = p[0] * m[1] + p[1] * m[3] + m[5];
-    ritorno [xt, yt];
+  static applyTransform(p, m) {
+    const xt = p[0] * m[0] + p[1] * m[2] + m[4];
+    const yt = p[0] * m[1] + p[1] * m[3] + m[5];
+    return [xt, yt];
   }
-  statico applicaInversaTrasformazione(p, m) {
-    costante d = m[0] * m[3] - m[1] * m[2];
-    costante xt = (p[0] * m[3] - p[1] * m[2] + m[2] * m[5] - m[4] * m[3]) / d;
-    costante yt = (-p[0] * m[1] + p[1] * m[0] + m[4] * m[1] - m[5] * m[0]) / d;
-    ritorno [xt, yt];
+  static applyInverseTransform(p, m) {
+    const d = m[0] * m[3] - m[1] * m[2];
+    const xt = (p[0] * m[3] - p[1] * m[2] + m[2] * m[5] - m[4] * m[3]) / d;
+    const yt = (-p[0] * m[1] + p[1] * m[0] + m[4] * m[1] - m[5] * m[0]) / d;
+    return [xt, yt];
   }
-  getAxialAlignedBoundingBox statico(r, m) {
+  static getAxialAlignedBoundingBox(r, m) {
     const p1 = this.applyTransform(r, m);
     const p2 = this.applyTransform(r.slice(2, 4), m);
     const p3 = this.applyTransform([r[0], r[3]], m);
     const p4 = this.applyTransform([r[2], r[1]], m);
-    ritorno [Math.min(p1[0], p2[0], p3[0], p4[0]), Math.min(p1[1], p2[1], p3[1], p4[1]), Math.max(p1[0], p2[0], p3[0], p4[0]), Math.max(p1[1], p2[1], p3[1], p4[1])];
+    return [Math.min(p1[0], p2[0], p3[0], p4[0]), Math.min(p1[1], p2[1], p3[1], p4[1]), Math.max(p1[0], p2[0], p3[0], p4[0]), Math.max(p1[1], p2[1], p3[1], p4[1])];
   }
-  Trasformazione inversa statica(m) {
-    costante d = m[0] * m[3] - m[1] * m[2];
-    ritorna [m[3] / d, -m[1] / d, -m[2] / d, m[0] / d, (m[2] * m[5] - m[4] * m[3]) / d, (m[4] * m[1] - m[5] * m[0]) / d];
+  static inverseTransform(m) {
+    const d = m[0] * m[3] - m[1] * m[2];
+    return [m[3] / d, -m[1] / d, -m[2] / d, m[0] / d, (m[2] * m[5] - m[4] * m[3]) / d, (m[4] * m[1] - m[5] * m[0]) / d];
   }
   static singularValueDecompose2dScale(m) {
-    const trasposizione = [m[0], m[2], m[1], m[3]];
-    const a = m[0] * trasponi[0] + m[1] * trasponi[2];
-    const b = m[0] * trasponi[1] + m[1] * trasponi[3];
-    const c = m[2] * trasponi[0] + m[3] * trasponi[2];
-    const d = m[2] * trasponi[1] + m[3] * trasponi[3];
-    const primo = (a + d) / 2;
-    const secondo = Math.sqrt((a + d) ** 2 - 4 * (a * d - c * b)) / 2;
-    const sx = primo + secondo || 1;
-    const sy = primo - secondo || 1;
+    const transpose = [m[0], m[2], m[1], m[3]];
+    const a = m[0] * transpose[0] + m[1] * transpose[2];
+    const b = m[0] * transpose[1] + m[1] * transpose[3];
+    const c = m[2] * transpose[0] + m[3] * transpose[2];
+    const d = m[2] * transpose[1] + m[3] * transpose[3];
+    const first = (a + d) / 2;
+    const second = Math.sqrt((a + d) ** 2 - 4 * (a * d - c * b)) / 2;
+    const sx = first + second || 1;
+    const sy = first - second || 1;
     return [Math.sqrt(sx), Math.sqrt(sy)];
   }
-  statico normalizeRect(rect) {
+  static normalizeRect(rect) {
     const r = rect.slice(0);
-    se (rect[0] > rect[2]) {
-      r[0] = rettangolo[2];
-      r[2] = rettangolo[0];
+    if (rect[0] > rect[2]) {
+      r[0] = rect[2];
+      r[2] = rect[0];
     }
-    se (rett[1] > rect[3]) {
-      r[1] = rettangolo[3];
-      r[3] = rettangolo[1];
+    if (rect[1] > rect[3]) {
+      r[1] = rect[3];
+      r[3] = rect[1];
     }
-    restituisci r;
+    return r;
   }
-  intersezione statica(rect1, rect2) {
+  static intersect(rect1, rect2) {
     const xLow = Math.max(Math.min(rect1[0], rect1[2]), Math.min(rect2[0], rect2[2]));
     const xHigh = Math.min(Math.max(rect1[0], rect1[2]), Math.max(rect2[0], rect2[2]));
-    se (xBasso > xAlto) {
-      restituisci null;
+    if (xLow > xHigh) {
+      return null;
     }
     const yLow = Math.max(Math.min(rect1[1], rect1[3]), Math.min(rect2[1], rect2[3]));
     const yHigh = Math.min(Math.max(rect1[1], rect1[3]), Math.max(rect2[1], rect2[3]));
-    se (yBasso > yAlto) {
-      restituisci null;
+    if (yLow > yHigh) {
+      return null;
     }
-    ritorno [xBasso, yBasso, xAlto, yAlto];
+    return [xLow, yLow, xHigh, yHigh];
   }
   static bezierBoundingBox(x0, y0, x1, y1, x2, y2, x3, y3) {
-    valori costanti = [],
-      limiti = [[], []];
-    siano a, b, c, t, t1, t2, b2ac, sqrtb2ac;
-    per (lascia che i = 0; i < 2; ++i) {
-      se (i === 0) {
+    const tvalues = [],
+      bounds = [[], []];
+    let a, b, c, t, t1, t2, b2ac, sqrtb2ac;
+    for (let i = 0; i < 2; ++i) {
+      if (i === 0) {
         b = 6 * x0 - 12 * x1 + 6 * x2;
         a = -3 * x0 + 9 * x1 - 9 * x2 + 3 * x3;
         c = 3 * x1 - 3 * x0;
-      } altro {
+      } else {
         b = 6 * y0 - 12 * y1 + 6 * y2;
         a = -3 * y0 + 9 * y1 - 9 * y2 + 3 * y3;
         c = 3 * y1 - 3 * y0;
       }
-      se (Math.abs(a) < 1e-12) {
-        se (Math.abs(b) < 1e-12) {
-          continuare;
+      if (Math.abs(a) < 1e-12) {
+        if (Math.abs(b) < 1e-12) {
+          continue;
         }
         t = -c / b;
-        se (0 < t && t < 1) {
-          valori t.push(t);
+        if (0 < t && t < 1) {
+          tvalues.push(t);
         }
-        continuare;
+        continue;
       }
       b2ac = b * b - 4 * c * a;
       sqrtb2ac = Math.sqrt(b2ac);
-      se (b2ac < 0) {
-        continuare;
+      if (b2ac < 0) {
+        continue;
       }
       t1 = (-b + sqrtb2ac) / (2 * a);
-      se (0 < t1 && t1 < 1) {
-        valori t.push(t1);
+      if (0 < t1 && t1 < 1) {
+        tvalues.push(t1);
       }
       t2 = (-b - sqrtb2ac) / (2 * a);
-      se (0 < t2 && t2 < 1) {
-        valori t.push(t2);
+      if (0 < t2 && t2 < 1) {
+        tvalues.push(t2);
       }
     }
-    lascia j = tvalues.length,
+    let j = tvalues.length,
       mt;
     const jlen = j;
-    mentre (j--) {
-      t = tvalori[j];
+    while (j--) {
+      t = tvalues[j];
       mt = 1 - t;
-      limiti[0][j] = mt * mt * mt * x0 + 3 * mt * mt * t * x1 + 3 * mt * t * t * x2 + t * t * t * x3;
-      limiti[1][j] = mt * mt * mt * y0 + 3 * mt * mt * t * y1 + 3 * mt * t * t * y2 + t * t * t * y3;
+      bounds[0][j] = mt * mt * mt * x0 + 3 * mt * mt * t * x1 + 3 * mt * t * t * x2 + t * t * t * x3;
+      bounds[1][j] = mt * mt * mt * y0 + 3 * mt * mt * t * y1 + 3 * mt * t * t * y2 + t * t * t * y3;
     }
-    limiti[0][jlen] = x0;
-    limiti[1][jlen] = y0;
-    limiti[0][jlen + 1] = x3;
-    limiti[1][jlen + 1] = y3;
-    limiti[0].lunghezza = limiti[1].lunghezza = jlen + 2;
-    restituisci [Math.min(...limiti[0]), Math.min(...limiti[1]), Math.max(...limiti[0]), Math.max(...limiti[1])];
+    bounds[0][jlen] = x0;
+    bounds[1][jlen] = y0;
+    bounds[0][jlen + 1] = x3;
+    bounds[1][jlen + 1] = y3;
+    bounds[0].length = bounds[1].length = jlen + 2;
+    return [Math.min(...bounds[0]), Math.min(...bounds[1]), Math.max(...bounds[0]), Math.max(...bounds[1])];
   }
 }
-esportazioni.Util = Util;
-const PDFStringTranslateTable = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x2d8, 0x2c7, 0x2c6, 0x2d9, 0x2dd, 0x2db, 0x2da, 0x2dc, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x2022, 0x2020, 0x2021, 0x2026, 0x2014, 0x2013, 0x192, 0x2044, 0x2039, 0x203a, 0x2212, 0x2030, 0x201e, 0x201c, 0x201d, 0x2018, 0x2019, 0x201a, 0x2122, 0xfb01, 0xfb02, 0x141, 0x152, 0x160, 0x178, 0x17d, 0x131, 0x142, 0x153, 0x161, 0x17e, 0, 0x20ac];
-funzione stringToPDFString(str) {
-  se (str[0] >= "\xEF") {
-    lascia codifica;
-    se (str[0] === "\xFE" && str[1] === "\xFF") {
-      codifica = "utf-16be";
-    } altrimenti se (str[0] === "\xFF" && str[1] === "\xFE") {
-      codifica = "utf-16le";
-    } altrimenti se (str[0] === "\xEF" && str[1] === "\xBB" && str[2] === "\xBF") {
-      codifica = "utf-8";
+exports.Util = Util;
+const PDFStringTranslateTable = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x2d8, 0x2c7, 0x2c6, 0x2d9, 0x2dd, 0x2db, 0x2da, 0x2dc, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x2022, 0x2020, 0x2021, 0x2026, 0x2014, 0x2013, 0x192, 0x2044, 0x2039, 0x203a, 0x2212, 0x2030, 0x201e, 0x201c, 0x201d, 0x2018, 0x2019, 0x201a, 0x2122, 0xfb01, 0xfb02, 0x141, 0x152, 0x160, 0x178, 0x17d, 0x131, 0x142, 0x153, 0x161, 0x17e, 0, 0x20ac];
+function stringToPDFString(str) {
+  if (str[0] >= "\xEF") {
+    let encoding;
+    if (str[0] === "\xFE" && str[1] === "\xFF") {
+      encoding = "utf-16be";
+    } else if (str[0] === "\xFF" && str[1] === "\xFE") {
+      encoding = "utf-16le";
+    } else if (str[0] === "\xEF" && str[1] === "\xBB" && str[2] === "\xBF") {
+      encoding = "utf-8";
     }
-    se (codifica) {
-      Tentativo {
-        const decoder = new TextDecoder(codifica, {
-          fatale: vero
+    if (encoding) {
+      try {
+        const decoder = new TextDecoder(encoding, {
+          fatal: true
         });
         const buffer = stringToBytes(str);
-        restituisci decoder.decode(buffer);
-      } catturare (es.) {
+        return decoder.decode(buffer);
+      } catch (ex) {
         warn(`stringToPDFString: "${ex}".`);
       }
     }
   }
   const strBuf = [];
-  per (lascia che i = 0, ii = str.length; i < ii; i++) {
-    codice costante = PDFStringTranslateTable[str.charCodeAt(i)];
-    strBuf.push(codice ? String.fromCharCode(codice) : str.charAt(i));
+  for (let i = 0, ii = str.length; i < ii; i++) {
+    const code = PDFStringTranslateTable[str.charCodeAt(i)];
+    strBuf.push(code ? String.fromCharCode(code) : str.charAt(i));
   }
-  restituisci strBuf.join("");
+  return strBuf.join("");
 }
-funzione stringToUTF8String(str) {
-  restituisci decodeURIComponent(escape(str));
+function stringToUTF8String(str) {
+  return decodeURIComponent(escape(str));
 }
-funzione utf8StringToString(str) {
-  restituisci unescape(encodeURIComponent(str));
+function utf8StringToString(str) {
+  return unescape(encodeURIComponent(str));
 }
-funzione isArrayBuffer(v) {
-  restituisci tipo di v === "oggetto" && v?.byteLength !== indefinito;
+function isArrayBuffer(v) {
+  return typeof v === "object" && v?.byteLength !== undefined;
 }
-funzione èArrayEqual(arr1, arr2) {
-  se (arr1.length !== arr2.length) {
-    restituisci falso;
+function isArrayEqual(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
   }
-  per (lascia che i = 0, ii = arr1.length; i < ii; i++) {
-    se (arr1[i] !== arr2[i]) {
-      restituisci falso;
+  for (let i = 0, ii = arr1.length; i < ii; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
     }
   }
-  restituisci vero;
+  return true;
 }
-funzione getModificationDate(data = nuova data()) {
+function getModificationDate(date = new Date()) {
   const buffer = [date.getUTCFullYear().toString(), (date.getUTCMonth() + 1).toString().padStart(2, "0"), date.getUTCDate().toString().padStart(2, "0"), date.getUTCHours().toString().padStart(2, "0"), date.getUTCMinutes().toString().padStart(2, "0"), date.getUTCSeconds().toString().padStart(2, "0")];
-  restituisci buffer.join("");
+  return buffer.join("");
 }
-classe PromiseCapability {
-  #sistemato = falso;
-  costruttore() {
+class PromiseCapability {
+  #settled = false;
+  constructor() {
     this.promise = new Promise((resolve, reject) => {
-      questo.risolvere = dati => {
-        questo.#sistemato = vero;
-        risolvere(dati);
+      this.resolve = data => {
+        this.#settled = true;
+        resolve(data);
       };
-      this.reject = motivo => {
-        questo.#sistemato = vero;
-        rifiutare(motivo);
+      this.reject = reason => {
+        this.#settled = true;
+        reject(reason);
       };
     });
   }
-  sistemarsi() {
-    restituisci questo.#sistemato;
+  get settled() {
+    return this.#settled;
   }
 }
-esportazioni.PromiseCapability = PromiseCapability;
-lascia NormalizeRegex = null;
-lascia NormalizationMap = null;
-funzione normalizzaUnicode(str) {
-  se (!NormalizeRegex) {
-    NormalizeRegex = /([\u00a0\u00b5\u037e\u0eb3\u2000-\u200a\u202f\u2126\ufb00-\ufb04\ufb06\ufb20-\ufb36\ufb38-\ufb3c\ufb3e\ufb40-\ufb41\ufb43-\ufb44\ufb46-\ufba1\ufba4-\ufba9\ufbae-\uf bb1\ufbd3-\ufbdc\ufbde-\ufbe7\ufbea-\ufbf8\ufbfc-\ufbfd\ufc00-\ufc5d\ufc64-\ufcf1\u fcf5-\ufd3d\ufd88\ufdf4\ufdfa-\ufdfb\ufe71\ufe77\ufe79\ufe7b\ufe7d]+)|(\ufb05+)/gu;
-    NormalizationMap = new Map([["f", "ſt"]]);
+exports.PromiseCapability = PromiseCapability;
+let NormalizeRegex = null;
+let NormalizationMap = null;
+function normalizeUnicode(str) {
+  if (!NormalizeRegex) {
+    NormalizeRegex = /([\u00a0\u00b5\u037e\u0eb3\u2000-\u200a\u202f\u2126\ufb00-\ufb04\ufb06\ufb20-\ufb36\ufb38-\ufb3c\ufb3e\ufb40-\ufb41\ufb43-\ufb44\ufb46-\ufba1\ufba4-\ufba9\ufbae-\ufbb1\ufbd3-\ufbdc\ufbde-\ufbe7\ufbea-\ufbf8\ufbfc-\ufbfd\ufc00-\ufc5d\ufc64-\ufcf1\ufcf5-\ufd3d\ufd88\ufdf4\ufdfa-\ufdfb\ufe71\ufe77\ufe79\ufe7b\ufe7d]+)|(\ufb05+)/gu;
+    NormalizationMap = new Map([["ﬅ", "ſt"]]);
   }
-  restituisci str.replaceAll(NormalizeRegex, (_, p1, p2) => {
-    restituisci p1 ? p1.normalize("NFKC") : NormalizationMap.get(p2);
+  return str.replaceAll(NormalizeRegex, (_, p1, p2) => {
+    return p1 ? p1.normalize("NFKC") : NormalizationMap.get(p2);
   });
 }
-funzione getUuid() {
+function getUuid() {
   if (typeof crypto !== "undefined" && typeof crypto?.randomUUID === "function") {
-    restituisci crypto.randomUUID();
+    return crypto.randomUUID();
   }
   const buf = new Uint8Array(32);
-  if (typeof crypto !== "undefined" && typeof crypto?.getRandomValues ​​=== "function") {
+  if (typeof crypto !== "undefined" && typeof crypto?.getRandomValues === "function") {
     crypto.getRandomValues(buf);
-  } altro {
-    per (lascia che i = 0; i < 32; i++) {
+  } else {
+    for (let i = 0; i < 32; i++) {
       buf[i] = Math.floor(Math.random() * 255);
     }
   }
-  restituisci bytesToString(buf);
+  return bytesToString(buf);
 }
 const AnnotationPrefix = "pdfjs_internal_id_";
-esportazioni.AnnotationPrefix = AnnotationPrefix;
+exports.AnnotationPrefix = AnnotationPrefix;
 
 /***/ }),
 /* 2 */
@@ -849,18 +849,18 @@ esportazioni.AnnotationPrefix = AnnotationPrefix;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
 exports.RenderTask = exports.PDFWorkerUtil = exports.PDFWorker = exports.PDFPageProxy = exports.PDFDocumentProxy = exports.PDFDocumentLoadingTask = exports.PDFDataRangeTransport = exports.LoopbackPort = exports.DefaultStandardFontDataFactory = exports.DefaultFilterFactory = exports.DefaultCanvasFactory = exports.DefaultCMapReaderFactory = void 0;
-Object.defineProperty(esporta, "SVGGraphics", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _displaySvg.SVGGraphics;
+Object.defineProperty(exports, "SVGGraphics", ({
+  enumerable: true,
+  get: function () {
+    return _displaySvg.SVGGraphics;
   }
 }));
-esportazioni.build = void 0;
-esportazioni.getDocument = getDocument;
+exports.build = void 0;
+exports.getDocument = getDocument;
 exports.version = void 0;
 var _util = __w_pdfjs_require__(1);
 var _annotation_storage = __w_pdfjs_require__(3);
@@ -882,54 +882,54 @@ const DEFAULT_RANGE_CHUNK_SIZE = 65536;
 const RENDERING_CANCELLED_TIMEOUT = 100;
 const DELAYED_CLEANUP_TIMEOUT = 5000;
 const DefaultCanvasFactory = _util.isNodeJS ? _displayNode_utils.NodeCanvasFactory : _display_utils.DOMCanvasFactory;
-esportazioni.DefaultCanvasFactory = DefaultCanvasFactory;
+exports.DefaultCanvasFactory = DefaultCanvasFactory;
 const DefaultCMapReaderFactory = _util.isNodeJS ? _displayNode_utils.NodeCMapReaderFactory : _display_utils.DOMCMapReaderFactory;
-esportazioni.DefaultCMapReaderFactory = DefaultCMapReaderFactory;
+exports.DefaultCMapReaderFactory = DefaultCMapReaderFactory;
 const DefaultFilterFactory = _util.isNodeJS ? _displayNode_utils.NodeFilterFactory : _display_utils.DOMFilterFactory;
-esportazioni.DefaultFilterFactory = DefaultFilterFactory;
+exports.DefaultFilterFactory = DefaultFilterFactory;
 const DefaultStandardFontDataFactory = _util.isNodeJS ? _displayNode_utils.NodeStandardFontDataFactory : _display_utils.DOMStandardFontDataFactory;
-esportazioni.DefaultStandardFontDataFactory = DefaultStandardFontDataFactory;
-funzione getDocument(src) {
-  se (tipo di src === "stringa" || istanza di src URL) {
-    origine = {
-      URL: origine
+exports.DefaultStandardFontDataFactory = DefaultStandardFontDataFactory;
+function getDocument(src) {
+  if (typeof src === "string" || src instanceof URL) {
+    src = {
+      url: src
     };
-  } altrimenti se ((0, _util.isArrayBuffer)(src)) {
-    origine = {
-      dati: src
+  } else if ((0, _util.isArrayBuffer)(src)) {
+    src = {
+      data: src
     };
   }
-  se (tipo di src !== "oggetto") {
-    throw new Error("Parametro non valido in getDocument, è necessario un oggetto parametro.");
+  if (typeof src !== "object") {
+    throw new Error("Invalid parameter in getDocument, need parameter object.");
   }
-  se (!src.url && !src.data && !src.range) {
-    throw new Error("Oggetto parametro non valido: è necessario .data, .range o .url");
+  if (!src.url && !src.data && !src.range) {
+    throw new Error("Invalid parameter object: need either .data, .range or .url");
   }
   const task = new PDFDocumentLoadingTask();
-  costante {
-    ID documento
-  } = compito;
+  const {
+    docId
+  } = task;
   const url = src.url ? getUrlProp(src.url) : null;
   const data = src.data ? getDataProp(src.data) : null;
   const httpHeaders = src.httpHeaders || null;
-  const conCredenziali = src.conCredenziali === true;
+  const withCredentials = src.withCredentials === true;
   const password = src.password ?? null;
   const rangeTransport = src.range instanceof PDFDataRangeTransport ? src.range : null;
   const rangeChunkSize = Number.isInteger(src.rangeChunkSize) && src.rangeChunkSize > 0 ? src.rangeChunkSize : DEFAULT_RANGE_CHUNK_SIZE;
-  lascia worker = src.worker instanceof PDFWorker ? src.worker : null;
-  const verbosità = src.verbosità;
-  const docBaseUrl = typeof src.docBaseUrl === "string" && !(0, _display_utils.isDataScheme)(src.docBaseUrl) ? src.docBaseUrl: null;
-  const cMapUrl = typeof src.cMapUrl === "stringa" ? src.cMapUrl : null;
+  let worker = src.worker instanceof PDFWorker ? src.worker : null;
+  const verbosity = src.verbosity;
+  const docBaseUrl = typeof src.docBaseUrl === "string" && !(0, _display_utils.isDataScheme)(src.docBaseUrl) ? src.docBaseUrl : null;
+  const cMapUrl = typeof src.cMapUrl === "string" ? src.cMapUrl : null;
   const cMapPacked = src.cMapPacked !== false;
   const CMapReaderFactory = src.CMapReaderFactory || DefaultCMapReaderFactory;
-  const standardFontDataUrl = typeof src.standardFontDataUrl === "stringa" ? src.standardFontDataUrl : null;
+  const standardFontDataUrl = typeof src.standardFontDataUrl === "string" ? src.standardFontDataUrl : null;
   const StandardFontDataFactory = src.StandardFontDataFactory || DefaultStandardFontDataFactory;
   const ignoreErrors = src.stopAtErrors !== true;
   const maxImageSize = Number.isInteger(src.maxImageSize) && src.maxImageSize > -1 ? src.maxImageSize : -1;
   const isEvalSupported = src.isEvalSupported !== false;
-  const isOffscreenCanvasSupported = typeof src.isOffscreenCanvasSupported === "booleano" ? src.isOffscreenCanvasSupported : !_util.isNodeJS;
+  const isOffscreenCanvasSupported = typeof src.isOffscreenCanvasSupported === "boolean" ? src.isOffscreenCanvasSupported : !_util.isNodeJS;
   const canvasMaxAreaInBytes = Number.isInteger(src.canvasMaxAreaInBytes) ? src.canvasMaxAreaInBytes : -1;
-  const disableFontFace = typeof src.disableFontFace === "booleano" ? src.disableFontFace : _util.isNodeJS;
+  const disableFontFace = typeof src.disableFontFace === "boolean" ? src.disableFontFace : _util.isNodeJS;
   const fontExtraProperties = src.fontExtraProperties === true;
   const enableXfa = src.enableXfa === true;
   const ownerDocument = src.ownerDocument || globalThis.document;
@@ -937,546 +937,546 @@ funzione getDocument(src) {
   const disableStream = src.disableStream === true;
   const disableAutoFetch = src.disableAutoFetch === true;
   const pdfBug = src.pdfBug === true;
-  lunghezza costante = rangeTransport ? rangeTransport.length : src.length ?? NaN;
-  const useSystemFonts = typeof src.useSystemFonts === "booleano" ? src.useSystemFonts : !_util.isNodeJS && !disableFontFace;
-  const useWorkerFetch = typeof src.useWorkerFetch === "booleano" ? src.useWorkerFetch : CMapReaderFactory === _display_utils.DOMCMapReaderFactory && StandardFontDataFactory === _display_utils.DOMStandardFontDataFactory && cMapUrl && standardFontDataUrl && (0, _display_utils.isValidFetchUrl)(cMapUrl, document.baseURI) && (0, _display_utils.isValidFetchUrl)(standardFontDataUrl, document.baseURI);
+  const length = rangeTransport ? rangeTransport.length : src.length ?? NaN;
+  const useSystemFonts = typeof src.useSystemFonts === "boolean" ? src.useSystemFonts : !_util.isNodeJS && !disableFontFace;
+  const useWorkerFetch = typeof src.useWorkerFetch === "boolean" ? src.useWorkerFetch : CMapReaderFactory === _display_utils.DOMCMapReaderFactory && StandardFontDataFactory === _display_utils.DOMStandardFontDataFactory && cMapUrl && standardFontDataUrl && (0, _display_utils.isValidFetchUrl)(cMapUrl, document.baseURI) && (0, _display_utils.isValidFetchUrl)(standardFontDataUrl, document.baseURI);
   const canvasFactory = src.canvasFactory || new DefaultCanvasFactory({
-    Documento proprietario
+    ownerDocument
   });
   const filterFactory = src.filterFactory || new DefaultFilterFactory({
-    ID documento,
-    Documento proprietario
+    docId,
+    ownerDocument
   });
   const styleElement = null;
-  (0, _util.setVerbosityLevel)(verbosità);
+  (0, _util.setVerbosityLevel)(verbosity);
   const transportFactory = {
-    Fabbrica di tele,
+    canvasFactory,
     filterFactory
   };
-  se (!useWorkerFetch) {
-    transportFactory.cMapReaderFactory = nuovo CMapReaderFactory({
+  if (!useWorkerFetch) {
+    transportFactory.cMapReaderFactory = new CMapReaderFactory({
       baseUrl: cMapUrl,
-      è compresso: cMapPacked
+      isCompressed: cMapPacked
     });
-    transportFactory.standardFontDataFactory = nuovo StandardFontDataFactory({
+    transportFactory.standardFontDataFactory = new StandardFontDataFactory({
       baseUrl: standardFontDataUrl
     });
   }
-  se (!lavoratore) {
+  if (!worker) {
     const workerParams = {
-      verbosità,
-      porta: _worker_options.GlobalWorkerOptions.workerPort
+      verbosity,
+      port: _worker_options.GlobalWorkerOptions.workerPort
     };
     worker = workerParams.port ? PDFWorker.fromPort(workerParams) : new PDFWorker(workerParams);
-    task._worker = lavoratore;
+    task._worker = worker;
   }
   const fetchDocParams = {
-    ID documento,
+    docId,
     apiVersion: '3.11.174',
-    dati,
+    data,
     password,
-    Disabilita AutoFetch,
-    intervalloChunkSize,
-    lunghezza,
+    disableAutoFetch,
+    rangeChunkSize,
+    length,
     docBaseUrl,
     enableXfa,
-    OpzioniValutatore: {
-      dimensione massima dell'immagine,
-      disabilitaFontFace,
-      ignoraErrori,
-      è supportato da Eval,
-      èOffscreenCanvasSupported,
+    evaluatorOptions: {
+      maxImageSize,
+      disableFontFace,
+      ignoreErrors,
+      isEvalSupported,
+      isOffscreenCanvasSupported,
       canvasMaxAreaInBytes,
       fontExtraProperties,
-      usaSystemFonts,
-      cMapUrl: usaWorkerFetch ? cMapUrl : null,
-      standardFontDataUrl: useWorkerFetch ? standardFontDataUrl: null
+      useSystemFonts,
+      cMapUrl: useWorkerFetch ? cMapUrl : null,
+      standardFontDataUrl: useWorkerFetch ? standardFontDataUrl : null
     }
   };
   const transportParams = {
-    ignoraErrori,
-    è supportato da Eval,
-    disabilitaFontFace,
+    ignoreErrors,
+    isEvalSupported,
+    disableFontFace,
     fontExtraProperties,
     enableXfa,
-    Documento proprietario,
-    Disabilita AutoFetch,
+    ownerDocument,
+    disableAutoFetch,
     pdfBug,
-    elemento di stile
+    styleElement
   };
-  worker.promise.then(funzione () {
-    se (task.destroyed) {
-      genera un nuovo errore("Caricamento interrotto");
+  worker.promise.then(function () {
+    if (task.destroyed) {
+      throw new Error("Loading aborted");
     }
     const workerIdPromise = _fetchDocument(worker, fetchDocParams);
     const networkStreamPromise = new Promise(function (resolve) {
-      lascia networkStream;
-      se (intervalloTrasporto) {
-        networkStream = nuovo _transport_stream.PDFDataTransportStream({
-          lunghezza,
-          dati iniziali: rangeTransport.initialData,
+      let networkStream;
+      if (rangeTransport) {
+        networkStream = new _transport_stream.PDFDataTransportStream({
+          length,
+          initialData: rangeTransport.initialData,
           progressiveDone: rangeTransport.progressiveDone,
           contentDispositionFilename: rangeTransport.contentDispositionFilename,
           disableRange,
-          Disabilita Stream
-        }, intervalloTrasporto);
-      } altrimenti se (!dati) {
-        const createPDFNetworkStream = parametri => {
-          se (_util.isNodeJS) {
-            restituisci nuovo _displayNode_stream.PDFNodeStream(parametri);
+          disableStream
+        }, rangeTransport);
+      } else if (!data) {
+        const createPDFNetworkStream = params => {
+          if (_util.isNodeJS) {
+            return new _displayNode_stream.PDFNodeStream(params);
           }
-          restituisci (0, _display_utils.isValidFetchUrl)(params.url) ? nuovo _displayFetch_stream.PDFFetchStream(params) : nuovo _displayNetwork.PDFNetworkStream(params);
+          return (0, _display_utils.isValidFetchUrl)(params.url) ? new _displayFetch_stream.PDFFetchStream(params) : new _displayNetwork.PDFNetworkStream(params);
         };
         networkStream = createPDFNetworkStream({
-          URL,
-          lunghezza,
-          Intestazioni http,
-          con credenziali,
-          intervalloChunkSize,
+          url,
+          length,
+          httpHeaders,
+          withCredentials,
+          rangeChunkSize,
           disableRange,
-          Disabilita Stream
+          disableStream
         });
       }
-      risolvere(flusso di rete);
+      resolve(networkStream);
     });
-    restituisci Promise.all([workerIdPromise, networkStreamPromise]).then(function ([workerId, networkStream]) {
-      se (task.destroyed) {
-        genera un nuovo errore("Caricamento interrotto");
+    return Promise.all([workerIdPromise, networkStreamPromise]).then(function ([workerId, networkStream]) {
+      if (task.destroyed) {
+        throw new Error("Loading aborted");
       }
       const messageHandler = new _message_handler.MessageHandler(docId, workerId, worker.port);
       const transport = new WorkerTransport(messageHandler, task, networkStream, transportParams, transportFactory);
-      task._transport = trasporto;
-      messageHandler.send("Pronto", null);
+      task._transport = transport;
+      messageHandler.send("Ready", null);
     });
   }).catch(task._capability.reject);
-  compito di ritorno;
+  return task;
 }
-funzione asincrona _fetchDocument(lavoratore, sorgente) {
-  se (lavoratore.distrutto) {
-    genera un nuovo errore("Il lavoratore è stato distrutto");
+async function _fetchDocument(worker, source) {
+  if (worker.destroyed) {
+    throw new Error("Worker was destroyed");
   }
   const workerId = await worker.messageHandler.sendWithPromise("GetDocRequest", source, source.data ? [source.data.buffer] : null);
-  se (lavoratore.distrutto) {
-    genera un nuovo errore("Il lavoratore è stato distrutto");
+  if (worker.destroyed) {
+    throw new Error("Worker was destroyed");
   }
-  restituisci workerId;
+  return workerId;
 }
-funzione getUrlProp(val) {
-  se (val instanceof URL) {
-    restituisci val.href;
+function getUrlProp(val) {
+  if (val instanceof URL) {
+    return val.href;
   }
-  Tentativo {
-    restituisce nuovo URL(val, window.location).href;
-  } presa {
-    se (_util.isNodeJS && tipo di valore === "stringa") {
-      restituisci valore;
+  try {
+    return new URL(val, window.location).href;
+  } catch {
+    if (_util.isNodeJS && typeof val === "string") {
+      return val;
     }
   }
-  throw new Error("Dati URL PDF non validi: " + "è prevista una stringa o un oggetto URL nella proprietà URL.");
+  throw new Error("Invalid PDF url data: " + "either string or URL-object is expected in the url property.");
 }
-funzione getDataProp(val) {
+function getDataProp(val) {
   if (_util.isNodeJS && typeof Buffer !== "undefined" && val instanceof Buffer) {
-    throw new Error("Fornire dati binari come `Uint8Array`, anziché `Buffer`.");
+    throw new Error("Please provide binary data as `Uint8Array`, rather than `Buffer`.");
   }
-  se (val instanceof Uint8Array && val.byteLength === val.buffer.byteLength) {
-    restituisci valore;
+  if (val instanceof Uint8Array && val.byteLength === val.buffer.byteLength) {
+    return val;
   }
-  se (tipo di valore === "stringa") {
-    restituisci (0, _util.stringToBytes)(valore);
+  if (typeof val === "string") {
+    return (0, _util.stringToBytes)(val);
   }
-  if (typeof val === "oggetto" && !isNaN(val?.length) || (0, _util.isArrayBuffer)(val)) {
-    restituisci nuovo Uint8Array(val);
+  if (typeof val === "object" && !isNaN(val?.length) || (0, _util.isArrayBuffer)(val)) {
+    return new Uint8Array(val);
   }
-  throw new Error("Dati binari PDF non validi: nella proprietà dati è previsto un TypedArray, una " + "stringa o un oggetto simile a un array.");
+  throw new Error("Invalid PDF binary data: either TypedArray, " + "string, or array-like object is expected in the data property.");
 }
-classe PDFDocumentLoadingTask {
-  statico #docId = 0;
-  costruttore() {
+class PDFDocumentLoadingTask {
+  static #docId = 0;
+  constructor() {
     this._capability = new _util.PromiseCapability();
-    questo._trasporto = null;
-    questo._lavoratore = null;
+    this._transport = null;
+    this._worker = null;
     this.docId = `d${PDFDocumentLoadingTask.#docId++}`;
-    questo.distrutto = falso;
+    this.destroyed = false;
     this.onPassword = null;
     this.onProgress = null;
   }
-  ottieni promessa() {
-    restituisci this._capability.promise;
+  get promise() {
+    return this._capability.promise;
   }
-  distruzione asincrona() {
-    questo.distrutto = vero;
-    Tentativo {
-      se (this._worker?.port) {
+  async destroy() {
+    this.destroyed = true;
+    try {
+      if (this._worker?.port) {
         this._worker._pendingDestroy = true;
       }
-      attendi questo._trasporto?.distruggi();
-    } catturare (es.) {
-      se (this._worker?.port) {
-        elimina this._worker._pendingDestroy;
+      await this._transport?.destroy();
+    } catch (ex) {
+      if (this._worker?.port) {
+        delete this._worker._pendingDestroy;
       }
-      lanciare ex;
+      throw ex;
     }
-    questo._trasporto = null;
-    se (questo._lavoratore) {
-      questo._lavoratore.distruggi();
-      questo._lavoratore = null;
+    this._transport = null;
+    if (this._worker) {
+      this._worker.destroy();
+      this._worker = null;
     }
   }
 }
-esportazioni.PDFDocumentLoadingTask = PDFDocumentLoadingTask;
-classe PDFDataRangeTransport {
-  costruttore(lunghezza, datiiniziali, progressiveDone = false, contentDispositionFilename = null) {
-    this.length = lunghezza;
-    questo.datiiniziali = datiiniziali;
+exports.PDFDocumentLoadingTask = PDFDocumentLoadingTask;
+class PDFDataRangeTransport {
+  constructor(length, initialData, progressiveDone = false, contentDispositionFilename = null) {
+    this.length = length;
+    this.initialData = initialData;
     this.progressiveDone = progressiveDone;
     this.contentDispositionFilename = contentDispositionFilename;
-    questo._rangeListeners = [];
-    questo._progressListeners = [];
+    this._rangeListeners = [];
+    this._progressListeners = [];
     this._progressiveReadListeners = [];
     this._progressiveDoneListeners = [];
     this._readyCapability = new _util.PromiseCapability();
   }
-  addRangeListener(ascoltatore) {
-    this._rangeListeners.push(ascoltatore);
+  addRangeListener(listener) {
+    this._rangeListeners.push(listener);
   }
-  addProgressListener(ascoltatore) {
-    this._progressListeners.push(ascoltatore);
+  addProgressListener(listener) {
+    this._progressListeners.push(listener);
   }
-  addProgressiveReadListener(ascoltatore) {
-    this._progressiveReadListeners.push(ascoltatore);
+  addProgressiveReadListener(listener) {
+    this._progressiveReadListeners.push(listener);
   }
-  addProgressiveDoneListener(ascoltatore) {
-    this._progressiveDoneListeners.push(ascoltatore);
+  addProgressiveDoneListener(listener) {
+    this._progressiveDoneListeners.push(listener);
   }
-  onDataRange(inizio, blocco) {
-    per (const listener di this._rangeListeners) {
-      ascoltatore(inizio, frammento);
+  onDataRange(begin, chunk) {
+    for (const listener of this._rangeListeners) {
+      listener(begin, chunk);
     }
   }
-  onDataProgress(caricato, totale) {
+  onDataProgress(loaded, total) {
     this._readyCapability.promise.then(() => {
-      per (const listener di this._progressListeners) {
-        listener(caricato, totale);
+      for (const listener of this._progressListeners) {
+        listener(loaded, total);
       }
     });
   }
-  onDataProgressiveRead(pezzo) {
+  onDataProgressiveRead(chunk) {
     this._readyCapability.promise.then(() => {
-      per (const listener di this._progressiveReadListeners) {
-        ascoltatore(pezzo);
+      for (const listener of this._progressiveReadListeners) {
+        listener(chunk);
       }
     });
   }
   onDataProgressiveDone() {
     this._readyCapability.promise.then(() => {
-      per (const listener di this._progressiveDoneListeners) {
-        ascoltatore();
+      for (const listener of this._progressiveDoneListeners) {
+        listener();
       }
     });
   }
   transportReady() {
     this._readyCapability.resolve();
   }
-  requestDataRange(inizio, fine) {
-    (0, _util.unreachable)("Metodo astratto PDFDataRangeTransport.requestDataRange");
+  requestDataRange(begin, end) {
+    (0, _util.unreachable)("Abstract method PDFDataRangeTransport.requestDataRange");
   }
   abort() {}
 }
-esportazioni.PDFDataRangeTransport = PDFDataRangeTransport;
-classe PDFDocumentProxy {
-  costruttore(pdfInfo, trasporto) {
-    questo._pdfInfo = pdfInfo;
-    this._transport = trasporto;
-    Object.defineProperty(questo, "getJavaScript", {
-      valore: () => {
-        (0, _display_utils.deprecated)("`PDFDocumentProxy.getJavaScript`, " + "utilizzare invece `PDFDocumentProxy.getJSActions`.");
-        restituisci this.getJSActions().then(js => {
-          se (!js) {
-            restituisci js;
+exports.PDFDataRangeTransport = PDFDataRangeTransport;
+class PDFDocumentProxy {
+  constructor(pdfInfo, transport) {
+    this._pdfInfo = pdfInfo;
+    this._transport = transport;
+    Object.defineProperty(this, "getJavaScript", {
+      value: () => {
+        (0, _display_utils.deprecated)("`PDFDocumentProxy.getJavaScript`, " + "please use `PDFDocumentProxy.getJSActions` instead.");
+        return this.getJSActions().then(js => {
+          if (!js) {
+            return js;
           }
           const jsArr = [];
-          per (nome costante in js) {
-            jsArr.push(...js[nome]);
+          for (const name in js) {
+            jsArr.push(...js[name]);
           }
-          restituisci jsArr;
+          return jsArr;
         });
       }
     });
   }
-  ottieni annotationStorage() {
-    restituisci questo._trasporto.annotazioneArchiviazione;
+  get annotationStorage() {
+    return this._transport.annotationStorage;
   }
-  ottieni filterFactory() {
-    restituisci this._transport.filterFactory;
+  get filterFactory() {
+    return this._transport.filterFactory;
   }
-  ottieni numPages() {
-    restituisci questo._pdfInfo.numPages;
+  get numPages() {
+    return this._pdfInfo.numPages;
   }
-  ottenere impronte digitali() {
-    restituisci questo._pdfInfo.impronte digitali;
+  get fingerprints() {
+    return this._pdfInfo.fingerprints;
   }
-  ottieni isPureXfa() {
+  get isPureXfa() {
     return (0, _util.shadow)(this, "isPureXfa", !!this._transport._htmlForXfa);
   }
-  ottieni allXfaHtml() {
-    restituisci questo._trasporto._htmlForXfa;
+  get allXfaHtml() {
+    return this._transport._htmlForXfa;
   }
-  getPage(numeropagina) {
-    restituisci questo._transport.getPage(pageNumber);
+  getPage(pageNumber) {
+    return this._transport.getPage(pageNumber);
   }
-  getPageIndex(rif) {
-    restituisci questo._transport.getPageIndex(ref);
+  getPageIndex(ref) {
+    return this._transport.getPageIndex(ref);
   }
   getDestinations() {
-    restituisci this._transport.getDestinations();
+    return this._transport.getDestinations();
   }
   getDestination(id) {
-    restituisci questo._transport.getDestination(id);
+    return this._transport.getDestination(id);
   }
-  ottieniEtichettePagina() {
-    restituisci this._transport.getPageLabels();
+  getPageLabels() {
+    return this._transport.getPageLabels();
   }
   getPageLayout() {
-    restituisci questo._transport.getPageLayout();
+    return this._transport.getPageLayout();
   }
   getPageMode() {
-    restituisci this._transport.getPageMode();
+    return this._transport.getPageMode();
   }
   getViewerPreferences() {
-    restituisci this._transport.getViewerPreferences();
+    return this._transport.getViewerPreferences();
   }
   getOpenAction() {
-    restituisci this._transport.getOpenAction();
+    return this._transport.getOpenAction();
   }
-  ottieniAllegati() {
-    restituisci questo._transport.getAttachments();
+  getAttachments() {
+    return this._transport.getAttachments();
   }
   getJSActions() {
-    restituisci this._transport.getDocJSActions();
+    return this._transport.getDocJSActions();
   }
-  ottieniContorno() {
-    restituisci questo._trasporto.getOutline();
+  getOutline() {
+    return this._transport.getOutline();
   }
   getOptionalContentConfig() {
-    restituisci this._transport.getOptionalContentConfig();
+    return this._transport.getOptionalContentConfig();
   }
-  ottieniPermessi() {
-    restituisci this._transport.getPermissions();
+  getPermissions() {
+    return this._transport.getPermissions();
   }
-  ottieniMetadati() {
-    restituisci questo._trasporto.getMetadata();
+  getMetadata() {
+    return this._transport.getMetadata();
   }
   getMarkInfo() {
-    restituisci questo._transport.getMarkInfo();
+    return this._transport.getMarkInfo();
   }
   getData() {
-    restituisci questo._trasporto.getData();
+    return this._transport.getData();
   }
-  salvaDocumento() {
-    restituisci this._transport.saveDocument();
+  saveDocument() {
+    return this._transport.saveDocument();
   }
-  ottieniInformazioniScarica() {
-    restituisci this._transport.downloadInfoCapability.promise;
+  getDownloadInfo() {
+    return this._transport.downloadInfoCapability.promise;
   }
   cleanup(keepLoadedFonts = false) {
-    restituisci this._transport.startCleanup(keepLoadedFonts || this.isPureXfa);
+    return this._transport.startCleanup(keepLoadedFonts || this.isPureXfa);
   }
-  distruggere() {
-    restituisci this.loadingTask.destroy();
+  destroy() {
+    return this.loadingTask.destroy();
   }
-  ottieni loadingParams() {
-    restituisci questo._trasporto.parametri di caricamento;
+  get loadingParams() {
+    return this._transport.loadingParams;
   }
-  ottieni loadingTask() {
-    restituisci questo._trasporto.caricamentoTask;
+  get loadingTask() {
+    return this._transport.loadingTask;
   }
   getFieldObjects() {
-    restituisci questo._transport.getFieldObjects();
+    return this._transport.getFieldObjects();
   }
-  haJSAzioni() {
-    restituisci this._transport.hasJSActions();
+  hasJSActions() {
+    return this._transport.hasJSActions();
   }
   getCalculationOrderIds() {
-    restituisci this._transport.getCalculationOrderIds();
+    return this._transport.getCalculationOrderIds();
   }
 }
-esportazioni.PDFDocumentProxy = PDFDocumentProxy;
-classe PDFPageProxy {
+exports.PDFDocumentProxy = PDFDocumentProxy;
+class PDFPageProxy {
   #delayedCleanupTimeout = null;
   #pendingCleanup = false;
-  costruttore(pageIndex, pageInfo, trasporto, pdfBug = false) {
+  constructor(pageIndex, pageInfo, transport, pdfBug = false) {
     this._pageIndex = pageIndex;
     this._pageInfo = pageInfo;
-    this._transport = trasporto;
+    this._transport = transport;
     this._stats = pdfBug ? new _display_utils.StatTimer() : null;
-    questo._pdfBug = pdfBug;
+    this._pdfBug = pdfBug;
     this.commonObjs = transport.commonObjs;
     this.objs = new PDFObjects();
     this._maybeCleanupAfterRender = false;
     this._intentStates = new Map();
-    questo.distrutto = falso;
+    this.destroyed = false;
   }
-  ottieni numeropagina() {
-    restituisci questo._pageIndex + 1;
+  get pageNumber() {
+    return this._pageIndex + 1;
   }
-  ottieni ruota() {
-    restituisci this._pageInfo.rotate;
+  get rotate() {
+    return this._pageInfo.rotate;
   }
-  ottieni ref() {
-    restituisci this._pageInfo.ref;
+  get ref() {
+    return this._pageInfo.ref;
   }
-  ottieni userUnit() {
-    restituisci this._pageInfo.userUnit;
+  get userUnit() {
+    return this._pageInfo.userUnit;
   }
-  ottieni vista() {
-    restituisci this._pageInfo.view;
+  get view() {
+    return this._pageInfo.view;
   }
   getViewport({
-    scala,
-    rotazione = questo.ruota,
+    scale,
+    rotation = this.rotate,
     offsetX = 0,
     offsetY = 0,
-    dontFlip = falso
+    dontFlip = false
   } = {}) {
-    restituisci nuovo _display_utils.PageViewport({
-      viewBox: questa vista,
-      scala,
-      rotazione,
+    return new _display_utils.PageViewport({
+      viewBox: this.view,
+      scale,
+      rotation,
       offsetX,
       offsetY,
-      non capovolgere
+      dontFlip
     });
   }
-  ottieniAnnotazioni({
-    intento = "visualizzazione"
+  getAnnotations({
+    intent = "display"
   } = {}) {
-    const intentArgs = this._transport.getRenderingIntent(intento);
-    restituisci this._transport.getAnnotations(this._pageIndex, intentArgs.renderingIntent);
+    const intentArgs = this._transport.getRenderingIntent(intent);
+    return this._transport.getAnnotations(this._pageIndex, intentArgs.renderingIntent);
   }
   getJSActions() {
-    restituisci this._transport.getPageJSActions(this._pageIndex);
+    return this._transport.getPageJSActions(this._pageIndex);
   }
-  ottieni filterFactory() {
-    restituisci this._transport.filterFactory;
+  get filterFactory() {
+    return this._transport.filterFactory;
   }
-  ottieni isPureXfa() {
+  get isPureXfa() {
     return (0, _util.shadow)(this, "isPureXfa", !!this._transport._htmlForXfa);
   }
-  getXfa asincrono() {
-    restituisci this._transport._htmlForXfa?.children[this._pageIndex] || null;
+  async getXfa() {
+    return this._transport._htmlForXfa?.children[this._pageIndex] || null;
   }
-  rendere({
-    contestotela,
-    finestra,
-    intento = "visualizzazione",
+  render({
+    canvasContext,
+    viewport,
+    intent = "display",
     annotationMode = _util.AnnotationMode.ENABLE,
-    trasformare = null,
-    sfondo = nullo,
+    transform = null,
+    background = null,
     optionalContentConfigPromise = null,
     annotationCanvasMap = null,
     pageColors = null,
     printAnnotationStorage = null
   }) {
-    this._stats?.time("Complessivo");
+    this._stats?.time("Overall");
     const intentArgs = this._transport.getRenderingIntent(intent, annotationMode, printAnnotationStorage);
-    questo.#pendingCleanup = false;
-    questo.#abortDelayedCleanup();
-    se (!optionalContentConfigPromise) {
+    this.#pendingCleanup = false;
+    this.#abortDelayedCleanup();
+    if (!optionalContentConfigPromise) {
       optionalContentConfigPromise = this._transport.getOptionalContentConfig();
     }
-    lascia intentState = this._intentStates.get(intentArgs.cacheKey);
-    se (!intentState) {
+    let intentState = this._intentStates.get(intentArgs.cacheKey);
+    if (!intentState) {
       intentState = Object.create(null);
       this._intentStates.set(intentArgs.cacheKey, intentState);
     }
-    se (intentState.streamReaderCancelTimeout) {
+    if (intentState.streamReaderCancelTimeout) {
       clearTimeout(intentState.streamReaderCancelTimeout);
       intentState.streamReaderCancelTimeout = null;
     }
     const intentPrint = !!(intentArgs.renderingIntent & _util.RenderingIntentFlag.PRINT);
-    se (!intentState.displayReadyCapability) {
+    if (!intentState.displayReadyCapability) {
       intentState.displayReadyCapability = new _util.PromiseCapability();
       intentState.operatorList = {
         fnArray: [],
         argsArray: [],
-        lastChunk: falso,
+        lastChunk: false,
         separateAnnots: null
       };
-      this._stats?.time("Richiesta di pagina");
-      this._pumpOperatorList(intentArgs );
+      this._stats?.time("Page Request");
+      this._pumpOperatorList(intentArgs);
     }
-    const complete = errore => {
+    const complete = error => {
       intentState.renderTasks.delete(internalRenderTask);
-      se (this._maybeCleanupAfterRender || intentPrint) {
-        questo.#pendingCleanup = true;
+      if (this._maybeCleanupAfterRender || intentPrint) {
+        this.#pendingCleanup = true;
       }
-      questo.#tryCleanup(!intentPrint);
-      se (errore) {
-        internalRenderTask.capability.reject(errore);
+      this.#tryCleanup(!intentPrint);
+      if (error) {
+        internalRenderTask.capability.reject(error);
         this._abortOperatorList({
-          Stato di intenzione,
-          motivo: errore instanceof Errore ? errore : nuovo Errore(errore)
+          intentState,
+          reason: error instanceof Error ? error : new Error(error)
         });
-      } altro {
+      } else {
         internalRenderTask.capability.resolve();
       }
       this._stats?.timeEnd("Rendering");
-      this._stats?.timeEnd("Complessivo");
+      this._stats?.timeEnd("Overall");
     };
     const internalRenderTask = new InternalRenderTask({
-      callback: completo,
-      parametri: {
-        contestotela,
-        finestra,
-        trasformare,
-        sfondo
+      callback: complete,
+      params: {
+        canvasContext,
+        viewport,
+        transform,
+        background
       },
-      objs: questo.objs,
-      commonObjs: questo.commonObjs,
-      annotazioneCanvasMap,
+      objs: this.objs,
+      commonObjs: this.commonObjs,
+      annotationCanvasMap,
       operatorList: intentState.operatorList,
       pageIndex: this._pageIndex,
       canvasFactory: this._transport.canvasFactory,
       filterFactory: this._transport.filterFactory,
       useRequestAnimationFrame: !intentPrint,
-      pdfBug: questo._pdfBug,
-      Colori di pagina
+      pdfBug: this._pdfBug,
+      pageColors
     });
     (intentState.renderTasks ||= new Set()).add(internalRenderTask);
     const renderTask = internalRenderTask.task;
     Promise.all([intentState.displayReadyCapability.promise, optionalContentConfigPromise]).then(([transparency, optionalContentConfig]) => {
-      se (questo.distrutto) {
-        completare();
-        ritorno;
+      if (this.destroyed) {
+        complete();
+        return;
       }
       this._stats?.time("Rendering");
       internalRenderTask.initializeGraphics({
-        trasparenza,
+        transparency,
         optionalContentConfig
       });
       internalRenderTask.operatorListChanged();
-    }).catch(completo);
-    restituisci renderTask;
+    }).catch(complete);
+    return renderTask;
   }
   getOperatorList({
-    intento = "visualizzazione",
+    intent = "display",
     annotationMode = _util.AnnotationMode.ENABLE,
     printAnnotationStorage = null
   } = {}) {
-    funzione operatorListChanged() {
-      se (intentState.operatorList.lastChunk) {
+    function operatorListChanged() {
+      if (intentState.operatorList.lastChunk) {
         intentState.opListReadCapability.resolve(intentState.operatorList);
         intentState.renderTasks.delete(opListTask);
       }
     }
     const intentArgs = this._transport.getRenderingIntent(intent, annotationMode, printAnnotationStorage, true);
-    lascia intentState = this._intentStates.get(intentArgs.cacheKey);
-    se (!intentState) {
+    let intentState = this._intentStates.get(intentArgs.cacheKey);
+    if (!intentState) {
       intentState = Object.create(null);
       this._intentStates.set(intentArgs.cacheKey, intentState);
     }
-    lascia opListTask;
-    se (!intentState.opListReadCapability) {
+    let opListTask;
+    if (!intentState.opListReadCapability) {
       opListTask = Object.create(null);
       opListTask.operatorListChanged = operatorListChanged;
       intentState.opListReadCapability = new _util.PromiseCapability();
@@ -1484,658 +1484,658 @@ classe PDFPageProxy {
       intentState.operatorList = {
         fnArray: [],
         argsArray: [],
-        lastChunk: falso,
+        lastChunk: false,
         separateAnnots: null
       };
-      this._stats?.time("Richiesta di pagina");
+      this._stats?.time("Page Request");
       this._pumpOperatorList(intentArgs);
     }
-    restituisci intentState.opListReadCapability.promise;
+    return intentState.opListReadCapability.promise;
   }
-  flussoTestoContenuto({
+  streamTextContent({
     includeMarkedContent = false,
     disableNormalization = false
   } = {}) {
-    const DIMENSIONE_CENSO_CONTENUTO_TESTO = 100;
-    restituisci questo._transport.messageHandler.sendWithStream("GetTextContent", {
+    const TEXT_CONTENT_CHUNK_SIZE = 100;
+    return this._transport.messageHandler.sendWithStream("GetTextContent", {
       pageIndex: this._pageIndex,
       includeMarkedContent: includeMarkedContent === true,
       disableNormalization: disableNormalization === true
     }, {
-      highWaterMark: DIMENSIONE_FONDO_CONTENUTO_TESTO,
-      dimensione(testoContenuto) {
-        restituisci textContent.items.length;
+      highWaterMark: TEXT_CONTENT_CHUNK_SIZE,
+      size(textContent) {
+        return textContent.items.length;
       }
     });
   }
-  getTextContent(parametri = {}) {
-    se (this._transport._htmlForXfa) {
-      restituisci this.getXfa().then(xfa => {
-        restituisci _xfa_text.XfaText.textContent(xfa);
+  getTextContent(params = {}) {
+    if (this._transport._htmlForXfa) {
+      return this.getXfa().then(xfa => {
+        return _xfa_text.XfaText.textContent(xfa);
       });
     }
     const readableStream = this.streamTextContent(params);
-    restituisci nuova Promessa(funzione (risolvi, rifiuta) {
-      funzione pompa() {
-        reader.read().then(funzione ({
-          valore,
-          Fatto
+    return new Promise(function (resolve, reject) {
+      function pump() {
+        reader.read().then(function ({
+          value,
+          done
         }) {
-          se (fatto) {
+          if (done) {
             resolve(textContent);
-            ritorno;
+            return;
           }
-          Oggetto.assegna(testoContenuto.stili, valore.stili);
+          Object.assign(textContent.styles, value.styles);
           textContent.items.push(...value.items);
-          pompa();
-        }, rifiutare);
+          pump();
+        }, reject);
       }
       const reader = readableStream.getReader();
       const textContent = {
-        elementi: [],
-        stili: Object.create(null)
+        items: [],
+        styles: Object.create(null)
       };
-      pompa();
+      pump();
     });
   }
   getStructTree() {
-    restituisci this._transport.getStructTree(this._pageIndex);
+    return this._transport.getStructTree(this._pageIndex);
   }
-  _distruggi() {
-    questo.distrutto = vero;
+  _destroy() {
+    this.destroyed = true;
     const waitOn = [];
-    per (const intentState di this._intentStates.values()) {
+    for (const intentState of this._intentStates.values()) {
       this._abortOperatorList({
-        Stato di intenzione,
-        motivo: nuovo errore("La pagina è stata distrutta.")
-        forza: vero
+        intentState,
+        reason: new Error("Page was destroyed."),
+        force: true
       });
-      se (intentState.opListReadCapability) {
-        continuare;
+      if (intentState.opListReadCapability) {
+        continue;
       }
-      per (const internalRenderTask di intentState.renderTasks) {
+      for (const internalRenderTask of intentState.renderTasks) {
         waitOn.push(internalRenderTask.completed);
-        internalRenderTask.annulla();
+        internalRenderTask.cancel();
       }
     }
-    questo.oggetto.chiaro();
-    questo.#pendingCleanup = false;
-    questo.#abortDelayedCleanup();
-    restituisci Promise.all(waitOn);
+    this.objs.clear();
+    this.#pendingCleanup = false;
+    this.#abortDelayedCleanup();
+    return Promise.all(waitOn);
   }
   cleanup(resetStats = false) {
-    questo.#pendingCleanup = true;
+    this.#pendingCleanup = true;
     const success = this.#tryCleanup(false);
-    se (resetStats && successo) {
+    if (resetStats && success) {
       this._stats &&= new _display_utils.StatTimer();
     }
-    ritorno di successo;
+    return success;
   }
-  #tryCleanup(ritardato = falso) {
-    questo.#abortDelayedCleanup();
-    se (!this.#pendingCleanup || this.destroyed) {
-      restituisci falso;
+  #tryCleanup(delayed = false) {
+    this.#abortDelayedCleanup();
+    if (!this.#pendingCleanup || this.destroyed) {
+      return false;
     }
-    se (ritardato) {
-      questo.#delayedCleanupTimeout = setTimeout(() => {
-        questo.#delayedCleanupTimeout = null;
-        questo.#tryCleanup(false);
+    if (delayed) {
+      this.#delayedCleanupTimeout = setTimeout(() => {
+        this.#delayedCleanupTimeout = null;
+        this.#tryCleanup(false);
       }, DELAYED_CLEANUP_TIMEOUT);
-      restituisci falso;
+      return false;
     }
-    per (cost {
+    for (const {
       renderTasks,
-      lista degli operatori
-    } di questo._intentStates.values()) {
-      se (renderTasks.size > 0 || !operatorList.lastChunk) {
-        restituisci falso;
+      operatorList
+    } of this._intentStates.values()) {
+      if (renderTasks.size > 0 || !operatorList.lastChunk) {
+        return false;
       }
     }
-    questo._intentStates.clear();
-    questo.oggetto.chiaro();
-    questo.#pendingCleanup = false;
-    restituisci vero;
+    this._intentStates.clear();
+    this.objs.clear();
+    this.#pendingCleanup = false;
+    return true;
   }
   #abortDelayedCleanup() {
-    se (questo.#delayedCleanupTimeout) {
+    if (this.#delayedCleanupTimeout) {
       clearTimeout(this.#delayedCleanupTimeout);
-      questo.#delayedCleanupTimeout = null;
+      this.#delayedCleanupTimeout = null;
     }
   }
-  _startRenderPage(trasparenza, cacheKey) {
+  _startRenderPage(transparency, cacheKey) {
     const intentState = this._intentStates.get(cacheKey);
-    se (!intentState) {
-      ritorno;
+    if (!intentState) {
+      return;
     }
-    this._stats?.timeEnd("Richiesta di pagina");
-    intentState.displayReadyCapability?.resolve(trasparenza);
+    this._stats?.timeEnd("Page Request");
+    intentState.displayReadyCapability?.resolve(transparency);
   }
   _renderPageChunk(operatorListChunk, intentState) {
-    per (lascia che i = 0, ii = operatorListChunk.length; i < ii; i++) {
+    for (let i = 0, ii = operatorListChunk.length; i < ii; i++) {
       intentState.operatorList.fnArray.push(operatorListChunk.fnArray[i]);
       intentState.operatorList.argsArray.push(operatorListChunk.argsArray[i]);
     }
     intentState.operatorList.lastChunk = operatorListChunk.lastChunk;
     intentState.operatorList.separateAnnots = operatorListChunk.separateAnnots;
-    per (const internalRenderTask di intentState.renderTasks) {
+    for (const internalRenderTask of intentState.renderTasks) {
       internalRenderTask.operatorListChanged();
     }
-    se (operatorListChunk.lastChunk) {
-      questo.#tryCleanup(true);
+    if (operatorListChunk.lastChunk) {
+      this.#tryCleanup(true);
     }
   }
   _pumpOperatorList({
     renderingIntent,
-    chiave della cache,
-    annotazioneStorageSerializable
+    cacheKey,
+    annotationStorageSerializable
   }) {
-    costante {
-      mappa,
-      trasferimenti
+    const {
+      map,
+      transfers
     } = annotationStorageSerializable;
     const readableStream = this._transport.messageHandler.sendWithStream("GetOperatorList", {
       pageIndex: this._pageIndex,
-      intento: renderingIntent,
-      chiave della cache,
-      annotazioneArchiviazione: mappa
-    }, trasferimenti);
+      intent: renderingIntent,
+      cacheKey,
+      annotationStorage: map
+    }, transfers);
     const reader = readableStream.getReader();
     const intentState = this._intentStates.get(cacheKey);
-    intentState.streamReader = lettore;
-    const pompa = () => {
-      lettore.leggi().quindi(({
-        valore,
-        Fatto
+    intentState.streamReader = reader;
+    const pump = () => {
+      reader.read().then(({
+        value,
+        done
       }) => {
-        se (fatto) {
+        if (done) {
           intentState.streamReader = null;
-          ritorno;
+          return;
         }
-        se (questo._trasporto.distrutto) {
-          ritorno;
+        if (this._transport.destroyed) {
+          return;
         }
-        this._renderPageChunk(valore, intentState);
-        pompa();
-      }, motivo => {
+        this._renderPageChunk(value, intentState);
+        pump();
+      }, reason => {
         intentState.streamReader = null;
-        se (questo._trasporto.distrutto) {
-          ritorno;
+        if (this._transport.destroyed) {
+          return;
         }
-        se (intentState.operatorList) {
+        if (intentState.operatorList) {
           intentState.operatorList.lastChunk = true;
-          per (const internalRenderTask di intentState.renderTasks) {
+          for (const internalRenderTask of intentState.renderTasks) {
             internalRenderTask.operatorListChanged();
           }
-          questo.#tryCleanup(true);
+          this.#tryCleanup(true);
         }
-        se (intentState.displayReadyCapability) {
-          intentState.displayReadyCapability.reject(motivo);
-        } altrimenti se (intentState.opListReadCapability) {
-          intentState.opListReadCapability.reject(motivo);
-        } altro {
-          gettare la ragione;
+        if (intentState.displayReadyCapability) {
+          intentState.displayReadyCapability.reject(reason);
+        } else if (intentState.opListReadCapability) {
+          intentState.opListReadCapability.reject(reason);
+        } else {
+          throw reason;
         }
       });
     };
-    pompa();
+    pump();
   }
   _abortOperatorList({
-    Stato di intenzione,
-    motivo,
-    forza = falso
+    intentState,
+    reason,
+    force = false
   }) {
-    se (!intentState.streamReader) {
-      ritorno;
+    if (!intentState.streamReader) {
+      return;
     }
-    se (intentState.streamReaderCancelTimeout) {
+    if (intentState.streamReaderCancelTimeout) {
       clearTimeout(intentState.streamReaderCancelTimeout);
       intentState.streamReaderCancelTimeout = null;
     }
-    se (!forza) {
-      se (intentState.renderTasks.size > 0) {
-        ritorno;
+    if (!force) {
+      if (intentState.renderTasks.size > 0) {
+        return;
       }
-      se (motivo instanceof _display_utils.RenderingCancelledException) {
-        lascia ritardo = RENDERING_CANCELLED_TIMEOUT;
-        se (motivo.extraDelay > 0 e motivo.extraDelay < 1000) {
-          ritardo += motivo.ritardoextra;
+      if (reason instanceof _display_utils.RenderingCancelledException) {
+        let delay = RENDERING_CANCELLED_TIMEOUT;
+        if (reason.extraDelay > 0 && reason.extraDelay < 1000) {
+          delay += reason.extraDelay;
         }
         intentState.streamReaderCancelTimeout = setTimeout(() => {
           intentState.streamReaderCancelTimeout = null;
           this._abortOperatorList({
-            Stato di intenzione,
-            motivo,
-            forza: vero
+            intentState,
+            reason,
+            force: true
           });
-        }, ritardo);
-        ritorno;
+        }, delay);
+        return;
       }
     }
     intentState.streamReader.cancel(new _util.AbortException(reason.message)).catch(() => {});
     intentState.streamReader = null;
-    se (questo._trasporto.distrutto) {
-      ritorno;
+    if (this._transport.destroyed) {
+      return;
     }
-    per (const [curCacheKey, curIntentState] di this._intentStates) {
-      se (curIntentState === intentState) {
+    for (const [curCacheKey, curIntentState] of this._intentStates) {
+      if (curIntentState === intentState) {
         this._intentStates.delete(curCacheKey);
-        rottura;
+        break;
       }
     }
-    questo.pulizia();
+    this.cleanup();
   }
-  ottieni statistiche() {
-    restituisci questo._stats;
+  get stats() {
+    return this._stats;
   }
 }
-esportazioni.PDFPageProxy = PDFPageProxy;
-classe LoopbackPort {
-  #ascoltatori = nuovo Set();
-  #differito = Promessa.risolvi();
-  postMessage(obj, trasferimento) {
-    evento costante = {
-      dati: structuredClone(obj, trasferimento ? {
-        trasferire
-      } : nullo)
+exports.PDFPageProxy = PDFPageProxy;
+class LoopbackPort {
+  #listeners = new Set();
+  #deferred = Promise.resolve();
+  postMessage(obj, transfer) {
+    const event = {
+      data: structuredClone(obj, transfer ? {
+        transfer
+      } : null)
     };
-    questo.#differito.allora(() => {
-      per (const ascoltatore di questo.#ascoltatori) {
-        listener.call(questo, evento);
+    this.#deferred.then(() => {
+      for (const listener of this.#listeners) {
+        listener.call(this, event);
       }
     });
   }
-  addEventListener(nome, ascoltatore) {
-    questo.#ascoltatori.aggiungi(ascoltatore);
+  addEventListener(name, listener) {
+    this.#listeners.add(listener);
   }
-  removeEventListener(nome, ascoltatore) {
-    questo.#ascoltatori.elimina(ascoltatore);
+  removeEventListener(name, listener) {
+    this.#listeners.delete(listener);
   }
-  termina() {
-    questo.#ascoltatori.chiaro();
+  terminate() {
+    this.#listeners.clear();
   }
 }
-esportazioni.LoopbackPort = LoopbackPort;
+exports.LoopbackPort = LoopbackPort;
 const PDFWorkerUtil = {
-  isWorkerDisabled: falso,
-  fallbackWorkerSrc: nullo,
+  isWorkerDisabled: false,
+  fallbackWorkerSrc: null,
   fakeWorkerId: 0
 };
-esportazioni.PDFWorkerUtil = PDFWorkerUtil;
+exports.PDFWorkerUtil = PDFWorkerUtil;
 {
-  se (_util.isNodeJS && typeof require === "funzione") {
+  if (_util.isNodeJS && typeof require === "function") {
     PDFWorkerUtil.isWorkerDisabled = true;
     PDFWorkerUtil.fallbackWorkerSrc = "./pdf.worker.js";
-  } else if (tipo di documento === "oggetto") {
+  } else if (typeof document === "object") {
     const pdfjsFilePath = document?.currentScript?.src;
-    se (pdfjsFilePath) {
+    if (pdfjsFilePath) {
       PDFWorkerUtil.fallbackWorkerSrc = pdfjsFilePath.replace(/(\.(?:min\.)?js)(\?.*)?$/i, ".worker$1$2");
     }
   }
-  PDFWorkerUtil.isSameOrigin = funzione (baseUrl, otherUrl) {
-    lascia la base;
-    Tentativo {
-      base = nuovo URL(baseUrl);
-      se (!base.origin || base.origin === "null") {
-        restituisci falso;
+  PDFWorkerUtil.isSameOrigin = function (baseUrl, otherUrl) {
+    let base;
+    try {
+      base = new URL(baseUrl);
+      if (!base.origin || base.origin === "null") {
+        return false;
       }
-    } presa {
-      restituisci falso;
+    } catch {
+      return false;
     }
-    const altro = nuovo URL(altroUrl, base);
-    restituisci base.origin === other.origin;
+    const other = new URL(otherUrl, base);
+    return base.origin === other.origin;
   };
-  PDFWorkerUtil.createCDNWrapper = funzione (url) {
+  PDFWorkerUtil.createCDNWrapper = function (url) {
     const wrapper = `importScripts("${url}");`;
-    restituisci URL.createObjectURL(nuovo Blob([wrapper]));
+    return URL.createObjectURL(new Blob([wrapper]));
   };
 }
-classe PDFWorker {
-  #workerPorts statico;
-  costruttore({
-    nome = nullo,
-    porta = null,
-    verbosità = (0, _util.getVerbosityLevel)()
+class PDFWorker {
+  static #workerPorts;
+  constructor({
+    name = null,
+    port = null,
+    verbosity = (0, _util.getVerbosityLevel)()
   } = {}) {
-    questo.nome = nome;
-    questo.distrutto = falso;
-    this.verbosity = verbosità;
+    this.name = name;
+    this.destroyed = false;
+    this.verbosity = verbosity;
     this._readyCapability = new _util.PromiseCapability();
     this._port = null;
     this._webWorker = null;
     this._messageHandler = null;
-    se (porta) {
-      se (PDFWorker.#workerPorts?.has(porta)) {
-        throw new Error("Impossibile utilizzare più di un PDFWorker per porta.");
+    if (port) {
+      if (PDFWorker.#workerPorts?.has(port)) {
+        throw new Error("Cannot use more than one PDFWorker per port.");
       }
-      (PDFWorker.#workerPorts ||= new WeakMap()).set(porta, questo);
-      this._initializeFromPort(porta);
-      ritorno;
+      (PDFWorker.#workerPorts ||= new WeakMap()).set(port, this);
+      this._initializeFromPort(port);
+      return;
     }
-    questo._inizializza();
+    this._initialize();
   }
-  ottieni promessa() {
-    restituisci this._readyCapability.promise;
+  get promise() {
+    return this._readyCapability.promise;
   }
-  ottieni porta() {
-    restituisci questo._porta;
+  get port() {
+    return this._port;
   }
-  ottieni messageHandler() {
-    restituisci questo._messageHandler;
+  get messageHandler() {
+    return this._messageHandler;
   }
-  _initializeFromPort(porta) {
-    this._port = porta;
+  _initializeFromPort(port) {
+    this._port = port;
     this._messageHandler = new _message_handler.MessageHandler("main", "worker", port);
-    this._messageHandler.on("pronto", function () {});
+    this._messageHandler.on("ready", function () {});
     this._readyCapability.resolve();
-    this._messageHandler.send("configura", {
-      verbosità: this.verbosity
+    this._messageHandler.send("configure", {
+      verbosity: this.verbosity
     });
   }
-  _inizializza() {
-    se (!PDFWorkerUtil.isWorkerDisabled && !PDFWorker._mainThreadWorkerMessageHandler) {
-      permettere {
+  _initialize() {
+    if (!PDFWorkerUtil.isWorkerDisabled && !PDFWorker._mainThreadWorkerMessageHandler) {
+      let {
         workerSrc
       } = PDFWorker;
-      Tentativo {
-        se (!PDFWorkerUtil.isSameOrigin(window.location.href, workerSrc)) {
-          workerSrc = PDFWorkerUtil.createCDNWrapper(nuovo URL(workerSrc, window.location).href);
+      try {
+        if (!PDFWorkerUtil.isSameOrigin(window.location.href, workerSrc)) {
+          workerSrc = PDFWorkerUtil.createCDNWrapper(new URL(workerSrc, window.location).href);
         }
         const worker = new Worker(workerSrc);
-        const messageHandler = new _message_handler.MessageHandler("principale", "lavoratore", lavoratore);
+        const messageHandler = new _message_handler.MessageHandler("main", "worker", worker);
         const terminateEarly = () => {
-          worker.removeEventListener("errore", onWorkerError);
+          worker.removeEventListener("error", onWorkerError);
           messageHandler.destroy();
-          lavoratore.termina();
-          se (questo.distrutto) {
-            this._readyCapability.reject(new Error("Il lavoratore è stato distrutto"));
-          } altro {
-            questo._setupFakeWorker();
+          worker.terminate();
+          if (this.destroyed) {
+            this._readyCapability.reject(new Error("Worker was destroyed"));
+          } else {
+            this._setupFakeWorker();
           }
         };
         const onWorkerError = () => {
-          se (!this._webWorker) {
-            terminare in anticipo();
+          if (!this._webWorker) {
+            terminateEarly();
           }
         };
-        worker.addEventListener("errore", onWorkerError);
-        messageHandler.on("test", dati => {
-          worker.removeEventListener("errore", onWorkerError);
-          se (questo.distrutto) {
-            terminare in anticipo();
-            ritorno;
+        worker.addEventListener("error", onWorkerError);
+        messageHandler.on("test", data => {
+          worker.removeEventListener("error", onWorkerError);
+          if (this.destroyed) {
+            terminateEarly();
+            return;
           }
-          se (dati) {
+          if (data) {
             this._messageHandler = messageHandler;
             this._port = worker;
-            this._webWorker = lavoratore;
+            this._webWorker = worker;
             this._readyCapability.resolve();
-            messageHandler.send("configura", {
-              verbosità: this.verbosity
+            messageHandler.send("configure", {
+              verbosity: this.verbosity
             });
-          } altro {
-            questo._setupFakeWorker();
+          } else {
+            this._setupFakeWorker();
             messageHandler.destroy();
-            lavoratore.termina();
+            worker.terminate();
           }
         });
-        messageHandler.on("pronto", dati => {
-          worker.removeEventListener("errore", onWorkerError);
-          se (questo.distrutto) {
-            terminare in anticipo();
-            ritorno;
+        messageHandler.on("ready", data => {
+          worker.removeEventListener("error", onWorkerError);
+          if (this.destroyed) {
+            terminateEarly();
+            return;
           }
-          Tentativo {
-            inviaTest();
-          } presa {
-            questo._setupFakeWorker();
+          try {
+            sendTest();
+          } catch {
+            this._setupFakeWorker();
           }
         });
         const sendTest = () => {
           const testObj = new Uint8Array();
           messageHandler.send("test", testObj, [testObj.buffer]);
         };
-        inviaTest();
-        ritorno;
-      } presa {
-        (0, _util.info)("Il lavoratore è stato disabilitato.");
+        sendTest();
+        return;
+      } catch {
+        (0, _util.info)("The worker has been disabled.");
       }
     }
-    questo._setupFakeWorker();
+    this._setupFakeWorker();
   }
   _setupFakeWorker() {
-    se (!PDFWorkerUtil.isWorkerDisabled) {
-      (0, _util.warn)("Impostazione del falso worker.");
+    if (!PDFWorkerUtil.isWorkerDisabled) {
+      (0, _util.warn)("Setting up fake worker.");
       PDFWorkerUtil.isWorkerDisabled = true;
     }
     PDFWorker._setupFakeWorkerGlobal.then(WorkerMessageHandler => {
-      se (questo.distrutto) {
-        this._readyCapability.reject(new Error("Il lavoratore è stato distrutto"));
-        ritorno;
+      if (this.destroyed) {
+        this._readyCapability.reject(new Error("Worker was destroyed"));
+        return;
       }
-      const porta = nuova LoopbackPort();
-      this._port = porta;
+      const port = new LoopbackPort();
+      this._port = port;
       const id = `fake${PDFWorkerUtil.fakeWorkerId++}`;
-      const workerHandler = new _message_handler.MessageHandler(id + "_worker", id, porta);
-      WorkerMessageHandler.setup(workerHandler, porta);
+      const workerHandler = new _message_handler.MessageHandler(id + "_worker", id, port);
+      WorkerMessageHandler.setup(workerHandler, port);
       const messageHandler = new _message_handler.MessageHandler(id, id + "_worker", port);
       this._messageHandler = messageHandler;
       this._readyCapability.resolve();
-      messageHandler.send("configura", {
-        verbosità: this.verbosity
+      messageHandler.send("configure", {
+        verbosity: this.verbosity
       });
-    }).catch(motivo => {
-      this._readyCapability.reject(new Error(`Impostazione del falso worker non riuscita: "${reason.message}".`));
+    }).catch(reason => {
+      this._readyCapability.reject(new Error(`Setting up fake worker failed: "${reason.message}".`));
     });
   }
-  distruggere() {
-    questo.distrutto = vero;
-    se (this._webWorker) {
+  destroy() {
+    this.destroyed = true;
+    if (this._webWorker) {
       this._webWorker.terminate();
       this._webWorker = null;
     }
     PDFWorker.#workerPorts?.delete(this._port);
     this._port = null;
-    se (this._messageHandler) {
+    if (this._messageHandler) {
       this._messageHandler.destroy();
       this._messageHandler = null;
     }
   }
-  statico fromPort(parametri) {
-    se (!parametri?.porta) {
-      genera un nuovo errore("PDFWorker.fromPort - firma del metodo non valida.");
+  static fromPort(params) {
+    if (!params?.port) {
+      throw new Error("PDFWorker.fromPort - invalid method signature.");
     }
     const cachedPort = this.#workerPorts?.get(params.port);
-    se (cachedPort) {
-      se (cachedPort._pendingDestroy) {
-        throw new Error("PDFWorker.fromPort - il worker verrà distrutto.\n" + "Ricordatevi di attendere le chiamate `PDFDocumentLoadingTask.destroy()`.");
+    if (cachedPort) {
+      if (cachedPort._pendingDestroy) {
+        throw new Error("PDFWorker.fromPort - the worker is being destroyed.\n" + "Please remember to await `PDFDocumentLoadingTask.destroy()`-calls.");
       }
-      restituisci cachedPort;
+      return cachedPort;
     }
-    restituisci nuovo PDFWorker(parametri);
+    return new PDFWorker(params);
   }
   static get workerSrc() {
-    se (_worker_options.GlobalWorkerOptions.workerSrc) {
-      restituisci _worker_options.GlobalWorkerOptions.workerSrc;
+    if (_worker_options.GlobalWorkerOptions.workerSrc) {
+      return _worker_options.GlobalWorkerOptions.workerSrc;
     }
-    se (PDFWorkerUtil.fallbackWorkerSrc !== null) {
-      se (!_util.isNodeJS) {
-        (0, _display_utils.deprecated)('Nessun "GlobalWorkerOptions.workerSrc" specificato.');
+    if (PDFWorkerUtil.fallbackWorkerSrc !== null) {
+      if (!_util.isNodeJS) {
+        (0, _display_utils.deprecated)('No "GlobalWorkerOptions.workerSrc" specified.');
       }
-      restituisci PDFWorkerUtil.fallbackWorkerSrc;
+      return PDFWorkerUtil.fallbackWorkerSrc;
     }
-    throw new Error('Nessun "GlobalWorkerOptions.workerSrc" specificato.');
+    throw new Error('No "GlobalWorkerOptions.workerSrc" specified.');
   }
-  statico ottieni _mainThreadWorkerMessageHandler() {
-    Tentativo {
-      restituisci globalThis.pdfjsWorker?.WorkerMessageHandler || null;
-    } presa {
-      restituisci null;
+  static get _mainThreadWorkerMessageHandler() {
+    try {
+      return globalThis.pdfjsWorker?.WorkerMessageHandler || null;
+    } catch {
+      return null;
     }
   }
-  statico ottieni _setupFakeWorkerGlobal() {
-    caricatore costante = asincrono () => {
+  static get _setupFakeWorkerGlobal() {
+    const loader = async () => {
       const mainWorkerMessageHandler = this._mainThreadWorkerMessageHandler;
-      se (mainWorkerMessageHandler) {
-        restituisci mainWorkerMessageHandler;
+      if (mainWorkerMessageHandler) {
+        return mainWorkerMessageHandler;
       }
-      se (_util.isNodeJS && typeof require === "funzione") {
+      if (_util.isNodeJS && typeof require === "function") {
         const worker = eval("require")(this.workerSrc);
-        restituisci worker.WorkerMessageHandler;
+        return worker.WorkerMessageHandler;
       }
-      attendi (0, _display_utils.loadScript)(this.workerSrc);
-      restituisci window.pdfjsWorker.WorkerMessageHandler;
+      await (0, _display_utils.loadScript)(this.workerSrc);
+      return window.pdfjsWorker.WorkerMessageHandler;
     };
     return (0, _util.shadow)(this, "_setupFakeWorkerGlobal", loader());
   }
 }
-esportazioni.PDFWorker = PDFWorker;
-classe WorkerTransport {
-  #methodPromises = nuova mappa();
-  #pageCache = nuova mappa();
-  #pagePromises = nuova mappa();
+exports.PDFWorker = PDFWorker;
+class WorkerTransport {
+  #methodPromises = new Map();
+  #pageCache = new Map();
+  #pagePromises = new Map();
   #passwordCapability = null;
-  costruttore(messaggioHandler, caricamentoTask, flusso di rete, parametri, fabbrica) {
+  constructor(messageHandler, loadingTask, networkStream, params, factory) {
     this.messageHandler = messageHandler;
     this.loadingTask = loadingTask;
     this.commonObjs = new PDFObjects();
-    this.fontLoader = nuovo _font_loader.FontLoader({
+    this.fontLoader = new _font_loader.FontLoader({
       ownerDocument: params.ownerDocument,
       styleElement: params.styleElement
     });
-    questo._parametri = parametri;
+    this._params = params;
     this.canvasFactory = factory.canvasFactory;
     this.filterFactory = factory.filterFactory;
     this.cMapReaderFactory = factory.cMapReaderFactory;
     this.standardFontDataFactory = factory.standardFontDataFactory;
-    questo.distrutto = falso;
+    this.destroyed = false;
     this.destroyCapability = null;
     this._networkStream = networkStream;
     this._fullReader = null;
     this._lastProgress = null;
     this.downloadInfoCapability = new _util.PromiseCapability();
-    questo.setupMessageHandler();
+    this.setupMessageHandler();
   }
-  #cacheSimpleMethod(nome, dati = null) {
+  #cacheSimpleMethod(name, data = null) {
     const cachedPromise = this.#methodPromises.get(name);
-    se (cachedPromise) {
-      restituisci cachedPromise;
+    if (cachedPromise) {
+      return cachedPromise;
     }
-    const promise = this.messageHandler.sendWithPromise(nome, dati);
-    questo.#methodPromises.set(nome, promessa);
-    promessa di ritorno;
+    const promise = this.messageHandler.sendWithPromise(name, data);
+    this.#methodPromises.set(name, promise);
+    return promise;
   }
-  ottieni annotationStorage() {
+  get annotationStorage() {
     return (0, _util.shadow)(this, "annotationStorage", new _annotation_storage.AnnotationStorage());
   }
-  getRenderingIntent(intento, annotationMode = _util.AnnotationMode.ENABLE, printAnnotationStorage = null, isOpList = false) {
-    lascia renderingIntent = _util.RenderingIntentFlag.DISPLAY;
-    lascia annotationStorageSerializable = _annotation_storage.SerializableEmpty;
-    interruttore (intento) {
-      caso "qualsiasi":
+  getRenderingIntent(intent, annotationMode = _util.AnnotationMode.ENABLE, printAnnotationStorage = null, isOpList = false) {
+    let renderingIntent = _util.RenderingIntentFlag.DISPLAY;
+    let annotationStorageSerializable = _annotation_storage.SerializableEmpty;
+    switch (intent) {
+      case "any":
         renderingIntent = _util.RenderingIntentFlag.ANY;
-        rottura;
-      caso "display":
-        rottura;
-      caso "stampa":
+        break;
+      case "display":
+        break;
+      case "print":
         renderingIntent = _util.RenderingIntentFlag.PRINT;
-        rottura;
-      predefinito:
-        (0, _util.warn)(`getRenderingIntent - intento non valido: ${intent}`);
+        break;
+      default:
+        (0, _util.warn)(`getRenderingIntent - invalid intent: ${intent}`);
     }
     switch (annotationMode) {
-      caso _util.AnnotationMode.DISABLE:
+      case _util.AnnotationMode.DISABLE:
         renderingIntent += _util.RenderingIntentFlag.ANNOTATIONS_DISABLE;
-        rottura;
-      caso _util.AnnotationMode.ENABLE:
-        rottura;
-      caso _util.AnnotationMode.ENABLE_FORMS:
+        break;
+      case _util.AnnotationMode.ENABLE:
+        break;
+      case _util.AnnotationMode.ENABLE_FORMS:
         renderingIntent += _util.RenderingIntentFlag.ANNOTATIONS_FORMS;
-        rottura;
-      caso _util.AnnotationMode.ENABLE_STORAGE:
+        break;
+      case _util.AnnotationMode.ENABLE_STORAGE:
         renderingIntent += _util.RenderingIntentFlag.ANNOTATIONS_STORAGE;
         const annotationStorage = renderingIntent & _util.RenderingIntentFlag.PRINT && printAnnotationStorage instanceof _annotation_storage.PrintAnnotationStorage ? printAnnotationStorage : this.annotationStorage;
         annotationStorageSerializable = annotationStorage.serializable;
-        rottura;
-      predefinito:
-        (0, _util.warn)(`getRenderingIntent - annotationMode non valido: ${annotationMode}`);
+        break;
+      default:
+        (0, _util.warn)(`getRenderingIntent - invalid annotationMode: ${annotationMode}`);
     }
-    se (isOpList) {
+    if (isOpList) {
       renderingIntent += _util.RenderingIntentFlag.OPLIST;
     }
-    ritorno {
+    return {
       renderingIntent,
       cacheKey: `${renderingIntent}_${annotationStorageSerializable.hash}`,
-      annotazioneStorageSerializable
+      annotationStorageSerializable
     };
   }
-  distruggere() {
-    se (this.destroyCapability) {
-      restituisci this.destroyCapability.promise;
+  destroy() {
+    if (this.destroyCapability) {
+      return this.destroyCapability.promise;
     }
-    questo.distrutto = vero;
+    this.destroyed = true;
     this.destroyCapability = new _util.PromiseCapability();
-    this.#passwordCapability?.reject(new Error("Il worker è stato distrutto durante il callback onPassword"));
+    this.#passwordCapability?.reject(new Error("Worker was destroyed during onPassword callback"));
     const waitOn = [];
-    per (const pagina di questo.#pageCache.values()) {
+    for (const page of this.#pageCache.values()) {
       waitOn.push(page._destroy());
     }
-    questo.#pageCache.clear();
-    questo.#pagePromises.clear();
-    se (this.hasOwnProperty("annotationStorage")) {
+    this.#pageCache.clear();
+    this.#pagePromises.clear();
+    if (this.hasOwnProperty("annotationStorage")) {
       this.annotationStorage.resetModified();
     }
     const terminated = this.messageHandler.sendWithPromise("Terminate", null);
-    waitOn.push(terminato);
-    Promessa.all(waitOn).then(() => {
-      questo.commonObjs.clear();
-      questo.fontLoader.clear();
-      questo.#methodPromises.clear();
+    waitOn.push(terminated);
+    Promise.all(waitOn).then(() => {
+      this.commonObjs.clear();
+      this.fontLoader.clear();
+      this.#methodPromises.clear();
       this.filterFactory.destroy();
-      this._networkStream?.cancelAllRequests(new _util.AbortException("Il lavoratore è stato terminato."));
-      se (questo.gestoremessaggi) {
-        questo.gestoredelmessaggio.distruggi();
+      this._networkStream?.cancelAllRequests(new _util.AbortException("Worker was terminated."));
+      if (this.messageHandler) {
+        this.messageHandler.destroy();
         this.messageHandler = null;
       }
       this.destroyCapability.resolve();
     }, this.destroyCapability.reject);
-    restituisci this.destroyCapability.promise;
+    return this.destroyCapability.promise;
   }
   setupMessageHandler() {
-    costante {
-      gestore dei messaggi,
-      caricamentoAttività
-    } = questo;
-    messageHandler.on("GetReader", (dati, sink) => {
-      (0, _util.assert)(this._networkStream, "GetReader - nessuna istanza di `IPDFStream` disponibile.");
+    const {
+      messageHandler,
+      loadingTask
+    } = this;
+    messageHandler.on("GetReader", (data, sink) => {
+      (0, _util.assert)(this._networkStream, "GetReader - no `IPDFStream` instance available.");
       this._fullReader = this._networkStream.getFullReader();
       this._fullReader.onProgress = evt => {
-        questo._ultimoProgresso = {
-          caricato: evt.loaded,
-          totale: evt.total
+        this._lastProgress = {
+          loaded: evt.loaded,
+          total: evt.total
         };
       };
       sink.onPull = () => {
-        this._fullReader.read().then(funzione ({
-          valore,
-          Fatto
+        this._fullReader.read().then(function ({
+          value,
+          done
         }) {
-          se (fatto) {
-            lavandino.chiudi();
-            ritorno;
+          if (done) {
+            sink.close();
+            return;
           }
-          (0, _util.assert)(value instanceof ArrayBuffer, "GetReader - previsto un ArrayBuffer.");
-          sink.enqueue(new Uint8Array(valore), 1, [valore]);
-        }).catch(motivo => {
-          sink.error(motivo);
+          (0, _util.assert)(value instanceof ArrayBuffer, "GetReader - expected an ArrayBuffer.");
+          sink.enqueue(new Uint8Array(value), 1, [value]);
+        }).catch(reason => {
+          sink.error(reason);
         });
       };
-      sink.onCancel = motivo => {
-        this._fullReader.cancel(motivo);
+      sink.onCancel = reason => {
+        this._fullReader.cancel(reason);
         sink.ready.catch(readyReason => {
-          se (questo.distrutto) {
-            ritorno;
+          if (this.destroyed) {
+            return;
           }
-          lancio prontoMotivo;
+          throw readyReason;
         });
       };
     });
@@ -2143,54 +2143,54 @@ classe WorkerTransport {
       const headersCapability = new _util.PromiseCapability();
       const fullReader = this._fullReader;
       fullReader.headersReady.then(() => {
-        se (!fullReader.isStreamingSupported || !fullReader.isRangeSupported) {
-          se (this._lastProgress) {
-            caricamentoTask.onProgress?.(this._lastProgress);
+        if (!fullReader.isStreamingSupported || !fullReader.isRangeSupported) {
+          if (this._lastProgress) {
+            loadingTask.onProgress?.(this._lastProgress);
           }
           fullReader.onProgress = evt => {
-            caricamentoAttività.inProgresso?.({
-              caricato: evt.loaded,
-              totale: evt.total
+            loadingTask.onProgress?.({
+              loaded: evt.loaded,
+              total: evt.total
             });
           };
         }
-        intestazioniCapability.resolve({
+        headersCapability.resolve({
           isStreamingSupported: fullReader.isStreamingSupported,
           isRangeSupported: fullReader.isRangeSupported,
-          lunghezza del contenuto: fullReader.lunghezza del contenuto
+          contentLength: fullReader.contentLength
         });
       }, headersCapability.reject);
-      restituisci intestazioniCapability.promise;
+      return headersCapability.promise;
     });
-    messageHandler.on("GetRangeReader", (dati, sink) => {
-      (0, _util.assert)(this._networkStream, "GetRangeReader - nessuna istanza di `IPDFStream` disponibile.");
+    messageHandler.on("GetRangeReader", (data, sink) => {
+      (0, _util.assert)(this._networkStream, "GetRangeReader - no `IPDFStream` instance available.");
       const rangeReader = this._networkStream.getRangeReader(data.begin, data.end);
-      se (!rangeReader) {
-        lavandino.chiudi();
-        ritorno;
+      if (!rangeReader) {
+        sink.close();
+        return;
       }
       sink.onPull = () => {
-        rangeReader.read().then(funzione ({
-          valore,
-          Fatto
+        rangeReader.read().then(function ({
+          value,
+          done
         }) {
-          se (fatto) {
-            lavandino.chiudi();
-            ritorno;
+          if (done) {
+            sink.close();
+            return;
           }
-          (0, _util.assert)(value instanceof ArrayBuffer, "GetRangeReader - previsto un ArrayBuffer.");
-          sink.enqueue(new Uint8Array(valore), 1, [valore]);
-        }).catch(motivo => {
-          sink.error(motivo);
+          (0, _util.assert)(value instanceof ArrayBuffer, "GetRangeReader - expected an ArrayBuffer.");
+          sink.enqueue(new Uint8Array(value), 1, [value]);
+        }).catch(reason => {
+          sink.error(reason);
         });
       };
-      sink.onCancel = motivo => {
-        rangeReader.cancel(motivo);
+      sink.onCancel = reason => {
+        rangeReader.cancel(reason);
         sink.ready.catch(readyReason => {
-          se (questo.distrutto) {
-            ritorno;
+          if (this.destroyed) {
+            return;
           }
-          lancio prontoMotivo;
+          throw readyReason;
         });
       };
     });
@@ -2199,544 +2199,544 @@ classe WorkerTransport {
     }) => {
       this._numPages = pdfInfo.numPages;
       this._htmlForXfa = pdfInfo.htmlForXfa;
-      elimina pdfInfo.htmlForXfa;
+      delete pdfInfo.htmlForXfa;
       loadingTask._capability.resolve(new PDFDocumentProxy(pdfInfo, this));
     });
-    messageHandler.on("DocException", funzione (es.) {
-      lascia che la ragione;
-      switch (es.nome) {
-        caso "PasswordException":
-          motivo = nuovo _util.PasswordException(es.messaggio, es.codice);
-          rottura;
-        caso "InvalidPDFException":
-          motivo = nuovo _util.InvalidPDFException(ex.message);
-          rottura;
-        caso "MissingPDFException":
-          motivo = nuovo _util.MissingPDFException(ex.message);
-          rottura;
-        caso "UnexpectedResponseException":
-          motivo = nuovo _util.UnexpectedResponseException(es.messaggio, es.stato);
-          rottura;
-        caso "UnknownErrorException":
-          motivo = nuovo _util.UnknownErrorException(es.messaggio, es.dettagli);
-          rottura;
-        predefinito:
-          (0, _util.unreachable)("DocException - previsto un errore valido.");
+    messageHandler.on("DocException", function (ex) {
+      let reason;
+      switch (ex.name) {
+        case "PasswordException":
+          reason = new _util.PasswordException(ex.message, ex.code);
+          break;
+        case "InvalidPDFException":
+          reason = new _util.InvalidPDFException(ex.message);
+          break;
+        case "MissingPDFException":
+          reason = new _util.MissingPDFException(ex.message);
+          break;
+        case "UnexpectedResponseException":
+          reason = new _util.UnexpectedResponseException(ex.message, ex.status);
+          break;
+        case "UnknownErrorException":
+          reason = new _util.UnknownErrorException(ex.message, ex.details);
+          break;
+        default:
+          (0, _util.unreachable)("DocException - expected a valid Error.");
       }
-      loadingTask._capability.reject(motivo);
+      loadingTask._capability.reject(reason);
     });
-    messageHandler.on("PasswordRequest", eccezione => {
-      questo.#passwordCapability = nuovo _util.PromiseCapability();
-      se (loadingTask.onPassword) {
+    messageHandler.on("PasswordRequest", exception => {
+      this.#passwordCapability = new _util.PromiseCapability();
+      if (loadingTask.onPassword) {
         const updatePassword = password => {
-          se (password instanceof Errore) {
-            questo.#passwordCapability.reject(password);
-          } altro {
-            questo.#passwordCapability.resolve({
+          if (password instanceof Error) {
+            this.#passwordCapability.reject(password);
+          } else {
+            this.#passwordCapability.resolve({
               password
             });
           }
         };
-        Tentativo {
-          caricamentoAttività.onPassword(updatePassword, eccezione.codice);
-        } catturare (es.) {
-          questo.#passwordCapability.reject(es);
+        try {
+          loadingTask.onPassword(updatePassword, exception.code);
+        } catch (ex) {
+          this.#passwordCapability.reject(ex);
         }
-      } altro {
+      } else {
         this.#passwordCapability.reject(new _util.PasswordException(exception.message, exception.code));
       }
-      restituisci questo.#passwordCapability.promise;
+      return this.#passwordCapability.promise;
     });
-    messageHandler.on("Dati caricati", dati => {
-      caricamentoAttività.inProgresso?.({
-        caricato: data.length,
-        totale: lunghezza dati
+    messageHandler.on("DataLoaded", data => {
+      loadingTask.onProgress?.({
+        loaded: data.length,
+        total: data.length
       });
-      this.downloadInfoCapability.resolve(dati);
+      this.downloadInfoCapability.resolve(data);
     });
-    messageHandler.on("StartRenderPage", dati => {
-      se (questo.distrutto) {
-        ritorno;
+    messageHandler.on("StartRenderPage", data => {
+      if (this.destroyed) {
+        return;
       }
-      const pagina = this.#pageCache.get(data.pageIndex);
-      pagina._startRenderPage(dati.trasparenza, dati.cacheKey);
+      const page = this.#pageCache.get(data.pageIndex);
+      page._startRenderPage(data.transparency, data.cacheKey);
     });
-    messageHandler.on("commonobj", ([id, tipo, dati esportati]) => {
-      se (questo.distrutto) {
-        ritorno;
+    messageHandler.on("commonobj", ([id, type, exportedData]) => {
+      if (this.destroyed) {
+        return;
       }
-      se (this.commonObjs.has(id)) {
-        ritorno;
+      if (this.commonObjs.has(id)) {
+        return;
       }
-      interruttore (tipo) {
-        caso "Font":
+      switch (type) {
+        case "Font":
           const params = this._params;
-          se ("errore" in exportedData) {
+          if ("error" in exportedData) {
             const exportedError = exportedData.error;
-            (0, _util.warn)(`Errore durante il caricamento del font: ${exportedError}`);
+            (0, _util.warn)(`Error during font loading: ${exportedError}`);
             this.commonObjs.resolve(id, exportedError);
-            rottura;
+            break;
           }
           const inspectFont = params.pdfBug && globalThis.FontInspector?.enabled ? (font, url) => globalThis.FontInspector.fontAdded(font, url) : null;
           const font = new _font_loader.FontFaceObject(exportedData, {
             isEvalSupported: params.isEvalSupported,
-            disableFontFace: parametri.disableFontFace,
+            disableFontFace: params.disableFontFace,
             ignoreErrors: params.ignoreErrors,
-            ispezionaFont
+            inspectFont
           });
           this.fontLoader.bind(font).catch(reason => {
-            restituisci messageHandler.sendWithPromise("FontFallback", {
+            return messageHandler.sendWithPromise("FontFallback", {
               id
             });
           }).finally(() => {
-            se (!params.fontExtraProperties && font.data) {
+            if (!params.fontExtraProperties && font.data) {
               font.data = null;
             }
             this.commonObjs.resolve(id, font);
           });
-          rottura;
-        caso "FontPath":
-        caso "Immagine":
-        caso "Modello":
+          break;
+        case "FontPath":
+        case "Image":
+        case "Pattern":
           this.commonObjs.resolve(id, exportedData);
-          rottura;
-        predefinito:
-          throw new Error(`È stato ottenuto un tipo di oggetto comune sconosciuto ${type}`);
+          break;
+        default:
+          throw new Error(`Got unknown common object type ${type}`);
       }
     });
-    messageHandler.on("obj", ([id, pageIndex, tipo, imageData]) => {
-      se (questo.distrutto) {
-        ritorno;
+    messageHandler.on("obj", ([id, pageIndex, type, imageData]) => {
+      if (this.destroyed) {
+        return;
       }
       const pageProxy = this.#pageCache.get(pageIndex);
-      se (pageProxy.objs.has(id)) {
-        ritorno;
+      if (pageProxy.objs.has(id)) {
+        return;
       }
-      interruttore (tipo) {
-        caso "Immagine":
+      switch (type) {
+        case "Image":
           pageProxy.objs.resolve(id, imageData);
-          se (datiimmagine) {
-            lascia la lunghezza;
-            se (imageData.bitmap) {
-              costante {
-                larghezza,
-                altezza
-              } = datiimmagine;
-              lunghezza = larghezza * altezza * 4;
-            } altro {
-              lunghezza = imageData.data?.length || 0;
+          if (imageData) {
+            let length;
+            if (imageData.bitmap) {
+              const {
+                width,
+                height
+              } = imageData;
+              length = width * height * 4;
+            } else {
+              length = imageData.data?.length || 0;
             }
-            se (lunghezza > _util.MAX_IMAGE_SIZE_TO_CACHE) {
+            if (length > _util.MAX_IMAGE_SIZE_TO_CACHE) {
               pageProxy._maybeCleanupAfterRender = true;
             }
           }
-          rottura;
-        caso "Modello":
+          break;
+        case "Pattern":
           pageProxy.objs.resolve(id, imageData);
-          rottura;
-        predefinito:
-          lancia un nuovo errore(`Tipo di oggetto sconosciuto ${type}`);
+          break;
+        default:
+          throw new Error(`Got unknown object type ${type}`);
       }
     });
-    messageHandler.on("DocProgress", dati => {
-      se (questo.distrutto) {
-        ritorno;
+    messageHandler.on("DocProgress", data => {
+      if (this.destroyed) {
+        return;
       }
-      caricamentoAttività.inProgresso?.({
-        caricato: dati.caricati,
-        totale: dati.totale
+      loadingTask.onProgress?.({
+        loaded: data.loaded,
+        total: data.total
       });
     });
-    messageHandler.on("FetchBuiltInCMap", dati => {
-      se (questo.distrutto) {
-        return Promise.reject(new Error("Il lavoratore è stato distrutto."));
+    messageHandler.on("FetchBuiltInCMap", data => {
+      if (this.destroyed) {
+        return Promise.reject(new Error("Worker was destroyed."));
       }
-      se (!this.cMapReaderFactory) {
-        return Promise.reject(new Error("CMapReaderFactory non inizializzato, vedere il parametro `useWorkerFetch`."));
+      if (!this.cMapReaderFactory) {
+        return Promise.reject(new Error("CMapReaderFactory not initialized, see the `useWorkerFetch` parameter."));
       }
-      restituisci this.cMapReaderFactory.fetch(data);
+      return this.cMapReaderFactory.fetch(data);
     });
-    messageHandler.on("FetchStandardFontData", dati => {
-      se (questo.distrutto) {
-        return Promise.reject(new Error("Il lavoratore è stato distrutto."));
+    messageHandler.on("FetchStandardFontData", data => {
+      if (this.destroyed) {
+        return Promise.reject(new Error("Worker was destroyed."));
       }
-      se (!this.standardFontDataFactory) {
-        return Promise.reject(new Error("StandardFontDataFactory non inizializzato, vedere il parametro `useWorkerFetch`."));
+      if (!this.standardFontDataFactory) {
+        return Promise.reject(new Error("StandardFontDataFactory not initialized, see the `useWorkerFetch` parameter."));
       }
-      restituisci questo.standardFontDataFactory.fetch(dati);
+      return this.standardFontDataFactory.fetch(data);
     });
   }
   getData() {
-    restituisci this.messageHandler.sendWithPromise("GetData", null);
+    return this.messageHandler.sendWithPromise("GetData", null);
   }
-  salvaDocumento() {
-    se (questa.annotazioneStorage.dimensione <= 0) {
-      (0, _util.warn)("saveDocument chiamato mentre `annotationStorage` è vuoto, " + "utilizzare invece il metodo getData.");
+  saveDocument() {
+    if (this.annotationStorage.size <= 0) {
+      (0, _util.warn)("saveDocument called while `annotationStorage` is empty, " + "please use the getData-method instead.");
     }
-    costante {
-      mappa,
-      trasferimenti
+    const {
+      map,
+      transfers
     } = this.annotationStorage.serializable;
-    restituisci this.messageHandler.sendWithPromise("SaveDocument", {
+    return this.messageHandler.sendWithPromise("SaveDocument", {
       isPureXfa: !!this._htmlForXfa,
-      numPages: questo._numPages,
-      annotazioneArchiviazione: mappa,
-      nome file: this._fullReader?.filename ?? null
-    }, trasferimenti).finally(() => {
+      numPages: this._numPages,
+      annotationStorage: map,
+      filename: this._fullReader?.filename ?? null
+    }, transfers).finally(() => {
       this.annotationStorage.resetModified();
     });
   }
-  getPage(numeropagina) {
-    if (!Number.isInteger(pageNumber) || pageNumber <= 0 || pageNumber > this._numPagine) {
-      return Promise.reject(new Error("Richiesta di pagina non valida."));
+  getPage(pageNumber) {
+    if (!Number.isInteger(pageNumber) || pageNumber <= 0 || pageNumber > this._numPages) {
+      return Promise.reject(new Error("Invalid page request."));
     }
-    const indicepagina = numeropagina - 1,
+    const pageIndex = pageNumber - 1,
       cachedPromise = this.#pagePromises.get(pageIndex);
-    se (cachedPromise) {
-      restituisci cachedPromise;
+    if (cachedPromise) {
+      return cachedPromise;
     }
-    promessa costante = this.messageHandler.sendWithPromise("GetPage", {
-      indice della pagina
+    const promise = this.messageHandler.sendWithPromise("GetPage", {
+      pageIndex
     }).then(pageInfo => {
-      se (questo.distrutto) {
-        genera un nuovo errore("Trasporto distrutto");
+      if (this.destroyed) {
+        throw new Error("Transport destroyed");
       }
       const page = new PDFPageProxy(pageIndex, pageInfo, this, this._params.pdfBug);
-      questo.#pageCache.set(pageIndex, pagina);
-      pagina di ritorno;
+      this.#pageCache.set(pageIndex, page);
+      return page;
     });
-    questo.#pagePromises.set(pageIndex, promise);
-    promessa di ritorno;
+    this.#pagePromises.set(pageIndex, promise);
+    return promise;
   }
-  getPageIndex(rif) {
-    se (tipo di riferimento !== "oggetto" || riferimento === null || !Numero.èIntero(rif.num) || rif.num < 0 || !Numero.èIntero(rif.gen) || rif.gen < 0) {
-      return Promise.reject(new Error("Richiesta pageIndex non valida."));
+  getPageIndex(ref) {
+    if (typeof ref !== "object" || ref === null || !Number.isInteger(ref.num) || ref.num < 0 || !Number.isInteger(ref.gen) || ref.gen < 0) {
+      return Promise.reject(new Error("Invalid pageIndex request."));
     }
-    restituisci this.messageHandler.sendWithPromise("GetPageIndex", {
-      num: rif.num,
+    return this.messageHandler.sendWithPromise("GetPageIndex", {
+      num: ref.num,
       gen: ref.gen
     });
   }
   getAnnotations(pageIndex, intent) {
-    restituisci this.messageHandler.sendWithPromise("OttieniAnnotazioni", {
-      indice della pagina,
-      intento
+    return this.messageHandler.sendWithPromise("GetAnnotations", {
+      pageIndex,
+      intent
     });
   }
   getFieldObjects() {
-    restituisci questo.#cacheSimpleMethod("GetFieldObjects");
+    return this.#cacheSimpleMethod("GetFieldObjects");
   }
-  haJSAzioni() {
-    restituisci questo.#cacheSimpleMethod("HasJSActions");
+  hasJSActions() {
+    return this.#cacheSimpleMethod("HasJSActions");
   }
   getCalculationOrderIds() {
-    restituisci this.messageHandler.sendWithPromise("GetCalculationOrderIds", null);
+    return this.messageHandler.sendWithPromise("GetCalculationOrderIds", null);
   }
   getDestinations() {
-    restituisci this.messageHandler.sendWithPromise("GetDestinations", null);
+    return this.messageHandler.sendWithPromise("GetDestinations", null);
   }
   getDestination(id) {
-    se (tipo di id !== "stringa") {
-      return Promise.reject(new Error("Richiesta di destinazione non valida."));
+    if (typeof id !== "string") {
+      return Promise.reject(new Error("Invalid destination request."));
     }
-    restituisci this.messageHandler.sendWithPromise("GetDestination", {
+    return this.messageHandler.sendWithPromise("GetDestination", {
       id
     });
   }
-  ottieniEtichettePagina() {
-    restituisci this.messageHandler.sendWithPromise("GetPageLabels", null);
+  getPageLabels() {
+    return this.messageHandler.sendWithPromise("GetPageLabels", null);
   }
   getPageLayout() {
-    restituisci this.messageHandler.sendWithPromise("GetPageLayout", null);
+    return this.messageHandler.sendWithPromise("GetPageLayout", null);
   }
   getPageMode() {
-    restituisci this.messageHandler.sendWithPromise("GetPageMode", null);
+    return this.messageHandler.sendWithPromise("GetPageMode", null);
   }
   getViewerPreferences() {
-    restituisci this.messageHandler.sendWithPromise("GetViewerPreferences", null);
+    return this.messageHandler.sendWithPromise("GetViewerPreferences", null);
   }
   getOpenAction() {
-    restituisci this.messageHandler.sendWithPromise("GetOpenAction", null);
+    return this.messageHandler.sendWithPromise("GetOpenAction", null);
   }
-  ottieniAllegati() {
-    restituisci this.messageHandler.sendWithPromise("GetAttachments", null);
+  getAttachments() {
+    return this.messageHandler.sendWithPromise("GetAttachments", null);
   }
   getDocJSActions() {
-    restituisci questo.#cacheSimpleMethod("GetDocJSActions");
+    return this.#cacheSimpleMethod("GetDocJSActions");
   }
-  getPageJSActions(indicepagina) {
-    restituisci this.messageHandler.sendWithPromise("GetPageJSActions", {
-      indice della pagina
+  getPageJSActions(pageIndex) {
+    return this.messageHandler.sendWithPromise("GetPageJSActions", {
+      pageIndex
     });
   }
-  getStructTree(indicepagina) {
-    restituisci this.messageHandler.sendWithPromise("GetStructTree", {
-      indice della pagina
+  getStructTree(pageIndex) {
+    return this.messageHandler.sendWithPromise("GetStructTree", {
+      pageIndex
     });
   }
-  ottieniContorno() {
-    restituisci this.messageHandler.sendWithPromise("GetOutline", null);
+  getOutline() {
+    return this.messageHandler.sendWithPromise("GetOutline", null);
   }
   getOptionalContentConfig() {
-    restituisci this.messageHandler.sendWithPromise("GetOptionalContentConfig", null).then(results => {
-      restituisci nuovo _optional_content_config.OptionalContentConfig(risultati);
+    return this.messageHandler.sendWithPromise("GetOptionalContentConfig", null).then(results => {
+      return new _optional_content_config.OptionalContentConfig(results);
     });
   }
-  ottieniPermessi() {
-    restituisci this.messageHandler.sendWithPromise("GetPermissions", null);
+  getPermissions() {
+    return this.messageHandler.sendWithPromise("GetPermissions", null);
   }
-  ottieniMetadati() {
+  getMetadata() {
     const name = "GetMetadata",
       cachedPromise = this.#methodPromises.get(name);
-    se (cachedPromise) {
-      restituisci cachedPromise;
+    if (cachedPromise) {
+      return cachedPromise;
     }
-    promessa costante = this.messageHandler.sendWithPromise(nome, null).then(risultati => {
-      ritorno {
-        informazioni: risultati[0],
-        metadati: risultati[1] ? nuovo _metadata.Metadata(risultati[1]) : null,
+    const promise = this.messageHandler.sendWithPromise(name, null).then(results => {
+      return {
+        info: results[0],
+        metadata: results[1] ? new _metadata.Metadata(results[1]) : null,
         contentDispositionFilename: this._fullReader?.filename ?? null,
-        lunghezza del contenuto: this._fullReader?.lunghezza del contenuto ?? null
+        contentLength: this._fullReader?.contentLength ?? null
       };
     });
-    questo.#methodPromises.set(nome, promessa);
-    promessa di ritorno;
+    this.#methodPromises.set(name, promise);
+    return promise;
   }
   getMarkInfo() {
-    restituisci this.messageHandler.sendWithPromise("GetMarkInfo", null);
+    return this.messageHandler.sendWithPromise("GetMarkInfo", null);
   }
   async startCleanup(keepLoadedFonts = false) {
-    se (questo.distrutto) {
-      ritorno;
+    if (this.destroyed) {
+      return;
     }
-    attendi this.messageHandler.sendWithPromise("Cleanup", null);
-    per (const pagina di questo.#pageCache.values()) {
+    await this.messageHandler.sendWithPromise("Cleanup", null);
+    for (const page of this.#pageCache.values()) {
       const cleanupSuccessful = page.cleanup();
-      se (!cleanupSuccessful) {
-        throw new Error(`startCleanup: la pagina ${page.pageNumber} è attualmente in fase di rendering.`);
+      if (!cleanupSuccessful) {
+        throw new Error(`startCleanup: Page ${page.pageNumber} is currently rendering.`);
       }
     }
-    questo.commonObjs.clear();
-    se (!keepLoadedFonts) {
-      questo.fontLoader.clear();
+    this.commonObjs.clear();
+    if (!keepLoadedFonts) {
+      this.fontLoader.clear();
     }
-    questo.#methodPromises.clear();
+    this.#methodPromises.clear();
     this.filterFactory.destroy(true);
   }
-  ottieni loadingParams() {
-    costante {
-      Disabilita AutoFetch,
+  get loadingParams() {
+    const {
+      disableAutoFetch,
       enableXfa
-    } = questo._parametri;
+    } = this._params;
     return (0, _util.shadow)(this, "loadingParams", {
-      Disabilita AutoFetch,
+      disableAutoFetch,
       enableXfa
     });
   }
 }
-classe PDFObjects {
+class PDFObjects {
   #objs = Object.create(null);
   #ensureObj(objId) {
-    restituisci questo.#objs[objId] ||= {
-      capacità: nuovo _util.PromiseCapability(),
-      dati: nulli
+    return this.#objs[objId] ||= {
+      capability: new _util.PromiseCapability(),
+      data: null
     };
   }
   get(objId, callback = null) {
-    se (richiamata) {
+    if (callback) {
       const obj = this.#ensureObj(objId);
       obj.capability.promise.then(() => callback(obj.data));
-      restituisci null;
+      return null;
     }
     const obj = this.#objs[objId];
-    se (!obj?.capacità.risolto) {
-      throw new Error(`Richiesta di un oggetto non ancora risolto ${objId}.`);
+    if (!obj?.capability.settled) {
+      throw new Error(`Requesting object that isn't resolved yet ${objId}.`);
     }
-    restituisci obj.data;
+    return obj.data;
   }
-  ha(objId) {
+  has(objId) {
     const obj = this.#objs[objId];
-    restituisci obj?.capability.settled || falso;
+    return obj?.capability.settled || false;
   }
   resolve(objId, data = null) {
     const obj = this.#ensureObj(objId);
-    obj.data = dati;
-    obj.capacità.risolvi();
+    obj.data = data;
+    obj.capability.resolve();
   }
-  chiaro() {
-    per (const objId in questo.#objs) {
-      costante {
-        dati
-      } = questo.#objs[objId];
-      dati?.bitmap?.chiudi();
+  clear() {
+    for (const objId in this.#objs) {
+      const {
+        data
+      } = this.#objs[objId];
+      data?.bitmap?.close();
     }
-    questo.#objs = Object.create(null);
+    this.#objs = Object.create(null);
   }
 }
-classe RenderTask {
+class RenderTask {
   #internalRenderTask = null;
-  costruttore(internalRenderTask) {
-    questo.#internalRenderTask = internalRenderTask;
+  constructor(internalRenderTask) {
+    this.#internalRenderTask = internalRenderTask;
     this.onContinue = null;
   }
-  ottieni promessa() {
-    restituisci questo.#internalRenderTask.capability.promise;
+  get promise() {
+    return this.#internalRenderTask.capability.promise;
   }
-  annulla(ritardoextra = 0) {
-    questo.#internalRenderTask.cancel(null, extraDelay);
+  cancel(extraDelay = 0) {
+    this.#internalRenderTask.cancel(null, extraDelay);
   }
-  ottieni separateAnnots() {
-    costante {
+  get separateAnnots() {
+    const {
       separateAnnots
     } = this.#internalRenderTask.operatorList;
-    se (!separateAnnots) {
-      restituisci falso;
+    if (!separateAnnots) {
+      return false;
     }
-    costante {
-      annotazioneCanvasMap
-    } = questo.#internalRenderTask;
-    restituisci separateAnnots.form || separateAnnots.canvas && annotationCanvasMap?.size > 0;
+    const {
+      annotationCanvasMap
+    } = this.#internalRenderTask;
+    return separateAnnots.form || separateAnnots.canvas && annotationCanvasMap?.size > 0;
   }
 }
-esportazioni.RenderTask = RenderTask;
-classe InternalRenderTask {
-  statico #canvasInUse = new WeakSet();
-  costruttore({
-    richiamare,
-    parametri,
-    oggetti,
+exports.RenderTask = RenderTask;
+class InternalRenderTask {
+  static #canvasInUse = new WeakSet();
+  constructor({
+    callback,
+    params,
+    objs,
     commonObjs,
-    annotazioneCanvasMap,
-    elenco degli operatori,
-    indice della pagina,
-    Fabbrica di tele,
+    annotationCanvasMap,
+    operatorList,
+    pageIndex,
+    canvasFactory,
     filterFactory,
     useRequestAnimationFrame = false,
-    pdfBug = falso,
+    pdfBug = false,
     pageColors = null
   }) {
-    questo.callback = callback;
-    questo.parametri = parametri;
-    questo.objs = objs;
-    questo.commonObjs = commonObjs;
+    this.callback = callback;
+    this.params = params;
+    this.objs = objs;
+    this.commonObjs = commonObjs;
     this.annotationCanvasMap = annotationCanvasMap;
     this.operatorListIdx = null;
     this.operatorList = operatorList;
     this._pageIndex = pageIndex;
     this.canvasFactory = canvasFactory;
     this.filterFactory = filterFactory;
-    questo._pdfBug = pdfBug;
+    this._pdfBug = pdfBug;
     this.pageColors = pageColors;
-    questo.in esecuzione = falso;
+    this.running = false;
     this.graphicsReadyCallback = null;
     this.graphicsReady = false;
-    this._useRequestAnimationFrame = useRequestAnimationFrame === true && tipo di finestra !== "non definito";
-    questo.annullato = falso;
+    this._useRequestAnimationFrame = useRequestAnimationFrame === true && typeof window !== "undefined";
+    this.cancelled = false;
     this.capability = new _util.PromiseCapability();
-    questo.task = nuovo RenderTask(questo);
+    this.task = new RenderTask(this);
     this._cancelBound = this.cancel.bind(this);
-    questo._continuaBound = questo._continua.lega(questo);
+    this._continueBound = this._continue.bind(this);
     this._scheduleNextBound = this._scheduleNext.bind(this);
     this._nextBound = this._next.bind(this);
     this._canvas = params.canvasContext.canvas;
   }
-  ottenere completato() {
-    restituisci this.capability.promise.catch(function () {});
+  get completed() {
+    return this.capability.promise.catch(function () {});
   }
-  inizializzaGrafica({
-    trasparenza = falso,
+  initializeGraphics({
+    transparency = false,
     optionalContentConfig
   }) {
-    se (questo.annullato) {
-      ritorno;
+    if (this.cancelled) {
+      return;
     }
-    se (this._canvas) {
-      se (InternalRenderTask.#canvasInUse.has(this._canvas)) {
-        throw new Error("Impossibile utilizzare la stessa tela durante più operazioni render(). " + "Utilizzare una tela diversa o assicurarsi che le operazioni precedenti siano state " + "annullate o completate.");
+    if (this._canvas) {
+      if (InternalRenderTask.#canvasInUse.has(this._canvas)) {
+        throw new Error("Cannot use the same canvas during multiple render() operations. " + "Use different canvas or ensure previous operations were " + "cancelled or completed.");
       }
       InternalRenderTask.#canvasInUse.add(this._canvas);
     }
-    se (this._pdfBug && globalThis.StepperManager?.enabled) {
-      questo.stepper = globaleQuesto.StepperManager.create(questo._pageIndex);
-      questo.stepper.init(questo.elencooperatori);
-      questo.stepper.nextBreakPoint = questo.stepper.getNextBreakPoint();
+    if (this._pdfBug && globalThis.StepperManager?.enabled) {
+      this.stepper = globalThis.StepperManager.create(this._pageIndex);
+      this.stepper.init(this.operatorList);
+      this.stepper.nextBreakPoint = this.stepper.getNextBreakPoint();
     }
-    costante {
-      contestotela,
-      finestra,
-      trasformare,
-      sfondo
-    } = questo.parametri;
+    const {
+      canvasContext,
+      viewport,
+      transform,
+      background
+    } = this.params;
     this.gfx = new _canvas.CanvasGraphics(canvasContext, this.commonObjs, this.objs, this.canvasFactory, this.filterFactory, {
       optionalContentConfig
     }, this.annotationCanvasMap, this.pageColors);
     this.gfx.beginDrawing({
-      trasformare,
-      finestra,
-      trasparenza,
-      sfondo
+      transform,
+      viewport,
+      transparency,
+      background
     });
-    questo.operatorListIdx = 0;
+    this.operatorListIdx = 0;
     this.graphicsReady = true;
     this.graphicsReadyCallback?.();
   }
-  annulla(errore = null, ritardo extra = 0) {
-    questo.in esecuzione = falso;
-    questo.annullato = vero;
-    questo.gfx?.endDrawing();
+  cancel(error = null, extraDelay = 0) {
+    this.running = false;
+    this.cancelled = true;
+    this.gfx?.endDrawing();
     InternalRenderTask.#canvasInUse.delete(this._canvas);
-    this.callback(error || new _display_utils.RenderingCancelledException(`Rendering annullato, pagina ${this._pageIndex + 1}`, extraDelay));
+    this.callback(error || new _display_utils.RenderingCancelledException(`Rendering cancelled, page ${this._pageIndex + 1}`, extraDelay));
   }
   operatorListChanged() {
-    se (!this.graphicsReady) {
+    if (!this.graphicsReady) {
       this.graphicsReadyCallback ||= this._continueBound;
-      ritorno;
+      return;
     }
-    questo.stepper?.updateOperatorList(questo.operatorList);
-    se (questo.in esecuzione) {
-      ritorno;
+    this.stepper?.updateOperatorList(this.operatorList);
+    if (this.running) {
+      return;
     }
-    questo._continua();
+    this._continue();
   }
-  _continua() {
-    questo.in esecuzione = vero;
-    se (questo.annullato) {
-      ritorno;
+  _continue() {
+    this.running = true;
+    if (this.cancelled) {
+      return;
     }
-    se (this.task.onContinue) {
+    if (this.task.onContinue) {
       this.task.onContinue(this._scheduleNextBound);
-    } altro {
-      questo._scheduleNext();
+    } else {
+      this._scheduleNext();
     }
   }
   _scheduleNext() {
-    se (this._useRequestAnimationFrame) {
-      finestra.requestAnimationFrame(() => {
+    if (this._useRequestAnimationFrame) {
+      window.requestAnimationFrame(() => {
         this._nextBound().catch(this._cancelBound);
       });
-    } altro {
+    } else {
       Promise.resolve().then(this._nextBound).catch(this._cancelBound);
     }
   }
-  asincrono _next() {
-    se (questo.annullato) {
-      ritorno;
+  async _next() {
+    if (this.cancelled) {
+      return;
     }
     this.operatorListIdx = this.gfx.executeOperatorList(this.operatorList, this.operatorListIdx, this._continueBound, this.stepper);
-    se (this.operatorListIdx === this.operatorList.argsArray.length) {
-      questo.in esecuzione = falso;
-      se (questo.elencooperatori.ultimoChunk) {
-        questo.gfx.endDrawing();
+    if (this.operatorListIdx === this.operatorList.argsArray.length) {
+      this.running = false;
+      if (this.operatorList.lastChunk) {
+        this.gfx.endDrawing();
         InternalRenderTask.#canvasInUse.delete(this._canvas);
-        questo.callback();
+        this.callback();
       }
     }
   }
 }
-versione costante = '3.11.174';
-exports.version = versione;
+const version = '3.11.174';
+exports.version = version;
 const build = 'ce8716743';
-esportazioni.build = build;
+exports.build = build;
 
 /***/ }),
 /* 3 */
@@ -2744,163 +2744,163 @@ esportazioni.build = build;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.SerializableEmpty = esportazioni.PrintAnnotationStorage = esportazioni.AnnotationStorage = void 0;
+exports.SerializableEmpty = exports.PrintAnnotationStorage = exports.AnnotationStorage = void 0;
 var _util = __w_pdfjs_require__(1);
 var _editor = __w_pdfjs_require__(4);
 var _murmurhash = __w_pdfjs_require__(8);
 const SerializableEmpty = Object.freeze({
-  mappa: nullo,
-  cancelletto: "",
-  trasferimenti: indefiniti
+  map: null,
+  hash: "",
+  transfers: undefined
 });
-esportazioni.SerializableEmpty = SerializableEmpty;
-classe AnnotationStorage {
-  #modificato = falso;
-  #archiviazione = nuova mappa();
-  costruttore() {
+exports.SerializableEmpty = SerializableEmpty;
+class AnnotationStorage {
+  #modified = false;
+  #storage = new Map();
+  constructor() {
     this.onSetModified = null;
     this.onResetModified = null;
     this.onAnnotationEditor = null;
   }
-  getValue(chiave, valorepredefinito) {
-    valore costante = questo.#archiviazione.get(chiave);
-    se (valore === indefinito) {
-      restituisci valorepredefinito;
+  getValue(key, defaultValue) {
+    const value = this.#storage.get(key);
+    if (value === undefined) {
+      return defaultValue;
     }
-    restituisci Object.assign(defaultValue, valore);
+    return Object.assign(defaultValue, value);
   }
-  getRawValue(chiave) {
-    restituisci questo.#storage.get(key);
+  getRawValue(key) {
+    return this.#storage.get(key);
   }
-  rimuovi(chiave) {
-    questo.#storage.delete(chiave);
-    se (questo.#dimensione.archiviazione === 0) {
-      questo.resetModificato();
+  remove(key) {
+    this.#storage.delete(key);
+    if (this.#storage.size === 0) {
+      this.resetModified();
     }
-    se (tipo di this.onAnnotationEditor === "funzione") {
-      per (valore costante di questo.#storage.values()) {
-        se (valore instanceof _editor.AnnotationEditor) {
-          ritorno;
+    if (typeof this.onAnnotationEditor === "function") {
+      for (const value of this.#storage.values()) {
+        if (value instanceof _editor.AnnotationEditor) {
+          return;
         }
       }
       this.onAnnotationEditor(null);
     }
   }
-  setValue(chiave, valore) {
+  setValue(key, value) {
     const obj = this.#storage.get(key);
-    lascia modificato = falso;
-    se (oggetto !== indefinito) {
-      per (const [voce, valore] di Object.entries(valore)) {
-        se (oggetto[voce] !== valore) {
-          modificato = vero;
-          oggetto[voce] = valore;
+    let modified = false;
+    if (obj !== undefined) {
+      for (const [entry, val] of Object.entries(value)) {
+        if (obj[entry] !== val) {
+          modified = true;
+          obj[entry] = val;
         }
       }
-    } altro {
-      modificato = vero;
-      questo.#storage.set(chiave, valore);
+    } else {
+      modified = true;
+      this.#storage.set(key, value);
     }
-    se (modificato) {
-      questo.#setModified();
+    if (modified) {
+      this.#setModified();
     }
     if (value instanceof _editor.AnnotationEditor && typeof this.onAnnotationEditor === "function") {
       this.onAnnotationEditor(value.constructor._type);
     }
   }
-  ha(chiave) {
-    restituisci questo.#storage.has(key);
+  has(key) {
+    return this.#storage.has(key);
   }
-  ottieniTutto() {
-    restituisci questo.#storage.size > 0 ? (0, _util.objectFromMap)(this.#storage) : null;
+  getAll() {
+    return this.#storage.size > 0 ? (0, _util.objectFromMap)(this.#storage) : null;
   }
-  imposta tutto (oggetto) {
-    per (const [chiave, val] di Object.entries(obj)) {
-      this.setValue(chiave, valore);
+  setAll(obj) {
+    for (const [key, val] of Object.entries(obj)) {
+      this.setValue(key, val);
     }
   }
-  ottieni dimensione() {
-    restituisci questo.#storage.size;
+  get size() {
+    return this.#storage.size;
   }
   #setModified() {
-    se (!questo.#modificato) {
-      questo.#modificato = vero;
-      se (tipo di this.onSetModified === "funzione") {
-        questo.onSetModified();
+    if (!this.#modified) {
+      this.#modified = true;
+      if (typeof this.onSetModified === "function") {
+        this.onSetModified();
       }
     }
   }
-  resetModificato() {
-    se (questo.#modificato) {
-      questo.#modificato = falso;
-      se (tipo di this.onResetModified === "funzione") {
-        questo.onResetModified();
+  resetModified() {
+    if (this.#modified) {
+      this.#modified = false;
+      if (typeof this.onResetModified === "function") {
+        this.onResetModified();
       }
     }
   }
-  ottieni stampa() {
-    restituisci nuovo PrintAnnotationStorage(this);
+  get print() {
+    return new PrintAnnotationStorage(this);
   }
-  ottieni serializzabile() {
-    se (questo.#dimensione.archiviazione === 0) {
-      restituisci SerializableEmpty;
+  get serializable() {
+    if (this.#storage.size === 0) {
+      return SerializableEmpty;
     }
-    const map = nuova mappa(),
-      hash = nuovo _murmurhash.MurmurHash3_64(),
-      trasferimenti = [];
-    const contesto = Object.create(null);
-    lascia che hasBitmap = false;
-    per (const [chiave, valore] di questo.#archiviazione) {
+    const map = new Map(),
+      hash = new _murmurhash.MurmurHash3_64(),
+      transfers = [];
+    const context = Object.create(null);
+    let hasBitmap = false;
+    for (const [key, val] of this.#storage) {
       const serialized = val instanceof _editor.AnnotationEditor ? val.serialize(false, context) : val;
-      se (serializzato) {
-        map.set(chiave, serializzato);
-        hash.update(`${key}:${JSON.stringify(serializzato)}`);
+      if (serialized) {
+        map.set(key, serialized);
+        hash.update(`${key}:${JSON.stringify(serialized)}`);
         hasBitmap ||= !!serialized.bitmap;
       }
     }
-    se (haBitmap) {
-      per (valore costante di map.values()) {
-        se (valore.bitmap) {
-          trasferimenti.push(valore.bitmap);
+    if (hasBitmap) {
+      for (const value of map.values()) {
+        if (value.bitmap) {
+          transfers.push(value.bitmap);
         }
       }
     }
-    restituisci map.size > 0 ? {
-      mappa,
+    return map.size > 0 ? {
+      map,
       hash: hash.hexdigest(),
-      trasferimenti
+      transfers
     } : SerializableEmpty;
   }
 }
-esportazioni.AnnotationStorage = AnnotationStorage;
-classe PrintAnnotationStorage estende AnnotationStorage {
-  #serializzabile;
-  costruttore(genitore) {
+exports.AnnotationStorage = AnnotationStorage;
+class PrintAnnotationStorage extends AnnotationStorage {
+  #serializable;
+  constructor(parent) {
     super();
-    costante {
-      mappa,
-      hashish,
-      trasferimenti
-    } = genitore.serializzabile;
-    const clone = structuredClone(map, trasferimenti ? {
-      trasferimento: trasferimenti
-    } : nullo);
-    questo.#serializzabile = {
-      mappa: clone,
-      hashish,
-      trasferimenti
+    const {
+      map,
+      hash,
+      transfers
+    } = parent.serializable;
+    const clone = structuredClone(map, transfers ? {
+      transfer: transfers
+    } : null);
+    this.#serializable = {
+      map: clone,
+      hash,
+      transfers
     };
   }
-  ottieni stampa() {
-    (0, _util.unreachable)("Non dovrebbe chiamare PrintAnnotationStorage.print");
+  get print() {
+    (0, _util.unreachable)("Should not call PrintAnnotationStorage.print");
   }
-  ottieni serializzabile() {
-    restituisci questo.#serializable;
+  get serializable() {
+    return this.#serializable;
   }
 }
-esportazioni.PrintAnnotationStorage = PrintAnnotationStorage;
+exports.PrintAnnotationStorage = PrintAnnotationStorage;
 
 /***/ }),
 /* 4 */
@@ -2908,15 +2908,15 @@ esportazioni.PrintAnnotationStorage = PrintAnnotationStorage;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.AnnotationEditor = void 0;
+exports.AnnotationEditor = void 0;
 var _tools = __w_pdfjs_require__(5);
 var _util = __w_pdfjs_require__(1);
 var _display_utils = __w_pdfjs_require__(6);
-classe AnnotationEditor {
-  #testoalt = "";
+class AnnotationEditor {
+  #altText = "";
   #altTextDecorative = false;
   #altTextButton = null;
   #altTextTooltip = null;
@@ -2934,54 +2934,54 @@ classe AnnotationEditor {
   _l10nPromise = null;
   #isDraggable = false;
   #zIndex = AnnotationEditor._zIndex++;
-  statico _borderLineWidth = -1;
+  static _borderLineWidth = -1;
   static _colorManager = new _tools.ColorManager();
-  statico _zIndex = 1;
-  statico SMALL_EDITOR_SIZE = 0;
-  costruttore(parametri) {
-    se (questo.costruttore === AnnotationEditor) {
-      (0, _util.unreachable)("Impossibile inizializzare AnnotationEditor.");
+  static _zIndex = 1;
+  static SMALL_EDITOR_SIZE = 0;
+  constructor(parameters) {
+    if (this.constructor === AnnotationEditor) {
+      (0, _util.unreachable)("Cannot initialize AnnotationEditor.");
     }
-    questo.genitore = parametri.genitore;
-    questo.id = parametri.id;
-    questa.larghezza = questa.altezza = null;
-    this.pageIndex = parametri.parent.pageIndex;
-    questo.nome = parametri.nome;
-    questo.div = null;
-    this._uiManager = parametri.uiManager;
+    this.parent = parameters.parent;
+    this.id = parameters.id;
+    this.width = this.height = null;
+    this.pageIndex = parameters.parent.pageIndex;
+    this.name = parameters.name;
+    this.div = null;
+    this._uiManager = parameters.uiManager;
     this.annotationElementId = null;
     this._willKeepAspectRatio = false;
-    this._initialOptions.isCentered = parametri.isCentered;
+    this._initialOptions.isCentered = parameters.isCentered;
     this._structTreeParentId = null;
-    costante {
-      rotazione,
+    const {
+      rotation,
       rawDims: {
-        Larghezza pagina,
-        altezza della pagina,
-        paginaX,
-        paginaY
+        pageWidth,
+        pageHeight,
+        pageX,
+        pageY
       }
     } = this.parent.viewport;
-    this.rotation = rotazione;
-    this.pageRotation = (360 + rotazione - this._uiManager.viewParameters.rotation) % 360;
-    this.pageDimensions = [larghezzapagina, altezzapagina];
-    this.pageTranslation = [paginaX, paginaY];
-    const [larghezza, altezza] = this.parentDimensions;
-    questo.x = parametri.x / larghezza;
-    this.y = parametri.y / altezza;
+    this.rotation = rotation;
+    this.pageRotation = (360 + rotation - this._uiManager.viewParameters.rotation) % 360;
+    this.pageDimensions = [pageWidth, pageHeight];
+    this.pageTranslation = [pageX, pageY];
+    const [width, height] = this.parentDimensions;
+    this.x = parameters.x / width;
+    this.y = parameters.y / height;
     this.isAttachedToDOM = false;
-    questo.eliminato = falso;
+    this.deleted = false;
   }
-  ottieni editorType() {
-    restituisci Object.getPrototypeOf(this).constructor._type;
+  get editorType() {
+    return Object.getPrototypeOf(this).constructor._type;
   }
-  statico ottieni _defaultLineColor() {
+  static get _defaultLineColor() {
     return (0, _util.shadow)(this, "_defaultLineColor", this._colorManager.getHexCode("CanvasText"));
   }
   static deleteAnnotationElement(editor) {
     const fakeEditor = new FakeEditor({
       id: editor.parent.getNextId(),
-      genitore: editor.genitore,
+      parent: editor.parent,
       uiManager: editor._uiManager
     });
     fakeEditor.annotationElementId = editor.annotationElementId;
@@ -2990,342 +2990,342 @@ classe AnnotationEditor {
   }
   static initialize(l10n, options = null) {
     AnnotationEditor._l10nPromise ||= new Map(["editor_alt_text_button_label", "editor_alt_text_edit_button_label", "editor_alt_text_decorative_tooltip"].map(str => [str, l10n.get(str)]));
-    se (opzioni?.stringhe) {
-      per (const str di opzioni.stringhe) {
+    if (options?.strings) {
+      for (const str of options.strings) {
         AnnotationEditor._l10nPromise.set(str, l10n.get(str));
       }
     }
-    se (AnnotationEditor._borderLineWidth !== -1) {
-      ritorno;
+    if (AnnotationEditor._borderLineWidth !== -1) {
+      return;
     }
-    stile const = getComputedStyle(document.documentElement);
+    const style = getComputedStyle(document.documentElement);
     AnnotationEditor._borderLineWidth = parseFloat(style.getPropertyValue("--outline-width")) || 0;
   }
-  aggiornamento staticoDefaultParams(_tipo, _valore) {}
-  statico ottieni defaultPropertiesToUpdate() {
-    ritorno [];
+  static updateDefaultParams(_type, _value) {}
+  static get defaultPropertiesToUpdate() {
+    return [];
   }
-  statico isHandlingMimeForPasting(mime) {
-    restituisci falso;
+  static isHandlingMimeForPasting(mime) {
+    return false;
   }
-  static paste(elemento, genitore) {
-    (0, _util.unreachable)("Non implementato");
+  static paste(item, parent) {
+    (0, _util.unreachable)("Not implemented");
   }
-  ottieni propertiesToUpdate() {
-    ritorno [];
+  get propertiesToUpdate() {
+    return [];
   }
-  ottieni _isDraggable() {
-    restituisci questo.#isDraggable;
+  get _isDraggable() {
+    return this.#isDraggable;
   }
-  imposta _isDraggable(valore) {
-    questo.#ètrascinabile = valore;
-    this.div?.classList.toggle("trascinabile", valore);
+  set _isDraggable(value) {
+    this.#isDraggable = value;
+    this.div?.classList.toggle("draggable", value);
   }
-  centro() {
-    const [larghezzapagina, altezzapagina] = this.pageDimensions;
+  center() {
+    const [pageWidth, pageHeight] = this.pageDimensions;
     switch (this.parentRotation) {
-      caso 90:
+      case 90:
         this.x -= this.height * pageHeight / (pageWidth * 2);
         this.y += this.width * pageWidth / (pageHeight * 2);
-        rottura;
-      caso 180:
-        questo.x += questa.larghezza / 2;
-        questo.y += questa.altezza / 2;
-        rottura;
-      caso 270:
+        break;
+      case 180:
+        this.x += this.width / 2;
+        this.y += this.height / 2;
+        break;
+      case 270:
         this.x += this.height * pageHeight / (pageWidth * 2);
         this.y -= this.width * pageWidth / (pageHeight * 2);
-        rottura;
-      predefinito:
-        questo.x -= questa.larghezza / 2;
-        questo.y -= questa.altezza / 2;
-        rottura;
+        break;
+      default:
+        this.x -= this.width / 2;
+        this.y -= this.height / 2;
+        break;
     }
-    questo.fixAndSetPosition();
+    this.fixAndSetPosition();
   }
-  aggiungiComandi(parametri) {
-    this._uiManager.addCommands(parametri);
+  addCommands(params) {
+    this._uiManager.addCommands(params);
   }
-  ottieni currentLayer() {
-    restituisci questo._uiManager.currentLayer;
+  get currentLayer() {
+    return this._uiManager.currentLayer;
   }
-  impostaInSfondo() {
-    questo.div.style.zIndex = 0;
+  setInBackground() {
+    this.div.style.zIndex = 0;
   }
-  impostaInPrimo Piano() {
-    questo.div.style.zIndex = questo.#zIndex;
+  setInForeground() {
+    this.div.style.zIndex = this.#zIndex;
   }
-  setParent(genitore) {
-    se (genitore !== null) {
+  setParent(parent) {
+    if (parent !== null) {
       this.pageIndex = parent.pageIndex;
       this.pageDimensions = parent.pageDimensions;
     }
-    questo.genitore = genitore;
+    this.parent = parent;
   }
-  focusin(evento) {
-    se (!this._focusEventsAllowed) {
-      ritorno;
+  focusin(event) {
+    if (!this._focusEventsAllowed) {
+      return;
     }
-    se (!this.#hasBeenClicked) {
-      questo.genitore.setSelected(questo);
-    } altro {
-      questo.#hasBeenClicked = false;
+    if (!this.#hasBeenClicked) {
+      this.parent.setSelected(this);
+    } else {
+      this.#hasBeenClicked = false;
     }
   }
-  focusout(evento) {
-    se (!this._focusEventsAllowed) {
-      ritorno;
+  focusout(event) {
+    if (!this._focusEventsAllowed) {
+      return;
     }
-    se (!this.isAttachedToDOM) {
-      ritorno;
+    if (!this.isAttachedToDOM) {
+      return;
     }
     const target = event.relatedTarget;
-    se (target?.closest(`#${this.id}`)) {
-      ritorno;
+    if (target?.closest(`#${this.id}`)) {
+      return;
     }
-    evento.prevenzioneDefault();
-    se (!this.parent?.isMultipleSelection) {
-      questo.commitOrRemove();
+    event.preventDefault();
+    if (!this.parent?.isMultipleSelection) {
+      this.commitOrRemove();
     }
   }
   commitOrRemove() {
-    se (questo.èVuoto()) {
-      questo.rimuovi();
-    } altro {
-      questo.commit();
+    if (this.isEmpty()) {
+      this.remove();
+    } else {
+      this.commit();
     }
   }
-  commetti() {
+  commit() {
     this.addToAnnotationStorage();
   }
-  aggiungiAlloStorageAnnotazione() {
+  addToAnnotationStorage() {
     this._uiManager.addToAnnotationStorage(this);
   }
   setAt(x, y, tx, ty) {
-    const [larghezza, altezza] = this.parentDimensions;
+    const [width, height] = this.parentDimensions;
     [tx, ty] = this.screenToPageTranslation(tx, ty);
-    this.x = (x + tx) / larghezza;
-    this.y = (y + ty) / altezza;
-    questo.fixAndSetPosition();
+    this.x = (x + tx) / width;
+    this.y = (y + ty) / height;
+    this.fixAndSetPosition();
   }
-  #translate([larghezza, altezza], x, y) {
+  #translate([width, height], x, y) {
     [x, y] = this.screenToPageTranslation(x, y);
-    questo.x += x / larghezza;
-    this.y += y / altezza;
-    questo.fixAndSetPosition();
+    this.x += x / width;
+    this.y += y / height;
+    this.fixAndSetPosition();
   }
-  traduci(x, y) {
-    questo.#translate(questo.parentDimensions, x, y);
+  translate(x, y) {
+    this.#translate(this.parentDimensions, x, y);
   }
-  traduciInPagina(x, y) {
-    questo.#translate(questo.pageDimensions, x, y);
+  translateInPage(x, y) {
+    this.#translate(this.pageDimensions, x, y);
     this.div.scrollIntoView({
-      blocco: "più vicino"
+      block: "nearest"
     });
   }
-  trascina(tx, ty) {
+  drag(tx, ty) {
     const [parentWidth, parentHeight] = this.parentDimensions;
     this.x += tx / parentWidth;
     this.y += ty / parentHeight;
-    se (questo.genitore && (questo.x < 0 || questo.x > 1 || questo.y < 0 || questo.y > 1)) {
-      costante {
-        X,
-        e
+    if (this.parent && (this.x < 0 || this.x > 1 || this.y < 0 || this.y > 1)) {
+      const {
+        x,
+        y
       } = this.div.getBoundingClientRect();
-      se (questo.genitore.trovaNuovoGenitore(questo, x, y)) {
-        questo.x -= Math.floor(questo.x);
-        questo.y -= Math.floor(questo.y);
+      if (this.parent.findNewParent(this, x, y)) {
+        this.x -= Math.floor(this.x);
+        this.y -= Math.floor(this.y);
       }
     }
-    permettere {
-      X,
-      e
-    } = questo;
+    let {
+      x,
+      y
+    } = this;
     const [bx, by] = this.#getBaseTranslation();
     x += bx;
-    y += di;
-    questo.div.style.left = `${(100 * x).toFixed(2)}%`;
+    y += by;
+    this.div.style.left = `${(100 * x).toFixed(2)}%`;
     this.div.style.top = `${(100 * y).toFixed(2)}%`;
     this.div.scrollIntoView({
-      blocco: "più vicino"
+      block: "nearest"
     });
   }
   #getBaseTranslation() {
     const [parentWidth, parentHeight] = this.parentDimensions;
-    costante {
-      _larghezza della linea di confine
-    } = Editor di annotazioni;
+    const {
+      _borderLineWidth
+    } = AnnotationEditor;
     const x = _borderLineWidth / parentWidth;
     const y = _borderLineWidth / parentHeight;
-    interruttore (questa rotazione) {
-      caso 90:
-        ritorno [-x, y];
-      caso 180:
-        ritorno [x, y];
-      caso 270:
-        ritorno [x, -y];
-      predefinito:
-        ritorno [-x, -y];
+    switch (this.rotation) {
+      case 90:
+        return [-x, y];
+      case 180:
+        return [x, y];
+      case 270:
+        return [x, -y];
+      default:
+        return [-x, -y];
     }
   }
   fixAndSetPosition() {
-    const [larghezzapagina, altezzapagina] = this.pageDimensions;
-    permettere {
-      X,
-      e,
-      larghezza,
-      altezza
-    } = questo;
-    larghezza *= larghezzapagina;
-    altezza *= altezzapagina;
-    x *= larghezzapagina;
-    y *= altezzapagina;
-    interruttore (questa rotazione) {
-      caso 0:
-        x = Math.max(0, Math.min(pageWidth - larghezza, x));
-        y = Math.max(0, Math.min(pageHeight - altezza, y));
-        rottura;
-      caso 90:
-        x = Math.max(0, Math.min(larghezza pagina - altezza, x));
-        y = Math.min(altezzapagina, Math.max(larghezza, y));
-        rottura;
-      caso 180:
-        x = Math.min(larghezzapagina, Math.max(larghezza, x));
-        y = Math.min(altezzapagina, Math.max(altezza, y));
-        rottura;
-      caso 270:
-        x = Math.min(larghezzapagina, Math.max(altezza, x));
+    const [pageWidth, pageHeight] = this.pageDimensions;
+    let {
+      x,
+      y,
+      width,
+      height
+    } = this;
+    width *= pageWidth;
+    height *= pageHeight;
+    x *= pageWidth;
+    y *= pageHeight;
+    switch (this.rotation) {
+      case 0:
+        x = Math.max(0, Math.min(pageWidth - width, x));
+        y = Math.max(0, Math.min(pageHeight - height, y));
+        break;
+      case 90:
+        x = Math.max(0, Math.min(pageWidth - height, x));
+        y = Math.min(pageHeight, Math.max(width, y));
+        break;
+      case 180:
+        x = Math.min(pageWidth, Math.max(width, x));
+        y = Math.min(pageHeight, Math.max(height, y));
+        break;
+      case 270:
+        x = Math.min(pageWidth, Math.max(height, x));
         y = Math.max(0, Math.min(pageHeight - width, y));
-        rottura;
+        break;
     }
-    this.x = x /= larghezzapagina;
-    this.y = y /= altezzapagina;
+    this.x = x /= pageWidth;
+    this.y = y /= pageHeight;
     const [bx, by] = this.#getBaseTranslation();
     x += bx;
-    y += di;
-    costante {
-      stile
-    } = questo.div;
-    stile.sinistra = `${(100 * x).toFixed(2)}%`;
-    stile.top = `${(100 * y).toFixed(2)}%`;
-    questo.moveInDOM();
+    y += by;
+    const {
+      style
+    } = this.div;
+    style.left = `${(100 * x).toFixed(2)}%`;
+    style.top = `${(100 * y).toFixed(2)}%`;
+    this.moveInDOM();
   }
-  static #rotatePoint(x, y, angolo) {
-    interruttore (angolo) {
-      caso 90:
-        ritorno [y, -x];
-      caso 180:
-        ritorno [-x, -y];
-      caso 270:
-        ritorno [-y, x];
-      predefinito:
-        ritorno [x, y];
+  static #rotatePoint(x, y, angle) {
+    switch (angle) {
+      case 90:
+        return [y, -x];
+      case 180:
+        return [-x, -y];
+      case 270:
+        return [-y, x];
+      default:
+        return [x, y];
     }
   }
   screenToPageTranslation(x, y) {
-    restituisci AnnotationEditor.#rotatePoint(x, y, this.parentRotation);
+    return AnnotationEditor.#rotatePoint(x, y, this.parentRotation);
   }
-  paginaTraduzioneSuSchermo(x, y) {
-    restituisci AnnotationEditor.#rotatePoint(x, y, 360 - this.parentRotation);
+  pageTranslationToScreen(x, y) {
+    return AnnotationEditor.#rotatePoint(x, y, 360 - this.parentRotation);
   }
-  #getRotationMatrix(rotazione) {
-    interruttore (rotazione) {
-      caso 90:
+  #getRotationMatrix(rotation) {
+    switch (rotation) {
+      case 90:
         {
-          const [larghezzapagina, altezzapagina] = this.pageDimensions;
-          ritorna [0, -pageWidth / pageHeight, pageHeight / pageWidth, 0];
+          const [pageWidth, pageHeight] = this.pageDimensions;
+          return [0, -pageWidth / pageHeight, pageHeight / pageWidth, 0];
         }
-      caso 180:
-        ritorno [-1, 0, 0, -1];
-      caso 270:
+      case 180:
+        return [-1, 0, 0, -1];
+      case 270:
         {
-          const [larghezzapagina, altezzapagina] = this.pageDimensions;
-          restituisci [0, larghezzapagina / altezzapagina, -altezzapagina / larghezzapagina, 0];
+          const [pageWidth, pageHeight] = this.pageDimensions;
+          return [0, pageWidth / pageHeight, -pageHeight / pageWidth, 0];
         }
-      predefinito:
-        ritorno [1, 0, 0, 1];
+      default:
+        return [1, 0, 0, 1];
     }
   }
-  ottieni parentScale() {
-    restituisce this._uiManager.viewParameters.realScale;
+  get parentScale() {
+    return this._uiManager.viewParameters.realScale;
   }
-  ottieni parentRotation() {
-    restituisci (this._uiManager.viewParameters.rotation + this.pageRotation) % 360;
+  get parentRotation() {
+    return (this._uiManager.viewParameters.rotation + this.pageRotation) % 360;
   }
-  ottieni parentDimensions() {
-    costante {
+  get parentDimensions() {
+    const {
       parentScale,
-      pageDimensions: [larghezza pagina, altezza pagina]
-    } = questo;
+      pageDimensions: [pageWidth, pageHeight]
+    } = this;
     const scaledWidth = pageWidth * parentScale;
     const scaledHeight = pageHeight * parentScale;
-    restituisce _util.FeatureTest.isCSSRoundSupported ? [Math.round(scaledWidth), Math.round(scaledHeight)] : [scaledWidth, scaledHeight];
+    return _util.FeatureTest.isCSSRoundSupported ? [Math.round(scaledWidth), Math.round(scaledHeight)] : [scaledWidth, scaledHeight];
   }
-  setDims(larghezza, altezza) {
+  setDims(width, height) {
     const [parentWidth, parentHeight] = this.parentDimensions;
-    this.div.style.width = `${(100 * larghezza / parentWidth).toFixed(2)}%`;
-    se (!this.#keepAspectRatio) {
-      this.div.style.height = `${(100 * altezza / parentHeight).toFixed(2)}%`;
+    this.div.style.width = `${(100 * width / parentWidth).toFixed(2)}%`;
+    if (!this.#keepAspectRatio) {
+      this.div.style.height = `${(100 * height / parentHeight).toFixed(2)}%`;
     }
-    questo.#altTextButton?.classList.toggle("piccolo", larghezza < AnnotationEditor.SMALL_EDITOR_SIZE || altezza < AnnotationEditor.SMALL_EDITOR_SIZE);
+    this.#altTextButton?.classList.toggle("small", width < AnnotationEditor.SMALL_EDITOR_SIZE || height < AnnotationEditor.SMALL_EDITOR_SIZE);
   }
   fixDims() {
-    costante {
-      stile
-    } = questo.div;
-    costante {
-      altezza,
-      larghezza
-    } = stile;
+    const {
+      style
+    } = this.div;
+    const {
+      height,
+      width
+    } = style;
     const widthPercent = width.endsWith("%");
     const heightPercent = !this.#keepAspectRatio && height.endsWith("%");
-    se (larghezzaPercentuale && altezzaPercentuale) {
-      ritorno;
+    if (widthPercent && heightPercent) {
+      return;
     }
     const [parentWidth, parentHeight] = this.parentDimensions;
-    se (!larghezzaPercentuale) {
+    if (!widthPercent) {
       style.width = `${(100 * parseFloat(width) / parentWidth).toFixed(2)}%`;
     }
-    se (!this.#keepAspectRatio && !heightPercent) {
-      style.height = `${(100 * parseFloat(altezza) / parentHeight).toFixed(2)}%`;
+    if (!this.#keepAspectRatio && !heightPercent) {
+      style.height = `${(100 * parseFloat(height) / parentHeight).toFixed(2)}%`;
     }
   }
   getInitialTranslation() {
-    ritorno [0, 0];
+    return [0, 0];
   }
   #createResizers() {
-    se (questo.#resizersDiv) {
-      ritorno;
+    if (this.#resizersDiv) {
+      return;
     }
-    questo.#resizersDiv = document.createElement("div");
-    questo.#resizersDiv.classList.add("resizers");
-    classi costanti = ["topLeft", "topRight", "bottomRight", "bottomLeft"];
-    se (!this._willKeepAspectRatio) {
+    this.#resizersDiv = document.createElement("div");
+    this.#resizersDiv.classList.add("resizers");
+    const classes = ["topLeft", "topRight", "bottomRight", "bottomLeft"];
+    if (!this._willKeepAspectRatio) {
       classes.push("topMiddle", "middleRight", "bottomMiddle", "middleLeft");
     }
-    per (const nome delle classi) {
+    for (const name of classes) {
       const div = document.createElement("div");
-      questo.#resizersDiv.append(div);
-      div.classList.add("resizer", nome);
-      div.addEventListener("puntatoregiù", this.#resizerPointerdown.bind(this, name));
-      div.addEventListener("menu contestuale", _display_utils.noContextMenu);
+      this.#resizersDiv.append(div);
+      div.classList.add("resizer", name);
+      div.addEventListener("pointerdown", this.#resizerPointerdown.bind(this, name));
+      div.addEventListener("contextmenu", _display_utils.noContextMenu);
     }
     this.div.prepend(this.#resizersDiv);
   }
-  #resizerPointerdown(nome, evento) {
-    evento.prevenzioneDefault();
-    costante {
-      èMac
+  #resizerPointerdown(name, event) {
+    event.preventDefault();
+    const {
+      isMac
     } = _util.FeatureTest.platform;
-    se (evento.pulsante !== 0 || evento.ctrlKey && isMac) {
-      ritorno;
+    if (event.button !== 0 || event.ctrlKey && isMac) {
+      return;
     }
     const boundResizerPointermove = this.#resizerPointermove.bind(this, name);
     const savedDraggable = this._isDraggable;
     this._isDraggable = false;
     const pointerMoveOptions = {
-      passivo: vero,
-      cattura: vero
+      passive: true,
+      capture: true
     };
     window.addEventListener("pointermove", boundResizerPointermove, pointerMoveOptions);
     const savedX = this.x;
@@ -3334,47 +3334,47 @@ classe AnnotationEditor {
     const savedHeight = this.height;
     const savedParentCursor = this.parent.div.style.cursor;
     const savedCursor = this.div.style.cursor;
-    questo.div.style.cursor = questo.parent.div.style.cursor = window.getComputedStyle(event.target).cursor;
+    this.div.style.cursor = this.parent.div.style.cursor = window.getComputedStyle(event.target).cursor;
     const pointerUpCallback = () => {
       this._isDraggable = savedDraggable;
       window.removeEventListener("pointerup", pointerUpCallback);
-      window.removeEventListener("sfocatura", pointerUpCallback);
+      window.removeEventListener("blur", pointerUpCallback);
       window.removeEventListener("pointermove", boundResizerPointermove, pointerMoveOptions);
-      questo.parent.div.style.cursor = savedParentCursor;
+      this.parent.div.style.cursor = savedParentCursor;
       this.div.style.cursor = savedCursor;
       const newX = this.x;
       const newY = this.y;
       const newWidth = this.width;
       const newHeight = this.height;
-      if (nuovaX === salvataX && nuovaY === salvataY && nuovaWidth === salvataWidth && nuovaAltezza === salvataAltezza) {
-        ritorno;
+      if (newX === savedX && newY === savedY && newWidth === savedWidth && newHeight === savedHeight) {
+        return;
       }
-      questo.aggiungiComandi({
-        comando: () => {
-          questa.larghezza = nuovaLarghezza;
+      this.addCommands({
+        cmd: () => {
+          this.width = newWidth;
           this.height = newHeight;
-          questo.x = nuovoX;
-          questo.y = nuovoY;
+          this.x = newX;
+          this.y = newY;
           const [parentWidth, parentHeight] = this.parentDimensions;
           this.setDims(parentWidth * newWidth, parentHeight * newHeight);
-          questo.fixAndSetPosition();
+          this.fixAndSetPosition();
         },
-        annulla: () => {
-          questa.larghezza = larghezza salvata;
+        undo: () => {
+          this.width = savedWidth;
           this.height = savedHeight;
-          questo.x = salvatoX;
-          questo.y = salvatoY;
+          this.x = savedX;
+          this.y = savedY;
           const [parentWidth, parentHeight] = this.parentDimensions;
           this.setDims(parentWidth * savedWidth, parentHeight * savedHeight);
-          questo.fixAndSetPosition();
+          this.fixAndSetPosition();
         },
-        mustExec: vero
+        mustExec: true
       });
     };
     window.addEventListener("pointerup", pointerUpCallback);
-    window.addEventListener("sfocatura", pointerUpCallback);
+    window.addEventListener("blur", pointerUpCallback);
   }
-  #resizerPointermove(nome, evento) {
+  #resizerPointermove(name, event) {
     const [parentWidth, parentHeight] = this.parentDimensions;
     const savedX = this.x;
     const savedY = this.y;
@@ -3387,142 +3387,142 @@ classe AnnotationEditor {
     const transf = (x, y) => [rotationMatrix[0] * x + rotationMatrix[2] * y, rotationMatrix[1] * x + rotationMatrix[3] * y];
     const invRotationMatrix = this.#getRotationMatrix(360 - this.rotation);
     const invTransf = (x, y) => [invRotationMatrix[0] * x + invRotationMatrix[2] * y, invRotationMatrix[1] * x + invRotationMatrix[3] * y];
-    lascia getPoint;
-    lascia ottenereOpposite;
-    lascia che isDiagonal = false;
-    lascia che sia orizzontale = falso;
-    interruttore (nome) {
-      caso "topLeft":
-        è Diagonale = vero;
+    let getPoint;
+    let getOpposite;
+    let isDiagonal = false;
+    let isHorizontal = false;
+    switch (name) {
+      case "topLeft":
+        isDiagonal = true;
         getPoint = (w, h) => [0, 0];
         getOpposite = (w, h) => [w, h];
-        rottura;
-      caso "topMiddle":
+        break;
+      case "topMiddle":
         getPoint = (w, h) => [w / 2, 0];
         getOpposite = (w, h) => [w / 2, h];
-        rottura;
-      caso "topRight":
-        è Diagonale = vero;
+        break;
+      case "topRight":
+        isDiagonal = true;
         getPoint = (w, h) => [w, 0];
         getOpposite = (w, h) => [0, h];
-        rottura;
-      caso "centro-destra":
-        èOrizzontale = vero;
+        break;
+      case "middleRight":
+        isHorizontal = true;
         getPoint = (w, h) => [w, h / 2];
         getOpposite = (w, h) => [0, h / 2];
-        rottura;
-      caso "in basso a destra":
-        è Diagonale = vero;
+        break;
+      case "bottomRight":
+        isDiagonal = true;
         getPoint = (w, h) => [w, h];
         getOpposite = (w, h) => [0, 0];
-        rottura;
-      caso "bottomMiddle":
+        break;
+      case "bottomMiddle":
         getPoint = (w, h) => [w / 2, h];
         getOpposite = (w, h) => [w / 2, 0];
-        rottura;
-      caso "bottomLeft":
-        è Diagonale = vero;
+        break;
+      case "bottomLeft":
+        isDiagonal = true;
         getPoint = (w, h) => [0, h];
         getOpposite = (w, h) => [w, 0];
-        rottura;
-      caso "centro-sinistra":
-        èOrizzontale = vero;
+        break;
+      case "middleLeft":
+        isHorizontal = true;
         getPoint = (w, h) => [0, h / 2];
         getOpposite = (w, h) => [w, h / 2];
-        rottura;
+        break;
     }
-    const point = getPoint(larghezza salvata, altezza salvata);
+    const point = getPoint(savedWidth, savedHeight);
     const oppositePoint = getOpposite(savedWidth, savedHeight);
-    lascia transfOppositePoint = transf(...oppositePoint);
+    let transfOppositePoint = transf(...oppositePoint);
     const oppositeX = round(savedX + transfOppositePoint[0]);
     const oppositeY = round(savedY + transfOppositePoint[1]);
-    lascia rapportoX = 1;
-    lascia rapportoY ​​= 1;
-    lascia [deltaX, deltaY] = this.screenToPageTranslation(evento.movimentoX, evento.movimentoY);
-    [deltaX, deltaY] = invTransf(deltaX / larghezza genitore, deltaY / altezza genitore);
-    se (è Diagonale) {
+    let ratioX = 1;
+    let ratioY = 1;
+    let [deltaX, deltaY] = this.screenToPageTranslation(event.movementX, event.movementY);
+    [deltaX, deltaY] = invTransf(deltaX / parentWidth, deltaY / parentHeight);
+    if (isDiagonal) {
       const oldDiag = Math.hypot(savedWidth, savedHeight);
       ratioX = ratioY = Math.max(Math.min(Math.hypot(oppositePoint[0] - point[0] - deltaX, oppositePoint[1] - point[1] - deltaY) / oldDiag, 1 / savedWidth, 1 / savedHeight), minWidth / savedWidth, minHeight / savedHeight);
-    } altrimenti se (è orizzontale) {
+    } else if (isHorizontal) {
       ratioX = Math.max(minWidth, Math.min(1, Math.abs(oppositePoint[0] - point[0] - deltaX))) / savedWidth;
-    } altro {
+    } else {
       ratioY = Math.max(minHeight, Math.min(1, Math.abs(oppositePoint[1] - point[1] - deltaY))) / savedHeight;
     }
     const newWidth = round(savedWidth * ratioX);
     const newHeight = round(savedHeight * ratioY);
     transfOppositePoint = transf(...getOpposite(newWidth, newHeight));
     const newX = oppositeX - transfOppositePoint[0];
-    const newY = oppostoY - transfOppositePoint[1];
-    questa.larghezza = nuovaLarghezza;
+    const newY = oppositeY - transfOppositePoint[1];
+    this.width = newWidth;
     this.height = newHeight;
-    questo.x = nuovoX;
-    questo.y = nuovoY;
+    this.x = newX;
+    this.y = newY;
     this.setDims(parentWidth * newWidth, parentHeight * newHeight);
-    questo.fixAndSetPosition();
+    this.fixAndSetPosition();
   }
-  asincrono addAltTextButton() {
-    se (questo.#altTextButton) {
-      ritorno;
+  async addAltTextButton() {
+    if (this.#altTextButton) {
+      return;
     }
     const altText = this.#altTextButton = document.createElement("button");
     altText.className = "altText";
     const msg = await AnnotationEditor._l10nPromise.get("editor_alt_text_button_label");
     altText.textContent = msg;
-    altText.setAttribute("etichetta-aria", msg);
+    altText.setAttribute("aria-label", msg);
     altText.tabIndex = "0";
-    altText.addEventListener("menu contestuale", _display_utils.noContextMenu);
-    altText.addEventListener("puntatore in basso", evento => evento.stopPropagation());
-    altText.addEventListener("clic", evento => {
-      evento.prevenzioneDefault();
+    altText.addEventListener("contextmenu", _display_utils.noContextMenu);
+    altText.addEventListener("pointerdown", event => event.stopPropagation());
+    altText.addEventListener("click", event => {
+      event.preventDefault();
       this._uiManager.editAltText(this);
     }, {
-      cattura: vero
+      capture: true
     });
-    altText.addEventListener("tasto premuto", evento => {
-      se (evento.target === altText && evento.chiave === "Invio") {
-        evento.prevenzioneDefault();
+    altText.addEventListener("keydown", event => {
+      if (event.target === altText && event.key === "Enter") {
+        event.preventDefault();
         this._uiManager.editAltText(this);
       }
     });
-    questo.#setAltTextButtonState();
-    questo. div.append(altText);
-    se (!AnnotationEditor.SMALL_EDITOR_SIZE) {
-      costante PERCENTUALE = 40;
+    this.#setAltTextButtonState();
+    this.div.append(altText);
+    if (!AnnotationEditor.SMALL_EDITOR_SIZE) {
+      const PERCENT = 40;
       AnnotationEditor.SMALL_EDITOR_SIZE = Math.min(128, Math.round(altText.getBoundingClientRect().width * (1 + PERCENT / 100)));
     }
   }
-  asincrono #setAltTextButtonState() {
+  async #setAltTextButtonState() {
     const button = this.#altTextButton;
-    se (!pulsante) {
-      ritorno;
+    if (!button) {
+      return;
     }
-    se (!this.#altText && !this.#altTextDecorative) {
-      button.classList.remove("fatto");
-      questo.#altTextTooltip?.remove();
-      ritorno;
+    if (!this.#altText && !this.#altTextDecorative) {
+      button.classList.remove("done");
+      this.#altTextTooltip?.remove();
+      return;
     }
     AnnotationEditor._l10nPromise.get("editor_alt_text_edit_button_label").then(msg => {
       button.setAttribute("aria-label", msg);
     });
-    lascia tooltip = this.#altTextTooltip;
-    se (!tooltip) {
-      questo.#altTextTooltip = tooltip = document.createElement("span");
+    let tooltip = this.#altTextTooltip;
+    if (!tooltip) {
+      this.#altTextTooltip = tooltip = document.createElement("span");
       tooltip.className = "tooltip";
-      tooltip.setAttribute("ruolo", "tooltip");
+      tooltip.setAttribute("role", "tooltip");
       const id = tooltip.id = `alt-text-tooltip-${this.id}`;
-      button.setAttribute("aria-descritta da", id);
+      button.setAttribute("aria-describedby", id);
       const DELAY_TO_SHOW_TOOLTIP = 100;
       button.addEventListener("mouseenter", () => {
-        questo.#altTextTooltipTimeout = setTimeout(() => {
-          questo.#altTextTooltipTimeout = null;
-          questo.#altTextTooltip.classList.add("mostra");
+        this.#altTextTooltipTimeout = setTimeout(() => {
+          this.#altTextTooltipTimeout = null;
+          this.#altTextTooltip.classList.add("show");
           this._uiManager._eventBus.dispatch("reporttelemetry", {
-            fonte: questo,
-            dettagli: {
-              tipo: "modifica",
-              sottotipo: this.editorType,
-              dati: {
-                azione: "alt_text_tooltip"
+            source: this,
+            details: {
+              type: "editing",
+              subtype: this.editorType,
+              data: {
+                action: "alt_text_tooltip"
               }
             }
           });
@@ -3530,79 +3530,79 @@ classe AnnotationEditor {
       });
       button.addEventListener("mouseleave", () => {
         clearTimeout(this.#altTextTooltipTimeout);
-        questo.#altTextTooltipTimeout = null;
-        questo.#altTextTooltip?.classList.remove("mostra");
+        this.#altTextTooltipTimeout = null;
+        this.#altTextTooltip?.classList.remove("show");
       });
     }
-    button.classList.add("fatto");
+    button.classList.add("done");
     tooltip.innerText = this.#altTextDecorative ? await AnnotationEditor._l10nPromise.get("editor_alt_text_decorative_tooltip") : this.#altText;
-    se (!tooltip.parentNode) {
-      pulsante.append(tooltip);
+    if (!tooltip.parentNode) {
+      button.append(tooltip);
     }
   }
   getClientDimensions() {
-    restituisci this.div.getBoundingClientRect();
+    return this.div.getBoundingClientRect();
   }
-  ottieni altTextData() {
-    ritorno {
-      altText: questo.#altText,
-      decorativo: questo.#altTextDecorative
+  get altTextData() {
+    return {
+      altText: this.#altText,
+      decorative: this.#altTextDecorative
     };
   }
-  imposta altTextData({
-    testo alternativo,
-    decorativo
+  set altTextData({
+    altText,
+    decorative
   }) {
-    se (questo.#altText === altText && questo.#altTextDecorativo === decorativo) {
-      ritorno;
+    if (this.#altText === altText && this.#altTextDecorative === decorative) {
+      return;
     }
-    questo.#altText = altText;
-    questo.#altTextDecorative = decorativo;
-    questo.#setAltTextButtonState();
+    this.#altText = altText;
+    this.#altTextDecorative = decorative;
+    this.#setAltTextButtonState();
   }
   render() {
-    questo.div = document.createElement("div");
-    this.div.setAttribute("rotazione-editor-dati", (360 - this.rotation) % 360);
-    questo.div.className = questo.nome;
-    questo.div.setAttribute("id", questo.id);
+    this.div = document.createElement("div");
+    this.div.setAttribute("data-editor-rotation", (360 - this.rotation) % 360);
+    this.div.className = this.name;
+    this.div.setAttribute("id", this.id);
     this.div.setAttribute("tabIndex", 0);
-    questo.impostaInPrimoPiano();
+    this.setInForeground();
     this.div.addEventListener("focusin", this.#boundFocusin);
     this.div.addEventListener("focusout", this.#boundFocusout);
     const [parentWidth, parentHeight] = this.parentDimensions;
-    se (this.parentRotation % 180 !== 0) {
+    if (this.parentRotation % 180 !== 0) {
       this.div.style.maxWidth = `${(100 * parentHeight / parentWidth).toFixed(2)}%`;
       this.div.style.maxHeight = `${(100 * parentWidth / parentHeight).toFixed(2)}%`;
     }
     const [tx, ty] = this.getInitialTranslation();
-    questo.traduci(tx, ty);
+    this.translate(tx, ty);
     (0, _tools.bindEvents)(this, this.div, ["pointerdown"]);
-    restituisci questo.div;
+    return this.div;
   }
-  puntatoregiù(evento) {
-    costante {
-      èMac
+  pointerdown(event) {
+    const {
+      isMac
     } = _util.FeatureTest.platform;
-    se (evento.pulsante !== 0 || evento.ctrlKey && isMac) {
-      evento.prevenzioneDefault();
-      ritorno;
+    if (event.button !== 0 || event.ctrlKey && isMac) {
+      event.preventDefault();
+      return;
     }
-    questo.#hasBeenClicked = true;
-    questo.#setUpDragSession(evento);
+    this.#hasBeenClicked = true;
+    this.#setUpDragSession(event);
   }
-  #setUpDragSession(evento) {
-    se (!this._isDraggable) {
-      ritorno;
+  #setUpDragSession(event) {
+    if (!this._isDraggable) {
+      return;
     }
     const isSelected = this._uiManager.isSelected(this);
     this._uiManager.setUpDragSession();
-    lascia puntatoreMoveOptions, puntatoreMoveCallback;
-    se (è selezionato) {
+    let pointerMoveOptions, pointerMoveCallback;
+    if (isSelected) {
       pointerMoveOptions = {
-        passivo: vero,
-        cattura: vero
+        passive: true,
+        capture: true
       };
-      puntatoreMoveCallback = e => {
+      pointerMoveCallback = e => {
         const [tx, ty] = this.screenToPageTranslation(e.movementX, e.movementY);
         this._uiManager.dragSelectedEditors(tx, ty);
       };
@@ -3610,204 +3610,204 @@ classe AnnotationEditor {
     }
     const pointerUpCallback = () => {
       window.removeEventListener("pointerup", pointerUpCallback);
-      window.removeEventListener("sfocatura", pointerUpCallback);
-      se (è selezionato) {
+      window.removeEventListener("blur", pointerUpCallback);
+      if (isSelected) {
         window.removeEventListener("pointermove", pointerMoveCallback, pointerMoveOptions);
       }
-      questo.#hasBeenClicked = false;
-      se (!this._uiManager.endDragSession()) {
-        costante {
-          èMac
+      this.#hasBeenClicked = false;
+      if (!this._uiManager.endDragSession()) {
+        const {
+          isMac
         } = _util.FeatureTest.platform;
-        se (evento.ctrlKey && !isMac || evento.shiftKey || evento.metaKey && isMac) {
-          questo.genitore.toggleSelected(questo);
-        } altro {
-          questo.genitore.setSelected(questo);
+        if (event.ctrlKey && !isMac || event.shiftKey || event.metaKey && isMac) {
+          this.parent.toggleSelected(this);
+        } else {
+          this.parent.setSelected(this);
         }
       }
     };
     window.addEventListener("pointerup", pointerUpCallback);
-    window.addEventListener("sfocatura", pointerUpCallback);
+    window.addEventListener("blur", pointerUpCallback);
   }
-  spostaInDOM() {
-    questo.genitore?.moveEditorInDOM(questo);
+  moveInDOM() {
+    this.parent?.moveEditorInDOM(this);
   }
-  _setParentAndPosition(genitore, x, y) {
-    genitore.cambiaParente(questo);
-    questo.x = x;
-    questo.y = y;
-    questo.fixAndSetPosition();
+  _setParentAndPosition(parent, x, y) {
+    parent.changeParent(this);
+    this.x = x;
+    this.y = y;
+    this.fixAndSetPosition();
   }
   getRect(tx, ty) {
     const scale = this.parentScale;
-    const [larghezzapagina, altezzapagina] = this.pageDimensions;
-    const [paginaX, paginaY] = this.pageTranslation;
-    const shiftX = tx / scala;
-    const shiftY = ty / scala;
+    const [pageWidth, pageHeight] = this.pageDimensions;
+    const [pageX, pageY] = this.pageTranslation;
+    const shiftX = tx / scale;
+    const shiftY = ty / scale;
     const x = this.x * pageWidth;
     const y = this.y * pageHeight;
     const width = this.width * pageWidth;
-    const altezza = this.height * pageHeight;
-    interruttore (questa rotazione) {
-      caso 0:
-        ritorno [x + shiftX + pageX, pageHeight - y - shiftY - altezza + pageY, x + shiftX + larghezza + pageX, pageHeight - y - shiftY + pageY];
-      caso 90:
-        ritorno [x + shiftY + pageX, pageHeight - y + shiftX + pageY, x + shiftY + altezza + pageX, pageHeight - y + shiftX + larghezza + pageY];
-      caso 180:
-        ritorno [x - shiftX - larghezza + paginaX, altezzapagina - y + shiftY + paginaY, x - shiftX + paginaX, altezzapagina - y + shiftY + altezza + paginaY];
-      caso 270:
-        ritorno [x - shiftY - altezza + paginaX, altezzapagina - y - shiftX - larghezza + paginaY, x - shiftY + paginaX, altezzapagina - y - shiftX + paginaY];
-      predefinito:
-        genera un nuovo errore("Rotazione non valida");
+    const height = this.height * pageHeight;
+    switch (this.rotation) {
+      case 0:
+        return [x + shiftX + pageX, pageHeight - y - shiftY - height + pageY, x + shiftX + width + pageX, pageHeight - y - shiftY + pageY];
+      case 90:
+        return [x + shiftY + pageX, pageHeight - y + shiftX + pageY, x + shiftY + height + pageX, pageHeight - y + shiftX + width + pageY];
+      case 180:
+        return [x - shiftX - width + pageX, pageHeight - y + shiftY + pageY, x - shiftX + pageX, pageHeight - y + shiftY + height + pageY];
+      case 270:
+        return [x - shiftY - height + pageX, pageHeight - y - shiftX - width + pageY, x - shiftY + pageX, pageHeight - y - shiftX + pageY];
+      default:
+        throw new Error("Invalid rotation");
     }
   }
-  getRectInCurrentCoords(rettangolo, altezzapagina) {
-    const [x1, y1, x2, y2] = rettangolo;
-    larghezza costante = x2 - x1;
-    altezza costante = y2 - y1;
-    interruttore (questa rotazione) {
-      caso 0:
-        restituisci [x1, altezza pagina - y2, larghezza, altezza];
-      caso 90:
-        restituisci [x1, altezza pagina - y1, altezza, larghezza];
-      caso 180:
-        restituisci [x2, altezzapagina - y1, larghezza, altezza];
-      caso 270:
-        restituisci [x2, altezza pagina - y2, altezza, larghezza];
-      predefinito:
-        genera un nuovo errore("Rotazione non valida");
+  getRectInCurrentCoords(rect, pageHeight) {
+    const [x1, y1, x2, y2] = rect;
+    const width = x2 - x1;
+    const height = y2 - y1;
+    switch (this.rotation) {
+      case 0:
+        return [x1, pageHeight - y2, width, height];
+      case 90:
+        return [x1, pageHeight - y1, height, width];
+      case 180:
+        return [x2, pageHeight - y1, width, height];
+      case 270:
+        return [x2, pageHeight - y2, height, width];
+      default:
+        throw new Error("Invalid rotation");
     }
   }
-  una voltaAggiunto() {}
-  èVuoto() {
-    restituisci falso;
+  onceAdded() {}
+  isEmpty() {
+    return false;
   }
   enableEditMode() {
-    questo.#isInEditMode = vero;
+    this.#isInEditMode = true;
   }
   disableEditMode() {
-    questo.#isInEditMode = false;
+    this.#isInEditMode = false;
   }
   isInEditMode() {
-    restituisci questo.#isInEditMode;
+    return this.#isInEditMode;
   }
   shouldGetKeyboardEvents() {
-    restituisci falso;
+    return false;
   }
-  ha bisogno di essere ricostruito() {
-    restituisci questo.div && !this.isAttachedToDOM;
+  needsToBeRebuilt() {
+    return this.div && !this.isAttachedToDOM;
   }
-  ricostruisci() {
+  rebuild() {
     this.div?.addEventListener("focusin", this.#boundFocusin);
     this.div?.addEventListener("focusout", this.#boundFocusout);
   }
   serialize(isForCopying = false, context = null) {
-    (0, _util.unreachable)("Un editor deve essere serializzabile");
+    (0, _util.unreachable)("An editor must be serializable");
   }
-  deserialize statico (dati, genitore, uiManager) {
+  static deserialize(data, parent, uiManager) {
     const editor = new this.prototype.constructor({
-      genitore,
+      parent,
       id: parent.getNextId(),
       uiManager
     });
-    editor.rotazione = dati.rotazione;
-    const [larghezzapagina, altezzapagina] = editor.dimensionipagina;
-    const [x, y, larghezza, altezza] = editor.getRectInCurrentCoords(data.rect, pageHeight);
-    editor.x = x / larghezzapagina;
-    editor.y = y / altezzapagina;
-    editor.width = larghezza / larghezzapagina;
-    editor.height = altezza / altezzapagina;
-    editor di ritorno;
+    editor.rotation = data.rotation;
+    const [pageWidth, pageHeight] = editor.pageDimensions;
+    const [x, y, width, height] = editor.getRectInCurrentCoords(data.rect, pageHeight);
+    editor.x = x / pageWidth;
+    editor.y = y / pageHeight;
+    editor.width = width / pageWidth;
+    editor.height = height / pageHeight;
+    return editor;
   }
-  rimuovi() {
+  remove() {
     this.div.removeEventListener("focusin", this.#boundFocusin);
     this.div.removeEventListener("focusout", this.#boundFocusout);
-    se (!this.isEmpty()) {
-      questo.commit();
+    if (!this.isEmpty()) {
+      this.commit();
     }
-    se (questo.genitore) {
-      questo.genitore.rimuovi(questo);
-    } altro {
-      questo._uiManager.removeEditor(questo);
+    if (this.parent) {
+      this.parent.remove(this);
+    } else {
+      this._uiManager.removeEditor(this);
     }
-    questo.#altTextButton?.remove();
-    questo.#altTextButton = null;
-    questo.#altTextTooltip = null;
+    this.#altTextButton?.remove();
+    this.#altTextButton = null;
+    this.#altTextTooltip = null;
   }
-  ottieni isResizable() {
-    restituisci falso;
+  get isResizable() {
+    return false;
   }
-  rendiRidimensionabile() {
-    se (questo.èRidimensionabile) {
-      questo.#createResizers();
-      questo.#resizersDiv.classList.remove("nascosto");
+  makeResizable() {
+    if (this.isResizable) {
+      this.#createResizers();
+      this.#resizersDiv.classList.remove("hidden");
     }
   }
-  seleziona() {
-    questo.rendiridimensionabile();
-    this.div?.classList.add("editorselezionato");
+  select() {
+    this.makeResizable();
+    this.div?.classList.add("selectedEditor");
   }
-  deseleziona() {
-    questo.#resizersDiv?.classList.add("nascosto");
-    this.div?.classList.remove("editorselezionato");
-    se (this.div?.contains(document.activeElement)) {
+  unselect() {
+    this.#resizersDiv?.classList.add("hidden");
+    this.div?.classList.remove("selectedEditor");
+    if (this.div?.contains(document.activeElement)) {
       this._uiManager.currentLayer.div.focus();
     }
   }
-  updateParams(tipo, valore) {}
-  disabilitaModifica() {
-    se (questo.#altTextButton) {
-      questo.#altTextButton.hidden = true;
+  updateParams(type, value) {}
+  disableEditing() {
+    if (this.#altTextButton) {
+      this.#altTextButton.hidden = true;
     }
   }
-  abilitaModifica() {
-    se (questo.#altTextButton) {
-      questo.#altTextButton.hidden = false;
+  enableEditing() {
+    if (this.#altTextButton) {
+      this.#altTextButton.hidden = false;
     }
   }
-  entraInModalitàModifica() {}
-  ottenere contentDiv() {
-    restituisci questo.div;
+  enterInEditMode() {}
+  get contentDiv() {
+    return this.div;
   }
-  ottieni isEditing() {
-    restituisci questo.#isEditing;
+  get isEditing() {
+    return this.#isEditing;
   }
-  imposta isEditing(valore) {
-    questo.#isEditing = valore;
-    se (!questo.genitore) {
-      ritorno;
+  set isEditing(value) {
+    this.#isEditing = value;
+    if (!this.parent) {
+      return;
     }
-    se (valore) {
-      questo.genitore.setSelected(questo);
-      questo.genitore.impostaActiveEditor(questo);
-    } altro {
-      questo.genitore.setActiveEditor(null);
+    if (value) {
+      this.parent.setSelected(this);
+      this.parent.setActiveEditor(this);
+    } else {
+      this.parent.setActiveEditor(null);
     }
   }
-  setAspectRatio(larghezza, altezza) {
-    questo.#keepAspectRatio = true;
-    const aspectRatio = larghezza / altezza;
-    costante {
-      stile
-    } = questo.div;
-    stile.aspectRatio = aspectRatio;
-    stile.altezza = "auto";
+  setAspectRatio(width, height) {
+    this.#keepAspectRatio = true;
+    const aspectRatio = width / height;
+    const {
+      style
+    } = this.div;
+    style.aspectRatio = aspectRatio;
+    style.height = "auto";
   }
-  statico ottieni MIN_SIZE() {
-    ritorno 16;
+  static get MIN_SIZE() {
+    return 16;
   }
 }
-esportazioni.AnnotationEditor = AnnotationEditor;
-classe FakeEditor estende AnnotationEditor {
-  costruttore(parametri) {
-    super(parametri);
+exports.AnnotationEditor = AnnotationEditor;
+class FakeEditor extends AnnotationEditor {
+  constructor(params) {
+    super(params);
     this.annotationElementId = params.annotationElementId;
-    questo.eliminato = vero;
+    this.deleted = true;
   }
-  serializzare() {
-    ritorno {
+  serialize() {
+    return {
       id: this.annotationElementId,
-      cancellato: vero,
+      deleted: true,
       pageIndex: this.pageIndex
     };
   }
@@ -3819,81 +3819,81 @@ classe FakeEditor estende AnnotationEditor {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
 exports.KeyboardManager = exports.CommandManager = exports.ColorManager = exports.AnnotationEditorUIManager = void 0;
-esportazioni.bindEvents = bindEvents;
-esportazioni.opacityToHex = opacityToHex;
+exports.bindEvents = bindEvents;
+exports.opacityToHex = opacityToHex;
 var _util = __w_pdfjs_require__(1);
 var _display_utils = __w_pdfjs_require__(6);
-funzione bindEvents(oggetto, elemento, nomi) {
-  per (const nome dei nomi) {
-    element.addEventListener(nome, oggetto[nome].bind(oggetto));
+function bindEvents(obj, element, names) {
+  for (const name of names) {
+    element.addEventListener(name, obj[name].bind(obj));
   }
 }
-funzione opacityToHex(opacità) {
-  restituisci Math.round(Math.min(255, Math.max(1, 255 * opacità))).toString(16).padStart(2, "0");
+function opacityToHex(opacity) {
+  return Math.round(Math.min(255, Math.max(1, 255 * opacity))).toString(16).padStart(2, "0");
 }
-classe IdManager {
+class IdManager {
   #id = 0;
   getId() {
-    restituisci `${_util.AnnotationEditorPrefix}${this.#id++}`;
+    return `${_util.AnnotationEditorPrefix}${this.#id++}`;
   }
 }
-classe ImageManager {
+class ImageManager {
   #baseId = (0, _util.getUuid)();
   #id = 0;
   #cache = null;
-  statico ottieni _isSVGFittingCanvas() {
+  static get _isSVGFittingCanvas() {
     const svg = `data:image/svg+xml;charset=UTF-8,<svg viewBox="0 0 1 1" width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" style="fill:red;"/></svg>`;
     const canvas = new OffscreenCanvas(1, 3);
     const ctx = canvas.getContext("2d");
-    const image = nuova immagine();
-    immagine.src = svg;
-    promessa costante = immagine.decode().then(() => {
-      ctx.drawImage(immagine, 0, 0, 1, 1, 0, 0, 1, 3);
-      restituisce nuovo Uint32Array(ctx.getImageData(0, 0, 1, 1).data.buffer)[0] === 0;
+    const image = new Image();
+    image.src = svg;
+    const promise = image.decode().then(() => {
+      ctx.drawImage(image, 0, 0, 1, 1, 0, 0, 1, 3);
+      return new Uint32Array(ctx.getImageData(0, 0, 1, 1).data.buffer)[0] === 0;
     });
     return (0, _util.shadow)(this, "_isSVGFittingCanvas", promise);
   }
-  asincrono #get(chiave, dati grezzi) {
-    questo.#cache ||= nuova mappa();
-    lascia dati = questo.#cache.get(chiave);
-    se (dati === null) {
-      restituisci null;
+  async #get(key, rawData) {
+    this.#cache ||= new Map();
+    let data = this.#cache.get(key);
+    if (data === null) {
+      return null;
     }
-    se (dati?.bitmap) {
-      dati.refCounter += 1;
-      restituire i dati;
+    if (data?.bitmap) {
+      data.refCounter += 1;
+      return data;
     }
-    Tentativo {
-      dati ||= {
-        bitmap: nullo,
+    try {
+      data ||= {
+        bitmap: null,
         id: `image_${this.#baseId}_${this.#id++}`,
         refCounter: 0,
-        isSvg: falso
+        isSvg: false
       };
-      lascia immagine;
-      se (tipo di dati grezzi === "stringa") {
-        dati.url = dati grezzi;
-        risposta costante = attendi fetch(rawData);
-        se (!risposta.ok) {
-          genera un nuovo errore (response.statusText);
+      let image;
+      if (typeof rawData === "string") {
+        data.url = rawData;
+        const response = await fetch(rawData);
+        if (!response.ok) {
+          throw new Error(response.statusText);
         }
-        immagine = attendi risposta.blob();
-      } altro {
-        immagine = dati.file = rawData;
+        image = await response.blob();
+      } else {
+        image = data.file = rawData;
       }
-      se (immagine.tipo === "immagine/svg+xml") {
+      if (image.type === "image/svg+xml") {
         const mustRemoveAspectRatioPromise = ImageManager._isSVGFittingCanvas;
         const fileReader = new FileReader();
-        const imageElement = nuova immagine();
+        const imageElement = new Image();
         const imagePromise = new Promise((resolve, reject) => {
           imageElement.onload = () => {
-            dati.bitmap = elementoimmagine;
-            dati.isSvg = vero;
-            risolvere();
+            data.bitmap = imageElement;
+            data.isSvg = true;
+            resolve();
           };
           fileReader.onload = async () => {
             const url = data.svgUrl = fileReader.result;
@@ -3901,273 +3901,273 @@ classe ImageManager {
           };
           imageElement.onerror = fileReader.onerror = reject;
         });
-        fileReader.readAsDataURL(immagine);
-        attendi imagePromise;
-      } altro {
-        data.bitmap = attendi createImageBitmap(immagine);
+        fileReader.readAsDataURL(image);
+        await imagePromise;
+      } else {
+        data.bitmap = await createImageBitmap(image);
       }
-      dati.refCounter = 1;
-    } cattura (e) {
-      console.errore(e);
-      dati = null;
+      data.refCounter = 1;
+    } catch (e) {
+      console.error(e);
+      data = null;
     }
-    questo.#cache.set(chiave, dati);
-    se (dati) {
-      questo.#cache.set(data.id, data);
+    this.#cache.set(key, data);
+    if (data) {
+      this.#cache.set(data.id, data);
     }
-    restituire i dati;
+    return data;
   }
-  asincrono getFromFile(file) {
-    costante {
-      ultima modifica,
-      nome,
-      misurare,
-      tipo
+  async getFromFile(file) {
+    const {
+      lastModified,
+      name,
+      size,
+      type
     } = file;
-    restituisci questo.#get(`${lastModified}_${name}_${size}_${type}`, file);
+    return this.#get(`${lastModified}_${name}_${size}_${type}`, file);
   }
-  asincrono getFromUrl(url) {
-    restituisci questo.#get(url, url);
+  async getFromUrl(url) {
+    return this.#get(url, url);
   }
-  getFromId(id) asincrono {
-    questo.#cache ||= nuova mappa();
-    dati costanti = questo.#cache.get(id);
-    se (!dati) {
-      restituisci null;
+  async getFromId(id) {
+    this.#cache ||= new Map();
+    const data = this.#cache.get(id);
+    if (!data) {
+      return null;
     }
-    se (dati.bitmap) {
-      dati.refCounter += 1;
-      restituire i dati;
+    if (data.bitmap) {
+      data.refCounter += 1;
+      return data;
     }
-    se (file di dati) {
-      restituisci questo.getFromFile(data.file);
+    if (data.file) {
+      return this.getFromFile(data.file);
     }
-    restituisci questo.getFromUrl(data.url);
+    return this.getFromUrl(data.url);
   }
   getSvgUrl(id) {
-    dati costanti = questo.#cache.get(id);
-    se (!dati?.isSvg) {
-      restituisci null;
+    const data = this.#cache.get(id);
+    if (!data?.isSvg) {
+      return null;
     }
-    restituisci dati.svgUrl;
+    return data.svgUrl;
   }
-  eliminaId(id) {
-    questo.#cache ||= nuova mappa();
-    dati costanti = questo.#cache.get(id);
-    se (!dati) {
-      ritorno;
+  deleteId(id) {
+    this.#cache ||= new Map();
+    const data = this.#cache.get(id);
+    if (!data) {
+      return;
     }
-    dati.refCounter -= 1;
-    se (data.refCounter !== 0) {
-      ritorno;
+    data.refCounter -= 1;
+    if (data.refCounter !== 0) {
+      return;
     }
-    dati.bitmap = null;
+    data.bitmap = null;
   }
   isValidId(id) {
-    restituisci id.startsWith(`image_${this.#baseId}_`);
+    return id.startsWith(`image_${this.#baseId}_`);
   }
 }
-classe CommandManager {
-  #comandi = [];
-  #bloccato = falso;
-  #dimensionemassima;
-  #posizione = -1;
-  costruttore(maxSize = 128) {
-    questo.#maxSize = maxSize;
+class CommandManager {
+  #commands = [];
+  #locked = false;
+  #maxSize;
+  #position = -1;
+  constructor(maxSize = 128) {
+    this.#maxSize = maxSize;
   }
-  aggiungere({
-    comando,
-    disfare,
-    deveEseguire,
-    tipo = NaN,
-    sovrascriviSeSameType = falso,
-    keepUndo = falso
+  add({
+    cmd,
+    undo,
+    mustExec,
+    type = NaN,
+    overwriteIfSameType = false,
+    keepUndo = false
   }) {
-    se (deveEseguire) {
-      comando();
+    if (mustExec) {
+      cmd();
     }
-    se (questo.#bloccato) {
-      ritorno;
+    if (this.#locked) {
+      return;
     }
-    const salva = {
-      comando,
-      disfare,
-      tipo
+    const save = {
+      cmd,
+      undo,
+      type
     };
-    se (questo.#posizione === -1) {
-      se (questo.#comandi.lunghezza > 0) {
-        questo.#comandi.lunghezza = 0;
+    if (this.#position === -1) {
+      if (this.#commands.length > 0) {
+        this.#commands.length = 0;
       }
-      questo.#posizione = 0;
-      questo.#comandi.push(salva);
-      ritorno;
+      this.#position = 0;
+      this.#commands.push(save);
+      return;
     }
-    se (sovrascriviSeStessoTipo && questo.#comandi[questo.#posizione].tipo === tipo) {
-      se (mantieniAnnulla) {
-        salva.annulla = questo.#comandi[questo.#posizione].annulla;
+    if (overwriteIfSameType && this.#commands[this.#position].type === type) {
+      if (keepUndo) {
+        save.undo = this.#commands[this.#position].undo;
       }
-      questo.#comandi[questo.#posizione] = salva;
-      ritorno;
+      this.#commands[this.#position] = save;
+      return;
     }
-    const next = this.#posizione + 1;
-    se (successivo === questo.#maxSize) {
-      questo.#comandi.splice(0, 1);
-    } altro {
-      questo.#posizione = prossimo;
-      se (next < this.#commands.length) {
-        questo.#comandi.splice(successivo);
+    const next = this.#position + 1;
+    if (next === this.#maxSize) {
+      this.#commands.splice(0, 1);
+    } else {
+      this.#position = next;
+      if (next < this.#commands.length) {
+        this.#commands.splice(next);
       }
     }
-    questo.#comandi.push(salva);
+    this.#commands.push(save);
   }
-  disfare() {
-    se (questo.#posizione === -1) {
-      ritorno;
+  undo() {
+    if (this.#position === -1) {
+      return;
     }
-    questo.#bloccato = vero;
-    questo.#comandi[questo.#posizione].annulla();
-    questo.#bloccato = falso;
-    questo.#posizione -= 1;
+    this.#locked = true;
+    this.#commands[this.#position].undo();
+    this.#locked = false;
+    this.#position -= 1;
   }
-  ripeti() {
-    se (questo.#posizione < questo.#comandi.lunghezza - 1) {
-      questo.#posizione += 1;
-      questo.#bloccato = vero;
-      questo.#comandi[questo.#posizione].cmd();
-      questo.#bloccato = falso;
+  redo() {
+    if (this.#position < this.#commands.length - 1) {
+      this.#position += 1;
+      this.#locked = true;
+      this.#commands[this.#position].cmd();
+      this.#locked = false;
     }
   }
-  haQualcosaDaAnnullare() {
-    restituisci questo.#posizione !== -1;
+  hasSomethingToUndo() {
+    return this.#position !== -1;
   }
-  haQualcosaDaRifare() {
-    restituisci questo.#posizione < questo.#comandi.lunghezza - 1;
+  hasSomethingToRedo() {
+    return this.#position < this.#commands.length - 1;
   }
-  distruggere() {
-    questo.#comandi = null;
+  destroy() {
+    this.#commands = null;
   }
 }
-esportazioni.CommandManager = CommandManager;
-classe KeyboardManager {
-  costruttore(callback) {
-    questo.buffer = [];
+exports.CommandManager = CommandManager;
+class KeyboardManager {
+  constructor(callbacks) {
+    this.buffer = [];
     this.callbacks = new Map();
     this.allKeys = new Set();
-    costante {
-      èMac
+    const {
+      isMac
     } = _util.FeatureTest.platform;
-    per (const [chiavi, callback, opzioni = {}] di callback) {
-      per (const chiave di chiavi) {
+    for (const [keys, callback, options = {}] of callbacks) {
+      for (const key of keys) {
         const isMacKey = key.startsWith("mac+");
-        se (isMac && isMacKey) {
-          questo.callback.set(key.slice(4), {
-            richiamare,
-            opzioni
+        if (isMac && isMacKey) {
+          this.callbacks.set(key.slice(4), {
+            callback,
+            options
           });
           this.allKeys.add(key.split("+").at(-1));
-        } altrimenti se (!isMac && !isMacKey) {
-          questo.callback.set(chiave, {
-            richiamare,
-            opzioni
+        } else if (!isMac && !isMacKey) {
+          this.callbacks.set(key, {
+            callback,
+            options
           });
           this.allKeys.add(key.split("+").at(-1));
         }
       }
     }
   }
-  #serialize(evento) {
-    se (evento.altKey) {
-      questo.buffer.push("alt");
+  #serialize(event) {
+    if (event.altKey) {
+      this.buffer.push("alt");
     }
-    se (evento.ctrlKey) {
-      questo.buffer.push("ctrl");
+    if (event.ctrlKey) {
+      this.buffer.push("ctrl");
     }
-    se (evento.metaKey) {
-      questo.buffer.push("meta");
+    if (event.metaKey) {
+      this.buffer.push("meta");
     }
-    se (evento.shiftKey) {
+    if (event.shiftKey) {
       this.buffer.push("shift");
     }
-    questo.buffer.push(evento.chiave);
+    this.buffer.push(event.key);
     const str = this.buffer.join("+");
-    lunghezza.di.questo.buffer = 0;
-    ritorno str;
+    this.buffer.length = 0;
+    return str;
   }
-  exec(self, evento) {
-    se (!this.allKeys.has(event.key)) {
-      ritorno;
+  exec(self, event) {
+    if (!this.allKeys.has(event.key)) {
+      return;
     }
     const info = this.callbacks.get(this.#serialize(event));
-    se (!info) {
-      ritorno;
+    if (!info) {
+      return;
     }
-    costante {
-      richiamare,
-      opzioni: {
-        bolle = falso,
-        argomenti = [],
-        verificatore = null
+    const {
+      callback,
+      options: {
+        bubbles = false,
+        args = [],
+        checker = null
       }
-    } = informazioni;
-    se (checker && !checker(self, evento)) {
-      ritorno;
+    } = info;
+    if (checker && !checker(self, event)) {
+      return;
     }
     callback.bind(self, ...args)();
-    se (!bolle) {
-      evento.stopPropagation();
-      evento.prevenzioneDefault();
+    if (!bubbles) {
+      event.stopPropagation();
+      event.preventDefault();
     }
   }
 }
-esportazioni.KeyboardManager = KeyboardManager;
-classe ColorManager {
+exports.KeyboardManager = KeyboardManager;
+class ColorManager {
   static _colorsMapping = new Map([["CanvasText", [0, 0, 0]], ["Canvas", [255, 255, 255]]]);
-  ottieni _colori() {
+  get _colors() {
     const colors = new Map([["CanvasText", null], ["Canvas", null]]);
-    (0, _display_utils.getColorValues)(colori);
+    (0, _display_utils.getColorValues)(colors);
     return (0, _util.shadow)(this, "_colors", colors);
   }
-  convert(colore) {
-    const rgb = (0, _display_utils.getRGB)(colore);
-    se (!window.matchMedia("(forced-colors: active)").matches) {
-      restituisci rgb;
+  convert(color) {
+    const rgb = (0, _display_utils.getRGB)(color);
+    if (!window.matchMedia("(forced-colors: active)").matches) {
+      return rgb;
     }
-    per (const [nome, RGB] di questo._colori) {
-      se (RGB.ogni((x, i) => x === rgb[i])) {
-        restituisci ColorManager._colorsMapping.get(nome);
+    for (const [name, RGB] of this._colors) {
+      if (RGB.every((x, i) => x === rgb[i])) {
+        return ColorManager._colorsMapping.get(name);
       }
     }
-    restituisci rgb;
+    return rgb;
   }
-  getHexCode(nome) {
-    const rgb = this._colors.get(nome);
-    se (!rgb) {
-      nome di ritorno;
+  getHexCode(name) {
+    const rgb = this._colors.get(name);
+    if (!rgb) {
+      return name;
     }
-    restituisci _util.Util.makeHexColor(...rgb);
+    return _util.Util.makeHexColor(...rgb);
   }
 }
-esportazioni.ColorManager = ColorManager;
-classe AnnotationEditorUIManager {
+exports.ColorManager = ColorManager;
+class AnnotationEditorUIManager {
   #activeEditor = null;
-  #allEditors = nuova mappa();
-  #allLayers = nuova mappa();
+  #allEditors = new Map();
+  #allLayers = new Map();
   #altTextManager = null;
   #annotationStorage = null;
-  #commandManager = nuovo CommandManager();
-  #indicepaginacorrente = 0;
+  #commandManager = new CommandManager();
+  #currentPageIndex = 0;
   #deletedAnnotationsElementIds = new Set();
   #draggingEditors = null;
   #editorTypes = null;
   #editorsToRescale = new Set();
   #filterFactory = null;
-  #idManager = nuovo IdManager();
-  #isEnabled = falso;
-  #isWaiting = falso;
+  #idManager = new IdManager();
+  #isEnabled = false;
+  #isWaiting = false;
   #lastActiveElement = null;
   #mode = _util.AnnotationEditorType.NONE;
   #selectedEditors = new Set();
-  #coloripagina = null;
+  #pageColors = null;
   #boundBlur = this.blur.bind(this);
   #boundFocus = this.focus.bind(this);
   #boundCopy = this.copy.bind(this);
@@ -4178,795 +4178,795 @@ classe AnnotationEditorUIManager {
   #boundOnPageChanging = this.onPageChanging.bind(this);
   #boundOnScaleChanging = this.onScaleChanging.bind(this);
   #boundOnRotationChanging = this.onRotationChanging.bind(this);
-  #StatiPrecedenti = {
-    isEditing: falso,
-    è vuoto: vero,
-    hasSomethingToUndo: falso,
-    hasSomethingToRedo: falso,
-    hasSelectedEditor: falso
+  #previousStates = {
+    isEditing: false,
+    isEmpty: true,
+    hasSomethingToUndo: false,
+    hasSomethingToRedo: false,
+    hasSelectedEditor: false
   };
-  #traduzione = [0, 0];
+  #translation = [0, 0];
   #translationTimeoutId = null;
-  #contenitore = null;
+  #container = null;
   #viewer = null;
-  statico TRANSLATE_SMALL = 1;
-  statico TRANSLATE_BIG = 10;
-  statico ottieni _keyboardManager() {
+  static TRANSLATE_SMALL = 1;
+  static TRANSLATE_BIG = 10;
+  static get _keyboardManager() {
     const proto = AnnotationEditorUIManager.prototype;
     const arrowChecker = self => {
-      costante {
-        elemento attivo
-      } = documento;
-      restituisci activeElement && self.#container.contains(activeElement) && self.hasSomethingToControl();
+      const {
+        activeElement
+      } = document;
+      return activeElement && self.#container.contains(activeElement) && self.hasSomethingToControl();
     };
     const small = this.TRANSLATE_SMALL;
     const big = this.TRANSLATE_BIG;
-    return (0, _util.shadow)(this, "_keyboardManager", new KeyboardManager([[["ctrl+a", "mac+meta+a"], proto.selectAll], [["ctrl+z", "mac+meta+z"], proto.undo], [["ctrl+y", "ctrl+shift+z", "mac+meta+shift+z", "ctrl+shift+Z", "mac+meta+shift+Z"], proto.redo], [["Backspace", "alt+Backspace", "ctrl+Backspace", "maiusc+Backspace", "mac+Backspace", "mac+alt+Backspace", "mac+ctrl+Backspace", "Elimina", "ctrl+Elimina", "maiusc+Elimina", "mac+Elimina"], proto.delete], [["Escape", "mac+Escape"], proto.unselectAll], [["ArrowLeft", "mac+FrecciaSinistra"], proto.translateSelectedEditors, {
-      argomenti: [-piccolo, 0],
-      verificatore: arrowChecker
-    }], [["ctrl+freccia sinistra", "mac+maiusc+freccia sinistra"], proto.translateSelectedEditors, {
-      argomenti: [-grande, 0],
-      verificatore: arrowChecker
-    }], [["Freccia destra", "mac+Freccia destra"], proto.translateSelectedEditors, {
-      argomenti: [piccolo, 0],
-      verificatore: arrowChecker
-    }], [["ctrl+freccia destra", "mac+maiusc+freccia destra"], proto.translateSelectedEditors, {
-      argomenti: [grande, 0],
-      verificatore: arrowChecker
-    }], [["Freccia su", "mac+Freccia su"], proto.translateSelectedEditors, {
-      argomenti: [0, -piccolo],
-      verificatore: arrowChecker
-    }], [["ctrl+Freccia su", "mac+shift+Freccia su"], proto.translateSelectedEditors, {
-      argomenti: [0, -grande],
-      verificatore: arrowChecker
-    }], [["Freccia giù", "mac+Freccia giù"], proto.translateSelectedEditors, {
-      argomenti: [0, piccolo],
-      verificatore: arrowChecker
-    }], [["ctrl+freccia giù", "mac+shift+freccia giù"], proto.translateSelectedEditors, {
-      argomenti: [0, grande],
-      verificatore: arrowChecker
+    return (0, _util.shadow)(this, "_keyboardManager", new KeyboardManager([[["ctrl+a", "mac+meta+a"], proto.selectAll], [["ctrl+z", "mac+meta+z"], proto.undo], [["ctrl+y", "ctrl+shift+z", "mac+meta+shift+z", "ctrl+shift+Z", "mac+meta+shift+Z"], proto.redo], [["Backspace", "alt+Backspace", "ctrl+Backspace", "shift+Backspace", "mac+Backspace", "mac+alt+Backspace", "mac+ctrl+Backspace", "Delete", "ctrl+Delete", "shift+Delete", "mac+Delete"], proto.delete], [["Escape", "mac+Escape"], proto.unselectAll], [["ArrowLeft", "mac+ArrowLeft"], proto.translateSelectedEditors, {
+      args: [-small, 0],
+      checker: arrowChecker
+    }], [["ctrl+ArrowLeft", "mac+shift+ArrowLeft"], proto.translateSelectedEditors, {
+      args: [-big, 0],
+      checker: arrowChecker
+    }], [["ArrowRight", "mac+ArrowRight"], proto.translateSelectedEditors, {
+      args: [small, 0],
+      checker: arrowChecker
+    }], [["ctrl+ArrowRight", "mac+shift+ArrowRight"], proto.translateSelectedEditors, {
+      args: [big, 0],
+      checker: arrowChecker
+    }], [["ArrowUp", "mac+ArrowUp"], proto.translateSelectedEditors, {
+      args: [0, -small],
+      checker: arrowChecker
+    }], [["ctrl+ArrowUp", "mac+shift+ArrowUp"], proto.translateSelectedEditors, {
+      args: [0, -big],
+      checker: arrowChecker
+    }], [["ArrowDown", "mac+ArrowDown"], proto.translateSelectedEditors, {
+      args: [0, small],
+      checker: arrowChecker
+    }], [["ctrl+ArrowDown", "mac+shift+ArrowDown"], proto.translateSelectedEditors, {
+      args: [0, big],
+      checker: arrowChecker
     }]]));
   }
-  costruttore(contenitore, visualizzatore, altTextManager, eventBus, pdfDocument, pageColors) {
-    questo.#contenitore = contenitore;
-    questo.#viewer = viewer;
-    questo.#altTextManager = altTextManager;
-    questo._eventBus = eventBus;
-    this._eventBus._on("azione di modifica", this.#boundOnEditingAction);
-    this._eventBus._on("cambiopagina", this.#boundOnPageChanging);
-    this._eventBus._on("cambiamento di scala", this.#boundOnScaleChanging);
-    this._eventBus._on("rotazione che cambia", this.#boundOnRotationChanging);
-    questo.#annotationStorage = pdfDocument.annotationStorage;
-    questo.#filterFactory = pdfDocument.filterFactory;
-    questo.#pageColors = pageColors;
-    questo.parametri di visualizzazione = {
+  constructor(container, viewer, altTextManager, eventBus, pdfDocument, pageColors) {
+    this.#container = container;
+    this.#viewer = viewer;
+    this.#altTextManager = altTextManager;
+    this._eventBus = eventBus;
+    this._eventBus._on("editingaction", this.#boundOnEditingAction);
+    this._eventBus._on("pagechanging", this.#boundOnPageChanging);
+    this._eventBus._on("scalechanging", this.#boundOnScaleChanging);
+    this._eventBus._on("rotationchanging", this.#boundOnRotationChanging);
+    this.#annotationStorage = pdfDocument.annotationStorage;
+    this.#filterFactory = pdfDocument.filterFactory;
+    this.#pageColors = pageColors;
+    this.viewParameters = {
       realScale: _display_utils.PixelsPerInch.PDF_TO_CSS_UNITS,
-      rotazione: 0
+      rotation: 0
     };
   }
-  distruggere() {
-    questo.#removeKeyboardManager();
-    questo.#removeFocusManager();
-    this._eventBus._off("azione di modifica", this.#boundOnEditingAction);
-    this._eventBus._off("cambio di pagina", this.#boundOnPageChanging);
-    this._eventBus._off("cambiamento di scala", this.#boundOnScaleChanging);
-    this._eventBus._off("rotazione che cambia", this.#boundOnRotationChanging);
-    per (const layer di questo.#allLayers.values()) {
-      strato.distruggi();
+  destroy() {
+    this.#removeKeyboardManager();
+    this.#removeFocusManager();
+    this._eventBus._off("editingaction", this.#boundOnEditingAction);
+    this._eventBus._off("pagechanging", this.#boundOnPageChanging);
+    this._eventBus._off("scalechanging", this.#boundOnScaleChanging);
+    this._eventBus._off("rotationchanging", this.#boundOnRotationChanging);
+    for (const layer of this.#allLayers.values()) {
+      layer.destroy();
     }
-    questo.#tuttiilivelli.cancella();
-    questo.#allEditors.clear();
-    questo.#editorsToRescale.clear();
-    questo.#activeEditor = null;
-    questo.#selectedEditors.clear();
-    questo.#commandManager.destroy();
-    questo.#altTextManager.destroy();
+    this.#allLayers.clear();
+    this.#allEditors.clear();
+    this.#editorsToRescale.clear();
+    this.#activeEditor = null;
+    this.#selectedEditors.clear();
+    this.#commandManager.destroy();
+    this.#altTextManager.destroy();
   }
-  ottieni hcmFilter() {
+  get hcmFilter() {
     return (0, _util.shadow)(this, "hcmFilter", this.#pageColors ? this.#filterFactory.addHCMFilter(this.#pageColors.foreground, this.#pageColors.background) : "none");
   }
-  ottenere la direzione() {
-    return (0, _util.shadow)(this, "direzione", getCputedStyle(this.#container).direction);
+  get direction() {
+    return (0, _util.shadow)(this, "direction", getComputedStyle(this.#container).direction);
   }
   editAltText(editor) {
-    questo.#altTextManager?.editAltText(questo, editor);
+    this.#altTextManager?.editAltText(this, editor);
   }
   onPageChanging({
-    numero di pagina
+    pageNumber
   }) {
-    questo.#currentPageIndex = pageNumber - 1;
+    this.#currentPageIndex = pageNumber - 1;
   }
   focusMainContainer() {
-    questo.#contenitore.focus();
+    this.#container.focus();
   }
-  trovaGenitore(x, y) {
-    per (const layer di questo.#allLayers.values()) {
-      costante {
-        x: stratoX,
-        y: stratoY,
-        larghezza,
-        altezza
+  findParent(x, y) {
+    for (const layer of this.#allLayers.values()) {
+      const {
+        x: layerX,
+        y: layerY,
+        width,
+        height
       } = layer.div.getBoundingClientRect();
-      se (x >= layerX && x <= layerX + larghezza && y >= layerY && y <= layerY + altezza) {
-        strato di ritorno;
+      if (x >= layerX && x <= layerX + width && y >= layerY && y <= layerY + height) {
+        return layer;
       }
     }
-    restituisci null;
+    return null;
   }
-  disableUserSelect(valore = falso) {
-    questo.#viewer.classList.toggle("noUserSelect", valore);
+  disableUserSelect(value = false) {
+    this.#viewer.classList.toggle("noUserSelect", value);
   }
   addShouldRescale(editor) {
-    questo.#editorsToRescale.add(editor);
+    this.#editorsToRescale.add(editor);
   }
   removeShouldRescale(editor) {
-    questo.#editorsToRescale.delete(editor);
+    this.#editorsToRescale.delete(editor);
   }
   onScaleChanging({
-    scala
+    scale
   }) {
-    questo.commitOrRemove();
-    this.viewParameters.realScale = scala * _display_utils.PixelsPerInch.PDF_TO_CSS_UNITS;
-    per (const editor di questo.#editorsToRescale) {
+    this.commitOrRemove();
+    this.viewParameters.realScale = scale * _display_utils.PixelsPerInch.PDF_TO_CSS_UNITS;
+    for (const editor of this.#editorsToRescale) {
       editor.onScaleChanging();
     }
   }
   onRotationChanging({
-    pagineRotazione
+    pagesRotation
   }) {
-    questo.commitOrRemove();
+    this.commitOrRemove();
     this.viewParameters.rotation = pagesRotation;
   }
   addToAnnotationStorage(editor) {
-    se (!editor.isEmpty() && this.#annotationStorage && !this.#annotationStorage.has(editor.id)) {
-      questo.#annotationStorage.setValue(editor.id, editor);
+    if (!editor.isEmpty() && this.#annotationStorage && !this.#annotationStorage.has(editor.id)) {
+      this.#annotationStorage.setValue(editor.id, editor);
     }
   }
   #addFocusManager() {
     window.addEventListener("focus", this.#boundFocus);
-    window.addEventListener("sfocatura", this.#boundBlur);
+    window.addEventListener("blur", this.#boundBlur);
   }
   #removeFocusManager() {
     window.removeEventListener("focus", this.#boundFocus);
-    window.removeEventListener("sfocatura", this.#boundBlur);
+    window.removeEventListener("blur", this.#boundBlur);
   }
-  sfocatura() {
-    se (!this.hasSelection) {
-      ritorno;
+  blur() {
+    if (!this.hasSelection) {
+      return;
     }
-    costante {
-      elemento attivo
-    } = documento;
-    per (const editor di questo.#selectedEditors) {
-      se (editor.div.contains(activeElement)) {
-        questo.#ultimoElementoAttivo = [editor, elementoattivo];
+    const {
+      activeElement
+    } = document;
+    for (const editor of this.#selectedEditors) {
+      if (editor.div.contains(activeElement)) {
+        this.#lastActiveElement = [editor, activeElement];
         editor._focusEventsAllowed = false;
-        rottura;
+        break;
       }
     }
   }
-  messa a fuoco() {
-    se (!this.#lastActiveElement) {
-      ritorno;
+  focus() {
+    if (!this.#lastActiveElement) {
+      return;
     }
     const [lastEditor, lastActiveElement] = this.#lastActiveElement;
-    questo.#lastActiveElement = null;
+    this.#lastActiveElement = null;
     lastActiveElement.addEventListener("focusin", () => {
       lastEditor._focusEventsAllowed = true;
     }, {
-      una volta: vero
+      once: true
     });
-    ultimoElementoAttivo.focus();
+    lastActiveElement.focus();
   }
   #addKeyboardManager() {
     window.addEventListener("keydown", this.#boundKeydown, {
-      cattura: vero
+      capture: true
     });
   }
   #removeKeyboardManager() {
     window.removeEventListener("keydown", this.#boundKeydown, {
-      cattura: vero
+      capture: true
     });
   }
-  #aggiungiCopiaIncollaListener() {
-    document.addEventListener("copia", this.#boundCopy);
+  #addCopyPasteListeners() {
+    document.addEventListener("copy", this.#boundCopy);
     document.addEventListener("cut", this.#boundCut);
-    document.addEventListener("incolla", this.#boundPaste);
+    document.addEventListener("paste", this.#boundPaste);
   }
   #removeCopyPasteListeners() {
-    document.removeEventListener("copia", this.#boundCopy);
+    document.removeEventListener("copy", this.#boundCopy);
     document.removeEventListener("cut", this.#boundCut);
-    document.removeEventListener("incolla", this.#boundPaste);
+    document.removeEventListener("paste", this.#boundPaste);
   }
-  aggiungiModificaListener() {
-    questo.#addKeyboardManager();
-    questo.#addCopyPasteListeners();
+  addEditListeners() {
+    this.#addKeyboardManager();
+    this.#addCopyPasteListeners();
   }
-  rimuoviModificaListeners() {
-    questo.#removeKeyboardManager();
-    questo.#removeCopyPasteListeners();
+  removeEditListeners() {
+    this.#removeKeyboardManager();
+    this.#removeCopyPasteListeners();
   }
-  copia(evento) {
-    evento.prevenzioneDefault();
-    questo.#activeEditor?.commitOrRemove();
-    se (!this.hasSelection) {
-      ritorno;
+  copy(event) {
+    event.preventDefault();
+    this.#activeEditor?.commitOrRemove();
+    if (!this.hasSelection) {
+      return;
     }
-    editor costanti = [];
-    per (const editor di questo.#selectedEditors) {
-      const serializzato = editor.serialize(true);
-      se (serializzato) {
-        editors.push(serializzato);
+    const editors = [];
+    for (const editor of this.#selectedEditors) {
+      const serialized = editor.serialize(true);
+      if (serialized) {
+        editors.push(serialized);
       }
     }
-    se (editors.length === 0) {
-      ritorno;
+    if (editors.length === 0) {
+      return;
     }
     event.clipboardData.setData("application/pdfjs", JSON.stringify(editors));
   }
-  cut(evento) {
-    questo.copia(evento);
-    questo.elimina();
+  cut(event) {
+    this.copy(event);
+    this.delete();
   }
-  incolla(evento) {
-    evento.prevenzioneDefault();
-    costante {
-      dati degli appunti
-    } = evento;
-    per (elemento costante di clipboardData.items) {
-      per (const editorType di questo.#editorTypes) {
-        se (editorType.isHandlingMimeForPasting(item.type)) {
+  paste(event) {
+    event.preventDefault();
+    const {
+      clipboardData
+    } = event;
+    for (const item of clipboardData.items) {
+      for (const editorType of this.#editorTypes) {
+        if (editorType.isHandlingMimeForPasting(item.type)) {
           editorType.paste(item, this.currentLayer);
-          ritorno;
+          return;
         }
       }
     }
-    lascia dati = clipboardData.getData("application/pdfjs");
-    se (!dati) {
-      ritorno;
+    let data = clipboardData.getData("application/pdfjs");
+    if (!data) {
+      return;
     }
-    Tentativo {
-      dati = JSON.parse(dati);
-    } catturare (es.) {
-      (0, _util.warn)(`incolla: "${ex.message}".`);
-      ritorno;
+    try {
+      data = JSON.parse(data);
+    } catch (ex) {
+      (0, _util.warn)(`paste: "${ex.message}".`);
+      return;
     }
-    se (!Array.isArray(dati)) {
-      ritorno;
+    if (!Array.isArray(data)) {
+      return;
     }
-    questo.deselezionaTutto();
+    this.unselectAll();
     const layer = this.currentLayer;
-    Tentativo {
-      const nuoviEditori = [];
-      per (editor costante di dati) {
+    try {
+      const newEditors = [];
+      for (const editor of data) {
         const deserializedEditor = layer.deserialize(editor);
-        se (!deserializedEditor) {
-          ritorno;
+        if (!deserializedEditor) {
+          return;
         }
         newEditors.push(deserializedEditor);
       }
       const cmd = () => {
-        per (const editor di newEditors) {
+        for (const editor of newEditors) {
           this.#addEditorToLayer(editor);
         }
-        questo.#selectEditors(newEditors);
+        this.#selectEditors(newEditors);
       };
       const undo = () => {
-        per (const editor di newEditors) {
+        for (const editor of newEditors) {
           editor.remove();
         }
       };
-      questo.aggiungiComandi({
-        comando,
-        disfare,
-        mustExec: vero
+      this.addCommands({
+        cmd,
+        undo,
+        mustExec: true
       });
-    } catturare (es.) {
-      (0, _util.warn)(`incolla: "${ex.message}".`);
+    } catch (ex) {
+      (0, _util.warn)(`paste: "${ex.message}".`);
     }
   }
-  keydown(evento) {
-    se (!this.getActive()?.shouldGetKeyboardEvents()) {
-      AnnotationEditorUIManager._keyboardManager.exec(questo, evento);
+  keydown(event) {
+    if (!this.getActive()?.shouldGetKeyboardEvents()) {
+      AnnotationEditorUIManager._keyboardManager.exec(this, event);
     }
   }
-  onEditingAction(dettagli) {
-    if (["annulla", "ripristina", "elimina", "seleziona tutto"].includes(dettagli.nome)) {
-      questo[dettagli.nome]();
+  onEditingAction(details) {
+    if (["undo", "redo", "delete", "selectAll"].includes(details.name)) {
+      this[details.name]();
     }
   }
-  #dispatchUpdateStates(dettagli) {
+  #dispatchUpdateStates(details) {
     const hasChanged = Object.entries(details).some(([key, value]) => this.#previousStates[key] !== value);
-    se (è cambiato) {
+    if (hasChanged) {
       this._eventBus.dispatch("annotationeditorstateschanged", {
-        fonte: questo,
-        dettagli: Object.assign(this.#previousStates, dettagli)
+        source: this,
+        details: Object.assign(this.#previousStates, details)
       });
     }
   }
-  #dispatchUpdateUI(dettagli) {
+  #dispatchUpdateUI(details) {
     this._eventBus.dispatch("annotationeditorparamschanged", {
-      fonte: questo,
-      dettagli
+      source: this,
+      details
     });
   }
   setEditingState(isEditing) {
-    se (isEditing) {
-      questo.#addFocusManager();
-      questo.#addKeyboardManager();
-      questo.#addCopyPasteListeners();
-      questo.#dispatchUpdateStates({
+    if (isEditing) {
+      this.#addFocusManager();
+      this.#addKeyboardManager();
+      this.#addCopyPasteListeners();
+      this.#dispatchUpdateStates({
         isEditing: this.#mode !== _util.AnnotationEditorType.NONE,
-        èVuoto: questo.#èVuoto(),
-        hasSomethingToUndo: questo.#commandManager.hasSomethingToUndo(),
-        hasSomethingToRedo: questo.#commandManager.hasSomethingToRedo(),
-        hasSelectedEditor: falso
+        isEmpty: this.#isEmpty(),
+        hasSomethingToUndo: this.#commandManager.hasSomethingToUndo(),
+        hasSomethingToRedo: this.#commandManager.hasSomethingToRedo(),
+        hasSelectedEditor: false
       });
-    } altro {
-      questo.#removeFocusManager();
-      questo.#removeKeyboardManager();
-      questo.#removeCopyPasteListeners();
-      questo.#dispatchUpdateStates({
-        isEditing: falso
+    } else {
+      this.#removeFocusManager();
+      this.#removeKeyboardManager();
+      this.#removeCopyPasteListeners();
+      this.#dispatchUpdateStates({
+        isEditing: false
       });
       this.disableUserSelect(false);
     }
   }
-  registerEditorTypes(tipi) {
-    se (questo.#editorTypes) {
-      ritorno;
+  registerEditorTypes(types) {
+    if (this.#editorTypes) {
+      return;
     }
-    questo.#editorTypes = tipi;
-    per (const editorType di questo.#editorTypes) {
-      questo.#dispatchUpdateUI(editorType.defaultPropertiesToUpdate);
+    this.#editorTypes = types;
+    for (const editorType of this.#editorTypes) {
+      this.#dispatchUpdateUI(editorType.defaultPropertiesToUpdate);
     }
   }
   getId() {
-    restituisci questo.#idManager.getId();
+    return this.#idManager.getId();
   }
-  ottieni currentLayer() {
-    restituisci questo.#allLayers.get(questo.#currentPageIndex);
+  get currentLayer() {
+    return this.#allLayers.get(this.#currentPageIndex);
   }
-  getLayer(indicepagina) {
-    restituisci questo.#allLayers.get(pageIndex);
+  getLayer(pageIndex) {
+    return this.#allLayers.get(pageIndex);
   }
-  ottieni currentPageIndex() {
-    restituisci questo.#currentPageIndex;
+  get currentPageIndex() {
+    return this.#currentPageIndex;
   }
-  addLayer(strato) {
-    questo.#allLayers.set(layer.pageIndex, layer);
-    se (questo.#èAbilitato) {
+  addLayer(layer) {
+    this.#allLayers.set(layer.pageIndex, layer);
+    if (this.#isEnabled) {
       layer.enable();
-    } altro {
+    } else {
       layer.disable();
     }
   }
   removeLayer(layer) {
-    questo.#allLayers.delete(layer.pageIndex);
+    this.#allLayers.delete(layer.pageIndex);
   }
-  updateMode(modalità, editId = null) {
-    se (questo.#modalità === modalità) {
-      ritorno;
+  updateMode(mode, editId = null) {
+    if (this.#mode === mode) {
+      return;
     }
-    questo.#mode = modalità;
-    se (modalità === _util.AnnotationEditorType.NONE) {
+    this.#mode = mode;
+    if (mode === _util.AnnotationEditorType.NONE) {
       this.setEditingState(false);
-      questo.#disableAll();
-      ritorno;
+      this.#disableAll();
+      return;
     }
     this.setEditingState(true);
-    questo.#abilitaTutto();
-    questo.deselezionaTutto();
-    per (const layer di questo.#allLayers.values()) {
-      layer.updateMode(modalità);
+    this.#enableAll();
+    this.unselectAll();
+    for (const layer of this.#allLayers.values()) {
+      layer.updateMode(mode);
     }
-    se (!editId) {
-      ritorno;
+    if (!editId) {
+      return;
     }
-    per (const editor di questo.#allEditors.values()) {
-      se (editor.annotationElementId === editId) {
-        questo.setSelected(editor);
+    for (const editor of this.#allEditors.values()) {
+      if (editor.annotationElementId === editId) {
+        this.setSelected(editor);
         editor.enterInEditMode();
-        rottura;
+        break;
       }
     }
   }
-  updateToolbar(modalità) {
-    se (modalità === questo.#modalità) {
-      ritorno;
+  updateToolbar(mode) {
+    if (mode === this.#mode) {
+      return;
     }
     this._eventBus.dispatch("switchannotationeditormode", {
-      fonte: questo,
-      modalità
+      source: this,
+      mode
     });
   }
-  updateParams(tipo, valore) {
-    se (!questo.#editorTypes) {
-      ritorno;
+  updateParams(type, value) {
+    if (!this.#editorTypes) {
+      return;
     }
-    se (tipo === _util.AnnotationEditorParamsType.CREATE) {
-      this.currentLayer.addNewEditor(tipo);
-      ritorno;
+    if (type === _util.AnnotationEditorParamsType.CREATE) {
+      this.currentLayer.addNewEditor(type);
+      return;
     }
-    per (const editor di questo.#selectedEditors) {
-      editor.updateParams(tipo, valore);
+    for (const editor of this.#selectedEditors) {
+      editor.updateParams(type, value);
     }
-    per (const editorType di questo.#editorTypes) {
-      editorType.updateDefaultParams(tipo, valore);
+    for (const editorType of this.#editorTypes) {
+      editorType.updateDefaultParams(type, value);
     }
   }
   enableWaiting(mustWait = false) {
-    se (questo.#èinAttesa === deveAttesa) {
-      ritorno;
+    if (this.#isWaiting === mustWait) {
+      return;
     }
-    questo.#isWaiting = mustWait;
-    per (const layer di questo.#allLayers.values()) {
-      se (deve attendere) {
+    this.#isWaiting = mustWait;
+    for (const layer of this.#allLayers.values()) {
+      if (mustWait) {
         layer.disableClick();
-      } altro {
+      } else {
         layer.enableClick();
       }
-      layer.div.classList.toggle("in attesa", mustWait);
+      layer.div.classList.toggle("waiting", mustWait);
     }
   }
-  #abilitaTutti() {
-    se (!questo.#èAbilitato) {
-      questo.#èAbilitato = vero;
-      per (const layer di questo.#allLayers.values()) {
+  #enableAll() {
+    if (!this.#isEnabled) {
+      this.#isEnabled = true;
+      for (const layer of this.#allLayers.values()) {
         layer.enable();
       }
     }
   }
-  #disabilitaTutto() {
-    questo.deselezionaTutto();
-    se (questo.#èAbilitato) {
-      questo.#èAbilitato = falso;
-      per (const layer di questo.#allLayers.values()) {
+  #disableAll() {
+    this.unselectAll();
+    if (this.#isEnabled) {
+      this.#isEnabled = false;
+      for (const layer of this.#allLayers.values()) {
         layer.disable();
       }
     }
   }
-  getEditors(indicepagina) {
-    editor costanti = [];
-    per (const editor di questo.#allEditors.values()) {
-      se (editor.pageIndex === pageIndex) {
-        editori.push(editor);
+  getEditors(pageIndex) {
+    const editors = [];
+    for (const editor of this.#allEditors.values()) {
+      if (editor.pageIndex === pageIndex) {
+        editors.push(editor);
       }
     }
-    editori di ritorno;
+    return editors;
   }
   getEditor(id) {
-    restituisci questo.#allEditors.get(id);
+    return this.#allEditors.get(id);
   }
   addEditor(editor) {
-    questo.#allEditors.set(editor.id, editor);
+    this.#allEditors.set(editor.id, editor);
   }
   removeEditor(editor) {
-    questo.#allEditors.delete(editor.id);
-    questo.unselect(editor);
-    se (!editor.annotationElementId || !this.#deletedAnnotationsElementIds.has(editor.annotationElementId)) {
-      questo.#annotationStorage?.remove(editor.id);
+    this.#allEditors.delete(editor.id);
+    this.unselect(editor);
+    if (!editor.annotationElementId || !this.#deletedAnnotationsElementIds.has(editor.annotationElementId)) {
+      this.#annotationStorage?.remove(editor.id);
     }
   }
   addDeletedAnnotationElement(editor) {
-    questo.#deletedAnnotationsElementIds.add(editor.annotationElementId);
+    this.#deletedAnnotationsElementIds.add(editor.annotationElementId);
     editor.deleted = true;
   }
   isDeletedAnnotationElement(annotationElementId) {
-    restituisci questo.#deletedAnnotationsElementIds.has(annotationElementId);
+    return this.#deletedAnnotationsElementIds.has(annotationElementId);
   }
   removeDeletedAnnotationElement(editor) {
-    questo.#deletedAnnotationsElementIds.delete(editor.annotationElementId);
+    this.#deletedAnnotationsElementIds.delete(editor.annotationElementId);
     editor.deleted = false;
   }
   #addEditorToLayer(editor) {
     const layer = this.#allLayers.get(editor.pageIndex);
-    se (strato) {
+    if (layer) {
       layer.addOrRebuild(editor);
-    } altro {
+    } else {
       this.addEditor(editor);
     }
   }
   setActiveEditor(editor) {
-    se (questo.#activeEditor === editor) {
-      ritorno;
+    if (this.#activeEditor === editor) {
+      return;
     }
-    questo.#activeEditor = editor;
-    se (editor) {
-      questo.#dispatchUpdateUI(editor.propertiesToUpdate);
+    this.#activeEditor = editor;
+    if (editor) {
+      this.#dispatchUpdateUI(editor.propertiesToUpdate);
     }
   }
   toggleSelected(editor) {
-    se (questo.#selectedEditors.has(editor)) {
-      questo.#selectedEditors.delete(editor);
+    if (this.#selectedEditors.has(editor)) {
+      this.#selectedEditors.delete(editor);
       editor.unselect();
-      questo.#dispatchUpdateStates({
+      this.#dispatchUpdateStates({
         hasSelectedEditor: this.hasSelection
       });
-      ritorno;
+      return;
     }
-    questo.#selectedEditors.add(editor);
+    this.#selectedEditors.add(editor);
     editor.select();
-    questo.#dispatchUpdateUI(editor.propertiesToUpdate);
-    questo.#dispatchUpdateStates({
-      hasSelectedEditor: vero
+    this.#dispatchUpdateUI(editor.propertiesToUpdate);
+    this.#dispatchUpdateStates({
+      hasSelectedEditor: true
     });
   }
   setSelected(editor) {
-    per (const ed di questo.#selectedEditors) {
-      se (ed !== editor) {
+    for (const ed of this.#selectedEditors) {
+      if (ed !== editor) {
         ed.unselect();
       }
     }
-    questo.#selectedEditors.clear();
-    questo.#selectedEditors.add(editor);
+    this.#selectedEditors.clear();
+    this.#selectedEditors.add(editor);
     editor.select();
-    questo.#dispatchUpdateUI(editor.propertiesToUpdate);
-    questo.#dispatchUpdateStates({
-      hasSelectedEditor: vero
+    this.#dispatchUpdateUI(editor.propertiesToUpdate);
+    this.#dispatchUpdateStates({
+      hasSelectedEditor: true
     });
   }
-  èSelezionato(editor) {
-    restituisci questo.#selectedEditors.has(editor);
+  isSelected(editor) {
+    return this.#selectedEditors.has(editor);
   }
-  deseleziona(editor) {
+  unselect(editor) {
     editor.unselect();
-    questo.#selectedEditors.delete(editor);
-    questo.#dispatchUpdateStates({
+    this.#selectedEditors.delete(editor);
+    this.#dispatchUpdateStates({
       hasSelectedEditor: this.hasSelection
     });
   }
-  ottieni hasSelection() {
-    restituisci questo.#selectedEditors.size !== 0;
+  get hasSelection() {
+    return this.#selectedEditors.size !== 0;
   }
-  disfare() {
-    questo.#commandManager.undo();
-    questo.#dispatchUpdateStates({
-      hasSomethingToUndo: questo.#commandManager.hasSomethingToUndo(),
-      hasSomethingToRedo: vero,
-      isEmpty: questo.#isEmpty()
+  undo() {
+    this.#commandManager.undo();
+    this.#dispatchUpdateStates({
+      hasSomethingToUndo: this.#commandManager.hasSomethingToUndo(),
+      hasSomethingToRedo: true,
+      isEmpty: this.#isEmpty()
     });
   }
-  ripeti() {
-    questo.#commandManager.redo();
-    questo.#dispatchUpdateStates({
-      hasSomethingToUndo: vero,
-      hasSomethingToRedo: questo.#commandManager.hasSomethingToRedo(),
-      isEmpty: questo.#isEmpty()
+  redo() {
+    this.#commandManager.redo();
+    this.#dispatchUpdateStates({
+      hasSomethingToUndo: true,
+      hasSomethingToRedo: this.#commandManager.hasSomethingToRedo(),
+      isEmpty: this.#isEmpty()
     });
   }
-  aggiungiComandi(parametri) {
-    questo.#commandManager.add(params);
-    questo.#dispatchUpdateStates({
-      hasSomethingToUndo: vero,
-      hasSomethingToRedo: falso,
-      isEmpty: questo.#isEmpty()
+  addCommands(params) {
+    this.#commandManager.add(params);
+    this.#dispatchUpdateStates({
+      hasSomethingToUndo: true,
+      hasSomethingToRedo: false,
+      isEmpty: this.#isEmpty()
     });
   }
-  #èVuoto() {
-    se (questo.#tuttiglieditor.dimensione === 0) {
-      restituisci vero;
+  #isEmpty() {
+    if (this.#allEditors.size === 0) {
+      return true;
     }
-    se (questo.#tuttiglieditor.dimensione === 1) {
-      per (const editor di questo.#allEditors.values()) {
-        restituisci editor.isEmpty();
+    if (this.#allEditors.size === 1) {
+      for (const editor of this.#allEditors.values()) {
+        return editor.isEmpty();
       }
     }
-    restituisci falso;
+    return false;
   }
-  eliminare() {
-    questo.commitOrRemove();
-    se (!this.hasSelection) {
-      ritorno;
+  delete() {
+    this.commitOrRemove();
+    if (!this.hasSelection) {
+      return;
     }
     const editors = [...this.#selectedEditors];
     const cmd = () => {
-      per (const editor di editor) {
+      for (const editor of editors) {
         editor.remove();
       }
     };
     const undo = () => {
-      per (const editor di editor) {
+      for (const editor of editors) {
         this.#addEditorToLayer(editor);
       }
     };
-    questo.aggiungiComandi({
-      comando,
-      disfare,
-      mustExec: vero
+    this.addCommands({
+      cmd,
+      undo,
+      mustExec: true
     });
   }
   commitOrRemove() {
-    questo.#activeEditor?.commitOrRemove();
+    this.#activeEditor?.commitOrRemove();
   }
-  haQualcosaDaControllare() {
-    restituisci questo.#activeEditor || this.hasSelection;
+  hasSomethingToControl() {
+    return this.#activeEditor || this.hasSelection;
   }
-  #selectEditors(editor) {
-    questo.#selectedEditors.clear();
-    per (const editor di editor) {
-      se (editor.isEmpty()) {
-        continuare;
+  #selectEditors(editors) {
+    this.#selectedEditors.clear();
+    for (const editor of editors) {
+      if (editor.isEmpty()) {
+        continue;
       }
-      questo.#selectedEditors.add(editor);
+      this.#selectedEditors.add(editor);
       editor.select();
     }
-    questo.#dispatchUpdateStates({
-      hasSelectedEditor: vero
+    this.#dispatchUpdateStates({
+      hasSelectedEditor: true
     });
   }
-  selezionaTutto() {
-    per (const editor di questo.#selectedEditors) {
+  selectAll() {
+    for (const editor of this.#selectedEditors) {
       editor.commit();
     }
-    questo.#selectEditors(questo.#allEditors.values());
+    this.#selectEditors(this.#allEditors.values());
   }
-  deseleziona tutto() {
-    se (questo.#activeEditor) {
-      questo.#activeEditor.commitOrRemove();
-      ritorno;
+  unselectAll() {
+    if (this.#activeEditor) {
+      this.#activeEditor.commitOrRemove();
+      return;
     }
-    se (!this.hasSelection) {
-      ritorno;
+    if (!this.hasSelection) {
+      return;
     }
-    per (const editor di questo.#selectedEditors) {
+    for (const editor of this.#selectedEditors) {
       editor.unselect();
     }
-    questo.#selectedEditors.clear();
-    questo.#dispatchUpdateStates({
-      hasSelectedEditor: falso
+    this.#selectedEditors.clear();
+    this.#dispatchUpdateStates({
+      hasSelectedEditor: false
     });
   }
   translateSelectedEditors(x, y, noCommit = false) {
-    se (!noCommit) {
-      questo.commitOrRemove();
+    if (!noCommit) {
+      this.commitOrRemove();
     }
-    se (!this.hasSelection) {
-      ritorno;
+    if (!this.hasSelection) {
+      return;
     }
-    questo.#traduzione[0] += x;
-    questo.#traduzione[1] += y;
-    const [totaleX, totaleY] = questo.#traduzione;
+    this.#translation[0] += x;
+    this.#translation[1] += y;
+    const [totalX, totalY] = this.#translation;
     const editors = [...this.#selectedEditors];
-    const TEMPO_DI_ATTESA = 1000;
-    se (questo.#translationTimeoutId) {
+    const TIME_TO_WAIT = 1000;
+    if (this.#translationTimeoutId) {
       clearTimeout(this.#translationTimeoutId);
     }
-    questo.#translationTimeoutId = setTimeout(() => {
-      questo.#translationTimeoutId = null;
-      questo.#traduzione[0] = questo.#traduzione[1] = 0;
-      questo.aggiungiComandi({
-        comando: () => {
-          per (const editor di editor) {
-            se (questo.#tuttiglieditori.has(editor.id)) {
-              editor.translateInPage(totaleX, totaleY);
+    this.#translationTimeoutId = setTimeout(() => {
+      this.#translationTimeoutId = null;
+      this.#translation[0] = this.#translation[1] = 0;
+      this.addCommands({
+        cmd: () => {
+          for (const editor of editors) {
+            if (this.#allEditors.has(editor.id)) {
+              editor.translateInPage(totalX, totalY);
             }
           }
         },
-        annulla: () => {
-          per (const editor di editor) {
-            se (questo.#tuttiglieditori.has(editor.id)) {
+        undo: () => {
+          for (const editor of editors) {
+            if (this.#allEditors.has(editor.id)) {
               editor.translateInPage(-totalX, -totalY);
             }
           }
         },
-        mustExec: falso
+        mustExec: false
       });
-    }, TEMPO_DI_ATTESA);
-    per (const editor di editor) {
+    }, TIME_TO_WAIT);
+    for (const editor of editors) {
       editor.translateInPage(x, y);
     }
   }
-  impostaSessioneDrag() {
-    se (!this.hasSelection) {
-      ritorno;
+  setUpDragSession() {
+    if (!this.hasSelection) {
+      return;
     }
     this.disableUserSelect(true);
-    questo.#draggingEditors = nuova mappa();
-    per (const editor di questo.#selectedEditors) {
-      questo.#draggingEditors.set(editor, {
-        salvatoX: editor.x,
-        salvatoY: editor.y,
+    this.#draggingEditors = new Map();
+    for (const editor of this.#selectedEditors) {
+      this.#draggingEditors.set(editor, {
+        savedX: editor.x,
+        savedY: editor.y,
         savedPageIndex: editor.pageIndex,
-        nuovoX: 0,
-        nuovoY: 0,
+        newX: 0,
+        newY: 0,
         newPageIndex: -1
       });
     }
   }
-  fineTrascinaSessione() {
-    se (!this.#draggingEditors) {
-      restituisci falso;
+  endDragSession() {
+    if (!this.#draggingEditors) {
+      return false;
     }
     this.disableUserSelect(false);
     const map = this.#draggingEditors;
-    questo.#draggingEditors = null;
-    lascia che mustBeAddedInUndoStack = false;
-    per (const [{
-      X,
-      e,
-      indice della pagina
-    }, valore] della mappa) {
-      valore.newX = x;
-      valore.newY = y;
-      valore.newPageIndex = pageIndex;
-      mustBeAddedInUndoStack ||= x !== valore.salvatoX || y !== valore.salvatoY || pageIndex !== valore.salvatoPageIndex;
+    this.#draggingEditors = null;
+    let mustBeAddedInUndoStack = false;
+    for (const [{
+      x,
+      y,
+      pageIndex
+    }, value] of map) {
+      value.newX = x;
+      value.newY = y;
+      value.newPageIndex = pageIndex;
+      mustBeAddedInUndoStack ||= x !== value.savedX || y !== value.savedY || pageIndex !== value.savedPageIndex;
     }
-    se (!mustBeAddedInUndoStack) {
-      restituisci falso;
+    if (!mustBeAddedInUndoStack) {
+      return false;
     }
     const move = (editor, x, y, pageIndex) => {
-      se (questo.#tuttiglieditori.has(editor.id)) {
+      if (this.#allEditors.has(editor.id)) {
         const parent = this.#allLayers.get(pageIndex);
-        se (genitore) {
-          editor._setParentAndPosition(genitore, x, y);
-        } altro {
+        if (parent) {
+          editor._setParentAndPosition(parent, x, y);
+        } else {
           editor.pageIndex = pageIndex;
           editor.x = x;
           editor.y = y;
         }
       }
     };
-    questo.aggiungiComandi({
-      comando: () => {
-        per (const [editor, {
-          nuovoX,
-          nuovoY,
+    this.addCommands({
+      cmd: () => {
+        for (const [editor, {
+          newX,
+          newY,
           newPageIndex
-        }] della mappa) {
-          sposta(editor, nuovaX, nuovaY, nuovaPaginaIndex);
+        }] of map) {
+          move(editor, newX, newY, newPageIndex);
         }
       },
-      annulla: () => {
-        per (const [editor, {
-          salvatoX,
-          salvatoY,
-          IndicePaginaSalvato
-        }] della mappa) {
-          sposta(editor, salvatoX, salvatoY, salvatoPageIndex);
+      undo: () => {
+        for (const [editor, {
+          savedX,
+          savedY,
+          savedPageIndex
+        }] of map) {
+          move(editor, savedX, savedY, savedPageIndex);
         }
       },
-      mustExec: vero
+      mustExec: true
     });
-    restituisci vero;
+    return true;
   }
   dragSelectedEditors(tx, ty) {
-    se (!this.#draggingEditors) {
-      ritorno;
+    if (!this.#draggingEditors) {
+      return;
     }
-    per (const editor di questo.#draggingEditors.keys()) {
+    for (const editor of this.#draggingEditors.keys()) {
       editor.drag(tx, ty);
     }
   }
-  ricostruisci(editor) {
-    se (editor.parent === null) {
-      const genitore = this.getLayer(editor.pageIndex);
-      se (genitore) {
-        genitore.cambiaGenitore(editor);
-        genitore.addOrRebuild(editor);
-      } altro {
+  rebuild(editor) {
+    if (editor.parent === null) {
+      const parent = this.getLayer(editor.pageIndex);
+      if (parent) {
+        parent.changeParent(editor);
+        parent.addOrRebuild(editor);
+      } else {
         this.addEditor(editor);
         this.addToAnnotationStorage(editor);
         editor.rebuild();
       }
-    } altro {
+    } else {
       editor.parent.addOrRebuild(editor);
     }
   }
-  èAttivo(editor) {
-    restituisci questo.#activeEditor === editor;
+  isActive(editor) {
+    return this.#activeEditor === editor;
   }
   getActive() {
-    restituisci questo.#activeEditor;
+    return this.#activeEditor;
   }
   getMode() {
-    restituisci questo.#mode;
+    return this.#mode;
   }
-  ottieni imageManager() {
+  get imageManager() {
     return (0, _util.shadow)(this, "imageManager", new ImageManager());
   }
 }
-esportazioni.AnnotationEditorUIManager = AnnotationEditorUIManager;
+exports.AnnotationEditorUIManager = AnnotationEditorUIManager;
 
 /***/ }),
 /* 6 */
@@ -4974,38 +4974,38 @@ esportazioni.AnnotationEditorUIManager = AnnotationEditorUIManager;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
 exports.StatTimer = exports.RenderingCancelledException = exports.PixelsPerInch = exports.PageViewport = exports.PDFDateString = exports.DOMStandardFontDataFactory = exports.DOMSVGFactory = exports.DOMFilterFactory = exports.DOMCanvasFactory = exports.DOMCMapReaderFactory = void 0;
-exports.deprecated = deprecato;
-esportazioni.getColorValues ​​= getColorValues;
-esportazioni.getCurrentTransform = getCurrentTransform;
-esportazioni.getCurrentTransformInverse = getCurrentTransformInverse;
-esportazioni.getFilenameFromUrl = getFilenameFromUrl;
-esportazioni.getPdfFilenameFromUrl = getPdfFilenameFromUrl;
-esportazioni.getRGB = getRGB;
-esportazioni.getXfaPageViewport = getXfaPageViewport;
-esportazioni.isDataScheme = isDataScheme;
-esportazioni.isPdfFile = isPdfFile;
-esportazioni.isValidFetchUrl = isValidFetchUrl;
-esportazioni.loadScript = loadScript;
-esportazioni.noContextMenu = noContextMenu;
-esportazioni.setLayerDimensions = setLayerDimensions;
+exports.deprecated = deprecated;
+exports.getColorValues = getColorValues;
+exports.getCurrentTransform = getCurrentTransform;
+exports.getCurrentTransformInverse = getCurrentTransformInverse;
+exports.getFilenameFromUrl = getFilenameFromUrl;
+exports.getPdfFilenameFromUrl = getPdfFilenameFromUrl;
+exports.getRGB = getRGB;
+exports.getXfaPageViewport = getXfaPageViewport;
+exports.isDataScheme = isDataScheme;
+exports.isPdfFile = isPdfFile;
+exports.isValidFetchUrl = isValidFetchUrl;
+exports.loadScript = loadScript;
+exports.noContextMenu = noContextMenu;
+exports.setLayerDimensions = setLayerDimensions;
 var _base_factory = __w_pdfjs_require__(7);
 var _util = __w_pdfjs_require__(1);
 const SVG_NS = "http://www.w3.org/2000/svg";
-classe PixelPerPollice {
-  CSS statico = 96.0;
-  PDF statico = 72,0;
-  static PDF_TO_CSS_UNITS = questo.CSS / questo.PDF;
+class PixelsPerInch {
+  static CSS = 96.0;
+  static PDF = 72.0;
+  static PDF_TO_CSS_UNITS = this.CSS / this.PDF;
 }
-esportazioni.PixelPerPollice = PixelPerPollice;
-classe DOMFilterFactory estende _base_factory.BaseFilterFactory {
+exports.PixelsPerInch = PixelsPerInch;
+class DOMFilterFactory extends _base_factory.BaseFilterFactory {
   #_cache;
   #_defs;
   #docId;
-  #documento;
+  #document;
   #hcmFilter;
   #hcmKey;
   #hcmUrl;
@@ -5013,640 +5013,640 @@ classe DOMFilterFactory estende _base_factory.BaseFilterFactory {
   #hcmHighlightKey;
   #hcmHighlightUrl;
   #id = 0;
-  costruttore({
-    ID documento,
+  constructor({
+    docId,
     ownerDocument = globalThis.document
   } = {}) {
     super();
-    questo.#docId = docId;
-    questo.#documento = ownerDocument;
+    this.#docId = docId;
+    this.#document = ownerDocument;
   }
-  ottieni #cache() {
-    restituisci questo.#_cache ||= nuova mappa();
+  get #cache() {
+    return this.#_cache ||= new Map();
   }
-  ottieni #defs() {
-    se (!questo.#_defs) {
+  get #defs() {
+    if (!this.#_defs) {
       const div = this.#document.createElement("div");
-      costante {
-        stile
+      const {
+        style
       } = div;
-      style.visibility = "nascosto";
-      stile.contain = "strict";
-      stile.larghezza = stile.altezza = 0;
-      stile.posizione = "assoluto";
-      stile.alto = stile.sinistra = 0;
-      stile.zIndex = -1;
+      style.visibility = "hidden";
+      style.contain = "strict";
+      style.width = style.height = 0;
+      style.position = "absolute";
+      style.top = style.left = 0;
+      style.zIndex = -1;
       const svg = this.#document.createElementNS(SVG_NS, "svg");
-      svg.setAttribute("larghezza", 0);
-      svg.setAttribute("altezza", 0);
-      questo.#_defs = questo.#document.createElementNS(SVG_NS, "defs");
+      svg.setAttribute("width", 0);
+      svg.setAttribute("height", 0);
+      this.#_defs = this.#document.createElementNS(SVG_NS, "defs");
       div.append(svg);
       svg.append(this.#_defs);
-      questo.#document.body.append(div);
+      this.#document.body.append(div);
     }
-    restituisci questo.#_defs;
+    return this.#_defs;
   }
-  addFilter(mappe) {
-    se (!mappe) {
-      restituisci "nessuno";
+  addFilter(maps) {
+    if (!maps) {
+      return "none";
     }
-    lascia valore = questo.#cache.get(mappe);
-    se (valore) {
-      valore di ritorno;
+    let value = this.#cache.get(maps);
+    if (value) {
+      return value;
     }
-    lascia che tabellaR, tabellaG, tabellaB, chiave;
-    se (maps.length === 1) {
-      const mapR = mappe[0];
-      const buffer = nuovo Array(256);
-      per (lascia che i = 0; i < 256; i++) {
-        buffer[i] = mappaR[i] / 255;
+    let tableR, tableG, tableB, key;
+    if (maps.length === 1) {
+      const mapR = maps[0];
+      const buffer = new Array(256);
+      for (let i = 0; i < 256; i++) {
+        buffer[i] = mapR[i] / 255;
       }
-      chiave = tabellaR = tabellaG = tabellaB = buffer.join(",");
-    } altro {
-      const [mapR, mapG, mapB] = mappe;
+      key = tableR = tableG = tableB = buffer.join(",");
+    } else {
+      const [mapR, mapG, mapB] = maps;
       const bufferR = new Array(256);
       const bufferG = new Array(256);
-      const bufferB = nuovo Array(256);
-      per (lascia che i = 0; i < 256; i++) {
-        bufferR[i] = mappaR[i] / 255;
-        bufferG[i] = mappaG[i] / 255;
-        bufferB[i] = mappaB[i] / 255;
+      const bufferB = new Array(256);
+      for (let i = 0; i < 256; i++) {
+        bufferR[i] = mapR[i] / 255;
+        bufferG[i] = mapG[i] / 255;
+        bufferB[i] = mapB[i] / 255;
       }
-      tabellaR = bufferR.join(",");
-      tabellaG = bufferG.join(",");
-      tabellaB = bufferB.join(",");
-      chiave = `${tabellaR}${tabellaG}${tabellaB}`;
+      tableR = bufferR.join(",");
+      tableG = bufferG.join(",");
+      tableB = bufferB.join(",");
+      key = `${tableR}${tableG}${tableB}`;
     }
-    valore = questo.#cache.get(chiave);
-    se (valore) {
-      questo.#cache.set(mappe, valore);
-      valore di ritorno;
+    value = this.#cache.get(key);
+    if (value) {
+      this.#cache.set(maps, value);
+      return value;
     }
     const id = `g_${this.#docId}_transfer_map_${this.#id++}`;
-    costante url = `url(#${id})`;
-    questo.#cache.set(mappe, url);
-    questo.#cache.set(chiave, url);
+    const url = `url(#${id})`;
+    this.#cache.set(maps, url);
+    this.#cache.set(key, url);
     const filter = this.#createFilter(id);
-    questo.#addTransferMapConversion(tabellaR, tabellaG, tabellaB, filtro);
-    URL di ritorno;
+    this.#addTransferMapConversion(tableR, tableG, tableB, filter);
+    return url;
   }
   addHCMFilter(fgColor, bgColor) {
     const key = `${fgColor}-${bgColor}`;
-    se (questo.#hcmKey === chiave) {
-      restituisci questo.#hcmUrl;
+    if (this.#hcmKey === key) {
+      return this.#hcmUrl;
     }
-    questo.#hcmKey = chiave;
-    questo.#hcmUrl = "nessuno";
-    questo.#hcmFilter?.remove();
-    se (!fgColor || !bgColor) {
-      restituisci questo.#hcmUrl;
+    this.#hcmKey = key;
+    this.#hcmUrl = "none";
+    this.#hcmFilter?.remove();
+    if (!fgColor || !bgColor) {
+      return this.#hcmUrl;
     }
     const fgRGB = this.#getRGB(fgColor);
     fgColor = _util.Util.makeHexColor(...fgRGB);
     const bgRGB = this.#getRGB(bgColor);
     bgColor = _util.Util.makeHexColor(...bgRGB);
-    questo.#defs.style.color = "";
+    this.#defs.style.color = "";
     if (fgColor === "#000000" && bgColor === "#ffffff" || fgColor === bgColor) {
-      restituisci questo.#hcmUrl;
+      return this.#hcmUrl;
     }
     const map = new Array(256);
-    per (lascia che i = 0; i <= 255; i++) {
-      costante x = i / 255;
-      mappa[i] = x <= 0,03928 ? x / 12,92 : ((x + 0,055) / 1,055) ** 2,4;
+    for (let i = 0; i <= 255; i++) {
+      const x = i / 255;
+      map[i] = x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4;
     }
     const table = map.join(",");
     const id = `g_${this.#docId}_hcm_filter`;
-    filtro costante = questo.#hcmHighlightFilter = questo.#createFilter(id);
-    questo.#addTransferMapConversion(tabella, tabella, tabella, filtro);
-    questo.#addGrayConversion(filtro);
+    const filter = this.#hcmHighlightFilter = this.#createFilter(id);
+    this.#addTransferMapConversion(table, table, table, filter);
+    this.#addGrayConversion(filter);
     const getSteps = (c, n) => {
-      const inizio = fgRGB[c] / 255;
-      const fine = bgRGB[c] / 255;
+      const start = fgRGB[c] / 255;
+      const end = bgRGB[c] / 255;
       const arr = new Array(n + 1);
-      per (lascia che i = 0; i <= n; i++) {
-        arr[i] = inizio + i / n * (fine - inizio);
+      for (let i = 0; i <= n; i++) {
+        arr[i] = start + i / n * (end - start);
       }
-      restituisci arr.join(",");
+      return arr.join(",");
     };
-    questo.#addTransferMapConversion(getSteps(0, 5), getSteps(1, 5), getSteps(2, 5), filtro);
-    questo.#hcmUrl = `url(#${id})`;
-    restituisci questo.#hcmUrl;
+    this.#addTransferMapConversion(getSteps(0, 5), getSteps(1, 5), getSteps(2, 5), filter);
+    this.#hcmUrl = `url(#${id})`;
+    return this.#hcmUrl;
   }
   addHighlightHCMFilter(fgColor, bgColor, newFgColor, newBgColor) {
     const key = `${fgColor}-${bgColor}-${newFgColor}-${newBgColor}`;
-    se (questo.#hcmHighlightKey === chiave) {
-      restituisci questo.#hcmHighlightUrl;
+    if (this.#hcmHighlightKey === key) {
+      return this.#hcmHighlightUrl;
     }
-    questo.#hcmHighlightKey = chiave;
-    questo.#hcmHighlightUrl = "nessuno";
-    questo.#hcmHighlightFilter?.remove();
-    se (!fgColor || !bgColor) {
-      restituisci questo.#hcmHighlightUrl;
+    this.#hcmHighlightKey = key;
+    this.#hcmHighlightUrl = "none";
+    this.#hcmHighlightFilter?.remove();
+    if (!fgColor || !bgColor) {
+      return this.#hcmHighlightUrl;
     }
     const [fgRGB, bgRGB] = [fgColor, bgColor].map(this.#getRGB.bind(this));
-    lascia fgGray = Math.round(0,2126 * fgRGB[0] + 0,7152 * fgRGB[1] + 0,0722 * fgRGB[2]);
-    lascia bgGray = Math.round(0,2126 * bgRGB[0] + 0,7152 * bgRGB[1] + 0,0722 * bgRGB[2]);
-    lascia [newFgRGB, newBgRGB] = [newFgColor, newBgColor].map(this.#getRGB.bind(this));
-    se (bgGray < fgGray) {
+    let fgGray = Math.round(0.2126 * fgRGB[0] + 0.7152 * fgRGB[1] + 0.0722 * fgRGB[2]);
+    let bgGray = Math.round(0.2126 * bgRGB[0] + 0.7152 * bgRGB[1] + 0.0722 * bgRGB[2]);
+    let [newFgRGB, newBgRGB] = [newFgColor, newBgColor].map(this.#getRGB.bind(this));
+    if (bgGray < fgGray) {
       [fgGray, bgGray, newFgRGB, newBgRGB] = [bgGray, fgGray, newBgRGB, newFgRGB];
     }
-    questo.#defs.style.color = "";
+    this.#defs.style.color = "";
     const getSteps = (fg, bg, n) => {
       const arr = new Array(256);
-      passo costante = (bgGray - fgGray) / n;
+      const step = (bgGray - fgGray) / n;
       const newStart = fg / 255;
       const newStep = (bg - fg) / (255 * n);
-      lascia prev = 0;
-      per (lascia che i = 0; i <= n; i++) {
+      let prev = 0;
+      for (let i = 0; i <= n; i++) {
         const k = Math.round(fgGray + i * step);
-        valore costante = newStart + i * newStep;
-        per (lascia che j = prev; j <= k; j++) {
-          arr[j] = valore;
+        const value = newStart + i * newStep;
+        for (let j = prev; j <= k; j++) {
+          arr[j] = value;
         }
-        precedente = k + 1;
+        prev = k + 1;
       }
-      per (lascia che i = prev; i < 256; i++) {
-        arr[i] = arr[prec - 1];
+      for (let i = prev; i < 256; i++) {
+        arr[i] = arr[prev - 1];
       }
-      restituisci arr.join(",");
+      return arr.join(",");
     };
     const id = `g_${this.#docId}_hcm_highlight_filter`;
-    filtro costante = questo.#hcmHighlightFilter = questo.#createFilter(id);
-    questo.#addGrayConversion(filtro);
-    questo.#addTransferMapConversion(getSteps(newFgRGB[0], newBgRGB[0], 5), getSteps(newFgRGB[1], newBgRGB[1], 5), getSteps(newFgRGB[2], newBgRGB[2], 5), filtro);
-    questo.#hcmHighlightUrl = `url(#${id})`;
-    restituisci questo.#hcmHighlightUrl;
+    const filter = this.#hcmHighlightFilter = this.#createFilter(id);
+    this.#addGrayConversion(filter);
+    this.#addTransferMapConversion(getSteps(newFgRGB[0], newBgRGB[0], 5), getSteps(newFgRGB[1], newBgRGB[1], 5), getSteps(newFgRGB[2], newBgRGB[2], 5), filter);
+    this.#hcmHighlightUrl = `url(#${id})`;
+    return this.#hcmHighlightUrl;
   }
-  distruggi(keepHCM = false) {
-    se (keepHCM && (this.#hcmUrl || this.#hcmHighlightUrl)) {
-      ritorno;
+  destroy(keepHCM = false) {
+    if (keepHCM && (this.#hcmUrl || this.#hcmHighlightUrl)) {
+      return;
     }
-    se (questo.#_defs) {
-      questo.#_defs.parentNode.parentNode.remove();
-      questo.#_defs = null;
+    if (this.#_defs) {
+      this.#_defs.parentNode.parentNode.remove();
+      this.#_defs = null;
     }
-    se (questo.#_cache) {
-      questo.#_cache.clear();
-      questo.#_cache = null;
+    if (this.#_cache) {
+      this.#_cache.clear();
+      this.#_cache = null;
     }
-    questo.#id = 0;
+    this.#id = 0;
   }
-  #addGrayConversion(filtro) {
+  #addGrayConversion(filter) {
     const feColorMatrix = this.#document.createElementNS(SVG_NS, "feColorMatrix");
-    feColorMatrix.setAttribute("tipo", "matrice");
-    feColorMatrix.setAttribute("valori", "0,2126 0,7152 0,0722 0 0 0,2126 0,7152 0,0722 0 0 0,2126 0,7152 0,0722 0 0 0 0 0 1 0");
-    filtro.append(feColorMatrix);
+    feColorMatrix.setAttribute("type", "matrix");
+    feColorMatrix.setAttribute("values", "0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0");
+    filter.append(feColorMatrix);
   }
-  #creaFilter(id) {
-    const filter = this.#document.createElementNS(SVG_NS, "filtro");
-    filter.setAttribute("filtri-di-interpolazione-del-colore", "sRGB");
-    filtro.setAttribute("id", id);
-    questo.#defs.append(filtro);
-    filtro di ritorno;
+  #createFilter(id) {
+    const filter = this.#document.createElementNS(SVG_NS, "filter");
+    filter.setAttribute("color-interpolation-filters", "sRGB");
+    filter.setAttribute("id", id);
+    this.#defs.append(filter);
+    return filter;
   }
   #appendFeFunc(feComponentTransfer, func, table) {
     const feFunc = this.#document.createElementNS(SVG_NS, func);
-    feFunc.setAttribute("tipo", "discreto");
-    feFunc.setAttribute("tableValues", tabella);
+    feFunc.setAttribute("type", "discrete");
+    feFunc.setAttribute("tableValues", table);
     feComponentTransfer.append(feFunc);
   }
-  #addTransferMapConversion(rTable, gTable, bTable, filtro) {
+  #addTransferMapConversion(rTable, gTable, bTable, filter) {
     const feComponentTransfer = this.#document.createElementNS(SVG_NS, "feComponentTransfer");
-    filtro.append(feComponentTransfer);
-    questo.#appendFeFunc(feComponentTransfer, "feFuncR", rTable);
-    questo.#appendFeFunc(feComponentTransfer, "feFuncG", gTable);
-    questo.#appendFeFunc(feComponentTransfer, "feFuncB", bTable);
+    filter.append(feComponentTransfer);
+    this.#appendFeFunc(feComponentTransfer, "feFuncR", rTable);
+    this.#appendFeFunc(feComponentTransfer, "feFuncG", gTable);
+    this.#appendFeFunc(feComponentTransfer, "feFuncB", bTable);
   }
-  #getRGB(colore) {
-    questo.#defs.style.color = colore;
-    restituisci getRGB(getComputedStyle(this.#defs).getPropertyValue("colore"));
+  #getRGB(color) {
+    this.#defs.style.color = color;
+    return getRGB(getComputedStyle(this.#defs).getPropertyValue("color"));
   }
 }
-esportazioni.DOMFilterFactory = DOMFilterFactory;
-classe DOMCanvasFactory estende _base_factory.BaseCanvasFactory {
-  costruttore({
+exports.DOMFilterFactory = DOMFilterFactory;
+class DOMCanvasFactory extends _base_factory.BaseCanvasFactory {
+  constructor({
     ownerDocument = globalThis.document
   } = {}) {
     super();
     this._document = ownerDocument;
   }
-  _createCanvas(larghezza, altezza) {
+  _createCanvas(width, height) {
     const canvas = this._document.createElement("canvas");
-    canvas.width = larghezza;
-    canvas.height = altezza;
-    restituire la tela;
+    canvas.width = width;
+    canvas.height = height;
+    return canvas;
   }
 }
-esportazioni.DOMCanvasFactory = DOMCanvasFactory;
-funzione asincrona fetchData(url, asTypedArray = false) {
-  se (isValidFetchUrl(url, document.baseURI)) {
-    risposta costante = attendi fetch(url);
-    se (!risposta.ok) {
-      genera un nuovo errore (response.statusText);
+exports.DOMCanvasFactory = DOMCanvasFactory;
+async function fetchData(url, asTypedArray = false) {
+  if (isValidFetchUrl(url, document.baseURI)) {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(response.statusText);
     }
-    restituisci asTypedArray ? new Uint8Array(await response.arrayBuffer()) : (0, _util.stringToBytes)(await response.text());
+    return asTypedArray ? new Uint8Array(await response.arrayBuffer()) : (0, _util.stringToBytes)(await response.text());
   }
-  restituisci nuova promessa((risolvi, rifiuta) => {
-    richiesta costante = nuova XMLHttpRequest();
-    richiesta.apri("GET", url, true);
-    se (comeArrayTipizzato) {
+  return new Promise((resolve, reject) => {
+    const request = new XMLHttpRequest();
+    request.open("GET", url, true);
+    if (asTypedArray) {
       request.responseType = "arraybuffer";
     }
-    richiesta.onreadystatechange = () => {
-      se (request.readyState !== XMLHttpRequest.DONE) {
-        ritorno;
+    request.onreadystatechange = () => {
+      if (request.readyState !== XMLHttpRequest.DONE) {
+        return;
       }
-      se (stato della richiesta === 200 || stato della richiesta === 0) {
-        lascia i dati;
-        se (asTypedArray && richiesta.risposta) {
-          dati = nuovo Uint8Array(richiesta.risposta);
-        } altrimenti se (!asTypedArray && request.responseText) {
-          dati = (0, _util.stringToBytes)(richiesta.rispostaTesto);
+      if (request.status === 200 || request.status === 0) {
+        let data;
+        if (asTypedArray && request.response) {
+          data = new Uint8Array(request.response);
+        } else if (!asTypedArray && request.responseText) {
+          data = (0, _util.stringToBytes)(request.responseText);
         }
-        se (dati) {
-          risolvere(dati);
-          ritorno;
+        if (data) {
+          resolve(data);
+          return;
         }
       }
-      rifiuta(nuovo errore(richiesta.statoTesto));
+      reject(new Error(request.statusText));
     };
-    richiesta.invia(null);
+    request.send(null);
   });
 }
-classe DOMCMapReaderFactory estende _base_factory.BaseCMapReaderFactory {
-  _fetchData(url, tipo di compressione) {
-    restituisci fetchData(url, this.isCompressed).then(data => {
-      ritorno {
-        cMapData: dati,
-        tipo di compressione
+class DOMCMapReaderFactory extends _base_factory.BaseCMapReaderFactory {
+  _fetchData(url, compressionType) {
+    return fetchData(url, this.isCompressed).then(data => {
+      return {
+        cMapData: data,
+        compressionType
       };
     });
   }
 }
-esportazioni.DOMCMapReaderFactory = DOMCMapReaderFactory;
-classe DOMStandardFontDataFactory estende _base_factory.BaseStandardFontDataFactory {
+exports.DOMCMapReaderFactory = DOMCMapReaderFactory;
+class DOMStandardFontDataFactory extends _base_factory.BaseStandardFontDataFactory {
   _fetchData(url) {
-    restituisci fetchData(url, true);
+    return fetchData(url, true);
   }
 }
-esportazioni.DOMStandardFontDataFactory = DOMStandardFontDataFactory;
-classe DOMSVGFactory estende _base_factory.BaseSVGFactory {
-  _createSVG(tipo) {
-    restituisci document.createElementNS(SVG_NS, tipo);
+exports.DOMStandardFontDataFactory = DOMStandardFontDataFactory;
+class DOMSVGFactory extends _base_factory.BaseSVGFactory {
+  _createSVG(type) {
+    return document.createElementNS(SVG_NS, type);
   }
 }
-esportazioni.DOMSVGFactory = DOMSVGFactory;
-classe PageViewport {
-  costruttore({
+exports.DOMSVGFactory = DOMSVGFactory;
+class PageViewport {
+  constructor({
     viewBox,
-    scala,
-    rotazione,
+    scale,
+    rotation,
     offsetX = 0,
     offsetY = 0,
-    dontFlip = falso
+    dontFlip = false
   }) {
-    questo.viewBox = viewBox;
-    this.scale = scala;
-    this.rotation = rotazione;
-    questo.offsetX = offsetX;
-    questo.offsetY = offsetY;
+    this.viewBox = viewBox;
+    this.scale = scale;
+    this.rotation = rotation;
+    this.offsetX = offsetX;
+    this.offsetY = offsetY;
     const centerX = (viewBox[2] + viewBox[0]) / 2;
     const centerY = (viewBox[3] + viewBox[1]) / 2;
-    lascia ruotareA, ruotareB, ruotareC, ruotareD;
-    rotazione %= 360;
-    se (rotazione < 0) {
-      rotazione += 360;
+    let rotateA, rotateB, rotateC, rotateD;
+    rotation %= 360;
+    if (rotation < 0) {
+      rotation += 360;
     }
-    interruttore (rotazione) {
-      caso 180:
-        ruotaA = -1;
-        ruotaB = 0;
-        ruotaC = 0;
-        ruotatoD = 1;
-        rottura;
-      caso 90:
-        ruotaA = 0;
-        ruotaB = 1;
-        ruotaC = 1;
-        ruotatoD = 0;
-        rottura;
-      caso 270:
-        ruotaA = 0;
-        ruotaB = -1;
-        ruotaC = -1;
-        ruotatoD = 0;
-        rottura;
-      caso 0:
-        ruotaA = 1;
-        ruotaB = 0;
-        ruotaC = 0;
-        ruotatoD = -1;
-        rottura;
-      predefinito:
-        throw new Error("PageViewport: rotazione non valida, deve essere un multiplo di 90 gradi.");
+    switch (rotation) {
+      case 180:
+        rotateA = -1;
+        rotateB = 0;
+        rotateC = 0;
+        rotateD = 1;
+        break;
+      case 90:
+        rotateA = 0;
+        rotateB = 1;
+        rotateC = 1;
+        rotateD = 0;
+        break;
+      case 270:
+        rotateA = 0;
+        rotateB = -1;
+        rotateC = -1;
+        rotateD = 0;
+        break;
+      case 0:
+        rotateA = 1;
+        rotateB = 0;
+        rotateC = 0;
+        rotateD = -1;
+        break;
+      default:
+        throw new Error("PageViewport: Invalid rotation, must be a multiple of 90 degrees.");
     }
-    se (non capovolgere) {
-      ruotaC = -ruotaC;
-      ruotaD = -ruotaD;
+    if (dontFlip) {
+      rotateC = -rotateC;
+      rotateD = -rotateD;
     }
-    lascia offsetCanvasX, offsetCanvasY;
-    lascia larghezza, altezza;
-    se (ruotaA === 0) {
-      offsetCanvasX = Math.abs(centerY - viewBox[1]) * scala + offsetX;
-      offsetCanvasY = Math.abs(centerX - viewBox[0]) * scala + offsetY;
-      larghezza = (viewBox[3] - viewBox[1]) * scala;
-      altezza = (viewBox[2] - viewBox[0]) * scala;
-    } altro {
-      offsetCanvasX = Math.abs(centerX - viewBox[0]) * scala + offsetX;
-      offsetCanvasY = Math.abs(centerY - viewBox[1]) * scala + offsetY;
-      larghezza = (viewBox[2] - viewBox[0]) * scala;
-      altezza = (viewBox[3] - viewBox[1]) * scala;
+    let offsetCanvasX, offsetCanvasY;
+    let width, height;
+    if (rotateA === 0) {
+      offsetCanvasX = Math.abs(centerY - viewBox[1]) * scale + offsetX;
+      offsetCanvasY = Math.abs(centerX - viewBox[0]) * scale + offsetY;
+      width = (viewBox[3] - viewBox[1]) * scale;
+      height = (viewBox[2] - viewBox[0]) * scale;
+    } else {
+      offsetCanvasX = Math.abs(centerX - viewBox[0]) * scale + offsetX;
+      offsetCanvasY = Math.abs(centerY - viewBox[1]) * scale + offsetY;
+      width = (viewBox[2] - viewBox[0]) * scale;
+      height = (viewBox[3] - viewBox[1]) * scale;
     }
-    this.transform = [rotateA * scala, rotateB * scala, rotateC * scala, rotateD * scala, offsetCanvasX - rotateA * scala * centroX - rotateC * scala * centroY, offsetCanvasY - rotateB * scala * centroX - rotateD * scala * centroY];
-    this.width = larghezza;
-    this.height = altezza;
+    this.transform = [rotateA * scale, rotateB * scale, rotateC * scale, rotateD * scale, offsetCanvasX - rotateA * scale * centerX - rotateC * scale * centerY, offsetCanvasY - rotateB * scale * centerX - rotateD * scale * centerY];
+    this.width = width;
+    this.height = height;
   }
-  ottieni rawDims() {
-    costante {
+  get rawDims() {
+    const {
       viewBox
-    } = questo;
+    } = this;
     return (0, _util.shadow)(this, "rawDims", {
-      Larghezza pagina: viewBox[2] - viewBox[0],
-      altezza pagina: viewBox[3] - viewBox[1],
-      paginaX: viewBox[0],
-      paginaY: viewBox[1]
+      pageWidth: viewBox[2] - viewBox[0],
+      pageHeight: viewBox[3] - viewBox[1],
+      pageX: viewBox[0],
+      pageY: viewBox[1]
     });
   }
   clone({
-    scala = questa.scala,
-    rotazione = questa.rotazione,
-    offsetX = questo.offsetX,
-    offsetY = questo.offsetY,
-    dontFlip = falso
+    scale = this.scale,
+    rotation = this.rotation,
+    offsetX = this.offsetX,
+    offsetY = this.offsetY,
+    dontFlip = false
   } = {}) {
-    restituisci nuovo PageViewport({
+    return new PageViewport({
       viewBox: this.viewBox.slice(),
-      scala,
-      rotazione,
+      scale,
+      rotation,
       offsetX,
       offsetY,
-      non capovolgere
+      dontFlip
     });
   }
   convertToViewportPoint(x, y) {
-    restituisci _util.Util.applyTransform([x, y], this.transform);
+    return _util.Util.applyTransform([x, y], this.transform);
   }
   convertToViewportRectangle(rect) {
     const topLeft = _util.Util.applyTransform([rect[0], rect[1]], this.transform);
     const bottomRight = _util.Util.applyTransform([rect[2], rect[3]], this.transform);
-    ritorno [topLeft[0], topLeft[1], bottomRight[0], bottomRight[1]];
+    return [topLeft[0], topLeft[1], bottomRight[0], bottomRight[1]];
   }
   convertToPdfPoint(x, y) {
-    restituisci _util.Util.applyInverseTransform([x, y], this.transform);
+    return _util.Util.applyInverseTransform([x, y], this.transform);
   }
 }
-esportazioni.PageViewport = PageViewport;
-classe RenderingCancelledException estende _util.BaseException {
-  costruttore(msg, extraDelay = 0) {
+exports.PageViewport = PageViewport;
+class RenderingCancelledException extends _util.BaseException {
+  constructor(msg, extraDelay = 0) {
     super(msg, "RenderingCancelledException");
-    questo.ritardoextra = ritardoextra;
+    this.extraDelay = extraDelay;
   }
 }
-esportazioni.RenderingCancelledException = RenderingCancelledException;
-funzione isDataScheme(url) {
+exports.RenderingCancelledException = RenderingCancelledException;
+function isDataScheme(url) {
   const ii = url.length;
-  sia i = 0;
-  mentre (i < ii && url[i].trim() === "") {
+  let i = 0;
+  while (i < ii && url[i].trim() === "") {
     i++;
   }
-  restituisci url.substring(i, i + 5).toLowerCase() === "dati:";
+  return url.substring(i, i + 5).toLowerCase() === "data:";
 }
-funzione isPdfFile(nomefile) {
-  restituisci il tipo di nome file === "stringa" && /\.pdf$/i.test(nome file);
+function isPdfFile(filename) {
+  return typeof filename === "string" && /\.pdf$/i.test(filename);
 }
-funzione getFilenameFromUrl(url, onlyStripPath = false) {
-  se (!onlyStripPath) {
+function getFilenameFromUrl(url, onlyStripPath = false) {
+  if (!onlyStripPath) {
     [url] = url.split(/[#?]/, 1);
   }
-  restituisci url.substring(url.lastIndexOf("/") + 1);
+  return url.substring(url.lastIndexOf("/") + 1);
 }
-funzione getPdfFilenameFromUrl(url, defaultFilename = "document.pdf") {
-  se (tipo di URL !== "stringa") {
-    restituisci defaultFilename;
+function getPdfFilenameFromUrl(url, defaultFilename = "document.pdf") {
+  if (typeof url !== "string") {
+    return defaultFilename;
   }
-  se (isDataScheme(url)) {
-    (0, _util.warn)('getPdfFilenameFromUrl: ignora "data:"-URL per motivi di prestazioni.');
-    restituisci defaultFilename;
+  if (isDataScheme(url)) {
+    (0, _util.warn)('getPdfFilenameFromUrl: ignore "data:"-URL for performance reasons.');
+    return defaultFilename;
   }
   const reURI = /^(?:(?:[^:]+:)?\/\/[^/]+)?([^?#]*)(\?[^#]*)?(#.*)?$/;
   const reFilename = /[^/?#=]+\.pdf\b(?!.*\.pdf\b)/i;
   const splitURI = reURI.exec(url);
-  lascia suggestedFilename = reFilename.exec(splitURI[1]) || reFilename.exec(splitURI[2]) || reFilename.exec(splitURI[3]);
-  se (nomefile suggerito) {
+  let suggestedFilename = reFilename.exec(splitURI[1]) || reFilename.exec(splitURI[2]) || reFilename.exec(splitURI[3]);
+  if (suggestedFilename) {
     suggestedFilename = suggestedFilename[0];
-    se (suggestedFilename.includes("%")) {
-      Tentativo {
+    if (suggestedFilename.includes("%")) {
+      try {
         suggestedFilename = reFilename.exec(decodeURIComponent(suggestedFilename))[0];
-      } presa {}
+      } catch {}
     }
   }
-  restituisci suggestedFilename || defaultFilename;
+  return suggestedFilename || defaultFilename;
 }
-classe StatTimer {
-  avviato = Object.create(null);
-  volte = [];
-  tempo(nome) {
-    se (nome in this.started) {
-      (0, _util.warn)(`Il timer è già in esecuzione per ${name}`);
+class StatTimer {
+  started = Object.create(null);
+  times = [];
+  time(name) {
+    if (name in this.started) {
+      (0, _util.warn)(`Timer is already running for ${name}`);
     }
-    questo.iniziato[nome] = Data.ora();
+    this.started[name] = Date.now();
   }
-  timeEnd(nome) {
-    se (!(nome in questo.iniziato)) {
-      (0, _util.warn)(`Il timer non è stato avviato per ${name}`);
+  timeEnd(name) {
+    if (!(name in this.started)) {
+      (0, _util.warn)(`Timer has not been started for ${name}`);
     }
-    questo.volte.spinta({
-      nome,
-      inizio: questo.iniziato[nome],
-      fine: Data.ora()
+    this.times.push({
+      name,
+      start: this.started[name],
+      end: Date.now()
     });
-    elimina questo.avviato[nome];
+    delete this.started[name];
   }
-  alla stringa() {
+  toString() {
     const outBuf = [];
-    lascia più lungo = 0;
-    per (cost {
-      nome
-    } di questo.volte) {
-      più lungo = Math.max(nome.lunghezza, più lungo);
+    let longest = 0;
+    for (const {
+      name
+    } of this.times) {
+      longest = Math.max(name.length, longest);
     }
-    per (cost {
-      nome,
-      inizio,
-      FINE
-    } di questo.volte) {
-      outBuf.push(`${name.padEnd(più lungo)} ${end - start}ms\n`);
+    for (const {
+      name,
+      start,
+      end
+    } of this.times) {
+      outBuf.push(`${name.padEnd(longest)} ${end - start}ms\n`);
     }
-    restituisci outBuf.join("");
+    return outBuf.join("");
   }
 }
-esportazioni.StatTimer = StatTimer;
-funzione isValidFetchUrl(url, baseUrl) {
-  Tentativo {
-    costante {
-      protocollo
-    } = baseUrl ? nuovo URL(url, baseUrl) : nuovo URL(url);
-    protocollo di ritorno === "http:" || protocollo === "https:";
-  } presa {
-    restituisci falso;
+exports.StatTimer = StatTimer;
+function isValidFetchUrl(url, baseUrl) {
+  try {
+    const {
+      protocol
+    } = baseUrl ? new URL(url, baseUrl) : new URL(url);
+    return protocol === "http:" || protocol === "https:";
+  } catch {
+    return false;
   }
 }
-funzione noContextMenu(e) {
+function noContextMenu(e) {
   e.preventDefault();
 }
-funzione loadScript(src, removeScriptElement = false) {
-  restituisci nuova promessa((risolvi, rifiuta) => {
+function loadScript(src, removeScriptElement = false) {
+  return new Promise((resolve, reject) => {
     const script = document.createElement("script");
     script.src = src;
-    script.onload = funzione (evt) {
-      se (rimuoviScriptElement) {
+    script.onload = function (evt) {
+      if (removeScriptElement) {
         script.remove();
       }
-      risolvere(evt);
+      resolve(evt);
     };
-    script.onerror = funzione () {
-      reject(new Error(`Impossibile caricare lo script in: ${script.src}`));
+    script.onerror = function () {
+      reject(new Error(`Cannot load script at: ${script.src}`));
     };
-    (documento.head || documento.documentElement).append(script);
+    (document.head || document.documentElement).append(script);
   });
 }
-funzione deprecata (dettagli) {
-  console.log("Utilizzo API obsoleto: " + dettagli);
+function deprecated(details) {
+  console.log("Deprecated API usage: " + details);
 }
-lascia pdfDateStringRegex;
-classe PDFDateString {
-  statico toDateObject(input) {
-    se (!input || tipo di input !== "stringa") {
-      restituisci null;
+let pdfDateStringRegex;
+class PDFDateString {
+  static toDateObject(input) {
+    if (!input || typeof input !== "string") {
+      return null;
     }
     pdfDateStringRegex ||= new RegExp("^D:" + "(\\d{4})" + "(\\d{2})?" + "(\\d{2})?" + "(\\d{2})?" + "(\\d{2})?" + "(\\d{2})?" + "([Z|+|-])?" + "(\\d{2})?" + "'?" + "(\\d{2})?" + "'?");
-    corrispondenze costanti = pdfDateStringRegex.exec(input);
-    se (!corrisponde) {
-      restituisci null;
+    const matches = pdfDateStringRegex.exec(input);
+    if (!matches) {
+      return null;
     }
-    const anno = parseInt(matches[1], 10);
-    lascia mese = parseInt(matches[2], 10);
-    mese = mese >= 1 e mese <= 12 ? mese - 1 : 0;
-    let giorno = parseInt(corrisponde[3], 10);
-    giorno = giorno >= 1 && giorno <= 31 ? giorno : 1;
-    lascia ora = parseInt(matches[4], 10);
-    ora = ora >= 0 e ora <= 23 ? ora : 0;
-    lascia minuto = parseInt(matches[5], 10);
-    minuto = minuto >= 0 && minuto <= 59 ? minuto : 0;
-    lascia secondo = parseInt(matches[6], 10);
-    secondo = secondo >= 0 && secondo <= 59 ? secondo : 0;
+    const year = parseInt(matches[1], 10);
+    let month = parseInt(matches[2], 10);
+    month = month >= 1 && month <= 12 ? month - 1 : 0;
+    let day = parseInt(matches[3], 10);
+    day = day >= 1 && day <= 31 ? day : 1;
+    let hour = parseInt(matches[4], 10);
+    hour = hour >= 0 && hour <= 23 ? hour : 0;
+    let minute = parseInt(matches[5], 10);
+    minute = minute >= 0 && minute <= 59 ? minute : 0;
+    let second = parseInt(matches[6], 10);
+    second = second >= 0 && second <= 59 ? second : 0;
     const universalTimeRelation = matches[7] || "Z";
-    lascia offsetHour = parseInt(matches[8], 10);
+    let offsetHour = parseInt(matches[8], 10);
     offsetHour = offsetHour >= 0 && offsetHour <= 23 ? offsetHour : 0;
-    lascia offsetMinute = parseInt(matches[9], 10) || 0;
+    let offsetMinute = parseInt(matches[9], 10) || 0;
     offsetMinute = offsetMinute >= 0 && offsetMinute <= 59 ? offsetMinute : 0;
-    se (universalTimeRelation === "-") {
-      ora += offsetHour;
-      minuto += offsetMinuto;
-    } altrimenti se (universalTimeRelation === "+") {
-      ora -= offsetHour;
-      minuto -= offsetMinuto;
+    if (universalTimeRelation === "-") {
+      hour += offsetHour;
+      minute += offsetMinute;
+    } else if (universalTimeRelation === "+") {
+      hour -= offsetHour;
+      minute -= offsetMinute;
     }
-    restituisci nuova Data(Data.UTC(anno, mese, giorno, ora, minuto, secondo));
+    return new Date(Date.UTC(year, month, day, hour, minute, second));
   }
 }
-esportazioni.PDFDateString = PDFDateString;
-funzione getXfaPageViewport(xfaPage, {
-  scala = 1,
-  rotazione = 0
+exports.PDFDateString = PDFDateString;
+function getXfaPageViewport(xfaPage, {
+  scale = 1,
+  rotation = 0
 }) {
-  costante {
-    larghezza,
-    altezza
+  const {
+    width,
+    height
   } = xfaPage.attributes.style;
-  const viewBox = [0, 0, parseInt(larghezza), parseInt(altezza)];
-  restituisci nuovo PageViewport({
+  const viewBox = [0, 0, parseInt(width), parseInt(height)];
+  return new PageViewport({
     viewBox,
-    scala,
-    rotazione
+    scale,
+    rotation
   });
 }
-funzione getRGB(colore) {
-  se (colore.iniziaCon("#")) {
+function getRGB(color) {
+  if (color.startsWith("#")) {
     const colorRGB = parseInt(color.slice(1), 16);
-    ritorna [(colorRGB & 0xff0000) >> 16, (colorRGB & 0x00ff00) >> 8, colorRGB & 0x0000ff];
+    return [(colorRGB & 0xff0000) >> 16, (colorRGB & 0x00ff00) >> 8, colorRGB & 0x0000ff];
   }
-  se (colore.iniziaCon("rgb(")) {
-    restituisci colore.fetta(4, -1).split(",").map(x => parseInt(x));
+  if (color.startsWith("rgb(")) {
+    return color.slice(4, -1).split(",").map(x => parseInt(x));
   }
-  se (colore.iniziaCon("rgba(")) {
-    restituisci colore.fetta(5, -1).dividi(",").mappa(x => parseInt(x)).fetta(0, 3);
+  if (color.startsWith("rgba(")) {
+    return color.slice(5, -1).split(",").map(x => parseInt(x)).slice(0, 3);
   }
-  (0, _util.warn)(`Non è un formato di colore valido: "${color}"`);
-  ritorno [0, 0, 0];
+  (0, _util.warn)(`Not a valid color format: "${color}"`);
+  return [0, 0, 0];
 }
-funzione getColorValues(colori) {
+function getColorValues(colors) {
   const span = document.createElement("span");
-  span.style.visibility = "nascosto";
-  documento.corpo.append(span);
-  per (const nome di colors.keys()) {
-    span.style.color = nome;
+  span.style.visibility = "hidden";
+  document.body.append(span);
+  for (const name of colors.keys()) {
+    span.style.color = name;
     const computedColor = window.getComputedStyle(span).color;
-    colors.set(nome, getRGB(colore calcolato));
+    colors.set(name, getRGB(computedColor));
   }
   span.remove();
 }
-funzione getCurrentTransform(ctx) {
-  costante {
-    UN,
-    B,
-    C,
-    D,
+function getCurrentTransform(ctx) {
+  const {
+    a,
+    b,
+    c,
+    d,
     e,
-    F
+    f
   } = ctx.getTransform();
-  ritorno [a, b, c, d, e, f];
+  return [a, b, c, d, e, f];
 }
-funzione getCurrentTransformInverse(ctx) {
-  costante {
-    UN,
-    B,
-    C,
-    D,
+function getCurrentTransformInverse(ctx) {
+  const {
+    a,
+    b,
+    c,
+    d,
     e,
-    F
+    f
   } = ctx.getTransform().invertSelf();
-  ritorno [a, b, c, d, e, f];
+  return [a, b, c, d, e, f];
 }
-funzione setLayerDimensions(div, viewport, mustFlip = false, mustRotate = true) {
-  se (istanza viewport di PageViewport) {
-    costante {
-      Larghezza pagina,
-      altezza della pagina
+function setLayerDimensions(div, viewport, mustFlip = false, mustRotate = true) {
+  if (viewport instanceof PageViewport) {
+    const {
+      pageWidth,
+      pageHeight
     } = viewport.rawDims;
-    costante {
-      stile
+    const {
+      style
     } = div;
     const useRound = _util.FeatureTest.isCSSRoundSupported;
-    const w = `var(--fattore di scala) * ${pageWidth}px`,
-      h = `var(--fattore-scala) * ${pageHeight}px`;
+    const w = `var(--scale-factor) * ${pageWidth}px`,
+      h = `var(--scale-factor) * ${pageHeight}px`;
     const widthStr = useRound ? `round(${w}, 1px)` : `calc(${w})`,
       heightStr = useRound ? `round(${h}, 1px)` : `calc(${h})`;
-    se (!mustFlip || viewport.rotation % 180 === 0) {
-      stile.larghezza = widthStr;
-      stile.altezza = heightStr;
-    } altro {
-      stile.larghezza = altezzaStr;
-      stile.altezza = larghezzaStr;
+    if (!mustFlip || viewport.rotation % 180 === 0) {
+      style.width = widthStr;
+      style.height = heightStr;
+    } else {
+      style.width = heightStr;
+      style.height = widthStr;
     }
   }
-  se (deveRuotare) {
-    div.setAttribute("rotazione-principale-dati", viewport.rotation);
+  if (mustRotate) {
+    div.setAttribute("data-main-rotation", viewport.rotation);
   }
 }
 
@@ -5656,159 +5656,159 @@ funzione setLayerDimensions(div, viewport, mustFlip = false, mustRotate = true) 
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.BaseStandardFontDataFactory = esportazioni.BaseSVGFactory = esportazioni.BaseFilterFactory = esportazioni.BaseCanvasFactory = esportazioni.BaseCMapReaderFactory = void 0;
+exports.BaseStandardFontDataFactory = exports.BaseSVGFactory = exports.BaseFilterFactory = exports.BaseCanvasFactory = exports.BaseCMapReaderFactory = void 0;
 var _util = __w_pdfjs_require__(1);
-classe BaseFilterFactory {
-  costruttore() {
-    se (questo.costruttore === BaseFilterFactory) {
-      (0, _util.unreachable)("Impossibile inizializzare BaseFilterFactory.");
+class BaseFilterFactory {
+  constructor() {
+    if (this.constructor === BaseFilterFactory) {
+      (0, _util.unreachable)("Cannot initialize BaseFilterFactory.");
     }
   }
-  addFilter(mappe) {
-    restituisci "nessuno";
+  addFilter(maps) {
+    return "none";
   }
   addHCMFilter(fgColor, bgColor) {
-    restituisci "nessuno";
+    return "none";
   }
   addHighlightHCMFilter(fgColor, bgColor, newFgColor, newBgColor) {
-    restituisci "nessuno";
+    return "none";
   }
-  distruggi(keepHCM = false) {}
+  destroy(keepHCM = false) {}
 }
-esportazioni.BaseFilterFactory = BaseFilterFactory;
-classe BaseCanvasFactory {
-  costruttore() {
-    se (questo.costruttore === BaseCanvasFactory) {
-      (0, _util.unreachable)("Impossibile inizializzare BaseCanvasFactory.");
+exports.BaseFilterFactory = BaseFilterFactory;
+class BaseCanvasFactory {
+  constructor() {
+    if (this.constructor === BaseCanvasFactory) {
+      (0, _util.unreachable)("Cannot initialize BaseCanvasFactory.");
     }
   }
-  crea(larghezza, altezza) {
-    se (larghezza <= 0 || altezza <= 0) {
-      genera un nuovo errore("Dimensione della tela non valida");
+  create(width, height) {
+    if (width <= 0 || height <= 0) {
+      throw new Error("Invalid canvas size");
     }
-    const canvas = this._createCanvas(larghezza, altezza);
-    ritorno {
-      tela,
-      contesto: canvas.getContext("2d")
+    const canvas = this._createCanvas(width, height);
+    return {
+      canvas,
+      context: canvas.getContext("2d")
     };
   }
-  reset(canvasAndContext, larghezza, altezza) {
-    se (!canvasAndContext.canvas) {
-      genera un nuovo errore("La tela non è specificata");
+  reset(canvasAndContext, width, height) {
+    if (!canvasAndContext.canvas) {
+      throw new Error("Canvas is not specified");
     }
-    se (larghezza <= 0 || altezza <= 0) {
-      genera un nuovo errore("Dimensione della tela non valida");
+    if (width <= 0 || height <= 0) {
+      throw new Error("Invalid canvas size");
     }
-    canvasAndContext.canvas.width = larghezza;
-    canvasAndContext.canvas.height = altezza;
+    canvasAndContext.canvas.width = width;
+    canvasAndContext.canvas.height = height;
   }
-  distruggere(canvasAndContext) {
-    se (!canvasAndContext.canvas) {
-      genera un nuovo errore("La tela non è specificata");
+  destroy(canvasAndContext) {
+    if (!canvasAndContext.canvas) {
+      throw new Error("Canvas is not specified");
     }
     canvasAndContext.canvas.width = 0;
     canvasAndContext.canvas.height = 0;
     canvasAndContext.canvas = null;
     canvasAndContext.context = null;
   }
-  _createCanvas(larghezza, altezza) {
-    (0, _util.unreachable)("Metodo astratto `_createCanvas` chiamato.");
+  _createCanvas(width, height) {
+    (0, _util.unreachable)("Abstract method `_createCanvas` called.");
   }
 }
-esportazioni.BaseCanvasFactory = BaseCanvasFactory;
-classe BaseCMapReaderFactory {
-  costruttore({
+exports.BaseCanvasFactory = BaseCanvasFactory;
+class BaseCMapReaderFactory {
+  constructor({
     baseUrl = null,
-    è compresso = vero
+    isCompressed = true
   }) {
-    se (questo.costruttore === BaseCMapReaderFactory) {
-      (0, _util.unreachable)("Impossibile inizializzare BaseCMapReaderFactory.");
+    if (this.constructor === BaseCMapReaderFactory) {
+      (0, _util.unreachable)("Cannot initialize BaseCMapReaderFactory.");
     }
     this.baseUrl = baseUrl;
     this.isCompressed = isCompressed;
   }
-  recupero asincrono({
-    nome
+  async fetch({
+    name
   }) {
-    se (!this.baseUrl) {
-      throw new Error('È necessario specificare il parametro "baseUrl" di CMap, assicurarsi che siano forniti i parametri API "cMapUrl" e "cMapPacked".');
+    if (!this.baseUrl) {
+      throw new Error('The CMap "baseUrl" parameter must be specified, ensure that ' + 'the "cMapUrl" and "cMapPacked" API parameters are provided.');
     }
-    se (!nome) {
-      throw new Error("È necessario specificare il nome CMap.");
+    if (!name) {
+      throw new Error("CMap name must be specified.");
     }
     const url = this.baseUrl + name + (this.isCompressed ? ".bcmap" : "");
     const compressionType = this.isCompressed ? _util.CMapCompressionType.BINARY : _util.CMapCompressionType.NONE;
-    restituisci questo._fetchData(url, compressionType).catch(reason => {
-      throw new Error(`Impossibile caricare ${this.isCompressed ? "binary " : ""}CMap in: ${url}`);
+    return this._fetchData(url, compressionType).catch(reason => {
+      throw new Error(`Unable to load ${this.isCompressed ? "binary " : ""}CMap at: ${url}`);
     });
   }
-  _fetchData(url, tipo di compressione) {
-    (0, _util.unreachable)("Metodo astratto `_fetchData` chiamato.");
+  _fetchData(url, compressionType) {
+    (0, _util.unreachable)("Abstract method `_fetchData` called.");
   }
 }
-esportazioni.BaseCMapReaderFactory = BaseCMapReaderFactory;
-classe BaseStandardFontDataFactory {
-  costruttore({
+exports.BaseCMapReaderFactory = BaseCMapReaderFactory;
+class BaseStandardFontDataFactory {
+  constructor({
     baseUrl = null
   }) {
-    se (questo.costruttore === BaseStandardFontDataFactory) {
-      (0, _util.unreachable)("Impossibile inizializzare BaseStandardFontDataFactory.");
+    if (this.constructor === BaseStandardFontDataFactory) {
+      (0, _util.unreachable)("Cannot initialize BaseStandardFontDataFactory.");
     }
     this.baseUrl = baseUrl;
   }
-  recupero asincrono({
-    nome del file
+  async fetch({
+    filename
   }) {
-    se (!this.baseUrl) {
-      throw new Error('È necessario specificare il parametro "baseUrl" del font standard, assicurarsi che sia fornito il parametro API "standardFontDataUrl".');
+    if (!this.baseUrl) {
+      throw new Error('The standard font "baseUrl" parameter must be specified, ensure that ' + 'the "standardFontDataUrl" API parameter is provided.');
     }
-    se (!nomefile) {
-      throw new Error("È necessario specificare il nome del file del font.");
+    if (!filename) {
+      throw new Error("Font filename must be specified.");
     }
     const url = `${this.baseUrl}${filename}`;
-    restituisci questo._fetchData(url).catch(motivo => {
-      throw new Error(`Impossibile caricare i dati del font in: ${url}`);
+    return this._fetchData(url).catch(reason => {
+      throw new Error(`Unable to load font data at: ${url}`);
     });
   }
   _fetchData(url) {
-    (0, _util.unreachable)("Metodo astratto `_fetchData` chiamato.");
+    (0, _util.unreachable)("Abstract method `_fetchData` called.");
   }
 }
-esportazioni.BaseStandardFontDataFactory = BaseStandardFontDataFactory;
-classe BaseSVGFactory {
-  costruttore() {
-    se (questo.costruttore === BaseSVGFactory) {
-      (0, _util.unreachable)("Impossibile inizializzare BaseSVGFactory.");
+exports.BaseStandardFontDataFactory = BaseStandardFontDataFactory;
+class BaseSVGFactory {
+  constructor() {
+    if (this.constructor === BaseSVGFactory) {
+      (0, _util.unreachable)("Cannot initialize BaseSVGFactory.");
     }
   }
-  create(larghezza, altezza, skipDimensions = false) {
-    se (larghezza <= 0 || altezza <= 0) {
-      genera un nuovo errore("Dimensioni SVG non valide");
+  create(width, height, skipDimensions = false) {
+    if (width <= 0 || height <= 0) {
+      throw new Error("Invalid SVG dimensions");
     }
     const svg = this._createSVG("svg:svg");
-    svg.setAttribute("versione", "1.1");
-    se (!skipDimensions) {
-      svg.setAttribute("larghezza", `${larghezza}px`);
-      svg.setAttribute("altezza", `${altezza}px`);
+    svg.setAttribute("version", "1.1");
+    if (!skipDimensions) {
+      svg.setAttribute("width", `${width}px`);
+      svg.setAttribute("height", `${height}px`);
     }
     svg.setAttribute("preserveAspectRatio", "none");
-    svg.setAttribute("viewBox", `0 0 ${larghezza} ${altezza}`);
-    restituisci svg;
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    return svg;
   }
-  createElement(tipo) {
-    se (tipo di tipo !== "stringa") {
-      genera un nuovo errore("Tipo di elemento SVG non valido");
+  createElement(type) {
+    if (typeof type !== "string") {
+      throw new Error("Invalid SVG element type");
     }
-    restituisci questo._createSVG(tipo);
+    return this._createSVG(type);
   }
-  _createSVG(tipo) {
-    (0, _util.unreachable)("Metodo astratto `_createSVG` chiamato.");
+  _createSVG(type) {
+    (0, _util.unreachable)("Abstract method `_createSVG` called.");
   }
 }
-esportazioni.BaseSVGFactory = BaseSVGFactory;
+exports.BaseSVGFactory = BaseSVGFactory;
 
 /***/ }),
 /* 8 */
@@ -5816,103 +5816,103 @@ esportazioni.BaseSVGFactory = BaseSVGFactory;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.MurmurHash3_64 = void 0;
+exports.MurmurHash3_64 = void 0;
 var _util = __w_pdfjs_require__(1);
 const SEED = 0xc3d2e1f0;
 const MASK_HIGH = 0xffff0000;
 const MASK_LOW = 0xffff;
-classe MurmurHash3_64 {
-  costruttore(seme) {
-    this.h1 = seme ? seme & 0xffffffff : SEED;
-    this.h2 = seme ? seme & 0xffffffff : SEED;
+class MurmurHash3_64 {
+  constructor(seed) {
+    this.h1 = seed ? seed & 0xffffffff : SEED;
+    this.h2 = seed ? seed & 0xffffffff : SEED;
   }
-  aggiorna(input) {
-    lascia dati, lunghezza;
-    se (tipo di input === "stringa") {
-      dati = nuovo Uint8Array(input.lunghezza * 2);
-      lunghezza = 0;
-      per (lascia che i = 0, ii = input.length; i < ii; i++) {
-        codice costante = input.charCodeAt(i);
-        se (codice <= 0xff) {
-          dati[lunghezza++] = codice;
-        } altro {
-          dati[lunghezza++] = codice >>> 8;
-          dati[lunghezza++] = codice & 0xff;
+  update(input) {
+    let data, length;
+    if (typeof input === "string") {
+      data = new Uint8Array(input.length * 2);
+      length = 0;
+      for (let i = 0, ii = input.length; i < ii; i++) {
+        const code = input.charCodeAt(i);
+        if (code <= 0xff) {
+          data[length++] = code;
+        } else {
+          data[length++] = code >>> 8;
+          data[length++] = code & 0xff;
         }
       }
-    } altrimenti se ((0, _util.isArrayBuffer)(input)) {
-      dati = input.slice();
-      lunghezza = data.byteLength;
-    } altro {
-      throw new Error("Formato dati errato in MurmurHash3_64_update. " + "L'input deve essere una stringa o un array.");
+    } else if ((0, _util.isArrayBuffer)(input)) {
+      data = input.slice();
+      length = data.byteLength;
+    } else {
+      throw new Error("Wrong data format in MurmurHash3_64_update. " + "Input must be a string or array.");
     }
-    const blockCounts = lunghezza >> 2;
-    const tailLength = lunghezza - blockCounts * 4;
+    const blockCounts = length >> 2;
+    const tailLength = length - blockCounts * 4;
     const dataUint32 = new Uint32Array(data.buffer, 0, blockCounts);
-    sia k1 = 0,
+    let k1 = 0,
       k2 = 0;
-    lascia h1 = questo.h1,
-      h2 = questo.h2;
-    costante C1 = 0xcc9e2d51,
+    let h1 = this.h1,
+      h2 = this.h2;
+    const C1 = 0xcc9e2d51,
       C2 = 0x1b873593;
     const C1_LOW = C1 & MASK_LOW,
       C2_LOW = C2 & MASK_LOW;
-    per (lascia che i = 0; i < conteggi blocco; i++) {
-      se (i & 1) {
+    for (let i = 0; i < blockCounts; i++) {
+      if (i & 1) {
         k1 = dataUint32[i];
-        k1 = k1 * C1 & MASCHERA_ALTA | k1 * C1_BASSA & MASCHERA_BASSA;
+        k1 = k1 * C1 & MASK_HIGH | k1 * C1_LOW & MASK_LOW;
         k1 = k1 << 15 | k1 >>> 17;
-        k1 = k1 * C2 & MASCHERA_ALTA | k1 * C2_BASSA & MASCHERA_BASSA;
+        k1 = k1 * C2 & MASK_HIGH | k1 * C2_LOW & MASK_LOW;
         h1 ^= k1;
         h1 = h1 << 13 | h1 >>> 19;
         h1 = h1 * 5 + 0xe6546b64;
-      } altro {
+      } else {
         k2 = dataUint32[i];
-        k2 = k2 * C1 & MASCHERA_ALTA | k2 * C1_BASSA & MASCHERA_BASSA;
+        k2 = k2 * C1 & MASK_HIGH | k2 * C1_LOW & MASK_LOW;
         k2 = k2 << 15 | k2 >>> 17;
-        k2 = k2 * C2 & MASCHERA_ALTA | k2 * C2_BASSA & MASCHERA_BASSA;
+        k2 = k2 * C2 & MASK_HIGH | k2 * C2_LOW & MASK_LOW;
         h2 ^= k2;
         h2 = h2 << 13 | h2 >>> 19;
         h2 = h2 * 5 + 0xe6546b64;
       }
     }
     k1 = 0;
-    switch (lunghezza della coda) {
-      caso 3:
-        k1 ^= dati[conteggiblocco * 4 + 2] << 16;
-      caso 2:
-        k1 ^= dati[conteggiblocco * 4 + 1] << 8;
-      caso 1:
-        k1 ^= dati[conteggiblocco * 4];
-        k1 = k1 * C1 & MASCHERA_ALTA | k1 * C1_BASSA & MASCHERA_BASSA;
+    switch (tailLength) {
+      case 3:
+        k1 ^= data[blockCounts * 4 + 2] << 16;
+      case 2:
+        k1 ^= data[blockCounts * 4 + 1] << 8;
+      case 1:
+        k1 ^= data[blockCounts * 4];
+        k1 = k1 * C1 & MASK_HIGH | k1 * C1_LOW & MASK_LOW;
         k1 = k1 << 15 | k1 >>> 17;
-        k1 = k1 * C2 & MASCHERA_ALTA | k1 * C2_BASSA & MASCHERA_BASSA;
-        se (conteggi blocco & 1) {
+        k1 = k1 * C2 & MASK_HIGH | k1 * C2_LOW & MASK_LOW;
+        if (blockCounts & 1) {
           h1 ^= k1;
-        } altro {
+        } else {
           h2 ^= k1;
         }
     }
-    questo.h1 = h1;
-    questo.h2 = h2;
+    this.h1 = h1;
+    this.h2 = h2;
   }
-  esadecimale() {
-    lascia h1 = questo.h1,
-      h2 = questo.h2;
+  hexdigest() {
+    let h1 = this.h1,
+      h2 = this.h2;
     h1 ^= h2 >>> 1;
     h1 = h1 * 0xed558ccd & MASK_HIGH | h1 * 0x8ccd & MASK_LOW;
     h2 = h2 * 0xff51afd7 & MASK_HIGH | ((h2 << 16 | h1 >>> 16) * 0xafd7ed55 & MASK_HIGH) >>> 16;
     h1 ^= h2 >>> 1;
-    h1 = h1 * 0x1a85ec53 & MASCHERA_ALTA | h1 * 0xec53 & MASCHERA_BASSA;
+    h1 = h1 * 0x1a85ec53 & MASK_HIGH | h1 * 0xec53 & MASK_LOW;
     h2 = h2 * 0xc4ceb9fe & MASK_HIGH | ((h2 << 16 | h1 >>> 16) * 0xb9fe1a85 & MASK_HIGH) >>> 16;
     h1 ^= h2 >>> 1;
-    ritorno (h1 >>> 0).toString(16).padStart(8, "0") + (h2 >>> 0).toString(16).padStart(8, "0");
+    return (h1 >>> 0).toString(16).padStart(8, "0") + (h2 >>> 0).toString(16).padStart(8, "0");
   }
 }
-esportazioni.MurmurHash3_64 = MurmurHash3_64;
+exports.MurmurHash3_64 = MurmurHash3_64;
 
 /***/ }),
 /* 9 */
@@ -5920,22 +5920,22 @@ esportazioni.MurmurHash3_64 = MurmurHash3_64;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.FontLoader = esportazioni.FontFaceObject = void 0;
+exports.FontLoader = exports.FontFaceObject = void 0;
 var _util = __w_pdfjs_require__(1);
-classe FontLoader {
+class FontLoader {
   #systemFonts = new Set();
-  costruttore({
+  constructor({
     ownerDocument = globalThis.document,
     styleElement = null
   }) {
     this._document = ownerDocument;
     this.nativeFontFaces = new Set();
-    questo.styleElement = null;
-    questo.richieste di caricamento = [];
-    questo.loadTestFontId = 0;
+    this.styleElement = null;
+    this.loadingRequests = [];
+    this.loadTestFontId = 0;
   }
   addNativeFontFace(nativeFontFace) {
     this.nativeFontFaces.add(nativeFontFace);
@@ -5945,81 +5945,81 @@ classe FontLoader {
     this.nativeFontFaces.delete(nativeFontFace);
     this._document.fonts.delete(nativeFontFace);
   }
-  inserisciRegola(regola) {
-    se (!this.styleElement) {
+  insertRule(rule) {
+    if (!this.styleElement) {
       this.styleElement = this._document.createElement("style");
       this._document.documentElement.getElementsByTagName("head")[0].append(this.styleElement);
     }
     const styleSheet = this.styleElement.sheet;
-    styleSheet.insertRule(regola, styleSheet.cssRules.length);
+    styleSheet.insertRule(rule, styleSheet.cssRules.length);
   }
-  chiaro() {
-    per (const nativeFontFace di this.nativeFontFaces) {
+  clear() {
+    for (const nativeFontFace of this.nativeFontFaces) {
       this._document.fonts.delete(nativeFontFace);
     }
     this.nativeFontFaces.clear();
-    questo.#systemFonts.clear();
-    se (questo.elementostile) {
-      questo.styleElement.remove();
-      questo.styleElement = null;
+    this.#systemFonts.clear();
+    if (this.styleElement) {
+      this.styleElement.remove();
+      this.styleElement = null;
     }
   }
-  asincrono loadSystemFont(info) {
-    se (!info || questo.#systemFonts.has(info.loadedName)) {
-      ritorno;
+  async loadSystemFont(info) {
+    if (!info || this.#systemFonts.has(info.loadedName)) {
+      return;
     }
-    (0, _util.assert)(!this.disableFontFace, "loadSystemFont non dovrebbe essere chiamato quando è impostato `disableFontFace`.");
-    se (this.isFontLoadingAPISupported) {
-      costante {
-        Nome caricato,
-        fonte,
-        stile
-      } = informazioni;
+    (0, _util.assert)(!this.disableFontFace, "loadSystemFont shouldn't be called when `disableFontFace` is set.");
+    if (this.isFontLoadingAPISupported) {
+      const {
+        loadedName,
+        src,
+        style
+      } = info;
       const fontFace = new FontFace(loadedName, src, style);
       this.addNativeFontFace(fontFace);
-      Tentativo {
-        attendi fontFace.load();
-        questo.#systemFonts.add(loadedName);
-      } presa {
-        (0, _util.warn)(`Impossibile caricare il font di sistema: ${info.baseFontName}, installarlo potrebbe aiutare a migliorare il rendering del PDF.`);
+      try {
+        await fontFace.load();
+        this.#systemFonts.add(loadedName);
+      } catch {
+        (0, _util.warn)(`Cannot load system font: ${info.baseFontName}, installing it could help to improve PDF rendering.`);
         this.removeNativeFontFace(fontFace);
       }
-      ritorno;
+      return;
     }
-    (0, _util.unreachable)("Non implementato: loadSystemFont senza l'API di caricamento dei font.");
+    (0, _util.unreachable)("Not implemented: loadSystemFont without the Font Loading API.");
   }
   async bind(font) {
-    se (font.attached || font.missingFile && !font.systemFontInfo) {
-      ritorno;
+    if (font.attached || font.missingFile && !font.systemFontInfo) {
+      return;
     }
     font.attached = true;
-    se (font.systemFontInfo) {
-      attendi questo.loadSystemFont(font.systemFontInfo);
-      ritorno;
+    if (font.systemFontInfo) {
+      await this.loadSystemFont(font.systemFontInfo);
+      return;
     }
-    se (this.isFontLoadingAPISupported) {
+    if (this.isFontLoadingAPISupported) {
       const nativeFontFace = font.createNativeFontFace();
-      se (nativeFontFace) {
+      if (nativeFontFace) {
         this.addNativeFontFace(nativeFontFace);
-        Tentativo {
-          attendi nativeFontFace.loaded;
-        } catturare (es.) {
-          (0, _util.warn)(`Impossibile caricare il font '${nativeFontFace.family}': '${ex}'.`);
+        try {
+          await nativeFontFace.loaded;
+        } catch (ex) {
+          (0, _util.warn)(`Failed to load font '${nativeFontFace.family}': '${ex}'.`);
           font.disableFontFace = true;
-          lanciare ex;
+          throw ex;
         }
       }
-      ritorno;
+      return;
     }
-    regola costante = font.createFontFaceRule();
-    se (regola) {
-      this.insertRule(regola);
-      se (this.isSyncFontLoadingSupported) {
-        ritorno;
+    const rule = font.createFontFaceRule();
+    if (rule) {
+      this.insertRule(rule);
+      if (this.isSyncFontLoadingSupported) {
+        return;
       }
-      attendi nuova promessa(risolvi => {
-        richiesta costante = this._queueLoadingCallback(resolve);
-        this._prepareFontLoadEvent(font, richiesta);
+      await new Promise(resolve => {
+        const request = this._queueLoadingCallback(resolve);
+        this._prepareFontLoadEvent(font, request);
       });
     }
   }
@@ -6027,115 +6027,115 @@ classe FontLoader {
     const hasFonts = !!this._document?.fonts;
     return (0, _util.shadow)(this, "isFontLoadingAPISupported", hasFonts);
   }
-  ottieni isSyncFontLoadingSupported() {
-    lascia supportato = falso;
-    se (_util.isNodeJS) {
-      supportato = vero;
+  get isSyncFontLoadingSupported() {
+    let supported = false;
+    if (_util.isNodeJS) {
+      supported = true;
     } else if (typeof navigator !== "undefined" && /Mozilla\/5.0.*?rv:\d+.*? Gecko/.test(navigator.userAgent)) {
-      supportato = vero;
+      supported = true;
     }
-    return (0, _util.shadow)(this, "isSyncFontLoadingSupported", supportato);
+    return (0, _util.shadow)(this, "isSyncFontLoadingSupported", supported);
   }
   _queueLoadingCallback(callback) {
-    funzione completeRequest() {
-      (0, _util.assert)(!request.done, "completeRequest() non può essere chiamato due volte.");
-      richiesta.fatto = vero;
+    function completeRequest() {
+      (0, _util.assert)(!request.done, "completeRequest() cannot be called twice.");
+      request.done = true;
       while (loadingRequests.length > 0 && loadingRequests[0].done) {
         const otherRequest = loadingRequests.shift();
-        setTimeout(altraRichiesta.callback, 0);
+        setTimeout(otherRequest.callback, 0);
       }
     }
-    costante {
-      caricamentoRichieste
-    } = questo;
-    richiesta costante = {
-      fatto: falso,
-      completo: completeRequest,
-      richiamare
+    const {
+      loadingRequests
+    } = this;
+    const request = {
+      done: false,
+      complete: completeRequest,
+      callback
     };
-    caricamentoRichieste.push(richiesta);
-    richiesta di reso;
+    loadingRequests.push(request);
+    return request;
   }
-  ottieni _loadTestFont() {
-    const testFont = atob("T1RUTwALAIAAAwAwQ0ZGIDHtZg4AAAOYAAAAgUZGVE1lkzZwAAAEHAAAABxHREVGABQA" + "FQAABDgAAAAeT1MvMlYNYwkAAAEgAAAAYGNtYXABDQLUAAACNAAAAUJoZWFk/xVFDQAA" + "ALwAAAA2aGhlYQdkA+oAAAD0AAAAJGhtdHgD6AAAAAAEWAAAAAAZtYXhwAAJQAAAAARgA" + "AAAGbmFtZVjmdH4AAAGAAAAAsXBvc3T/hgAzAAADeAAAACAAAQAAAAEAALZRFsRfDzz1" + "AAsD6AAAAADOBOTLAAAAAM4KHDwAAAAAA+gDIQAAAAgAAgAAAAAAAAABAAADIQAAAFoD" + "6AAAAAAAD6AABAAAAAAAAAAAAAAAAAAAAAQAAUAAAAgAAAAQD6AH0AAUAAAKKArwAAACM" + "AooCvAAAAeAAMQECAAACAAYJAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAFBmRWQAwAAuAC4D" + "IP84AFoDIQAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAAAAAQAAAAEAAAAA" + "AAEAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAAAQAAAAEAAAAAAAQAAQAAAAEAAAAAAAAA" + "AQAAAAEAAAAAAAAAQAAAAMAAQQJAAAAAgABAAMAAQQJAAEAAgABAAMAAQQJAAIAAgAB" + "AAMAAQQJAAMAAgABAAMAAQQJAAQAAgABAAMAAQQJAAUAAgABAAMAAQQJAAYAAgABWABY" + "AAAAAAAAAAwAAAAMAAAAcAAEAAAAAADwAAwABAAAAHAAAEACAAAAAEAAQAAQAAAC7//wAA" + "AC7////TAAEAAAAAAAAAAABBgAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/gwAyAAAAAQAAAAAAAAAAAAAAAA" + "AAABAAQEAAEBAQJYAAEBASH4DwD4GwHEAvgcA/gXBIwMAYuL+nz5tQXkD5j3CBLnEQAC" + "AQEBIVhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYAAABAQAADwACAQEEE/t3" + "Dov6fAH6fAT+fPp8+nwHDosMCvm1Cvm1DAz6fBQAAAAAAAAABAAAAAMmJbzEAAAAAzgTj" + "FQAAAADOBOQpAAEAAAAAAAAAADAAUAAQAAAABAAAAAgABAAAAAAAAAAAD6AAAAAAAAAA==");
+  get _loadTestFont() {
+    const testFont = atob("T1RUTwALAIAAAwAwQ0ZGIDHtZg4AAAOYAAAAgUZGVE1lkzZwAAAEHAAAABxHREVGABQA" + "FQAABDgAAAAeT1MvMlYNYwkAAAEgAAAAYGNtYXABDQLUAAACNAAAAUJoZWFk/xVFDQAA" + "ALwAAAA2aGhlYQdkA+oAAAD0AAAAJGhtdHgD6AAAAAAEWAAAAAZtYXhwAAJQAAAAARgA" + "AAAGbmFtZVjmdH4AAAGAAAAAsXBvc3T/hgAzAAADeAAAACAAAQAAAAEAALZRFsRfDzz1" + "AAsD6AAAAADOBOTLAAAAAM4KHDwAAAAAA+gDIQAAAAgAAgAAAAAAAAABAAADIQAAAFoD" + "6AAAAAAD6AABAAAAAAAAAAAAAAAAAAAAAQAAUAAAAgAAAAQD6AH0AAUAAAKKArwAAACM" + "AooCvAAAAeAAMQECAAACAAYJAAAAAAAAAAAAAQAAAAAAAAAAAAAAAFBmRWQAwAAuAC4D" + "IP84AFoDIQAAAAAAAQAAAAAAAAAAACAAIAABAAAADgCuAAEAAAAAAAAAAQAAAAEAAAAA" + "AAEAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAAQAAQAAAAEAAAAAAAUA" + "AQAAAAEAAAAAAAYAAQAAAAMAAQQJAAAAAgABAAMAAQQJAAEAAgABAAMAAQQJAAIAAgAB" + "AAMAAQQJAAMAAgABAAMAAQQJAAQAAgABAAMAAQQJAAUAAgABAAMAAQQJAAYAAgABWABY" + "AAAAAAAAAwAAAAMAAAAcAAEAAAAAADwAAwABAAAAHAAEACAAAAAEAAQAAQAAAC7//wAA" + "AC7////TAAEAAAAAAAABBgAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAD/gwAyAAAAAQAAAAAAAAAAAAAAAAAA" + "AAABAAQEAAEBAQJYAAEBASH4DwD4GwHEAvgcA/gXBIwMAYuL+nz5tQXkD5j3CBLnEQAC" + "AQEBIVhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYAAABAQAADwACAQEEE/t3" + "Dov6fAH6fAT+fPp8+nwHDosMCvm1Cvm1DAz6fBQAAAAAAAABAAAAAMmJbzEAAAAAzgTj" + "FQAAAADOBOQpAAEAAAAAAAAADAAUAAQAAAABAAAAAgABAAAAAAAAAAAD6AAAAAAAAA==");
     return (0, _util.shadow)(this, "_loadTestFont", testFont);
   }
-  _prepareFontLoadEvent(font, richiesta) {
-    funzione int32(dati, offset) {
-      restituisci data.charCodeAt(offset) << 24 | data.charCodeAt(offset + 1) << 16 | data.charCodeAt(offset + 2) << 8 | data.charCodeAt(offset + 3) & 0xff;
+  _prepareFontLoadEvent(font, request) {
+    function int32(data, offset) {
+      return data.charCodeAt(offset) << 24 | data.charCodeAt(offset + 1) << 16 | data.charCodeAt(offset + 2) << 8 | data.charCodeAt(offset + 3) & 0xff;
     }
-    funzione spliceString(s, offset, rimuovi, inserisci) {
+    function spliceString(s, offset, remove, insert) {
       const chunk1 = s.substring(0, offset);
       const chunk2 = s.substring(offset + remove);
-      restituisci chunk1 + inserisci + chunk2;
+      return chunk1 + insert + chunk2;
     }
-    sia i, ii;
+    let i, ii;
     const canvas = this._document.createElement("canvas");
-    larghezza tela = 1;
-    altezza tela = 1;
+    canvas.width = 1;
+    canvas.height = 1;
     const ctx = canvas.getContext("2d");
-    lascia chiamato = 0;
-    funzione isFontReady(nome, callback) {
-      se (++chiamato > 30) {
-        (0, _util.warn)("Il font del test di caricamento non è mai stato caricato.");
-        richiamare();
-        ritorno;
+    let called = 0;
+    function isFontReady(name, callback) {
+      if (++called > 30) {
+        (0, _util.warn)("Load test font never loaded.");
+        callback();
+        return;
       }
-      ctx.font = "30px " + nome;
+      ctx.font = "30px " + name;
       ctx.fillText(".", 0, 20);
       const imageData = ctx.getImageData(0, 0, 1, 1);
-      se (imageData.data[3] > 0) {
-        richiamare();
-        ritorno;
+      if (imageData.data[3] > 0) {
+        callback();
+        return;
       }
-      setTimeout(isFontReady.bind(null, nome, callback));
+      setTimeout(isFontReady.bind(null, name, callback));
     }
     const loadTestFontId = `lt${Date.now()}${this.loadTestFontId++}`;
-    lascia dati = this._loadTestFont;
+    let data = this._loadTestFont;
     const COMMENT_OFFSET = 976;
-    dati = spliceString(dati, COMMENT_OFFSET, loadTestFontId.length, loadTestFontId);
+    data = spliceString(data, COMMENT_OFFSET, loadTestFontId.length, loadTestFontId);
     const CFF_CHECKSUM_OFFSET = 16;
-    const XXXX_VALORE = 0x58585858;
-    lascia checksum = int32(dati, CFF_CHECKSUM_OFFSET);
-    per (i = 0, ii = loadTestFontId.length - 3; i < ii; i += 4) {
+    const XXXX_VALUE = 0x58585858;
+    let checksum = int32(data, CFF_CHECKSUM_OFFSET);
+    for (i = 0, ii = loadTestFontId.length - 3; i < ii; i += 4) {
       checksum = checksum - XXXX_VALUE + int32(loadTestFontId, i) | 0;
     }
-    se (i < loadTestFontId.length) {
+    if (i < loadTestFontId.length) {
       checksum = checksum - XXXX_VALUE + int32(loadTestFontId + "XXX", i) | 0;
     }
-    dati = spliceString(dati, CFF_CHECKSUM_OFFSET, 4, (0, _util.string32)(checksum));
+    data = spliceString(data, CFF_CHECKSUM_OFFSET, 4, (0, _util.string32)(checksum));
     const url = `url(data:font/opentype;base64,${btoa(data)});`;
-    regola costante = `@font-face {font-family:"${loadTestFontId}";src:${url}}`;
-    this.insertRule(regola);
+    const rule = `@font-face {font-family:"${loadTestFontId}";src:${url}}`;
+    this.insertRule(rule);
     const div = this._document.createElement("div");
-    div.style.visibility = "nascosto";
+    div.style.visibility = "hidden";
     div.style.width = div.style.height = "10px";
-    div.style.position = "assoluto";
+    div.style.position = "absolute";
     div.style.top = div.style.left = "0px";
-    per (const nome di [font.loadedName, loadTestFontId]) {
+    for (const name of [font.loadedName, loadTestFontId]) {
       const span = this._document.createElement("span");
-      span.textContent = "Ciao";
-      span.style.fontFamily = nome;
+      span.textContent = "Hi";
+      span.style.fontFamily = name;
       div.append(span);
     }
     this._document.body.append(div);
     isFontReady(loadTestFontId, () => {
       div.remove();
-      richiesta.completa();
+      request.complete();
     });
   }
 }
-esportazioni.FontLoader = FontLoader;
-classe FontFaceObject {
-  costruttore(dati tradotti, {
+exports.FontLoader = FontLoader;
+class FontFaceObject {
+  constructor(translatedData, {
     isEvalSupported = true,
     disableFontFace = false,
     ignoreErrors = false,
     inspectFont = null
   }) {
     this.compiledGlyphs = Object.create(null);
-    per (const i in translatedData) {
-      questo[i] = dati tradotti[i];
+    for (const i in translatedData) {
+      this[i] = translatedData[i];
     }
     this.isEvalSupported = isEvalSupported !== false;
     this.disableFontFace = disableFontFace === true;
@@ -6143,76 +6143,76 @@ classe FontFaceObject {
     this._inspectFont = inspectFont;
   }
   createNativeFontFace() {
-    se (!this.data || this.disableFontFace) {
-      restituisci null;
+    if (!this.data || this.disableFontFace) {
+      return null;
     }
-    lascia nativeFontFace;
-    se (!this.cssFontInfo) {
+    let nativeFontFace;
+    if (!this.cssFontInfo) {
       nativeFontFace = new FontFace(this.loadedName, this.data, {});
-    } altro {
-      css costante = {
-        peso: this.cssFontInfo.fontWeight
+    } else {
+      const css = {
+        weight: this.cssFontInfo.fontWeight
       };
-      se (this.cssFontInfo.italicAngle) {
-        css.style = `obliquo ${this.cssFontInfo.italicAngle}deg`;
+      if (this.cssFontInfo.italicAngle) {
+        css.style = `oblique ${this.cssFontInfo.italicAngle}deg`;
       }
       nativeFontFace = new FontFace(this.cssFontInfo.fontFamily, this.data, css);
     }
-    questo._ispezionaFont?.(questo);
-    restituisci nativeFontFace;
+    this._inspectFont?.(this);
+    return nativeFontFace;
   }
   createFontFaceRule() {
-    se (!this.data || this.disableFontFace) {
-      restituisci null;
+    if (!this.data || this.disableFontFace) {
+      return null;
     }
-    dati costanti = (0, _util.bytesToString)(this.data);
+    const data = (0, _util.bytesToString)(this.data);
     const url = `url(data:${this.mimetype};base64,${btoa(data)});`;
-    lascia che governi;
-    se (!this.cssFontInfo) {
-      regola = `@font-face {font-family:"${this.loadedName}";src:${url}}`;
-    } altro {
-      lascia css = `font-weight: ${this.cssFontInfo.fontWeight};`;
-      se (this.cssFontInfo.italicAngle) {
+    let rule;
+    if (!this.cssFontInfo) {
+      rule = `@font-face {font-family:"${this.loadedName}";src:${url}}`;
+    } else {
+      let css = `font-weight: ${this.cssFontInfo.fontWeight};`;
+      if (this.cssFontInfo.italicAngle) {
         css += `font-style: oblique ${this.cssFontInfo.italicAngle}deg;`;
       }
-      regola = `@font-face {font-family:"${this.cssFontInfo.fontFamily}";${css}src:${url}}`;
+      rule = `@font-face {font-family:"${this.cssFontInfo.fontFamily}";${css}src:${url}}`;
     }
-    this._inspectFont?.(questo, url);
-    regola di ritorno;
+    this._inspectFont?.(this, url);
+    return rule;
   }
-  getPathGenerator(oggetti, carattere) {
-    se (this.compiledGlyphs[carattere] !== indefinito) {
-      restituisci this.compiledGlyphs[carattere];
+  getPathGenerator(objs, character) {
+    if (this.compiledGlyphs[character] !== undefined) {
+      return this.compiledGlyphs[character];
     }
-    lascia cmds;
-    Tentativo {
-      cmds = objs.get(this.loadedName + "_path_" + carattere);
-    } catturare (es.) {
-      se (!this.ignoreErrors) {
-        lanciare ex;
+    let cmds;
+    try {
+      cmds = objs.get(this.loadedName + "_path_" + character);
+    } catch (ex) {
+      if (!this.ignoreErrors) {
+        throw ex;
       }
-      (0, _util.warn)(`getPathGenerator - ignora il carattere: "${ex}".`);
-      restituisci this.compiledGlyphs[carattere] = funzione (c, dimensione) {};
+      (0, _util.warn)(`getPathGenerator - ignoring character: "${ex}".`);
+      return this.compiledGlyphs[character] = function (c, size) {};
     }
     if (this.isEvalSupported && _util.FeatureTest.isEvalSupported) {
       const jsBuf = [];
-      per (const corrente di cmds) {
-        const args = current.args !== indefinito ? current.args.join(",") : "";
-        jsBuf.push("c.", current.cmd, "(", argomenti, ");\n");
+      for (const current of cmds) {
+        const args = current.args !== undefined ? current.args.join(",") : "";
+        jsBuf.push("c.", current.cmd, "(", args, ");\n");
       }
-      restituisci this.compiledGlyphs[carattere] = new Function("c", "size", jsBuf.join(""));
+      return this.compiledGlyphs[character] = new Function("c", "size", jsBuf.join(""));
     }
-    restituisci this.compiledGlyphs[carattere] = funzione (c, dimensione) {
-      per (const corrente di cmds) {
-        se (current.cmd === "scala") {
-          argomenti correnti = [dimensione, -dimensione];
+    return this.compiledGlyphs[character] = function (c, size) {
+      for (const current of cmds) {
+        if (current.cmd === "scale") {
+          current.args = [size, -size];
         }
         c[current.cmd].apply(c, current.args);
       }
     };
   }
 }
-esportazioni.FontFaceObject = FontFaceObject;
+exports.FontFaceObject = FontFaceObject;
 
 /***/ }),
 /* 10 */
@@ -6220,52 +6220,52 @@ esportazioni.FontFaceObject = FontFaceObject;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.NodeStandardFontDataFactory = esportazioni.NodeFilterFactory = esportazioni.NodeCanvasFactory = esportazioni.NodeCMapReaderFactory = void 0;
+exports.NodeStandardFontDataFactory = exports.NodeFilterFactory = exports.NodeCanvasFactory = exports.NodeCMapReaderFactory = void 0;
 var _base_factory = __w_pdfjs_require__(7);
 var _util = __w_pdfjs_require__(1);
 ;
 ;
-const fetchData = funzione (url) {
-  restituisci nuova promessa((risolvi, rifiuta) => {
+const fetchData = function (url) {
+  return new Promise((resolve, reject) => {
     const fs = require("fs");
-    fs.readFile(url, (errore, dati) => {
-      se (errore || !dati) {
-        rifiuta(nuovo Errore(errore));
-        ritorno;
+    fs.readFile(url, (error, data) => {
+      if (error || !data) {
+        reject(new Error(error));
+        return;
       }
       resolve(new Uint8Array(data));
     });
   });
 };
-classe NodeFilterFactory estende _base_factory.BaseFilterFactory {}
-esportazioni.NodeFilterFactory = NodeFilterFactory;
-classe NodeCanvasFactory estende _base_factory.BaseCanvasFactory {
-  _createCanvas(larghezza, altezza) {
+class NodeFilterFactory extends _base_factory.BaseFilterFactory {}
+exports.NodeFilterFactory = NodeFilterFactory;
+class NodeCanvasFactory extends _base_factory.BaseCanvasFactory {
+  _createCanvas(width, height) {
     const Canvas = require("canvas");
-    restituisci Canvas.createCanvas(larghezza, altezza);
+    return Canvas.createCanvas(width, height);
   }
 }
-esportazioni.NodeCanvasFactory = NodeCanvasFactory;
-classe NodeCMapReaderFactory estende _base_factory.BaseCMapReaderFactory {
-  _fetchData(url, tipo di compressione) {
-    restituisci fetchData(url).then(data => {
-      ritorno {
-        cMapData: dati,
-        tipo di compressione
+exports.NodeCanvasFactory = NodeCanvasFactory;
+class NodeCMapReaderFactory extends _base_factory.BaseCMapReaderFactory {
+  _fetchData(url, compressionType) {
+    return fetchData(url).then(data => {
+      return {
+        cMapData: data,
+        compressionType
       };
     });
   }
 }
-esportazioni.NodeCMapReaderFactory = NodeCMapReaderFactory;
-classe NodeStandardFontDataFactory estende _base_factory.BaseStandardFontDataFactory {
+exports.NodeCMapReaderFactory = NodeCMapReaderFactory;
+class NodeStandardFontDataFactory extends _base_factory.BaseStandardFontDataFactory {
   _fetchData(url) {
-    restituisci fetchData(url);
+    return fetchData(url);
   }
 }
-esportazioni.NodeStandardFontDataFactory = NodeStandardFontDataFactory;
+exports.NodeStandardFontDataFactory = NodeStandardFontDataFactory;
 
 /***/ }),
 /* 11 */
@@ -6273,10 +6273,10 @@ esportazioni.NodeStandardFontDataFactory = NodeStandardFontDataFactory;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.CanvasGraphics = void 0;
+exports.CanvasGraphics = void 0;
 var _util = __w_pdfjs_require__(1);
 var _display_utils = __w_pdfjs_require__(6);
 var _pattern_helper = __w_pdfjs_require__(12);
@@ -6284,13 +6284,13 @@ var _image_utils = __w_pdfjs_require__(13);
 const MIN_FONT_SIZE = 16;
 const MAX_FONT_SIZE = 100;
 const MAX_GROUP_SIZE = 4096;
-const TEMPO_ESECUZIONE = 15;
-const PASSI_DI_ESECUZIONE = 10;
+const EXECUTION_TIME = 15;
+const EXECUTION_STEPS = 10;
 const MAX_SIZE_TO_COMPILE = 1000;
-const ALTEZZA_FULL_CHUNK = 16;
-funzione mirrorContextOperations(ctx, destCtx) {
-  se (ctx._removeMirroring) {
-    throw new Error("Il contesto sta già inoltrando le operazioni.");
+const FULL_CHUNK_HEIGHT = 16;
+function mirrorContextOperations(ctx, destCtx) {
+  if (ctx._removeMirroring) {
+    throw new Error("Context is already forwarding operations.");
   }
   ctx.__originalSave = ctx.save;
   ctx.__originalRestore = ctx.restore;
@@ -6323,99 +6323,99 @@ funzione mirrorContextOperations(ctx, destCtx) {
     ctx.rect = ctx.__originalRect;
     ctx.closePath = ctx.__originalClosePath;
     ctx.beginPath = ctx.__originalBeginPath;
-    elimina ctx._removeMirroring;
+    delete ctx._removeMirroring;
   };
-  ctx.save = funzione ctxSave() {
+  ctx.save = function ctxSave() {
     destCtx.save();
-    questo.__originaleSalva();
+    this.__originalSave();
   };
-  ctx.restore = funzione ctxRestore() {
+  ctx.restore = function ctxRestore() {
     destCtx.restore();
-    questo.__originalRestore();
+    this.__originalRestore();
   };
-  ctx.translate = funzione ctxTranslate(x, y) {
+  ctx.translate = function ctxTranslate(x, y) {
     destCtx.translate(x, y);
-    questo.__originalTranslate(x, y);
+    this.__originalTranslate(x, y);
   };
-  ctx.scale = funzione ctxScale(x, y) {
+  ctx.scale = function ctxScale(x, y) {
     destCtx.scale(x, y);
     this.__originalScale(x, y);
   };
-  ctx.transform = funzione ctxTransform(a, b, c, d, e, f) {
+  ctx.transform = function ctxTransform(a, b, c, d, e, f) {
     destCtx.transform(a, b, c, d, e, f);
     this.__originalTransform(a, b, c, d, e, f);
   };
-  ctx.setTransform = funzione ctxSetTransform(a, b, c, d, e, f) {
+  ctx.setTransform = function ctxSetTransform(a, b, c, d, e, f) {
     destCtx.setTransform(a, b, c, d, e, f);
     this.__originalSetTransform(a, b, c, d, e, f);
   };
-  ctx.resetTransform = funzione ctxResetTransform() {
+  ctx.resetTransform = function ctxResetTransform() {
     destCtx.resetTransform();
-    questo.__originalResetTransform();
+    this.__originalResetTransform();
   };
-  ctx.rotate = funzione ctxRotate(angolo) {
-    destCtx.rotate(angolo);
-    this.__originalRotate(angolo);
+  ctx.rotate = function ctxRotate(angle) {
+    destCtx.rotate(angle);
+    this.__originalRotate(angle);
   };
-  ctx.clip = funzione ctxRotate(regola) {
-    destCtx.clip(regola);
-    this.__originalClip(regola);
+  ctx.clip = function ctxRotate(rule) {
+    destCtx.clip(rule);
+    this.__originalClip(rule);
   };
-  ctx.moveTo = funzione (x, y) {
+  ctx.moveTo = function (x, y) {
     destCtx.moveTo(x, y);
-    questo.__originaleSpostaSu(x, y);
+    this.__originalMoveTo(x, y);
   };
-  ctx.lineTo = funzione (x, y) {
+  ctx.lineTo = function (x, y) {
     destCtx.lineTo(x, y);
     this.__originalLineTo(x, y);
   };
-  ctx.bezierCurveTo = funzione (cp1x, cp1y, cp2x, cp2y, x, y) {
+  ctx.bezierCurveTo = function (cp1x, cp1y, cp2x, cp2y, x, y) {
     destCtx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
     this.__originalBezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
   };
-  ctx.rect = funzione (x, y, larghezza, altezza) {
-    destCtx.rect(x, y, larghezza, altezza);
-    this.__originalRect(x, y, larghezza, altezza);
+  ctx.rect = function (x, y, width, height) {
+    destCtx.rect(x, y, width, height);
+    this.__originalRect(x, y, width, height);
   };
-  ctx.closePath = funzione () {
+  ctx.closePath = function () {
     destCtx.closePath();
-    questo.__originalClosePath();
+    this.__originalClosePath();
   };
-  ctx.beginPath = funzione () {
+  ctx.beginPath = function () {
     destCtx.beginPath();
-    questo.__originalBeginPath();
+    this.__originalBeginPath();
   };
 }
-classe CachedCanvases {
-  costruttore(canvasFactory) {
+class CachedCanvases {
+  constructor(canvasFactory) {
     this.canvasFactory = canvasFactory;
     this.cache = Object.create(null);
   }
-  getCanvas(id, larghezza, altezza) {
-    lascia canvasEntry;
-    se (this.cache[id] !== indefinito) {
+  getCanvas(id, width, height) {
+    let canvasEntry;
+    if (this.cache[id] !== undefined) {
       canvasEntry = this.cache[id];
-      this.canvasFactory.reset(canvasEntry, larghezza, altezza);
-    } altro {
-      canvasEntry = this.canvasFactory.create(larghezza, altezza);
+      this.canvasFactory.reset(canvasEntry, width, height);
+    } else {
+      canvasEntry = this.canvasFactory.create(width, height);
       this.cache[id] = canvasEntry;
     }
-    restituisci canvasEntry;
+    return canvasEntry;
   }
-  elimina(id) {
-    elimina this.cache[id];
+  delete(id) {
+    delete this.cache[id];
   }
-  chiaro() {
-    per (id costante in this.cache) {
+  clear() {
+    for (const id in this.cache) {
       const canvasEntry = this.cache[id];
       this.canvasFactory.destroy(canvasEntry);
-      elimina this.cache[id];
+      delete this.cache[id];
     }
   }
 }
 function drawImageAtIntegerCoords(ctx, srcImg, srcX, srcY, srcW, srcH, destX, destY, destW, destH) {
   const [a, b, c, d, tx, ty] = (0, _display_utils.getCurrentTransform)(ctx);
-  se (b === 0 e c === 0) {
+  if (b === 0 && c === 0) {
     const tlX = destX * a + tx;
     const rTlX = Math.round(tlX);
     const tlY = destY * d + ty;
@@ -6427,9 +6427,9 @@ function drawImageAtIntegerCoords(ctx, srcImg, srcX, srcY, srcW, srcH, destX, de
     ctx.setTransform(Math.sign(a), 0, 0, Math.sign(d), rTlX, rTlY);
     ctx.drawImage(srcImg, srcX, srcY, srcW, srcH, 0, 0, rWidth, rHeight);
     ctx.setTransform(a, b, c, d, tx, ty);
-    restituisci [rLarghezza, rAltezza];
+    return [rWidth, rHeight];
   }
-  se (a === 0 e d === 0) {
+  if (a === 0 && d === 0) {
     const tlX = destY * c + tx;
     const rTlX = Math.round(tlX);
     const tlY = destX * b + ty;
@@ -6441,156 +6441,156 @@ function drawImageAtIntegerCoords(ctx, srcImg, srcX, srcY, srcW, srcH, destX, de
     ctx.setTransform(0, Math.sign(b), Math.sign(c), 0, rTlX, rTlY);
     ctx.drawImage(srcImg, srcX, srcY, srcW, srcH, 0, 0, rHeight, rWidth);
     ctx.setTransform(a, b, c, d, tx, ty);
-    restituisci [rAltezza, rLarghezza];
+    return [rHeight, rWidth];
   }
   ctx.drawImage(srcImg, srcX, srcY, srcW, srcH, destX, destY, destW, destH);
   const scaleX = Math.hypot(a, b);
   const scaleY = Math.hypot(c, d);
-  ritorno [scalaX * destW, scalaY * destH];
+  return [scaleX * destW, scaleY * destH];
 }
-funzione compileType3Glyph(imgData) {
-  costante {
-    larghezza,
-    altezza
+function compileType3Glyph(imgData) {
+  const {
+    width,
+    height
   } = imgData;
-  se (larghezza > DIMENSIONE_MASSIMA_DA_COMPILARE || altezza > DIMENSIONE_MASSIMA_DA_COMPILARE) {
-    restituisci null;
+  if (width > MAX_SIZE_TO_COMPILE || height > MAX_SIZE_TO_COMPILE) {
+    return null;
   }
   const POINT_TO_PROCESS_LIMIT = 1000;
   const POINT_TYPES = new Uint8Array([0, 2, 4, 0, 1, 0, 5, 4, 8, 10, 0, 8, 0, 2, 1, 0]);
-  const width1 = larghezza + 1;
-  lascia punti = nuovo Uint8Array(larghezza1 * (altezza + 1));
-  siano i, j, j0;
-  const lineSize = larghezza + 7 & ~7;
-  lascia che i dati = new Uint8Array(lineSize * altezza),
-    posizione = 0;
-  per (elemento costante di imgData.data) {
-    lascia maschera = 128;
-    mentre (maschera > 0) {
-      dati[pos++] = elemento e maschera ? 0:255;
-      maschera >>= 1;
+  const width1 = width + 1;
+  let points = new Uint8Array(width1 * (height + 1));
+  let i, j, j0;
+  const lineSize = width + 7 & ~7;
+  let data = new Uint8Array(lineSize * height),
+    pos = 0;
+  for (const elem of imgData.data) {
+    let mask = 128;
+    while (mask > 0) {
+      data[pos++] = elem & mask ? 0 : 255;
+      mask >>= 1;
     }
   }
-  lascia conteggio = 0;
-  posizione = 0;
-  se (dati[pos] !== 0) {
-    punti[0] = 1;
-    ++conteggio;
+  let count = 0;
+  pos = 0;
+  if (data[pos] !== 0) {
+    points[0] = 1;
+    ++count;
   }
-  per (j = 1; j < larghezza; j++) {
-    se (dati[pos] !== dati[pos + 1]) {
-      punti[j] = dati[pos] ? 2 : 1;
-      ++conteggio;
+  for (j = 1; j < width; j++) {
+    if (data[pos] !== data[pos + 1]) {
+      points[j] = data[pos] ? 2 : 1;
+      ++count;
     }
-    posizione++;
+    pos++;
   }
-  se (dati[pos] !== 0) {
-    punti[j] = 2;
-    ++conteggio;
+  if (data[pos] !== 0) {
+    points[j] = 2;
+    ++count;
   }
-  per (i = 1; i < altezza; i++) {
-    pos = i * dimensionelinea;
-    j0 = i * larghezza1;
-    se (dati[pos - dimensionelinea] !== dati[pos]) {
-      punti[j0] = dati[pos] ? 1 : 8;
-      ++conteggio;
+  for (i = 1; i < height; i++) {
+    pos = i * lineSize;
+    j0 = i * width1;
+    if (data[pos - lineSize] !== data[pos]) {
+      points[j0] = data[pos] ? 1 : 8;
+      ++count;
     }
-    lascia che la somma = (data[pos] ? 4 : 0) + (data[pos - lineSize] ? 8 : 0);
-    per (j = 1; j < larghezza; j++) {
-      somma = (somma >> 2) + (dati[pos + 1] ? 4 : 0) + (dati[pos - lineSize + 1] ? 8 : 0);
-      se (TIPI_PUNTO[somma]) {
-        punti[j0 + j] = POINT_TYPES[somma];
-        ++conteggio;
+    let sum = (data[pos] ? 4 : 0) + (data[pos - lineSize] ? 8 : 0);
+    for (j = 1; j < width; j++) {
+      sum = (sum >> 2) + (data[pos + 1] ? 4 : 0) + (data[pos - lineSize + 1] ? 8 : 0);
+      if (POINT_TYPES[sum]) {
+        points[j0 + j] = POINT_TYPES[sum];
+        ++count;
       }
-      posizione++;
+      pos++;
     }
-    se (dati[pos - dimensionelinea] !== dati[pos]) {
-      punti[j0 + j] = dati[pos] ? 2 : 4;
-      ++conteggio;
+    if (data[pos - lineSize] !== data[pos]) {
+      points[j0 + j] = data[pos] ? 2 : 4;
+      ++count;
     }
-    se (conteggio > POINT_TO_PROCESS_LIMIT) {
-      restituisci null;
+    if (count > POINT_TO_PROCESS_LIMIT) {
+      return null;
     }
   }
-  pos = lineSize * (altezza - 1);
-  j0 = i * larghezza1;
-  se (dati[pos] !== 0) {
-    punti[j0] = 8;
-    ++conteggio;
+  pos = lineSize * (height - 1);
+  j0 = i * width1;
+  if (data[pos] !== 0) {
+    points[j0] = 8;
+    ++count;
   }
-  per (j = 1; j < larghezza; j++) {
-    se (dati[pos] !== dati[pos + 1]) {
-      punti[j0 + j] = dati[pos] ? 4 : 8;
-      ++conteggio;
+  for (j = 1; j < width; j++) {
+    if (data[pos] !== data[pos + 1]) {
+      points[j0 + j] = data[pos] ? 4 : 8;
+      ++count;
     }
-    posizione++;
+    pos++;
   }
-  se (dati[pos] !== 0) {
-    punti[j0 + j] = 4;
-    ++conteggio;
+  if (data[pos] !== 0) {
+    points[j0 + j] = 4;
+    ++count;
   }
-  se (conteggio > POINT_TO_PROCESS_LIMIT) {
-    restituisci null;
+  if (count > POINT_TO_PROCESS_LIMIT) {
+    return null;
   }
   const steps = new Int32Array([0, width1, -1, 0, -width1, 0, 0, 0, 1]);
   const path = new Path2D();
-  per (i = 0; conta && i <= altezza; i++) {
-    lascia p = i * larghezza1;
-    const end = p + larghezza;
-    mentre (p < fine && !punti[p]) {
+  for (i = 0; count && i <= height; i++) {
+    let p = i * width1;
+    const end = p + width;
+    while (p < end && !points[p]) {
       p++;
     }
-    se (p === fine) {
-      continuare;
+    if (p === end) {
+      continue;
     }
-    percorso.sposta in(p % larghezza1, i);
-    costante p0 = p;
-    lascia tipo = punti[p];
-    Fare {
-      const step = steps[tipo];
-      Fare {
-        p += passo;
-      } while (!punti[p]);
-      const pp = punti[p];
-      se (pp !== 5 e pp !== 10) {
-        tipo = pp;
-        punti[p] = 0;
-      } altro {
-        tipo = pp & 0x33 * tipo >> 4;
-        punti[p] &= tipo >> 2 | tipo << 2;
+    path.moveTo(p % width1, i);
+    const p0 = p;
+    let type = points[p];
+    do {
+      const step = steps[type];
+      do {
+        p += step;
+      } while (!points[p]);
+      const pp = points[p];
+      if (pp !== 5 && pp !== 10) {
+        type = pp;
+        points[p] = 0;
+      } else {
+        type = pp & 0x33 * type >> 4;
+        points[p] &= type >> 2 | type << 2;
       }
-      percorso.lineTo(p % larghezza1, p/larghezza1 | 0);
-      se (!punti[p]) {
-        --contare;
+      path.lineTo(p % width1, p / width1 | 0);
+      if (!points[p]) {
+        --count;
       }
-    } mentre (p0 !== p);
-    --io;
+    } while (p0 !== p);
+    --i;
   }
-  dati = null;
-  punti = nullo;
-  const drawOutline = funzione (c) {
+  data = null;
+  points = null;
+  const drawOutline = function (c) {
     c.save();
-    c.scale(1 / larghezza, -1 / altezza);
-    c.translate(0, -altezza);
-    c.fill(percorso);
+    c.scale(1 / width, -1 / height);
+    c.translate(0, -height);
+    c.fill(path);
     c.beginPath();
     c.restore();
   };
-  restituisci drawOutline;
+  return drawOutline;
 }
-classe CanvasExtraState {
-  costruttore(larghezza, altezza) {
+class CanvasExtraState {
+  constructor(width, height) {
     this.alphaIsShape = false;
     this.fontSize = 0;
     this.fontSizeScale = 1;
     this.textMatrix = _util.IDENTITY_MATRIX;
     this.textMatrixScale = 1;
     this.fontMatrix = _util.FONT_IDENTITY_MATRIX;
-    questo.principale = 0;
-    questo.x = 0;
-    questo.y = 0;
-    questa.lineaX = 0;
-    questa.lineaY = 0;
+    this.leading = 0;
+    this.x = 0;
+    this.y = 0;
+    this.lineX = 0;
+    this.lineY = 0;
     this.charSpacing = 0;
     this.wordSpacing = 0;
     this.textHScale = 1;
@@ -6599,62 +6599,62 @@ classe CanvasExtraState {
     this.fillColor = "#000000";
     this.strokeColor = "#000000";
     this.patternFill = false;
-    questo.fillAlpha = 1;
+    this.fillAlpha = 1;
     this.strokeAlpha = 1;
     this.lineWidth = 1;
     this.activeSMask = null;
-    this.transferMaps = "nessuno";
-    this.startNewPathAndClipBox([0, 0, larghezza, altezza]);
+    this.transferMaps = "none";
+    this.startNewPathAndClipBox([0, 0, width, height]);
   }
-  clona() {
+  clone() {
     const clone = Object.create(this);
     clone.clipBox = this.clipBox.slice();
-    restituisci clone;
+    return clone;
   }
-  impostaPuntoCorrente(x, y) {
-    questo.x = x;
-    questo.y = y;
+  setCurrentPoint(x, y) {
+    this.x = x;
+    this.y = y;
   }
-  updatePathMinMax(trasforma, x, y) {
-    [x, y] = _util.Util.applyTransform([x, y], trasforma);
-    questo.minX = Math.min(questo.minX, x);
-    questo.minY = Math.min(questo.minY, y);
-    questo.maxX = Math.max(questo.maxX, x);
-    questo.maxY = Math.max(questo.maxY, y);
+  updatePathMinMax(transform, x, y) {
+    [x, y] = _util.Util.applyTransform([x, y], transform);
+    this.minX = Math.min(this.minX, x);
+    this.minY = Math.min(this.minY, y);
+    this.maxX = Math.max(this.maxX, x);
+    this.maxY = Math.max(this.maxY, y);
   }
-  updateRectMinMax(trasforma, rettangolo) {
+  updateRectMinMax(transform, rect) {
     const p1 = _util.Util.applyTransform(rect, transform);
     const p2 = _util.Util.applyTransform(rect.slice(2), transform);
-    questo.minX = Math.min(questo.minX, p1[0], p2[0]);
-    questo.minY = Math.min(questo.minY, p1[1], p2[1]);
-    questo.maxX = Math.max(questo.maxX, p1[0], p2[0]);
-    questo.maxY = Math.max(questo.maxY, p1[1], p2[1]);
+    this.minX = Math.min(this.minX, p1[0], p2[0]);
+    this.minY = Math.min(this.minY, p1[1], p2[1]);
+    this.maxX = Math.max(this.maxX, p1[0], p2[0]);
+    this.maxY = Math.max(this.maxY, p1[1], p2[1]);
   }
-  updateScalingPathMinMax(trasforma, minMax) {
-    _util.Util.scaleMinMax(trasforma, minMax);
-    questo.minX = Math.min(questo.minX, minMax[0]);
-    questo.maxX = Math.max(questo.maxX, minMax[1]);
-    questo.minY = Math.min(questo.minY, minMax[2]);
-    questo.maxY = Math.max(questo.maxY, minMax[3]);
+  updateScalingPathMinMax(transform, minMax) {
+    _util.Util.scaleMinMax(transform, minMax);
+    this.minX = Math.min(this.minX, minMax[0]);
+    this.maxX = Math.max(this.maxX, minMax[1]);
+    this.minY = Math.min(this.minY, minMax[2]);
+    this.maxY = Math.max(this.maxY, minMax[3]);
   }
-  updateCurvePathMinMax(trasforma, x0, y0, x1, y1, x2, y2, x3, y3, minMax) {
+  updateCurvePathMinMax(transform, x0, y0, x1, y1, x2, y2, x3, y3, minMax) {
     const box = _util.Util.bezierBoundingBox(x0, y0, x1, y1, x2, y2, x3, y3);
-    se (minMax) {
+    if (minMax) {
       minMax[0] = Math.min(minMax[0], box[0], box[2]);
       minMax[1] = Math.max(minMax[1], box[0], box[2]);
       minMax[2] = Math.min(minMax[2], box[1], box[3]);
       minMax[3] = Math.max(minMax[3], box[1], box[3]);
-      ritorno;
+      return;
     }
-    this.updateRectMinMax(trasforma, box);
+    this.updateRectMinMax(transform, box);
   }
   getPathBoundingBox(pathType = _pattern_helper.PathType.FILL, transform = null) {
     const box = [this.minX, this.minY, this.maxX, this.maxY];
-    se (pathType === _pattern_helper.PathType.STROKE) {
-      se (!trasforma) {
-        (0, _util.unreachable)("Il riquadro di delimitazione del tratto deve includere la trasformazione.");
+    if (pathType === _pattern_helper.PathType.STROKE) {
+      if (!transform) {
+        (0, _util.unreachable)("Stroke bounding box must include transform.");
       }
-      const scale = _util.Util.singularValueDecompose2dScale(trasforma);
+      const scale = _util.Util.singularValueDecompose2dScale(transform);
       const xStrokePad = scale[0] * this.lineWidth / 2;
       const yStrokePad = scale[1] * this.lineWidth / 2;
       box[0] -= xStrokePad;
@@ -6662,108 +6662,108 @@ classe CanvasExtraState {
       box[2] += xStrokePad;
       box[3] += yStrokePad;
     }
-    scatola di reso;
+    return box;
   }
-  aggiornaClipFromPath() {
+  updateClipFromPath() {
     const intersect = _util.Util.intersect(this.clipBox, this.getPathBoundingBox());
     this.startNewPathAndClipBox(intersect || [0, 0, 0, 0]);
   }
-  èEmptyClip() {
-    restituisci questo.minX === Infinito;
+  isEmptyClip() {
+    return this.minX === Infinity;
   }
   startNewPathAndClipBox(box) {
-    this.clipBox = scatola;
-    this.minX = Infinito;
-    this.minY = Infinito;
-    questo.maxX = 0;
-    questo.maxY = 0;
+    this.clipBox = box;
+    this.minX = Infinity;
+    this.minY = Infinity;
+    this.maxX = 0;
+    this.maxY = 0;
   }
   getClippedPathBoundingBox(pathType = _pattern_helper.PathType.FILL, transform = null) {
-    restituisci _util.Util.intersect(this.clipBox, this.getPathBoundingBox(pathType, transform));
+    return _util.Util.intersect(this.clipBox, this.getPathBoundingBox(pathType, transform));
   }
 }
-funzione putBinaryImageData(ctx, imgData) {
-  se (tipo di ImageData !== "non definito" e imgData istanza di ImageData) {
+function putBinaryImageData(ctx, imgData) {
+  if (typeof ImageData !== "undefined" && imgData instanceof ImageData) {
     ctx.putImageData(imgData, 0, 0);
-    ritorno;
+    return;
   }
-  altezza costante = imgData.height,
-    larghezza = imgData.width;
-  const partialChunkHeight = altezza % FULL_CHUNK_HEIGHT;
-  const fullChunks = (altezza - altezzaChunkparziale) / ALTEZZA_CHUNK_FULL;
-  const totalChunks = partialChunkHeight === 0 ? blocchi completi: blocchi completi + 1;
-  const chunkImgData = ctx.createImageData(larghezza, FULL_CHUNK_HEIGHT);
-  lascia srcPos = 0,
-    Posizione di destinazione;
+  const height = imgData.height,
+    width = imgData.width;
+  const partialChunkHeight = height % FULL_CHUNK_HEIGHT;
+  const fullChunks = (height - partialChunkHeight) / FULL_CHUNK_HEIGHT;
+  const totalChunks = partialChunkHeight === 0 ? fullChunks : fullChunks + 1;
+  const chunkImgData = ctx.createImageData(width, FULL_CHUNK_HEIGHT);
+  let srcPos = 0,
+    destPos;
   const src = imgData.data;
   const dest = chunkImgData.data;
-  lascia i, j, thisChunkHeight, elemsInThisChunk;
+  let i, j, thisChunkHeight, elemsInThisChunk;
   if (imgData.kind === _util.ImageKind.GRAYSCALE_1BPP) {
-    const lunghezzasrc = lunghezzabytesrc;
+    const srcLength = src.byteLength;
     const dest32 = new Uint32Array(dest.buffer, 0, dest.byteLength >> 2);
     const dest32DataLength = dest32.length;
-    const fullSrcDiff = larghezza + 7 >> 3;
-    const bianco = 0xffffffff;
-    const nero = _util.FeatureTest.isLittleEndian ? 0xff000000: 0x000000ff;
-    per (i = 0; i < totalChunks; i++) {
+    const fullSrcDiff = width + 7 >> 3;
+    const white = 0xffffffff;
+    const black = _util.FeatureTest.isLittleEndian ? 0xff000000 : 0x000000ff;
+    for (i = 0; i < totalChunks; i++) {
       thisChunkHeight = i < fullChunks ? FULL_CHUNK_HEIGHT : partialChunkHeight;
-      Posizione di destinazione = 0;
-      per (j = 0; j < thisChunkHeight; j++) {
+      destPos = 0;
+      for (j = 0; j < thisChunkHeight; j++) {
         const srcDiff = srcLength - srcPos;
-        sia k = 0;
-        const kEnd = srcDiff > fullSrcDiff ? larghezza : srcDiff * 8 - 7;
+        let k = 0;
+        const kEnd = srcDiff > fullSrcDiff ? width : srcDiff * 8 - 7;
         const kEndUnrolled = kEnd & ~7;
-        lascia maschera = 0;
-        lascia che srcByte = 0;
-        per (; k < kEndUnrolled; k += 8) {
+        let mask = 0;
+        let srcByte = 0;
+        for (; k < kEndUnrolled; k += 8) {
           srcByte = src[srcPos++];
-          dest32[destPos++] = srcByte & 128 ? bianco : nero;
-          dest32[destPos++] = srcByte & 64 ? bianco : nero;
-          dest32[destPos++] = srcByte & 32 ? bianco : nero;
-          dest32[destPos++] = srcByte & 16 ? bianco : nero;
-          dest32[destPos++] = srcByte & 8 ? bianco : nero;
-          dest32[destPos++] = srcByte & 4 ? bianco : nero;
-          dest32[destPos++] = srcByte & 2 ? bianco : nero;
-          dest32[destPos++] = srcByte & 1 ? bianco : nero;
+          dest32[destPos++] = srcByte & 128 ? white : black;
+          dest32[destPos++] = srcByte & 64 ? white : black;
+          dest32[destPos++] = srcByte & 32 ? white : black;
+          dest32[destPos++] = srcByte & 16 ? white : black;
+          dest32[destPos++] = srcByte & 8 ? white : black;
+          dest32[destPos++] = srcByte & 4 ? white : black;
+          dest32[destPos++] = srcByte & 2 ? white : black;
+          dest32[destPos++] = srcByte & 1 ? white : black;
         }
-        per (; k < kEnd; k++) {
-          se (maschera === 0) {
+        for (; k < kEnd; k++) {
+          if (mask === 0) {
             srcByte = src[srcPos++];
-            maschera = 128;
+            mask = 128;
           }
-          dest32[destPos++] = srcByte & maschera ? bianco : nero;
-          maschera >>= 1;
+          dest32[destPos++] = srcByte & mask ? white : black;
+          mask >>= 1;
         }
       }
-      mentre (destPos < dest32DataLength) {
+      while (destPos < dest32DataLength) {
         dest32[destPos++] = 0;
       }
       ctx.putImageData(chunkImgData, 0, i * FULL_CHUNK_HEIGHT);
     }
-  } altrimenti se (imgData.kind === _util.ImageKind.RGBA_32BPP) {
+  } else if (imgData.kind === _util.ImageKind.RGBA_32BPP) {
     j = 0;
-    elemsInThisChunk = larghezza * ALTEZZA_CENTRO_COMPLETA * 4;
-    per (i = 0; i < fullChunks; i++) {
+    elemsInThisChunk = width * FULL_CHUNK_HEIGHT * 4;
+    for (i = 0; i < fullChunks; i++) {
       dest.set(src.subarray(srcPos, srcPos + elemsInThisChunk));
       srcPos += elemsInThisChunk;
       ctx.putImageData(chunkImgData, 0, j);
-      j += ALTEZZA_FULL_CHUNK;
+      j += FULL_CHUNK_HEIGHT;
     }
-    se (i < blocchi totali) {
-      elemsInThisChunk = larghezza * altezzaChunkparziale * 4;
+    if (i < totalChunks) {
+      elemsInThisChunk = width * partialChunkHeight * 4;
       dest.set(src.subarray(srcPos, srcPos + elemsInThisChunk));
       ctx.putImageData(chunkImgData, 0, j);
     }
-  } altrimenti se (imgData.kind === _util.ImageKind.RGB_24BPP) {
-    thisChunkHeight = ALTEZZA_CENTRO_COMPLETA;
-    elemsInThisChunk = larghezza * altezzaChunk;
-    per (i = 0; i < totalChunks; i++) {
-      se (i >= fullChunks) {
+  } else if (imgData.kind === _util.ImageKind.RGB_24BPP) {
+    thisChunkHeight = FULL_CHUNK_HEIGHT;
+    elemsInThisChunk = width * thisChunkHeight;
+    for (i = 0; i < totalChunks; i++) {
+      if (i >= fullChunks) {
         thisChunkHeight = partialChunkHeight;
-        elemsInThisChunk = larghezza * altezzaChunk;
+        elemsInThisChunk = width * thisChunkHeight;
       }
-      Posizione di destinazione = 0;
-      per (j = elemsInThisChunk; j--;) {
+      destPos = 0;
+      for (j = elemsInThisChunk; j--;) {
         dest[destPos++] = src[srcPos++];
         dest[destPos++] = src[srcPos++];
         dest[destPos++] = src[srcPos++];
@@ -6771,131 +6771,131 @@ funzione putBinaryImageData(ctx, imgData) {
       }
       ctx.putImageData(chunkImgData, 0, i * FULL_CHUNK_HEIGHT);
     }
-  } altro {
-    genera un nuovo errore (`tipo di immagine non valido: ${imgData.kind}`);
+  } else {
+    throw new Error(`bad image kind: ${imgData.kind}`);
   }
 }
-funzione putBinaryImageMask(ctx, imgData) {
-  se (imgData.bitmap) {
+function putBinaryImageMask(ctx, imgData) {
+  if (imgData.bitmap) {
     ctx.drawImage(imgData.bitmap, 0, 0);
-    ritorno;
+    return;
   }
-  altezza costante = imgData.height,
-    larghezza = imgData.width;
-  const partialChunkHeight = altezza % FULL_CHUNK_HEIGHT;
-  const fullChunks = (altezza - altezzaChunkparziale) / ALTEZZA_CHUNK_FULL;
-  const totalChunks = partialChunkHeight === 0 ? blocchi completi: blocchi completi + 1;
-  const chunkImgData = ctx.createImageData(larghezza, FULL_CHUNK_HEIGHT);
-  lascia srcPos = 0;
+  const height = imgData.height,
+    width = imgData.width;
+  const partialChunkHeight = height % FULL_CHUNK_HEIGHT;
+  const fullChunks = (height - partialChunkHeight) / FULL_CHUNK_HEIGHT;
+  const totalChunks = partialChunkHeight === 0 ? fullChunks : fullChunks + 1;
+  const chunkImgData = ctx.createImageData(width, FULL_CHUNK_HEIGHT);
+  let srcPos = 0;
   const src = imgData.data;
   const dest = chunkImgData.data;
-  per (lascia che i = 0; i < totalChunks; i++) {
+  for (let i = 0; i < totalChunks; i++) {
     const thisChunkHeight = i < fullChunks ? FULL_CHUNK_HEIGHT : partialChunkHeight;
     ({
       srcPos
     } = (0, _image_utils.convertBlackAndWhiteToRGBA)({
-      fonte,
+      src,
       srcPos,
-      destinazione,
-      larghezza,
-      altezza: thisChunkHeight,
+      dest,
+      width,
+      height: thisChunkHeight,
       nonBlackColor: 0
     }));
     ctx.putImageData(chunkImgData, 0, i * FULL_CHUNK_HEIGHT);
   }
 }
-funzione copyCtxState(sourceCtx, destCtx) {
+function copyCtxState(sourceCtx, destCtx) {
   const properties = ["strokeStyle", "fillStyle", "fillRule", "globalAlpha", "lineWidth", "lineCap", "lineJoin", "miterLimit", "globalCompositeOperation", "font", "filter"];
-  per (proprietà costante delle proprietà) {
-    se (sourceCtx[proprietà] !== indefinito) {
-      destCtx[proprietà] = sourceCtx[proprietà];
+  for (const property of properties) {
+    if (sourceCtx[property] !== undefined) {
+      destCtx[property] = sourceCtx[property];
     }
   }
-  se (sourceCtx.setLineDash !== indefinito) {
+  if (sourceCtx.setLineDash !== undefined) {
     destCtx.setLineDash(sourceCtx.getLineDash());
     destCtx.lineDashOffset = sourceCtx.lineDashOffset;
   }
 }
-funzione resetCtxToDefault(ctx) {
+function resetCtxToDefault(ctx) {
   ctx.strokeStyle = ctx.fillStyle = "#000000";
   ctx.fillRule = "nonzero";
   ctx.globalAlpha = 1;
   ctx.lineWidth = 1;
   ctx.lineCap = "butt";
-  ctx.lineJoin = "mitra";
+  ctx.lineJoin = "miter";
   ctx.miterLimit = 10;
   ctx.globalCompositeOperation = "source-over";
   ctx.font = "10px sans-serif";
-  se (ctx.setLineDash !== indefinito) {
+  if (ctx.setLineDash !== undefined) {
     ctx.setLineDash([]);
     ctx.lineDashOffset = 0;
   }
-  se (!_util.isNodeJS) {
-    costante {
-      filtro
+  if (!_util.isNodeJS) {
+    const {
+      filter
     } = ctx;
-    se (filtro !== "nessuno" e filtro !== "") {
-      ctx.filter = "nessuno";
+    if (filter !== "none" && filter !== "") {
+      ctx.filter = "none";
     }
   }
 }
-funzione composeSMaskBackdrop(byte, r0, g0, b0) {
-  lunghezza costante = byte.lunghezza;
-  per (lascia che i = 3; i < lunghezza; i += 4) {
-    const alfa = byte[i];
-    se (alfa === 0) {
-      byte[i - 3] = r0;
-      byte[i - 2] = g0;
-      byte[i - 1] = b0;
-    } altrimenti se (alfa < 255) {
-      const alpha_ = 255 - alfa;
-      byte[i - 3] = byte[i - 3] * alfa + r0 * alfa_ >> 8;
-      byte[i - 2] = byte[i - 2] * alfa + g0 * alfa_ >> 8;
-      byte[i - 1] = byte[i - 1] * alfa + b0 * alfa_ >> 8;
+function composeSMaskBackdrop(bytes, r0, g0, b0) {
+  const length = bytes.length;
+  for (let i = 3; i < length; i += 4) {
+    const alpha = bytes[i];
+    if (alpha === 0) {
+      bytes[i - 3] = r0;
+      bytes[i - 2] = g0;
+      bytes[i - 1] = b0;
+    } else if (alpha < 255) {
+      const alpha_ = 255 - alpha;
+      bytes[i - 3] = bytes[i - 3] * alpha + r0 * alpha_ >> 8;
+      bytes[i - 2] = bytes[i - 2] * alpha + g0 * alpha_ >> 8;
+      bytes[i - 1] = bytes[i - 1] * alpha + b0 * alpha_ >> 8;
     }
   }
 }
-funzione composeSMaskAlpha(maskData, layerData, transferMap) {
-  lunghezza costante = maskData.length;
-  scala costante = 1 / 255;
-  per (lascia che i = 3; i < lunghezza; i += 4) {
+function composeSMaskAlpha(maskData, layerData, transferMap) {
+  const length = maskData.length;
+  const scale = 1 / 255;
+  for (let i = 3; i < length; i += 4) {
     const alpha = transferMap ? transferMap[maskData[i]] : maskData[i];
-    layerData[i] = layerData[i] * alfa * scala | 0;
+    layerData[i] = layerData[i] * alpha * scale | 0;
   }
 }
-funzione composeSMaskLuminosity(maskData, layerData, transferMap) {
-  lunghezza costante = maskData.length;
-  per (lascia che i = 3; i < lunghezza; i += 4) {
-    const y = mascheraData[i - 3] * 77 + mascheraData[i - 2] * 152 + mascheraData[i - 1] * 28;
+function composeSMaskLuminosity(maskData, layerData, transferMap) {
+  const length = maskData.length;
+  for (let i = 3; i < length; i += 4) {
+    const y = maskData[i - 3] * 77 + maskData[i - 2] * 152 + maskData[i - 1] * 28;
     layerData[i] = transferMap ? layerData[i] * transferMap[y >> 8] >> 8 : layerData[i] * y >> 16;
   }
 }
-funzione genericComposeSMask(maskCtx, layerCtx, larghezza, altezza, sottotipo, sfondo, transferMap, layerOffsetX, layerOffsetY, maskOffsetX, maskOffsetY) {
-  const haSfondo = !!sfondo;
+function genericComposeSMask(maskCtx, layerCtx, width, height, subtype, backdrop, transferMap, layerOffsetX, layerOffsetY, maskOffsetX, maskOffsetY) {
+  const hasBackdrop = !!backdrop;
   const r0 = hasBackdrop ? backdrop[0] : 0;
   const g0 = hasBackdrop ? backdrop[1] : 0;
   const b0 = hasBackdrop ? backdrop[2] : 0;
-  const composeFn = subtype === "Luminosità" ? composeSMaskLuminosity : composeSMaskAlpha;
+  const composeFn = subtype === "Luminosity" ? composeSMaskLuminosity : composeSMaskAlpha;
   const PIXELS_TO_PROCESS = 1048576;
-  const chunkSize = Math.min(altezza, Math.ceil(PIXELS_TO_PROCESS / larghezza));
-  per (lascia riga = 0; riga < altezza; riga += chunkSize) {
-    const chunkHeight = Math.min(chunkSize, altezza - riga);
+  const chunkSize = Math.min(height, Math.ceil(PIXELS_TO_PROCESS / width));
+  for (let row = 0; row < height; row += chunkSize) {
+    const chunkHeight = Math.min(chunkSize, height - row);
     const maskData = maskCtx.getImageData(layerOffsetX - maskOffsetX, row + (layerOffsetY - maskOffsetY), width, chunkHeight);
-    const layerData = layerCtx.getImageData(layerOffsetX, riga + layerOffsetY, larghezza, altezza chunk);
-    se (haSfondo) {
+    const layerData = layerCtx.getImageData(layerOffsetX, row + layerOffsetY, width, chunkHeight);
+    if (hasBackdrop) {
       composeSMaskBackdrop(maskData.data, r0, g0, b0);
     }
     composeFn(maskData.data, layerData.data, transferMap);
-    layerCtx.putImageData(layerData, layerOffsetX, riga + layerOffsetY);
+    layerCtx.putImageData(layerData, layerOffsetX, row + layerOffsetY);
   }
 }
-funzione composeSMask(ctx, smask, layerCtx, layerBox) {
+function composeSMask(ctx, smask, layerCtx, layerBox) {
   const layerOffsetX = layerBox[0];
   const layerOffsetY = layerBox[1];
   const layerWidth = layerBox[2] - layerOffsetX;
   const layerHeight = layerBox[3] - layerOffsetY;
-  se (larghezzastrato === 0 || altezzastrato === 0) {
-    ritorno;
+  if (layerWidth === 0 || layerHeight === 0) {
+    return;
   }
   genericComposeSMask(smask.context, layerCtx, layerWidth, layerHeight, smask.subtype, smask.backdrop, smask.transferMap, layerOffsetX, layerOffsetY, smask.offsetX, smask.offsetY);
   ctx.save();
@@ -6905,45 +6905,45 @@ funzione composeSMask(ctx, smask, layerCtx, layerBox) {
   ctx.drawImage(layerCtx.canvas, 0, 0);
   ctx.restore();
 }
-funzione getImageSmoothingEnabled(trasforma, interpola) {
-  const scale = _util.Util.singularValueDecompose2dScale(trasforma);
-  scala[0] = Math.fround(scala[0]);
-  scala[1] = Math.fround(scala[1]);
+function getImageSmoothingEnabled(transform, interpolate) {
+  const scale = _util.Util.singularValueDecompose2dScale(transform);
+  scale[0] = Math.fround(scale[0]);
+  scale[1] = Math.fround(scale[1]);
   const actualScale = Math.fround((globalThis.devicePixelRatio || 1) * _display_utils.PixelsPerInch.PDF_TO_CSS_UNITS);
-  se (interpolare !== indefinito) {
-    restituisci interpolazione;
-  } altrimenti se (scala[0] <= scalaeffettiva || scala[1] <= scalaeffettiva) {
-    restituisci vero;
+  if (interpolate !== undefined) {
+    return interpolate;
+  } else if (scale[0] <= actualScale || scale[1] <= actualScale) {
+    return true;
   }
-  restituisci falso;
+  return false;
 }
-const LINE_CAP_STYLES = ["testa a testa", "rotondo", "quadrato"];
-const LINE_JOIN_STYLES = ["mitra", "arrotondato", "smussato"];
+const LINE_CAP_STYLES = ["butt", "round", "square"];
+const LINE_JOIN_STYLES = ["miter", "round", "bevel"];
 const NORMAL_CLIP = {};
 const EO_CLIP = {};
-classe CanvasGraphics {
-  costruttore(canvasCtx, commonObjs, objs, canvasFactory, filterFactory, {
+class CanvasGraphics {
+  constructor(canvasCtx, commonObjs, objs, canvasFactory, filterFactory, {
     optionalContentConfig,
     markedContentStack = null
-  }, annotazioneCanvasMap, pageColors) {
-    questo.ctx = canvasCtx;
+  }, annotationCanvasMap, pageColors) {
+    this.ctx = canvasCtx;
     this.current = new CanvasExtraState(this.ctx.canvas.width, this.ctx.canvas.height);
-    questo.stateStack = [];
+    this.stateStack = [];
     this.pendingClip = null;
     this.pendingEOFill = false;
     this.res = null;
     this.xobjs = null;
-    questo.commonObjs = commonObjs;
-    questo.objs = objs;
+    this.commonObjs = commonObjs;
+    this.objs = objs;
     this.canvasFactory = canvasFactory;
     this.filterFactory = filterFactory;
-    questo.gruppoStack = [];
+    this.groupStack = [];
     this.processingType3 = null;
     this.baseTransform = null;
     this.baseTransformStack = [];
-    questo.gruppoLevel = 0;
-    questo.smaskStack = [];
-    questo.smaskCounter = 0;
+    this.groupLevel = 0;
+    this.smaskStack = [];
+    this.smaskCounter = 0;
     this.tempSMask = null;
     this.suspendedCtx = null;
     this.contentVisible = true;
@@ -6958,38 +6958,38 @@ classe CanvasGraphics {
     this.pageColors = pageColors;
     this._cachedScaleForStroking = [-1, 0];
     this._cachedGetSinglePixelWidth = null;
-    this._cachedBitmapsMap = nuova mappa();
+    this._cachedBitmapsMap = new Map();
   }
-  getObject(dati, fallback = null) {
-    se (tipo di dati === "stringa") {
-      restituisci dati.startsWith("g_") ? this.commonObjs.get(dati) : this.objs.get(dati);
+  getObject(data, fallback = null) {
+    if (typeof data === "string") {
+      return data.startsWith("g_") ? this.commonObjs.get(data) : this.objs.get(data);
     }
-    ritorno di riserva;
+    return fallback;
   }
-  inizioDisegno({
-    trasformare,
-    finestra,
-    trasparenza = falso,
-    sfondo = nullo
+  beginDrawing({
+    transform,
+    viewport,
+    transparency = false,
+    background = null
   }) {
-    larghezza costante = this.ctx.canvas.width;
-    altezza costante = this.ctx.canvas.height;
+    const width = this.ctx.canvas.width;
+    const height = this.ctx.canvas.height;
     const savedFillStyle = this.ctx.fillStyle;
-    this.ctx.fillStyle = sfondo || "#ffffff";
-    this.ctx.fillRect(0, 0, larghezza, altezza);
+    this.ctx.fillStyle = background || "#ffffff";
+    this.ctx.fillRect(0, 0, width, height);
     this.ctx.fillStyle = savedFillStyle;
-    se (trasparenza) {
-      const transparentCanvas = this.cachedCanvases.getCanvas("trasparente", larghezza, altezza);
-      questo.compositoCtx = questo.ctx;
+    if (transparency) {
+      const transparentCanvas = this.cachedCanvases.getCanvas("transparent", width, height);
+      this.compositeCtx = this.ctx;
       this.transparentCanvas = transparentCanvas.canvas;
       this.ctx = transparentCanvas.context;
-      questo.ctx.salva();
+      this.ctx.save();
       this.ctx.transform(...(0, _display_utils.getCurrentTransform)(this.compositeCtx));
     }
-    questo.ctx.salva();
+    this.ctx.save();
     resetCtxToDefault(this.ctx);
-    se (trasforma) {
-      this.ctx.transform(...trasforma);
+    if (transform) {
+      this.ctx.transform(...transform);
       this.outputScaleX = transform[0];
       this.outputScaleY = transform[0];
     }
@@ -7000,80 +7000,80 @@ classe CanvasGraphics {
   executeOperatorList(operatorList, executionStartIdx, continueCallback, stepper) {
     const argsArray = operatorList.argsArray;
     const fnArray = operatorList.fnArray;
-    lascia i = executionStartIdx || 0;
+    let i = executionStartIdx || 0;
     const argsArrayLen = argsArray.length;
-    se (argsArrayLen === i) {
-      restituisci i;
+    if (argsArrayLen === i) {
+      return i;
     }
-    const chunkOperations = argsArrayLen - i > EXECUTION_STEPS && typeof continueCallback === "funzione";
+    const chunkOperations = argsArrayLen - i > EXECUTION_STEPS && typeof continueCallback === "function";
     const endTime = chunkOperations ? Date.now() + EXECUTION_TIME : 0;
-    lascia che i passi = 0;
+    let steps = 0;
     const commonObjs = this.commonObjs;
     const objs = this.objs;
-    lascia fnId;
-    mentre (vero) {
-      se (stepper !== indefinito && i === stepper.nextBreakPoint) {
+    let fnId;
+    while (true) {
+      if (stepper !== undefined && i === stepper.nextBreakPoint) {
         stepper.breakIt(i, continueCallback);
-        restituisci i;
+        return i;
       }
       fnId = fnArray[i];
-      se (fnId !== _util.OPS.dependency) {
-        questo[fnId].applica(questo, argsArray[i]);
-      } altro {
-        per (const depObjId di argsArray[i]) {
+      if (fnId !== _util.OPS.dependency) {
+        this[fnId].apply(this, argsArray[i]);
+      } else {
+        for (const depObjId of argsArray[i]) {
           const objsPool = depObjId.startsWith("g_") ? commonObjs : objs;
-          se (!objsPool.has(depObjId)) {
+          if (!objsPool.has(depObjId)) {
             objsPool.get(depObjId, continueCallback);
-            restituisci i;
+            return i;
           }
         }
       }
       i++;
-      se (i === argsArrayLen) {
-        restituisci i;
+      if (i === argsArrayLen) {
+        return i;
       }
-      se (chunkOperations && ++steps > EXECUTION_STEPS) {
-        se (Data.ora() > ora_fine) {
-          continuaCallback();
-          restituisci i;
+      if (chunkOperations && ++steps > EXECUTION_STEPS) {
+        if (Date.now() > endTime) {
+          continueCallback();
+          return i;
         }
-        passi = 0;
+        steps = 0;
       }
     }
   }
   #restoreInitialState() {
     while (this.stateStack.length || this.inSMaskMode) {
-      questo.ripristina();
+      this.restore();
     }
-    questo.ctx.restore();
-    se (this.transparentCanvas) {
-      questo.ctx = questo.compositoCtx;
-      questo.ctx.salva();
+    this.ctx.restore();
+    if (this.transparentCanvas) {
+      this.ctx = this.compositeCtx;
+      this.ctx.save();
       this.ctx.setTransform(1, 0, 0, 1, 0, 0);
       this.ctx.drawImage(this.transparentCanvas, 0, 0);
-      questo.ctx.restore();
+      this.ctx.restore();
       this.transparentCanvas = null;
     }
   }
-  fineDisegno() {
-    questo.#restoreInitialState();
+  endDrawing() {
+    this.#restoreInitialState();
     this.cachedCanvases.clear();
-    questo.cachedPatterns.clear();
-    per (const cache di this._cachedBitmapsMap.values()) {
-      per (const canvas di cache.values()) {
+    this.cachedPatterns.clear();
+    for (const cache of this._cachedBitmapsMap.values()) {
+      for (const canvas of cache.values()) {
         if (typeof HTMLCanvasElement !== "undefined" && canvas instanceof HTMLCanvasElement) {
-          larghezza tela = altezza tela = 0;
+          canvas.width = canvas.height = 0;
         }
       }
       cache.clear();
     }
     this._cachedBitmapsMap.clear();
-    questo.#drawFilter();
+    this.#drawFilter();
   }
-  #disegnaFiltro() {
-    se (this.pageColors) {
+  #drawFilter() {
+    if (this.pageColors) {
       const hcmFilterId = this.filterFactory.addHCMFilter(this.pageColors.foreground, this.pageColors.background);
-      se (hcmFilterId !== "nessuno") {
+      if (hcmFilterId !== "none") {
         const savedFilter = this.ctx.filter;
         this.ctx.filter = hcmFilterId;
         this.ctx.drawImage(this.ctx.canvas, 0, 0);
@@ -7083,77 +7083,77 @@ classe CanvasGraphics {
   }
   _scaleImage(img, inverseTransform) {
     const width = img.width;
-    altezza costante = img.altezza;
-    lascia widthScale = Math.max(Math.hypot(inverseTransform[0], inverseTransform[1]), 1);
-    lascia heightScale = Math.max(Math.hypot(inverseTransform[2], inverseTransform[3]), 1);
-    lascia paintWidth = larghezza,
-      paintHeight = altezza;
-    lascia tmpCanvasId = "prescale1";
-    lascia tmpCanvas, tmpCtx;
+    const height = img.height;
+    let widthScale = Math.max(Math.hypot(inverseTransform[0], inverseTransform[1]), 1);
+    let heightScale = Math.max(Math.hypot(inverseTransform[2], inverseTransform[3]), 1);
+    let paintWidth = width,
+      paintHeight = height;
+    let tmpCanvasId = "prescale1";
+    let tmpCanvas, tmpCtx;
     while (widthScale > 2 && paintWidth > 1 || heightScale > 2 && paintHeight > 1) {
-      lascia che newWidth = paintWidth,
-        nuovaAltezza = altezzavernice;
-      se (larghezzaScala > 2 e larghezza vernice > 1) {
+      let newWidth = paintWidth,
+        newHeight = paintHeight;
+      if (widthScale > 2 && paintWidth > 1) {
         newWidth = paintWidth >= 16384 ? Math.floor(paintWidth / 2) - 1 || 1 : Math.ceil(paintWidth / 2);
         widthScale /= paintWidth / newWidth;
       }
-      se (altezzaScala > 2 e altezza vernice > 1) {
-        newHeight = paintHeight >= 16384 ? Math.floor(paintHeight / 2) - 1 || 1: Math.ceil(paintHeight) / 2;
+      if (heightScale > 2 && paintHeight > 1) {
+        newHeight = paintHeight >= 16384 ? Math.floor(paintHeight / 2) - 1 || 1 : Math.ceil(paintHeight) / 2;
         heightScale /= paintHeight / newHeight;
       }
       tmpCanvas = this.cachedCanvases.getCanvas(tmpCanvasId, newWidth, newHeight);
       tmpCtx = tmpCanvas.context;
-      tmpCtx.clearRect(0, 0, nuovaLarghezza, nuovaAltezza);
+      tmpCtx.clearRect(0, 0, newWidth, newHeight);
       tmpCtx.drawImage(img, 0, 0, paintWidth, paintHeight, 0, 0, newWidth, newHeight);
       img = tmpCanvas.canvas;
-      paintWidth = nuovaLarghezza;
+      paintWidth = newWidth;
       paintHeight = newHeight;
       tmpCanvasId = tmpCanvasId === "prescale1" ? "prescale2" : "prescale1";
     }
-    ritorno {
-      immagine,
-      Larghezza vernice,
-      altezza vernice
+    return {
+      img,
+      paintWidth,
+      paintHeight
     };
   }
   _createMaskCanvas(img) {
     const ctx = this.ctx;
-    costante {
-      larghezza,
-      altezza
-    } = immagine;
+    const {
+      width,
+      height
+    } = img;
     const fillColor = this.current.fillColor;
     const isPatternFill = this.current.patternFill;
     const currentTransform = (0, _display_utils.getCurrentTransform)(ctx);
-    lascia cache, cacheKey, ridimensionato, maskCanvas;
-    se ((img.bitmap || img.data) && img.count > 1) {
+    let cache, cacheKey, scaled, maskCanvas;
+    if ((img.bitmap || img.data) && img.count > 1) {
       const mainKey = img.bitmap || img.data.buffer;
       cacheKey = JSON.stringify(isPatternFill ? currentTransform : [currentTransform.slice(0, 4), fillColor]);
       cache = this._cachedBitmapsMap.get(mainKey);
-      se (!cache) {
-        cache = nuova mappa();
+      if (!cache) {
+        cache = new Map();
         this._cachedBitmapsMap.set(mainKey, cache);
       }
       const cachedImage = cache.get(cacheKey);
-      se (cachedImage && !isPatternFill) {
+      if (cachedImage && !isPatternFill) {
         const offsetX = Math.round(Math.min(currentTransform[0], currentTransform[2]) + currentTransform[4]);
         const offsetY = Math.round(Math.min(currentTransform[1], currentTransform[3]) + currentTransform[5]);
-        ritorno {
-          tela: immagine memorizzata nella cache,
+        return {
+          canvas: cachedImage,
           offsetX,
           offsetY
         };
       }
-      ridimensionato = cachedImage;
+      scaled = cachedImage;
     }
-    se (!scalato) {
-      maskCanvas = this.cachedCanvases.getCanvas("maskCanvas", larghezza, altezza);
+    if (!scaled) {
+      maskCanvas = this.cachedCanvases.getCanvas("maskCanvas", width, height);
       putBinaryImageMask(maskCanvas.context, img);
     }
-    lascia maskToCanvas = _util.Util.transform(currentTransform, [1 / larghezza, 0, 0, -1 / altezza, 0, 0]);
+    let maskToCanvas = _util.Util.transform(currentTransform, [1 / width, 0, 0, -1 / height, 0, 0]);
     maskToCanvas = _util.Util.transform(maskToCanvas, [1, 0, 0, 1, 0, -height]);
     const cord1 = _util.Util.applyTransform([0, 0], maskToCanvas);
-    const cord2 = _util.Util.applyTransform([larghezza, altezza], maskToCanvas);
+    const cord2 = _util.Util.applyTransform([width, height], maskToCanvas);
     const rect = _util.Util.normalizeRect([cord1[0], cord1[1], cord2[0], cord2[1]]);
     const drawnWidth = Math.round(rect[2] - rect[0]) || 1;
     const drawnHeight = Math.round(rect[3] - rect[1]) || 1;
@@ -7163,122 +7163,122 @@ classe CanvasGraphics {
     const offsetY = Math.min(cord1[1], cord2[1]);
     fillCtx.translate(-offsetX, -offsetY);
     fillCtx.transform(...maskToCanvas);
-    se (!scalato) {
-      ridimensionato = this._scaleImage(maskCanvas.canvas, (0, _display_utils.getCurrentTransformInverse)(fillCtx));
-      ridimensionato = ridimensionato.img;
-      se (cache && isPatternFill) {
-        cache.set(cacheKey, ridimensionato);
+    if (!scaled) {
+      scaled = this._scaleImage(maskCanvas.canvas, (0, _display_utils.getCurrentTransformInverse)(fillCtx));
+      scaled = scaled.img;
+      if (cache && isPatternFill) {
+        cache.set(cacheKey, scaled);
       }
     }
     fillCtx.imageSmoothingEnabled = getImageSmoothingEnabled((0, _display_utils.getCurrentTransform)(fillCtx), img.interpolate);
-    drawImageAtIntegerCoords(fillCtx, scalato, 0, 0, larghezza scalata, altezza scalata, 0, 0, larghezza, altezza);
-    fillCtx.globalCompositeOperation = "sorgente-in";
+    drawImageAtIntegerCoords(fillCtx, scaled, 0, 0, scaled.width, scaled.height, 0, 0, width, height);
+    fillCtx.globalCompositeOperation = "source-in";
     const inverse = _util.Util.transform((0, _display_utils.getCurrentTransformInverse)(fillCtx), [1, 0, 0, 1, -offsetX, -offsetY]);
     fillCtx.fillStyle = isPatternFill ? fillColor.getPattern(ctx, this, inverse, _pattern_helper.PathType.FILL) : fillColor;
-    fillCtx.fillRect(0, 0, larghezza, altezza);
-    se (cache && !isPatternFill) {
+    fillCtx.fillRect(0, 0, width, height);
+    if (cache && !isPatternFill) {
       this.cachedCanvases.delete("fillCanvas");
       cache.set(cacheKey, fillCanvas.canvas);
     }
-    ritorno {
-      tela: fillCanvas.canvas,
+    return {
+      canvas: fillCanvas.canvas,
       offsetX: Math.round(offsetX),
       offsetY: Math.round(offsetY)
     };
   }
-  setLineWidth(larghezza) {
-    se (larghezza !== this.current.lineWidth) {
+  setLineWidth(width) {
+    if (width !== this.current.lineWidth) {
       this._cachedScaleForStroking[0] = -1;
     }
-    this.current.lineWidth = larghezza;
-    this.ctx.lineWidth = larghezza;
+    this.current.lineWidth = width;
+    this.ctx.lineWidth = width;
   }
-  setLineCap(stile) {
-    this.ctx.lineCap = LINE_CAP_STYLES[stile];
+  setLineCap(style) {
+    this.ctx.lineCap = LINE_CAP_STYLES[style];
   }
-  setLineJoin(stile) {
-    this.ctx.lineJoin = LINE_JOIN_STYLES[stile];
+  setLineJoin(style) {
+    this.ctx.lineJoin = LINE_JOIN_STYLES[style];
   }
-  setMiterLimit(limite) {
-    this.ctx.miterLimit = limite;
+  setMiterLimit(limit) {
+    this.ctx.miterLimit = limit;
   }
   setDash(dashArray, dashPhase) {
     const ctx = this.ctx;
-    se (ctx.setLineDash !== indefinito) {
+    if (ctx.setLineDash !== undefined) {
       ctx.setLineDash(dashArray);
       ctx.lineDashOffset = dashPhase;
     }
   }
-  setRenderingIntent(intento) {}
-  setFlatness(piattezza) {}
-  setGState(stati) {
-    per (const [chiave, valore] degli stati) {
-      interruttore (chiave) {
-        caso "LW":
-          this.setLineWidth(valore);
-          rottura;
-        caso "LC":
-          this.setLineCap(valore);
-          rottura;
-        caso "LJ":
-          this.setLineJoin(valore);
-          rottura;
-        caso "ML":
-          this.setMiterLimit(valore);
-          rottura;
-        caso "D":
-          this.setDash(valore[0], valore[1]);
-          rottura;
-        caso "RI":
-          this.setRenderingIntent(valore);
-          rottura;
-        caso "FL":
-          this.setFlatness(valore);
-          rottura;
-        caso "Font":
-          this.setFont(valore[0], valore[1]);
-          rottura;
-        caso "CA":
-          this.current.strokeAlpha = valore;
-          rottura;
-        caso "ca":
-          this.current.fillAlpha = valore;
-          this.ctx.globalAlpha = valore;
-          rottura;
-        caso "BM":
-          this.ctx.globalCompositeOperation = valore;
-          rottura;
-        caso "SMask":
-          this.current.activeSMask = valore ? this.tempSMask : null;
+  setRenderingIntent(intent) {}
+  setFlatness(flatness) {}
+  setGState(states) {
+    for (const [key, value] of states) {
+      switch (key) {
+        case "LW":
+          this.setLineWidth(value);
+          break;
+        case "LC":
+          this.setLineCap(value);
+          break;
+        case "LJ":
+          this.setLineJoin(value);
+          break;
+        case "ML":
+          this.setMiterLimit(value);
+          break;
+        case "D":
+          this.setDash(value[0], value[1]);
+          break;
+        case "RI":
+          this.setRenderingIntent(value);
+          break;
+        case "FL":
+          this.setFlatness(value);
+          break;
+        case "Font":
+          this.setFont(value[0], value[1]);
+          break;
+        case "CA":
+          this.current.strokeAlpha = value;
+          break;
+        case "ca":
+          this.current.fillAlpha = value;
+          this.ctx.globalAlpha = value;
+          break;
+        case "BM":
+          this.ctx.globalCompositeOperation = value;
+          break;
+        case "SMask":
+          this.current.activeSMask = value ? this.tempSMask : null;
           this.tempSMask = null;
-          questo.checkSMaskState();
-          rottura;
-        caso "TR":
+          this.checkSMaskState();
+          break;
+        case "TR":
           this.ctx.filter = this.current.transferMaps = this.filterFactory.addFilter(value);
-          rottura;
+          break;
       }
     }
   }
-  ottenere inSMaskMode() {
-    restituisci !!this.suspendedCtx;
+  get inSMaskMode() {
+    return !!this.suspendedCtx;
   }
   checkSMaskState() {
     const inSMaskMode = this.inSMaskMode;
-    se (this.current.activeSMask && !inSMaskMode) {
-      questo.beginSMaskMode();
-    } altrimenti se (!this.current.activeSMask && inSMaskMode) {
-      questo.endSMaskMode();
+    if (this.current.activeSMask && !inSMaskMode) {
+      this.beginSMaskMode();
+    } else if (!this.current.activeSMask && inSMaskMode) {
+      this.endSMaskMode();
     }
   }
   beginSMaskMode() {
-    se (this.inSMaskMode) {
-      throw new Error("beginSMaskMode chiamato mentre si è già in modalità smask");
+    if (this.inSMaskMode) {
+      throw new Error("beginSMaskMode called while already in smask mode");
     }
     const drawnWidth = this.ctx.canvas.width;
     const drawnHeight = this.ctx.canvas.height;
     const cacheId = "smaskGroupAt" + this.groupLevel;
     const scratchCanvas = this.cachedCanvases.getCanvas(cacheId, drawnWidth, drawnHeight);
-    questo.suspendedCtx = questo.ctx;
+    this.suspendedCtx = this.ctx;
     this.ctx = scratchCanvas.context;
     const ctx = this.ctx;
     ctx.setTransform(...(0, _display_utils.getCurrentTransform)(this.suspendedCtx));
@@ -7287,21 +7287,21 @@ classe CanvasGraphics {
     this.setGState([["BM", "source-over"], ["ca", 1], ["CA", 1]]);
   }
   endSMaskMode() {
-    se (!this.inSMaskMode) {
-      throw new Error("endSMaskMode chiamato mentre non è in modalità smask");
+    if (!this.inSMaskMode) {
+      throw new Error("endSMaskMode called while not in smask mode");
     }
     this.ctx._removeMirroring();
     copyCtxState(this.ctx, this.suspendedCtx);
-    questo.ctx = questo.suspendedCtx;
+    this.ctx = this.suspendedCtx;
     this.suspendedCtx = null;
   }
   compose(dirtyBox) {
-    se (!this.current.activeSMask) {
-      ritorno;
+    if (!this.current.activeSMask) {
+      return;
     }
-    se (!dirtyBox) {
+    if (!dirtyBox) {
       dirtyBox = [0, 0, this.ctx.canvas.width, this.ctx.canvas.height];
-    } altro {
+    } else {
       dirtyBox[0] = Math.floor(dirtyBox[0]);
       dirtyBox[1] = Math.floor(dirtyBox[1]);
       dirtyBox[2] = Math.ceil(dirtyBox[2]);
@@ -7310,205 +7310,205 @@ classe CanvasGraphics {
     const smask = this.current.activeSMask;
     const suspendedCtx = this.suspendedCtx;
     composeSMask(suspendedCtx, smask, this.ctx, dirtyBox);
-    questo.ctx.salva();
+    this.ctx.save();
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
-    questo.ctx.restore();
+    this.ctx.restore();
   }
-  salva() {
-    se (this.inSMaskMode) {
+  save() {
+    if (this.inSMaskMode) {
       copyCtxState(this.ctx, this.suspendedCtx);
       this.suspendedCtx.save();
-    } altro {
-      questo.ctx.salva();
+    } else {
+      this.ctx.save();
     }
-    const vecchio = questo.corrente;
-    this.stateStack.push(vecchio);
-    questo.corrente = vecchio.clone();
+    const old = this.current;
+    this.stateStack.push(old);
+    this.current = old.clone();
   }
-  ripristinare() {
-    se (questo.stateStack.length === 0 && questo.inSMaskMode) {
-      questo.endSMaskMode();
+  restore() {
+    if (this.stateStack.length === 0 && this.inSMaskMode) {
+      this.endSMaskMode();
     }
-    se (questo.stateStack.length !== 0) {
-      questo.corrente = questo.stateStack.pop();
-      se (this.inSMaskMode) {
+    if (this.stateStack.length !== 0) {
+      this.current = this.stateStack.pop();
+      if (this.inSMaskMode) {
         this.suspendedCtx.restore();
         copyCtxState(this.suspendedCtx, this.ctx);
-      } altro {
-        questo.ctx.restore();
+      } else {
+        this.ctx.restore();
       }
-      questo.checkSMaskState();
+      this.checkSMaskState();
       this.pendingClip = null;
       this._cachedScaleForStroking[0] = -1;
       this._cachedGetSinglePixelWidth = null;
     }
   }
-  trasforma(a, b, c, d, e, f) {
+  transform(a, b, c, d, e, f) {
     this.ctx.transform(a, b, c, d, e, f);
     this._cachedScaleForStroking[0] = -1;
     this._cachedGetSinglePixelWidth = null;
   }
   constructPath(ops, args, minMax) {
     const ctx = this.ctx;
-    const corrente = this.current;
-    lascia x = corrente.x,
-      y = corrente.y;
-    lascia che iniziX, iniziY;
+    const current = this.current;
+    let x = current.x,
+      y = current.y;
+    let startX, startY;
     const currentTransform = (0, _display_utils.getCurrentTransform)(ctx);
     const isScalingMatrix = currentTransform[0] === 0 && currentTransform[3] === 0 || currentTransform[1] === 0 && currentTransform[2] === 0;
     const minMaxForBezier = isScalingMatrix ? minMax.slice(0) : null;
-    per (lascia che i = 0, j = 0, ii = ops.length; i < ii; i++) {
-      interruttore (ops[i] | 0) {
-        caso _util.OPS.rectangle:
-          x = argomenti[j++];
-          y = argomenti[j++];
-          larghezza costante = argomenti[j++];
-          altezza costante = argomenti[j++];
-          const xw = x + larghezza;
-          const yh = y + altezza;
+    for (let i = 0, j = 0, ii = ops.length; i < ii; i++) {
+      switch (ops[i] | 0) {
+        case _util.OPS.rectangle:
+          x = args[j++];
+          y = args[j++];
+          const width = args[j++];
+          const height = args[j++];
+          const xw = x + width;
+          const yh = y + height;
           ctx.moveTo(x, y);
-          se (larghezza === 0 || altezza === 0) {
+          if (width === 0 || height === 0) {
             ctx.lineTo(xw, yh);
-          } altro {
+          } else {
             ctx.lineTo(xw, y);
             ctx.lineTo(xw, yh);
             ctx.lineTo(x, yh);
           }
-          se (!isScalingMatrix) {
-            corrente.updateRectMinMax(trasformazionecorrente, [x, y, xw, yh]);
+          if (!isScalingMatrix) {
+            current.updateRectMinMax(currentTransform, [x, y, xw, yh]);
           }
           ctx.closePath();
-          rottura;
-        caso _util.OPS.moveTo:
-          x = argomenti[j++];
-          y = argomenti[j++];
+          break;
+        case _util.OPS.moveTo:
+          x = args[j++];
+          y = args[j++];
           ctx.moveTo(x, y);
-          se (!isScalingMatrix) {
-            corrente.updatePathMinMax(trasformazionecorrente, x, y);
+          if (!isScalingMatrix) {
+            current.updatePathMinMax(currentTransform, x, y);
           }
-          rottura;
-        caso _util.OPS.lineTo:
-          x = argomenti[j++];
-          y = argomenti[j++];
+          break;
+        case _util.OPS.lineTo:
+          x = args[j++];
+          y = args[j++];
           ctx.lineTo(x, y);
-          se (!isScalingMatrix) {
-            corrente.updatePathMinMax(trasformazionecorrente, x, y);
+          if (!isScalingMatrix) {
+            current.updatePathMinMax(currentTransform, x, y);
           }
-          rottura;
-        caso _util.OPS.curveTo:
-          inizioX = x;
-          inizioY = y;
-          x = argomenti[j + 4];
-          y = argomenti[j + 5];
+          break;
+        case _util.OPS.curveTo:
+          startX = x;
+          startY = y;
+          x = args[j + 4];
+          y = args[j + 5];
           ctx.bezierCurveTo(args[j], args[j + 1], args[j + 2], args[j + 3], x, y);
           current.updateCurvePathMinMax(currentTransform, startX, startY, args[j], args[j + 1], args[j + 2], args[j + 3], x, y, minMaxForBezier);
           j += 6;
-          rottura;
-        caso _util.OPS.curveTo2:
-          inizioX = x;
-          inizioY = y;
-          ctx.bezierCurveTo(x, y, argomenti[j], argomenti[j + 1], argomenti[j + 2], argomenti[j + 3]);
+          break;
+        case _util.OPS.curveTo2:
+          startX = x;
+          startY = y;
+          ctx.bezierCurveTo(x, y, args[j], args[j + 1], args[j + 2], args[j + 3]);
           current.updateCurvePathMinMax(currentTransform, startX, startY, x, y, args[j], args[j + 1], args[j + 2], args[j + 3], minMaxForBezier);
-          x = argomenti[j + 2];
-          y = argomenti[j + 3];
+          x = args[j + 2];
+          y = args[j + 3];
           j += 4;
-          rottura;
-        caso _util.OPS.curveTo3:
-          inizioX = x;
-          inizioY = y;
-          x = argomenti[j + 2];
-          y = argomenti[j + 3];
+          break;
+        case _util.OPS.curveTo3:
+          startX = x;
+          startY = y;
+          x = args[j + 2];
+          y = args[j + 3];
           ctx.bezierCurveTo(args[j], args[j + 1], x, y, x, y);
           current.updateCurvePathMinMax(currentTransform, startX, startY, args[j], args[j + 1], x, y, x, y, minMaxForBezier);
           j += 4;
-          rottura;
-        caso _util.OPS.closePath:
+          break;
+        case _util.OPS.closePath:
           ctx.closePath();
-          rottura;
+          break;
       }
     }
-    se (isScalingMatrix) {
+    if (isScalingMatrix) {
       current.updateScalingPathMinMax(currentTransform, minMaxForBezier);
     }
-    corrente.impostaPuntoCorrente(x, y);
+    current.setCurrentPoint(x, y);
   }
   closePath() {
-    questo.ctx.closePath();
+    this.ctx.closePath();
   }
   stroke(consumePath = true) {
     const ctx = this.ctx;
     const strokeColor = this.current.strokeColor;
     ctx.globalAlpha = this.current.strokeAlpha;
-    se (questo.contenutovisibile) {
-      se (tipo di strokeColor === "oggetto" e strokeColor?.getPattern) {
+    if (this.contentVisible) {
+      if (typeof strokeColor === "object" && strokeColor?.getPattern) {
         ctx.save();
         ctx.strokeStyle = strokeColor.getPattern(ctx, this, (0, _display_utils.getCurrentTransformInverse)(ctx), _pattern_helper.PathType.STROKE);
         this.rescaleAndStroke(false);
         ctx.restore();
-      } altro {
+      } else {
         this.rescaleAndStroke(true);
       }
     }
-    se (consumePath) {
-      questo.consumePath(questo.corrente.getClippedPathBoundingBox());
+    if (consumePath) {
+      this.consumePath(this.current.getClippedPathBoundingBox());
     }
     ctx.globalAlpha = this.current.fillAlpha;
   }
-  chiudiStroke() {
-    questo.closePath();
-    questo.tratto();
+  closeStroke() {
+    this.closePath();
+    this.stroke();
   }
   fill(consumePath = true) {
     const ctx = this.ctx;
     const fillColor = this.current.fillColor;
     const isPatternFill = this.current.patternFill;
-    lascia che needRestore = false;
-    se (isPatternFill) {
+    let needRestore = false;
+    if (isPatternFill) {
       ctx.save();
       ctx.fillStyle = fillColor.getPattern(ctx, this, (0, _display_utils.getCurrentTransformInverse)(ctx), _pattern_helper.PathType.FILL);
       needRestore = true;
     }
     const intersect = this.current.getClippedPathBoundingBox();
-    se (this.contentVisible && intersect !== null) {
-      se (this.pendingEOFill) {
+    if (this.contentVisible && intersect !== null) {
+      if (this.pendingEOFill) {
         ctx.fill("evenodd");
         this.pendingEOFill = false;
-      } altro {
-        ctx.riempi();
+      } else {
+        ctx.fill();
       }
     }
-    se (needRestore) {
+    if (needRestore) {
       ctx.restore();
     }
-    se (consumePath) {
-      this.consumePath(intersezione);
+    if (consumePath) {
+      this.consumePath(intersect);
     }
   }
   eoFill() {
     this.pendingEOFill = true;
-    questo.riempi();
+    this.fill();
   }
   fillStroke() {
-    questo.riempi(falso);
-    questo.stroke(falso);
-    questo.consumePath();
+    this.fill(false);
+    this.stroke(false);
+    this.consumePath();
   }
   eoFillStroke() {
     this.pendingEOFill = true;
-    questo.fillStroke();
+    this.fillStroke();
   }
-  chiudiRiempiTratto() {
-    questo.closePath();
-    questo.fillStroke();
+  closeFillStroke() {
+    this.closePath();
+    this.fillStroke();
   }
   closeEOFillStroke() {
     this.pendingEOFill = true;
-    questo.closePath();
-    questo.fillStroke();
+    this.closePath();
+    this.fillStroke();
   }
   endPath() {
-    questo.consumePath();
+    this.consumePath();
   }
   clip() {
     this.pendingClip = NORMAL_CLIP;
@@ -7516,177 +7516,177 @@ classe CanvasGraphics {
   eoClip() {
     this.pendingClip = EO_CLIP;
   }
-  inizioTesto() {
+  beginText() {
     this.current.textMatrix = _util.IDENTITY_MATRIX;
     this.current.textMatrixScale = 1;
-    questo.corrente.x = questa.linea.correnteX = 0;
-    questa.corrente.y = questa.corrente.lineY = 0;
+    this.current.x = this.current.lineX = 0;
+    this.current.y = this.current.lineY = 0;
   }
-  fineTesto() {
-    percorsi costanti = this.pendingTextPaths;
+  endText() {
+    const paths = this.pendingTextPaths;
     const ctx = this.ctx;
-    se (percorsi === indefiniti) {
+    if (paths === undefined) {
       ctx.beginPath();
-      ritorno;
+      return;
     }
     ctx.save();
     ctx.beginPath();
-    per (const percorso di percorsi) {
-      ctx.setTransform(...percorso.trasformazione);
-      ctx.translate(percorso.x, percorso.y);
-      percorso.addToPath(ctx, percorso.fontSize);
+    for (const path of paths) {
+      ctx.setTransform(...path.transform);
+      ctx.translate(path.x, path.y);
+      path.addToPath(ctx, path.fontSize);
     }
     ctx.restore();
     ctx.clip();
     ctx.beginPath();
-    elimina this.pendingTextPaths;
+    delete this.pendingTextPaths;
   }
-  setCharSpacing(spaziatura) {
-    this.current.charSpacing = spaziatura;
+  setCharSpacing(spacing) {
+    this.current.charSpacing = spacing;
   }
-  setWordSpacing(spaziatura) {
-    this.current.wordSpacing = spaziatura;
+  setWordSpacing(spacing) {
+    this.current.wordSpacing = spacing;
   }
-  setHScale(scala) {
-    this.current.textHScale = scala / 100;
+  setHScale(scale) {
+    this.current.textHScale = scale / 100;
   }
-  setLeading(principale) {
-    questo.corrente.principale = -principale;
+  setLeading(leading) {
+    this.current.leading = -leading;
   }
-  setFont(fontRefName, dimensione) {
+  setFont(fontRefName, size) {
     const fontObj = this.commonObjs.get(fontRefName);
-    const corrente = this.current;
-    se (!fontObj) {
-      genera un nuovo errore (`Impossibile trovare il font per ${fontRefName}`);
+    const current = this.current;
+    if (!fontObj) {
+      throw new Error(`Can't find font for ${fontRefName}`);
     }
     current.fontMatrix = fontObj.fontMatrix || _util.FONT_IDENTITY_MATRIX;
-    se (current.fontMatrix[0] === 0 || current.fontMatrix[3] === 0) {
-      (0, _util.warn)("Matrice font non valida per il font " + fontRefName);
+    if (current.fontMatrix[0] === 0 || current.fontMatrix[3] === 0) {
+      (0, _util.warn)("Invalid font matrix for font " + fontRefName);
     }
-    se (dimensione < 0) {
-      dimensione = -dimensione;
-      direzione.font.corrente = -1;
-    } altro {
-      direzione del carattere corrente = 1;
+    if (size < 0) {
+      size = -size;
+      current.fontDirection = -1;
+    } else {
+      current.fontDirection = 1;
     }
-    questo.font.corrente = fontObj;
-    this.current.fontSize = dimensione;
-    se (fontObj.isType3Font) {
-      ritorno;
+    this.current.font = fontObj;
+    this.current.fontSize = size;
+    if (fontObj.isType3Font) {
+      return;
     }
     const name = fontObj.loadedName || "sans-serif";
     const typeface = fontObj.systemFontInfo?.css || `"${name}", ${fontObj.fallbackName}`;
-    lascia grassetto = "normale";
-    se (fontObj.black) {
-      grassetto = "900";
-    } altrimenti se (fontObj.bold) {
-      grassetto = "grassetto";
+    let bold = "normal";
+    if (fontObj.black) {
+      bold = "900";
+    } else if (fontObj.bold) {
+      bold = "bold";
     }
-    const italic = fontObj.italic ? "corsivo" : "normale";
-    lascia browserFontSize = dimensione;
-    se (dimensione < MIN_FONT_SIZE) {
+    const italic = fontObj.italic ? "italic" : "normal";
+    let browserFontSize = size;
+    if (size < MIN_FONT_SIZE) {
       browserFontSize = MIN_FONT_SIZE;
-    } altrimenti se (dimensione > MAX_FONT_SIZE) {
+    } else if (size > MAX_FONT_SIZE) {
       browserFontSize = MAX_FONT_SIZE;
     }
-    this.current.fontSizeScale = dimensione / browserFontSize;
-    this.ctx.font = `${corsivo} ${grassetto} ${browserFontSize}px ${carattere}`;
+    this.current.fontSizeScale = size / browserFontSize;
+    this.ctx.font = `${italic} ${bold} ${browserFontSize}px ${typeface}`;
   }
-  setTextRenderingMode(modalità) {
-    this.current.textRenderingMode = modalità;
+  setTextRenderingMode(mode) {
+    this.current.textRenderingMode = mode;
   }
-  setTextRise(aumento) {
-    this.current.textRise = aumento;
+  setTextRise(rise) {
+    this.current.textRise = rise;
   }
-  spostaTesto(x, y) {
-    questo.attuale.x = questa.linea.attualeX += x;
-    questa.corrente.y = questa.corrente.lineY += y;
+  moveText(x, y) {
+    this.current.x = this.current.lineX += x;
+    this.current.y = this.current.lineY += y;
   }
-  impostaTestoMossaPrincipale(x, y) {
-    questo.setLeading(-y);
-    questo.moveText(x, y);
+  setLeadingMoveText(x, y) {
+    this.setLeading(-y);
+    this.moveText(x, y);
   }
-  impostaMatriceTesto(a, b, c, d, e, f) {
-    questa matrice di testo corrente = [a, b, c, d, e, f];
+  setTextMatrix(a, b, c, d, e, f) {
+    this.current.textMatrix = [a, b, c, d, e, f];
     this.current.textMatrixScale = Math.hypot(a, b);
-    questo.corrente.x = questa.linea.correnteX = 0;
-    questa.corrente.y = questa.corrente.lineY = 0;
+    this.current.x = this.current.lineX = 0;
+    this.current.y = this.current.lineY = 0;
   }
-  rigasuccessiva() {
+  nextLine() {
     this.moveText(0, this.current.leading);
   }
-  paintChar(carattere, x, y, patternTransform) {
+  paintChar(character, x, y, patternTransform) {
     const ctx = this.ctx;
-    const corrente = this.current;
+    const current = this.current;
     const font = current.font;
     const textRenderingMode = current.textRenderingMode;
     const fontSize = current.fontSize / current.fontSizeScale;
     const fillStrokeMode = textRenderingMode & _util.TextRenderingMode.FILL_STROKE_MASK;
     const isAddToPathSet = !!(textRenderingMode & _util.TextRenderingMode.ADD_TO_PATH_FLAG);
     const patternFill = current.patternFill && !font.missingFile;
-    lascia addToPath;
-    se (font.disableFontFace || isAddToPathSet || patternFill) {
-      addToPath = font.getPathGenerator(this.commonObjs, carattere);
+    let addToPath;
+    if (font.disableFontFace || isAddToPathSet || patternFill) {
+      addToPath = font.getPathGenerator(this.commonObjs, character);
     }
-    se (font.disableFontFace || patternFill) {
+    if (font.disableFontFace || patternFill) {
       ctx.save();
       ctx.translate(x, y);
       ctx.beginPath();
       addToPath(ctx, fontSize);
-      se (patternTransform) {
+      if (patternTransform) {
         ctx.setTransform(...patternTransform);
       }
-      se (fillStrokeMode === _util.TextRenderingMode.FILL || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
-        ctx.riempi();
+      if (fillStrokeMode === _util.TextRenderingMode.FILL || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
+        ctx.fill();
       }
-      se (fillStrokeMode === _util.TextRenderingMode.STROKE || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
+      if (fillStrokeMode === _util.TextRenderingMode.STROKE || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
         ctx.stroke();
       }
       ctx.restore();
-    } altro {
-      se (fillStrokeMode === _util.TextRenderingMode.FILL || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
-        ctx.fillText(carattere, x, y);
+    } else {
+      if (fillStrokeMode === _util.TextRenderingMode.FILL || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
+        ctx.fillText(character, x, y);
       }
-      se (fillStrokeMode === _util.TextRenderingMode.STROKE || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
-        ctx.strokeText(carattere, x, y);
+      if (fillStrokeMode === _util.TextRenderingMode.STROKE || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
+        ctx.strokeText(character, x, y);
       }
     }
-    se (èAggiungiAlSetPercorso) {
-      percorsi costanti = this.pendingTextPaths ||= [];
-      percorsi.push({
-        trasforma: (0, _display_utils.getCurrentTransform)(ctx),
-        X,
-        e,
-        dimensione del carattere,
-        aggiungiAlPercorso
+    if (isAddToPathSet) {
+      const paths = this.pendingTextPaths ||= [];
+      paths.push({
+        transform: (0, _display_utils.getCurrentTransform)(ctx),
+        x,
+        y,
+        fontSize,
+        addToPath
       });
     }
   }
-  ottieni isFontSubpixelAAEnabled() {
-    costante {
-      contesto: ctx
+  get isFontSubpixelAAEnabled() {
+    const {
+      context: ctx
     } = this.cachedCanvases.getCanvas("isFontSubpixelAAEnabled", 10, 10);
-    ctx.scala(1.5, 1);
-    ctx.fillText("Io", 0, 10);
-    dati costanti = ctx.getImageData(0, 0, 10, 10).dati;
-    lascia abilitato = falso;
-    per (lascia che i = 3; i < lunghezza dati; i += 4) {
-      se (dati[i] > 0 e dati[i] < 255) {
-        abilitato = vero;
-        rottura;
+    ctx.scale(1.5, 1);
+    ctx.fillText("I", 0, 10);
+    const data = ctx.getImageData(0, 0, 10, 10).data;
+    let enabled = false;
+    for (let i = 3; i < data.length; i += 4) {
+      if (data[i] > 0 && data[i] < 255) {
+        enabled = true;
+        break;
       }
     }
     return (0, _util.shadow)(this, "isFontSubpixelAAEnabled", enabled);
   }
-  showText(glifi) {
-    const corrente = this.current;
+  showText(glyphs) {
+    const current = this.current;
     const font = current.font;
-    se (font.isType3Font) {
-      restituisci this.showType3Text(glifi);
+    if (font.isType3Font) {
+      return this.showType3Text(glyphs);
     }
     const fontSize = current.fontSize;
-    se (dimensione carattere === 0) {
-      restituisci indefinito;
+    if (fontSize === 0) {
+      return undefined;
     }
     const ctx = this.ctx;
     const fontSizeScale = current.fontSizeScale;
@@ -7694,99 +7694,99 @@ classe CanvasGraphics {
     const wordSpacing = current.wordSpacing;
     const fontDirection = current.fontDirection;
     const textHScale = current.textHScale * fontDirection;
-    const glyphsLength = glifi.lunghezza;
-    const verticale = font.vertical;
-    const spacingDir = verticale ? 1 : -1;
+    const glyphsLength = glyphs.length;
+    const vertical = font.vertical;
+    const spacingDir = vertical ? 1 : -1;
     const defaultVMetrics = font.defaultVMetrics;
     const widthAdvanceScale = fontSize * current.fontMatrix[0];
     const simpleFillText = current.textRenderingMode === _util.TextRenderingMode.FILL && !font.disableFontFace && !current.patternFill;
     ctx.save();
     ctx.transform(...current.textMatrix);
     ctx.translate(current.x, current.y + current.textRise);
-    se (direzione font > 0) {
+    if (fontDirection > 0) {
       ctx.scale(textHScale, -1);
-    } altro {
+    } else {
       ctx.scale(textHScale, 1);
     }
-    lascia che patternTransform;
-    se (current.patternFill) {
+    let patternTransform;
+    if (current.patternFill) {
       ctx.save();
       const pattern = current.fillColor.getPattern(ctx, this, (0, _display_utils.getCurrentTransformInverse)(ctx), _pattern_helper.PathType.FILL);
       patternTransform = (0, _display_utils.getCurrentTransform)(ctx);
       ctx.restore();
-      ctx.fillStyle = modello;
+      ctx.fillStyle = pattern;
     }
-    lascia che lineWidth = current.lineWidth;
+    let lineWidth = current.lineWidth;
     const scale = current.textMatrixScale;
-    se (scala === 0 || larghezzalinea === 0) {
+    if (scale === 0 || lineWidth === 0) {
       const fillStrokeMode = current.textRenderingMode & _util.TextRenderingMode.FILL_STROKE_MASK;
-      se (fillStrokeMode === _util.TextRenderingMode.STROKE || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
-        larghezza della linea = this.getSinglePixelWidth();
+      if (fillStrokeMode === _util.TextRenderingMode.STROKE || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
+        lineWidth = this.getSinglePixelWidth();
       }
-    } altro {
-      lineWidth /= scala;
+    } else {
+      lineWidth /= scale;
     }
-    se (fontSizeScale !== 1.0) {
+    if (fontSizeScale !== 1.0) {
       ctx.scale(fontSizeScale, fontSizeScale);
-      larghezzalinea /= scaladimensionecarattere;
+      lineWidth /= fontSizeScale;
     }
-    ctx.lineWidth = larghezzalinea;
-    se (font.isInvalidPDFjsFont) {
-      caratteri costanti = [];
-      lascia larghezza = 0;
-      per (glifo costante di glifi) {
+    ctx.lineWidth = lineWidth;
+    if (font.isInvalidPDFjsFont) {
+      const chars = [];
+      let width = 0;
+      for (const glyph of glyphs) {
         chars.push(glyph.unicode);
-        larghezza += glifo.larghezza;
+        width += glyph.width;
       }
       ctx.fillText(chars.join(""), 0, 0);
       current.x += width * widthAdvanceScale * textHScale;
       ctx.restore();
-      questo.componi();
-      restituisci indefinito;
+      this.compose();
+      return undefined;
     }
-    sia x = 0,
-      io;
-    per (i = 0; i < lunghezzaglifi; ++i) {
+    let x = 0,
+      i;
+    for (i = 0; i < glyphsLength; ++i) {
       const glyph = glyphs[i];
-      se (tipo di glifo === "numero") {
-        x += spaziaturaDir * glifo * dimensionecarattere / 1000;
-        continuare;
+      if (typeof glyph === "number") {
+        x += spacingDir * glyph * fontSize / 1000;
+        continue;
       }
-      lascia restoreNeeded = false;
+      let restoreNeeded = false;
       const spacing = (glyph.isSpace ? wordSpacing : 0) + charSpacing;
-      const carattere = glyph.fontChar;
+      const character = glyph.fontChar;
       const accent = glyph.accent;
-      lascia scalatoX, scalatoY;
-      lascia larghezza = glifo.larghezza;
-      se (verticale) {
+      let scaledX, scaledY;
+      let width = glyph.width;
+      if (vertical) {
         const vmetric = glyph.vmetric || defaultVMetrics;
         const vx = -(glyph.vmetric ? vmetric[1] : width * 0.5) * widthAdvanceScale;
         const vy = vmetric[2] * widthAdvanceScale;
-        larghezza = vmetric ? -vmetric[0] : larghezza;
+        width = vmetric ? -vmetric[0] : width;
         scaledX = vx / fontSizeScale;
         scaledY = (x + vy) / fontSizeScale;
-      } altro {
+      } else {
         scaledX = x / fontSizeScale;
-        scalatoY = 0;
+        scaledY = 0;
       }
-      se (font.remeasure && width > 0) {
+      if (font.remeasure && width > 0) {
         const measuredWidth = ctx.measureText(character).width * 1000 / fontSize * fontSizeScale;
-        se (larghezza < larghezza misurata e this.isFontSubpixelAAEnabled) {
+        if (width < measuredWidth && this.isFontSubpixelAAEnabled) {
           const characterScaleX = width / measuredWidth;
           restoreNeeded = true;
           ctx.save();
           ctx.scale(characterScaleX, 1);
           scaledX /= characterScaleX;
-        } altrimenti se (larghezza !== larghezza misurata) {
-          scaledX += (larghezza - larghezza misurata) / 2000 * fontSize / fontSizeScale;
+        } else if (width !== measuredWidth) {
+          scaledX += (width - measuredWidth) / 2000 * fontSize / fontSizeScale;
         }
       }
-      se (questo.contentVisible && (glyph.isInFont || font.missingFile)) {
-        se (simpleFillText && !accent) {
-          ctx.fillText(carattere, scalatoX, scalatoY);
-        } altro {
-          this.paintChar(carattere, scaledX, scaledY, patternTransform);
-          se (accento) {
+      if (this.contentVisible && (glyph.isInFont || font.missingFile)) {
+        if (simpleFillText && !accent) {
+          ctx.fillText(character, scaledX, scaledY);
+        } else {
+          this.paintChar(character, scaledX, scaledY, patternTransform);
+          if (accent) {
             const scaledAccentX = scaledX + fontSize * accent.offset.x / fontSizeScale;
             const scaledAccentY = scaledY - fontSize * accent.offset.y / fontSizeScale;
             this.paintChar(accent.fontChar, scaledAccentX, scaledAccentY, patternTransform);
@@ -7794,23 +7794,23 @@ classe CanvasGraphics {
         }
       }
       const charWidth = vertical ? width * widthAdvanceScale - spacing * fontDirection : width * widthAdvanceScale + spacing * fontDirection;
-      x += larghezza carattere;
-      se (ripristino necessario) {
+      x += charWidth;
+      if (restoreNeeded) {
         ctx.restore();
       }
     }
-    se (verticale) {
-      corrente.y -= x;
-    } altro {
+    if (vertical) {
+      current.y -= x;
+    } else {
       current.x += x * textHScale;
     }
     ctx.restore();
-    questo.componi();
-    restituisci indefinito;
+    this.compose();
+    return undefined;
   }
-  showType3Text(glifi) {
+  showType3Text(glyphs) {
     const ctx = this.ctx;
-    const corrente = this.current;
+    const current = this.current;
     const font = current.font;
     const fontSize = current.fontSize;
     const fontDirection = current.fontDirection;
@@ -7819,329 +7819,329 @@ classe CanvasGraphics {
     const wordSpacing = current.wordSpacing;
     const textHScale = current.textHScale * fontDirection;
     const fontMatrix = current.fontMatrix || _util.FONT_IDENTITY_MATRIX;
-    const glyphsLength = glifi.lunghezza;
+    const glyphsLength = glyphs.length;
     const isTextInvisible = current.textRenderingMode === _util.TextRenderingMode.INVISIBLE;
-    lascia i, glifo, larghezza, lunghezzaspaziatura;
-    se (isTextInvisible || fontSize === 0) {
-      ritorno;
+    let i, glyph, width, spacingLength;
+    if (isTextInvisible || fontSize === 0) {
+      return;
     }
     this._cachedScaleForStroking[0] = -1;
     this._cachedGetSinglePixelWidth = null;
     ctx.save();
     ctx.transform(...current.textMatrix);
-    ctx.translate(corrente.x, corrente.y);
+    ctx.translate(current.x, current.y);
     ctx.scale(textHScale, fontDirection);
-    per (i = 0; i < lunghezzaglifi; ++i) {
-      glifo = glifi[i];
-      se (tipo di glifo === "numero") {
-        lunghezzaspaziatura = distanzaspaziatura * glifo * dimensionecarattere / 1000;
+    for (i = 0; i < glyphsLength; ++i) {
+      glyph = glyphs[i];
+      if (typeof glyph === "number") {
+        spacingLength = spacingDir * glyph * fontSize / 1000;
         this.ctx.translate(spacingLength, 0);
         current.x += spacingLength * textHScale;
-        continuare;
+        continue;
       }
       const spacing = (glyph.isSpace ? wordSpacing : 0) + charSpacing;
       const operatorList = font.charProcOperatorList[glyph.operatorListId];
-      se (!elencooperatori) {
-        (0, _util.warn)(`Il carattere di tipo 3 "${glyph.operatorListId}" non è disponibile.`);
-        continuare;
+      if (!operatorList) {
+        (0, _util.warn)(`Type3 character "${glyph.operatorListId}" is not available.`);
+        continue;
       }
-      se (questo.contenutovisibile) {
-        this.processingType3 = glifo;
-        questo.salva();
-        ctx.scale(dimensionecarattere, dimensionecarattere);
+      if (this.contentVisible) {
+        this.processingType3 = glyph;
+        this.save();
+        ctx.scale(fontSize, fontSize);
         ctx.transform(...fontMatrix);
         this.executeOperatorList(operatorList);
-        questo.ripristina();
+        this.restore();
       }
-      const trasformato = _util.Util.applyTransform([glyph.width, 0], fontMatrix);
-      larghezza = trasformato[0] * dimensione carattere + spaziatura;
-      ctx.translate(larghezza, 0);
+      const transformed = _util.Util.applyTransform([glyph.width, 0], fontMatrix);
+      width = transformed[0] * fontSize + spacing;
+      ctx.translate(width, 0);
       current.x += width * textHScale;
     }
     ctx.restore();
     this.processingType3 = null;
   }
   setCharWidth(xWidth, yWidth) {}
-  setCharWidthAndBounds(larghezzax, larghezzay, llx, lly, urx, ury) {
+  setCharWidthAndBounds(xWidth, yWidth, llx, lly, urx, ury) {
     this.ctx.rect(llx, lly, urx - llx, ury - lly);
-    questo.ctx.clip();
-    questo.endPath();
+    this.ctx.clip();
+    this.endPath();
   }
   getColorN_Pattern(IR) {
-    lascia il modello;
-    se (IR[0] === "TilingPattern") {
-      colore costante = IR[1];
+    let pattern;
+    if (IR[0] === "TilingPattern") {
+      const color = IR[1];
       const baseTransform = this.baseTransform || (0, _display_utils.getCurrentTransform)(this.ctx);
       const canvasGraphicsFactory = {
         createCanvasGraphics: ctx => {
-          restituisci nuovo CanvasGraphics(ctx, this.commonObjs, this.objs, this.canvasFactory, this.filterFactory, {
+          return new CanvasGraphics(ctx, this.commonObjs, this.objs, this.canvasFactory, this.filterFactory, {
             optionalContentConfig: this.optionalContentConfig,
-            markedContentStack: questo.markedContentStack
+            markedContentStack: this.markedContentStack
           });
         }
       };
       pattern = new _pattern_helper.TilingPattern(IR, color, this.ctx, canvasGraphicsFactory, baseTransform);
-    } altro {
-      modello = this._getPattern(IR[1], IR[2]);
+    } else {
+      pattern = this._getPattern(IR[1], IR[2]);
     }
-    modello di ritorno;
+    return pattern;
   }
-  impostaColoreTrattoN() {
-    this.current.strokeColor = this.getColorN_Pattern(argomenti);
+  setStrokeColorN() {
+    this.current.strokeColor = this.getColorN_Pattern(arguments);
   }
-  impostaColoreRiempimentoN() {
-    this.current.fillColor = this.getColorN_Pattern(argomenti);
-    questo.modello.corrente.Riempimento = vero;
+  setFillColorN() {
+    this.current.fillColor = this.getColorN_Pattern(arguments);
+    this.current.patternFill = true;
   }
   setStrokeRGBColor(r, g, b) {
     const color = _util.Util.makeHexColor(r, g, b);
-    this.ctx.strokeStyle = colore;
-    this.current.strokeColor = colore;
+    this.ctx.strokeStyle = color;
+    this.current.strokeColor = color;
   }
   setFillRGBColor(r, g, b) {
     const color = _util.Util.makeHexColor(r, g, b);
-    this.ctx.fillStyle = colore;
-    this.current.fillColor = colore;
+    this.ctx.fillStyle = color;
+    this.current.fillColor = color;
     this.current.patternFill = false;
   }
-  _getPattern(objId, matrice = null) {
-    lascia il modello;
-    se (this.cachedPatterns.has(objId)) {
-      modello = this.cachedPatterns.get(objId);
-    } altro {
-      modello = (0, _pattern_helper.getShadingPattern)(this.getObject(objId));
+  _getPattern(objId, matrix = null) {
+    let pattern;
+    if (this.cachedPatterns.has(objId)) {
+      pattern = this.cachedPatterns.get(objId);
+    } else {
+      pattern = (0, _pattern_helper.getShadingPattern)(this.getObject(objId));
       this.cachedPatterns.set(objId, pattern);
     }
-    se (matrice) {
-      pattern.matrix = matrice;
+    if (matrix) {
+      pattern.matrix = matrix;
     }
-    modello di ritorno;
+    return pattern;
   }
   shadingFill(objId) {
-    se (!this.contentVisible) {
-      ritorno;
+    if (!this.contentVisible) {
+      return;
     }
     const ctx = this.ctx;
-    questo.salva();
-    modello costante = this._getPattern(objId);
+    this.save();
+    const pattern = this._getPattern(objId);
     ctx.fillStyle = pattern.getPattern(ctx, this, (0, _display_utils.getCurrentTransformInverse)(ctx), _pattern_helper.PathType.SHADING);
     const inv = (0, _display_utils.getCurrentTransformInverse)(ctx);
-    se (inv) {
-      costante {
-        larghezza,
-        altezza
+    if (inv) {
+      const {
+        width,
+        height
       } = ctx.canvas;
-      const [x0, y0, x1, y1] = _util.Util.getAxialAlignedBoundingBox([0, 0, larghezza, altezza], inv);
+      const [x0, y0, x1, y1] = _util.Util.getAxialAlignedBoundingBox([0, 0, width, height], inv);
       this.ctx.fillRect(x0, y0, x1 - x0, y1 - y0);
-    } altro {
+    } else {
       this.ctx.fillRect(-1e10, -1e10, 2e10, 2e10);
     }
-    questo.compose(questo.corrente.getClippedPathBoundingBox());
-    questo.ripristina();
+    this.compose(this.current.getClippedPathBoundingBox());
+    this.restore();
   }
   beginInlineImage() {
-    (0, _util.unreachable)("Non dovrebbe chiamare beginInlineImage");
+    (0, _util.unreachable)("Should not call beginInlineImage");
   }
   beginImageData() {
-    (0, _util.unreachable)("Non dovrebbe chiamare beginImageData");
+    (0, _util.unreachable)("Should not call beginImageData");
   }
-  paintFormXObjectBegin(matrice, bbox) {
-    se (!this.contentVisible) {
-      ritorno;
+  paintFormXObjectBegin(matrix, bbox) {
+    if (!this.contentVisible) {
+      return;
     }
-    questo.salva();
+    this.save();
     this.baseTransformStack.push(this.baseTransform);
-    se (Array.isArray(matrice) && lunghezza matrice === 6) {
+    if (Array.isArray(matrix) && matrix.length === 6) {
       this.transform(...matrix);
     }
     this.baseTransform = (0, _display_utils.getCurrentTransform)(this.ctx);
-    se (bbox) {
-      larghezza costante = bbox[2] - bbox[0];
-      altezza costante = bbox[3] - bbox[1];
-      this.ctx.rect(bbox[0], bbox[1], larghezza, altezza);
-      questo.aggiornamento.correnteRectMinMax((0, _display_utils.getCurrentTransform)(questo.ctx), bbox);
-      questo.clip();
-      questo.endPath();
+    if (bbox) {
+      const width = bbox[2] - bbox[0];
+      const height = bbox[3] - bbox[1];
+      this.ctx.rect(bbox[0], bbox[1], width, height);
+      this.current.updateRectMinMax((0, _display_utils.getCurrentTransform)(this.ctx), bbox);
+      this.clip();
+      this.endPath();
     }
   }
   paintFormXObjectEnd() {
-    se (!this.contentVisible) {
-      ritorno;
+    if (!this.contentVisible) {
+      return;
     }
-    questo.ripristina();
+    this.restore();
     this.baseTransform = this.baseTransformStack.pop();
   }
-  beginGroup(gruppo) {
-    se (!this.contentVisible) {
-      ritorno;
+  beginGroup(group) {
+    if (!this.contentVisible) {
+      return;
     }
-    questo.salva();
-    se (this.inSMaskMode) {
-      questo.endSMaskMode();
+    this.save();
+    if (this.inSMaskMode) {
+      this.endSMaskMode();
       this.current.activeSMask = null;
     }
     const currentCtx = this.ctx;
-    se (!gruppo.isolato) {
-      (0, _util.info)("TODO: supportare gruppi non isolati.");
+    if (!group.isolated) {
+      (0, _util.info)("TODO: Support non-isolated groups.");
     }
-    se (gruppo.knockout) {
-      (0, _util.warn)("Gruppi knockout non supportati.");
+    if (group.knockout) {
+      (0, _util.warn)("Knockout groups not supported.");
     }
     const currentTransform = (0, _display_utils.getCurrentTransform)(currentCtx);
-    se (gruppo.matrice) {
+    if (group.matrix) {
       currentCtx.transform(...group.matrix);
     }
-    se (!gruppo.bbox) {
-      throw new Error("È richiesto un riquadro di delimitazione.");
+    if (!group.bbox) {
+      throw new Error("Bounding box is required.");
     }
-    lascia limiti = _util.Util.getAxialAlignedBoundingBox(group.bbox, (0, _display_utils.getCurrentTransform)(currentCtx));
+    let bounds = _util.Util.getAxialAlignedBoundingBox(group.bbox, (0, _display_utils.getCurrentTransform)(currentCtx));
     const canvasBounds = [0, 0, currentCtx.canvas.width, currentCtx.canvas.height];
-    limiti = _util.Util.intersect(limiti, limititela) || [0, 0, 0, 0];
+    bounds = _util.Util.intersect(bounds, canvasBounds) || [0, 0, 0, 0];
     const offsetX = Math.floor(bounds[0]);
     const offsetY = Math.floor(bounds[1]);
-    lascia drawnWidth = Math.max(Math.ceil(bounds[2]) - offsetX, 1);
-    lascia drawnHeight = Math.max(Math.ceil(bounds[3]) - offsetY, 1);
-    lascia che scaleX = 1,
-      scalaY = 1;
-    se (larghezza disegnata > DIMENSIONE_GRUPPO_MAX) {
-      scaleX = larghezza disegnata / DIMENSIONE_GRUPPO_MAX;
-      larghezza disegnata = DIMENSIONE_GRUPPO_MAX;
+    let drawnWidth = Math.max(Math.ceil(bounds[2]) - offsetX, 1);
+    let drawnHeight = Math.max(Math.ceil(bounds[3]) - offsetY, 1);
+    let scaleX = 1,
+      scaleY = 1;
+    if (drawnWidth > MAX_GROUP_SIZE) {
+      scaleX = drawnWidth / MAX_GROUP_SIZE;
+      drawnWidth = MAX_GROUP_SIZE;
     }
-    se (altezza disegnata > DIMENSIONE_GRUPPO_MAX) {
-      scaleY = altezza disegnata / DIMENSIONE_GRUPPO_MAX;
-      altezza disegnata = DIMENSIONE_GRUPPO_MAX;
+    if (drawnHeight > MAX_GROUP_SIZE) {
+      scaleY = drawnHeight / MAX_GROUP_SIZE;
+      drawnHeight = MAX_GROUP_SIZE;
     }
-    this.current.startNewPathAndClipBox([0, 0, larghezza disegnata, altezza disegnata]);
+    this.current.startNewPathAndClipBox([0, 0, drawnWidth, drawnHeight]);
     let cacheId = "groupAt" + this.groupLevel;
-    se (gruppo.smask) {
+    if (group.smask) {
       cacheId += "_smask_" + this.smaskCounter++ % 2;
     }
     const scratchCanvas = this.cachedCanvases.getCanvas(cacheId, drawnWidth, drawnHeight);
     const groupCtx = scratchCanvas.context;
-    groupCtx.scale(1 / scalaX, 1 / scalaY);
+    groupCtx.scale(1 / scaleX, 1 / scaleY);
     groupCtx.translate(-offsetX, -offsetY);
     groupCtx.transform(...currentTransform);
-    se (gruppo.smask) {
-      questo.smaskStack.push({
-        tela: scratchCanvas.canvas,
-        contesto: groupCtx,
+    if (group.smask) {
+      this.smaskStack.push({
+        canvas: scratchCanvas.canvas,
+        context: groupCtx,
         offsetX,
         offsetY,
-        scalaX,
-        scalaY,
-        sottotipo: gruppo.smask.sottotipo,
-        sfondo: group.smask.backdrop,
+        scaleX,
+        scaleY,
+        subtype: group.smask.subtype,
+        backdrop: group.smask.backdrop,
         transferMap: group.smask.transferMap || null,
         startTransformInverse: null
       });
-    } altro {
+    } else {
       currentCtx.setTransform(1, 0, 0, 1, 0, 0);
       currentCtx.translate(offsetX, offsetY);
-      currentCtx.scale(scalaX, scalaY);
+      currentCtx.scale(scaleX, scaleY);
       currentCtx.save();
     }
     copyCtxState(currentCtx, groupCtx);
-    questo.ctx = gruppoCtx;
+    this.ctx = groupCtx;
     this.setGState([["BM", "source-over"], ["ca", 1], ["CA", 1]]);
-    questo.groupStack.push(currentCtx);
-    questo.gruppoLevel++;
+    this.groupStack.push(currentCtx);
+    this.groupLevel++;
   }
-  endGroup(gruppo) {
-    se (!this.contentVisible) {
-      ritorno;
+  endGroup(group) {
+    if (!this.contentVisible) {
+      return;
     }
-    questo.gruppoLevel--;
+    this.groupLevel--;
     const groupCtx = this.ctx;
     const ctx = this.groupStack.pop();
-    questo.ctx = ctx;
+    this.ctx = ctx;
     this.ctx.imageSmoothingEnabled = false;
-    se (gruppo.smask) {
+    if (group.smask) {
       this.tempSMask = this.smaskStack.pop();
-      questo.ripristina();
-    } altro {
-      questo.ctx.restore();
+      this.restore();
+    } else {
+      this.ctx.restore();
       const currentMtx = (0, _display_utils.getCurrentTransform)(this.ctx);
-      questo.ripristina();
-      questo.ctx.salva();
+      this.restore();
+      this.ctx.save();
       this.ctx.setTransform(...currentMtx);
       const dirtyBox = _util.Util.getAxialAlignedBoundingBox([0, 0, groupCtx.canvas.width, groupCtx.canvas.height], currentMtx);
       this.ctx.drawImage(groupCtx.canvas, 0, 0);
-      questo.ctx.restore();
-      questo.compose(dirtyBox);
+      this.ctx.restore();
+      this.compose(dirtyBox);
     }
   }
   beginAnnotation(id, rect, transform, matrix, hasOwnCanvas) {
-    questo.#restoreInitialState();
+    this.#restoreInitialState();
     resetCtxToDefault(this.ctx);
-    questo.ctx.salva();
-    questo.salva();
-    se (this.baseTransform) {
+    this.ctx.save();
+    this.save();
+    if (this.baseTransform) {
       this.ctx.setTransform(...this.baseTransform);
     }
-    se (Array.isArray(rect) && rect.length === 4) {
-      larghezza costante = rect[2] - rect[0];
-      altezza costante = rect[3] - rect[1];
-      se (hasOwnCanvas e this.annotationCanvasMap) {
-        trasforma = trasforma.fetta();
-        trasforma[4] -= rect[0];
-        trasforma[5] -= rect[1];
+    if (Array.isArray(rect) && rect.length === 4) {
+      const width = rect[2] - rect[0];
+      const height = rect[3] - rect[1];
+      if (hasOwnCanvas && this.annotationCanvasMap) {
+        transform = transform.slice();
+        transform[4] -= rect[0];
+        transform[5] -= rect[1];
         rect = rect.slice();
-        rettangolo[0] = rettangolo[1] = 0;
-        rect[2] = larghezza;
-        rect[3] = altezza;
-        const [scalaX, scalaY] = _util.Util.singularValueDecompose2dScale((0, _display_utils.getCurrentTransform)(this.ctx));
-        costante {
-          scala di visualizzazione
-        } = questo;
+        rect[0] = rect[1] = 0;
+        rect[2] = width;
+        rect[3] = height;
+        const [scaleX, scaleY] = _util.Util.singularValueDecompose2dScale((0, _display_utils.getCurrentTransform)(this.ctx));
+        const {
+          viewportScale
+        } = this;
         const canvasWidth = Math.ceil(width * this.outputScaleX * viewportScale);
-        const canvasHeight = Math.ceil(altezza * this.outputScaleY * viewportScale);
+        const canvasHeight = Math.ceil(height * this.outputScaleY * viewportScale);
         this.annotationCanvas = this.canvasFactory.create(canvasWidth, canvasHeight);
-        costante {
-          tela,
-          contesto
+        const {
+          canvas,
+          context
         } = this.annotationCanvas;
         this.annotationCanvasMap.set(id, canvas);
         this.annotationCanvas.savedCtx = this.ctx;
-        this.ctx = contesto;
-        questo.ctx.salva();
-        this.ctx.setTransform(scaleX, 0, 0, -scaleY, 0, altezza * scalaY);
+        this.ctx = context;
+        this.ctx.save();
+        this.ctx.setTransform(scaleX, 0, 0, -scaleY, 0, height * scaleY);
         resetCtxToDefault(this.ctx);
-      } altro {
+      } else {
         resetCtxToDefault(this.ctx);
-        this.ctx.rect(rect[0], rect[1], larghezza, altezza);
-        questo.ctx.clip();
-        questo.endPath();
+        this.ctx.rect(rect[0], rect[1], width, height);
+        this.ctx.clip();
+        this.endPath();
       }
     }
     this.current = new CanvasExtraState(this.ctx.canvas.width, this.ctx.canvas.height);
     this.transform(...transform);
     this.transform(...matrix);
   }
-  fineAnnotazione() {
-    se (this.annotationCanvas) {
-      questo.ctx.restore();
-      questo.#drawFilter();
-      questo.ctx = questo.annotazioneCanvas.savedCtx;
-      elimina this.annotationCanvas.savedCtx;
-      elimina questo.annotazioneCanvas;
+  endAnnotation() {
+    if (this.annotationCanvas) {
+      this.ctx.restore();
+      this.#drawFilter();
+      this.ctx = this.annotationCanvas.savedCtx;
+      delete this.annotationCanvas.savedCtx;
+      delete this.annotationCanvas;
     }
   }
   paintImageMaskXObject(img) {
-    se (!this.contentVisible) {
-      ritorno;
+    if (!this.contentVisible) {
+      return;
     }
-    conteggio costante = img.count;
+    const count = img.count;
     img = this.getObject(img.data, img);
-    img.count = conteggio;
+    img.count = count;
     const ctx = this.ctx;
     const glyph = this.processingType3;
-    se (glifo) {
-      se (glyph.compiled === indefinito) {
+    if (glyph) {
+      if (glyph.compiled === undefined) {
         glyph.compiled = compileType3Glyph(img);
       }
-      se (glyph.compiled) {
-        glifo.compilato(ctx);
-        ritorno;
+      if (glyph.compiled) {
+        glyph.compiled(ctx);
+        return;
       }
     }
     const mask = this._createMaskCanvas(img);
@@ -8150,159 +8150,159 @@ classe CanvasGraphics {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.drawImage(maskCanvas, mask.offsetX, mask.offsetY);
     ctx.restore();
-    questo.componi();
+    this.compose();
   }
-  paintImageMaskXObjectRepeat(img, scaleX, skewX = 0, skewY = 0, scaleY, posizioni) {
-    se (!this.contentVisible) {
-      ritorno;
+  paintImageMaskXObjectRepeat(img, scaleX, skewX = 0, skewY = 0, scaleY, positions) {
+    if (!this.contentVisible) {
+      return;
     }
     img = this.getObject(img.data, img);
     const ctx = this.ctx;
     ctx.save();
     const currentTransform = (0, _display_utils.getCurrentTransform)(ctx);
-    ctx.transform(scalaX, inclinazioneX, inclinazioneY, scalaY, 0, 0);
+    ctx.transform(scaleX, skewX, skewY, scaleY, 0, 0);
     const mask = this._createMaskCanvas(img);
     ctx.setTransform(1, 0, 0, 1, mask.offsetX - currentTransform[4], mask.offsetY - currentTransform[5]);
-    per (lascia che i = 0, ii = posizioni.lunghezza; i < ii; i += 2) {
+    for (let i = 0, ii = positions.length; i < ii; i += 2) {
       const trans = _util.Util.transform(currentTransform, [scaleX, skewX, skewY, scaleY, positions[i], positions[i + 1]]);
       const [x, y] = _util.Util.applyTransform([0, 0], trans);
       ctx.drawImage(mask.canvas, x, y);
     }
     ctx.restore();
-    questo.componi();
+    this.compose();
   }
-  paintImageMaskXObjectGroup(immagini) {
-    se (!this.contentVisible) {
-      ritorno;
+  paintImageMaskXObjectGroup(images) {
+    if (!this.contentVisible) {
+      return;
     }
     const ctx = this.ctx;
     const fillColor = this.current.fillColor;
     const isPatternFill = this.current.patternFill;
-    per (immagine costante di immagini) {
-      costante {
-        dati,
-        larghezza,
-        altezza,
-        trasformare
-      } = immagine;
-      const maskCanvas = this.cachedCanvases.getCanvas("maskCanvas", larghezza, altezza);
+    for (const image of images) {
+      const {
+        data,
+        width,
+        height,
+        transform
+      } = image;
+      const maskCanvas = this.cachedCanvases.getCanvas("maskCanvas", width, height);
       const maskCtx = maskCanvas.context;
-      mascheraCtx.save();
-      const img = this.getObject(dati, immagine);
+      maskCtx.save();
+      const img = this.getObject(data, image);
       putBinaryImageMask(maskCtx, img);
-      maskCtx.globalCompositeOperation = "sorgente-in";
+      maskCtx.globalCompositeOperation = "source-in";
       maskCtx.fillStyle = isPatternFill ? fillColor.getPattern(maskCtx, this, (0, _display_utils.getCurrentTransformInverse)(ctx), _pattern_helper.PathType.FILL) : fillColor;
-      maskCtx.fillRect(0, 0, larghezza, altezza);
+      maskCtx.fillRect(0, 0, width, height);
       maskCtx.restore();
       ctx.save();
-      ctx.transform(...trasforma);
+      ctx.transform(...transform);
       ctx.scale(1, -1);
-      drawImageAtIntegerCoords(ctx, maskCanvas.canvas, 0, 0, larghezza, altezza, 0, -1, 1, 1);
+      drawImageAtIntegerCoords(ctx, maskCanvas.canvas, 0, 0, width, height, 0, -1, 1, 1);
       ctx.restore();
     }
-    questo.componi();
+    this.compose();
   }
   paintImageXObject(objId) {
-    se (!this.contentVisible) {
-      ritorno;
+    if (!this.contentVisible) {
+      return;
     }
     const imgData = this.getObject(objId);
-    se (!imgData) {
-      (0, _util.warn)("L'immagine dipendente non è ancora pronta");
-      ritorno;
+    if (!imgData) {
+      (0, _util.warn)("Dependent image isn't ready yet");
+      return;
     }
     this.paintInlineImageXObject(imgData);
   }
-  paintImageXObjectRepeat(objId, scaleX, scaleY, posizioni) {
-    se (!this.contentVisible) {
-      ritorno;
+  paintImageXObjectRepeat(objId, scaleX, scaleY, positions) {
+    if (!this.contentVisible) {
+      return;
     }
     const imgData = this.getObject(objId);
-    se (!imgData) {
-      (0, _util.warn)("L'immagine dipendente non è ancora pronta");
-      ritorno;
+    if (!imgData) {
+      (0, _util.warn)("Dependent image isn't ready yet");
+      return;
     }
     const width = imgData.width;
-    altezza costante = imgData.height;
-    mappa costante = [];
-    per (lascia che i = 0, ii = posizioni.lunghezza; i < ii; i += 2) {
-      mappa.push({
-        trasforma: [scalaX, 0, 0, scalaY, posizioni[i], posizioni[i + 1]],
+    const height = imgData.height;
+    const map = [];
+    for (let i = 0, ii = positions.length; i < ii; i += 2) {
+      map.push({
+        transform: [scaleX, 0, 0, scaleY, positions[i], positions[i + 1]],
         x: 0,
-        e: 0,
-        w: larghezza,
-        h: altezza
+        y: 0,
+        w: width,
+        h: height
       });
     }
     this.paintInlineImageXObjectGroup(imgData, map);
   }
-  applicaTrasferisciMappeACanvas(ctx) {
-    se (this.current.transferMaps !== "nessuno") {
+  applyTransferMapsToCanvas(ctx) {
+    if (this.current.transferMaps !== "none") {
       ctx.filter = this.current.transferMaps;
       ctx.drawImage(ctx.canvas, 0, 0);
-      ctx.filter = "nessuno";
+      ctx.filter = "none";
     }
-    restituisci ctx.canvas;
+    return ctx.canvas;
   }
-  applicaTrasferisciMappeABitmap(imgData) {
-    se (this.current.transferMaps === "nessuno") {
-      restituisci imgData.bitmap;
+  applyTransferMapsToBitmap(imgData) {
+    if (this.current.transferMaps === "none") {
+      return imgData.bitmap;
     }
-    costante {
+    const {
       bitmap,
-      larghezza,
-      altezza
+      width,
+      height
     } = imgData;
-    const tmpCanvas = this.cachedCanvases.getCanvas("inlineImage", larghezza, altezza);
+    const tmpCanvas = this.cachedCanvases.getCanvas("inlineImage", width, height);
     const tmpCtx = tmpCanvas.context;
     tmpCtx.filter = this.current.transferMaps;
     tmpCtx.drawImage(bitmap, 0, 0);
-    tmpCtx.filter = "nessuno";
-    restituisci tmpCanvas.canvas;
+    tmpCtx.filter = "none";
+    return tmpCanvas.canvas;
   }
   paintInlineImageXObject(imgData) {
-    se (!this.contentVisible) {
-      ritorno;
+    if (!this.contentVisible) {
+      return;
     }
     const width = imgData.width;
-    altezza costante = imgData.height;
+    const height = imgData.height;
     const ctx = this.ctx;
-    questo.salva();
-    se (!_util.isNodeJS) {
-      costante {
-        filtro
+    this.save();
+    if (!_util.isNodeJS) {
+      const {
+        filter
       } = ctx;
-      se (filtro !== "nessuno" e filtro !== "") {
-        ctx.filter = "nessuno";
+      if (filter !== "none" && filter !== "") {
+        ctx.filter = "none";
       }
     }
-    ctx.scale(1 / larghezza, -1 / altezza);
-    lascia imgToPaint;
-    se (imgData.bitmap) {
+    ctx.scale(1 / width, -1 / height);
+    let imgToPaint;
+    if (imgData.bitmap) {
       imgToPaint = this.applyTransferMapsToBitmap(imgData);
     } else if (typeof HTMLElement === "function" && imgData instanceof HTMLElement || !imgData.data) {
       imgToPaint = imgData;
-    } altro {
-      const tmpCanvas = this.cachedCanvases.getCanvas("inlineImage", larghezza, altezza);
+    } else {
+      const tmpCanvas = this.cachedCanvases.getCanvas("inlineImage", width, height);
       const tmpCtx = tmpCanvas.context;
       putBinaryImageData(tmpCtx, imgData);
       imgToPaint = this.applyTransferMapsToCanvas(tmpCtx);
     }
-    const scalato = this._scaleImage(imgToPaint, (0, _display_utils.getCurrentTransformInverse)(ctx));
+    const scaled = this._scaleImage(imgToPaint, (0, _display_utils.getCurrentTransformInverse)(ctx));
     ctx.imageSmoothingEnabled = getImageSmoothingEnabled((0, _display_utils.getCurrentTransform)(ctx), imgData.interpolate);
-    drawImageAtIntegerCoords(ctx, scaled.img, 0, 0, scaled.paintWidth, scaled.paintHeight, 0, -altezza, larghezza, altezza);
-    questo.componi();
-    questo.ripristina();
+    drawImageAtIntegerCoords(ctx, scaled.img, 0, 0, scaled.paintWidth, scaled.paintHeight, 0, -height, width, height);
+    this.compose();
+    this.restore();
   }
-  paintInlineImageXObjectGroup(imgData, mappa) {
-    se (!this.contentVisible) {
-      ritorno;
+  paintInlineImageXObjectGroup(imgData, map) {
+    if (!this.contentVisible) {
+      return;
     }
     const ctx = this.ctx;
-    lascia imgToPaint;
-    se (imgData.bitmap) {
+    let imgToPaint;
+    if (imgData.bitmap) {
       imgToPaint = imgData.bitmap;
-    } altro {
+    } else {
       const w = imgData.width;
       const h = imgData.height;
       const tmpCanvas = this.cachedCanvases.getCanvas("inlineImage", w, h);
@@ -8310,172 +8310,172 @@ classe CanvasGraphics {
       putBinaryImageData(tmpCtx, imgData);
       imgToPaint = this.applyTransferMapsToCanvas(tmpCtx);
     }
-    per (voce costante della mappa) {
+    for (const entry of map) {
       ctx.save();
       ctx.transform(...entry.transform);
       ctx.scale(1, -1);
       drawImageAtIntegerCoords(ctx, imgToPaint, entry.x, entry.y, entry.w, entry.h, 0, -1, 1, 1);
       ctx.restore();
     }
-    questo.componi();
+    this.compose();
   }
   paintSolidColorImageMask() {
-    se (!this.contentVisible) {
-      ritorno;
+    if (!this.contentVisible) {
+      return;
     }
-    questo.ctx.fillRect(0, 0, 1, 1);
-    questo.componi();
+    this.ctx.fillRect(0, 0, 1, 1);
+    this.compose();
   }
   markPoint(tag) {}
-  markPointProps(tag, proprietà) {}
+  markPointProps(tag, properties) {}
   beginMarkedContent(tag) {
-    questo.markedContentStack.push({
-      visibile: vero
+    this.markedContentStack.push({
+      visible: true
     });
   }
-  beginMarkedContentProps(tag, proprietà) {
-    se (tag === "OC") {
-      questo.markedContentStack.push({
-        visibile: this.optionalContentConfig.isVisible(proprietà)
+  beginMarkedContentProps(tag, properties) {
+    if (tag === "OC") {
+      this.markedContentStack.push({
+        visible: this.optionalContentConfig.isVisible(properties)
       });
-    } altro {
-      questo.markedContentStack.push({
-        visibile: vero
+    } else {
+      this.markedContentStack.push({
+        visible: true
       });
     }
-    questo.contenutoVisibile = questo.èContenutoVisibile();
+    this.contentVisible = this.isContentVisible();
   }
   endMarkedContent() {
-    questo.markedContentStack.pop();
-    questo.contenutoVisibile = questo.èContenutoVisibile();
+    this.markedContentStack.pop();
+    this.contentVisible = this.isContentVisible();
   }
   beginCompat() {}
   endCompat() {}
   consumePath(clipBox) {
     const isEmpty = this.current.isEmptyClip();
-    se (this.pendingClip) {
-      questo.aggiornamento.correnteClipFromPath();
+    if (this.pendingClip) {
+      this.current.updateClipFromPath();
     }
-    se (!this.pendingClip) {
-      questo.compose(clipBox);
+    if (!this.pendingClip) {
+      this.compose(clipBox);
     }
     const ctx = this.ctx;
-    se (this.pendingClip) {
-      se (!èVuoto) {
-        se (this.pendingClip === EO_CLIP) {
+    if (this.pendingClip) {
+      if (!isEmpty) {
+        if (this.pendingClip === EO_CLIP) {
           ctx.clip("evenodd");
-        } altro {
+        } else {
           ctx.clip();
         }
       }
       this.pendingClip = null;
     }
-    questo.corrente.startNewPathAndClipBox(questo.corrente.clipBox);
+    this.current.startNewPathAndClipBox(this.current.clipBox);
     ctx.beginPath();
   }
-  ottieniSinglePixelWidth() {
-    se (!this._cachedGetSinglePixelWidth) {
+  getSinglePixelWidth() {
+    if (!this._cachedGetSinglePixelWidth) {
       const m = (0, _display_utils.getCurrentTransform)(this.ctx);
-      se (m[1] === 0 e m[2] === 0) {
+      if (m[1] === 0 && m[2] === 0) {
         this._cachedGetSinglePixelWidth = 1 / Math.min(Math.abs(m[0]), Math.abs(m[3]));
-      } altro {
+      } else {
         const absDet = Math.abs(m[0] * m[3] - m[2] * m[1]);
         const normX = Math.hypot(m[0], m[2]);
         const normY = Math.hypot(m[1], m[3]);
         this._cachedGetSinglePixelWidth = Math.max(normX, normY) / absDet;
       }
     }
-    restituisci questo._cachedGetSinglePixelWidth;
+    return this._cachedGetSinglePixelWidth;
   }
   getScaleForStroking() {
-    se (this._cachedScaleForStroking[0] === -1) {
-      costante {
-        Larghezza della linea
-      } = questo.corrente;
-      costante {
-        UN,
-        B,
-        C,
-        D
+    if (this._cachedScaleForStroking[0] === -1) {
+      const {
+        lineWidth
+      } = this.current;
+      const {
+        a,
+        b,
+        c,
+        d
       } = this.ctx.getTransform();
-      lascia scalaX, scalaY;
-      se (b === 0 e c === 0) {
+      let scaleX, scaleY;
+      if (b === 0 && c === 0) {
         const normX = Math.abs(a);
         const normY = Math.abs(d);
-        se (normX === normY) {
-          se (larghezzalinea === 0) {
-            scalaX = scalaY = 1 / normaX;
-          } altro {
+        if (normX === normY) {
+          if (lineWidth === 0) {
+            scaleX = scaleY = 1 / normX;
+          } else {
             const scaledLineWidth = normX * lineWidth;
             scaleX = scaleY = scaledLineWidth < 1 ? 1 / scaledLineWidth : 1;
           }
-        } altrimenti se (larghezzalinea === 0) {
-          scalaX = 1 / normaX;
-          scalaY = 1 / normaY;
-        } altro {
+        } else if (lineWidth === 0) {
+          scaleX = 1 / normX;
+          scaleY = 1 / normY;
+        } else {
           const scaledXLineWidth = normX * lineWidth;
           const scaledYLineWidth = normY * lineWidth;
           scaleX = scaledXLineWidth < 1 ? 1 / scaledXLineWidth : 1;
           scaleY = scaledYLineWidth < 1 ? 1 / scaledYLineWidth : 1;
         }
-      } altro {
+      } else {
         const absDet = Math.abs(a * d - b * c);
         const normX = Math.hypot(a, b);
         const normY = Math.hypot(c, d);
-        se (larghezzalinea === 0) {
-          scalaX = normY / absDet;
-          scalaY = normX / absDet;
-        } altro {
+        if (lineWidth === 0) {
+          scaleX = normY / absDet;
+          scaleY = normX / absDet;
+        } else {
           const baseArea = lineWidth * absDet;
-          scalaX = normaY > baseArea ? norma/areabase: 1;
+          scaleX = normY > baseArea ? normY / baseArea : 1;
           scaleY = normX > baseArea ? normX / baseArea : 1;
         }
       }
       this._cachedScaleForStroking[0] = scaleX;
       this._cachedScaleForStroking[1] = scaleY;
     }
-    restituisci questo._cachedScaleForStroking;
+    return this._cachedScaleForStroking;
   }
   rescaleAndStroke(saveRestore) {
-    costante {
+    const {
       ctx
-    } = questo;
-    costante {
-      Larghezza della linea
-    } = questo.corrente;
-    const [scalaX, scalaY] = this.getScaleForStroking();
-    ctx.lineWidth = larghezzalinea || 1;
-    se (scalaX === 1 e scalaY === 1) {
+    } = this;
+    const {
+      lineWidth
+    } = this.current;
+    const [scaleX, scaleY] = this.getScaleForStroking();
+    ctx.lineWidth = lineWidth || 1;
+    if (scaleX === 1 && scaleY === 1) {
       ctx.stroke();
-      ritorno;
+      return;
     }
-    const trattini = ctx.getLineDash();
-    se (salvaRipristina) {
+    const dashes = ctx.getLineDash();
+    if (saveRestore) {
       ctx.save();
     }
-    ctx.scale(scalaX, scalaY);
-    se (lunghezza trattini > 0) {
-      const scala = Math.max(scalaX, scalaY);
-      ctx.setLineDash(trattini.mappa(x => x / scala));
-      ctx.lineDashOffset /= scala;
+    ctx.scale(scaleX, scaleY);
+    if (dashes.length > 0) {
+      const scale = Math.max(scaleX, scaleY);
+      ctx.setLineDash(dashes.map(x => x / scale));
+      ctx.lineDashOffset /= scale;
     }
     ctx.stroke();
-    se (salvaRipristina) {
+    if (saveRestore) {
       ctx.restore();
     }
   }
   isContentVisible() {
-    per (lascia che i = this.markedContentStack.length - 1; i >= 0; i--) {
-      se (!this.markedContentStack[i].visible) {
-        restituisci falso;
+    for (let i = this.markedContentStack.length - 1; i >= 0; i--) {
+      if (!this.markedContentStack[i].visible) {
+        return false;
       }
     }
-    restituisci vero;
+    return true;
   }
 }
-esportazioni.CanvasGraphics = CanvasGraphics;
-per (const op in _util.OPS) {
-  se (CanvasGraphics.prototype[op] !== indefinito) {
+exports.CanvasGraphics = CanvasGraphics;
+for (const op in _util.OPS) {
+  if (CanvasGraphics.prototype[op] !== undefined) {
     CanvasGraphics.prototype[_util.OPS[op]] = CanvasGraphics.prototype[op];
   }
 }
@@ -8486,172 +8486,172 @@ per (const op in _util.OPS) {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.TilingPattern = esportazioni.PathType = void 0;
-esportazioni.getShadingPattern = getShadingPattern;
+exports.TilingPattern = exports.PathType = void 0;
+exports.getShadingPattern = getShadingPattern;
 var _util = __w_pdfjs_require__(1);
 var _display_utils = __w_pdfjs_require__(6);
-const TipoPercorso = {
-  RIEMPIRE: "Riempire",
-  ICTUS: "Ictus",
-  OMBREGGIATURA: "Ombreggiatura"
+const PathType = {
+  FILL: "Fill",
+  STROKE: "Stroke",
+  SHADING: "Shading"
 };
-esportazioni.PathType = PathType;
-funzione applyBoundingBox(ctx, bbox) {
-  se (!bbox) {
-    ritorno;
+exports.PathType = PathType;
+function applyBoundingBox(ctx, bbox) {
+  if (!bbox) {
+    return;
   }
-  larghezza costante = bbox[2] - bbox[0];
-  altezza costante = bbox[3] - bbox[1];
-  regione costante = nuovo Path2D();
-  regione.rect(bbox[0], bbox[1], larghezza, altezza);
-  ctx.clip(regione);
+  const width = bbox[2] - bbox[0];
+  const height = bbox[3] - bbox[1];
+  const region = new Path2D();
+  region.rect(bbox[0], bbox[1], width, height);
+  ctx.clip(region);
 }
-classe BaseShadingPattern {
-  costruttore() {
-    se (questo.costruttore === BaseShadingPattern) {
-      (0, _util.unreachable)("Impossibile inizializzare BaseShadingPattern.");
+class BaseShadingPattern {
+  constructor() {
+    if (this.constructor === BaseShadingPattern) {
+      (0, _util.unreachable)("Cannot initialize BaseShadingPattern.");
     }
   }
-  ottieniModello() {
-    (0, _util.unreachable)("Metodo astratto `getPattern` chiamato.");
+  getPattern() {
+    (0, _util.unreachable)("Abstract method `getPattern` called.");
   }
 }
-classe RadialAxialShadingPattern estende BaseShadingPattern {
-  costruttore(IR) {
+class RadialAxialShadingPattern extends BaseShadingPattern {
+  constructor(IR) {
     super();
-    questo._tipo = IR[1];
-    questo._bbox = IR[2];
+    this._type = IR[1];
+    this._bbox = IR[2];
     this._colorStops = IR[3];
-    questo._p0 = IR[4];
-    questo._p1 = IR[5];
-    questo._r0 = IR[6];
-    questo._r1 = IR[7];
-    questa matrice = null;
+    this._p0 = IR[4];
+    this._p1 = IR[5];
+    this._r0 = IR[6];
+    this._r1 = IR[7];
+    this.matrix = null;
   }
-  _creaGradiente(ctx) {
-    lascia laureato;
-    se (this._type === "assiale") {
+  _createGradient(ctx) {
+    let grad;
+    if (this._type === "axial") {
       grad = ctx.createLinearGradient(this._p0[0], this._p0[1], this._p1[0], this._p1[1]);
-    } altrimenti se (this._type === "radiale") {
+    } else if (this._type === "radial") {
       grad = ctx.createRadialGradient(this._p0[0], this._p0[1], this._r0, this._p1[0], this._p1[1], this._r1);
     }
-    per (const colorStop di this._colorStops) {
+    for (const colorStop of this._colorStops) {
       grad.addColorStop(colorStop[0], colorStop[1]);
     }
-    laureato di ritorno;
+    return grad;
   }
-  getPattern(ctx, proprietario, inverso, pathType) {
-    lascia il modello;
-    se (pathType === PathType.STROKE || pathType === PathType.FILL) {
+  getPattern(ctx, owner, inverse, pathType) {
+    let pattern;
+    if (pathType === PathType.STROKE || pathType === PathType.FILL) {
       const ownerBBox = owner.current.getClippedPathBoundingBox(pathType, (0, _display_utils.getCurrentTransform)(ctx)) || [0, 0, 0, 0];
-      larghezza costante = Math.ceil(ownerBBox[2] - ownerBBox[0]) || 1;
-      altezza costante = Math.ceil(ownerBBox[3] - ownerBBox[1]) || 1;
+      const width = Math.ceil(ownerBBox[2] - ownerBBox[0]) || 1;
+      const height = Math.ceil(ownerBBox[3] - ownerBBox[1]) || 1;
       const tmpCanvas = owner.cachedCanvases.getCanvas("pattern", width, height, true);
       const tmpCtx = tmpCanvas.context;
-      tmpCtx.clearRect(0, 0, tmpCtx.canvas.larghezza, tmpCtx.canvas.altezza);
+      tmpCtx.clearRect(0, 0, tmpCtx.canvas.width, tmpCtx.canvas.height);
       tmpCtx.beginPath();
-      tmpCtx.rect(0, 0, tmpCtx.canvas.larghezza, tmpCtx.canvas.altezza);
+      tmpCtx.rect(0, 0, tmpCtx.canvas.width, tmpCtx.canvas.height);
       tmpCtx.translate(-ownerBBox[0], -ownerBBox[1]);
-      inverso = _util.Util.transform(inverso, [1, 0, 0, 1, ownerBBox[0], ownerBBox[1]]);
+      inverse = _util.Util.transform(inverse, [1, 0, 0, 1, ownerBBox[0], ownerBBox[1]]);
       tmpCtx.transform(...owner.baseTransform);
-      se (questa.matrice) {
+      if (this.matrix) {
         tmpCtx.transform(...this.matrix);
       }
       applyBoundingBox(tmpCtx, this._bbox);
       tmpCtx.fillStyle = this._createGradient(tmpCtx);
       tmpCtx.fill();
       pattern = ctx.createPattern(tmpCanvas.canvas, "no-repeat");
-      const matricedom = nuova matricedom(inverso);
+      const domMatrix = new DOMMatrix(inverse);
       pattern.setTransform(domMatrix);
-    } altro {
+    } else {
       applyBoundingBox(ctx, this._bbox);
-      modello = this._createGradient(ctx);
+      pattern = this._createGradient(ctx);
     }
-    modello di ritorno;
+    return pattern;
   }
 }
-funzione drawTriangle(dati, contesto, p1, p2, p3, c1, c2, c3) {
+function drawTriangle(data, context, p1, p2, p3, c1, c2, c3) {
   const coords = context.coords,
-    colori = contesto.colori;
-  const byte = dati.dati,
-    rowSize = larghezza dati * 4;
-  lascia tmp;
-  se (coordinate[p1 + 1] > coordinate[p2 + 1]) {
-    tempo = p1;
+    colors = context.colors;
+  const bytes = data.data,
+    rowSize = data.width * 4;
+  let tmp;
+  if (coords[p1 + 1] > coords[p2 + 1]) {
+    tmp = p1;
     p1 = p2;
     p2 = tmp;
-    tempo = c1;
+    tmp = c1;
     c1 = c2;
-    c2 = tempo;
+    c2 = tmp;
   }
-  se (coordinate[p2 + 1] > coordinate[p3 + 1]) {
-    tempo = p2;
+  if (coords[p2 + 1] > coords[p3 + 1]) {
+    tmp = p2;
     p2 = p3;
     p3 = tmp;
-    tempo = c2;
+    tmp = c2;
     c2 = c3;
-    c3 = tempo;
+    c3 = tmp;
   }
-  se (coordinate[p1 + 1] > coordinate[p2 + 1]) {
-    tempo = p1;
+  if (coords[p1 + 1] > coords[p2 + 1]) {
+    tmp = p1;
     p1 = p2;
     p2 = tmp;
-    tempo = c1;
+    tmp = c1;
     c1 = c2;
-    c2 = tempo;
+    c2 = tmp;
   }
-  const x1 = (coords[p1] + contesto.offsetX) * contesto.scalaX;
-  const y1 = (coords[p1 + 1] + contesto.offsetY) * contesto.scalaY;
-  const x2 = (coords[p2] + contesto.offsetX) * contesto.scalaX;
-  const y2 = (coords[p2 + 1] + contesto.offsetY) * contesto.scalaY;
-  const x3 = (coords[p3] + contesto.offsetX) * contesto.scalaX;
-  const y3 = (coords[p3 + 1] + contesto.offsetY) * contesto.scalaY;
-  se (y1 >= y3) {
-    ritorno;
+  const x1 = (coords[p1] + context.offsetX) * context.scaleX;
+  const y1 = (coords[p1 + 1] + context.offsetY) * context.scaleY;
+  const x2 = (coords[p2] + context.offsetX) * context.scaleX;
+  const y2 = (coords[p2 + 1] + context.offsetY) * context.scaleY;
+  const x3 = (coords[p3] + context.offsetX) * context.scaleX;
+  const y3 = (coords[p3 + 1] + context.offsetY) * context.scaleY;
+  if (y1 >= y3) {
+    return;
   }
-  const c1r = colori[c1],
-    c1g = colori[c1 + 1],
-    c1b = colori[c1 + 2];
-  const c2r = colori[c2],
-    c2g = colori[c2 + 1],
-    c2b = colori[c2 + 2];
-  const c3r = colori[c3],
-    c3g = colori[c3 + 1],
-    c3b = colori[c3 + 2];
+  const c1r = colors[c1],
+    c1g = colors[c1 + 1],
+    c1b = colors[c1 + 2];
+  const c2r = colors[c2],
+    c2g = colors[c2 + 1],
+    c2b = colors[c2 + 2];
+  const c3r = colors[c3],
+    c3g = colors[c3 + 1],
+    c3b = colors[c3 + 2];
   const minY = Math.round(y1),
     maxY = Math.round(y3);
-  lascia xa, macchina, cag, taxi;
-  siano xb, cbr, cbg, cbb;
+  let xa, car, cag, cab;
+  let xb, cbr, cbg, cbb;
   for (let y = minY; y <= maxY; y++) {
-    se (y < y2) {
-      costante k = y < y1 ? 0 : (y1 - y) / (y1 - y2);
+    if (y < y2) {
+      const k = y < y1 ? 0 : (y1 - y) / (y1 - y2);
       xa = x1 - (x1 - x2) * k;
-      auto = c1r - (c1r - c2r) * k;
+      car = c1r - (c1r - c2r) * k;
       cag = c1g - (c1g - c2g) * k;
-      taxi = c1b - (c1b - c2b) * k;
-    } altro {
-      lascia k;
-      se (y > y3) {
+      cab = c1b - (c1b - c2b) * k;
+    } else {
+      let k;
+      if (y > y3) {
         k = 1;
-      } altrimenti se (y2 === y3) {
+      } else if (y2 === y3) {
         k = 0;
-      } altro {
+      } else {
         k = (y2 - y) / (y2 - y3);
       }
       xa = x2 - (x2 - x3) * k;
-      auto = c2r - (c2r - c3r) * k;
+      car = c2r - (c2r - c3r) * k;
       cag = c2g - (c2g - c3g) * k;
-      taxi = c2b - (c2b - c3b) * k;
+      cab = c2b - (c2b - c3b) * k;
     }
-    lascia k;
-    se (y < y1) {
+    let k;
+    if (y < y1) {
       k = 0;
-    } altrimenti se (y > y3) {
+    } else if (y > y3) {
       k = 1;
-    } altro {
+    } else {
       k = (y1 - y) / (y1 - y3);
     }
     xb = x1 - (x1 - x3) * k;
@@ -8660,165 +8660,165 @@ funzione drawTriangle(dati, contesto, p1, p2, p3, c1, c2, c3) {
     cbb = c1b - (c1b - c3b) * k;
     const x1_ = Math.round(Math.min(xa, xb));
     const x2_ = Math.round(Math.max(xa, xb));
-    lascia j = rowSize * y + x1_ * 4;
-    per (lascia che x = x1_; x <= x2_; x++) {
+    let j = rowSize * y + x1_ * 4;
+    for (let x = x1_; x <= x2_; x++) {
       k = (xa - x) / (xa - xb);
-      se (k < 0) {
+      if (k < 0) {
         k = 0;
-      } altrimenti se (k > 1) {
+      } else if (k > 1) {
         k = 1;
       }
-      bytes[j++] = auto - (auto - cbr) * k | 0;
-      byte[j++] = cag - (cag - cbg) * k | 0;
-      byte[j++] = cab - (cab - cbb) * k | 0;
-      byte[j++] = 255;
+      bytes[j++] = car - (car - cbr) * k | 0;
+      bytes[j++] = cag - (cag - cbg) * k | 0;
+      bytes[j++] = cab - (cab - cbb) * k | 0;
+      bytes[j++] = 255;
     }
   }
 }
-funzione drawFigure(dati, figura, contesto) {
+function drawFigure(data, figure, context) {
   const ps = figure.coords;
   const cs = figure.colors;
-  sia i, ii;
+  let i, ii;
   switch (figure.type) {
-    caso "reticolo":
+    case "lattice":
       const verticesPerRow = figure.verticesPerRow;
       const rows = Math.floor(ps.length / verticesPerRow) - 1;
       const cols = verticesPerRow - 1;
-      per (i = 0; i < righe; i++) {
-        lascia q = i * verticiPerRiga;
-        per (lascia che j = 0; j < colonne; j++, q++) {
-          drawTriangle(dati, contesto, ps[q], ps[q + 1], ps[q + verticiPerRiga], cs[q], cs[q + 1], cs[q + verticiPerRiga]);
-          drawTriangle(dati, contesto, ps[q + verticiPerRiga + 1], ps[q + 1], ps[q + verticiPerRiga], cs[q + verticiPerRiga + 1], cs[q + 1], cs[q + verticiPerRiga]);
+      for (i = 0; i < rows; i++) {
+        let q = i * verticesPerRow;
+        for (let j = 0; j < cols; j++, q++) {
+          drawTriangle(data, context, ps[q], ps[q + 1], ps[q + verticesPerRow], cs[q], cs[q + 1], cs[q + verticesPerRow]);
+          drawTriangle(data, context, ps[q + verticesPerRow + 1], ps[q + 1], ps[q + verticesPerRow], cs[q + verticesPerRow + 1], cs[q + 1], cs[q + verticesPerRow]);
         }
       }
-      rottura;
-    caso "triangoli":
-      per (i = 0, ii = ps.length; i < ii; i += 3) {
-        drawTriangle(dati, contesto, ps[i], ps[i + 1], ps[i + 2], cs[i], cs[i + 1], cs[i + 2]);
+      break;
+    case "triangles":
+      for (i = 0, ii = ps.length; i < ii; i += 3) {
+        drawTriangle(data, context, ps[i], ps[i + 1], ps[i + 2], cs[i], cs[i + 1], cs[i + 2]);
       }
-      rottura;
-    predefinito:
-      lancia un nuovo errore("cifra illegale");
+      break;
+    default:
+      throw new Error("illegal figure");
   }
 }
-classe MeshShadingPattern estende BaseShadingPattern {
-  costruttore(IR) {
+class MeshShadingPattern extends BaseShadingPattern {
+  constructor(IR) {
     super();
-    questo._coordinate = IR[2];
-    questo._colori = IR[3];
-    questo._figure = IR[4];
-    questo._limiti = IR[5];
-    questo._bbox = IR[7];
-    questo._sfondo = IR[8];
-    questa matrice = null;
+    this._coords = IR[2];
+    this._colors = IR[3];
+    this._figures = IR[4];
+    this._bounds = IR[5];
+    this._bbox = IR[7];
+    this._background = IR[8];
+    this.matrix = null;
   }
   _createMeshCanvas(combinedScale, backgroundColor, cachedCanvases) {
     const EXPECTED_SCALE = 1.1;
     const MAX_PATTERN_SIZE = 3000;
-    const DIMENSIONE_BORDO = 2;
+    const BORDER_SIZE = 2;
     const offsetX = Math.floor(this._bounds[0]);
     const offsetY = Math.floor(this._bounds[1]);
     const boundsWidth = Math.ceil(this._bounds[2]) - offsetX;
     const boundsHeight = Math.ceil(this._bounds[3]) - offsetY;
-    larghezza costante = Math.min(Math.ceil(Math.abs(boundsWidth * combinedScale[0] * EXPECTED_SCALE)), MAX_PATTERN_SIZE);
-    altezza costante = Math.min(Math.ceil(Math.abs(boundsHeight * combinedScale[1] * EXPECTED_SCALE)), MAX_PATTERN_SIZE);
+    const width = Math.min(Math.ceil(Math.abs(boundsWidth * combinedScale[0] * EXPECTED_SCALE)), MAX_PATTERN_SIZE);
+    const height = Math.min(Math.ceil(Math.abs(boundsHeight * combinedScale[1] * EXPECTED_SCALE)), MAX_PATTERN_SIZE);
     const scaleX = boundsWidth / width;
-    const scaleY = boundsHeight / altezza;
-    contesto costante = {
-      coordinate: questo._coordinate,
-      colori: questo._colori,
+    const scaleY = boundsHeight / height;
+    const context = {
+      coords: this._coords,
+      colors: this._colors,
       offsetX: -offsetX,
       offsetY: -offsetY,
-      scalaX: 1 / scalaX,
-      scalaY: 1 / scalaY
+      scaleX: 1 / scaleX,
+      scaleY: 1 / scaleY
     };
-    const paddedWidth = larghezza + BORDER_SIZE * 2;
-    const paddedHeight = altezza + BORDER_SIZE * 2;
+    const paddedWidth = width + BORDER_SIZE * 2;
+    const paddedHeight = height + BORDER_SIZE * 2;
     const tmpCanvas = cachedCanvases.getCanvas("mesh", paddedWidth, paddedHeight, false);
     const tmpCtx = tmpCanvas.context;
-    const data = tmpCtx.createImageData(larghezza, altezza);
-    se (colore di sfondo) {
-      const byte = dati.dati;
-      per (lascia che i = 0, ii = byte.lunghezza; i < ii; i += 4) {
-        byte[i] = backgroundColor[0];
-        byte[i + 1] = backgroundColor[1];
-        byte[i + 2] = backgroundColor[2];
-        byte[i + 3] = 255;
+    const data = tmpCtx.createImageData(width, height);
+    if (backgroundColor) {
+      const bytes = data.data;
+      for (let i = 0, ii = bytes.length; i < ii; i += 4) {
+        bytes[i] = backgroundColor[0];
+        bytes[i + 1] = backgroundColor[1];
+        bytes[i + 2] = backgroundColor[2];
+        bytes[i + 3] = 255;
       }
     }
-    per (const figura di questo._figure) {
-      drawFigure(dati, figura, contesto);
+    for (const figure of this._figures) {
+      drawFigure(data, figure, context);
     }
-    tmpCtx.putImageData(dati, DIMENSIONE_BORDO, DIMENSIONE_BORDO);
+    tmpCtx.putImageData(data, BORDER_SIZE, BORDER_SIZE);
     const canvas = tmpCanvas.canvas;
-    ritorno {
-      tela,
-      offsetX: offsetX - DIMENSIONE_BORDO * scalaX,
-      offsetY: offsetY - DIMENSIONE_BORDO * scalaY,
-      scalaX,
-      scalaY
+    return {
+      canvas,
+      offsetX: offsetX - BORDER_SIZE * scaleX,
+      offsetY: offsetY - BORDER_SIZE * scaleY,
+      scaleX,
+      scaleY
     };
   }
-  getPattern(ctx, proprietario, inverso, pathType) {
+  getPattern(ctx, owner, inverse, pathType) {
     applyBoundingBox(ctx, this._bbox);
-    lascia scalare;
-    se (pathType === PathType.SHADING) {
-      scala = _util.Util.singularValueDecompose2dScale((0, _display_utils.getCurrentTransform)(ctx));
-    } altro {
-      scala = _util.Util.singularValueDecompose2dScale(owner.baseTransform);
-      se (questa.matrice) {
+    let scale;
+    if (pathType === PathType.SHADING) {
+      scale = _util.Util.singularValueDecompose2dScale((0, _display_utils.getCurrentTransform)(ctx));
+    } else {
+      scale = _util.Util.singularValueDecompose2dScale(owner.baseTransform);
+      if (this.matrix) {
         const matrixScale = _util.Util.singularValueDecompose2dScale(this.matrix);
-        scala = [scala[0] * matrixScale[0], scala[1] * matrixScale[1]];
+        scale = [scale[0] * matrixScale[0], scale[1] * matrixScale[1]];
       }
     }
     const temporaryPatternCanvas = this._createMeshCanvas(scale, pathType === PathType.SHADING ? null : this._background, owner.cachedCanvases);
-    se (pathType !== PathType.SHADING) {
+    if (pathType !== PathType.SHADING) {
       ctx.setTransform(...owner.baseTransform);
-      se (questa.matrice) {
+      if (this.matrix) {
         ctx.transform(...this.matrix);
       }
     }
     ctx.translate(temporaryPatternCanvas.offsetX, temporaryPatternCanvas.offsetY);
     ctx.scale(temporaryPatternCanvas.scaleX, temporaryPatternCanvas.scaleY);
-    restituisci ctx.createPattern(temporaryPatternCanvas.canvas, "no-repeat");
+    return ctx.createPattern(temporaryPatternCanvas.canvas, "no-repeat");
   }
 }
-classe DummyShadingPattern estende BaseShadingPattern {
-  ottieniModello() {
-    restituisci "hotpink";
+class DummyShadingPattern extends BaseShadingPattern {
+  getPattern() {
+    return "hotpink";
   }
 }
-funzione getShadingPattern(IR) {
-  interruttore (IR[0]) {
-    caso "RadialAxial":
-      restituisci nuovo RadialAxialShadingPattern(IR);
-    caso "Mesh":
-      restituisci nuovo MeshShadingPattern(IR);
-    caso "Fintizio":
-      restituisci nuovo DummyShadingPattern();
+function getShadingPattern(IR) {
+  switch (IR[0]) {
+    case "RadialAxial":
+      return new RadialAxialShadingPattern(IR);
+    case "Mesh":
+      return new MeshShadingPattern(IR);
+    case "Dummy":
+      return new DummyShadingPattern();
   }
-  genera un nuovo errore (`Tipo IR sconosciuto: ${IR[0]}`);
+  throw new Error(`Unknown IR type: ${IR[0]}`);
 }
 const PaintType = {
-  COLORATO: 1,
-  NON COLORATO: 2
+  COLORED: 1,
+  UNCOLORED: 2
 };
-classe TilingPattern {
-  statico MAX_PATTERN_SIZE = 3000;
-  costruttore(IR, colore, ctx, canvasGraphicsFactory, baseTransform) {
-    questo.operatoreList = IR[2];
-    questa matrice = IR[3] || [1, 0, 0, 1, 0, 0];
-    questo.bbox = IR[4];
-    questo.xstep = IR[5];
-    questo.ystep = IR[6];
-    questo.tipo di vernice = IR[7];
-    questo.tilingType = IR[8];
-    questo.colore = colore;
-    questo.ctx = ctx;
+class TilingPattern {
+  static MAX_PATTERN_SIZE = 3000;
+  constructor(IR, color, ctx, canvasGraphicsFactory, baseTransform) {
+    this.operatorList = IR[2];
+    this.matrix = IR[3] || [1, 0, 0, 1, 0, 0];
+    this.bbox = IR[4];
+    this.xstep = IR[5];
+    this.ystep = IR[6];
+    this.paintType = IR[7];
+    this.tilingType = IR[8];
+    this.color = color;
+    this.ctx = ctx;
     this.canvasGraphicsFactory = canvasGraphicsFactory;
     this.baseTransform = baseTransform;
   }
-  createPatternCanvas(proprietario) {
+  createPatternCanvas(owner) {
     const operatorList = this.operatorList;
     const bbox = this.bbox;
     const xstep = this.xstep;
@@ -8828,109 +8828,109 @@ classe TilingPattern {
     const color = this.color;
     const canvasGraphicsFactory = this.canvasGraphicsFactory;
     (0, _util.info)("TilingType: " + tilingType);
-    costante x0 = bbox[0],
+    const x0 = bbox[0],
       y0 = bbox[1],
       x1 = bbox[2],
       y1 = bbox[3];
     const matrixScale = _util.Util.singularValueDecompose2dScale(this.matrix);
     const curMatrixScale = _util.Util.singularValueDecompose2dScale(this.baseTransform);
-    const scalacombinata = [matrixScale[0] * curMatrixScale[0], matriceScale[1] * curMatrixScale[1]];
+    const combinedScale = [matrixScale[0] * curMatrixScale[0], matrixScale[1] * curMatrixScale[1]];
     const dimx = this.getSizeAndScale(xstep, this.ctx.canvas.width, combinedScale[0]);
     const dimy = this.getSizeAndScale(ystep, this.ctx.canvas.height, combinedScale[1]);
-    const tmpCanvas = owner.cachedCanvases.getCanvas("modello", dimx.size, dimy.size, true);
+    const tmpCanvas = owner.cachedCanvases.getCanvas("pattern", dimx.size, dimy.size, true);
     const tmpCtx = tmpCanvas.context;
-    const grafica = canvasGraphicsFactory.createCanvasGraphics(tmpCtx);
-    grafica.groupLevel = proprietario.groupLevel;
-    this.setFillAndStrokeStyleToContext(grafica, tipo di vernice, colore);
-    lascia che aggiustatoX0 = x0;
-    lascia che Y0 aggiustato = y0;
-    lascia che aggiustatoX1 = x1;
-    lascia che Y1 aggiustato = y1;
-    se (x0 < 0) {
-      aggiustatoX0 = 0;
-      aggiustatoX1 += Math.abs(x0);
+    const graphics = canvasGraphicsFactory.createCanvasGraphics(tmpCtx);
+    graphics.groupLevel = owner.groupLevel;
+    this.setFillAndStrokeStyleToContext(graphics, paintType, color);
+    let adjustedX0 = x0;
+    let adjustedY0 = y0;
+    let adjustedX1 = x1;
+    let adjustedY1 = y1;
+    if (x0 < 0) {
+      adjustedX0 = 0;
+      adjustedX1 += Math.abs(x0);
     }
-    se (y0 < 0) {
-      aggiustatoY0 = 0;
-      aggiustatoY1 += Math.abs(y0);
+    if (y0 < 0) {
+      adjustedY0 = 0;
+      adjustedY1 += Math.abs(y0);
     }
     tmpCtx.translate(-(dimx.scale * adjustedX0), -(dimy.scale * adjustedY0));
-    grafica.trasformazione(dimx.scala, 0, 0, dimy.scala, 0, 0);
+    graphics.transform(dimx.scale, 0, 0, dimy.scale, 0, 0);
     tmpCtx.save();
-    this.clipBbox(grafica, aggiustatoX0, aggiustatoY0, aggiustatoX1, aggiustatoY1);
-    grafica.baseTransform = (0, _display_utils.getCurrentTransform)(grafica.ctx);
-    grafica.executeOperatorList(operatorList);
-    grafica.endDrawing();
-    ritorno {
-      tela: tmpCanvas.canvas,
+    this.clipBbox(graphics, adjustedX0, adjustedY0, adjustedX1, adjustedY1);
+    graphics.baseTransform = (0, _display_utils.getCurrentTransform)(graphics.ctx);
+    graphics.executeOperatorList(operatorList);
+    graphics.endDrawing();
+    return {
+      canvas: tmpCanvas.canvas,
       scaleX: dimx.scale,
       scaleY: dimy.scale,
-      offsetX: aggiustatoX0,
-      offsetY: aggiustatoY0
+      offsetX: adjustedX0,
+      offsetY: adjustedY0
     };
   }
-  getSizeAndScale(passo, realOutputSize, scala) {
-    passo = Math.abs(passo);
+  getSizeAndScale(step, realOutputSize, scale) {
+    step = Math.abs(step);
     const maxSize = Math.max(TilingPattern.MAX_PATTERN_SIZE, realOutputSize);
-    lascia che size = Math.ceil(step * scale);
-    se (dimensione >= maxSize) {
-      dimensione = dimensione massima;
-    } altro {
-      scala = dimensione / passo;
+    let size = Math.ceil(step * scale);
+    if (size >= maxSize) {
+      size = maxSize;
+    } else {
+      scale = size / step;
     }
-    ritorno {
-      scala,
-      misurare
+    return {
+      scale,
+      size
     };
   }
-  clipBbox(grafica, x0, y0, x1, y1) {
+  clipBbox(graphics, x0, y0, x1, y1) {
     const bboxWidth = x1 - x0;
     const bboxHeight = y1 - y0;
-    grafica.ctx.rect(x0, y0, bboxWidth, bboxHeight);
-    grafica.attuale.aggiornamentoRectMinMax((0, _display_utils.getCurrentTransform)(grafica.ctx), [x0, y0, x1, y1]);
-    grafica.clip();
-    grafica.endPath();
+    graphics.ctx.rect(x0, y0, bboxWidth, bboxHeight);
+    graphics.current.updateRectMinMax((0, _display_utils.getCurrentTransform)(graphics.ctx), [x0, y0, x1, y1]);
+    graphics.clip();
+    graphics.endPath();
   }
-  setFillAndStrokeStyleToContext(grafica, tipo di vernice, colore) {
-    contesto costante = grafica.ctx,
-      corrente = grafica.corrente;
+  setFillAndStrokeStyleToContext(graphics, paintType, color) {
+    const context = graphics.ctx,
+      current = graphics.current;
     switch (paintType) {
-      caso PaintType.COLORED:
+      case PaintType.COLORED:
         const ctx = this.ctx;
-        contesto.fillStyle = ctx.fillStyle;
-        contesto.strokeStyle = ctx.strokeStyle;
+        context.fillStyle = ctx.fillStyle;
+        context.strokeStyle = ctx.strokeStyle;
         current.fillColor = ctx.fillStyle;
         current.strokeColor = ctx.strokeStyle;
-        rottura;
-      caso PaintType.UNCOLORED:
+        break;
+      case PaintType.UNCOLORED:
         const cssColor = _util.Util.makeHexColor(color[0], color[1], color[2]);
-        contesto.fillStyle = cssColor;
-        contesto.strokeStyle = cssColor;
-        colore.riempimento corrente = cssColor;
+        context.fillStyle = cssColor;
+        context.strokeStyle = cssColor;
+        current.fillColor = cssColor;
         current.strokeColor = cssColor;
-        rottura;
-      predefinito:
-        throw new _util.FormatError(`Tipo di disegno non supportato: ${paintType}`);
+        break;
+      default:
+        throw new _util.FormatError(`Unsupported paint type: ${paintType}`);
     }
   }
-  getPattern(ctx, proprietario, inverso, pathType) {
-    lascia matrice = inversa;
-    se (pathType !== PathType.SHADING) {
-      matrice = _util.Util.transform(matrice, proprietario.baseTransform);
-      se (questa.matrice) {
-        matrice = _util.Util.transform(matrice, questa.matrice);
+  getPattern(ctx, owner, inverse, pathType) {
+    let matrix = inverse;
+    if (pathType !== PathType.SHADING) {
+      matrix = _util.Util.transform(matrix, owner.baseTransform);
+      if (this.matrix) {
+        matrix = _util.Util.transform(matrix, this.matrix);
       }
     }
     const temporaryPatternCanvas = this.createPatternCanvas(owner);
-    lascia che domMatrix = new DOMMatrix(matrice);
+    let domMatrix = new DOMMatrix(matrix);
     domMatrix = domMatrix.translate(temporaryPatternCanvas.offsetX, temporaryPatternCanvas.offsetY);
     domMatrix = domMatrix.scale(1 / temporaryPatternCanvas.scaleX, 1 / temporaryPatternCanvas.scaleY);
-    const pattern = ctx.createPattern(temporaryPatternCanvas.canvas, "ripeti");
+    const pattern = ctx.createPattern(temporaryPatternCanvas.canvas, "repeat");
     pattern.setTransform(domMatrix);
-    modello di ritorno;
+    return pattern;
   }
 }
-esportazioni.TilingPattern = TilingPattern;
+exports.TilingPattern = TilingPattern;
 
 /***/ }),
 /* 13 */
@@ -8938,40 +8938,40 @@ esportazioni.TilingPattern = TilingPattern;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
 exports.convertBlackAndWhiteToRGBA = convertBlackAndWhiteToRGBA;
-esportazioni.convertToRGBA = convertToRGBA;
-esportazioni.grayToRGBA = greyToRGBA;
+exports.convertToRGBA = convertToRGBA;
+exports.grayToRGBA = grayToRGBA;
 var _util = __w_pdfjs_require__(1);
-funzione convertToRGBA(parametri) {
+function convertToRGBA(params) {
   switch (params.kind) {
-    caso _util.ImageKind.GRAYSCALE_1BPP:
-      restituisci convertBlackAndWhiteToRGBA(parametri);
-    caso _util.ImageKind.RGB_24BPP:
-      restituisci convertRGBToRGBA(parametri);
+    case _util.ImageKind.GRAYSCALE_1BPP:
+      return convertBlackAndWhiteToRGBA(params);
+    case _util.ImageKind.RGB_24BPP:
+      return convertRGBToRGBA(params);
   }
-  restituisci null;
+  return null;
 }
-funzione convertBlackAndWhiteToRGBA({
-  fonte,
+function convertBlackAndWhiteToRGBA({
+  src,
   srcPos = 0,
-  destinazione,
-  larghezza,
-  altezza,
+  dest,
+  width,
+  height,
   nonBlackColor = 0xffffffff,
   inverseDecode = false
 }) {
-  const nero = _util.FeatureTest.isLittleEndian ? 0xff000000: 0x000000ff;
-  const [zeroMapping, oneMapping] = inverseDecode ? [nonBlackColor, nero] : [nero, nonBlackColor];
-  const widthInSource = larghezza >> 3;
+  const black = _util.FeatureTest.isLittleEndian ? 0xff000000 : 0x000000ff;
+  const [zeroMapping, oneMapping] = inverseDecode ? [nonBlackColor, black] : [black, nonBlackColor];
+  const widthInSource = width >> 3;
   const widthRemainder = width & 7;
   const srcLength = src.length;
-  destinazione = nuovo Uint32Array(dest.buffer);
-  lascia destPos = 0;
-  per (lascia che i = 0; i < altezza; i++) {
-    per (const max = srcPos + widthInSource; srcPos < max; srcPos++) {
+  dest = new Uint32Array(dest.buffer);
+  let destPos = 0;
+  for (let i = 0; i < height; i++) {
+    for (const max = srcPos + widthInSource; srcPos < max; srcPos++) {
       const elem = srcPos < srcLength ? src[srcPos] : 255;
       dest[destPos++] = elem & 0b10000000 ? oneMapping : zeroMapping;
       dest[destPos++] = elem & 0b1000000 ? oneMapping : zeroMapping;
@@ -8982,69 +8982,69 @@ funzione convertBlackAndWhiteToRGBA({
       dest[destPos++] = elem & 0b10 ? oneMapping : zeroMapping;
       dest[destPos++] = elem & 0b1 ? oneMapping : zeroMapping;
     }
-    se (larghezzaResto === 0) {
-      continuare;
+    if (widthRemainder === 0) {
+      continue;
     }
     const elem = srcPos < srcLength ? src[srcPos++] : 255;
-    per (lascia che j = 0; j < widthRemainder; j++) {
+    for (let j = 0; j < widthRemainder; j++) {
       dest[destPos++] = elem & 1 << 7 - j ? oneMapping : zeroMapping;
     }
   }
-  ritorno {
+  return {
     srcPos,
-    Posizione di destinazione
+    destPos
   };
 }
-funzione convertRGBToRGBA({
-  fonte,
+function convertRGBToRGBA({
+  src,
   srcPos = 0,
-  destinazione,
-  Posizione di destinazione = 0,
-  larghezza,
-  altezza
+  dest,
+  destPos = 0,
+  width,
+  height
 }) {
-  sia i = 0;
+  let i = 0;
   const len32 = src.length >> 2;
   const src32 = new Uint32Array(src.buffer, srcPos, len32);
-  se (_util.FeatureTest.isLittleEndian) {
-    per (; i < len32 - 2; i += 3, destPos += 4) {
-      costante s1 = src32[i];
-      costante s2 = src32[i + 1];
-      costante s3 = src32[i + 2];
-      dest[Pos.dest] = s1 | 0xff000000;
+  if (_util.FeatureTest.isLittleEndian) {
+    for (; i < len32 - 2; i += 3, destPos += 4) {
+      const s1 = src32[i];
+      const s2 = src32[i + 1];
+      const s3 = src32[i + 2];
+      dest[destPos] = s1 | 0xff000000;
       dest[destPos + 1] = s1 >>> 24 | s2 << 8 | 0xff000000;
       dest[destPos + 2] = s2 >>> 16 | s3 << 16 | 0xff000000;
       dest[destPos + 3] = s3 >>> 8 | 0xff000000;
     }
-    per (lascia che j = i * 4, jj = lunghezza src; j < jj; j += 3) {
+    for (let j = i * 4, jj = src.length; j < jj; j += 3) {
       dest[destPos++] = src[j] | src[j + 1] << 8 | src[j + 2] << 16 | 0xff000000;
     }
-  } altro {
-    per (; i < len32 - 2; i += 3, destPos += 4) {
-      costante s1 = src32[i];
-      costante s2 = src32[i + 1];
-      costante s3 = src32[i + 2];
-      dest[Pos.dest] = s1 | 0xff;
+  } else {
+    for (; i < len32 - 2; i += 3, destPos += 4) {
+      const s1 = src32[i];
+      const s2 = src32[i + 1];
+      const s3 = src32[i + 2];
+      dest[destPos] = s1 | 0xff;
       dest[destPos + 1] = s1 << 24 | s2 >>> 8 | 0xff;
       dest[destPos + 2] = s2 << 16 | s3 >>> 16 | 0xff;
       dest[destPos + 3] = s3 << 8 | 0xff;
     }
-    per (lascia che j = i * 4, jj = lunghezza src; j < jj; j += 3) {
+    for (let j = i * 4, jj = src.length; j < jj; j += 3) {
       dest[destPos++] = src[j] << 24 | src[j + 1] << 16 | src[j + 2] << 8 | 0xff;
     }
   }
-  ritorno {
+  return {
     srcPos,
-    Posizione di destinazione
+    destPos
   };
 }
-funzione grayToRGBA(src, dest) {
-  se (_util.FeatureTest.isLittleEndian) {
-    per (lascia che i = 0, ii = lunghezza src; i < ii; i++) {
+function grayToRGBA(src, dest) {
+  if (_util.FeatureTest.isLittleEndian) {
+    for (let i = 0, ii = src.length; i < ii; i++) {
       dest[i] = src[i] * 0x10101 | 0xff000000;
     }
-  } altro {
-    per (lascia che i = 0, ii = lunghezza src; i < ii; i++) {
+  } else {
+    for (let i = 0, ii = src.length; i < ii; i++) {
       dest[i] = src[i] * 0x1010100 | 0x000000ff;
     }
   }
@@ -9056,12 +9056,12 @@ funzione grayToRGBA(src, dest) {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.GlobalWorkerOptions = void 0;
+exports.GlobalWorkerOptions = void 0;
 const GlobalWorkerOptions = Object.create(null);
-esportazioni.GlobalWorkerOptions = GlobalWorkerOptions;
+exports.GlobalWorkerOptions = GlobalWorkerOptions;
 GlobalWorkerOptions.workerPort = null;
 GlobalWorkerOptions.workerSrc = "";
 
@@ -9071,412 +9071,412 @@ GlobalWorkerOptions.workerSrc = "";
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.MessageHandler = void 0;
+exports.MessageHandler = void 0;
 var _util = __w_pdfjs_require__(1);
 const CallbackKind = {
-  SCONOSCIUTO: 0,
-  DATI: 1,
-  ERRORE: 2
+  UNKNOWN: 0,
+  DATA: 1,
+  ERROR: 2
 };
 const StreamKind = {
-  SCONOSCIUTO: 0,
-  ANNULLA: 1,
-  ANNULLA_COMPLETA: 2,
-  CHIUDI: 3,
-  CODA: 4,
-  ERRORE: 5,
-  TIRARE: 6,
+  UNKNOWN: 0,
+  CANCEL: 1,
+  CANCEL_COMPLETE: 2,
+  CLOSE: 3,
+  ENQUEUE: 4,
+  ERROR: 5,
+  PULL: 6,
   PULL_COMPLETE: 7,
-  INIZIO_COMPLETO: 8
+  START_COMPLETE: 8
 };
-funzione wrapReason(motivo) {
-  se (!(motivo instanceof Errore || tipo di motivo === "oggetto" && motivo !== null)) {
-    (0, _util.unreachable)('wrapReason: si prevedeva che "reason" fosse un errore (probabilmente clonato).');
+function wrapReason(reason) {
+  if (!(reason instanceof Error || typeof reason === "object" && reason !== null)) {
+    (0, _util.unreachable)('wrapReason: Expected "reason" to be a (possibly cloned) Error.');
   }
-  switch (motivo.nome) {
-    caso "AbortException":
-      restituisci nuovo _util.AbortException(motivo.messaggio);
-    caso "MissingPDFException":
-      restituisci nuovo _util.MissingPDFException(reason.message);
-    caso "PasswordException":
-      restituisci nuovo _util.PasswordException(motivo.messaggio, motivo.codice);
-    caso "UnexpectedResponseException":
-      restituisci nuovo _util.UnexpectedResponseException(motivo.messaggio, motivo.stato);
-    caso "UnknownErrorException":
-      restituisci nuovo _util.UnknownErrorException(motivo.messaggio, motivo.dettagli);
-    predefinito:
-      restituisci nuovo _util.UnknownErrorException(reason.message, reason.toString());
+  switch (reason.name) {
+    case "AbortException":
+      return new _util.AbortException(reason.message);
+    case "MissingPDFException":
+      return new _util.MissingPDFException(reason.message);
+    case "PasswordException":
+      return new _util.PasswordException(reason.message, reason.code);
+    case "UnexpectedResponseException":
+      return new _util.UnexpectedResponseException(reason.message, reason.status);
+    case "UnknownErrorException":
+      return new _util.UnknownErrorException(reason.message, reason.details);
+    default:
+      return new _util.UnknownErrorException(reason.message, reason.toString());
   }
 }
-classe MessageHandler {
-  costruttore(nomeorigine, nomedestinazione, comObj) {
+class MessageHandler {
+  constructor(sourceName, targetName, comObj) {
     this.sourceName = sourceName;
-    questo.nometarget = nometarget;
+    this.targetName = targetName;
     this.comObj = comObj;
-    questo.callbackId = 1;
-    questo.streamId = 1;
+    this.callbackId = 1;
+    this.streamId = 1;
     this.streamSinks = Object.create(null);
     this.streamControllers = Object.create(null);
     this.callbackCapabilities = Object.create(null);
     this.actionHandler = Object.create(null);
-    this._onComObjOnMessage = evento => {
+    this._onComObjOnMessage = event => {
       const data = event.data;
-      se (data.targetName !== this.sourceName) {
-        ritorno;
+      if (data.targetName !== this.sourceName) {
+        return;
       }
-      se (flusso di dati) {
-        questo.#processStreamMessage(dati);
-        ritorno;
+      if (data.stream) {
+        this.#processStreamMessage(data);
+        return;
       }
-      se (data.callback) {
+      if (data.callback) {
         const callbackId = data.callbackId;
-        capacità costante = this.callbackCapabilities[callbackId];
-        se (!capacità) {
-          genera un nuovo errore (`Impossibile risolvere la callback ${callbackId}`);
+        const capability = this.callbackCapabilities[callbackId];
+        if (!capability) {
+          throw new Error(`Cannot resolve callback ${callbackId}`);
         }
-        elimina questo.callbackCapabilities[callbackId];
-        se (data.callback === CallbackKind.DATA) {
-          capacità.risolvere(dati.dati);
-        } altrimenti se (data.callback === CallbackKind.ERROR) {
-          capacità.rifiuto(wrapReason(dati.motivo));
-        } altro {
-          genera un nuovo errore("Caso di callback imprevisto");
+        delete this.callbackCapabilities[callbackId];
+        if (data.callback === CallbackKind.DATA) {
+          capability.resolve(data.data);
+        } else if (data.callback === CallbackKind.ERROR) {
+          capability.reject(wrapReason(data.reason));
+        } else {
+          throw new Error("Unexpected callback case");
         }
-        ritorno;
+        return;
       }
-      azione costante = this.actionHandler[data.action];
-      se (!azione) {
-        genera un nuovo errore (`Azione sconosciuta dal worker: ${data.action}`);
+      const action = this.actionHandler[data.action];
+      if (!action) {
+        throw new Error(`Unknown action from worker: ${data.action}`);
       }
-      se (data.callbackId) {
+      if (data.callbackId) {
         const cbSourceName = this.sourceName;
         const cbTargetName = data.sourceName;
-        nuova Promessa(funzione (risoluzione) {
-          risolvere(azione(dati.dati));
-        }).then(funzione (risultato) {
+        new Promise(function (resolve) {
+          resolve(action(data.data));
+        }).then(function (result) {
           comObj.postMessage({
-            NomeSorgente: cbNomeSorgente,
-            NomeDestinazione: cbNomeDestinazione,
-            richiamata: CallbackKind.DATA,
-            callbackId: dati.callbackId,
-            dati: risultato
+            sourceName: cbSourceName,
+            targetName: cbTargetName,
+            callback: CallbackKind.DATA,
+            callbackId: data.callbackId,
+            data: result
           });
-        }, funzione (ragione) {
+        }, function (reason) {
           comObj.postMessage({
-            NomeSorgente: cbNomeSorgente,
-            NomeDestinazione: cbNomeDestinazione,
-            richiamata: CallbackKind.ERROR,
-            callbackId: dati.callbackId,
-            motivo: wrapReason(motivo)
+            sourceName: cbSourceName,
+            targetName: cbTargetName,
+            callback: CallbackKind.ERROR,
+            callbackId: data.callbackId,
+            reason: wrapReason(reason)
           });
         });
-        ritorno;
+        return;
       }
-      se (data.streamId) {
-        questo.#createStreamSink(dati);
-        ritorno;
+      if (data.streamId) {
+        this.#createStreamSink(data);
+        return;
       }
-      azione(dati.dati);
+      action(data.data);
     };
-    comObj.addEventListener("messaggio", this._onComObjOnMessage);
+    comObj.addEventListener("message", this._onComObjOnMessage);
   }
-  on(actionName, gestore) {
+  on(actionName, handler) {
     const ah = this.actionHandler;
-    se (ah[nomeazione]) {
-      throw new Error(`Esiste già un actionName chiamato "${actionName}"`);
+    if (ah[actionName]) {
+      throw new Error(`There is already an actionName called "${actionName}"`);
     }
-    ah[actionName] = gestore;
+    ah[actionName] = handler;
   }
-  invia(nomeazione, dati, trasferimenti) {
+  send(actionName, data, transfers) {
     this.comObj.postMessage({
       sourceName: this.sourceName,
-      targetName: questo.targetName,
-      azione: actionName,
-      dati
-    }, trasferimenti);
+      targetName: this.targetName,
+      action: actionName,
+      data
+    }, transfers);
   }
-  sendWithPromise(actionName, dati, trasferimenti) {
+  sendWithPromise(actionName, data, transfers) {
     const callbackId = this.callbackId++;
     const capability = new _util.PromiseCapability();
-    this.callbackCapabilities[callbackId] = capacità;
-    Tentativo {
+    this.callbackCapabilities[callbackId] = capability;
+    try {
       this.comObj.postMessage({
         sourceName: this.sourceName,
-        targetName: questo.targetName,
-        azione: actionName,
+        targetName: this.targetName,
+        action: actionName,
         callbackId,
-        dati
-      }, trasferimenti);
-    } catturare (es.) {
-      capacità.rifiuta(es);
+        data
+      }, transfers);
+    } catch (ex) {
+      capability.reject(ex);
     }
-    capacità di ritorno.promessa;
+    return capability.promise;
   }
   sendWithStream(actionName, data, queueingStrategy, transfers) {
     const streamId = this.streamId++,
       sourceName = this.sourceName,
-      targetName = questo.targetName,
+      targetName = this.targetName,
       comObj = this.comObj;
-    restituisci nuovo ReadableStream({
-      inizio: controllore => {
+    return new ReadableStream({
+      start: controller => {
         const startCapability = new _util.PromiseCapability();
-        questo.streamControllers[streamId] = {
-          controllore,
+        this.streamControllers[streamId] = {
+          controller,
           startCall: startCapability,
-          pullCall: nullo,
+          pullCall: null,
           cancelCall: null,
-          è chiuso: falso
+          isClosed: false
         };
         comObj.postMessage({
-          NomeSorgente,
-          NomeDestinazione,
-          azione: actionName,
-          ID flusso,
-          dati,
+          sourceName,
+          targetName,
+          action: actionName,
+          streamId,
+          data,
           desiredSize: controller.desiredSize
-        }, trasferimenti);
-        restituisci startCapability.promise;
+        }, transfers);
+        return startCapability.promise;
       },
-      tira: controllore => {
+      pull: controller => {
         const pullCapability = new _util.PromiseCapability();
         this.streamControllers[streamId].pullCall = pullCapability;
         comObj.postMessage({
-          NomeSorgente,
-          NomeDestinazione,
-          flusso: StreamKind.PULL,
-          ID flusso,
+          sourceName,
+          targetName,
+          stream: StreamKind.PULL,
+          streamId,
           desiredSize: controller.desiredSize
         });
-        restituisci pullCapability.promise;
+        return pullCapability.promise;
       },
-      annulla: motivo => {
-        (0, _util.assert)(reason instanceof Error, "cancel deve avere un motivo valido");
+      cancel: reason => {
+        (0, _util.assert)(reason instanceof Error, "cancel must have a valid reason");
         const cancelCapability = new _util.PromiseCapability();
         this.streamControllers[streamId].cancelCall = cancelCapability;
         this.streamControllers[streamId].isClosed = true;
         comObj.postMessage({
-          NomeSorgente,
-          NomeDestinazione,
-          flusso: StreamKind.CANCEL,
-          ID flusso,
-          motivo: wrapReason(motivo)
+          sourceName,
+          targetName,
+          stream: StreamKind.CANCEL,
+          streamId,
+          reason: wrapReason(reason)
         });
-        restituisci cancelCapability.promise;
+        return cancelCapability.promise;
       }
-    }, strategiadicoda);
+    }, queueingStrategy);
   }
-  #createStreamSink(dati) {
+  #createStreamSink(data) {
     const streamId = data.streamId,
       sourceName = this.sourceName,
       targetName = data.sourceName,
       comObj = this.comObj;
-    const self = questo,
-      azione = this.actionHandler[data.action];
+    const self = this,
+      action = this.actionHandler[data.action];
     const streamSink = {
-      enqueue(chunk, dimensione = 1, trasferimenti) {
-        se (questo.èAnnullato) {
-          ritorno;
+      enqueue(chunk, size = 1, transfers) {
+        if (this.isCancelled) {
+          return;
         }
         const lastDesiredSize = this.desiredSize;
-        this.desiredSize -= dimensione;
-        se (lastDesiredSize > 0 e this.desiredSize <= 0) {
+        this.desiredSize -= size;
+        if (lastDesiredSize > 0 && this.desiredSize <= 0) {
           this.sinkCapability = new _util.PromiseCapability();
-          questo.pronto = questo.sinkCapability.promessa;
+          this.ready = this.sinkCapability.promise;
         }
         comObj.postMessage({
-          NomeSorgente,
-          NomeDestinazione,
-          flusso: StreamKind.ENQUEUE,
-          ID flusso,
-          pezzo
-        }, trasferimenti);
+          sourceName,
+          targetName,
+          stream: StreamKind.ENQUEUE,
+          streamId,
+          chunk
+        }, transfers);
       },
-      vicino() {
-        se (questo.èAnnullato) {
-          ritorno;
-        }
-        this.isCancelled = true;
-        comObj.postMessage({
-          NomeSorgente,
-          NomeDestinazione,
-          flusso: StreamKind.CLOSE,
-          ID flusso
-        });
-        elimina self.streamSinks[streamId];
-      },
-      errore(motivo) {
-        (0, _util.assert)(reason instanceof Error, "l'errore deve avere un motivo valido");
-        se (questo.èAnnullato ) {
-          ritorno;
+      close() {
+        if (this.isCancelled) {
+          return;
         }
         this.isCancelled = true;
         comObj.postMessage({
-          NomeSorgente,
-          NomeDestinazione,
-          flusso: StreamKind.ERROR,
-          ID flusso,
-          motivo: wrapReason(motivo)
+          sourceName,
+          targetName,
+          stream: StreamKind.CLOSE,
+          streamId
+        });
+        delete self.streamSinks[streamId];
+      },
+      error(reason) {
+        (0, _util.assert)(reason instanceof Error, "error must have a valid reason");
+        if (this.isCancelled) {
+          return;
+        }
+        this.isCancelled = true;
+        comObj.postMessage({
+          sourceName,
+          targetName,
+          stream: StreamKind.ERROR,
+          streamId,
+          reason: wrapReason(reason)
         });
       },
-      sinkCapability: nuovo _util.PromiseCapability(),
-      onPull: nullo,
+      sinkCapability: new _util.PromiseCapability(),
+      onPull: null,
       onCancel: null,
-      èAnnullato: falso,
-      desiredSize: dati.desiredSize,
-      pronto: null
+      isCancelled: false,
+      desiredSize: data.desiredSize,
+      ready: null
     };
     streamSink.sinkCapability.resolve();
     streamSink.ready = streamSink.sinkCapability.promise;
     this.streamSinks[streamId] = streamSink;
-    nuova Promessa(funzione (risoluzione) {
+    new Promise(function (resolve) {
       resolve(action(data.data, streamSink));
-    }).then(funzione () {
+    }).then(function () {
       comObj.postMessage({
-        NomeSorgente,
-        NomeDestinazione,
-        flusso: StreamKind.START_COMPLETE,
-        ID flusso,
-        successo: vero
+        sourceName,
+        targetName,
+        stream: StreamKind.START_COMPLETE,
+        streamId,
+        success: true
       });
-    }, funzione (ragione) {
+    }, function (reason) {
       comObj.postMessage({
-        NomeSorgente,
-        NomeDestinazione,
-        flusso: StreamKind.START_COMPLETE,
-        ID flusso,
-        motivo: wrapReason(motivo)
+        sourceName,
+        targetName,
+        stream: StreamKind.START_COMPLETE,
+        streamId,
+        reason: wrapReason(reason)
       });
     });
   }
-  #processStreamMessage(dati) {
+  #processStreamMessage(data) {
     const streamId = data.streamId,
       sourceName = this.sourceName,
       targetName = data.sourceName,
       comObj = this.comObj;
     const streamController = this.streamControllers[streamId],
       streamSink = this.streamSinks[streamId];
-    switch (flusso di dati) {
-      caso StreamKind.START_COMPLETE:
-        se (data.success) {
+    switch (data.stream) {
+      case StreamKind.START_COMPLETE:
+        if (data.success) {
           streamController.startCall.resolve();
-        } altro {
+        } else {
           streamController.startCall.reject(wrapReason(data.reason));
         }
-        rottura;
-      caso StreamKind.PULL_COMPLETE:
-        se (data.success) {
+        break;
+      case StreamKind.PULL_COMPLETE:
+        if (data.success) {
           streamController.pullCall.resolve();
-        } altro {
+        } else {
           streamController.pullCall.reject(wrapReason(data.reason));
         }
-        rottura;
-      caso StreamKind.PULL:
-        se (!streamSink) {
+        break;
+      case StreamKind.PULL:
+        if (!streamSink) {
           comObj.postMessage({
-            NomeSorgente,
-            NomeDestinazione,
-            flusso: StreamKind.PULL_COMPLETE,
-            ID flusso,
-            successo: vero
+            sourceName,
+            targetName,
+            stream: StreamKind.PULL_COMPLETE,
+            streamId,
+            success: true
           });
-          rottura;
+          break;
         }
-        se (streamSink.desiredSize <= 0 e dati.desiredSize > 0) {
+        if (streamSink.desiredSize <= 0 && data.desiredSize > 0) {
           streamSink.sinkCapability.resolve();
         }
-        streamSink.desiredSize = dati.desiredSize;
-        nuova Promessa(funzione (risoluzione) {
+        streamSink.desiredSize = data.desiredSize;
+        new Promise(function (resolve) {
           resolve(streamSink.onPull?.());
-        }).then(funzione () {
+        }).then(function () {
           comObj.postMessage({
-            NomeSorgente,
-            NomeDestinazione,
-            flusso: StreamKind.PULL_COMPLETE,
-            ID flusso,
-            successo: vero
+            sourceName,
+            targetName,
+            stream: StreamKind.PULL_COMPLETE,
+            streamId,
+            success: true
           });
-        }, funzione (ragione) {
+        }, function (reason) {
           comObj.postMessage({
-            NomeSorgente,
-            NomeDestinazione,
-            flusso: StreamKind.PULL_COMPLETE,
-            ID flusso,
-            motivo: wrapReason(motivo)
+            sourceName,
+            targetName,
+            stream: StreamKind.PULL_COMPLETE,
+            streamId,
+            reason: wrapReason(reason)
           });
         });
-        rottura;
-      caso StreamKind.ENQUEUE:
-        (0, _util.assert)(streamController, "enqueue dovrebbe avere un controller di flusso");
-        se (streamController.isClosed) {
-          rottura;
+        break;
+      case StreamKind.ENQUEUE:
+        (0, _util.assert)(streamController, "enqueue should have stream controller");
+        if (streamController.isClosed) {
+          break;
         }
         streamController.controller.enqueue(data.chunk);
-        rottura;
-      caso StreamKind.CLOSE:
-        (0, _util.assert)(streamController, "chiudi dovrebbe avere il controller di flusso");
-        se (streamController.isClosed) {
-          rottura;
+        break;
+      case StreamKind.CLOSE:
+        (0, _util.assert)(streamController, "close should have stream controller");
+        if (streamController.isClosed) {
+          break;
         }
         streamController.isClosed = true;
         streamController.controller.close();
-        questo.#deleteStreamController(streamController, streamId);
-        rottura;
-      caso StreamKind.ERROR:
-        (0, _util.assert)(streamController, "errore dovrebbe avere il controller di flusso");
+        this.#deleteStreamController(streamController, streamId);
+        break;
+      case StreamKind.ERROR:
+        (0, _util.assert)(streamController, "error should have stream controller");
         streamController.controller.error(wrapReason(data.reason));
-        questo.#deleteStreamController(streamController, streamId);
-        rottura;
-      caso StreamKind.CANCEL_COMPLETE:
-        se (data.success) {
+        this.#deleteStreamController(streamController, streamId);
+        break;
+      case StreamKind.CANCEL_COMPLETE:
+        if (data.success) {
           streamController.cancelCall.resolve();
-        } altro {
+        } else {
           streamController.cancelCall.reject(wrapReason(data.reason));
         }
-        questo.#deleteStreamController(streamController, streamId);
-        rottura;
-      caso StreamKind.CANCEL:
-        se (!streamSink) {
-          rottura;
+        this.#deleteStreamController(streamController, streamId);
+        break;
+      case StreamKind.CANCEL:
+        if (!streamSink) {
+          break;
         }
-        nuova Promessa(funzione (risoluzione) {
+        new Promise(function (resolve) {
           resolve(streamSink.onCancel?.(wrapReason(data.reason)));
-        }).then(funzione () {
+        }).then(function () {
           comObj.postMessage({
-            NomeSorgente,
-            NomeDestinazione,
-            flusso: StreamKind.CANCEL_COMPLETE,
-            ID flusso,
-            successo: vero
+            sourceName,
+            targetName,
+            stream: StreamKind.CANCEL_COMPLETE,
+            streamId,
+            success: true
           });
-        }, funzione (ragione) {
+        }, function (reason) {
           comObj.postMessage({
-            NomeSorgente,
-            NomeDestinazione,
-            flusso: StreamKind.CANCEL_COMPLETE,
-            ID flusso,
-            motivo: wrapReason(motivo)
+            sourceName,
+            targetName,
+            stream: StreamKind.CANCEL_COMPLETE,
+            streamId,
+            reason: wrapReason(reason)
           });
         });
         streamSink.sinkCapability.reject(wrapReason(data.reason));
         streamSink.isCancelled = true;
-        elimina questo.streamSinks[streamId];
-        rottura;
-      predefinito:
-        genera un nuovo errore("Caso di flusso imprevisto");
+        delete this.streamSinks[streamId];
+        break;
+      default:
+        throw new Error("Unexpected stream case");
     }
   }
-  asincrono #deleteStreamController(streamController, streamId) {
-    attendi Promise.allSettled([streamController.startCall?.promise, streamController.pullCall?.promise, streamController.cancelCall?.promise]);
-    elimina questo.streamControllers[streamId];
+  async #deleteStreamController(streamController, streamId) {
+    await Promise.allSettled([streamController.startCall?.promise, streamController.pullCall?.promise, streamController.cancelCall?.promise]);
+    delete this.streamControllers[streamId];
   }
-  distruggere() {
-    this.comObj.removeEventListener("messaggio", this._onComObjOnMessage);
+  destroy() {
+    this.comObj.removeEventListener("message", this._onComObjOnMessage);
   }
 }
-esportazioni.MessageHandler = MessageHandler;
+exports.MessageHandler = MessageHandler;
 
 /***/ }),
 /* 16 */
@@ -9484,35 +9484,35 @@ esportazioni.MessageHandler = MessageHandler;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.Metadati = void 0;
+exports.Metadata = void 0;
 var _util = __w_pdfjs_require__(1);
-Metadati di classe {
+class Metadata {
   #metadataMap;
-  #dati;
-  costruttore({
-    dati analizzati,
-    dati grezzi
+  #data;
+  constructor({
+    parsedData,
+    rawData
   }) {
-    questo.#metadataMap = parsedData;
-    questo.#dati = dati grezzi;
+    this.#metadataMap = parsedData;
+    this.#data = rawData;
   }
   getRaw() {
-    restituisci questo.#data;
+    return this.#data;
   }
-  ottieni(nome) {
-    restituisci questo.#metadataMap.get(name) ?? null;
+  get(name) {
+    return this.#metadataMap.get(name) ?? null;
   }
-  ottieniTutto() {
-    restituisci (0, _util.objectFromMap)(this.#metadataMap);
+  getAll() {
+    return (0, _util.objectFromMap)(this.#metadataMap);
   }
-  ha(nome) {
-    restituisci questo.#metadataMap.has(name);
+  has(name) {
+    return this.#metadataMap.has(name);
   }
 }
-exports.Metadata = Metadati;
+exports.Metadata = Metadata;
 
 /***/ }),
 /* 17 */
@@ -9520,202 +9520,202 @@ exports.Metadata = Metadati;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.OptionalContentConfig = void 0;
+exports.OptionalContentConfig = void 0;
 var _util = __w_pdfjs_require__(1);
 var _murmurhash = __w_pdfjs_require__(8);
-const INTERNO = Simbolo("INTERNO");
-classe OptionalContentGroup {
-  #visibile = vero;
-  costruttore(nome, intento) {
-    questo.nome = nome;
-    questo.intento = intento;
+const INTERNAL = Symbol("INTERNAL");
+class OptionalContentGroup {
+  #visible = true;
+  constructor(name, intent) {
+    this.name = name;
+    this.intent = intent;
   }
-  diventa visibile() {
-    restituisci questo.#visibile;
+  get visible() {
+    return this.#visible;
   }
-  _setVisible(interno, visibile) {
-    se (interno !== INTERNO) {
-      (0, _util.unreachable)("Metodo interno `_setVisible` chiamato.");
+  _setVisible(internal, visible) {
+    if (internal !== INTERNAL) {
+      (0, _util.unreachable)("Internal method `_setVisible` called.");
     }
-    questo.#visibile = visibile;
+    this.#visible = visible;
   }
 }
-classe OptionalContentConfig {
+class OptionalContentConfig {
   #cachedGetHash = null;
-  #gruppi = nuova mappa();
+  #groups = new Map();
   #initialHash = null;
-  #ordine = null;
-  costruttore(dati) {
-    questo.nome = null;
-    questo.creatore = null;
-    se (dati === null) {
-      ritorno;
+  #order = null;
+  constructor(data) {
+    this.name = null;
+    this.creator = null;
+    if (data === null) {
+      return;
     }
-    questo.nome = dati.nome;
-    questo.creatore = dati.creatore;
-    questo.#ordine = dati.ordine;
-    per (gruppo costante di data.groups) {
-      questo.#groups.set(group.id, new OptionalContentGroup(group.name, group.intent));
+    this.name = data.name;
+    this.creator = data.creator;
+    this.#order = data.order;
+    for (const group of data.groups) {
+      this.#groups.set(group.id, new OptionalContentGroup(group.name, group.intent));
     }
     if (data.baseState === "OFF") {
-      per (const gruppo di questo.#groups.values()) {
-        group._setVisible(INTERNO, falso);
+      for (const group of this.#groups.values()) {
+        group._setVisible(INTERNAL, false);
       }
     }
-    per (const on di data.on) {
-      questo.#groups.get(on)._setVisible(INTERNO, vero);
+    for (const on of data.on) {
+      this.#groups.get(on)._setVisible(INTERNAL, true);
     }
-    per (const off di data.off) {
-      questo.#groups.get(off)._setVisible(INTERNO, falso);
+    for (const off of data.off) {
+      this.#groups.get(off)._setVisible(INTERNAL, false);
     }
-    questo.#initialHash = questo.getHash();
+    this.#initialHash = this.getHash();
   }
   #evaluateVisibilityExpression(array) {
-    lunghezza costante = array.lunghezza;
-    se (lunghezza < 2) {
-      restituisci vero;
+    const length = array.length;
+    if (length < 2) {
+      return true;
     }
-    operatore costante = array[0];
-    per (lascia che i = 1; i < lunghezza; i++) {
-      elemento costante = array[i];
-      lascia lo stato;
-      se (Array.isArray(elemento)) {
-        stato = questo.#evaluateVisibilityExpression(elemento);
-      } altrimenti se (questo.#gruppi.has(elemento)) {
-        stato = questo.#gruppi.get(elemento).visibile;
-      } altro {
-        (0, _util.warn)(`Gruppo di contenuti facoltativo non trovato: ${element}`);
-        restituisci vero;
+    const operator = array[0];
+    for (let i = 1; i < length; i++) {
+      const element = array[i];
+      let state;
+      if (Array.isArray(element)) {
+        state = this.#evaluateVisibilityExpression(element);
+      } else if (this.#groups.has(element)) {
+        state = this.#groups.get(element).visible;
+      } else {
+        (0, _util.warn)(`Optional content group not found: ${element}`);
+        return true;
       }
-      switch (operatore) {
-        caso "E":
-          se (!stato) {
-            restituisci falso;
+      switch (operator) {
+        case "And":
+          if (!state) {
+            return false;
           }
-          rottura;
-        caso "O":
-          se (stato) {
-            restituisci vero;
+          break;
+        case "Or":
+          if (state) {
+            return true;
           }
-          rottura;
-        caso "Non":
-          ritorno !stato;
-        predefinito:
-          restituisci vero;
+          break;
+        case "Not":
+          return !state;
+        default:
+          return true;
       }
     }
-    operatore di ritorno === "E";
+    return operator === "And";
   }
-  èVisibile(gruppo) {
-    se (questo.#gruppi.dimensione === 0) {
-      restituisci vero;
+  isVisible(group) {
+    if (this.#groups.size === 0) {
+      return true;
     }
-    se (!gruppo) {
-      (0, _util.warn)("Gruppo di contenuti facoltativo non definito.");
-      restituisci vero;
+    if (!group) {
+      (0, _util.warn)("Optional content group not defined.");
+      return true;
     }
-    se (gruppo.tipo === "OCG") {
-      se (!questo.#gruppi.has(gruppo.id)) {
-        (0, _util.warn)(`Gruppo di contenuti facoltativo non trovato: ${group.id}`);
-        restituisci vero;
+    if (group.type === "OCG") {
+      if (!this.#groups.has(group.id)) {
+        (0, _util.warn)(`Optional content group not found: ${group.id}`);
+        return true;
       }
-      restituisci questo.#groups.get(group.id).visible;
-    } altrimenti se (gruppo.tipo === "OCMD") {
-      se (espressione di gruppo) {
-        restituisci questo.#evaluateVisibilityExpression(group.expression);
+      return this.#groups.get(group.id).visible;
+    } else if (group.type === "OCMD") {
+      if (group.expression) {
+        return this.#evaluateVisibilityExpression(group.expression);
       }
-      se (!group.policy || group.policy === "AnyOn") {
-        per (id costante di group.ids) {
-          se (!questo.#gruppi.has(id)) {
-            (0, _util.warn)(`Gruppo di contenuti facoltativo non trovato: ${id}`);
-            restituisci vero;
+      if (!group.policy || group.policy === "AnyOn") {
+        for (const id of group.ids) {
+          if (!this.#groups.has(id)) {
+            (0, _util.warn)(`Optional content group not found: ${id}`);
+            return true;
           }
-          se (questo.#gruppi.get(id).visibile) {
-            restituisci vero;
-          }
-        }
-        restituisci falso;
-      } altrimenti se (group.policy === "AllOn") {
-        per (id costante di group.ids) {
-          se (!questo.#gruppi.has(id)) {
-            (0, _util.warn)(`Gruppo di contenuti facoltativo non trovato: ${id}`);
-            restituisci vero;
-          }
-          se (!this.#groups.get(id).visible) {
-            restituisci falso;
+          if (this.#groups.get(id).visible) {
+            return true;
           }
         }
-        restituisci vero;
-      } altrimenti se (group.policy === "AnyOff") {
-        per (id costante di group.ids) {
-          se (!questo.#gruppi.has(id)) {
-            (0, _util.warn)(`Gruppo di contenuti facoltativo non trovato: ${id}`);
-            restituisci vero;
+        return false;
+      } else if (group.policy === "AllOn") {
+        for (const id of group.ids) {
+          if (!this.#groups.has(id)) {
+            (0, _util.warn)(`Optional content group not found: ${id}`);
+            return true;
           }
-          se (!this.#groups.get(id).visible) {
-            restituisci vero;
-          }
-        }
-        restituisci falso;
-      } altrimenti se (group.policy === "AllOff") {
-        per (id costante di group.ids) {
-          se (!questo.#gruppi.has(id)) {
-            (0, _util.warn)(`Gruppo di contenuti facoltativo non trovato: ${id}`);
-            restituisci vero;
-          }
-          se (questo.#gruppi.get(id).visibile) {
-            restituisci falso;
+          if (!this.#groups.get(id).visible) {
+            return false;
           }
         }
-        restituisci vero;
+        return true;
+      } else if (group.policy === "AnyOff") {
+        for (const id of group.ids) {
+          if (!this.#groups.has(id)) {
+            (0, _util.warn)(`Optional content group not found: ${id}`);
+            return true;
+          }
+          if (!this.#groups.get(id).visible) {
+            return true;
+          }
+        }
+        return false;
+      } else if (group.policy === "AllOff") {
+        for (const id of group.ids) {
+          if (!this.#groups.has(id)) {
+            (0, _util.warn)(`Optional content group not found: ${id}`);
+            return true;
+          }
+          if (this.#groups.get(id).visible) {
+            return false;
+          }
+        }
+        return true;
       }
-      (0, _util.warn)(`Criterio sui contenuti opzionali sconosciuto ${group.policy}.`);
-      restituisci vero;
+      (0, _util.warn)(`Unknown optional content policy ${group.policy}.`);
+      return true;
     }
-    (0, _util.warn)(`Tipo di gruppo sconosciuto ${group.type}.`);
-    restituisci vero;
+    (0, _util.warn)(`Unknown group type ${group.type}.`);
+    return true;
   }
-  setVisibility(id, visibile = vero) {
-    se (!questo.#gruppi.has(id)) {
-      (0, _util.warn)(`Gruppo di contenuti facoltativo non trovato: ${id}`);
-      ritorno;
+  setVisibility(id, visible = true) {
+    if (!this.#groups.has(id)) {
+      (0, _util.warn)(`Optional content group not found: ${id}`);
+      return;
     }
-    this.#groups.get(id)._setVisible(INTERNO, !!visibile);
-    questo.#cachedGetHash = null;
+    this.#groups.get(id)._setVisible(INTERNAL, !!visible);
+    this.#cachedGetHash = null;
   }
-  ottieni hasInitialVisibility() {
-    restituisci questo.#initialHash === null || questo.getHash() === questo.#initialHash;
+  get hasInitialVisibility() {
+    return this.#initialHash === null || this.getHash() === this.#initialHash;
   }
   getOrder() {
-    se (!questo.#gruppi.dimensione) {
-      restituisci null;
+    if (!this.#groups.size) {
+      return null;
     }
-    se (questo.#ordine) {
-      restituisci questo.#order.slice();
+    if (this.#order) {
+      return this.#order.slice();
     }
-    restituisci [...questo.#gruppi.chiavi()];
+    return [...this.#groups.keys()];
   }
   getGroups() {
-    restituisci questo.#groups.size > 0 ? (0, _util.objectFromMap)(this.#groups) : null;
+    return this.#groups.size > 0 ? (0, _util.objectFromMap)(this.#groups) : null;
   }
   getGroup(id) {
-    restituisci questo.#groups.get(id) || null;
+    return this.#groups.get(id) || null;
   }
   getHash() {
-    se (questo.#cachedGetHash !== null) {
-      restituisci questo.#cachedGetHash;
+    if (this.#cachedGetHash !== null) {
+      return this.#cachedGetHash;
     }
     const hash = new _murmurhash.MurmurHash3_64();
-    per (const [id, gruppo] di questo.#gruppi) {
+    for (const [id, group] of this.#groups) {
       hash.update(`${id}:${group.visible}`);
     }
-    restituisci questo.#cachedGetHash = hash.hexdigest();
+    return this.#cachedGetHash = hash.hexdigest();
   }
 }
-esportazioni.OptionalContentConfig = OptionalContentConfig;
+exports.OptionalContentConfig = OptionalContentConfig;
 
 /***/ }),
 /* 18 */
@@ -9723,50 +9723,50 @@ esportazioni.OptionalContentConfig = OptionalContentConfig;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.PDFDataTransportStream = void 0;
+exports.PDFDataTransportStream = void 0;
 var _util = __w_pdfjs_require__(1);
 var _display_utils = __w_pdfjs_require__(6);
-classe PDFDataTransportStream {
-  costruttore({
-    lunghezza,
-    dati iniziali,
+class PDFDataTransportStream {
+  constructor({
+    length,
+    initialData,
     progressiveDone = false,
     contentDispositionFilename = null,
-    disableRange = falso,
-    disableStream = falso
+    disableRange = false,
+    disableStream = false
   }, pdfDataRangeTransport) {
-    (0, _util.assert)(pdfDataRangeTransport, 'PDFDataTransportStream - argomento "pdfDataRangeTransport" obbligatorio mancante.');
+    (0, _util.assert)(pdfDataRangeTransport, 'PDFDataTransportStream - missing required "pdfDataRangeTransport" argument.');
     this._queuedChunks = [];
     this._progressiveDone = progressiveDone;
     this._contentDispositionFilename = contentDispositionFilename;
-    se (initialData?.length > 0) {
+    if (initialData?.length > 0) {
       const buffer = initialData instanceof Uint8Array && initialData.byteLength === initialData.buffer.byteLength ? initialData.buffer : new Uint8Array(initialData).buffer;
       this._queuedChunks.push(buffer);
     }
     this._pdfDataRangeTransport = pdfDataRangeTransport;
     this._isStreamingSupported = !disableStream;
     this._isRangeSupported = !disableRange;
-    this._contentLength = lunghezza;
+    this._contentLength = length;
     this._fullRequestReader = null;
     this._rangeReaders = [];
-    this._pdfDataRangeTransport.addRangeListener((inizio, frammento) => {
-      questo._onReceiveData({
-        inizio,
-        pezzo
+    this._pdfDataRangeTransport.addRangeListener((begin, chunk) => {
+      this._onReceiveData({
+        begin,
+        chunk
       });
     });
-    this._pdfDataRangeTransport.addProgressListener((caricato, totale) => {
-      questo._onProgress({
-        caricato,
-        totale
+    this._pdfDataRangeTransport.addProgressListener((loaded, total) => {
+      this._onProgress({
+        loaded,
+        total
       });
     });
     this._pdfDataRangeTransport.addProgressiveReadListener(chunk => {
-      questo._onReceiveData({
-        pezzo
+      this._onReceiveData({
+        chunk
       });
     });
     this._pdfDataRangeTransport.addProgressiveDoneListener(() => {
@@ -9775,39 +9775,39 @@ classe PDFDataTransportStream {
     this._pdfDataRangeTransport.transportReady();
   }
   _onReceiveData({
-    inizio,
-    pezzo
+    begin,
+    chunk
   }) {
     const buffer = chunk instanceof Uint8Array && chunk.byteLength === chunk.buffer.byteLength ? chunk.buffer : new Uint8Array(chunk).buffer;
-    se (inizio === indefinito) {
-      se (this._fullRequestReader) {
+    if (begin === undefined) {
+      if (this._fullRequestReader) {
         this._fullRequestReader._enqueue(buffer);
-      } altro {
+      } else {
         this._queuedChunks.push(buffer);
       }
-    } altro {
-      const trovato = this._rangeReaders.some(function (rangeReader) {
-        se (rangeReader._begin !== inizio) {
-          restituisci falso;
+    } else {
+      const found = this._rangeReaders.some(function (rangeReader) {
+        if (rangeReader._begin !== begin) {
+          return false;
         }
         rangeReader._enqueue(buffer);
-        restituisci vero;
+        return true;
       });
-      (0, _util.assert)(trovato, "_onReceiveData - nessuna istanza di `PDFDataTransportStreamRangeReader` trovata.");
+      (0, _util.assert)(found, "_onReceiveData - no `PDFDataTransportStreamRangeReader` instance found.");
     }
   }
-  ottieni _progressiveDataLength() {
-    restituisci this._fullRequestReader?._loaded ?? 0;
+  get _progressiveDataLength() {
+    return this._fullRequestReader?._loaded ?? 0;
   }
   _onProgress(evt) {
-    se (evt.totale === indefinito) {
+    if (evt.total === undefined) {
       this._rangeReaders[0]?.onProgress?.({
-        caricato: evt.loaded
+        loaded: evt.loaded
       });
-    } altro {
+    } else {
       this._fullRequestReader?.onProgress?.({
-        caricato: evt.loaded,
-        totale: evt.total
+        loaded: evt.loaded,
+        total: evt.total
       });
     }
   }
@@ -9815,181 +9815,181 @@ classe PDFDataTransportStream {
     this._fullRequestReader?.progressiveDone();
     this._progressiveDone = true;
   }
-  _removeRangeReader(lettore) {
-    const i = this._rangeReaders.indexOf(lettore);
-    se (i >= 0) {
+  _removeRangeReader(reader) {
+    const i = this._rangeReaders.indexOf(reader);
+    if (i >= 0) {
       this._rangeReaders.splice(i, 1);
     }
   }
   getFullReader() {
-    (0, _util.assert)(!this._fullRequestReader, "PDFDataTransportStream.getFullReader può essere chiamato solo una volta.");
+    (0, _util.assert)(!this._fullRequestReader, "PDFDataTransportStream.getFullReader can only be called once.");
     const queuedChunks = this._queuedChunks;
     this._queuedChunks = null;
-    restituisci nuovo PDFDataTransportStreamReader(questo, queuedChunks, questo._progressiveDone, questo._contentDispositionFilename);
+    return new PDFDataTransportStreamReader(this, queuedChunks, this._progressiveDone, this._contentDispositionFilename);
   }
-  getRangeReader(inizio, fine) {
-    se (fine <= this._progressiveDataLength) {
-      restituisci null;
+  getRangeReader(begin, end) {
+    if (end <= this._progressiveDataLength) {
+      return null;
     }
     const reader = new PDFDataTransportStreamRangeReader(this, begin, end);
-    this._pdfDataRangeTransport.requestDataRange(inizio, fine);
-    this._rangeReaders.push(lettore);
-    lettore di ritorno;
+    this._pdfDataRangeTransport.requestDataRange(begin, end);
+    this._rangeReaders.push(reader);
+    return reader;
   }
-  cancelAllRequests(motivo) {
-    this._fullRequestReader?.cancel(motivo);
-    per (const lettore di this._rangeReaders.slice(0)) {
-      lettore.annulla(motivo);
+  cancelAllRequests(reason) {
+    this._fullRequestReader?.cancel(reason);
+    for (const reader of this._rangeReaders.slice(0)) {
+      reader.cancel(reason);
     }
     this._pdfDataRangeTransport.abort();
   }
 }
-esportazioni.PDFDataTransportStream = PDFDataTransportStream;
-classe PDFDataTransportStreamReader {
-  costruttore(flusso, queuedChunks, progressiveDone = false, contentDispositionFilename = null) {
-    this._stream = flusso;
+exports.PDFDataTransportStream = PDFDataTransportStream;
+class PDFDataTransportStreamReader {
+  constructor(stream, queuedChunks, progressiveDone = false, contentDispositionFilename = null) {
+    this._stream = stream;
     this._done = progressiveDone || false;
     this._filename = (0, _display_utils.isPdfFile)(contentDispositionFilename) ? contentDispositionFilename : null;
     this._queuedChunks = queuedChunks || [];
-    questo._caricato = 0;
-    per (const frammento di this._queuedChunks) {
+    this._loaded = 0;
+    for (const chunk of this._queuedChunks) {
       this._loaded += chunk.byteLength;
     }
-    questo._richieste = [];
+    this._requests = [];
     this._headersReady = Promise.resolve();
-    stream._fullRequestReader = questo;
+    stream._fullRequestReader = this;
     this.onProgress = null;
   }
-  _enqueue(pezzo) {
-    se (questo._fatto) {
-      ritorno;
+  _enqueue(chunk) {
+    if (this._done) {
+      return;
     }
-    se (questa._lunghezza.richieste > 0) {
+    if (this._requests.length > 0) {
       const requestCapability = this._requests.shift();
       requestCapability.resolve({
-        valore: pezzo,
-        fatto: falso
+        value: chunk,
+        done: false
       });
-    } altro {
+    } else {
       this._queuedChunks.push(chunk);
     }
     this._loaded += chunk.byteLength;
   }
-  ottieni intestazioniPronte() {
-    restituisci questo._headersReady;
+  get headersReady() {
+    return this._headersReady;
   }
-  ottieni nomefile() {
-    restituisci questo._nomefile;
+  get filename() {
+    return this._filename;
   }
-  ottieni isRangeSupported() {
-    restituisci this._stream._isRangeSupported;
+  get isRangeSupported() {
+    return this._stream._isRangeSupported;
   }
-  ottieni isStreamingSupported() {
-    restituisci this._stream._isStreamingSupported;
+  get isStreamingSupported() {
+    return this._stream._isStreamingSupported;
   }
-  ottieni lunghezza del contenuto() {
-    restituisci this._stream._contentLength;
+  get contentLength() {
+    return this._stream._contentLength;
   }
-  lettura asincrona() {
-    se (this._queuedChunks.length > 0) {
+  async read() {
+    if (this._queuedChunks.length > 0) {
       const chunk = this._queuedChunks.shift();
-      ritorno {
-        valore: pezzo,
-        fatto: falso
+      return {
+        value: chunk,
+        done: false
       };
     }
-    se (questo._fatto) {
-      ritorno {
-        valore: indefinito,
-        fatto: vero
+    if (this._done) {
+      return {
+        value: undefined,
+        done: true
       };
     }
     const requestCapability = new _util.PromiseCapability();
     this._requests.push(requestCapability);
-    richiesta di ritornoCapability.promise;
+    return requestCapability.promise;
   }
-  annulla(motivo) {
-    questo._fatto = vero;
-    per (const requestCapacity di this._requests) {
+  cancel(reason) {
+    this._done = true;
+    for (const requestCapability of this._requests) {
       requestCapability.resolve({
-        valore: indefinito,
-        fatto: vero
+        value: undefined,
+        done: true
       });
     }
-    lunghezza_questa_richiesta = 0;
+    this._requests.length = 0;
   }
   progressiveDone() {
-    se (questo._fatto) {
-      ritorno;
+    if (this._done) {
+      return;
     }
-    questo._fatto = vero;
+    this._done = true;
   }
 }
-classe PDFDataTransportStreamRangeReader {
-  costruttore(flusso, inizio, fine) {
-    this._stream = flusso;
-    this._begin = inizio;
-    questo._fine = fine;
+class PDFDataTransportStreamRangeReader {
+  constructor(stream, begin, end) {
+    this._stream = stream;
+    this._begin = begin;
+    this._end = end;
     this._queuedChunk = null;
-    questo._richieste = [];
-    questo._fatto = falso;
+    this._requests = [];
+    this._done = false;
     this.onProgress = null;
   }
-  _enqueue(pezzo) {
-    se (questo._fatto) {
-      ritorno;
+  _enqueue(chunk) {
+    if (this._done) {
+      return;
     }
-    se (questa._lunghezza.richieste === 0) {
-      this._queuedChunk = pezzo;
-    } altro {
+    if (this._requests.length === 0) {
+      this._queuedChunk = chunk;
+    } else {
       const requestsCapability = this._requests.shift();
       requestsCapability.resolve({
-        valore: pezzo,
-        fatto: falso
+        value: chunk,
+        done: false
       });
-      per (const requestCapacity di this._requests) {
+      for (const requestCapability of this._requests) {
         requestCapability.resolve({
-          valore: indefinito,
-          fatto: vero
+          value: undefined,
+          done: true
         });
       }
-      lunghezza_questa_richiesta = 0;
+      this._requests.length = 0;
     }
-    questo._fatto = vero;
-    questo._stream._removeRangeReader(questo);
+    this._done = true;
+    this._stream._removeRangeReader(this);
   }
-  ottieni isStreamingSupported() {
-    restituisci falso;
+  get isStreamingSupported() {
+    return false;
   }
-  lettura asincrona() {
-    se (this._queuedChunk) {
+  async read() {
+    if (this._queuedChunk) {
       const chunk = this._queuedChunk;
       this._queuedChunk = null;
-      ritorno {
-        valore: pezzo,
-        fatto: falso
+      return {
+        value: chunk,
+        done: false
       };
     }
-    se (questo._fatto) {
-      ritorno {
-        valore: indefinito,
-        fatto: vero
+    if (this._done) {
+      return {
+        value: undefined,
+        done: true
       };
     }
     const requestCapability = new _util.PromiseCapability();
     this._requests.push(requestCapability);
-    richiesta di ritornoCapability.promise;
+    return requestCapability.promise;
   }
-  annulla(motivo) {
-    questo._fatto = vero;
-    per (const requestCapacity di this._requests) {
+  cancel(reason) {
+    this._done = true;
+    for (const requestCapability of this._requests) {
       requestCapability.resolve({
-        valore: indefinito,
-        fatto: vero
+        value: undefined,
+        done: true
       });
     }
-    lunghezza_questa_richiesta = 0;
-    questo._stream._removeRangeReader(questo);
+    this._requests.length = 0;
+    this._stream._removeRangeReader(this);
   }
 }
 
@@ -9999,89 +9999,89 @@ classe PDFDataTransportStreamRangeReader {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.PDFFetchStream = void 0;
+exports.PDFFetchStream = void 0;
 var _util = __w_pdfjs_require__(1);
 var _network_utils = __w_pdfjs_require__(20);
 ;
-funzione createFetchOptions(intestazioni, conCredenziali, abortController) {
-  ritorno {
-    metodo: "GET",
-    intestazioni,
-    segnale: abortController.signal,
-    modalità: "cors",
-    credenziali: conCredenziali? "include": "stessa origine",
-    reindirizzamento: "segui"
+function createFetchOptions(headers, withCredentials, abortController) {
+  return {
+    method: "GET",
+    headers,
+    signal: abortController.signal,
+    mode: "cors",
+    credentials: withCredentials ? "include" : "same-origin",
+    redirect: "follow"
   };
 }
-funzione createHeaders(httpHeaders) {
-  const intestazioni = nuove intestazioni();
-  per (proprietà const in httpHeaders) {
-    valore costante = httpHeaders[proprietà];
-    se (valore === indefinito) {
-      continuare;
+function createHeaders(httpHeaders) {
+  const headers = new Headers();
+  for (const property in httpHeaders) {
+    const value = httpHeaders[property];
+    if (value === undefined) {
+      continue;
     }
-    intestazioni.append(proprietà, valore);
+    headers.append(property, value);
   }
-  intestazioni di ritorno;
+  return headers;
 }
-funzione getArrayBuffer(val) {
-  se (val instanceof Uint8Array) {
-    restituisci val.buffer;
+function getArrayBuffer(val) {
+  if (val instanceof Uint8Array) {
+    return val.buffer;
   }
-  se (val instanceof ArrayBuffer) {
-    restituisci valore;
+  if (val instanceof ArrayBuffer) {
+    return val;
   }
-  (0, _util.warn)(`getArrayBuffer - formato dati imprevisto: ${val}`);
-  restituisci nuovo Uint8Array(val).buffer;
+  (0, _util.warn)(`getArrayBuffer - unexpected data format: ${val}`);
+  return new Uint8Array(val).buffer;
 }
-classe PDFFetchStream {
-  costruttore(sorgente) {
-    this.source = sorgente;
+class PDFFetchStream {
+  constructor(source) {
+    this.source = source;
     this.isHttp = /^https?:/i.test(source.url);
     this.httpHeaders = this.isHttp && source.httpHeaders || {};
     this._fullRequestReader = null;
     this._rangeRequestReaders = [];
   }
-  ottieni _progressiveDataLength() {
-    restituisci this._fullRequestReader?._loaded ?? 0;
+  get _progressiveDataLength() {
+    return this._fullRequestReader?._loaded ?? 0;
   }
   getFullReader() {
-    (0, _util.assert)(!this._fullRequestReader, "PDFFetchStream.getFullReader può essere chiamato solo una volta.");
+    (0, _util.assert)(!this._fullRequestReader, "PDFFetchStream.getFullReader can only be called once.");
     this._fullRequestReader = new PDFFetchStreamReader(this);
-    restituisci questo._fullRequestReader;
+    return this._fullRequestReader;
   }
-  getRangeReader(inizio, fine) {
-    se (fine <= this._progressiveDataLength) {
-      restituisci null;
+  getRangeReader(begin, end) {
+    if (end <= this._progressiveDataLength) {
+      return null;
     }
     const reader = new PDFFetchStreamRangeReader(this, begin, end);
-    this._rangeRequestReaders.push(lettore);
-    lettore di ritorno;
+    this._rangeRequestReaders.push(reader);
+    return reader;
   }
-  cancelAllRequests(motivo) {
-    this._fullRequestReader?.cancel(motivo);
-    per (const lettore di this._rangeRequestReaders.slice(0)) {
-      lettore.annulla(motivo);
+  cancelAllRequests(reason) {
+    this._fullRequestReader?.cancel(reason);
+    for (const reader of this._rangeRequestReaders.slice(0)) {
+      reader.cancel(reason);
     }
   }
 }
-esportazioni.PDFFetchStream = PDFFetchStream;
-classe PDFFetchStreamReader {
-  costruttore(flusso) {
-    this._stream = flusso;
-    questo._lettore = null;
-    questo._caricato = 0;
-    questo._nomefile = null;
+exports.PDFFetchStream = PDFFetchStream;
+class PDFFetchStreamReader {
+  constructor(stream) {
+    this._stream = stream;
+    this._reader = null;
+    this._loaded = 0;
+    this._filename = null;
     const source = stream.source;
-    this._withCredentials = source.withCredentials || falso;
-    this._contentLength = lunghezza sorgente;
+    this._withCredentials = source.withCredentials || false;
+    this._contentLength = source.length;
     this._headersCapability = new _util.PromiseCapability();
-    this._disableRange = source.disableRange || falso;
+    this._disableRange = source.disableRange || false;
     this._rangeChunkSize = source.rangeChunkSize;
-    se (!this._rangeChunkSize && !this._disableRange) {
+    if (!this._rangeChunkSize && !this._disableRange) {
       this._disableRange = true;
     }
     this._abortController = new AbortController();
@@ -10090,89 +10090,89 @@ classe PDFFetchStreamReader {
     this._headers = createHeaders(this._stream.httpHeaders);
     const url = source.url;
     fetch(url, createFetchOptions(this._headers, this._withCredentials, this._abortController)).then(response => {
-      se (!(0, _network_utils.validateResponseStatus)(response.status)) {
+      if (!(0, _network_utils.validateResponseStatus)(response.status)) {
         throw (0, _network_utils.createResponseStatusError)(response.status, url);
       }
       this._reader = response.body.getReader();
       this._headersCapability.resolve();
-      const getResponseHeader = nome => {
-        restituisci response.headers.get(nome);
+      const getResponseHeader = name => {
+        return response.headers.get(name);
       };
-      costante {
-        consenti richieste di intervallo,
-        lunghezza suggerita
+      const {
+        allowRangeRequests,
+        suggestedLength
       } = (0, _network_utils.validateRangeRequestCapabilities)({
         getResponseHeader,
-        isHttp: questo._stream.isHttp,
+        isHttp: this._stream.isHttp,
         rangeChunkSize: this._rangeChunkSize,
         disableRange: this._disableRange
       });
       this._isRangeSupported = allowRangeRequests;
       this._contentLength = suggestedLength || this._contentLength;
       this._filename = (0, _network_utils.extractFilenameFromHeader)(getResponseHeader);
-      se (!this._isStreamingSupported && this._isRangeSupported) {
-        this.cancel(new _util.AbortException("Lo streaming è disabilitato."));
+      if (!this._isStreamingSupported && this._isRangeSupported) {
+        this.cancel(new _util.AbortException("Streaming is disabled."));
       }
     }).catch(this._headersCapability.reject);
     this.onProgress = null;
   }
-  ottieni intestazioniPronte() {
-    restituisci this._headersCapability.promise;
+  get headersReady() {
+    return this._headersCapability.promise;
   }
-  ottieni nomefile() {
-    restituisci questo._nomefile;
+  get filename() {
+    return this._filename;
   }
-  ottieni lunghezza del contenuto() {
-    restituisci questo._contentLength;
+  get contentLength() {
+    return this._contentLength;
   }
-  ottieni isRangeSupported() {
-    restituisci questo._isRangeSupported;
+  get isRangeSupported() {
+    return this._isRangeSupported;
   }
-  ottieni isStreamingSupported() {
-    restituisci questo._isStreamingSupported;
+  get isStreamingSupported() {
+    return this._isStreamingSupported;
   }
-  lettura asincrona() {
-    attendi questo._headersCapability.promise;
-    costante {
-      valore,
-      Fatto
-    } = attendi questo._reader.read();
-    se (fatto) {
-      ritorno {
-        valore,
-        Fatto
+  async read() {
+    await this._headersCapability.promise;
+    const {
+      value,
+      done
+    } = await this._reader.read();
+    if (done) {
+      return {
+        value,
+        done
       };
     }
-    questo._caricato += valore.byteLength;
-    questo.inProgresso?.({
-      caricato: questo._caricato,
-      totale: this._contentLength
+    this._loaded += value.byteLength;
+    this.onProgress?.({
+      loaded: this._loaded,
+      total: this._contentLength
     });
-    ritorno {
-      valore: getArrayBuffer(valore),
-      fatto: falso
+    return {
+      value: getArrayBuffer(value),
+      done: false
     };
   }
-  annulla(motivo) {
-    this._reader?.cancel(motivo);
+  cancel(reason) {
+    this._reader?.cancel(reason);
     this._abortController.abort();
   }
 }
-classe PDFFetchStreamRangeReader {
-  costruttore(flusso, inizio, fine) {
-    this._stream = flusso;
-    questo._lettore = null;
-    questo._caricato = 0;
+class PDFFetchStreamRangeReader {
+  constructor(stream, begin, end) {
+    this._stream = stream;
+    this._reader = null;
+    this._loaded = 0;
     const source = stream.source;
-    this._withCredentials = source.withCredentials || falso;
+    this._withCredentials = source.withCredentials || false;
     this._readCapability = new _util.PromiseCapability();
     this._isStreamingSupported = !source.disableStream;
     this._abortController = new AbortController();
     this._headers = createHeaders(this._stream.httpHeaders);
-    this._headers.append("Intervallo", `byte=${inizio}-${fine - 1}`);
+    this._headers.append("Range", `bytes=${begin}-${end - 1}`);
     const url = source.url;
     fetch(url, createFetchOptions(this._headers, this._withCredentials, this._abortController)).then(response => {
-      se (!(0, _network_utils.validateResponseStatus)(response.status)) {
+      if (!(0, _network_utils.validateResponseStatus)(response.status)) {
         throw (0, _network_utils.createResponseStatusError)(response.status, url);
       }
       this._readCapability.resolve();
@@ -10180,32 +10180,32 @@ classe PDFFetchStreamRangeReader {
     }).catch(this._readCapability.reject);
     this.onProgress = null;
   }
-  ottieni isStreamingSupported() {
-    restituisci questo._isStreamingSupported;
+  get isStreamingSupported() {
+    return this._isStreamingSupported;
   }
-  lettura asincrona() {
-    attendi questo._readCapability.promise;
-    costante {
-      valore,
-      Fatto
-    } = attendi questo._reader.read();
-    se (fatto) {
-      ritorno {
-        valore,
-        Fatto
+  async read() {
+    await this._readCapability.promise;
+    const {
+      value,
+      done
+    } = await this._reader.read();
+    if (done) {
+      return {
+        value,
+        done
       };
     }
-    questo._caricato += valore.byteLength;
-    questo.inProgresso?.({
-      caricato: questo._caricato
+    this._loaded += value.byteLength;
+    this.onProgress?.({
+      loaded: this._loaded
     });
-    ritorno {
-      valore: getArrayBuffer(valore),
-      fatto: falso
+    return {
+      value: getArrayBuffer(value),
+      done: false
     };
   }
-  annulla(motivo) {
-    this._reader?.cancel(motivo);
+  cancel(reason) {
+    this._reader?.cancel(reason);
     this._abortController.abort();
   }
 }
@@ -10216,70 +10216,70 @@ classe PDFFetchStreamRangeReader {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
 exports.createResponseStatusError = createResponseStatusError;
 exports.extractFilenameFromHeader = extractFilenameFromHeader;
-esportazioni.validateRangeRequestCapabilities = validateRangeRequestCapabilities;
-esportazioni.validateResponseStatus = validateResponseStatus;
+exports.validateRangeRequestCapabilities = validateRangeRequestCapabilities;
+exports.validateResponseStatus = validateResponseStatus;
 var _util = __w_pdfjs_require__(1);
 var _content_disposition = __w_pdfjs_require__(21);
 var _display_utils = __w_pdfjs_require__(6);
-funzione validateRangeRequestCapabilities({
+function validateRangeRequestCapabilities({
   getResponseHeader,
-  èHttp,
-  intervalloChunkSize,
+  isHttp,
+  rangeChunkSize,
   disableRange
 }) {
-  const returnValues ​​= {
-    allowRangeRequests: falso,
-    lunghezza suggerita: indefinita
+  const returnValues = {
+    allowRangeRequests: false,
+    suggestedLength: undefined
   };
-  lunghezza costante = parseInt(getResponseHeader("Lunghezza del contenuto"), 10);
-  se (!Number.isInteger(length)) {
-    restituisci valori restituiti;
+  const length = parseInt(getResponseHeader("Content-Length"), 10);
+  if (!Number.isInteger(length)) {
+    return returnValues;
   }
-  returnValues.suggestedLength = lunghezza;
-  se (lunghezza <= 2 * rangeChunkSize) {
-    restituisci valori restituiti;
+  returnValues.suggestedLength = length;
+  if (length <= 2 * rangeChunkSize) {
+    return returnValues;
   }
-  se (disableRange || !isHttp) {
-    restituisci valori restituiti;
+  if (disableRange || !isHttp) {
+    return returnValues;
   }
-  se (getResponseHeader("Intervalli di accettazione") !== "byte") {
-    restituisci valori restituiti;
+  if (getResponseHeader("Accept-Ranges") !== "bytes") {
+    return returnValues;
   }
-  const contentEncoding = getResponseHeader("Codifica del contenuto") || "identità";
-  se (contentEncoding !== "identità") {
-    restituisci valori restituiti;
+  const contentEncoding = getResponseHeader("Content-Encoding") || "identity";
+  if (contentEncoding !== "identity") {
+    return returnValues;
   }
   returnValues.allowRangeRequests = true;
-  restituisci valori restituiti;
+  return returnValues;
 }
-funzione extractFilenameFromHeader(getResponseHeader) {
-  const contentDisposition = getResponseHeader("Contenuto-Disposizione");
-  se (contentDisposition) {
-    lascia nomefile = (0, _content_disposition.getFilenameFromContentDispositionHeader)(contentDisposition);
-    se (nomefile.include("%")) {
-      Tentativo {
-        nome file = decodeURIComponent(nome file);
-      } presa {}
+function extractFilenameFromHeader(getResponseHeader) {
+  const contentDisposition = getResponseHeader("Content-Disposition");
+  if (contentDisposition) {
+    let filename = (0, _content_disposition.getFilenameFromContentDispositionHeader)(contentDisposition);
+    if (filename.includes("%")) {
+      try {
+        filename = decodeURIComponent(filename);
+      } catch {}
     }
-    se ((0, _display_utils.isPdfFile)(nomefile)) {
-      restituisci nome file;
+    if ((0, _display_utils.isPdfFile)(filename)) {
+      return filename;
     }
   }
-  restituisci null;
+  return null;
 }
-funzione createResponseStatusError(stato, url) {
-  se (stato === 404 || stato === 0 && url.startsWith("file:")) {
-    restituisci nuovo _util.MissingPDFException('PDF mancante "' + url + '".');
+function createResponseStatusError(status, url) {
+  if (status === 404 || status === 0 && url.startsWith("file:")) {
+    return new _util.MissingPDFException('Missing PDF "' + url + '".');
   }
-  return new _util.UnexpectedResponseException(`Risposta imprevista del server (${status}) durante il recupero del PDF "${url}".`, status);
+  return new _util.UnexpectedResponseException(`Unexpected server response (${status}) while retrieving PDF "${url}".`, status);
 }
-funzione validateResponseStatus(stato) {
-  ritorna stato === 200 || stato === 206;
+function validateResponseStatus(status) {
+  return status === 200 || status === 206;
 }
 
 /***/ }),
@@ -10288,138 +10288,138 @@ funzione validateResponseStatus(stato) {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
 exports.getFilenameFromContentDispositionHeader = getFilenameFromContentDispositionHeader;
 var _util = __w_pdfjs_require__(1);
-funzione getFilenameFromContentDispositionHeader(contentDisposition) {
-  lascia needsEncodingFixup = true;
-  lascia tmp = toParamRegExp("nomefile\\*", "i").exec(contentDisposition);
-  se (tmp) {
-    tempo = tempo[1];
-    lascia nomefile = rfc2616unquote(tmp);
-    nomefile = unescape(nomefile);
-    nome file = rfc5987decode(nome file);
-    nome file = rfc2047decode(nome file);
-    restituisci fixupEncoding(nomefile);
+function getFilenameFromContentDispositionHeader(contentDisposition) {
+  let needsEncodingFixup = true;
+  let tmp = toParamRegExp("filename\\*", "i").exec(contentDisposition);
+  if (tmp) {
+    tmp = tmp[1];
+    let filename = rfc2616unquote(tmp);
+    filename = unescape(filename);
+    filename = rfc5987decode(filename);
+    filename = rfc2047decode(filename);
+    return fixupEncoding(filename);
   }
   tmp = rfc2231getparam(contentDisposition);
-  se (tmp) {
-    const nomefile = rfc2047decode(tmp);
-    restituisci fixupEncoding(nomefile);
+  if (tmp) {
+    const filename = rfc2047decode(tmp);
+    return fixupEncoding(filename);
   }
-  tmp = toParamRegExp("nomefile", "i").exec(contentDisposition);
-  se (tmp) {
-    tempo = tempo[1];
-    lascia nomefile = rfc2616unquote(tmp);
-    nome file = rfc2047decode(nome file);
-    restituisci fixupEncoding(nomefile);
+  tmp = toParamRegExp("filename", "i").exec(contentDisposition);
+  if (tmp) {
+    tmp = tmp[1];
+    let filename = rfc2616unquote(tmp);
+    filename = rfc2047decode(filename);
+    return fixupEncoding(filename);
   }
-  funzione toParamRegExp(attributoPattern, flag) {
-    restituisci nuova RegExp("(?:^|;)\\s*" + attributePattern + "\\s*=\\s*" + "(" + '[^";\\s][^;\\s]*' + "|" + '"(?:[^"\\\\]|\\\\"?)+"?' + ")", flags);
+  function toParamRegExp(attributePattern, flags) {
+    return new RegExp("(?:^|;)\\s*" + attributePattern + "\\s*=\\s*" + "(" + '[^";\\s][^;\\s]*' + "|" + '"(?:[^"\\\\]|\\\\"?)+"?' + ")", flags);
   }
-  funzione textdecode(codifica, valore) {
-    se (codifica) {
-      se (!/^[\x00-\xFF]+$/.test(valore)) {
-        valore di ritorno;
+  function textdecode(encoding, value) {
+    if (encoding) {
+      if (!/^[\x00-\xFF]+$/.test(value)) {
+        return value;
       }
-      Tentativo {
-        const decoder = new TextDecoder(codifica, {
-          fatale: vero
+      try {
+        const decoder = new TextDecoder(encoding, {
+          fatal: true
         });
-        const buffer = (0, _util.stringToBytes)(valore);
-        valore = decoder.decode(buffer);
+        const buffer = (0, _util.stringToBytes)(value);
+        value = decoder.decode(buffer);
         needsEncodingFixup = false;
-      } presa {}
+      } catch {}
     }
-    valore di ritorno;
+    return value;
   }
-  funzione fixupEncoding(valore) {
-    se (needsEncodingFixup && /[\x80-\xff]/.test(valore)) {
-      valore = textdecode("utf-8", valore);
-      se (needsEncodingFixup) {
-        valore = textdecode("iso-8859-1", valore);
+  function fixupEncoding(value) {
+    if (needsEncodingFixup && /[\x80-\xff]/.test(value)) {
+      value = textdecode("utf-8", value);
+      if (needsEncodingFixup) {
+        value = textdecode("iso-8859-1", value);
       }
     }
-    valore di ritorno;
+    return value;
   }
-  funzione rfc2231getparam(contentDispositionStr) {
-    const corrispondenze = [];
-    lascia che corrisponda;
-    const iter = toParamRegExp("nomefile\\*((?!0\\d)\\d+)(\\*?)", "ig");
+  function rfc2231getparam(contentDispositionStr) {
+    const matches = [];
+    let match;
+    const iter = toParamRegExp("filename\\*((?!0\\d)\\d+)(\\*?)", "ig");
     while ((match = iter.exec(contentDispositionStr)) !== null) {
-      lascia [, n, quot, parte] = corrispondenza;
+      let [, n, quot, part] = match;
       n = parseInt(n, 10);
-      se (n nelle corrispondenze) {
-        se (n === 0) {
-          rottura;
+      if (n in matches) {
+        if (n === 0) {
+          break;
         }
-        continuare;
+        continue;
       }
-      corrispondenze[n] = [quot, parte];
+      matches[n] = [quot, part];
     }
-    parti costanti = [];
-    per (lascia che n = 0; n < corrispondenze.lunghezza; ++n) {
-      se (!(n nelle corrispondenze)) {
-        rottura;
+    const parts = [];
+    for (let n = 0; n < matches.length; ++n) {
+      if (!(n in matches)) {
+        break;
       }
-      lascia [quot, parte] = corrispondenze[n];
-      parte = rfc2616unquote(parte);
-      se (quot) {
-        parte = unescape(parte);
-        se (n === 0) {
-          parte = rfc5987decode(parte);
+      let [quot, part] = matches[n];
+      part = rfc2616unquote(part);
+      if (quot) {
+        part = unescape(part);
+        if (n === 0) {
+          part = rfc5987decode(part);
         }
       }
-      parti.push(parte);
+      parts.push(part);
     }
-    restituisci parti.join("");
+    return parts.join("");
   }
-  funzione rfc2616unquote(valore) {
-    se (valore.iniziaCon('"')) {
-      parti costanti = valore.fetta(1).split('\\"');
-      per (lascia che i = 0; i < lunghezza parti; ++i) {
+  function rfc2616unquote(value) {
+    if (value.startsWith('"')) {
+      const parts = value.slice(1).split('\\"');
+      for (let i = 0; i < parts.length; ++i) {
         const quotindex = parts[i].indexOf('"');
-        se (quotindex !== -1) {
-          parti[i] = parti[i].slice(0, quotindex);
-          parti.lunghezza = i + 1;
+        if (quotindex !== -1) {
+          parts[i] = parts[i].slice(0, quotindex);
+          parts.length = i + 1;
         }
-        parti[i] = parti[i].replaceAll(/\\(.)/g, "$1");
+        parts[i] = parts[i].replaceAll(/\\(.)/g, "$1");
       }
-      valore = parti.join('"');
+      value = parts.join('"');
     }
-    valore di ritorno;
+    return value;
   }
-  funzione rfc5987decode(valoreesteso) {
+  function rfc5987decode(extvalue) {
     const encodingend = extvalue.indexOf("'");
-    se (encodingend === -1) {
-      restituisci valore ext;
+    if (encodingend === -1) {
+      return extvalue;
     }
     const encoding = extvalue.slice(0, encodingend);
     const langvalue = extvalue.slice(encodingend + 1);
-    valore const = langvalue.replace(/^[^']*'/, "");
-    restituisci textdecode(codifica, valore);
+    const value = langvalue.replace(/^[^']*'/, "");
+    return textdecode(encoding, value);
   }
-  funzione rfc2047decode(valore) {
-    se (!valore.iniziaCon("=?") || /[\x00-\x19\x80-\xff]/.test(valore)) {
-      valore di ritorno;
+  function rfc2047decode(value) {
+    if (!value.startsWith("=?") || /[\x00-\x19\x80-\xff]/.test(value)) {
+      return value;
     }
-    valore di ritorno.replaceAll(/=\?([\w-]*)\?([QqBb])\?((?:[^?]|\?(?!=))*)\?=/g, funzione (corrispondenze, set di caratteri, codifica, testo) {
-      se (codifica === "q" || codifica === "Q") {
-        testo = testo.replaceAll("_", " ");
-        testo = testo.sostituisciTutto(/=([0-9a-fA-F]{2})/g, funzione (corrispondenza, esadecimale) {
-          restituisci String.fromCharCode(parseInt(esadecimale, 16));
+    return value.replaceAll(/=\?([\w-]*)\?([QqBb])\?((?:[^?]|\?(?!=))*)\?=/g, function (matches, charset, encoding, text) {
+      if (encoding === "q" || encoding === "Q") {
+        text = text.replaceAll("_", " ");
+        text = text.replaceAll(/=([0-9a-fA-F]{2})/g, function (match, hex) {
+          return String.fromCharCode(parseInt(hex, 16));
         });
-        restituisci textdecode(charset, testo);
+        return textdecode(charset, text);
       }
-      Tentativo {
-        testo = atob(testo);
-      } presa {}
-      restituisci textdecode(charset, testo);
+      try {
+        text = atob(text);
+      } catch {}
+      return textdecode(charset, text);
     });
   }
-  ritorno "";
+  return "";
 }
 
 /***/ }),
@@ -10428,45 +10428,45 @@ funzione getFilenameFromContentDispositionHeader(contentDisposition) {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.PDFNetworkStream = void 0;
+exports.PDFNetworkStream = void 0;
 var _util = __w_pdfjs_require__(1);
 var _network_utils = __w_pdfjs_require__(20);
 ;
 const OK_RESPONSE = 200;
-const RISPOSTA_CONTENUTO_PARTIZIONALE = 206;
-funzione getArrayBuffer(xhr) {
-  dati costanti = xhr.response;
-  se (tipo di dati !== "stringa") {
-    restituire i dati;
+const PARTIAL_CONTENT_RESPONSE = 206;
+function getArrayBuffer(xhr) {
+  const data = xhr.response;
+  if (typeof data !== "string") {
+    return data;
   }
-  restituisci (0, _util.stringToBytes)(dati).buffer;
+  return (0, _util.stringToBytes)(data).buffer;
 }
-classe NetworkManager {
-  costruttore(url, argomenti = {}) {
-    questo.url = url;
+class NetworkManager {
+  constructor(url, args = {}) {
+    this.url = url;
     this.isHttp = /^https?:/i.test(url);
     this.httpHeaders = this.isHttp && args.httpHeaders || Object.create(null);
     this.withCredentials = args.withCredentials || false;
-    questo.currXhrId = 0;
+    this.currXhrId = 0;
     this.pendingRequests = Object.create(null);
   }
-  requestRange(inizio, fine, ascoltatori) {
-    argomenti costanti = {
-      inizio,
-      FINE
+  requestRange(begin, end, listeners) {
+    const args = {
+      begin,
+      end
     };
-    per (const prop in listeners) {
-      argomenti[prop] = ascoltatori[prop];
+    for (const prop in listeners) {
+      args[prop] = listeners[prop];
     }
-    restituisci this.request(args);
+    return this.request(args);
   }
-  requestFull(ascoltatori) {
-    restituisci this.request(ascoltatori);
+  requestFull(listeners) {
+    return this.request(listeners);
   }
-  richiesta(argomenti) {
+  request(args) {
     const xhr = new XMLHttpRequest();
     const xhrId = this.currXhrId++;
     const pendingRequest = this.pendingRequests[xhrId] = {
@@ -10474,22 +10474,22 @@ classe NetworkManager {
     };
     xhr.open("GET", this.url);
     xhr.withCredentials = this.withCredentials;
-    per (proprietà const in this.httpHeaders) {
-      valore costante = this.httpHeaders[proprietà];
-      se (valore === indefinito) {
-        continuare;
+    for (const property in this.httpHeaders) {
+      const value = this.httpHeaders[property];
+      if (value === undefined) {
+        continue;
       }
-      xhr.setRequestHeader(proprietà, valore);
+      xhr.setRequestHeader(property, value);
     }
-    if (this.isHttp && "inizio" negli argomenti && "fine" negli argomenti) {
-      xhr.setRequestHeader("Intervallo", `byte=${args.begin}-${args.end - 1}`);
-      pendingRequest.expectedStatus = RISPOSTA_CONTENUTO_PARTIZIONALE;
-    } altro {
+    if (this.isHttp && "begin" in args && "end" in args) {
+      xhr.setRequestHeader("Range", `bytes=${args.begin}-${args.end - 1}`);
+      pendingRequest.expectedStatus = PARTIAL_CONTENT_RESPONSE;
+    } else {
       pendingRequest.expectedStatus = OK_RESPONSE;
     }
     xhr.responseType = "arraybuffer";
-    se (args.onError) {
-      xhr.onerror = funzione (evt) {
+    if (args.onError) {
+      xhr.onerror = function (evt) {
         args.onError(xhr.status);
       };
     }
@@ -10500,111 +10500,111 @@ classe NetworkManager {
     pendingRequest.onError = args.onError;
     pendingRequest.onProgress = args.onProgress;
     xhr.send(null);
-    restituisci xhrId;
+    return xhrId;
   }
   onProgress(xhrId, evt) {
     const pendingRequest = this.pendingRequests[xhrId];
-    se (!pendingRequest) {
-      ritorno;
+    if (!pendingRequest) {
+      return;
     }
     pendingRequest.onProgress?.(evt);
   }
   onStateChange(xhrId, evt) {
     const pendingRequest = this.pendingRequests[xhrId];
-    se (!pendingRequest) {
-      ritorno;
+    if (!pendingRequest) {
+      return;
     }
     const xhr = pendingRequest.xhr;
-    se (xhr.readyState >= 2 && pendingRequest.onHeadersReceived) {
+    if (xhr.readyState >= 2 && pendingRequest.onHeadersReceived) {
       pendingRequest.onHeadersReceived();
-      elimina pendingRequest.onHeadersReceived;
+      delete pendingRequest.onHeadersReceived;
     }
-    se (xhr.readyState !== 4) {
-      ritorno;
+    if (xhr.readyState !== 4) {
+      return;
     }
-    se (!(xhrId in this.pendingRequests)) {
-      ritorno;
+    if (!(xhrId in this.pendingRequests)) {
+      return;
     }
-    elimina this.pendingRequests[xhrId];
-    se (xhr.status === 0 && this.isHttp) {
+    delete this.pendingRequests[xhrId];
+    if (xhr.status === 0 && this.isHttp) {
       pendingRequest.onError?.(xhr.status);
-      ritorno;
+      return;
     }
     const xhrStatus = xhr.status || OK_RESPONSE;
     const ok_response_on_range_request = xhrStatus === OK_RESPONSE && pendingRequest.expectedStatus === PARTIAL_CONTENT_RESPONSE;
-    se (!ok_response_on_range_request && xhrStatus !== pendingRequest.expectedStatus) {
+    if (!ok_response_on_range_request && xhrStatus !== pendingRequest.expectedStatus) {
       pendingRequest.onError?.(xhr.status);
-      ritorno;
+      return;
     }
     const chunk = getArrayBuffer(xhr);
-    se (xhrStatus === RISPOSTA_CONTENUTO_PARTIZIONALE) {
-      const rangeHeader = xhr.getResponseHeader("Intervallo di contenuti");
-      const corrisponde a /bytes (\d+)-(\d+)\/(\d+)/.exec(rangeHeader);
+    if (xhrStatus === PARTIAL_CONTENT_RESPONSE) {
+      const rangeHeader = xhr.getResponseHeader("Content-Range");
+      const matches = /bytes (\d+)-(\d+)\/(\d+)/.exec(rangeHeader);
       pendingRequest.onDone({
-        inizio: parseInt(corrispondenze[1], 10),
-        pezzo
+        begin: parseInt(matches[1], 10),
+        chunk
       });
-    } altrimenti se (pezzo) {
+    } else if (chunk) {
       pendingRequest.onDone({
-        inizio: 0,
-        pezzo
+        begin: 0,
+        chunk
       });
-    } altro {
+    } else {
       pendingRequest.onError?.(xhr.status);
     }
   }
   getRequestXhr(xhrId) {
-    restituisci this.pendingRequests[xhrId].xhr;
+    return this.pendingRequests[xhrId].xhr;
   }
   isPendingRequest(xhrId) {
-    restituisci xhrId in this.pendingRequests;
+    return xhrId in this.pendingRequests;
   }
   abortRequest(xhrId) {
     const xhr = this.pendingRequests[xhrId].xhr;
-    elimina this.pendingRequests[xhrId];
+    delete this.pendingRequests[xhrId];
     xhr.abort();
   }
 }
-classe PDFNetworkStream {
-  costruttore(sorgente) {
-    this._source = sorgente;
+class PDFNetworkStream {
+  constructor(source) {
+    this._source = source;
     this._manager = new NetworkManager(source.url, {
-      httpHeaders: sorgente.httpHeaders,
-      conCredenziali: source.withCredentials
+      httpHeaders: source.httpHeaders,
+      withCredentials: source.withCredentials
     });
     this._rangeChunkSize = source.rangeChunkSize;
     this._fullRequestReader = null;
     this._rangeRequestReaders = [];
   }
-  _onRangeRequestReaderClosed(lettore) {
-    const i = this._rangeRequestReaders.indexOf(lettore);
-    se (i >= 0) {
+  _onRangeRequestReaderClosed(reader) {
+    const i = this._rangeRequestReaders.indexOf(reader);
+    if (i >= 0) {
       this._rangeRequestReaders.splice(i, 1);
     }
   }
   getFullReader() {
-    (0, _util.assert)(!this._fullRequestReader, "PDFNetworkStream.getFullReader può essere chiamato solo una volta.");
-    this._fullRequestReader = nuovo PDFNetworkStreamFullRequestReader(this._manager, this._source);
-    restituisci questo._fullRequestReader;
+    (0, _util.assert)(!this._fullRequestReader, "PDFNetworkStream.getFullReader can only be called once.");
+    this._fullRequestReader = new PDFNetworkStreamFullRequestReader(this._manager, this._source);
+    return this._fullRequestReader;
   }
-  getRangeReader(inizio, fine) {
+  getRangeReader(begin, end) {
     const reader = new PDFNetworkStreamRangeRequestReader(this._manager, begin, end);
-    lettore.onClosed = this._onRangeRequestReaderClosed.bind(this);
-    this._rangeRequestReaders.push(lettore);
-    lettore di ritorno;
+    reader.onClosed = this._onRangeRequestReaderClosed.bind(this);
+    this._rangeRequestReaders.push(reader);
+    return reader;
   }
-  cancelAllRequests(motivo) {
-    this._fullRequestReader?.cancel(motivo);
-    per (const lettore di this._rangeRequestReaders.slice(0)) {
-      lettore.annulla(motivo);
+  cancelAllRequests(reason) {
+    this._fullRequestReader?.cancel(reason);
+    for (const reader of this._rangeRequestReaders.slice(0)) {
+      reader.cancel(reason);
     }
   }
 }
-esportazioni.PDFNetworkStream = PDFNetworkStream;
-classe PDFNetworkStreamFullRequestReader {
-  costruttore(gestore, sorgente) {
-    this._manager = gestore;
-    argomenti costanti = {
+exports.PDFNetworkStream = PDFNetworkStream;
+class PDFNetworkStreamFullRequestReader {
+  constructor(manager, source) {
+    this._manager = manager;
+    const args = {
       onHeadersReceived: this._onHeadersReceived.bind(this),
       onDone: this._onDone.bind(this),
       onError: this._onError.bind(this),
@@ -10613,231 +10613,231 @@ classe PDFNetworkStreamFullRequestReader {
     this._url = source.url;
     this._fullRequestId = manager.requestFull(args);
     this._headersReceivedCapability = new _util.PromiseCapability();
-    this._disableRange = source.disableRange || falso;
-    this._contentLength = lunghezza sorgente;
+    this._disableRange = source.disableRange || false;
+    this._contentLength = source.length;
     this._rangeChunkSize = source.rangeChunkSize;
-    se (!this._rangeChunkSize && !this._disableRange) {
+    if (!this._rangeChunkSize && !this._disableRange) {
       this._disableRange = true;
     }
     this._isStreamingSupported = false;
     this._isRangeSupported = false;
     this._cachedChunks = [];
-    questo._richieste = [];
-    questo._fatto = falso;
-    this._storedError = indefinito;
-    questo._nomefile = null;
+    this._requests = [];
+    this._done = false;
+    this._storedError = undefined;
+    this._filename = null;
     this.onProgress = null;
   }
   _onHeadersReceived() {
     const fullRequestXhrId = this._fullRequestId;
     const fullRequestXhr = this._manager.getRequestXhr(fullRequestXhrId);
-    const getResponseHeader = nome => {
-      restituisci fullRequestXhr.getResponseHeader(nome);
+    const getResponseHeader = name => {
+      return fullRequestXhr.getResponseHeader(name);
     };
-    costante {
-      consenti richieste di intervallo,
-      lunghezza suggerita
+    const {
+      allowRangeRequests,
+      suggestedLength
     } = (0, _network_utils.validateRangeRequestCapabilities)({
       getResponseHeader,
       isHttp: this._manager.isHttp,
       rangeChunkSize: this._rangeChunkSize,
       disableRange: this._disableRange
     });
-    se (consentiRichiesteIntervallo) {
+    if (allowRangeRequests) {
       this._isRangeSupported = true;
     }
     this._contentLength = suggestedLength || this._contentLength;
     this._filename = (0, _network_utils.extractFilenameFromHeader)(getResponseHeader);
-    se (this._isRangeSupported) {
+    if (this._isRangeSupported) {
       this._manager.abortRequest(fullRequestXhrId);
     }
     this._headersReceivedCapability.resolve();
   }
-  _onDone(dati) {
-    se (dati) {
-      se (questa._lunghezza.richieste > 0) {
+  _onDone(data) {
+    if (data) {
+      if (this._requests.length > 0) {
         const requestCapability = this._requests.shift();
         requestCapability.resolve({
-          valore: data.chunk,
-          fatto: falso
+          value: data.chunk,
+          done: false
         });
-      } altro {
+      } else {
         this._cachedChunks.push(data.chunk);
       }
     }
-    questo._fatto = vero;
-    se (this._cachedChunks.length > 0) {
-      ritorno;
+    this._done = true;
+    if (this._cachedChunks.length > 0) {
+      return;
     }
-    per (const requestCapacity di this._requests) {
+    for (const requestCapability of this._requests) {
       requestCapability.resolve({
-        valore: indefinito,
-        fatto: vero
+        value: undefined,
+        done: true
       });
     }
-    lunghezza_questa_richiesta = 0;
+    this._requests.length = 0;
   }
-  _onError(stato) {
-    this._storedError = (0, _network_utils.createResponseStatusError)(stato, this._url);
+  _onError(status) {
+    this._storedError = (0, _network_utils.createResponseStatusError)(status, this._url);
     this._headersReceivedCapability.reject(this._storedError);
-    per (const requestCapacity di this._requests) {
+    for (const requestCapability of this._requests) {
       requestCapability.reject(this._storedError);
     }
-    lunghezza_questa_richiesta = 0;
+    this._requests.length = 0;
     this._cachedChunks.length = 0;
   }
   _onProgress(evt) {
-    questo.inProgresso?.({
-      caricato: evt.loaded,
-      totale: evt.lengthComputable ? evt.total : this._contentLength
+    this.onProgress?.({
+      loaded: evt.loaded,
+      total: evt.lengthComputable ? evt.total : this._contentLength
     });
   }
-  ottieni nomefile() {
-    restituisci questo._nomefile;
+  get filename() {
+    return this._filename;
   }
-  ottieni isRangeSupported() {
-    restituisci questo._isRangeSupported;
+  get isRangeSupported() {
+    return this._isRangeSupported;
   }
-  ottieni isStreamingSupported() {
-    restituisci questo._isStreamingSupported;
+  get isStreamingSupported() {
+    return this._isStreamingSupported;
   }
-  ottieni lunghezza del contenuto() {
-    restituisci questo._contentLength;
+  get contentLength() {
+    return this._contentLength;
   }
-  ottieni intestazioniPronte() {
-    restituisci questo._headersReceivedCapability.promise;
+  get headersReady() {
+    return this._headersReceivedCapability.promise;
   }
-  lettura asincrona() {
-    se (this._storedError) {
-      lancia questo._storedError;
+  async read() {
+    if (this._storedError) {
+      throw this._storedError;
     }
-    se (this._cachedChunks.length > 0) {
+    if (this._cachedChunks.length > 0) {
       const chunk = this._cachedChunks.shift();
-      ritorno {
-        valore: pezzo,
-        fatto: falso
+      return {
+        value: chunk,
+        done: false
       };
     }
-    se (questo._fatto) {
-      ritorno {
-        valore: indefinito,
-        fatto: vero
+    if (this._done) {
+      return {
+        value: undefined,
+        done: true
       };
     }
     const requestCapability = new _util.PromiseCapability();
     this._requests.push(requestCapability);
-    richiesta di ritornoCapability.promise;
+    return requestCapability.promise;
   }
-  annulla(motivo) {
-    questo._fatto = vero;
-    this._headersReceivedCapability.reject(motivo);
-    per (const requestCapacity di this._requests) {
+  cancel(reason) {
+    this._done = true;
+    this._headersReceivedCapability.reject(reason);
+    for (const requestCapability of this._requests) {
       requestCapability.resolve({
-        valore: indefinito,
-        fatto: vero
+        value: undefined,
+        done: true
       });
     }
-    lunghezza_questa_richiesta = 0;
-    se (this._manager.isPendingRequest(this._fullRequestId)) {
+    this._requests.length = 0;
+    if (this._manager.isPendingRequest(this._fullRequestId)) {
       this._manager.abortRequest(this._fullRequestId);
     }
     this._fullRequestReader = null;
   }
 }
-classe PDFNetworkStreamRangeRequestReader {
-  costruttore(gestore, inizio, fine) {
-    this._manager = gestore;
-    argomenti costanti = {
+class PDFNetworkStreamRangeRequestReader {
+  constructor(manager, begin, end) {
+    this._manager = manager;
+    const args = {
       onDone: this._onDone.bind(this),
       onError: this._onError.bind(this),
       onProgress: this._onProgress.bind(this)
     };
-    questo._url = gestore.url;
-    this._requestId = manager.requestRange(inizio, fine, argomenti);
-    questo._richieste = [];
+    this._url = manager.url;
+    this._requestId = manager.requestRange(begin, end, args);
+    this._requests = [];
     this._queuedChunk = null;
-    questo._fatto = falso;
-    this._storedError = indefinito;
+    this._done = false;
+    this._storedError = undefined;
     this.onProgress = null;
     this.onClosed = null;
   }
-  _vicino() {
-    questo.onClosed?.(questo);
+  _close() {
+    this.onClosed?.(this);
   }
-  _onDone(dati) {
+  _onDone(data) {
     const chunk = data.chunk;
-    se (questa._lunghezza.richieste > 0) {
+    if (this._requests.length > 0) {
       const requestCapability = this._requests.shift();
       requestCapability.resolve({
-        valore: pezzo,
-        fatto: falso
+        value: chunk,
+        done: false
       });
-    } altro {
-      this._queuedChunk = pezzo;
+    } else {
+      this._queuedChunk = chunk;
     }
-    questo._fatto = vero;
-    per (const requestCapacity di this._requests) {
+    this._done = true;
+    for (const requestCapability of this._requests) {
       requestCapability.resolve({
-        valore: indefinito,
-        fatto: vero
+        value: undefined,
+        done: true
       });
     }
-    lunghezza_questa_richiesta = 0;
-    questo._chiudi();
+    this._requests.length = 0;
+    this._close();
   }
-  _onError(stato) {
-    this._storedError = (0, _network_utils.createResponseStatusError)(stato, this._url);
-    per (const requestCapacity di this._requests) {
+  _onError(status) {
+    this._storedError = (0, _network_utils.createResponseStatusError)(status, this._url);
+    for (const requestCapability of this._requests) {
       requestCapability.reject(this._storedError);
     }
-    lunghezza_questa_richiesta = 0;
+    this._requests.length = 0;
     this._queuedChunk = null;
   }
   _onProgress(evt) {
-    se (!this.isStreamingSupported) {
-      questo.inProgresso?.({
-        caricato: evt.loaded
+    if (!this.isStreamingSupported) {
+      this.onProgress?.({
+        loaded: evt.loaded
       });
     }
   }
-  ottieni isStreamingSupported() {
-    restituisci falso;
+  get isStreamingSupported() {
+    return false;
   }
-  lettura asincrona() {
-    se (this._storedError) {
-      lancia questo._storedError;
+  async read() {
+    if (this._storedError) {
+      throw this._storedError;
     }
-    se (this._queuedChunk !== null) {
+    if (this._queuedChunk !== null) {
       const chunk = this._queuedChunk;
       this._queuedChunk = null;
-      ritorno {
-        valore: pezzo,
-        fatto: falso
+      return {
+        value: chunk,
+        done: false
       };
     }
-    se (questo._fatto) {
-      ritorno {
-        valore: indefinito,
-        fatto: vero
+    if (this._done) {
+      return {
+        value: undefined,
+        done: true
       };
     }
     const requestCapability = new _util.PromiseCapability();
     this._requests.push(requestCapability);
-    richiesta di ritornoCapability.promise;
+    return requestCapability.promise;
   }
-  annulla(motivo) {
-    questo._fatto = vero;
-    per (const requestCapacity di this._requests) {
+  cancel(reason) {
+    this._done = true;
+    for (const requestCapability of this._requests) {
       requestCapability.resolve({
-        valore: indefinito,
-        fatto: vero
+        value: undefined,
+        done: true
       });
     }
-    lunghezza_questa_richiesta = 0;
-    se (this._manager.isPendingRequest(this._requestId)) {
+    this._requests.length = 0;
+    if (this._manager.isPendingRequest(this._requestId)) {
       this._manager.abortRequest(this._requestId);
     }
-    questo._chiudi();
+    this._close();
   }
 }
 
@@ -10847,75 +10847,75 @@ classe PDFNetworkStreamRangeRequestReader {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.PDFNodeStream = void 0;
+exports.PDFNodeStream = void 0;
 var _util = __w_pdfjs_require__(1);
 var _network_utils = __w_pdfjs_require__(20);
 ;
 const fileUriRegex = /^file:\/\/\/[a-zA-Z]:\//;
-funzione parseUrl(sourceUrl) {
+function parseUrl(sourceUrl) {
   const url = require("url");
   const parsedUrl = url.parse(sourceUrl);
-  se (parsedUrl.protocol === "file:" || parsedUrl.host) {
-    restituisci parsedUrl;
+  if (parsedUrl.protocol === "file:" || parsedUrl.host) {
+    return parsedUrl;
   }
-  se (/^[az]:[/\\]/i.test(sourceUrl)) {
-    restituisci url.parse(`file:///${sourceUrl}`);
+  if (/^[a-z]:[/\\]/i.test(sourceUrl)) {
+    return url.parse(`file:///${sourceUrl}`);
   }
-  se (!parsedUrl.host) {
+  if (!parsedUrl.host) {
     parsedUrl.protocol = "file:";
   }
-  restituisci parsedUrl;
+  return parsedUrl;
 }
-classe PDFNodeStream {
-  costruttore(sorgente) {
-    this.source = sorgente;
-    questo.url = parseUrl(source.url);
+class PDFNodeStream {
+  constructor(source) {
+    this.source = source;
+    this.url = parseUrl(source.url);
     this.isHttp = this.url.protocol === "http:" || this.url.protocol === "https:";
     this.isFsUrl = this.url.protocol === "file:";
     this.httpHeaders = this.isHttp && source.httpHeaders || {};
     this._fullRequestReader = null;
     this._rangeRequestReaders = [];
   }
-  ottieni _progressiveDataLength() {
-    restituisci this._fullRequestReader?._loaded ?? 0;
+  get _progressiveDataLength() {
+    return this._fullRequestReader?._loaded ?? 0;
   }
   getFullReader() {
-    (0, _util.assert)(!this._fullRequestReader, "PDFNodeStream.getFullReader può essere chiamato solo una volta.");
-    this._fullRequestReader = this.isFsUrl ? nuovo PDFNodeStreamFsFullReader(this) : nuovo PDFNodeStreamFullReader(this);
-    restituisci questo._fullRequestReader;
+    (0, _util.assert)(!this._fullRequestReader, "PDFNodeStream.getFullReader can only be called once.");
+    this._fullRequestReader = this.isFsUrl ? new PDFNodeStreamFsFullReader(this) : new PDFNodeStreamFullReader(this);
+    return this._fullRequestReader;
   }
-  getRangeReader(inizio, fine) {
-    se (fine <= this._progressiveDataLength) {
-      restituisci null;
+  getRangeReader(start, end) {
+    if (end <= this._progressiveDataLength) {
+      return null;
     }
     const rangeReader = this.isFsUrl ? new PDFNodeStreamFsRangeReader(this, start, end) : new PDFNodeStreamRangeReader(this, start, end);
     this._rangeRequestReaders.push(rangeReader);
-    restituisci rangeReader;
+    return rangeReader;
   }
-  cancelAllRequests(motivo) {
-    this._fullRequestReader?.cancel(motivo);
-    per (const lettore di this._rangeRequestReaders.slice(0)) {
-      lettore.annulla(motivo);
+  cancelAllRequests(reason) {
+    this._fullRequestReader?.cancel(reason);
+    for (const reader of this._rangeRequestReaders.slice(0)) {
+      reader.cancel(reason);
     }
   }
 }
-esportazioni.PDFNodeStream = PDFNodeStream;
-classe BaseFullReader {
-  costruttore(flusso) {
+exports.PDFNodeStream = PDFNodeStream;
+class BaseFullReader {
+  constructor(stream) {
     this._url = stream.url;
-    questo._fatto = falso;
+    this._done = false;
     this._storedError = null;
     this.onProgress = null;
     const source = stream.source;
-    this._contentLength = lunghezza sorgente;
-    questo._caricato = 0;
-    questo._nomefile = null;
-    this._disableRange = source.disableRange || falso;
+    this._contentLength = source.length;
+    this._loaded = 0;
+    this._filename = null;
+    this._disableRange = source.disableRange || false;
     this._rangeChunkSize = source.rangeChunkSize;
-    se (!this._rangeChunkSize && !this._disableRange) {
+    if (!this._rangeChunkSize && !this._disableRange) {
       this._disableRange = true;
     }
     this._isStreamingSupported = !source.disableStream;
@@ -10924,182 +10924,182 @@ classe BaseFullReader {
     this._readCapability = new _util.PromiseCapability();
     this._headersCapability = new _util.PromiseCapability();
   }
-  ottieni intestazioniPronte() {
-    restituisci this._headersCapability.promise;
+  get headersReady() {
+    return this._headersCapability.promise;
   }
-  ottieni nomefile() {
-    restituisci questo._nomefile;
+  get filename() {
+    return this._filename;
   }
-  ottieni lunghezza del contenuto() {
-    restituisci questo._contentLength;
+  get contentLength() {
+    return this._contentLength;
   }
-  ottieni isRangeSupported() {
-    restituisci questo._isRangeSupported;
+  get isRangeSupported() {
+    return this._isRangeSupported;
   }
-  ottieni isStreamingSupported() {
-    restituisci questo._isStreamingSupported;
+  get isStreamingSupported() {
+    return this._isStreamingSupported;
   }
-  lettura asincrona() {
-    attendi questo._readCapability.promise;
-    se (questo._fatto) {
-      ritorno {
-        valore: indefinito,
-        fatto: vero
+  async read() {
+    await this._readCapability.promise;
+    if (this._done) {
+      return {
+        value: undefined,
+        done: true
       };
     }
-    se (this._storedError) {
-      lancia questo._storedError;
+    if (this._storedError) {
+      throw this._storedError;
     }
     const chunk = this._readableStream.read();
-    se (pezzo === null) {
+    if (chunk === null) {
       this._readCapability = new _util.PromiseCapability();
-      restituisci questo.leggi();
+      return this.read();
     }
-    questo._caricato += lunghezza.pezzo;
-    questo.inProgresso?.({
-      caricato: questo._caricato,
-      totale: this._contentLength
+    this._loaded += chunk.length;
+    this.onProgress?.({
+      loaded: this._loaded,
+      total: this._contentLength
     });
     const buffer = new Uint8Array(chunk).buffer;
-    ritorno {
-      valore: buffer,
-      fatto: falso
+    return {
+      value: buffer,
+      done: false
     };
   }
-  annulla(motivo) {
-    se (!this._readableStream) {
-      this._error(motivo);
-      ritorno;
+  cancel(reason) {
+    if (!this._readableStream) {
+      this._error(reason);
+      return;
     }
-    this._readableStream.destroy(motivo);
+    this._readableStream.destroy(reason);
   }
-  _error(motivo) {
-    this._storedError = motivo;
+  _error(reason) {
+    this._storedError = reason;
     this._readCapability.resolve();
   }
-  _setReadableStream(flusso leggibile) {
+  _setReadableStream(readableStream) {
     this._readableStream = readableStream;
-    readableStream.on("leggibile", () => {
+    readableStream.on("readable", () => {
       this._readCapability.resolve();
     });
-    readableStream.on("fine", () => {
+    readableStream.on("end", () => {
       readableStream.destroy();
-      questo._fatto = vero;
+      this._done = true;
       this._readCapability.resolve();
     });
-    readableStream.on("errore", motivo => {
-      this._error(motivo);
+    readableStream.on("error", reason => {
+      this._error(reason);
     });
-    se (!this._isStreamingSupported && this._isRangeSupported) {
-      this._error(new _util.AbortException("lo streaming è disabilitato"));
+    if (!this._isStreamingSupported && this._isRangeSupported) {
+      this._error(new _util.AbortException("streaming is disabled"));
     }
-    se (this._storedError) {
+    if (this._storedError) {
       this._readableStream.destroy(this._storedError);
     }
   }
 }
-classe BaseRangeReader {
-  costruttore(flusso) {
+class BaseRangeReader {
+  constructor(stream) {
     this._url = stream.url;
-    questo._fatto = falso;
+    this._done = false;
     this._storedError = null;
     this.onProgress = null;
-    questo._caricato = 0;
+    this._loaded = 0;
     this._readableStream = null;
     this._readCapability = new _util.PromiseCapability();
     const source = stream.source;
     this._isStreamingSupported = !source.disableStream;
   }
-  ottieni isStreamingSupported() {
-    restituisci questo._isStreamingSupported;
+  get isStreamingSupported() {
+    return this._isStreamingSupported;
   }
-  lettura asincrona() {
-    attendi questo._readCapability.promise;
-    se (questo._fatto) {
-      ritorno {
-        valore: indefinito,
-        fatto: vero
+  async read() {
+    await this._readCapability.promise;
+    if (this._done) {
+      return {
+        value: undefined,
+        done: true
       };
     }
-    se (this._storedError) {
-      lancia questo._storedError;
+    if (this._storedError) {
+      throw this._storedError;
     }
     const chunk = this._readableStream.read();
-    se (pezzo === null) {
+    if (chunk === null) {
       this._readCapability = new _util.PromiseCapability();
-      restituisci questo.leggi();
+      return this.read();
     }
-    questo._caricato += lunghezza.pezzo;
-    questo.inProgresso?.({
-      caricato: questo._caricato
+    this._loaded += chunk.length;
+    this.onProgress?.({
+      loaded: this._loaded
     });
     const buffer = new Uint8Array(chunk).buffer;
-    ritorno {
-      valore: buffer,
-      fatto: falso
+    return {
+      value: buffer,
+      done: false
     };
   }
-  annulla(motivo) {
-    se (!this._readableStream) {
-      this._error(motivo);
-      ritorno;
+  cancel(reason) {
+    if (!this._readableStream) {
+      this._error(reason);
+      return;
     }
-    this._readableStream.destroy(motivo);
+    this._readableStream.destroy(reason);
   }
-  _error(motivo) {
-    this._storedError = motivo;
+  _error(reason) {
+    this._storedError = reason;
     this._readCapability.resolve();
   }
-  _setReadableStream(flusso leggibile) {
+  _setReadableStream(readableStream) {
     this._readableStream = readableStream;
-    readableStream.on("leggibile", () => {
+    readableStream.on("readable", () => {
       this._readCapability.resolve();
     });
-    readableStream.on("fine", () => {
+    readableStream.on("end", () => {
       readableStream.destroy();
-      questo._fatto = vero;
+      this._done = true;
       this._readCapability.resolve();
     });
-    readableStream.on("errore", motivo => {
-      this._error(motivo);
+    readableStream.on("error", reason => {
+      this._error(reason);
     });
-    se (this._storedError) {
+    if (this._storedError) {
       this._readableStream.destroy(this._storedError);
     }
   }
 }
-funzione createRequestOptions(parsedUrl, intestazioni) {
-  ritorno {
-    protocollo: parsedUrl.protocol,
-    autenticazione: parsedUrl.auth,
+function createRequestOptions(parsedUrl, headers) {
+  return {
+    protocol: parsedUrl.protocol,
+    auth: parsedUrl.auth,
     host: parsedUrl.hostname,
-    porta: parsedUrl.port,
-    percorso: parsedUrl.path,
-    metodo: "GET",
-    intestazioni
+    port: parsedUrl.port,
+    path: parsedUrl.path,
+    method: "GET",
+    headers
   };
 }
-classe PDFNodeStreamFullReader estende BaseFullReader {
-  costruttore(flusso) {
-    super(flusso);
-    const handleResponse = risposta => {
-      se (response.statusCode === 404) {
-        const error = new _util.MissingPDFException(`PDF mancante "${this._url}".`);
-        this._storedError = errore;
-        this._headersCapability.reject(errore);
-        ritorno;
+class PDFNodeStreamFullReader extends BaseFullReader {
+  constructor(stream) {
+    super(stream);
+    const handleResponse = response => {
+      if (response.statusCode === 404) {
+        const error = new _util.MissingPDFException(`Missing PDF "${this._url}".`);
+        this._storedError = error;
+        this._headersCapability.reject(error);
+        return;
       }
       this._headersCapability.resolve();
-      this._setReadableStream(risposta);
-      const getResponseHeader = nome => {
-        restituisci this._readableStream.headers[name.toLowerCase()];
+      this._setReadableStream(response);
+      const getResponseHeader = name => {
+        return this._readableStream.headers[name.toLowerCase()];
       };
-      costante {
-        consenti richieste di intervallo,
-        lunghezza suggerita
+      const {
+        allowRangeRequests,
+        suggestedLength
       } = (0, _network_utils.validateRangeRequestCapabilities)({
         getResponseHeader,
-        isHttp: flusso.isHttp,
+        isHttp: stream.isHttp,
         rangeChunkSize: this._rangeChunkSize,
         disableRange: this._disableRange
       });
@@ -11108,88 +11108,88 @@ classe PDFNodeStreamFullReader estende BaseFullReader {
       this._filename = (0, _network_utils.extractFilenameFromHeader)(getResponseHeader);
     };
     this._request = null;
-    se (questo._url.protocollo === "http:") {
+    if (this._url.protocol === "http:") {
       const http = require("http");
       this._request = http.request(createRequestOptions(this._url, stream.httpHeaders), handleResponse);
-    } altro {
+    } else {
       const https = require("https");
       this._request = https.request(createRequestOptions(this._url, stream.httpHeaders), handleResponse);
     }
-    this._request.on("errore", motivo => {
-      this._storedError = motivo;
-      this._headersCapability.reject(motivo);
+    this._request.on("error", reason => {
+      this._storedError = reason;
+      this._headersCapability.reject(reason);
     });
-    questa._richiesta.fine();
+    this._request.end();
   }
 }
-classe PDFNodeStreamRangeReader estende BaseRangeReader {
-  costruttore(flusso, inizio, fine) {
-    super(flusso);
-    questo._httpHeaders = {};
-    per (proprietà const in stream.httpHeaders) {
-      valore costante = stream.httpHeaders[proprietà];
-      se (valore === indefinito) {
-        continuare;
+class PDFNodeStreamRangeReader extends BaseRangeReader {
+  constructor(stream, start, end) {
+    super(stream);
+    this._httpHeaders = {};
+    for (const property in stream.httpHeaders) {
+      const value = stream.httpHeaders[property];
+      if (value === undefined) {
+        continue;
       }
-      this._httpHeaders[proprietà] = valore;
+      this._httpHeaders[property] = value;
     }
-    this._httpHeaders.Range = `byte=${inizio}-${fine - 1}`;
-    const handleResponse = risposta => {
-      se (response.statusCode === 404) {
-        const error = new _util.MissingPDFException(`PDF mancante "${this._url}".`);
-        this._storedError = errore;
-        ritorno;
+    this._httpHeaders.Range = `bytes=${start}-${end - 1}`;
+    const handleResponse = response => {
+      if (response.statusCode === 404) {
+        const error = new _util.MissingPDFException(`Missing PDF "${this._url}".`);
+        this._storedError = error;
+        return;
       }
-      this._setReadableStream(risposta);
+      this._setReadableStream(response);
     };
     this._request = null;
-    se (questo._url.protocollo === "http:") {
+    if (this._url.protocol === "http:") {
       const http = require("http");
       this._request = http.request(createRequestOptions(this._url, this._httpHeaders), handleResponse);
-    } altro {
+    } else {
       const https = require("https");
       this._request = https.request(createRequestOptions(this._url, this._httpHeaders), handleResponse);
     }
-    this._request.on("errore", motivo => {
-      this._storedError = motivo;
+    this._request.on("error", reason => {
+      this._storedError = reason;
     });
-    questa._richiesta.fine();
+    this._request.end();
   }
 }
-classe PDFNodeStreamFsFullReader estende BaseFullReader {
-  costruttore(flusso) {
-    super(flusso);
-    lascia percorso = decodeURIComponent(this._url.path);
-    se (fileUriRegex.test(this._url.href)) {
-      percorso = percorso.sostituisci(/^\//, "");
+class PDFNodeStreamFsFullReader extends BaseFullReader {
+  constructor(stream) {
+    super(stream);
+    let path = decodeURIComponent(this._url.path);
+    if (fileUriRegex.test(this._url.href)) {
+      path = path.replace(/^\//, "");
     }
     const fs = require("fs");
-    fs.lstat(percorso, (errore, stat) => {
-      se (errore) {
-        se (codice errore === "ENOENT") {
-          errore = new _util.MissingPDFException(`PDF mancante "${path}".`);
+    fs.lstat(path, (error, stat) => {
+      if (error) {
+        if (error.code === "ENOENT") {
+          error = new _util.MissingPDFException(`Missing PDF "${path}".`);
         }
-        this._storedError = errore;
-        this._headersCapability.reject(errore);
-        ritorno;
+        this._storedError = error;
+        this._headersCapability.reject(error);
+        return;
       }
       this._contentLength = stat.size;
-      this._setReadableStream(fs.createReadStream(percorso));
+      this._setReadableStream(fs.createReadStream(path));
       this._headersCapability.resolve();
     });
   }
 }
-classe PDFNodeStreamFsRangeReader estende BaseRangeReader {
-  costruttore(flusso, inizio, fine) {
-    super(flusso);
-    lascia percorso = decodeURIComponent(this._url.path);
-    se (fileUriRegex.test(this._url.href)) {
-      percorso = percorso.sostituisci(/^\//, "");
+class PDFNodeStreamFsRangeReader extends BaseRangeReader {
+  constructor(stream, start, end) {
+    super(stream);
+    let path = decodeURIComponent(this._url.path);
+    if (fileUriRegex.test(this._url.href)) {
+      path = path.replace(/^\//, "");
     }
     const fs = require("fs");
-    this._setReadableStream(fs.createReadStream(percorso, {
-      inizio,
-      fine: fine - 1
+    this._setReadableStream(fs.createReadStream(path, {
+      start,
+      end: end - 1
     }));
   }
 }
@@ -11200,116 +11200,116 @@ classe PDFNodeStreamFsRangeReader estende BaseRangeReader {
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.SVGGraphics = void 0;
+exports.SVGGraphics = void 0;
 var _display_utils = __w_pdfjs_require__(6);
 var _util = __w_pdfjs_require__(1);
 ;
 const SVG_DEFAULTS = {
-  fontStyle: "normale",
-  fontWeight: "normale",
-  colore di riempimento: "#000000"
+  fontStyle: "normal",
+  fontWeight: "normal",
+  fillColor: "#000000"
 };
 const XML_NS = "http://www.w3.org/XML/1998/namespace";
 const XLINK_NS = "http://www.w3.org/1999/xlink";
-const LINE_CAP_STYLES = ["testa a testa", "rotondo", "quadrato"];
-const LINE_JOIN_STYLES = ["mitra", "arrotondato", "smussato"];
+const LINE_CAP_STYLES = ["butt", "round", "square"];
+const LINE_JOIN_STYLES = ["miter", "round", "bevel"];
 const createObjectURL = function (data, contentType = "", forceDataSchema = false) {
-  se (URL.createObjectURL && tipo di Blob !== "non definito" && !forceDataSchema) {
-    restituisce URL.createObjectURL(nuovo Blob([dati], {
-      tipo: contentType
+  if (URL.createObjectURL && typeof Blob !== "undefined" && !forceDataSchema) {
+    return URL.createObjectURL(new Blob([data], {
+      type: contentType
     }));
   }
-  cifre costanti = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-  lascia buffer = `data:${contentType};base64,`;
-  per (lascia che i = 0, ii = lunghezza dati; i < ii; i += 3) {
+  const digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+  let buffer = `data:${contentType};base64,`;
+  for (let i = 0, ii = data.length; i < ii; i += 3) {
     const b1 = data[i] & 0xff;
-    const b2 = dati[i + 1] & 0xff;
-    const b3 = dati[i + 2] & 0xff;
-    costante d1 = b1 >> 2,
-      d2 = (b1 e 3) << 4 | b2 >> 4;
+    const b2 = data[i + 1] & 0xff;
+    const b3 = data[i + 2] & 0xff;
+    const d1 = b1 >> 2,
+      d2 = (b1 & 3) << 4 | b2 >> 4;
     const d3 = i + 1 < ii ? (b2 & 0xf) << 2 | b3 >> 6 : 64;
-    cost d4 = i + 2 < ii ? b3 e 0x3f: 64;
-    buffer += cifre[d1] + cifre[d2] + cifre[d3] + cifre[d4];
+    const d4 = i + 2 < ii ? b3 & 0x3f : 64;
+    buffer += digits[d1] + digits[d2] + digits[d3] + digits[d4];
   }
-  buffer di ritorno;
+  return buffer;
 };
-const convertImgDataToPng = funzione () {
+const convertImgDataToPng = function () {
   const PNG_HEADER = new Uint8Array([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
   const CHUNK_WRAPPER_SIZE = 12;
   const crcTable = new Int32Array(256);
-  per (lascia che i = 0; i < 256; i++) {
-    sia c = i;
-    per (lascia che h = 0; h < 8; h++) {
+  for (let i = 0; i < 256; i++) {
+    let c = i;
+    for (let h = 0; h < 8; h++) {
       c = c & 1 ? 0xedb88320 ^ c >> 1 & 0x7fffffff : c >> 1 & 0x7fffffff;
     }
     crcTable[i] = c;
   }
-  funzione crc32(dati, inizio, fine) {
-    lascia crc = -1;
-    per (lascia che i = inizio; i < fine; i++) {
+  function crc32(data, start, end) {
+    let crc = -1;
+    for (let i = start; i < end; i++) {
       const a = (crc ^ data[i]) & 0xff;
       const b = crcTable[a];
       crc = crc >>> 8 ^ b;
     }
-    restituisci crc ^ -1;
+    return crc ^ -1;
   }
-  funzione writePngChunk(tipo, corpo, dati, offset) {
-    lascia p = offset;
-    const len ​​= lunghezza corpo;
-    dati[p] = len >> 24 & 0xff;
-    dati[p + 1] = len >> 16 & 0xff;
-    dati[p + 2] = len >> 8 & 0xff;
-    dati[p + 3] = len & 0xff;
+  function writePngChunk(type, body, data, offset) {
+    let p = offset;
+    const len = body.length;
+    data[p] = len >> 24 & 0xff;
+    data[p + 1] = len >> 16 & 0xff;
+    data[p + 2] = len >> 8 & 0xff;
+    data[p + 3] = len & 0xff;
     p += 4;
-    dati[p] = tipo.charCodeAt(0) & 0xff;
-    dati[p + 1] = tipo.charCodeAt(1) & 0xff;
-    dati[p + 2] = tipo.charCodeAt(2) & 0xff;
-    dati[p + 3] = tipo.charCodeAt(3) & 0xff;
+    data[p] = type.charCodeAt(0) & 0xff;
+    data[p + 1] = type.charCodeAt(1) & 0xff;
+    data[p + 2] = type.charCodeAt(2) & 0xff;
+    data[p + 3] = type.charCodeAt(3) & 0xff;
     p += 4;
-    data.set(corpo, p);
-    p += lunghezza del corpo;
-    const crc = crc32(dati, offset + 4, p);
-    dati[p] = crc >> 24 & 0xff;
-    dati[p + 1] = crc >> 16 & 0xff;
-    dati[p + 2] = crc >> 8 & 0xff;
-    dati[p + 3] = crc & 0xff;
+    data.set(body, p);
+    p += body.length;
+    const crc = crc32(data, offset + 4, p);
+    data[p] = crc >> 24 & 0xff;
+    data[p + 1] = crc >> 16 & 0xff;
+    data[p + 2] = crc >> 8 & 0xff;
+    data[p + 3] = crc & 0xff;
   }
-  funzione adler32(dati, inizio, fine) {
-    sia a = 1;
-    sia b = 0;
-    per (lascia che i = inizio; i < fine; ++i) {
+  function adler32(data, start, end) {
+    let a = 1;
+    let b = 0;
+    for (let i = start; i < end; ++i) {
       a = (a + (data[i] & 0xff)) % 65521;
       b = (b + a) % 65521;
     }
-    ritorna b << 16 | a;
+    return b << 16 | a;
   }
-  funzione deflateSync(letterali) {
-    se (!_util.isNodeJS) {
-      restituisci deflateSyncUncompressed(letterali);
+  function deflateSync(literals) {
+    if (!_util.isNodeJS) {
+      return deflateSyncUncompressed(literals);
     }
-    Tentativo {
-      const input = parseInt(process.versions.node) >= 8 ? letterali : Buffer.from(letterali);
+    try {
+      const input = parseInt(process.versions.node) >= 8 ? literals : Buffer.from(literals);
       const output = require("zlib").deflateSync(input, {
-        livello: 9
+        level: 9
       });
-      restituisci l'output instanceof Uint8Array ? output: new Uint8Array(output);
-    } cattura (e) {
-      (0, _util.warn)("Impossibile comprimere PNG perché zlib.deflateSync non è disponibile: " + e);
+      return output instanceof Uint8Array ? output : new Uint8Array(output);
+    } catch (e) {
+      (0, _util.warn)("Not compressing PNG because zlib.deflateSync is unavailable: " + e);
     }
-    restituisci deflateSyncUncompressed(letterali);
+    return deflateSyncUncompressed(literals);
   }
-  funzione deflateSyncUncompressed(letterali) {
-    lascia len = letterali.lunghezza;
+  function deflateSyncUncompressed(literals) {
+    let len = literals.length;
     const maxBlockLength = 0xffff;
     const deflateBlocks = Math.ceil(len / maxBlockLength);
     const idat = new Uint8Array(2 + len + deflateBlocks * 5 + 4);
-    lascia pi = 0;
+    let pi = 0;
     idat[pi++] = 0x78;
     idat[pi++] = 0x9c;
-    lascia pos = 0;
+    let pos = 0;
     while (len > maxBlockLength) {
       idat[pi++] = 0x00;
       idat[pi++] = 0xff;
@@ -11327,224 +11327,224 @@ const convertImgDataToPng = funzione () {
     idat[pi++] = ~len & 0xffff & 0xff;
     idat[pi++] = (~len & 0xffff) >> 8 & 0xff;
     idat.set(literals.subarray(pos), pi);
-    pi += letterali.lunghezza - pos;
-    const adler = adler32(letterali, 0, letterali.lunghezza);
+    pi += literals.length - pos;
+    const adler = adler32(literals, 0, literals.length);
     idat[pi++] = adler >> 24 & 0xff;
     idat[pi++] = adler >> 16 & 0xff;
     idat[pi++] = adler >> 8 & 0xff;
     idat[pi++] = adler & 0xff;
-    restituisci idat;
+    return idat;
   }
-  funzione encode(imgData, tipo, forceDataSchema, isMask) {
+  function encode(imgData, kind, forceDataSchema, isMask) {
     const width = imgData.width;
-    altezza costante = imgData.height;
-    lascia bitDepth, colorType, lineSize;
-    const byte = imgData.data;
-    interruttore (tipo) {
-      caso _util.ImageKind.GRAYSCALE_1BPP:
-        tipocolore = 0;
-        Profondità bit = 1;
-        lineSize = larghezza + 7 >> 3;
-        rottura;
-      caso _util.ImageKind.RGB_24BPP:
-        tipo di colore = 2;
-        Profondità bit = 8;
-        lineSize = larghezza * 3;
-        rottura;
-      caso _util.ImageKind.RGBA_32BPP:
-        tipo di colore = 6;
-        Profondità bit = 8;
-        lineSize = larghezza * 4;
-        rottura;
-      predefinito:
-        genera un nuovo errore ("formato non valido");
+    const height = imgData.height;
+    let bitDepth, colorType, lineSize;
+    const bytes = imgData.data;
+    switch (kind) {
+      case _util.ImageKind.GRAYSCALE_1BPP:
+        colorType = 0;
+        bitDepth = 1;
+        lineSize = width + 7 >> 3;
+        break;
+      case _util.ImageKind.RGB_24BPP:
+        colorType = 2;
+        bitDepth = 8;
+        lineSize = width * 3;
+        break;
+      case _util.ImageKind.RGBA_32BPP:
+        colorType = 6;
+        bitDepth = 8;
+        lineSize = width * 4;
+        break;
+      default:
+        throw new Error("invalid format");
     }
-    const letterali = new Uint8Array((1 + lineSize) * altezza);
-    lascia offsetLiterals = 0,
+    const literals = new Uint8Array((1 + lineSize) * height);
+    let offsetLiterals = 0,
       offsetBytes = 0;
-    per (lascia che y = 0; y < altezza; ++y) {
-      letterali[offsetLiterals++] = 0;
+    for (let y = 0; y < height; ++y) {
+      literals[offsetLiterals++] = 0;
       literals.set(bytes.subarray(offsetBytes, offsetBytes + lineSize), offsetLiterals);
-      offsetBytes += dimensionelinea;
+      offsetBytes += lineSize;
       offsetLiterals += lineSize;
     }
-    if (tipo === _util.ImageKind.GRAYSCALE_1BPP && isMask) {
+    if (kind === _util.ImageKind.GRAYSCALE_1BPP && isMask) {
       offsetLiterals = 0;
-      per (lascia che y = 0; y < altezza; y++) {
+      for (let y = 0; y < height; y++) {
         offsetLiterals++;
-        per (lascia che i = 0; i < lineSize; i++) {
-          letterali[offsetLiterals++] ^= 0xff;
+        for (let i = 0; i < lineSize; i++) {
+          literals[offsetLiterals++] ^= 0xff;
         }
       }
     }
-    const ihdr = new Uint8Array([larghezza >> 24 e 0xff, larghezza >> 16 e 0xff, larghezza >> 8 e 0xff, larghezza e 0xff, altezza >> 24 e 0xff, altezza >> 16 e 0xff, altezza >> 8 e 0xff, altezza e 0xff, bitDepth, colorType, 0x00, 0x00, 0x00]);
-    const idat = deflateSync(letterali);
+    const ihdr = new Uint8Array([width >> 24 & 0xff, width >> 16 & 0xff, width >> 8 & 0xff, width & 0xff, height >> 24 & 0xff, height >> 16 & 0xff, height >> 8 & 0xff, height & 0xff, bitDepth, colorType, 0x00, 0x00, 0x00]);
+    const idat = deflateSync(literals);
     const pngLength = PNG_HEADER.length + CHUNK_WRAPPER_SIZE * 3 + ihdr.length + idat.length;
     const data = new Uint8Array(pngLength);
-    lascia offset = 0;
+    let offset = 0;
     data.set(PNG_HEADER, offset);
     offset += PNG_HEADER.length;
-    writePngChunk("IHDR", ihdr, dati, offset);
+    writePngChunk("IHDR", ihdr, data, offset);
     offset += CHUNK_WRAPPER_SIZE + ihdr.length;
-    writePngChunk("IDATA", idat, dati, offset);
+    writePngChunk("IDATA", idat, data, offset);
     offset += CHUNK_WRAPPER_SIZE + idat.length;
-    writePngChunk("IEND", nuovo Uint8Array(0), dati, offset);
-    restituisci createObjectURL(dati, "immagine/png", forceDataSchema);
+    writePngChunk("IEND", new Uint8Array(0), data, offset);
+    return createObjectURL(data, "image/png", forceDataSchema);
   }
-  funzione di ritorno convertImgDataToPng(imgData, forceDataSchema, isMask) {
-    const kind = imgData.kind === non definito ? _util.ImageKind.GRAYSCALE_1BPP: imgData.kind;
+  return function convertImgDataToPng(imgData, forceDataSchema, isMask) {
+    const kind = imgData.kind === undefined ? _util.ImageKind.GRAYSCALE_1BPP : imgData.kind;
     return encode(imgData, kind, forceDataSchema, isMask);
   };
 }();
-classe SVGExtraState {
-  costruttore() {
+class SVGExtraState {
+  constructor() {
     this.fontSizeScale = 1;
     this.fontWeight = SVG_DEFAULTS.fontWeight;
     this.fontSize = 0;
     this.textMatrix = _util.IDENTITY_MATRIX;
     this.fontMatrix = _util.FONT_IDENTITY_MATRIX;
-    questo.principale = 0;
+    this.leading = 0;
     this.textRenderingMode = _util.TextRenderingMode.FILL;
     this.textMatrixScale = 1;
-    questo.x = 0;
-    questo.y = 0;
-    questa.lineaX = 0;
-    questa.lineaY = 0;
+    this.x = 0;
+    this.y = 0;
+    this.lineX = 0;
+    this.lineY = 0;
     this.charSpacing = 0;
     this.wordSpacing = 0;
     this.textHScale = 1;
     this.textRise = 0;
     this.fillColor = SVG_DEFAULTS.fillColor;
     this.strokeColor = "#000000";
-    questo.fillAlpha = 1;
+    this.fillAlpha = 1;
     this.strokeAlpha = 1;
     this.lineWidth = 1;
     this.lineJoin = "";
     this.lineCap = "";
     this.miterLimit = 0;
-    questo.dashArray = [];
+    this.dashArray = [];
     this.dashPhase = 0;
-    questo.dipendenze = [];
+    this.dependencies = [];
     this.activeClipUrl = null;
     this.clipGroup = null;
-    questo.maskId = "";
+    this.maskId = "";
   }
-  clona() {
-    restituisci Object.create(this);
+  clone() {
+    return Object.create(this);
   }
-  impostaPuntoCorrente(x, y) {
-    questo.x = x;
-    questo.y = y;
+  setCurrentPoint(x, y) {
+    this.x = x;
+    this.y = y;
   }
 }
-funzione opListToTree(opList) {
-  lascia opTree = [];
+function opListToTree(opList) {
+  let opTree = [];
   const tmp = [];
-  for (const opListElement di opList) {
-    if (opListElement.fn === "salva") {
+  for (const opListElement of opList) {
+    if (opListElement.fn === "save") {
       opTree.push({
         fnId: 92,
-        fn: "gruppo",
-        elementi: []
+        fn: "group",
+        items: []
       });
       tmp.push(opTree);
       opTree = opTree.at(-1).items;
-      continuare;
+      continue;
     }
-    if (opListElement.fn === "ripristina") {
+    if (opListElement.fn === "restore") {
       opTree = tmp.pop();
-    } altro {
+    } else {
       opTree.push(opListElement);
     }
   }
-  restituisci opTree;
+  return opTree;
 }
-funzione pf(valore) {
-  se (Numero.èIntero(valore)) {
-    valore di ritorno.toString();
+function pf(value) {
+  if (Number.isInteger(value)) {
+    return value.toString();
   }
-  const s = valore.toFixed(10);
-  sia i = s.length - 1;
-  se (s[i] !== "0") {
-    restituisci s;
+  const s = value.toFixed(10);
+  let i = s.length - 1;
+  if (s[i] !== "0") {
+    return s;
   }
-  Fare {
-    io--;
+  do {
+    i--;
   } while (s[i] === "0");
-  restituisce s.substring(0, s[i] === "." ? i : i + 1);
+  return s.substring(0, s[i] === "." ? i : i + 1);
 }
-funzione pm(m) {
-  se (m[4] === 0 e m[5] === 0) {
-    se (m[1] === 0 e m[2] === 0) {
-      se (m[0] === 1 && m[3] === 1) {
-        ritorno "";
+function pm(m) {
+  if (m[4] === 0 && m[5] === 0) {
+    if (m[1] === 0 && m[2] === 0) {
+      if (m[0] === 1 && m[3] === 1) {
+        return "";
       }
-      restituisci `scala(${pf(m[0])} ${pf(m[3])})`;
+      return `scale(${pf(m[0])} ${pf(m[3])})`;
     }
-    se (m[0] === m[3] e m[1] === -m[2]) {
+    if (m[0] === m[3] && m[1] === -m[2]) {
       const a = Math.acos(m[0]) * 180 / Math.PI;
-      ritorna `ruota(${pf(a)})`;
+      return `rotate(${pf(a)})`;
     }
-  } altrimenti se (m[0] === 1 && m[1] === 0 && m[2] === 0 && m[3] === 1) {
-    restituisci `traduci(${pf(m[4])} ${pf(m[5])})`;
+  } else if (m[0] === 1 && m[1] === 0 && m[2] === 0 && m[3] === 1) {
+    return `translate(${pf(m[4])} ${pf(m[5])})`;
   }
-  restituisci `matrice(${pf(m[0])} ${pf(m[1])} ${pf(m[2])} ${pf(m[3])} ${pf(m[4])} ` + `${pf(m[5])})`;
+  return `matrix(${pf(m[0])} ${pf(m[1])} ${pf(m[2])} ${pf(m[3])} ${pf(m[4])} ` + `${pf(m[5])})`;
 }
-lascia clipCount = 0;
-lascia maskCount = 0;
-lascia shadingCount = 0;
-classe SVGGraphics {
-  costruttore(commonObjs, objs, forceDataSchema = false) {
-    (0, _display_utils.deprecated)("Il back-end SVG non è più gestito e *potrebbe* essere rimosso in futuro.");
+let clipCount = 0;
+let maskCount = 0;
+let shadingCount = 0;
+class SVGGraphics {
+  constructor(commonObjs, objs, forceDataSchema = false) {
+    (0, _display_utils.deprecated)("The SVG back-end is no longer maintained and *may* be removed in the future.");
     this.svgFactory = new _display_utils.DOMSVGFactory();
     this.current = new SVGExtraState();
     this.transformMatrix = _util.IDENTITY_MATRIX;
-    questo.transformStack = [];
-    questo.extraStack = [];
-    questo.commonObjs = commonObjs;
-    questo.objs = objs;
+    this.transformStack = [];
+    this.extraStack = [];
+    this.commonObjs = commonObjs;
+    this.objs = objs;
     this.pendingClip = null;
     this.pendingEOFill = false;
     this.embedFonts = false;
     this.embeddedFonts = Object.create(null);
-    questo.cssStyle = null;
-    questo.forceDataSchema = !!forceDataSchema;
+    this.cssStyle = null;
+    this.forceDataSchema = !!forceDataSchema;
     this._operatorIdMapping = [];
-    per (const op in _util.OPS) {
+    for (const op in _util.OPS) {
       this._operatorIdMapping[_util.OPS[op]] = op;
     }
   }
-  getObject(dati, fallback = null) {
-    se (tipo di dati === "stringa") {
-      restituisci dati.startsWith("g_") ? this.commonObjs.get(dati) : this.objs.get(dati);
+  getObject(data, fallback = null) {
+    if (typeof data === "string") {
+      return data.startsWith("g_") ? this.commonObjs.get(data) : this.objs.get(data);
     }
-    ritorno di riserva;
+    return fallback;
   }
-  salva() {
-    questo.transformStack.push(questo.transformMatrix);
-    const vecchio = questo.corrente;
-    this.extraStack.push(vecchio);
-    questo.corrente = vecchio.clone();
+  save() {
+    this.transformStack.push(this.transformMatrix);
+    const old = this.current;
+    this.extraStack.push(old);
+    this.current = old.clone();
   }
-  ripristinare() {
-    questo.transformMatrix = questo.transformStack.pop();
-    questo.corrente = questo.extraStack.pop();
+  restore() {
+    this.transformMatrix = this.transformStack.pop();
+    this.current = this.extraStack.pop();
     this.pendingClip = null;
-    questo.tgrp = null;
+    this.tgrp = null;
   }
-  gruppo(elementi) {
-    questo.salva();
-    this.executeOpTree(elementi);
-    questo.ripristina();
+  group(items) {
+    this.save();
+    this.executeOpTree(items);
+    this.restore();
   }
-  loadDependencies(elencooperatori) {
+  loadDependencies(operatorList) {
     const fnArray = operatorList.fnArray;
     const argsArray = operatorList.argsArray;
-    per (lascia che i = 0, ii = fnArray.length; i < ii; i++) {
-      se (fnArray[i] !== _util.OPS.dependency) {
-        continuare;
+    for (let i = 0, ii = fnArray.length; i < ii; i++) {
+      if (fnArray[i] !== _util.OPS.dependency) {
+        continue;
       }
-      per (const obj di argsArray[i]) {
+      for (const obj of argsArray[i]) {
         const objsPool = obj.startsWith("g_") ? this.commonObjs : this.objs;
         const promise = new Promise(resolve => {
           objsPool.get(obj, resolve);
@@ -11552,478 +11552,478 @@ classe SVGGraphics {
         this.current.dependencies.push(promise);
       }
     }
-    restituisci Promise.all(this.current.dependencies);
+    return Promise.all(this.current.dependencies);
   }
-  trasforma(a, b, c, d, e, f) {
+  transform(a, b, c, d, e, f) {
     const transformMatrix = [a, b, c, d, e, f];
     this.transformMatrix = _util.Util.transform(this.transformMatrix, transformMatrix);
-    questo.tgrp = null;
+    this.tgrp = null;
   }
-  getSVG(elencooperatori, viewport) {
-    this.viewport = finestra di visualizzazione;
+  getSVG(operatorList, viewport) {
+    this.viewport = viewport;
     const svgElement = this._initialize(viewport);
-    restituisci this.loadDependencies(operatorList).then(() => {
+    return this.loadDependencies(operatorList).then(() => {
       this.transformMatrix = _util.IDENTITY_MATRIX;
       this.executeOpTree(this.convertOpList(operatorList));
-      restituisci svgElement;
+      return svgElement;
     });
   }
-  convertOpList(operatoreList) {
+  convertOpList(operatorList) {
     const operatorIdMapping = this._operatorIdMapping;
     const argsArray = operatorList.argsArray;
     const fnArray = operatorList.fnArray;
     const opList = [];
-    per (lascia che i = 0, ii = fnArray.length; i < ii; i++) {
+    for (let i = 0, ii = fnArray.length; i < ii; i++) {
       const fnId = fnArray[i];
       opList.push({
         fnId,
         fn: operatorIdMapping[fnId],
-        argomenti: argsArray[i]
+        args: argsArray[i]
       });
     }
-    restituisci opListToTree(opList);
+    return opListToTree(opList);
   }
   executeOpTree(opTree) {
-    for (const opTreeElement di opTree) {
+    for (const opTreeElement of opTree) {
       const fn = opTreeElement.fn;
       const fnId = opTreeElement.fnId;
       const args = opTreeElement.args;
-      interruttore (fnId | 0) {
-        caso _util.OPS.beginText:
-          questo.beginText();
-          rottura;
-        caso _util.OPS.dependency:
-          rottura;
-        caso _util.OPS.setLeading:
-          this.setLeading(argomenti);
-          rottura;
-        caso _util.OPS.setLeadingMoveText:
+      switch (fnId | 0) {
+        case _util.OPS.beginText:
+          this.beginText();
+          break;
+        case _util.OPS.dependency:
+          break;
+        case _util.OPS.setLeading:
+          this.setLeading(args);
+          break;
+        case _util.OPS.setLeadingMoveText:
           this.setLeadingMoveText(args[0], args[1]);
-          rottura;
-        caso _util.OPS.setFont:
-          this.setFont(argomenti);
-          rottura;
-        caso _util.OPS.showText:
-          questo.mostraTesto(argomenti[0]);
-          rottura;
-        caso _util.OPS.showSpacedText:
-          questo.mostraTesto(argomenti[0]);
-          rottura;
-        caso _util.OPS.endText:
-          questo.endText();
-          rottura;
-        caso _util.OPS.moveText:
-          questo.moveText(argomenti[0], argomenti[1]);
-          rottura;
-        caso _util.OPS.setCharSpacing:
-          questo.setCharSpacing(args[0]);
-          rottura;
-        caso _util.OPS.setWordSpacing:
-          questo.setWordSpacing(args[0]);
-          rottura;
-        caso _util.OPS.setHScale:
-          questo.setHScale(argomenti[0]);
-          rottura;
-        caso _util.OPS.setTextMatrix:
+          break;
+        case _util.OPS.setFont:
+          this.setFont(args);
+          break;
+        case _util.OPS.showText:
+          this.showText(args[0]);
+          break;
+        case _util.OPS.showSpacedText:
+          this.showText(args[0]);
+          break;
+        case _util.OPS.endText:
+          this.endText();
+          break;
+        case _util.OPS.moveText:
+          this.moveText(args[0], args[1]);
+          break;
+        case _util.OPS.setCharSpacing:
+          this.setCharSpacing(args[0]);
+          break;
+        case _util.OPS.setWordSpacing:
+          this.setWordSpacing(args[0]);
+          break;
+        case _util.OPS.setHScale:
+          this.setHScale(args[0]);
+          break;
+        case _util.OPS.setTextMatrix:
           this.setTextMatrix(args[0], args[1], args[2], args[3], args[4], args[5]);
-          rottura;
-        caso _util.OPS.setTextRise:
+          break;
+        case _util.OPS.setTextRise:
           this.setTextRise(args[0]);
-          rottura;
-        caso _util.OPS.setTextRenderingMode:
-          questo.setTextRenderingMode(args[0]);
-          rottura;
-        caso _util.OPS.setLineWidth:
-          questo.setLineWidth(args[0]);
-          rottura;
-        caso _util.OPS.setLineJoin:
-          questo.setLineJoin(args[0]);
-          rottura;
-        caso _util.OPS.setLineCap:
+          break;
+        case _util.OPS.setTextRenderingMode:
+          this.setTextRenderingMode(args[0]);
+          break;
+        case _util.OPS.setLineWidth:
+          this.setLineWidth(args[0]);
+          break;
+        case _util.OPS.setLineJoin:
+          this.setLineJoin(args[0]);
+          break;
+        case _util.OPS.setLineCap:
           this.setLineCap(args[0]);
-          rottura;
-        caso _util.OPS.setMiterLimit:
+          break;
+        case _util.OPS.setMiterLimit:
           this.setMiterLimit(args[0]);
-          rottura;
-        caso _util.OPS.setFillRGBColor:
-          this.setFillRGBColor(argomenti[0], argomenti[1], argomenti[2]);
-          rottura;
-        caso _util.OPS.setStrokeRGBColor:
-          this.setStrokeRGBColor(argomenti[0], argomenti[1], argomenti[2]);
-          rottura;
-        caso _util.OPS.setStrokeColorN:
-          this.setStrokeColorN(argomenti);
-          rottura;
-        caso _util.OPS.setFillColorN:
-          this.setFillColorN(argomenti);
-          rottura;
-        caso _util.OPS.shadingFill:
-          questo.ombreggiaturaRiempimento(argomenti[0]);
-          rottura;
-        caso _util.OPS.setDash:
-          questo.setDash(argomenti[0], argomenti[1]);
-          rottura;
+          break;
+        case _util.OPS.setFillRGBColor:
+          this.setFillRGBColor(args[0], args[1], args[2]);
+          break;
+        case _util.OPS.setStrokeRGBColor:
+          this.setStrokeRGBColor(args[0], args[1], args[2]);
+          break;
+        case _util.OPS.setStrokeColorN:
+          this.setStrokeColorN(args);
+          break;
+        case _util.OPS.setFillColorN:
+          this.setFillColorN(args);
+          break;
+        case _util.OPS.shadingFill:
+          this.shadingFill(args[0]);
+          break;
+        case _util.OPS.setDash:
+          this.setDash(args[0], args[1]);
+          break;
         case _util.OPS.setRenderingIntent:
           this.setRenderingIntent(args[0]);
-          rottura;
-        caso _util.OPS.setFlatness:
-          questo.setFlatness(args[0]);
-          rottura;
-        caso _util.OPS.setGState:
-          questo.setGState(args[0]);
-          rottura;
-        caso _util.OPS.fill:
-          questo.riempi();
-          rottura;
-        caso _util.OPS.eoFill:
-          questo.eoFill();
-          rottura;
-        caso _util.OPS.stroke:
-          questo.tratto();
-          rottura;
-        caso _util.OPS.fillStroke:
-          questo.fillStroke();
-          rottura;
-        caso _util.OPS.eoFillStroke:
+          break;
+        case _util.OPS.setFlatness:
+          this.setFlatness(args[0]);
+          break;
+        case _util.OPS.setGState:
+          this.setGState(args[0]);
+          break;
+        case _util.OPS.fill:
+          this.fill();
+          break;
+        case _util.OPS.eoFill:
+          this.eoFill();
+          break;
+        case _util.OPS.stroke:
+          this.stroke();
+          break;
+        case _util.OPS.fillStroke:
+          this.fillStroke();
+          break;
+        case _util.OPS.eoFillStroke:
           this.eoFillStroke();
-          rottura;
-        caso _util.OPS.clip:
+          break;
+        case _util.OPS.clip:
           this.clip("nonzero");
-          rottura;
-        caso _util.OPS.eoClip:
+          break;
+        case _util.OPS.eoClip:
           this.clip("evenodd");
-          rottura;
-        caso _util.OPS.paintSolidColorImageMask:
+          break;
+        case _util.OPS.paintSolidColorImageMask:
           this.paintSolidColorImageMask();
-          rottura;
-        caso _util.OPS.paintImageXObject:
+          break;
+        case _util.OPS.paintImageXObject:
           this.paintImageXObject(args[0]);
-          rottura;
-        caso _util.OPS.paintInlineImageXObject:
+          break;
+        case _util.OPS.paintInlineImageXObject:
           this.paintInlineImageXObject(args[0]);
-          rottura;
-        caso _util.OPS.paintImageMaskXObject:
+          break;
+        case _util.OPS.paintImageMaskXObject:
           this.paintImageMaskXObject(args[0]);
-          rottura;
-        caso _util.OPS.paintFormXObjectBegin:
-          this.paintFormXObjectBegin(argomenti[0], argomenti[1]);
-          rottura;
-        caso _util.OPS.paintFormXObjectEnd:
-          questo.paintFormXObjectEnd();
-          rottura;
-        caso _util.OPS.closePath:
-          questo.closePath();
-          rottura;
-        caso _util.OPS.closeStroke:
-          questo.closeStroke();
-          rottura;
-        caso _util.OPS.closeFillStroke:
-          questo.chiudiFillStroke();
-          rottura;
-        caso _util.OPS.closeEOFillStroke:
-          questo.chiudiEOFillStroke();
-          rottura;
-        caso _util.OPS.nextLine:
-          questa.rigasuccessiva();
-          rottura;
-        caso _util.OPS.transform:
-          questo.trasforma(argomenti[0], argomenti[1], argomenti[2], argomenti[3], argomenti[4], argomenti[5]);
-          rottura;
-        caso _util.OPS.constructPath:
-          questo.costruisciPath(argomenti[0], argomenti[1]);
-          rottura;
-        caso _util.OPS.endPath:
-          questo.endPath();
-          rottura;
-        caso 92:
-          questo.gruppo(opTreeElement.elementi);
-          rottura;
-        predefinito:
-          (0, _util.warn)(`Operatore non implementato ${fn}`);
-          rottura;
+          break;
+        case _util.OPS.paintFormXObjectBegin:
+          this.paintFormXObjectBegin(args[0], args[1]);
+          break;
+        case _util.OPS.paintFormXObjectEnd:
+          this.paintFormXObjectEnd();
+          break;
+        case _util.OPS.closePath:
+          this.closePath();
+          break;
+        case _util.OPS.closeStroke:
+          this.closeStroke();
+          break;
+        case _util.OPS.closeFillStroke:
+          this.closeFillStroke();
+          break;
+        case _util.OPS.closeEOFillStroke:
+          this.closeEOFillStroke();
+          break;
+        case _util.OPS.nextLine:
+          this.nextLine();
+          break;
+        case _util.OPS.transform:
+          this.transform(args[0], args[1], args[2], args[3], args[4], args[5]);
+          break;
+        case _util.OPS.constructPath:
+          this.constructPath(args[0], args[1]);
+          break;
+        case _util.OPS.endPath:
+          this.endPath();
+          break;
+        case 92:
+          this.group(opTreeElement.items);
+          break;
+        default:
+          (0, _util.warn)(`Unimplemented operator ${fn}`);
+          break;
       }
     }
   }
-  setWordSpacing(spaziaturaparole) {
+  setWordSpacing(wordSpacing) {
     this.current.wordSpacing = wordSpacing;
   }
-  setCharSpacing(spaziaturacaratteri) {
+  setCharSpacing(charSpacing) {
     this.current.charSpacing = charSpacing;
   }
-  rigasuccessiva() {
+  nextLine() {
     this.moveText(0, this.current.leading);
   }
-  impostaMatriceTesto(a, b, c, d, e, f) {
-    const corrente = this.current;
-    matrice.testo corrente = matrice.riga corrente = [a, b, c, d, e, f];
+  setTextMatrix(a, b, c, d, e, f) {
+    const current = this.current;
+    current.textMatrix = current.lineMatrix = [a, b, c, d, e, f];
     current.textMatrixScale = Math.hypot(a, b);
-    corrente.x = corrente.lineX = 0;
-    corrente.y = corrente.lineY = 0;
-    coordinate correnti = [];
-    coordinate.y correnti = [];
+    current.x = current.lineX = 0;
+    current.y = current.lineY = 0;
+    current.xcoords = [];
+    current.ycoords = [];
     current.tspan = this.svgFactory.createElement("svg:tspan");
-    current.tspan.setAttributeNS(null, "famiglia-di-caratteri", current.fontFamily);
-    current.tspan.setAttributeNS(null, "dimensione-carattere", `${pf(current.fontSize)}px`);
+    current.tspan.setAttributeNS(null, "font-family", current.fontFamily);
+    current.tspan.setAttributeNS(null, "font-size", `${pf(current.fontSize)}px`);
     current.tspan.setAttributeNS(null, "y", pf(-current.y));
     current.txtElement = this.svgFactory.createElement("svg:text");
-    corrente.txtElement.append(corrente.tspan);
+    current.txtElement.append(current.tspan);
   }
-  inizioTesto() {
-    const corrente = this.current;
-    corrente.x = corrente.lineX = 0;
-    corrente.y = corrente.lineY = 0;
+  beginText() {
+    const current = this.current;
+    current.x = current.lineX = 0;
+    current.y = current.lineY = 0;
     current.textMatrix = _util.IDENTITY_MATRIX;
     current.lineMatrix = _util.IDENTITY_MATRIX;
-    corrente.textMatrixScale = 1;
+    current.textMatrixScale = 1;
     current.tspan = this.svgFactory.createElement("svg:tspan");
     current.txtElement = this.svgFactory.createElement("svg:text");
     current.txtgrp = this.svgFactory.createElement("svg:g");
-    coordinate correnti = [];
-    coordinate.y correnti = [];
+    current.xcoords = [];
+    current.ycoords = [];
   }
-  spostaTesto(x, y) {
-    const corrente = this.current;
-    corrente.x = corrente.lineX += x;
-    corrente.y = corrente.lineY += y;
-    coordinate correnti = [];
-    coordinate.y correnti = [];
+  moveText(x, y) {
+    const current = this.current;
+    current.x = current.lineX += x;
+    current.y = current.lineY += y;
+    current.xcoords = [];
+    current.ycoords = [];
     current.tspan = this.svgFactory.createElement("svg:tspan");
-    current.tspan.setAttributeNS(null, "famiglia-di-caratteri", current.fontFamily);
-    current.tspan.setAttributeNS(null, "dimensione-carattere", `${pf(current.fontSize)}px`);
+    current.tspan.setAttributeNS(null, "font-family", current.fontFamily);
+    current.tspan.setAttributeNS(null, "font-size", `${pf(current.fontSize)}px`);
     current.tspan.setAttributeNS(null, "y", pf(-current.y));
   }
-  showText(glifi) {
-    const corrente = this.current;
+  showText(glyphs) {
+    const current = this.current;
     const font = current.font;
     const fontSize = current.fontSize;
-    se (dimensione carattere === 0) {
-      ritorno;
+    if (fontSize === 0) {
+      return;
     }
     const fontSizeScale = current.fontSizeScale;
     const charSpacing = current.charSpacing;
     const wordSpacing = current.wordSpacing;
     const fontDirection = current.fontDirection;
     const textHScale = current.textHScale * fontDirection;
-    const verticale = font.vertical;
-    const spacingDir = verticale ? 1 : -1;
+    const vertical = font.vertical;
+    const spacingDir = vertical ? 1 : -1;
     const defaultVMetrics = font.defaultVMetrics;
     const widthAdvanceScale = fontSize * current.fontMatrix[0];
-    sia x = 0;
-    per (glifo costante di glifi) {
-      se (glifo === null) {
+    let x = 0;
+    for (const glyph of glyphs) {
+      if (glyph === null) {
         x += fontDirection * wordSpacing;
-        continuare;
-      } else if (typeof glyph === "numero") {
-        x += spaziaturaDir * glifo * dimensionecarattere / 1000;
-        continuare;
+        continue;
+      } else if (typeof glyph === "number") {
+        x += spacingDir * glyph * fontSize / 1000;
+        continue;
       }
       const spacing = (glyph.isSpace ? wordSpacing : 0) + charSpacing;
-      const carattere = glyph.fontChar;
-      lascia scalatoX, scalatoY;
-      lascia larghezza = glifo.larghezza;
-      se (verticale) {
-        lascia vx;
+      const character = glyph.fontChar;
+      let scaledX, scaledY;
+      let width = glyph.width;
+      if (vertical) {
+        let vx;
         const vmetric = glyph.vmetric || defaultVMetrics;
-        vx = glyph.vmetric ? vmetric[1] : larghezza * 0,5;
+        vx = glyph.vmetric ? vmetric[1] : width * 0.5;
         vx = -vx * widthAdvanceScale;
         const vy = vmetric[2] * widthAdvanceScale;
-        larghezza = vmetric ? -vmetric[0] : larghezza;
+        width = vmetric ? -vmetric[0] : width;
         scaledX = vx / fontSizeScale;
         scaledY = (x + vy) / fontSizeScale;
-      } altro {
+      } else {
         scaledX = x / fontSizeScale;
-        scalatoY = 0;
+        scaledY = 0;
       }
-      se (glyph.isInFont || font.missingFile) {
+      if (glyph.isInFont || font.missingFile) {
         current.xcoords.push(current.x + scaledX);
-        se (verticale) {
-          coordinate.y correnti.push(-corrente.y + scalataY);
+        if (vertical) {
+          current.ycoords.push(-current.y + scaledY);
         }
-        current.tspan.textContent += carattere;
-      } altro {}
+        current.tspan.textContent += character;
+      } else {}
       const charWidth = vertical ? width * widthAdvanceScale - spacing * fontDirection : width * widthAdvanceScale + spacing * fontDirection;
-      x += larghezza carattere;
+      x += charWidth;
     }
     current.tspan.setAttributeNS(null, "x", current.xcoords.map(pf).join(" "));
-    se (verticale) {
+    if (vertical) {
       current.tspan.setAttributeNS(null, "y", current.ycoords.map(pf).join(" "));
-    } altro {
+    } else {
       current.tspan.setAttributeNS(null, "y", pf(-current.y));
     }
-    se (verticale) {
-      corrente.y -= x;
-    } altro {
+    if (vertical) {
+      current.y -= x;
+    } else {
       current.x += x * textHScale;
     }
-    current.tspan.setAttributeNS(null, "famiglia-di-caratteri", current.fontFamily);
-    current.tspan.setAttributeNS(null, "dimensione-carattere", `${pf(current.fontSize)}px`);
-    se (current.fontStyle !== SVG_DEFAULTS.fontStyle) {
-      current.tspan.setAttributeNS(null, "stile-carattere", current.fontStyle);
+    current.tspan.setAttributeNS(null, "font-family", current.fontFamily);
+    current.tspan.setAttributeNS(null, "font-size", `${pf(current.fontSize)}px`);
+    if (current.fontStyle !== SVG_DEFAULTS.fontStyle) {
+      current.tspan.setAttributeNS(null, "font-style", current.fontStyle);
     }
-    se (pesofont.corrente !== SVG_DEFAULTS.pesofont) {
+    if (current.fontWeight !== SVG_DEFAULTS.fontWeight) {
       current.tspan.setAttributeNS(null, "font-weight", current.fontWeight);
     }
     const fillStrokeMode = current.textRenderingMode & _util.TextRenderingMode.FILL_STROKE_MASK;
-    se (fillStrokeMode === _util.TextRenderingMode.FILL || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
-      se (current.fillColor !== SVG_DEFAULTS.fillColor) {
-        current.tspan.setAttributeNS(null, "riempimento", current.fillColor);
+    if (fillStrokeMode === _util.TextRenderingMode.FILL || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
+      if (current.fillColor !== SVG_DEFAULTS.fillColor) {
+        current.tspan.setAttributeNS(null, "fill", current.fillColor);
       }
-      se (current.fillAlpha < 1) {
+      if (current.fillAlpha < 1) {
         current.tspan.setAttributeNS(null, "fill-opacity", current.fillAlpha);
       }
-    } altrimenti se (current.textRenderingMode === _util.TextRenderingMode.ADD_TO_PATH) {
-      current.tspan.setAttributeNS(null, "riempi", "trasparente");
-    } altro {
-      current.tspan.setAttributeNS(null, "riempi", "nessuno");
+    } else if (current.textRenderingMode === _util.TextRenderingMode.ADD_TO_PATH) {
+      current.tspan.setAttributeNS(null, "fill", "transparent");
+    } else {
+      current.tspan.setAttributeNS(null, "fill", "none");
     }
-    se (fillStrokeMode === _util.TextRenderingMode.STROKE || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
+    if (fillStrokeMode === _util.TextRenderingMode.STROKE || fillStrokeMode === _util.TextRenderingMode.FILL_STROKE) {
       const lineWidthScale = 1 / (current.textMatrixScale || 1);
       this._setStrokeAttributes(current.tspan, lineWidthScale);
     }
-    lascia textMatrix = current.textMatrix;
-    se (current.textRise !== 0) {
+    let textMatrix = current.textMatrix;
+    if (current.textRise !== 0) {
       textMatrix = textMatrix.slice();
       textMatrix[5] += current.textRise;
     }
-    current.txtElement.setAttributeNS(null, "trasforma", `${pm(textMatrix)} scale(${pf(textHScale)}, -1)`);
-    current.txtElement.setAttributeNS(XML_NS, "xml:spazio", "conserva");
-    corrente.txtElement.append(corrente.tspan);
-    corrente.txtgrp.append(corrente.txtElement);
+    current.txtElement.setAttributeNS(null, "transform", `${pm(textMatrix)} scale(${pf(textHScale)}, -1)`);
+    current.txtElement.setAttributeNS(XML_NS, "xml:space", "preserve");
+    current.txtElement.append(current.tspan);
+    current.txtgrp.append(current.txtElement);
     this._ensureTransformGroup().append(current.txtElement);
   }
-  impostaTestoMossaPrincipale(x, y) {
-    questo.setLeading(-y);
-    questo.moveText(x, y);
+  setLeadingMoveText(x, y) {
+    this.setLeading(-y);
+    this.moveText(x, y);
   }
-  aggiungiFontStyle(fontObj) {
-    se (!fontObj.data) {
-      throw new Error("addFontStyle: nessun dato sul font disponibile, " + 'assicurati che il parametro API "fontExtraProperties" sia impostato.');
+  addFontStyle(fontObj) {
+    if (!fontObj.data) {
+      throw new Error("addFontStyle: No font data available, " + 'ensure that the "fontExtraProperties" API parameter is set.');
     }
-    se (!this.cssStyle) {
+    if (!this.cssStyle) {
       this.cssStyle = this.svgFactory.createElement("svg:style");
-      this.cssStyle.setAttributeNS(null, "tipo", "testo/css");
-      questo.defs.append(questo.cssStyle);
+      this.cssStyle.setAttributeNS(null, "type", "text/css");
+      this.defs.append(this.cssStyle);
     }
     const url = createObjectURL(fontObj.data, fontObj.mimetype, this.forceDataSchema);
     this.cssStyle.textContent += `@font-face { font-family: "${fontObj.loadedName}";` + ` src: url(${url}); }\n`;
   }
-  setFont(dettagli) {
-    const corrente = this.current;
+  setFont(details) {
+    const current = this.current;
     const fontObj = this.commonObjs.get(details[0]);
-    lascia che size = details[1];
+    let size = details[1];
     current.font = fontObj;
-    se (this.embedFonts && !fontObj.missingFile && !this.embeddedFonts[fontObj.loadedName]) {
-      questo.addFontStyle(fontObj);
+    if (this.embedFonts && !fontObj.missingFile && !this.embeddedFonts[fontObj.loadedName]) {
+      this.addFontStyle(fontObj);
       this.embeddedFonts[fontObj.loadedName] = fontObj;
     }
     current.fontMatrix = fontObj.fontMatrix || _util.FONT_IDENTITY_MATRIX;
-    lascia grassetto = "normale";
-    se (fontObj.black) {
-      grassetto = "900";
-    } altrimenti se (fontObj.bold) {
-      grassetto = "grassetto";
+    let bold = "normal";
+    if (fontObj.black) {
+      bold = "900";
+    } else if (fontObj.bold) {
+      bold = "bold";
     }
-    const italic = fontObj.italic ? "corsivo" : "normale";
-    se (dimensione < 0) {
-      dimensione = -dimensione;
-      direzione.font.corrente = -1;
-    } altro {
-      direzione del carattere corrente = 1;
+    const italic = fontObj.italic ? "italic" : "normal";
+    if (size < 0) {
+      size = -size;
+      current.fontDirection = -1;
+    } else {
+      current.fontDirection = 1;
     }
-    current.fontSize = dimensione;
+    current.fontSize = size;
     current.fontFamily = fontObj.loadedName;
-    current.fontWeight = grassetto;
-    current.fontStyle = corsivo;
+    current.fontWeight = bold;
+    current.fontStyle = italic;
     current.tspan = this.svgFactory.createElement("svg:tspan");
     current.tspan.setAttributeNS(null, "y", pf(-current.y));
-    coordinate correnti = [];
-    coordinate.y correnti = [];
+    current.xcoords = [];
+    current.ycoords = [];
   }
-  fineTesto() {
-    const corrente = this.current;
-    se (current.textRenderingMode & _util.TextRenderingMode.ADD_TO_PATH_FLAG && current.txtElement?.hasChildNodes()) {
-      elemento corrente = elemento testo corrente;
+  endText() {
+    const current = this.current;
+    if (current.textRenderingMode & _util.TextRenderingMode.ADD_TO_PATH_FLAG && current.txtElement?.hasChildNodes()) {
+      current.element = current.txtElement;
       this.clip("nonzero");
-      questo.endPath();
+      this.endPath();
     }
   }
-  setLineWidth(larghezza) {
-    se (larghezza > 0) {
-      this.current.lineWidth = larghezza;
+  setLineWidth(width) {
+    if (width > 0) {
+      this.current.lineWidth = width;
     }
   }
-  setLineCap(stile) {
+  setLineCap(style) {
     this.current.lineCap = LINE_CAP_STYLES[style];
   }
-  setLineJoin(stile) {
-    this.current.lineJoin = LINE_JOIN_STYLES[stile];
+  setLineJoin(style) {
+    this.current.lineJoin = LINE_JOIN_STYLES[style];
   }
-  setMiterLimit(limite) {
-    this.current.miterLimit = limite;
+  setMiterLimit(limit) {
+    this.current.miterLimit = limit;
   }
-  impostaAlfaTratto(AlfaTratto) {
+  setStrokeAlpha(strokeAlpha) {
     this.current.strokeAlpha = strokeAlpha;
   }
   setStrokeRGBColor(r, g, b) {
     this.current.strokeColor = _util.Util.makeHexColor(r, g, b);
   }
   setFillAlpha(fillAlpha) {
-    questo.attuale.fillAlpha = fillAlpha;
+    this.current.fillAlpha = fillAlpha;
   }
   setFillRGBColor(r, g, b) {
-    questo.colore.di.riempimento.corrente = _util.Util.makeHexColor(r, g, b);
+    this.current.fillColor = _util.Util.makeHexColor(r, g, b);
     this.current.tspan = this.svgFactory.createElement("svg:tspan");
-    questo.coordinate.correnti = [];
-    questo.coordinate.correnti = [];
+    this.current.xcoords = [];
+    this.current.ycoords = [];
   }
-  setStrokeColorN(argomenti) {
+  setStrokeColorN(args) {
     this.current.strokeColor = this._makeColorN_Pattern(args);
   }
-  setFillColorN(argomenti) {
-    questo.colore.di.riempimento.corrente = questo._makeColorN_Pattern(argomenti);
+  setFillColorN(args) {
+    this.current.fillColor = this._makeColorN_Pattern(args);
   }
-  shadingFill(argomenti) {
-    costante {
-      larghezza,
-      altezza
+  shadingFill(args) {
+    const {
+      width,
+      height
     } = this.viewport;
     const inv = _util.Util.inverseTransform(this.transformMatrix);
-    const [x0, y0, x1, y1] = _util.Util.getAxialAlignedBoundingBox([0, 0, larghezza, altezza], inv);
+    const [x0, y0, x1, y1] = _util.Util.getAxialAlignedBoundingBox([0, 0, width, height], inv);
     const rect = this.svgFactory.createElement("svg:rect");
     rect.setAttributeNS(null, "x", x0);
     rect.setAttributeNS(null, "y", y0);
-    rect.setAttributeNS(null, "larghezza", x1 - x0);
-    rect.setAttributeNS(null, "altezza", y1 - y0);
-    rect.setAttributeNS(null, "riempi", this._makeShadingPattern(args));
-    se (questo.current.fillAlpha < 1) {
+    rect.setAttributeNS(null, "width", x1 - x0);
+    rect.setAttributeNS(null, "height", y1 - y0);
+    rect.setAttributeNS(null, "fill", this._makeShadingPattern(args));
+    if (this.current.fillAlpha < 1) {
       rect.setAttributeNS(null, "fill-opacity", this.current.fillAlpha);
     }
     this._ensureTransformGroup().append(rect);
   }
-  _makeColorN_Pattern(argomenti) {
-    se (args[0] === "TilingPattern") {
-      restituisci questo._makeTilingPattern(args);
+  _makeColorN_Pattern(args) {
+    if (args[0] === "TilingPattern") {
+      return this._makeTilingPattern(args);
     }
-    restituisci questo._makeShadingPattern(args);
+    return this._makeShadingPattern(args);
   }
-  _makeTilingPattern(argomenti) {
-    const colore = argomenti[1];
+  _makeTilingPattern(args) {
+    const color = args[1];
     const operatorList = args[2];
-    matrice costante = argomenti[3] || _util.IDENTITY_MATRIX;
-    const [x0, y0, x1, y1] = argomenti[4];
+    const matrix = args[3] || _util.IDENTITY_MATRIX;
+    const [x0, y0, x1, y1] = args[4];
     const xstep = args[5];
     const ystep = args[6];
     const paintType = args[7];
     const tilingId = `shading${shadingCount++}`;
-    const [tx0, ty0, tx1, ty1] = _util.Util.normalizeRect([..._util.Util.applyTransform([x0, y0], matrice), ..._util.Util.applyTransform([x1, y1], matrice)]);
-    const [scala x, scala y] = _util.Util.singularValueDecompose2dScale(matrice);
+    const [tx0, ty0, tx1, ty1] = _util.Util.normalizeRect([..._util.Util.applyTransform([x0, y0], matrix), ..._util.Util.applyTransform([x1, y1], matrix)]);
+    const [xscale, yscale] = _util.Util.singularValueDecompose2dScale(matrix);
     const txstep = xstep * xscale;
     const tystep = ystep * yscale;
     const tiling = this.svgFactory.createElement("svg:pattern");
     tiling.setAttributeNS(null, "id", tilingId);
     tiling.setAttributeNS(null, "patternUnits", "userSpaceOnUse");
-    tiling.setAttributeNS(null, "larghezza", txstep);
-    tiling.setAttributeNS(null, "altezza", typest);
+    tiling.setAttributeNS(null, "width", txstep);
+    tiling.setAttributeNS(null, "height", tystep);
     tiling.setAttributeNS(null, "x", `${tx0}`);
     tiling.setAttributeNS(null, "y", `${ty0}`);
     const svg = this.svg;
@@ -12032,75 +12032,75 @@ classe SVGGraphics {
     const strokeColor = this.current.strokeColor;
     const bbox = this.svgFactory.create(tx1 - tx0, ty1 - ty0);
     this.svg = bbox;
-    this.transformMatrix = matrice;
-    se (tipovernice === 2) {
+    this.transformMatrix = matrix;
+    if (paintType === 2) {
       const cssColor = _util.Util.makeHexColor(...color);
-      questo.colore.di.riempimento.corrente = cssColor;
-      questo.colore.tratto.corrente = cssColor;
+      this.current.fillColor = cssColor;
+      this.current.strokeColor = cssColor;
     }
     this.executeOpTree(this.convertOpList(operatorList));
-    questo.svg = svg;
+    this.svg = svg;
     this.transformMatrix = transformMatrix;
-    questo.colore.di.riempimento.corrente = colore.di.riempimento;
+    this.current.fillColor = fillColor;
     this.current.strokeColor = strokeColor;
     tiling.append(bbox.childNodes[0]);
     this.defs.append(tiling);
-    restituisci `url(#${tilingId})`;
+    return `url(#${tilingId})`;
   }
-  _makeShadingPattern(argomenti) {
-    se (tipo di argomenti === "stringa") {
-      argomenti = this.objs.get(argomenti);
+  _makeShadingPattern(args) {
+    if (typeof args === "string") {
+      args = this.objs.get(args);
     }
-    interruttore (argomenti[0]) {
-      caso "RadialAxial":
+    switch (args[0]) {
+      case "RadialAxial":
         const shadingId = `shading${shadingCount++}`;
         const colorStops = args[3];
-        lascia gradiente;
-        interruttore (argomenti[1]) {
-          caso "assiale":
+        let gradient;
+        switch (args[1]) {
+          case "axial":
             const point0 = args[4];
             const point1 = args[5];
-            gradiente = this.svgFactory.createElement("svg:linearGradient");
+            gradient = this.svgFactory.createElement("svg:linearGradient");
             gradient.setAttributeNS(null, "id", shadingId);
             gradient.setAttributeNS(null, "gradientUnits", "userSpaceOnUse");
-            gradiente.setAttributeNS(null, "x1", punto0[0]);
-            gradiente.setAttributeNS(null, "y1", punto0[1]);
-            gradiente.setAttributeNS(null, "x2", punto1[0]);
-            gradiente.setAttributeNS(null, "y2", punto1[1]);
-            rottura;
-          caso "radiale":
+            gradient.setAttributeNS(null, "x1", point0[0]);
+            gradient.setAttributeNS(null, "y1", point0[1]);
+            gradient.setAttributeNS(null, "x2", point1[0]);
+            gradient.setAttributeNS(null, "y2", point1[1]);
+            break;
+          case "radial":
             const focalPoint = args[4];
             const circlePoint = args[5];
             const focalRadius = args[6];
             const circleRadius = args[7];
-            gradiente = this.svgFactory.createElement("svg:radialGradient");
+            gradient = this.svgFactory.createElement("svg:radialGradient");
             gradient.setAttributeNS(null, "id", shadingId);
             gradient.setAttributeNS(null, "gradientUnits", "userSpaceOnUse");
-            gradiente.setAttributeNS(null, "cx", circlePoint[0]);
-            gradiente.setAttributeNS(null, "cy", circlePoint[1]);
+            gradient.setAttributeNS(null, "cx", circlePoint[0]);
+            gradient.setAttributeNS(null, "cy", circlePoint[1]);
             gradient.setAttributeNS(null, "r", circleRadius);
-            gradiente.setAttributeNS(null, "fx", focalPoint[0]);
-            gradiente.setAttributeNS(null, "fy", focalPoint[1]);
+            gradient.setAttributeNS(null, "fx", focalPoint[0]);
+            gradient.setAttributeNS(null, "fy", focalPoint[1]);
             gradient.setAttributeNS(null, "fr", focalRadius);
-            rottura;
-          predefinito:
-            lancia un nuovo errore(`Tipo radiale assiale sconosciuto: ${args[1]}`);
+            break;
+          default:
+            throw new Error(`Unknown RadialAxial type: ${args[1]}`);
         }
-        per (const colorStop di colorStops) {
+        for (const colorStop of colorStops) {
           const stop = this.svgFactory.createElement("svg:stop");
           stop.setAttributeNS(null, "offset", colorStop[0]);
           stop.setAttributeNS(null, "stop-color", colorStop[1]);
-          gradiente.append(stop);
+          gradient.append(stop);
         }
-        this.defs.append(gradiente);
-        restituisci `url(#${shadingId})`;
-      caso "Mesh":
-        (0, _util.warn)("Modello Mesh non implementato");
-        restituisci null;
-      caso "Fintizio":
-        restituisci "hotpink";
-      predefinito:
-        genera un nuovo errore (`Tipo IR sconosciuto: ${args[0]}`);
+        this.defs.append(gradient);
+        return `url(#${shadingId})`;
+      case "Mesh":
+        (0, _util.warn)("Unimplemented pattern Mesh");
+        return null;
+      case "Dummy":
+        return "hotpink";
+      default:
+        throw new Error(`Unknown IR type: ${args[0]}`);
     }
   }
   setDash(dashArray, dashPhase) {
@@ -12108,112 +12108,112 @@ classe SVGGraphics {
     this.current.dashPhase = dashPhase;
   }
   constructPath(ops, args) {
-    const corrente = this.current;
-    lascia x = corrente.x,
-      y = corrente.y;
-    lascia d = [];
-    sia j = 0;
-    per (const op di ops) {
-      interruttore (op | 0) {
-        caso _util.OPS.rectangle:
-          x = argomenti[j++];
-          y = argomenti[j++];
-          larghezza costante = argomenti[j++];
-          altezza costante = argomenti[j++];
-          const xw = x + larghezza;
-          const yh = y + altezza;
+    const current = this.current;
+    let x = current.x,
+      y = current.y;
+    let d = [];
+    let j = 0;
+    for (const op of ops) {
+      switch (op | 0) {
+        case _util.OPS.rectangle:
+          x = args[j++];
+          y = args[j++];
+          const width = args[j++];
+          const height = args[j++];
+          const xw = x + width;
+          const yh = y + height;
           d.push("M", pf(x), pf(y), "L", pf(xw), pf(y), "L", pf(xw), pf(yh), "L", pf(x), pf(yh), "Z");
-          rottura;
-        caso _util.OPS.moveTo:
-          x = argomenti[j++];
-          y = argomenti[j++];
+          break;
+        case _util.OPS.moveTo:
+          x = args[j++];
+          y = args[j++];
           d.push("M", pf(x), pf(y));
-          rottura;
-        caso _util.OPS.lineTo:
-          x = argomenti[j++];
-          y = argomenti[j++];
+          break;
+        case _util.OPS.lineTo:
+          x = args[j++];
+          y = args[j++];
           d.push("L", pf(x), pf(y));
-          rottura;
-        caso _util.OPS.curveTo:
-          x = argomenti[j + 4];
-          y = argomenti[j + 5];
+          break;
+        case _util.OPS.curveTo:
+          x = args[j + 4];
+          y = args[j + 5];
           d.push("C", pf(args[j]), pf(args[j + 1]), pf(args[j + 2]), pf(args[j + 3]), pf(x), pf(y));
           j += 6;
-          rottura;
-        caso _util.OPS.curveTo2:
+          break;
+        case _util.OPS.curveTo2:
           d.push("C", pf(x), pf(y), pf(args[j]), pf(args[j + 1]), pf(args[j + 2]), pf(args[j + 3]));
-          x = argomenti[j + 2];
-          y = argomenti[j + 3];
+          x = args[j + 2];
+          y = args[j + 3];
           j += 4;
-          rottura;
-        caso _util.OPS.curveTo3:
-          x = argomenti[j + 2];
-          y = argomenti[j + 3];
+          break;
+        case _util.OPS.curveTo3:
+          x = args[j + 2];
+          y = args[j + 3];
           d.push("C", pf(args[j]), pf(args[j + 1]), pf(x), pf(y), pf(x), pf(y));
           j += 4;
-          rottura;
-        caso _util.OPS.closePath:
+          break;
+        case _util.OPS.closePath:
           d.push("Z");
-          rottura;
+          break;
       }
     }
     d = d.join(" ");
-    se (percorso corrente e lunghezza operazioni > 0 e operazioni[0] !== _util.OPS.rettangolo e operazioni[0] !== _util.OPS.sposta in) {
+    if (current.path && ops.length > 0 && ops[0] !== _util.OPS.rectangle && ops[0] !== _util.OPS.moveTo) {
       d = current.path.getAttributeNS(null, "d") + d;
-    } altro {
-      percorso.corrente = this.svgFactory.createElement("svg:percorso");
+    } else {
+      current.path = this.svgFactory.createElement("svg:path");
       this._ensureTransformGroup().append(current.path);
     }
     current.path.setAttributeNS(null, "d", d);
-    current.path.setAttributeNS(null, "riempi", "nessuno");
-    elemento corrente = percorso corrente;
-    corrente.impostaPuntoCorrente(x, y);
+    current.path.setAttributeNS(null, "fill", "none");
+    current.element = current.path;
+    current.setCurrentPoint(x, y);
   }
   endPath() {
-    const corrente = this.current;
-    percorso corrente = null;
-    se (!this.pendingClip) {
-      ritorno;
+    const current = this.current;
+    current.path = null;
+    if (!this.pendingClip) {
+      return;
     }
-    se (!elemento.corrente) {
+    if (!current.element) {
       this.pendingClip = null;
-      ritorno;
+      return;
     }
     const clipId = `clippath${clipCount++}`;
     const clipPath = this.svgFactory.createElement("svg:clipPath");
     clipPath.setAttributeNS(null, "id", clipId);
-    clipPath.setAttributeNS(null, "trasforma", pm(this.transformMatrix));
+    clipPath.setAttributeNS(null, "transform", pm(this.transformMatrix));
     const clipElement = current.element.cloneNode(true);
-    se (this.pendingClip === "evenodd") {
+    if (this.pendingClip === "evenodd") {
       clipElement.setAttributeNS(null, "clip-rule", "evenodd");
-    } altro {
-      clipElement.setAttributeNS(null, "regola-clip", "nonzero");
+    } else {
+      clipElement.setAttributeNS(null, "clip-rule", "nonzero");
     }
     this.pendingClip = null;
     clipPath.append(clipElement);
     this.defs.append(clipPath);
-    se (current.activeClipUrl) {
+    if (current.activeClipUrl) {
       current.clipGroup = null;
-      per (const prev di this.extraStack) {
+      for (const prev of this.extraStack) {
         prev.clipGroup = null;
       }
-      clipPath.setAttributeNS(null, "percorso-clip", current.activeClipUrl);
+      clipPath.setAttributeNS(null, "clip-path", current.activeClipUrl);
     }
     current.activeClipUrl = `url(#${clipId})`;
-    questo.tgrp = null;
+    this.tgrp = null;
   }
-  clip(tipo) {
-    this.pendingClip = tipo;
+  clip(type) {
+    this.pendingClip = type;
   }
   closePath() {
-    const corrente = this.current;
-    se (percorso corrente) {
+    const current = this.current;
+    if (current.path) {
       const d = `${current.path.getAttributeNS(null, "d")}Z`;
       current.path.setAttributeNS(null, "d", d);
     }
   }
-  setLeading(principale) {
-    questo.corrente.principale = -principale;
+  setLeading(leading) {
+    this.current.leading = -leading;
   }
   setTextRise(textRise) {
     this.current.textRise = textRise;
@@ -12221,76 +12221,76 @@ classe SVGGraphics {
   setTextRenderingMode(textRenderingMode) {
     this.current.textRenderingMode = textRenderingMode;
   }
-  setHScale(scala) {
-    this.current.textHScale = scala / 100;
+  setHScale(scale) {
+    this.current.textHScale = scale / 100;
   }
-  setRenderingIntent(intento) {}
-  setFlatness(piattezza) {}
-  setGState(stati) {
-    per (const [chiave, valore] degli stati) {
-      interruttore (chiave) {
-        caso "LW":
-          this.setLineWidth(valore);
-          rottura;
-        caso "LC":
-          this.setLineCap(valore);
-          rottura;
-        caso "LJ":
-          this.setLineJoin(valore);
-          rottura;
-        caso "ML":
-          this.setMiterLimit(valore);
-          rottura;
-        caso "D":
-          this.setDash(valore[0], valore[1]);
-          rottura;
-        caso "RI":
-          this.setRenderingIntent(valore);
-          rottura;
-        caso "FL":
-          this.setFlatness(valore);
-          rottura;
-        caso "Font":
-          this.setFont(valore);
-          rottura;
-        caso "CA":
-          this.setStrokeAlpha(valore);
-          rottura;
-        caso "ca":
-          this.setFillAlpha(valore);
-          rottura;
-        predefinito:
-          (0, _util.warn)(`Operatore di stato grafico non implementato ${key}`);
-          rottura;
+  setRenderingIntent(intent) {}
+  setFlatness(flatness) {}
+  setGState(states) {
+    for (const [key, value] of states) {
+      switch (key) {
+        case "LW":
+          this.setLineWidth(value);
+          break;
+        case "LC":
+          this.setLineCap(value);
+          break;
+        case "LJ":
+          this.setLineJoin(value);
+          break;
+        case "ML":
+          this.setMiterLimit(value);
+          break;
+        case "D":
+          this.setDash(value[0], value[1]);
+          break;
+        case "RI":
+          this.setRenderingIntent(value);
+          break;
+        case "FL":
+          this.setFlatness(value);
+          break;
+        case "Font":
+          this.setFont(value);
+          break;
+        case "CA":
+          this.setStrokeAlpha(value);
+          break;
+        case "ca":
+          this.setFillAlpha(value);
+          break;
+        default:
+          (0, _util.warn)(`Unimplemented graphic state operator ${key}`);
+          break;
       }
     }
   }
-  riempire() {
-    const corrente = this.current;
-    se (elemento corrente) {
-      current.element.setAttributeNS(null, "riempimento", current.fillColor);
+  fill() {
+    const current = this.current;
+    if (current.element) {
+      current.element.setAttributeNS(null, "fill", current.fillColor);
       current.element.setAttributeNS(null, "fill-opacity", current.fillAlpha);
-      questo.endPath();
+      this.endPath();
     }
   }
-  colpo() {
-    const corrente = this.current;
-    se (elemento corrente) {
+  stroke() {
+    const current = this.current;
+    if (current.element) {
       this._setStrokeAttributes(current.element);
-      current.element.setAttributeNS(null, "riempi", "nessuno");
-      questo.endPath();
+      current.element.setAttributeNS(null, "fill", "none");
+      this.endPath();
     }
   }
-  _setStrokeAttributes(elemento, lineWidthScale = 1) {
-    const corrente = this.current;
-    lascia che dashArray = current.dashArray;
-    se (lineWidthScale !== 1 && dashArray.length > 0) {
-      dashArray = dashArray.map(funzione (valore) {
-        restituisci lineWidthScale * valore;
+  _setStrokeAttributes(element, lineWidthScale = 1) {
+    const current = this.current;
+    let dashArray = current.dashArray;
+    if (lineWidthScale !== 1 && dashArray.length > 0) {
+      dashArray = dashArray.map(function (value) {
+        return lineWidthScale * value;
       });
     }
     element.setAttributeNS(null, "stroke", current.strokeColor);
-    element.setAttributeNS(null, "opacità-tratto", current.strokeAlpha);
+    element.setAttributeNS(null, "stroke-opacity", current.strokeAlpha);
     element.setAttributeNS(null, "stroke-miterlimit", pf(current.miterLimit));
     element.setAttributeNS(null, "stroke-linecap", current.lineCap);
     element.setAttributeNS(null, "stroke-linejoin", current.lineJoin);
@@ -12300,145 +12300,145 @@ classe SVGGraphics {
   }
   eoFill() {
     this.current.element?.setAttributeNS(null, "fill-rule", "evenodd");
-    questo.riempi();
+    this.fill();
   }
   fillStroke() {
-    questo.tratto();
-    questo.riempi();
+    this.stroke();
+    this.fill();
   }
   eoFillStroke() {
     this.current.element?.setAttributeNS(null, "fill-rule", "evenodd");
-    questo.fillStroke();
+    this.fillStroke();
   }
-  chiudiStroke() {
-    questo.closePath();
-    questo.tratto();
+  closeStroke() {
+    this.closePath();
+    this.stroke();
   }
-  chiudiRiempiTratto() {
-    questo.closePath();
-    questo.fillStroke();
+  closeFillStroke() {
+    this.closePath();
+    this.fillStroke();
   }
   closeEOFillStroke() {
-    questo.closePath();
+    this.closePath();
     this.eoFillStroke();
   }
   paintSolidColorImageMask() {
     const rect = this.svgFactory.createElement("svg:rect");
     rect.setAttributeNS(null, "x", "0");
     rect.setAttributeNS(null, "y", "0");
-    rect.setAttributeNS(null, "larghezza", "1px");
-    rect.setAttributeNS(null, "altezza", "1px");
-    rect.setAttributeNS(null, "riempi", this.current.fillColor);
+    rect.setAttributeNS(null, "width", "1px");
+    rect.setAttributeNS(null, "height", "1px");
+    rect.setAttributeNS(null, "fill", this.current.fillColor);
     this._ensureTransformGroup().append(rect);
   }
   paintImageXObject(objId) {
     const imgData = this.getObject(objId);
-    se (!imgData) {
-      (0, _util.warn)(`L'immagine dipendente con ID oggetto ${objId} non è ancora pronta`);
-      ritorno;
+    if (!imgData) {
+      (0, _util.warn)(`Dependent image with object ID ${objId} is not ready yet`);
+      return;
     }
     this.paintInlineImageXObject(imgData);
   }
-  paintInlineImageXObject(imgData, maschera) {
+  paintInlineImageXObject(imgData, mask) {
     const width = imgData.width;
-    altezza costante = imgData.height;
+    const height = imgData.height;
     const imgSrc = convertImgDataToPng(imgData, this.forceDataSchema, !!mask);
     const cliprect = this.svgFactory.createElement("svg:rect");
     cliprect.setAttributeNS(null, "x", "0");
     cliprect.setAttributeNS(null, "y", "0");
-    cliprect.setAttributeNS(null, "larghezza", pf(larghezza));
-    cliprect.setAttributeNS(null, "altezza", pf(altezza));
-    questo.elemento.corrente = cliprect;
+    cliprect.setAttributeNS(null, "width", pf(width));
+    cliprect.setAttributeNS(null, "height", pf(height));
+    this.current.element = cliprect;
     this.clip("nonzero");
-    const imgEl = this.svgFactory.createElement("svg:immagine");
+    const imgEl = this.svgFactory.createElement("svg:image");
     imgEl.setAttributeNS(XLINK_NS, "xlink:href", imgSrc);
     imgEl.setAttributeNS(null, "x", "0");
-    imgEl.setAttributeNS(null, "y", pf(-altezza));
-    imgEl.setAttributeNS(null, "larghezza", pf(larghezza) + "px");
-    imgEl.setAttributeNS(null, "altezza", pf(altezza) + "px");
-    imgEl.setAttributeNS(null, "trasforma", `scala(${pf(1 / larghezza)} ${pf(-1 / altezza)})`);
-    se (maschera) {
-      maschera.append(imgEl);
-    } altro {
+    imgEl.setAttributeNS(null, "y", pf(-height));
+    imgEl.setAttributeNS(null, "width", pf(width) + "px");
+    imgEl.setAttributeNS(null, "height", pf(height) + "px");
+    imgEl.setAttributeNS(null, "transform", `scale(${pf(1 / width)} ${pf(-1 / height)})`);
+    if (mask) {
+      mask.append(imgEl);
+    } else {
       this._ensureTransformGroup().append(imgEl);
     }
   }
   paintImageMaskXObject(img) {
     const imgData = this.getObject(img.data, img);
-    se (imgData.bitmap) {
-      (0, _util.warn)("paintImageMaskXObject: il supporto ImageBitmap non è implementato, " + "assicurarsi che il parametro API `isOffscreenCanvasSupported` sia disabilitato.");
-      ritorno;
+    if (imgData.bitmap) {
+      (0, _util.warn)("paintImageMaskXObject: ImageBitmap support is not implemented, " + "ensure that the `isOffscreenCanvasSupported` API parameter is disabled.");
+      return;
     }
-    const corrente = this.current;
+    const current = this.current;
     const width = imgData.width;
-    altezza costante = imgData.height;
+    const height = imgData.height;
     const fillColor = current.fillColor;
     current.maskId = `mask${maskCount++}`;
     const mask = this.svgFactory.createElement("svg:mask");
-    maschera.setAttributeNS(null, "id", current.maskId);
+    mask.setAttributeNS(null, "id", current.maskId);
     const rect = this.svgFactory.createElement("svg:rect");
     rect.setAttributeNS(null, "x", "0");
     rect.setAttributeNS(null, "y", "0");
-    rect.setAttributeNS(null, "larghezza", pf(larghezza));
-    rect.setAttributeNS(null, "altezza", pf(altezza));
-    rect.setAttributeNS(null, "riempimento", fillColor);
-    rect.setAttributeNS(null, "maschera", `url(#${current.maskId})`);
-    this.defs.append(maschera);
+    rect.setAttributeNS(null, "width", pf(width));
+    rect.setAttributeNS(null, "height", pf(height));
+    rect.setAttributeNS(null, "fill", fillColor);
+    rect.setAttributeNS(null, "mask", `url(#${current.maskId})`);
+    this.defs.append(mask);
     this._ensureTransformGroup().append(rect);
-    this.paintInlineImageXObject(imgData, maschera);
+    this.paintInlineImageXObject(imgData, mask);
   }
-  paintFormXObjectBegin(matrice, bbox) {
-    se (Array.isArray(matrice) && lunghezza matrice === 6) {
-      questo.trasforma(matrice[0], matrice[1], matrice[2], matrice[3], matrice[4], matrice[5]);
+  paintFormXObjectBegin(matrix, bbox) {
+    if (Array.isArray(matrix) && matrix.length === 6) {
+      this.transform(matrix[0], matrix[1], matrix[2], matrix[3], matrix[4], matrix[5]);
     }
-    se (bbox) {
-      larghezza costante = bbox[2] - bbox[0];
-      altezza costante = bbox[3] - bbox[1];
+    if (bbox) {
+      const width = bbox[2] - bbox[0];
+      const height = bbox[3] - bbox[1];
       const cliprect = this.svgFactory.createElement("svg:rect");
       cliprect.setAttributeNS(null, "x", bbox[0]);
       cliprect.setAttributeNS(null, "y", bbox[1]);
-      cliprect.setAttributeNS(null, "larghezza", pf(larghezza));
-      cliprect.setAttributeNS(null, "altezza", pf(altezza));
-      questo.elemento.corrente = cliprect;
+      cliprect.setAttributeNS(null, "width", pf(width));
+      cliprect.setAttributeNS(null, "height", pf(height));
+      this.current.element = cliprect;
       this.clip("nonzero");
-      questo.endPath();
+      this.endPath();
     }
   }
   paintFormXObjectEnd() {}
-  _inizializza(viewport) {
-    const svg = this.svgFactory.create( viewport.width, viewport.height);
-    definizioni costanti = this.svgFactory.createElement("svg:defs");
-    svg.append(definizioni);
-    this.defs = definizioni;
+  _initialize(viewport) {
+    const svg = this.svgFactory.create(viewport.width, viewport.height);
+    const definitions = this.svgFactory.createElement("svg:defs");
+    svg.append(definitions);
+    this.defs = definitions;
     const rootGroup = this.svgFactory.createElement("svg:g");
-    rootGroup.setAttributeNS(null, "trasforma", pm(viewport.transform));
+    rootGroup.setAttributeNS(null, "transform", pm(viewport.transform));
     svg.append(rootGroup);
-    this.svg = grupporadice;
-    restituisci svg;
+    this.svg = rootGroup;
+    return svg;
   }
   _ensureClipGroup() {
-    se (!this.current.clipGroup) {
+    if (!this.current.clipGroup) {
       const clipGroup = this.svgFactory.createElement("svg:g");
-      clipGroup.setAttributeNS(null, "percorso-clip", this.current.activeClipUrl);
+      clipGroup.setAttributeNS(null, "clip-path", this.current.activeClipUrl);
       this.svg.append(clipGroup);
-      questo.gruppo.clipcorrente = gruppo.clip;
+      this.current.clipGroup = clipGroup;
     }
-    restituisci questo.current.clipGroup;
+    return this.current.clipGroup;
   }
   _ensureTransformGroup() {
-    se (!this.tgrp) {
+    if (!this.tgrp) {
       this.tgrp = this.svgFactory.createElement("svg:g");
-      this.tgrp.setAttributeNS(null, "trasforma", pm(this.transformMatrix));
-      se (this.current.activeClipUrl) {
+      this.tgrp.setAttributeNS(null, "transform", pm(this.transformMatrix));
+      if (this.current.activeClipUrl) {
         this._ensureClipGroup().append(this.tgrp);
-      } altro {
-        questo.svg.append(questo.tgrp);
+      } else {
+        this.svg.append(this.tgrp);
       }
     }
-    restituisci questo.tgrp;
+    return this.tgrp;
   }
 }
-esportazioni.SVGGraphics = SVGGraphics;
+exports.SVGGraphics = SVGGraphics;
 
 /***/ }),
 /* 25 */
@@ -12446,52 +12446,52 @@ esportazioni.SVGGraphics = SVGGraphics;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.XfaText = void 0;
-classe XfaText {
-  testo staticoContenuto(xfa) {
-    elementi costanti = [];
-    output costante = {
-      elementi,
-      stili: Object.create(null)
+exports.XfaText = void 0;
+class XfaText {
+  static textContent(xfa) {
+    const items = [];
+    const output = {
+      items,
+      styles: Object.create(null)
     };
-    funzione walk(nodo) {
-      se (!nodo) {
-        ritorno;
+    function walk(node) {
+      if (!node) {
+        return;
       }
-      lascia str = null;
-      const nome = node.name;
-      se (nome === "#testo") {
-        str = nodo.valore;
-      } altrimenti se (!XfaText.shouldBuildText(nome)) {
-        ritorno;
-      } altrimenti se (nodo?.attributi?.textContent) {
+      let str = null;
+      const name = node.name;
+      if (name === "#text") {
+        str = node.value;
+      } else if (!XfaText.shouldBuildText(name)) {
+        return;
+      } else if (node?.attributes?.textContent) {
         str = node.attributes.textContent;
-      } altrimenti se (nodo.valore) {
-        str = nodo.valore;
+      } else if (node.value) {
+        str = node.value;
       }
-      se (str !== null) {
-        elementi.push({
+      if (str !== null) {
+        items.push({
           str
         });
       }
-      se (!node.children) {
-        ritorno;
+      if (!node.children) {
+        return;
       }
-      per (figlio costante di node.children) {
-        camminare(bambino);
+      for (const child of node.children) {
+        walk(child);
       }
     }
-    camminare(xfa);
-    restituire l'output;
+    walk(xfa);
+    return output;
   }
-  static shouldBuildText(nome) {
+  static shouldBuildText(name) {
     return !(name === "textarea" || name === "input" || name === "option" || name === "select");
   }
 }
-esportazioni.XfaText = XfaText;
+exports.XfaText = XfaText;
 
 /***/ }),
 /* 26 */
@@ -12499,374 +12499,374 @@ esportazioni.XfaText = XfaText;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.TextLayerRenderTask = void 0;
-esportazioni.renderTextLayer = renderTextLayer;
-esportazioni.updateTextLayer = updateTextLayer;
+exports.TextLayerRenderTask = void 0;
+exports.renderTextLayer = renderTextLayer;
+exports.updateTextLayer = updateTextLayer;
 var _util = __w_pdfjs_require__(1);
 var _display_utils = __w_pdfjs_require__(6);
 const MAX_TEXT_DIVS_TO_RENDER = 100000;
-costante DEFAULT_FONT_SIZE = 30;
+const DEFAULT_FONT_SIZE = 30;
 const DEFAULT_FONT_ASCENT = 0.8;
 const ascentCache = new Map();
-funzione getCtx(dimensione, isOffscreenCanvasSupported) {
-  lascia ctx;
-  se (isOffscreenCanvasSupported && _util.FeatureTest.isOffscreenCanvasSupported) {
-    ctx = new OffscreenCanvas(dimensione, dimensione).getContext("2d", {
-      alfa: falso
+function getCtx(size, isOffscreenCanvasSupported) {
+  let ctx;
+  if (isOffscreenCanvasSupported && _util.FeatureTest.isOffscreenCanvasSupported) {
+    ctx = new OffscreenCanvas(size, size).getContext("2d", {
+      alpha: false
     });
-  } altro {
+  } else {
     const canvas = document.createElement("canvas");
-    larghezza tela = altezza tela = dimensione;
+    canvas.width = canvas.height = size;
     ctx = canvas.getContext("2d", {
-      alfa: falso
+      alpha: false
     });
   }
-  restituisci ctx;
+  return ctx;
 }
-funzione getAscent(fontFamily, isOffscreenCanvasSupported) {
+function getAscent(fontFamily, isOffscreenCanvasSupported) {
   const cachedAscent = ascentCache.get(fontFamily);
-  se (cachedAscent) {
-    restituisci cachedAscent;
+  if (cachedAscent) {
+    return cachedAscent;
   }
   const ctx = getCtx(DEFAULT_FONT_SIZE, isOffscreenCanvasSupported);
   ctx.font = `${DEFAULT_FONT_SIZE}px ${fontFamily}`;
-  metriche costanti = ctx.measureText("");
-  lascia che l'ascesa = metrics.fontBoundingBoxAscent;
-  lascia discesa = Math.abs(metrics.fontBoundingBoxDescent);
-  se (ascesa) {
-    rapporto costante = salita / (salita + discesa);
+  const metrics = ctx.measureText("");
+  let ascent = metrics.fontBoundingBoxAscent;
+  let descent = Math.abs(metrics.fontBoundingBoxDescent);
+  if (ascent) {
+    const ratio = ascent / (ascent + descent);
     ascentCache.set(fontFamily, ratio);
     ctx.canvas.width = ctx.canvas.height = 0;
-    rapporto di rendimento;
+    return ratio;
   }
-  ctx.strokeStyle = "rosso";
-  ctx.clearRect(0, 0, DIMENSIONE_FONT_DEFINITA, DIMENSIONE_FONT_DEFINITA);
+  ctx.strokeStyle = "red";
+  ctx.clearRect(0, 0, DEFAULT_FONT_SIZE, DEFAULT_FONT_SIZE);
   ctx.strokeText("g", 0, 0);
-  lascia pixel = ctx.getImageData(0, 0, DEFAULT_FONT_SIZE, DEFAULT_FONT_SIZE).data;
-  discesa = 0;
-  per (lascia che i = pixel.lunghezza - 1 - 3; i >= 0; i -= 4) {
-    se (pixel[i] > 0) {
-      discesa = Math.ceil(i / 4 / DEFAULT_FONT_SIZE);
-      rottura;
+  let pixels = ctx.getImageData(0, 0, DEFAULT_FONT_SIZE, DEFAULT_FONT_SIZE).data;
+  descent = 0;
+  for (let i = pixels.length - 1 - 3; i >= 0; i -= 4) {
+    if (pixels[i] > 0) {
+      descent = Math.ceil(i / 4 / DEFAULT_FONT_SIZE);
+      break;
     }
   }
-  ctx.clearRect(0, 0, DIMENSIONE_FONT_DEFINITA, DIMENSIONE_FONT_DEFINITA);
+  ctx.clearRect(0, 0, DEFAULT_FONT_SIZE, DEFAULT_FONT_SIZE);
   ctx.strokeText("A", 0, DEFAULT_FONT_SIZE);
-  pixel = ctx.getImageData(0, 0, DEFAULT_FONT_SIZE, DEFAULT_FONT_SIZE).data;
-  salita = 0;
-  per (lascia che i = 0, ii = pixel.lunghezza; i < ii; i += 4) {
-    se (pixel[i] > 0) {
-      salita = DEFAULT_FONT_SIZE - Math.floor(i / 4 / DEFAULT_FONT_SIZE);
-      rottura;
+  pixels = ctx.getImageData(0, 0, DEFAULT_FONT_SIZE, DEFAULT_FONT_SIZE).data;
+  ascent = 0;
+  for (let i = 0, ii = pixels.length; i < ii; i += 4) {
+    if (pixels[i] > 0) {
+      ascent = DEFAULT_FONT_SIZE - Math.floor(i / 4 / DEFAULT_FONT_SIZE);
+      break;
     }
   }
   ctx.canvas.width = ctx.canvas.height = 0;
-  se (ascesa) {
-    rapporto costante = salita / (salita + discesa);
+  if (ascent) {
+    const ratio = ascent / (ascent + descent);
     ascentCache.set(fontFamily, ratio);
-    rapporto di rendimento;
+    return ratio;
   }
   ascentCache.set(fontFamily, DEFAULT_FONT_ASCENT);
-  restituisci DEFAULT_FONT_ASCENT;
+  return DEFAULT_FONT_ASCENT;
 }
-funzione appendText(attività, geom, stili) {
+function appendText(task, geom, styles) {
   const textDiv = document.createElement("span");
   const textDivProperties = {
-    angolo: 0,
-    Larghezza tela: 0,
-    haTesto: geom.str !== "",
+    angle: 0,
+    canvasWidth: 0,
+    hasText: geom.str !== "",
     hasEOL: geom.hasEOL,
-    dimensione carattere: 0
+    fontSize: 0
   };
   task._textDivs.push(textDiv);
   const tx = _util.Util.transform(task._transform, geom.transform);
-  lascia angolo = Math.atan2(tx[1], tx[0]);
+  let angle = Math.atan2(tx[1], tx[0]);
   const style = styles[geom.fontName];
-  se (stile.verticale) {
-    angolo += Math.PI / 2;
+  if (style.vertical) {
+    angle += Math.PI / 2;
   }
   const fontHeight = Math.hypot(tx[2], tx[3]);
   const fontAscent = fontHeight * getAscent(style.fontFamily, task._isOffscreenCanvasSupported);
-  lascia a sinistra, in alto;
-  se (angolo === 0) {
-    sinistra = tx[4];
+  let left, top;
+  if (angle === 0) {
+    left = tx[4];
     top = tx[5] - fontAscent;
-  } altro {
-    sinistra = tx[4] + fontAscent * Math.sin(angolo);
-    top = tx[5] - fontAscent * Math.cos(angolo);
+  } else {
+    left = tx[4] + fontAscent * Math.sin(angle);
+    top = tx[5] - fontAscent * Math.cos(angle);
   }
-  const scaleFactorStr = "calc(var(--fattore-scala)*";
+  const scaleFactorStr = "calc(var(--scale-factor)*";
   const divStyle = textDiv.style;
-  se (task._container === task._rootContainer) {
+  if (task._container === task._rootContainer) {
     divStyle.left = `${(100 * left / task._pageWidth).toFixed(2)}%`;
     divStyle.top = `${(100 * top / task._pageHeight).toFixed(2)}%`;
-  } altro {
+  } else {
     divStyle.left = `${scaleFactorStr}${left.toFixed(2)}px)`;
     divStyle.top = `${scaleFactorStr}${top.toFixed(2)}px)`;
   }
   divStyle.fontSize = `${scaleFactorStr}${fontHeight.toFixed(2)}px)`;
-  divStyle.fontFamily = stile.fontFamily;
+  divStyle.fontFamily = style.fontFamily;
   textDivProperties.fontSize = fontHeight;
-  textDiv.setAttribute("ruolo", "presentazione");
+  textDiv.setAttribute("role", "presentation");
   textDiv.textContent = geom.str;
   textDiv.dir = geom.dir;
-  se (task._fontInspectorEnabled) {
+  if (task._fontInspectorEnabled) {
     textDiv.dataset.fontName = geom.fontName;
   }
-  se (angolo !== 0) {
-    textDivProperties.angle = angolo * (180 / Math.PI);
+  if (angle !== 0) {
+    textDivProperties.angle = angle * (180 / Math.PI);
   }
-  lascia shouldScaleText = false;
-  se (geom.str.length > 1) {
+  let shouldScaleText = false;
+  if (geom.str.length > 1) {
     shouldScaleText = true;
-  } altrimenti se (geom.str !== " " && geom.transform[0] !== geom.transform[3]) {
+  } else if (geom.str !== " " && geom.transform[0] !== geom.transform[3]) {
     const absScaleX = Math.abs(geom.transform[0]),
       absScaleY = Math.abs(geom.transform[3]);
-    se (absScaleX !== absScaleY && Math.max(absScaleX, absScaleY) / Math.min(absScaleX, absScaleY) > 1.5) {
+    if (absScaleX !== absScaleY && Math.max(absScaleX, absScaleY) / Math.min(absScaleX, absScaleY) > 1.5) {
       shouldScaleText = true;
     }
   }
-  se (shouldScaleText) {
+  if (shouldScaleText) {
     textDivProperties.canvasWidth = style.vertical ? geom.height : geom.width;
   }
   task._textDivProperties.set(textDiv, textDivProperties);
-  se (task._isReadableStream) {
+  if (task._isReadableStream) {
     task._layoutText(textDiv);
   }
 }
-layout della funzione (parametri) {
-  costante {
-    divisione,
-    scala,
-    proprietà,
+function layout(params) {
+  const {
+    div,
+    scale,
+    properties,
     ctx,
-    precedenteFontSize,
+    prevFontSize,
     prevFontFamily
-  } = parametri;
-  costante {
-    stile
+  } = params;
+  const {
+    style
   } = div;
-  lascia trasformare = "";
-  se (proprietà.larghezzatela !== 0 e proprietà.hasText) {
-    costante {
-      famiglia di caratteri
-    } = stile;
-    costante {
-      Larghezzatela,
-      dimensione del carattere
-    } = proprietà;
-    se (prevFontSize !== fontSize || prevFontFamily !== fontFamily) {
-      ctx.font = `${fontSize * scala}px ${fontFamily}`;
+  let transform = "";
+  if (properties.canvasWidth !== 0 && properties.hasText) {
+    const {
+      fontFamily
+    } = style;
+    const {
+      canvasWidth,
+      fontSize
+    } = properties;
+    if (prevFontSize !== fontSize || prevFontFamily !== fontFamily) {
+      ctx.font = `${fontSize * scale}px ${fontFamily}`;
       params.prevFontSize = fontSize;
       params.prevFontFamily = fontFamily;
     }
-    costante {
-      larghezza
+    const {
+      width
     } = ctx.measureText(div.textContent);
-    se (larghezza > 0) {
-      trasforma = `scaleX(${canvasWidth * scala / larghezza})`;
+    if (width > 0) {
+      transform = `scaleX(${canvasWidth * scale / width})`;
     }
   }
-  se (proprietà.angolo !== 0) {
-    trasforma = `ruota(${properties.angle}deg) ${trasforma}`;
+  if (properties.angle !== 0) {
+    transform = `rotate(${properties.angle}deg) ${transform}`;
   }
-  se (lunghezza di trasformazione > 0) {
-    stile.trasformazione = trasforma;
+  if (transform.length > 0) {
+    style.transform = transform;
   }
 }
-funzione render(attività) {
-  se (attività._annullata) {
-    ritorno;
+function render(task) {
+  if (task._canceled) {
+    return;
   }
   const textDivs = task._textDivs;
-  const capacità = task._capacità;
+  const capability = task._capability;
   const textDivsLength = textDivs.length;
-  se (textDivsLength > MAX_TEXT_DIVS_TO_RENDER) {
-    capacità.risolvi();
-    ritorno;
+  if (textDivsLength > MAX_TEXT_DIVS_TO_RENDER) {
+    capability.resolve();
+    return;
   }
-  se (!task._isReadableStream) {
-    per (const textDiv di textDivs) {
+  if (!task._isReadableStream) {
+    for (const textDiv of textDivs) {
       task._layoutText(textDiv);
     }
   }
-  capacità.risolvi();
+  capability.resolve();
 }
-classe TextLayerRenderTask {
-  costruttore({
-    testoContenutoOrigine,
-    contenitore,
-    finestra,
+class TextLayerRenderTask {
+  constructor({
+    textContentSource,
+    container,
+    viewport,
     textDivs,
     textDivProperties,
     textContentItemsStr,
-    èOffscreenCanvasSupported
+    isOffscreenCanvasSupported
   }) {
     this._textContentSource = textContentSource;
     this._isReadableStream = textContentSource instanceof ReadableStream;
-    questo._contenitore = questo._rootContainer = contenitore;
-    questo._textDivs = textDivs || [];
+    this._container = this._rootContainer = container;
+    this._textDivs = textDivs || [];
     this._textContentItemsStr = textContentItemsStr || [];
     this._isOffscreenCanvasSupported = isOffscreenCanvasSupported;
     this._fontInspectorEnabled = !!globalThis.FontInspector?.enabled;
-    questo._lettore = null;
+    this._reader = null;
     this._textDivProperties = textDivProperties || new WeakMap();
     this._canceled = false;
     this._capability = new _util.PromiseCapability();
-    questo._layoutTextParams = {
+    this._layoutTextParams = {
       prevFontSize: null,
       prevFontFamily: null,
-      div: nullo,
-      scala: viewport.scale * (globalThis.devicePixelRatio || 1),
-      proprietà: nullo,
+      div: null,
+      scale: viewport.scale * (globalThis.devicePixelRatio || 1),
+      properties: null,
       ctx: getCtx(0, isOffscreenCanvasSupported)
     };
-    costante {
-      Larghezza pagina,
-      altezza della pagina,
-      paginaX,
-      paginaY
+    const {
+      pageWidth,
+      pageHeight,
+      pageX,
+      pageY
     } = viewport.rawDims;
     this._transform = [1, 0, 0, -1, -pageX, pageY + pageHeight];
-    this._pageWidth = larghezzapagina;
-    this._pageHeight = altezzapagina;
-    (0, _display_utils.setLayerDimensions)(contenitore, viewport);
+    this._pageWidth = pageWidth;
+    this._pageHeight = pageHeight;
+    (0, _display_utils.setLayerDimensions)(container, viewport);
     this._capability.promise.finally(() => {
       this._layoutTextParams = null;
     }).catch(() => {});
   }
-  ottieni promessa() {
-    restituisci this._capability.promise;
+  get promise() {
+    return this._capability.promise;
   }
-  annulla() {
+  cancel() {
     this._canceled = true;
-    se (questo._lettore) {
-      this._reader.cancel(new _util.AbortException("Attività TextLayer annullata.")).catch(() => {});
-      questo._lettore = null;
+    if (this._reader) {
+      this._reader.cancel(new _util.AbortException("TextLayer task cancelled.")).catch(() => {});
+      this._reader = null;
     }
-    this._capability.reject(new _util.AbortException("Attività TextLayer annullata."));
+    this._capability.reject(new _util.AbortException("TextLayer task cancelled."));
   }
-  _processItems(elementi, styleCache) {
-    per (const elemento di elementi) {
-      se (item.str === indefinito) {
-        se (item.type === "beginMarkedContentProps" || item.type === "beginMarkedContent") {
-          const genitore = this._container;
+  _processItems(items, styleCache) {
+    for (const item of items) {
+      if (item.str === undefined) {
+        if (item.type === "beginMarkedContentProps" || item.type === "beginMarkedContent") {
+          const parent = this._container;
           this._container = document.createElement("span");
           this._container.classList.add("markedContent");
-          se (item.id !== null) {
+          if (item.id !== null) {
             this._container.setAttribute("id", `${item.id}`);
           }
-          genitore.append(questo._contenitore);
-        } altrimenti se (item.type === "endMarkedContent") {
-          questo._contenitore = questo._contenitore.parentNode;
+          parent.append(this._container);
+        } else if (item.type === "endMarkedContent") {
+          this._container = this._container.parentNode;
         }
-        continuare;
+        continue;
       }
       this._textContentItemsStr.push(item.str);
-      appendText(questo, elemento, styleCache);
+      appendText(this, item, styleCache);
     }
   }
   _layoutText(textDiv) {
     const textDivProperties = this._layoutTextParams.properties = this._textDivProperties.get(textDiv);
     this._layoutTextParams.div = textDiv;
     layout(this._layoutTextParams);
-    se (textDivProperties.hasText) {
+    if (textDivProperties.hasText) {
       this._container.append(textDiv);
     }
-    se (textDivProperties.hasEOL) {
+    if (textDivProperties.hasEOL) {
       const br = document.createElement("br");
-      br.setAttribute("ruolo", "presentazione");
-      questo._contenitore.append(br);
+      br.setAttribute("role", "presentation");
+      this._container.append(br);
     }
   }
   _render() {
     const capability = new _util.PromiseCapability();
-    lascia styleCache = Object.create(null);
-    se (this._isReadableStream) {
-      const pompa = () => {
+    let styleCache = Object.create(null);
+    if (this._isReadableStream) {
+      const pump = () => {
         this._reader.read().then(({
-          valore,
-          Fatto
+          value,
+          done
         }) => {
-          se (fatto) {
-            capacità.risolvi();
-            ritorno;
+          if (done) {
+            capability.resolve();
+            return;
           }
-          Oggetto.assegna(styleCache, valore.stili);
+          Object.assign(styleCache, value.styles);
           this._processItems(value.items, styleCache);
-          pompa();
-        }, capacità.rifiuto);
+          pump();
+        }, capability.reject);
       };
       this._reader = this._textContentSource.getReader();
-      pompa();
-    } altrimenti se (this._textContentSource) {
-      costante {
-        elementi,
-        stili
+      pump();
+    } else if (this._textContentSource) {
+      const {
+        items,
+        styles
       } = this._textContentSource;
-      this._processItems(elementi, stili);
-      capacità.risolvi();
-    } altro {
-      throw new Error('Nessun parametro "textContentSource" specificato.');
+      this._processItems(items, styles);
+      capability.resolve();
+    } else {
+      throw new Error('No "textContentSource" parameter specified.');
     }
-    capacità.promessa.quindi(() => {
+    capability.promise.then(() => {
       styleCache = null;
-      render(questo);
+      render(this);
     }, this._capability.reject);
   }
 }
-esportazioni.TextLayerRenderTask = TextLayerRenderTask;
-funzione renderTextLayer(parametri) {
-  se (!params.textContentSource && (params.textContent || params.textContentStream)) {
-    (0, _display_utils.deprecated)("I parametri `textContent`/`textContentStream` di TextLayerRender " + "verranno rimossi in futuro, utilizzare invece `textContentSource`.");
+exports.TextLayerRenderTask = TextLayerRenderTask;
+function renderTextLayer(params) {
+  if (!params.textContentSource && (params.textContent || params.textContentStream)) {
+    (0, _display_utils.deprecated)("The TextLayerRender `textContent`/`textContentStream` parameters " + "will be removed in the future, please use `textContentSource` instead.");
     params.textContentSource = params.textContent || params.textContentStream;
   }
-  costante {
-    contenitore,
-    finestra
-  } = parametri;
-  const style = getComputedStyle(contenitore);
-  const visibility = style.getPropertyValue("visibilità");
+  const {
+    container,
+    viewport
+  } = params;
+  const style = getComputedStyle(container);
+  const visibility = style.getPropertyValue("visibility");
   const scaleFactor = parseFloat(style.getPropertyValue("--scale-factor"));
-  se (visibilità === "visibile" && (!scaleFactor || Math.abs(scaleFactor - viewport.scale) > 1e-5)) {
-    console.error("La variabile CSS `--scale-factor` deve essere impostata, " + "sullo stesso valore di `viewport.scale`, " + "sull'elemento `container` stesso o più in alto nel DOM.");
+  if (visibility === "visible" && (!scaleFactor || Math.abs(scaleFactor - viewport.scale) > 1e-5)) {
+    console.error("The `--scale-factor` CSS-variable must be set, " + "to the same value as `viewport.scale`, " + "either on the `container`-element itself or higher up in the DOM.");
   }
   const task = new TextLayerRenderTask(params);
-  compito._render();
-  compito di ritorno;
+  task._render();
+  return task;
 }
-funzione updateTextLayer({
-  contenitore,
-  finestra,
+function updateTextLayer({
+  container,
+  viewport,
   textDivs,
   textDivProperties,
-  èOffscreenCanvasSupported,
+  isOffscreenCanvasSupported,
   mustRotate = true,
   mustRescale = true
 }) {
-  se (deveRuotare) {
-    (0, _display_utils.setLayerDimensions)(contenitore, {
-      rotazione: viewport.rotation
+  if (mustRotate) {
+    (0, _display_utils.setLayerDimensions)(container, {
+      rotation: viewport.rotation
     });
   }
-  se (deve essere ridimensionato) {
+  if (mustRescale) {
     const ctx = getCtx(0, isOffscreenCanvasSupported);
     const scale = viewport.scale * (globalThis.devicePixelRatio || 1);
-    parametri costanti = {
+    const params = {
       prevFontSize: null,
       prevFontFamily: null,
-      div: nullo,
-      scala,
-      proprietà: nullo,
+      div: null,
+      scale,
+      properties: null,
       ctx
     };
-    per (const div di textDivs) {
+    for (const div of textDivs) {
       params.properties = textDivProperties.get(div);
       params.div = div;
-      layout(parametri);
+      layout(params);
     }
   }
 }
@@ -12877,265 +12877,265 @@ funzione updateTextLayer({
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.AnnotationEditorLayer = void 0;
+exports.AnnotationEditorLayer = void 0;
 var _util = __w_pdfjs_require__(1);
 var _editor = __w_pdfjs_require__(4);
 var _freetext = __w_pdfjs_require__(28);
 var _ink = __w_pdfjs_require__(33);
 var _display_utils = __w_pdfjs_require__(6);
 var _stamp = __w_pdfjs_require__(34);
-classe AnnotationEditorLayer {
-  #gestoreaccessibilità;
+class AnnotationEditorLayer {
+  #accessibilityManager;
   #allowClick = false;
   #annotationLayer = null;
   #boundPointerup = this.pointerup.bind(this);
   #boundPointerdown = this.pointerdown.bind(this);
-  #editor = nuova mappa();
+  #editors = new Map();
   #hadPointerDown = false;
   #isCleaningUp = false;
   #isDisabling = false;
   #uiManager;
   static _initialized = false;
-  costruttore({
+  constructor({
     uiManager,
-    indice della pagina,
-    divisione,
-    responsabile dell'accessibilità,
+    pageIndex,
+    div,
+    accessibilityManager,
     annotationLayer,
-    finestra,
+    viewport,
     l10n
   }) {
     const editorTypes = [_freetext.FreeTextEditor, _ink.InkEditor, _stamp.StampEditor];
-    se (!AnnotationEditorLayer._inizializzato) {
+    if (!AnnotationEditorLayer._initialized) {
       AnnotationEditorLayer._initialized = true;
-      per (const editorType di editorTypes) {
+      for (const editorType of editorTypes) {
         editorType.initialize(l10n);
       }
     }
     uiManager.registerEditorTypes(editorTypes);
-    questo.#uiManager = uiManager;
+    this.#uiManager = uiManager;
     this.pageIndex = pageIndex;
-    questo.div = div;
-    questo.#accessibilityManager = accessibilityManager;
-    questo.#annotationLayer = annotationLayer;
-    this.viewport = finestra di visualizzazione;
-    questo.#uiManager.addLayer(questo);
+    this.div = div;
+    this.#accessibilityManager = accessibilityManager;
+    this.#annotationLayer = annotationLayer;
+    this.viewport = viewport;
+    this.#uiManager.addLayer(this);
   }
-  ottieni isEmpty() {
-    restituisci questo.#editors.size === 0;
+  get isEmpty() {
+    return this.#editors.size === 0;
   }
-  updateToolbar(modalità) {
-    questo.#uiManager.updateToolbar(modalità);
+  updateToolbar(mode) {
+    this.#uiManager.updateToolbar(mode);
   }
-  updateMode(modalità = questo.#uiManager.getMode()) {
-    questo.#pulizia();
-    se (modalità === _util.AnnotationEditorType.INK) {
+  updateMode(mode = this.#uiManager.getMode()) {
+    this.#cleanup();
+    if (mode === _util.AnnotationEditorType.INK) {
       this.addInkEditorIfNeeded(false);
-      questo.disabilitaClick();
-    } altro {
-      questo.abilitaClicca();
+      this.disableClick();
+    } else {
+      this.enableClick();
     }
-    se (modalità !== _util.AnnotationEditorType.NONE) {
+    if (mode !== _util.AnnotationEditorType.NONE) {
       this.div.classList.toggle("freeTextEditing", mode === _util.AnnotationEditorType.FREETEXT);
       this.div.classList.toggle("inkEditing", mode === _util.AnnotationEditorType.INK);
       this.div.classList.toggle("stampEditing", mode === _util.AnnotationEditorType.STAMP);
       this.div.hidden = false;
     }
   }
-  addInkEditorIfNeeded(isCommission) {
-    se (!isCommitting && this.#uiManager.getMode() !== _util.AnnotationEditorType.INK) {
-      ritorno;
+  addInkEditorIfNeeded(isCommitting) {
+    if (!isCommitting && this.#uiManager.getMode() !== _util.AnnotationEditorType.INK) {
+      return;
     }
-    se (!isCommitting) {
-      per (const editor di questo.#editors.values()) {
-        se (editor.isEmpty()) {
+    if (!isCommitting) {
+      for (const editor of this.#editors.values()) {
+        if (editor.isEmpty()) {
           editor.setInBackground();
-          ritorno;
+          return;
         }
       }
     }
     const editor = this.#createAndAddNewEditor({
       offsetX: 0,
       offsetY: 0
-    }, falso);
+    }, false);
     editor.setInBackground();
   }
   setEditingState(isEditing) {
-    questo.#uiManager.setEditingState(isEditing);
+    this.#uiManager.setEditingState(isEditing);
   }
-  aggiungiComandi(parametri) {
-    questo.#uiManager.addCommands(parametri);
+  addCommands(params) {
+    this.#uiManager.addCommands(params);
   }
-  abilitare() {
+  enable() {
     this.div.style.pointerEvents = "auto";
     const annotationElementIds = new Set();
-    per (const editor di questo.#editors.values()) {
+    for (const editor of this.#editors.values()) {
       editor.enableEditing();
-      se (editor.annotationElementId) {
+      if (editor.annotationElementId) {
         annotationElementIds.add(editor.annotationElementId);
       }
     }
-    se (!questo.#annotationLayer) {
-      ritorno;
+    if (!this.#annotationLayer) {
+      return;
     }
     const editables = this.#annotationLayer.getEditableAnnotations();
-    per (const modificabile di modificabili) {
-      modificabile.nascondi();
-      se (this.#uiManager.isDeletedAnnotationElement(editable.data.id)) {
-        continuare;
+    for (const editable of editables) {
+      editable.hide();
+      if (this.#uiManager.isDeletedAnnotationElement(editable.data.id)) {
+        continue;
       }
-      se (annotationElementIds.has(editable.data.id)) {
-        continuare;
+      if (annotationElementIds.has(editable.data.id)) {
+        continue;
       }
       const editor = this.deserialize(editable);
-      se (!editor) {
-        continuare;
+      if (!editor) {
+        continue;
       }
       this.addOrRebuild(editor);
       editor.enableEditing();
     }
   }
-  disabilita() {
-    questo.#isDisabling = true;
-    this.div.style.pointerEvents = "nessuno";
+  disable() {
+    this.#isDisabling = true;
+    this.div.style.pointerEvents = "none";
     const hiddenAnnotationIds = new Set();
-    per (const editor di questo.#editors.values()) {
+    for (const editor of this.#editors.values()) {
       editor.disableEditing();
-      se (!editor.annotationElementId || editor.serialize() !== null) {
+      if (!editor.annotationElementId || editor.serialize() !== null) {
         hiddenAnnotationIds.add(editor.annotationElementId);
-        continuare;
+        continue;
       }
       this.getEditableAnnotation(editor.annotationElementId)?.show();
       editor.remove();
     }
-    se (questo.#annotationLayer) {
+    if (this.#annotationLayer) {
       const editables = this.#annotationLayer.getEditableAnnotations();
-      per (const modificabile di modificabili) {
-        costante {
+      for (const editable of editables) {
+        const {
           id
-        } = dati modificabili;
-        se (hiddenAnnotationIds.has(id) || this.#uiManager.isDeletedAnnotationElement(id)) {
-          continuare;
+        } = editable.data;
+        if (hiddenAnnotationIds.has(id) || this.#uiManager.isDeletedAnnotationElement(id)) {
+          continue;
         }
-        modificabile.mostra();
+        editable.show();
       }
     }
-    questo.#pulizia();
-    se (questo.èVuoto) {
+    this.#cleanup();
+    if (this.isEmpty) {
       this.div.hidden = true;
     }
-    questo.#isDisabling = false;
+    this.#isDisabling = false;
   }
   getEditableAnnotation(id) {
-    restituisci questo.#annotationLayer?.getEditableAnnotation(id) || null;
+    return this.#annotationLayer?.getEditableAnnotation(id) || null;
   }
   setActiveEditor(editor) {
     const currentActive = this.#uiManager.getActive();
-    se (currentActive === editor) {
-      ritorno;
+    if (currentActive === editor) {
+      return;
     }
-    questo.#uiManager.setActiveEditor(editor);
+    this.#uiManager.setActiveEditor(editor);
   }
-  abilitaClick() {
-    this.div.addEventListener("puntatoregiù", this.#boundPointerdown);
-    this.div.addEventListener("puntatoresu", this.#boundPointerup);
+  enableClick() {
+    this.div.addEventListener("pointerdown", this.#boundPointerdown);
+    this.div.addEventListener("pointerup", this.#boundPointerup);
   }
-  disabilitaClick() {
-    this.div.removeEventListener("puntatoregiù", this.#boundPointerdown);
-    this.div.removeEventListener("puntatoresu", this.#boundPointerup);
+  disableClick() {
+    this.div.removeEventListener("pointerdown", this.#boundPointerdown);
+    this.div.removeEventListener("pointerup", this.#boundPointerup);
   }
-  allega(editor) {
-    questo.#editors.set(editor.id, editor);
-    costante {
+  attach(editor) {
+    this.#editors.set(editor.id, editor);
+    const {
       annotationElementId
-    } = editore;
-    se (annotationElementId e questo.#uiManager.isDeletedAnnotationElement(annotationElementId)) {
-      questo.#uiManager.removeDeletedAnnotationElement(editor);
+    } = editor;
+    if (annotationElementId && this.#uiManager.isDeletedAnnotationElement(annotationElementId)) {
+      this.#uiManager.removeDeletedAnnotationElement(editor);
     }
   }
-  stacca(editor) {
-    questo.#editors.delete(editor.id);
-    questo.#accessibilityManager?.removePointerInTextLayer(editor.contentDiv);
-    se (!this.#isDisabling && editor.annotationElementId) {
-      questo.#uiManager.addDeletedAnnotationElement(editor);
+  detach(editor) {
+    this.#editors.delete(editor.id);
+    this.#accessibilityManager?.removePointerInTextLayer(editor.contentDiv);
+    if (!this.#isDisabling && editor.annotationElementId) {
+      this.#uiManager.addDeletedAnnotationElement(editor);
     }
   }
-  rimuovi(editor) {
-    questo.stacca(editor);
-    questo.#uiManager.removeEditor(editor);
-    se (editor.div.contains(document.activeElement)) {
-      impostaTimeout(() => {
-        questo.#uiManager.focusMainContainer();
+  remove(editor) {
+    this.detach(editor);
+    this.#uiManager.removeEditor(editor);
+    if (editor.div.contains(document.activeElement)) {
+      setTimeout(() => {
+        this.#uiManager.focusMainContainer();
       }, 0);
     }
     editor.div.remove();
     editor.isAttachedToDOM = false;
-    se (!this.#isCleaningUp) {
+    if (!this.#isCleaningUp) {
       this.addInkEditorIfNeeded(false);
     }
   }
   changeParent(editor) {
-    se (editor.parent === questo) {
-      ritorno;
+    if (editor.parent === this) {
+      return;
     }
-    se (editor.annotationElementId) {
-      questo.#uiManager.addDeletedAnnotationElement(editor.annotationElementId);
+    if (editor.annotationElementId) {
+      this.#uiManager.addDeletedAnnotationElement(editor.annotationElementId);
       _editor.AnnotationEditor.deleteAnnotationElement(editor);
       editor.annotationElementId = null;
     }
-    questo.attach(editor);
+    this.attach(editor);
     editor.parent?.detach(editor);
-    editor.setParent(questo);
-    se (editor.div && editor.isAttachedToDOM) {
+    editor.setParent(this);
+    if (editor.div && editor.isAttachedToDOM) {
       editor.div.remove();
       this.div.append(editor.div);
     }
   }
-  aggiungi(editor) {
-    questo.cambiaParente(editor);
+  add(editor) {
+    this.changeParent(editor);
     this.#uiManager.addEditor(editor);
-    questo.attach(editor);
-    se (!editor.isAttachedToDOM) {
+    this.attach(editor);
+    if (!editor.isAttachedToDOM) {
       const div = editor.render();
-      questo.div.append(div);
+      this.div.append(div);
       editor.isAttachedToDOM = true;
     }
     editor.fixAndSetPosition();
     editor.onceAdded();
-    questo.#uiManager.addToAnnotationStorage(editor);
+    this.#uiManager.addToAnnotationStorage(editor);
   }
-  spostaEditorInDOM(editor) {
-    se (!editor.isAttachedToDOM) {
-      ritorno;
+  moveEditorInDOM(editor) {
+    if (!editor.isAttachedToDOM) {
+      return;
     }
-    costante {
-      elemento attivo
-    } = documento;
-    se (editor.div.contains(activeElement)) {
+    const {
+      activeElement
+    } = document;
+    if (editor.div.contains(activeElement)) {
       editor._focusEventsAllowed = false;
-      impostaTimeout(() => {
-        se (!editor.div.contains(document.activeElement)) {
+      setTimeout(() => {
+        if (!editor.div.contains(document.activeElement)) {
           editor.div.addEventListener("focusin", () => {
             editor._focusEventsAllowed = true;
           }, {
-            una volta: vero
+            once: true
           });
-          elementoattivo.focus();
-        } altro {
+          activeElement.focus();
+        } else {
           editor._focusEventsAllowed = true;
         }
       }, 0);
     }
     editor._structTreeParentId = this.#accessibilityManager?.moveElementInDOM(this.div, editor.div, editor.contentDiv, true);
   }
-  aggiungi o ricostruisci (editor) {
-    se (editor.needsToBeRebuilt()) {
+  addOrRebuild(editor) {
+    if (editor.needsToBeRebuilt()) {
       editor.rebuild();
-    } altro {
-      questo.aggiungi(editor);
+    } else {
+      this.add(editor);
     }
   }
   addUndoableEditor(editor) {
@@ -13143,210 +13143,210 @@ classe AnnotationEditorLayer {
     const undo = () => {
       editor.remove();
     };
-    questo.aggiungiComandi({
-      comando,
-      disfare,
-      mustExec: falso
+    this.addCommands({
+      cmd,
+      undo,
+      mustExec: false
     });
   }
   getNextId() {
-    restituisci questo.#uiManager.getId();
+    return this.#uiManager.getId();
   }
-  #createNewEditor(parametri) {
-    cambia (questo.#uiManager.getMode()) {
-      caso _util.AnnotationEditorType.FREETEXT:
-        restituisci nuovo _freetext.FreeTextEditor(params);
-      caso _util.AnnotationEditorType.INK:
-        restituisci nuovo _ink.InkEditor(parametri);
-      caso _util.AnnotationEditorType.STAMP:
-        restituisci nuovo _stamp.StampEditor(params);
+  #createNewEditor(params) {
+    switch (this.#uiManager.getMode()) {
+      case _util.AnnotationEditorType.FREETEXT:
+        return new _freetext.FreeTextEditor(params);
+      case _util.AnnotationEditorType.INK:
+        return new _ink.InkEditor(params);
+      case _util.AnnotationEditorType.STAMP:
+        return new _stamp.StampEditor(params);
     }
-    restituisci null;
+    return null;
   }
-  pasteEditor(modalità, parametri) {
-    questo.#uiManager.updateToolbar(modalità);
-    questo.#uiManager.updateMode(modalità);
-    costante {
+  pasteEditor(mode, params) {
+    this.#uiManager.updateToolbar(mode);
+    this.#uiManager.updateMode(mode);
+    const {
       offsetX,
       offsetY
-    } = questo.#getCenterPoint();
+    } = this.#getCenterPoint();
     const id = this.getNextId();
     const editor = this.#createNewEditor({
-      genitore: questo,
+      parent: this,
       id,
       x: offsetX,
       y: offsetY,
-      uiManager: questo.#uiManager,
-      è centrato: vero,
-      ...parametri
+      uiManager: this.#uiManager,
+      isCentered: true,
+      ...params
     });
-    se (editor) {
-      questo.aggiungi(editor);
+    if (editor) {
+      this.add(editor);
     }
   }
-  deserializzare(dati) {
+  deserialize(data) {
     switch (data.annotationType ?? data.annotationEditorType) {
-      caso _util.AnnotationEditorType.FREETEXT:
-        restituisci _freetext.FreeTextEditor.deserialize(dati, questo, questo.#uiManager);
-      caso _util.AnnotationEditorType.INK:
-        restituisci _ink.InkEditor.deserialize(dati, questo, questo.#uiManager);
-      caso _util.AnnotationEditorType.STAMP:
-        restituisci _stamp.StampEditor.deserialize(dati, questo, questo.#uiManager);
+      case _util.AnnotationEditorType.FREETEXT:
+        return _freetext.FreeTextEditor.deserialize(data, this, this.#uiManager);
+      case _util.AnnotationEditorType.INK:
+        return _ink.InkEditor.deserialize(data, this, this.#uiManager);
+      case _util.AnnotationEditorType.STAMP:
+        return _stamp.StampEditor.deserialize(data, this, this.#uiManager);
     }
-    restituisci null;
+    return null;
   }
-  #createAndAddNewEditor(evento, è centrato) {
+  #createAndAddNewEditor(event, isCentered) {
     const id = this.getNextId();
     const editor = this.#createNewEditor({
-      genitore: questo,
+      parent: this,
       id,
-      x: evento.offsetX,
-      y: evento.offsetY,
-      uiManager: questo.#uiManager,
-      è centrato
+      x: event.offsetX,
+      y: event.offsetY,
+      uiManager: this.#uiManager,
+      isCentered
     });
-    se (editor) {
-      questo.aggiungi(editor);
+    if (editor) {
+      this.add(editor);
     }
-    editor di ritorno;
+    return editor;
   }
   #getCenterPoint() {
-    costante {
-      X,
-      e,
-      larghezza,
-      altezza
+    const {
+      x,
+      y,
+      width,
+      height
     } = this.div.getBoundingClientRect();
     const tlX = Math.max(0, x);
     const tlY = Math.max(0, y);
     const brX = Math.min(window.innerWidth, x + width);
-    const brY = Math.min(window.innerHeight, y + altezza);
+    const brY = Math.min(window.innerHeight, y + height);
     const centerX = (tlX + brX) / 2 - x;
     const centerY = (tlY + brY) / 2 - y;
     const [offsetX, offsetY] = this.viewport.rotation % 180 === 0 ? [centerX, centerY] : [centerY, centerX];
-    ritorno {
+    return {
       offsetX,
       offsetY
     };
   }
-  aggiungiNuovoEditor() {
-    questo.#createAndAddNewEditor(questo.#getCenterPoint(), true);
+  addNewEditor() {
+    this.#createAndAddNewEditor(this.#getCenterPoint(), true);
   }
   setSelected(editor) {
-    questo.#uiManager.setSelected(editor);
+    this.#uiManager.setSelected(editor);
   }
   toggleSelected(editor) {
-    questo.#uiManager.toggleSelected(editor);
+    this.#uiManager.toggleSelected(editor);
   }
-  èSelezionato(editor) {
-    restituisci questo.#uiManager.isSelected(editor);
+  isSelected(editor) {
+    return this.#uiManager.isSelected(editor);
   }
-  deseleziona(editor) {
-    questo.#uiManager.unselect(editor);
+  unselect(editor) {
+    this.#uiManager.unselect(editor);
   }
-  puntatoresu(evento) {
-    costante {
-      èMac
+  pointerup(event) {
+    const {
+      isMac
     } = _util.FeatureTest.platform;
-    se (evento.pulsante !== 0 || evento.ctrlKey && isMac) {
-      ritorno;
+    if (event.button !== 0 || event.ctrlKey && isMac) {
+      return;
     }
-    se (evento.target !== questo.div) {
-      ritorno;
+    if (event.target !== this.div) {
+      return;
     }
-    se (!this.#hadPointerDown) {
-      ritorno;
+    if (!this.#hadPointerDown) {
+      return;
     }
-    questo.#hadPointerDown = false;
-    se (!questo.#consentiClic) {
-      questo.#allowClick = true;
-      ritorno;
+    this.#hadPointerDown = false;
+    if (!this.#allowClick) {
+      this.#allowClick = true;
+      return;
     }
-    se (questo.#uiManager.getMode() === _util.AnnotationEditorType.STAMP) {
-      questo.#uiManager.unselectAll();
-      ritorno;
+    if (this.#uiManager.getMode() === _util.AnnotationEditorType.STAMP) {
+      this.#uiManager.unselectAll();
+      return;
     }
-    questo.#createAndAddNewEditor(evento, falso);
+    this.#createAndAddNewEditor(event, false);
   }
-  puntatoregiù(evento) {
-    se (questo.#hadPointerDown) {
-      questo.#hadPointerDown = false;
-      ritorno;
+  pointerdown(event) {
+    if (this.#hadPointerDown) {
+      this.#hadPointerDown = false;
+      return;
     }
-    costante {
-      èMac
+    const {
+      isMac
     } = _util.FeatureTest.platform;
-    se (evento.pulsante !== 0 || evento.ctrlKey && isMac) {
-      ritorno;
+    if (event.button !== 0 || event.ctrlKey && isMac) {
+      return;
     }
-    se (evento.target !== questo.div) {
-      ritorno;
+    if (event.target !== this.div) {
+      return;
     }
-    questo.#hadPointerDown = true;
+    this.#hadPointerDown = true;
     const editor = this.#uiManager.getActive();
-    questo.#allowClick = !editor || editor.isEmpty();
+    this.#allowClick = !editor || editor.isEmpty();
   }
   findNewParent(editor, x, y) {
     const layer = this.#uiManager.findParent(x, y);
-    se (strato === null || strato === questo) {
-      restituisci falso;
+    if (layer === null || layer === this) {
+      return false;
     }
     layer.changeParent(editor);
-    restituisci vero;
+    return true;
   }
-  distruggere() {
-    se (questo.#uiManager.getActive()?.parent === questo) {
-      questo.#uiManager.commitOrRemove();
-      questo.#uiManager.setActiveEditor(null);
+  destroy() {
+    if (this.#uiManager.getActive()?.parent === this) {
+      this.#uiManager.commitOrRemove();
+      this.#uiManager.setActiveEditor(null);
     }
-    per (const editor di questo.#editors.values()) {
-      questo.#accessibilityManager?.removePointerInTextLayer(editor.contentDiv);
+    for (const editor of this.#editors.values()) {
+      this.#accessibilityManager?.removePointerInTextLayer(editor.contentDiv);
       editor.setParent(null);
       editor.isAttachedToDOM = false;
       editor.div.remove();
     }
-    questo.div = null;
-    questo.#editori.chiaro();
-    questo.#uiManager.removeLayer(questo);
+    this.div = null;
+    this.#editors.clear();
+    this.#uiManager.removeLayer(this);
   }
-  #ripulire() {
-    questo.#isCleaningUp = true;
-    per (const editor di questo.#editors.values()) {
-      se (editor.isEmpty()) {
+  #cleanup() {
+    this.#isCleaningUp = true;
+    for (const editor of this.#editors.values()) {
+      if (editor.isEmpty()) {
         editor.remove();
       }
     }
-    questo.#isCleaningUp = false;
+    this.#isCleaningUp = false;
   }
-  rendere({
-    finestra
+  render({
+    viewport
   }) {
-    this.viewport = finestra di visualizzazione;
+    this.viewport = viewport;
     (0, _display_utils.setLayerDimensions)(this.div, viewport);
-    per (const editor di this.#uiManager.getEditors(this.pageIndex)) {
-      questo.aggiungi(editor);
+    for (const editor of this.#uiManager.getEditors(this.pageIndex)) {
+      this.add(editor);
     }
-    questo.updateMode();
+    this.updateMode();
   }
-  aggiornamento({
-    finestra
+  update({
+    viewport
   }) {
-    questo.#uiManager.commitOrRemove();
-    this.viewport = finestra di visualizzazione;
+    this.#uiManager.commitOrRemove();
+    this.viewport = viewport;
     (0, _display_utils.setLayerDimensions)(this.div, {
-      rotazione: viewport.rotation
+      rotation: viewport.rotation
     });
-    questo.updateMode();
+    this.updateMode();
   }
-  ottieni pageDimensions() {
-    costante {
-      Larghezza pagina,
-      altezza della pagina
+  get pageDimensions() {
+    const {
+      pageWidth,
+      pageHeight
     } = this.viewport.rawDims;
-    restituisci [larghezzapagina, altezzapagina];
+    return [pageWidth, pageHeight];
   }
 }
-esportazioni.AnnotationEditorLayer = AnnotationEditorLayer;
+exports.AnnotationEditorLayer = AnnotationEditorLayer;
 
 /***/ }),
 /* 28 */
@@ -13354,519 +13354,519 @@ esportazioni.AnnotationEditorLayer = AnnotationEditorLayer;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.FreeTextEditor = void 0;
+exports.FreeTextEditor = void 0;
 var _util = __w_pdfjs_require__(1);
 var _tools = __w_pdfjs_require__(5);
 var _editor = __w_pdfjs_require__(4);
 var _annotation_layer = __w_pdfjs_require__(29);
-classe FreeTextEditor estende _editor.AnnotationEditor {
+class FreeTextEditor extends _editor.AnnotationEditor {
   #boundEditorDivBlur = this.editorDivBlur.bind(this);
   #boundEditorDivFocus = this.editorDivFocus.bind(this);
   #boundEditorDivInput = this.editorDivInput.bind(this);
   #boundEditorDivKeydown = this.editorDivKeydown.bind(this);
-  #colore;
-  #contenuto = "";
+  #color;
+  #content = "";
   #editorDivId = `${this.id}-editor`;
-  #dimensionecarattere;
+  #fontSize;
   #initialData = null;
-  statico _freeTextDefaultContent = "";
+  static _freeTextDefaultContent = "";
   static _internalPadding = 0;
-  statico _defaultColor = null;
-  statico _defaultFontSize = 10;
-  statico ottieni _keyboardManager() {
+  static _defaultColor = null;
+  static _defaultFontSize = 10;
+  static get _keyboardManager() {
     const proto = FreeTextEditor.prototype;
     const arrowChecker = self => self.isEmpty();
     const small = _tools.AnnotationEditorUIManager.TRANSLATE_SMALL;
     const big = _tools.AnnotationEditorUIManager.TRANSLATE_BIG;
     return (0, _util.shadow)(this, "_keyboardManager", new _tools.KeyboardManager([[["ctrl+s", "mac+meta+s", "ctrl+p", "mac+meta+p"], proto.commitOrRemove, {
-      bolle: vero
-    }], [["ctrl+Invio", "mac+meta+Invio", "Esc", "mac+Esc"], proto.commitOrRemove], [["FrecciaSinistra", "mac+FrecciaSinistra"], proto._translateEmpty, {
-      argomenti: [-piccolo, 0],
-      verificatore: arrowChecker
-    }], [["ctrl+freccia sinistra", "mac+maiusc+freccia sinistra"], proto._translateEmpty, {
-      argomenti: [-grande, 0],
-      verificatore: arrowChecker
-    }], [["Freccia destra", "mac+Freccia destra"], proto._translateEmpty, {
-      argomenti: [piccolo, 0],
-      verificatore: arrowChecker
-    }], [["ctrl+freccia destra", "mac+shift+freccia destra"], proto._translateEmpty, {
-      argomenti: [grande, 0],
-      verificatore: arrowChecker
-    }], [["Freccia su", "mac+Freccia su"], proto._translateEmpty, {
-      argomenti: [0, -piccolo],
-      verificatore: arrowChecker
-    }], [["ctrl+Freccia su", "mac+shift+Freccia su"], proto._translateEmpty, {
-      argomenti: [0, -grande],
-      verificatore: arrowChecker
-    }], [["FrecciaGiù", "mac+FrecciaGiù"], proto._translateEmpty, {
-      argomenti: [0, piccolo],
-      verificatore: arrowChecker
-    }], [["ctrl+freccia giù", "mac+shift+freccia giù"], proto._translateEmpty, {
-      argomenti: [0, grande],
-      verificatore: arrowChecker
+      bubbles: true
+    }], [["ctrl+Enter", "mac+meta+Enter", "Escape", "mac+Escape"], proto.commitOrRemove], [["ArrowLeft", "mac+ArrowLeft"], proto._translateEmpty, {
+      args: [-small, 0],
+      checker: arrowChecker
+    }], [["ctrl+ArrowLeft", "mac+shift+ArrowLeft"], proto._translateEmpty, {
+      args: [-big, 0],
+      checker: arrowChecker
+    }], [["ArrowRight", "mac+ArrowRight"], proto._translateEmpty, {
+      args: [small, 0],
+      checker: arrowChecker
+    }], [["ctrl+ArrowRight", "mac+shift+ArrowRight"], proto._translateEmpty, {
+      args: [big, 0],
+      checker: arrowChecker
+    }], [["ArrowUp", "mac+ArrowUp"], proto._translateEmpty, {
+      args: [0, -small],
+      checker: arrowChecker
+    }], [["ctrl+ArrowUp", "mac+shift+ArrowUp"], proto._translateEmpty, {
+      args: [0, -big],
+      checker: arrowChecker
+    }], [["ArrowDown", "mac+ArrowDown"], proto._translateEmpty, {
+      args: [0, small],
+      checker: arrowChecker
+    }], [["ctrl+ArrowDown", "mac+shift+ArrowDown"], proto._translateEmpty, {
+      args: [0, big],
+      checker: arrowChecker
     }]]));
   }
-  static _type = "testo libero";
-  costruttore(parametri) {
+  static _type = "freetext";
+  constructor(params) {
     super({
-      ...parametri,
-      nome: "freeTextEditor"
+      ...params,
+      name: "freeTextEditor"
     });
-    questo.#colore = params.color || FreeTextEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor;
-    questo.#fontSize = params.fontSize || FreeTextEditor._defaultFontSize;
+    this.#color = params.color || FreeTextEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor;
+    this.#fontSize = params.fontSize || FreeTextEditor._defaultFontSize;
   }
-  inizializzazione statica (l10n) {
+  static initialize(l10n) {
     _editor.AnnotationEditor.initialize(l10n, {
-      stringhe: ["free_text2_default_content", "editor_free_text2_aria_label"]
+      strings: ["free_text2_default_content", "editor_free_text2_aria_label"]
     });
-    stile const = getComputedStyle(document.documentElement);
+    const style = getComputedStyle(document.documentElement);
     this._internalPadding = parseFloat(style.getPropertyValue("--freetext-padding"));
   }
-  static updateDefaultParams(tipo, valore) {
-    interruttore (tipo) {
-      caso _util.AnnotationEditorParamsType.FREETEXT_SIZE:
-        FreeTextEditor._defaultFontSize = valore;
-        rottura;
-      caso _util.AnnotationEditorParamsType.FREETEXT_COLOR:
-        FreeTextEditor._defaultColor = valore;
-        rottura;
+  static updateDefaultParams(type, value) {
+    switch (type) {
+      case _util.AnnotationEditorParamsType.FREETEXT_SIZE:
+        FreeTextEditor._defaultFontSize = value;
+        break;
+      case _util.AnnotationEditorParamsType.FREETEXT_COLOR:
+        FreeTextEditor._defaultColor = value;
+        break;
     }
   }
-  updateParams(tipo, valore) {
-    interruttore (tipo) {
-      caso _util.AnnotationEditorParamsType.FREETEXT_SIZE:
-        questo.#updateFontSize(valore);
-        rottura;
-      caso _util.AnnotationEditorParamsType.FREETEXT_COLOR:
-        questo.#updateColor(valore);
-        rottura;
+  updateParams(type, value) {
+    switch (type) {
+      case _util.AnnotationEditorParamsType.FREETEXT_SIZE:
+        this.#updateFontSize(value);
+        break;
+      case _util.AnnotationEditorParamsType.FREETEXT_COLOR:
+        this.#updateColor(value);
+        break;
     }
   }
-  statico ottieni defaultPropertiesToUpdate() {
-    restituisci [[_util.AnnotationEditorParamsType.FREETEXT_SIZE, FreeTextEditor._defaultFontSize], [_util.AnnotationEditorParamsType.FREETEXT_COLOR, FreeTextEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor]];
+  static get defaultPropertiesToUpdate() {
+    return [[_util.AnnotationEditorParamsType.FREETEXT_SIZE, FreeTextEditor._defaultFontSize], [_util.AnnotationEditorParamsType.FREETEXT_COLOR, FreeTextEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor]];
   }
-  ottieni propertiesToUpdate() {
-    restituisci [[_util.AnnotationEditorParamsType.FREETEXT_SIZE, questo.#fontSize], [_util.AnnotationEditorParamsType.FREETEXT_COLOR, questo.#color]];
+  get propertiesToUpdate() {
+    return [[_util.AnnotationEditorParamsType.FREETEXT_SIZE, this.#fontSize], [_util.AnnotationEditorParamsType.FREETEXT_COLOR, this.#color]];
   }
-  #updateFontSize(dimensionecarattere) {
-    const setFontsize = dimensione => {
+  #updateFontSize(fontSize) {
+    const setFontsize = size => {
       this.editorDiv.style.fontSize = `calc(${size}px * var(--scale-factor))`;
       this.translate(0, -(size - this.#fontSize) * this.parentScale);
-      questo.#fontSize = dimensione;
-      questo.#setEditorDimensions();
+      this.#fontSize = size;
+      this.#setEditorDimensions();
     };
     const savedFontsize = this.#fontSize;
-    questo.aggiungiComandi({
-      comando: () => {
-        impostaDimensioneFonte(DimensioneFonte);
+    this.addCommands({
+      cmd: () => {
+        setFontsize(fontSize);
       },
-      annulla: () => {
+      undo: () => {
         setFontsize(savedFontsize);
       },
-      mustExec: vero,
-      tipo: _util.AnnotationEditorParamsType.FREETEXT_SIZE,
-      sovrascriviSeSameType: vero,
-      keepUndo: vero
+      mustExec: true,
+      type: _util.AnnotationEditorParamsType.FREETEXT_SIZE,
+      overwriteIfSameType: true,
+      keepUndo: true
     });
   }
-  #updateColor(colore) {
+  #updateColor(color) {
     const savedColor = this.#color;
-    questo.aggiungiComandi({
-      comando: () => {
-        questo.#colore = questo.editorDiv.style.colore = colore;
+    this.addCommands({
+      cmd: () => {
+        this.#color = this.editorDiv.style.color = color;
       },
-      annulla: () => {
-        questo.#colore = questo.editorDiv.style.colore = salvatoColore;
+      undo: () => {
+        this.#color = this.editorDiv.style.color = savedColor;
       },
-      mustExec: vero,
-      tipo: _util.AnnotationEditorParamsType.FREETEXT_COLOR,
-      sovrascriviSeSameType: vero,
-      keepUndo: vero
+      mustExec: true,
+      type: _util.AnnotationEditorParamsType.FREETEXT_COLOR,
+      overwriteIfSameType: true,
+      keepUndo: true
     });
   }
-  _traduciVuoto(x, y) {
+  _translateEmpty(x, y) {
     this._uiManager.translateSelectedEditors(x, y, true);
   }
   getInitialTranslation() {
     const scale = this.parentScale;
-    restituisci [-FreeTextEditor._internalPadding * scala, -(FreeTextEditor._internalPadding + this.#fontSize) * scala];
+    return [-FreeTextEditor._internalPadding * scale, -(FreeTextEditor._internalPadding + this.#fontSize) * scale];
   }
-  ricostruisci() {
-    se (!questo.genitore) {
-      ritorno;
+  rebuild() {
+    if (!this.parent) {
+      return;
     }
-    super.ricostruzione();
-    se (this.div === null) {
-      ritorno;
+    super.rebuild();
+    if (this.div === null) {
+      return;
     }
-    se (!this.isAttachedToDOM) {
-      questo.genitore.aggiungi(questo);
+    if (!this.isAttachedToDOM) {
+      this.parent.add(this);
     }
   }
   enableEditMode() {
-    se (this.isInEditMode()) {
-      ritorno;
+    if (this.isInEditMode()) {
+      return;
     }
     this.parent.setEditingState(false);
     this.parent.updateToolbar(_util.AnnotationEditorType.FREETEXT);
     super.enableEditMode();
-    this.overlayDiv.classList.remove("abilitato");
+    this.overlayDiv.classList.remove("enabled");
     this.editorDiv.contentEditable = true;
     this._isDraggable = false;
     this.div.removeAttribute("aria-activedescendant");
     this.editorDiv.addEventListener("keydown", this.#boundEditorDivKeydown);
     this.editorDiv.addEventListener("focus", this.#boundEditorDivFocus);
-    this.editorDiv.addEventListener("sfocatura", this.#boundEditorDivBlur);
+    this.editorDiv.addEventListener("blur", this.#boundEditorDivBlur);
     this.editorDiv.addEventListener("input", this.#boundEditorDivInput);
   }
   disableEditMode() {
-    se (!this.isInEditMode()) {
-      ritorno;
+    if (!this.isInEditMode()) {
+      return;
     }
     this.parent.setEditingState(true);
     super.disableEditMode();
-    this.overlayDiv.classList.add("abilitato");
+    this.overlayDiv.classList.add("enabled");
     this.editorDiv.contentEditable = false;
     this.div.setAttribute("aria-activedescendant", this.#editorDivId);
     this._isDraggable = true;
     this.editorDiv.removeEventListener("keydown", this.#boundEditorDivKeydown);
     this.editorDiv.removeEventListener("focus", this.#boundEditorDivFocus);
-    this.editorDiv.removeEventListener("sfocatura", this.#boundEditorDivBlur);
+    this.editorDiv.removeEventListener("blur", this.#boundEditorDivBlur);
     this.editorDiv.removeEventListener("input", this.#boundEditorDivInput);
-    questo.div.focus({
-      preventScroll: vero
+    this.div.focus({
+      preventScroll: true
     });
     this.isEditing = false;
     this.parent.div.classList.add("freeTextEditing");
   }
-  focusin(evento) {
-    se (!this._focusEventsAllowed) {
-      ritorno;
+  focusin(event) {
+    if (!this._focusEventsAllowed) {
+      return;
     }
-    super.focusin(evento);
-    se (evento.target !== questo.editorDiv) {
-      questo.editorDiv.focus();
+    super.focusin(event);
+    if (event.target !== this.editorDiv) {
+      this.editorDiv.focus();
     }
   }
-  una voltaAggiunto() {
-    se (questa larghezza) {
-      questo.#cheatInitialRect();
-      ritorno;
+  onceAdded() {
+    if (this.width) {
+      this.#cheatInitialRect();
+      return;
     }
-    questo.abilitaModalitàModifica();
-    questo.editorDiv.focus();
-    se (this._initialOptions?.isCentered) {
-      questo.centro();
+    this.enableEditMode();
+    this.editorDiv.focus();
+    if (this._initialOptions?.isCentered) {
+      this.center();
     }
     this._initialOptions = null;
   }
-  èVuoto() {
-    restituisci !this.editorDiv || this.editorDiv.innerText.trim() === "";
+  isEmpty() {
+    return !this.editorDiv || this.editorDiv.innerText.trim() === "";
   }
-  rimuovi() {
+  remove() {
     this.isEditing = false;
-    se (questo.genitore) {
+    if (this.parent) {
       this.parent.setEditingState(true);
       this.parent.div.classList.add("freeTextEditing");
     }
-    super.rimuovi();
+    super.remove();
   }
-  #estraiTesto() {
+  #extractText() {
     const divs = this.editorDiv.getElementsByTagName("div");
-    se (lunghezza div === 0) {
-      restituisci this.editorDiv.innerText;
+    if (divs.length === 0) {
+      return this.editorDiv.innerText;
     }
-    buffer costante = [];
-    per (const div di div) {
+    const buffer = [];
+    for (const div of divs) {
       buffer.push(div.innerText.replace(/\r\n?|\n/, ""));
     }
-    restituisci buffer.join("\n");
+    return buffer.join("\n");
   }
   #setEditorDimensions() {
     const [parentWidth, parentHeight] = this.parentDimensions;
-    lascia retto;
-    se (this.isAttachedToDOM) {
+    let rect;
+    if (this.isAttachedToDOM) {
       rect = this.div.getBoundingClientRect();
-    } altro {
-      costante {
-        livellocorrente,
-        divisione
-      } = questo;
+    } else {
+      const {
+        currentLayer,
+        div
+      } = this;
       const savedDisplay = div.style.display;
-      div.style.display = "nascosto";
+      div.style.display = "hidden";
       currentLayer.div.append(this.div);
       rect = div.getBoundingClientRect();
       div.remove();
       div.style.display = savedDisplay;
     }
-    se (questa rotazione % 180 === questa rotazione principale % 180) {
-      questa.larghezza = larghezza.rett. / larghezza.parente;
+    if (this.rotation % 180 === this.parentRotation % 180) {
+      this.width = rect.width / parentWidth;
       this.height = rect.height / parentHeight;
-    } altro {
-      questa.larghezza = altezza.rett. / larghezza.parente;
+    } else {
+      this.width = rect.height / parentWidth;
       this.height = rect.width / parentHeight;
     }
-    questo.fixAndSetPosition();
+    this.fixAndSetPosition();
   }
-  commetti() {
-    se (!this.isInEditMode()) {
-      ritorno;
+  commit() {
+    if (!this.isInEditMode()) {
+      return;
     }
     super.commit();
-    questo.disableEditMode();
+    this.disableEditMode();
     const savedText = this.#content;
     const newText = this.#content = this.#extractText().trimEnd();
-    se (testosalvato === nuovotesto) {
-      ritorno;
+    if (savedText === newText) {
+      return;
     }
-    const setText = testo => {
-      questo.#contenuto = testo;
-      se (!testo) {
-        questo.rimuovi();
-        ritorno;
+    const setText = text => {
+      this.#content = text;
+      if (!text) {
+        this.remove();
+        return;
       }
-      questo.#setContent();
+      this.#setContent();
       this._uiManager.rebuild(this);
-      questo.#setEditorDimensions();
+      this.#setEditorDimensions();
     };
-    questo.aggiungiComandi({
-      comando: () => {
-        setText(nuovoTesto);
+    this.addCommands({
+      cmd: () => {
+        setText(newText);
       },
-      annulla: () => {
-        impostaTesto(Testo salvato);
+      undo: () => {
+        setText(savedText);
       },
-      mustExec: falso
+      mustExec: false
     });
-    questo.#setEditorDimensions();
+    this.#setEditorDimensions();
   }
   shouldGetKeyboardEvents() {
-    restituisci this.isInEditMode();
+    return this.isInEditMode();
   }
-  entraInModalitàModifica() {
-    questo.abilitaModalitàModifica();
-    questo.editorDiv.focus();
+  enterInEditMode() {
+    this.enableEditMode();
+    this.editorDiv.focus();
   }
-  dblclick(evento) {
-    questo.enterInEditMode();
+  dblclick(event) {
+    this.enterInEditMode();
   }
-  keydown(evento) {
-    if (event.target === this.div && event.key === "Invio") {
-      questo.enterInEditMode();
-      evento.prevenzioneDefault();
+  keydown(event) {
+    if (event.target === this.div && event.key === "Enter") {
+      this.enterInEditMode();
+      event.preventDefault();
     }
   }
-  editorDivKeydown(evento) {
-    FreeTextEditor._keyboardManager.exec(questo, evento);
+  editorDivKeydown(event) {
+    FreeTextEditor._keyboardManager.exec(this, event);
   }
-  editorDivFocus(evento) {
+  editorDivFocus(event) {
     this.isEditing = true;
   }
-  editorDivBlur(evento) {
+  editorDivBlur(event) {
     this.isEditing = false;
   }
-  editorDivInput(evento) {
+  editorDivInput(event) {
     this.parent.div.classList.toggle("freeTextEditing", this.isEmpty());
   }
-  disabilitaModifica() {
-    this.editorDiv.setAttribute("ruolo", "commento");
+  disableEditing() {
+    this.editorDiv.setAttribute("role", "comment");
     this.editorDiv.removeAttribute("aria-multiline");
   }
-  abilitaModifica() {
-    this.editorDiv.setAttribute("ruolo", "casella di testo");
+  enableEditing() {
+    this.editorDiv.setAttribute("role", "textbox");
     this.editorDiv.setAttribute("aria-multiline", true);
   }
   render() {
-    se (questo.div) {
-      restituisci questo.div;
+    if (this.div) {
+      return this.div;
     }
-    lascia baseX, baseY;
-    se (questa larghezza) {
-      baseX = questo.x;
+    let baseX, baseY;
+    if (this.width) {
+      baseX = this.x;
       baseY = this.y;
     }
     super.render();
     this.editorDiv = document.createElement("div");
-    this.editorDiv.className = "interno";
+    this.editorDiv.className = "internal";
     this.editorDiv.setAttribute("id", this.#editorDivId);
-    questo.abilitaModifica();
+    this.enableEditing();
     _editor.AnnotationEditor._l10nPromise.get("editor_free_text2_aria_label").then(msg => this.editorDiv?.setAttribute("aria-label", msg));
     _editor.AnnotationEditor._l10nPromise.get("free_text2_default_content").then(msg => this.editorDiv?.setAttribute("default-content", msg));
     this.editorDiv.contentEditable = true;
-    costante {
-      stile
+    const {
+      style
     } = this.editorDiv;
     style.fontSize = `calc(${this.#fontSize}px * var(--scale-factor))`;
-    stile.colore = questo.#colore;
-    questo.div.append(questo.editorDiv);
+    style.color = this.#color;
+    this.div.append(this.editorDiv);
     this.overlayDiv = document.createElement("div");
-    this.overlayDiv.classList.add("sovrapposizione", "abilitato");
-    questo.div.append(questo.overlayDiv);
+    this.overlayDiv.classList.add("overlay", "enabled");
+    this.div.append(this.overlayDiv);
     (0, _tools.bindEvents)(this, this.div, ["dblclick", "keydown"]);
-    se (questa larghezza) {
+    if (this.width) {
       const [parentWidth, parentHeight] = this.parentDimensions;
-      se (this.annotationElementId) {
-        costante {
-          posizione
-        } = questo.#datiiniziali;
-        lascia [tx, ty] = this.getInitialTranslation();
+      if (this.annotationElementId) {
+        const {
+          position
+        } = this.#initialData;
+        let [tx, ty] = this.getInitialTranslation();
         [tx, ty] = this.pageTranslationToScreen(tx, ty);
-        const [larghezzapagina, altezzapagina] = this.pageDimensions;
-        const [paginaX, paginaY] = this.pageTranslation;
-        lascia posX, posY;
-        interruttore (questa rotazione) {
-          caso 0:
-            posX = baseX + (posizione[0] - paginaX) / larghezzapagina;
-            posY = baseY + this.height - (posizione[1] - paginaY) / altezzapagina;
-            rottura;
-          caso 90:
-            posX = baseX + (posizione[0] - paginaX) / larghezzapagina;
-            posY = baseY - (posizione[1] - paginaY) / altezzapagina;
-            [tx, tà] = [tà, -tx];
-            rottura;
-          caso 180:
-            posX = baseX - this.width + (posizione[0] - paginaX) / larghezzapagina;
-            posY = baseY - (posizione[1] - paginaY) / altezzapagina;
-            [tx, tà] = [-tx, -tà];
-            rottura;
-          caso 270:
-            posX = baseX + (posizione[0] - paginaX - this.height * pageHeight) / pageWidth;
-            posY = baseY + (posizione[1] - paginaY - questa.larghezza * larghezzapagina) / altezzapagina;
-            [tx, tà] = [-tà, tx];
-            rottura;
+        const [pageWidth, pageHeight] = this.pageDimensions;
+        const [pageX, pageY] = this.pageTranslation;
+        let posX, posY;
+        switch (this.rotation) {
+          case 0:
+            posX = baseX + (position[0] - pageX) / pageWidth;
+            posY = baseY + this.height - (position[1] - pageY) / pageHeight;
+            break;
+          case 90:
+            posX = baseX + (position[0] - pageX) / pageWidth;
+            posY = baseY - (position[1] - pageY) / pageHeight;
+            [tx, ty] = [ty, -tx];
+            break;
+          case 180:
+            posX = baseX - this.width + (position[0] - pageX) / pageWidth;
+            posY = baseY - (position[1] - pageY) / pageHeight;
+            [tx, ty] = [-tx, -ty];
+            break;
+          case 270:
+            posX = baseX + (position[0] - pageX - this.height * pageHeight) / pageWidth;
+            posY = baseY + (position[1] - pageY - this.width * pageWidth) / pageHeight;
+            [tx, ty] = [-ty, tx];
+            break;
         }
         this.setAt(posX * parentWidth, posY * parentHeight, tx, ty);
-      } altro {
+      } else {
         this.setAt(baseX * parentWidth, baseY * parentHeight, this.width * parentWidth, this.height * parentHeight);
       }
-      questo.#setContent();
+      this.#setContent();
       this._isDraggable = true;
       this.editorDiv.contentEditable = false;
-    } altro {
+    } else {
       this._isDraggable = false;
       this.editorDiv.contentEditable = true;
     }
-    restituisci questo.div;
+    return this.div;
   }
-  #impostaContenuto() {
+  #setContent() {
     this.editorDiv.replaceChildren();
-    se (!questo.#contenuto) {
-      ritorno;
+    if (!this.#content) {
+      return;
     }
-    per (linea costante di questo.#content.split("\n")) {
+    for (const line of this.#content.split("\n")) {
       const div = document.createElement("div");
-      div.append(linea ? document.createTextNode(linea) : document.createElement("br"));
+      div.append(line ? document.createTextNode(line) : document.createElement("br"));
       this.editorDiv.append(div);
     }
   }
-  ottenere contentDiv() {
-    restituisci questo.editorDiv;
+  get contentDiv() {
+    return this.editorDiv;
   }
-  deserialize statico (dati, genitore, uiManager) {
-    lascia che initialData = null;
-    se (istanza di dati di _annotation_layer.FreeTextAnnotationElement) {
-      costante {
-        dati: {
-          Dati di aspetto predefiniti: {
-            dimensione del carattere,
-            colore del carattere
+  static deserialize(data, parent, uiManager) {
+    let initialData = null;
+    if (data instanceof _annotation_layer.FreeTextAnnotationElement) {
+      const {
+        data: {
+          defaultAppearanceData: {
+            fontSize,
+            fontColor
           },
-          dritto,
-          rotazione,
+          rect,
+          rotation,
           id
         },
-        testoContenuto,
-        posizione del testo,
-        genitore: {
-          pagina: {
-            numero di pagina
+        textContent,
+        textPosition,
+        parent: {
+          page: {
+            pageNumber
           }
         }
-      } = dati;
-      se (!textContent || textContent.length === 0) {
-        restituisci null;
+      } = data;
+      if (!textContent || textContent.length === 0) {
+        return null;
       }
-      datiiniziali = dati = {
+      initialData = data = {
         annotationType: _util.AnnotationEditorType.FREETEXT,
-        colore: Array.from(fontColor),
-        dimensione del carattere,
-        valore: textContent.join("\n"),
-        posizione: posizione del testo,
+        color: Array.from(fontColor),
+        fontSize,
+        value: textContent.join("\n"),
+        position: textPosition,
         pageIndex: pageNumber - 1,
-        dritto,
-        rotazione,
+        rect,
+        rotation,
         id,
-        cancellato: falso
+        deleted: false
       };
     }
     const editor = super.deserialize(data, parent, uiManager);
-    editor.#fontSize = dati.fontSize;
+    editor.#fontSize = data.fontSize;
     editor.#color = _util.Util.makeHexColor(...data.color);
     editor.#content = data.value;
     editor.annotationElementId = data.id || null;
     editor.#initialData = initialData;
-    editor di ritorno;
+    return editor;
   }
   serialize(isForCopying = false) {
-    se (questo.èVuoto()) {
-      restituisci null;
+    if (this.isEmpty()) {
+      return null;
     }
-    se (questo.eliminato) {
-      ritorno {
+    if (this.deleted) {
+      return {
         pageIndex: this.pageIndex,
         id: this.annotationElementId,
-        cancellato: vero
+        deleted: true
       };
     }
     const padding = FreeTextEditor._internalPadding * this.parentScale;
-    const rect = this.getRect(imbottitura, imbottitura);
+    const rect = this.getRect(padding, padding);
     const color = _editor.AnnotationEditor._colorManager.convert(this.isAttachedToDOM ? getComputedStyle(this.editorDiv).color : this.#color);
-    const serializzato = {
+    const serialized = {
       annotationType: _util.AnnotationEditorType.FREETEXT,
-      colore,
-      fontSize: questo.#fontSize,
-      valore: questo.#contenuto,
+      color,
+      fontSize: this.#fontSize,
+      value: this.#content,
       pageIndex: this.pageIndex,
-      dritto,
-      rotazione: questa.rotazione,
+      rect,
+      rotation: this.rotation,
       structTreeParentId: this._structTreeParentId
     };
-    se (èPerCopiare) {
-      restituisci serializzato;
+    if (isForCopying) {
+      return serialized;
     }
-    se (this.annotationElementId && !this.#hasElementChanged(serializzato)) {
-      restituisci null;
+    if (this.annotationElementId && !this.#hasElementChanged(serialized)) {
+      return null;
     }
     serialized.id = this.annotationElementId;
-    restituisci serializzato;
+    return serialized;
   }
-  #hasElementChanged(serializzato) {
-    costante {
-      valore,
-      dimensione del carattere,
-      colore,
-      dritto,
-      indice della pagina
-    } = questo.#datiiniziali;
-    restituisci serialized.value !== valore || serialized.fontSize !== fontSize || serialized.rect.some((x, i) => Math.abs(x - rect[i]) >= 1) || serialized.color.some((c, i) => c !== color[i]) || serialized.pageIndex !== pageIndex;
+  #hasElementChanged(serialized) {
+    const {
+      value,
+      fontSize,
+      color,
+      rect,
+      pageIndex
+    } = this.#initialData;
+    return serialized.value !== value || serialized.fontSize !== fontSize || serialized.rect.some((x, i) => Math.abs(x - rect[i]) >= 1) || serialized.color.some((c, i) => c !== color[i]) || serialized.pageIndex !== pageIndex;
   }
-  #cheatInitialRect(ritardato = falso) {
-    se (!this.annotationElementId) {
-      ritorno;
+  #cheatInitialRect(delayed = false) {
+    if (!this.annotationElementId) {
+      return;
     }
-    questo.#setEditorDimensions();
-    se (!ritardato && (questa.larghezza === 0 || questa.altezza === 0)) {
+    this.#setEditorDimensions();
+    if (!delayed && (this.width === 0 || this.height === 0)) {
       setTimeout(() => this.#cheatInitialRect(true), 0);
-      ritorno;
+      return;
     }
     const padding = FreeTextEditor._internalPadding * this.parentScale;
-    questo.#initialData.rect = questo.getRect(imbottitura, imbottitura);
+    this.#initialData.rect = this.getRect(padding, padding);
   }
 }
-esportazioni.FreeTextEditor = FreeTextEditor;
+exports.FreeTextEditor = FreeTextEditor;
 
 /***/ }),
 /* 29 */
@@ -13874,8 +13874,8 @@ esportazioni.FreeTextEditor = FreeTextEditor;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
 exports.StampAnnotationElement = exports.InkAnnotationElement = exports.FreeTextAnnotationElement = exports.AnnotationLayer = void 0;
 var _util = __w_pdfjs_require__(1);
@@ -13885,380 +13885,380 @@ var _scripting_utils = __w_pdfjs_require__(30);
 var _displayL10n_utils = __w_pdfjs_require__(31);
 var _xfa_layer = __w_pdfjs_require__(32);
 const DEFAULT_TAB_INDEX = 1000;
-costante DEFAULT_FONT_SIZE = 9;
+const DEFAULT_FONT_SIZE = 9;
 const GetElementsByNameSet = new WeakSet();
-funzione getRectDims(rect) {
-  ritorno {
-    larghezza: rect[2] - rect[0],
-    altezza: rect[3] - rect[1]
+function getRectDims(rect) {
+  return {
+    width: rect[2] - rect[0],
+    height: rect[3] - rect[1]
   };
 }
-classe AnnotationElementFactory {
-  static create(parametri) {
-    const sottotipo = parametri.dati.tipoannotazione;
-    switch (sottotipo) {
-      caso _util.AnnotationType.LINK:
-        restituisci nuovo LinkAnnotationElement(parametri);
-      caso _util.AnnotationType.TEXT:
-        restituisci nuovo TextAnnotationElement(parametri);
-      caso _util.AnnotationType.WIDGET:
-        const fieldType = parametri.dati.fieldType;
-        switch (tipocampo) {
-          caso "Tx":
-            restituisci nuovo TextWidgetAnnotationElement(parametri);
-          caso "Btn":
-            se (parametri.dati.pulsanteradio) {
-              restituisci nuovo RadioButtonWidgetAnnotationElement(parametri);
-            } altrimenti se (parametri.dati.checkBox) {
-              restituisci nuovo CheckboxWidgetAnnotationElement(parametri);
+class AnnotationElementFactory {
+  static create(parameters) {
+    const subtype = parameters.data.annotationType;
+    switch (subtype) {
+      case _util.AnnotationType.LINK:
+        return new LinkAnnotationElement(parameters);
+      case _util.AnnotationType.TEXT:
+        return new TextAnnotationElement(parameters);
+      case _util.AnnotationType.WIDGET:
+        const fieldType = parameters.data.fieldType;
+        switch (fieldType) {
+          case "Tx":
+            return new TextWidgetAnnotationElement(parameters);
+          case "Btn":
+            if (parameters.data.radioButton) {
+              return new RadioButtonWidgetAnnotationElement(parameters);
+            } else if (parameters.data.checkBox) {
+              return new CheckboxWidgetAnnotationElement(parameters);
             }
-            restituisci nuovo PushButtonWidgetAnnotationElement(parametri);
-          caso "Ch":
-            restituisci nuovo ChoiceWidgetAnnotationElement(parametri);
-          caso "Sig":
-            restituisci nuovo SignatureWidgetAnnotationElement(parametri);
+            return new PushButtonWidgetAnnotationElement(parameters);
+          case "Ch":
+            return new ChoiceWidgetAnnotationElement(parameters);
+          case "Sig":
+            return new SignatureWidgetAnnotationElement(parameters);
         }
-        restituisci nuovo WidgetAnnotationElement(parametri);
-      caso _util.AnnotationType.POPUP:
-        restituisci nuovo PopupAnnotationElement(parametri);
-      caso _util.AnnotationType.FREETEXT:
-        restituisci nuovo FreeTextAnnotationElement(parametri);
-      caso _util.AnnotationType.LINE:
-        restituisci nuovo LineAnnotationElement(parametri);
-      caso _util.AnnotationType.SQUARE:
-        restituisci nuovo SquareAnnotationElement(parametri);
-      caso _util.AnnotationType.CIRCLE:
-        restituisci nuovo CircleAnnotationElement(parametri);
-      caso _util.AnnotationType.POLYLINE:
-        restituisci nuovo PolylineAnnotationElement(parametri);
-      caso _util.AnnotationType.CARET:
-        restituisci nuovo CaretAnnotationElement(parametri);
-      caso _util.AnnotationType.INK:
-        restituisci nuovo InkAnnotationElement(parametri);
-      caso _util.AnnotationType.POLYGON:
-        restituisci nuovo PolygonAnnotationElement(parametri);
-      caso _util.AnnotationType.HIGHLIGHT:
-        restituisci nuovo HighlightAnnotationElement(parametri);
-      caso _util.AnnotationType.UNDERLINE:
-        restituisci nuovo UnderlineAnnotationElement(parametri);
-      caso _util.AnnotationType.SQUIGGLY:
-        restituisci nuovo SquigglyAnnotationElement(parametri);
-      caso _util.AnnotationType.STRIKEOUT:
-        restituisci nuovo StrikeOutAnnotationElement(parametri);
-      caso _util.AnnotationType.STAMP:
-        restituisci nuovo StampAnnotationElement(parametri);
+        return new WidgetAnnotationElement(parameters);
+      case _util.AnnotationType.POPUP:
+        return new PopupAnnotationElement(parameters);
+      case _util.AnnotationType.FREETEXT:
+        return new FreeTextAnnotationElement(parameters);
+      case _util.AnnotationType.LINE:
+        return new LineAnnotationElement(parameters);
+      case _util.AnnotationType.SQUARE:
+        return new SquareAnnotationElement(parameters);
+      case _util.AnnotationType.CIRCLE:
+        return new CircleAnnotationElement(parameters);
+      case _util.AnnotationType.POLYLINE:
+        return new PolylineAnnotationElement(parameters);
+      case _util.AnnotationType.CARET:
+        return new CaretAnnotationElement(parameters);
+      case _util.AnnotationType.INK:
+        return new InkAnnotationElement(parameters);
+      case _util.AnnotationType.POLYGON:
+        return new PolygonAnnotationElement(parameters);
+      case _util.AnnotationType.HIGHLIGHT:
+        return new HighlightAnnotationElement(parameters);
+      case _util.AnnotationType.UNDERLINE:
+        return new UnderlineAnnotationElement(parameters);
+      case _util.AnnotationType.SQUIGGLY:
+        return new SquigglyAnnotationElement(parameters);
+      case _util.AnnotationType.STRIKEOUT:
+        return new StrikeOutAnnotationElement(parameters);
+      case _util.AnnotationType.STAMP:
+        return new StampAnnotationElement(parameters);
       case _util.AnnotationType.FILEATTACHMENT:
-        restituisci nuovo FileAttachmentAnnotationElement(parametri);
-      predefinito:
-        restituisci nuovo AnnotationElement(parametri);
+        return new FileAttachmentAnnotationElement(parameters);
+      default:
+        return new AnnotationElement(parameters);
     }
   }
 }
-classe AnnotationElement {
+class AnnotationElement {
   #hasBorder = false;
-  costruttore(parametri, {
-    isRenderable = falso,
-    ignoreBorder = falso,
+  constructor(parameters, {
+    isRenderable = false,
+    ignoreBorder = false,
     createQuadrilaterals = false
   } = {}) {
     this.isRenderable = isRenderable;
-    questo.dati = parametri.dati;
-    questo.strato = parametri.strato;
-    this.linkService = parametri.linkService;
-    questo.downloadManager = parametri.downloadManager;
-    this.imageResourcesPath = parametri.imageResourcesPath;
-    this.renderForms = parametri.renderForms;
+    this.data = parameters.data;
+    this.layer = parameters.layer;
+    this.linkService = parameters.linkService;
+    this.downloadManager = parameters.downloadManager;
+    this.imageResourcesPath = parameters.imageResourcesPath;
+    this.renderForms = parameters.renderForms;
     this.svgFactory = parameters.svgFactory;
-    this.annotationStorage = parametri.annotationStorage;
-    questo.abilitaScripting = parametri.abilitaScripting;
-    questo.hasJSActions = parametri.hasJSActions;
-    questo._fieldObjects = parametri.fieldObjects;
-    questo.genitore = parametri.genitore;
-    se (èRenderizzabile) {
-      questo.contenitore = questo._createContainer(ignoreBorder);
+    this.annotationStorage = parameters.annotationStorage;
+    this.enableScripting = parameters.enableScripting;
+    this.hasJSActions = parameters.hasJSActions;
+    this._fieldObjects = parameters.fieldObjects;
+    this.parent = parameters.parent;
+    if (isRenderable) {
+      this.container = this._createContainer(ignoreBorder);
     }
-    se (creaQuadrilateri) {
+    if (createQuadrilaterals) {
       this._createQuadrilaterals();
     }
   }
-  statico _hasPopupData({
-    titoloObj,
-    contenutiObj,
-    RichText
+  static _hasPopupData({
+    titleObj,
+    contentsObj,
+    richText
   }) {
-    ritorno !!(titleObj?.str || contentsObj?.str || richText?.str);
+    return !!(titleObj?.str || contentsObj?.str || richText?.str);
   }
-  ottieni hasPopupData() {
-    restituisci AnnotationElement._hasPopupData(this.data);
+  get hasPopupData() {
+    return AnnotationElement._hasPopupData(this.data);
   }
   _createContainer(ignoreBorder) {
-    costante {
-      dati,
-      genitore: {
-        pagina,
-        finestra
+    const {
+      data,
+      parent: {
+        page,
+        viewport
       }
-    } = questo;
-    const contenitore = document.createElement("sezione");
+    } = this;
+    const container = document.createElement("section");
     container.setAttribute("data-annotation-id", data.id);
-    se (!(questa istanza di WidgetAnnotationElement)) {
-      contenitore.tabIndex = DEFAULT_TAB_INDEX;
+    if (!(this instanceof WidgetAnnotationElement)) {
+      container.tabIndex = DEFAULT_TAB_INDEX;
     }
-    contenitore.stile.zIndex = questo.genitore.zIndex++;
-    se (questo.dati.popupRef) {
+    container.style.zIndex = this.parent.zIndex++;
+    if (this.data.popupRef) {
       container.setAttribute("aria-haspopup", "dialog");
     }
-    se (data.noRotate) {
-      contenitore.classList.add("norotate");
+    if (data.noRotate) {
+      container.classList.add("norotate");
     }
-    costante {
-      Larghezza pagina,
-      altezza della pagina,
-      paginaX,
-      paginaY
+    const {
+      pageWidth,
+      pageHeight,
+      pageX,
+      pageY
     } = viewport.rawDims;
-    se (!data.rect || questa istanza di PopupAnnotationElement) {
-      costante {
-        rotazione
-      } = dati;
-      se (!data.hasOwnCanvas && rotazione !== 0) {
-        this.setRotation(rotazione, contenitore);
+    if (!data.rect || this instanceof PopupAnnotationElement) {
+      const {
+        rotation
+      } = data;
+      if (!data.hasOwnCanvas && rotation !== 0) {
+        this.setRotation(rotation, container);
       }
-      restituire il contenitore;
+      return container;
     }
-    costante {
-      larghezza,
-      altezza
+    const {
+      width,
+      height
     } = getRectDims(data.rect);
     const rect = _util.Util.normalizeRect([data.rect[0], page.view[3] - data.rect[1] + page.view[1], data.rect[2], page.view[3] - data.rect[3] + page.view[1]]);
-    se (!ignoreBorder && data.borderStyle.width > 0) {
-      contenitore.stile.larghezzadelbordo = `${data.borderStyle.larghezza}px`;
+    if (!ignoreBorder && data.borderStyle.width > 0) {
+      container.style.borderWidth = `${data.borderStyle.width}px`;
       const horizontalRadius = data.borderStyle.horizontalCornerRadius;
       const verticalRadius = data.borderStyle.verticalCornerRadius;
-      if (Raggioorizzontale > 0 || Raggio verticale > 0) {
+      if (horizontalRadius > 0 || verticalRadius > 0) {
         const radius = `calc(${horizontalRadius}px * var(--scale-factor)) / calc(${verticalRadius}px * var(--scale-factor))`;
-        container.style.borderRadius = raggio;
-      } altrimenti se (questa istanza di RadioButtonWidgetAnnotationElement) {
-        raggio costante = `calc(${larghezza}px * var(--fattore-scala)) / calc(${altezza}px * var(--fattore-scala))`;
-        container.style.borderRadius = raggio;
+        container.style.borderRadius = radius;
+      } else if (this instanceof RadioButtonWidgetAnnotationElement) {
+        const radius = `calc(${width}px * var(--scale-factor)) / calc(${height}px * var(--scale-factor))`;
+        container.style.borderRadius = radius;
       }
-      cambia (data.borderStyle.style) {
-        caso _util.AnnotationBorderStyleType.SOLID:
+      switch (data.borderStyle.style) {
+        case _util.AnnotationBorderStyleType.SOLID:
           container.style.borderStyle = "solid";
-          rottura;
-        caso _util.AnnotationBorderStyleType.DASHED:
-          container.style.borderStyle = "tratteggiato";
-          rottura;
-        caso _util.AnnotationBorderStyleType.BEVELED:
-          (0, _util.warn)("Stile del bordo non implementato: smussato");
-          rottura;
-        caso _util.AnnotationBorderStyleType.INSET:
-          (0, _util.warn)("Stile del bordo non implementato: inserto");
-          rottura;
-        caso _util.AnnotationBorderStyleType.UNDERLINE:
+          break;
+        case _util.AnnotationBorderStyleType.DASHED:
+          container.style.borderStyle = "dashed";
+          break;
+        case _util.AnnotationBorderStyleType.BEVELED:
+          (0, _util.warn)("Unimplemented border style: beveled");
+          break;
+        case _util.AnnotationBorderStyleType.INSET:
+          (0, _util.warn)("Unimplemented border style: inset");
+          break;
+        case _util.AnnotationBorderStyleType.UNDERLINE:
           container.style.borderBottomStyle = "solid";
-          rottura;
-        predefinito:
-          rottura;
+          break;
+        default:
+          break;
       }
       const borderColor = data.borderColor || null;
-      se (coloredelbordo) {
-        questo.#hasBorder = true;
-        contenitore.stile.coloredibordo = _util.Util.makeHexColor(coloredibordo[0] | 0, coloredibordo[1] | 0, coloredibordo[2] | 0);
-      } altro {
-        contenitore.stile.larghezzadelbordo = 0;
+      if (borderColor) {
+        this.#hasBorder = true;
+        container.style.borderColor = _util.Util.makeHexColor(borderColor[0] | 0, borderColor[1] | 0, borderColor[2] | 0);
+      } else {
+        container.style.borderWidth = 0;
       }
     }
     container.style.left = `${100 * (rect[0] - pageX) / pageWidth}%`;
     container.style.top = `${100 * (rect[1] - pageY) / pageHeight}%`;
-    costante {
-      rotazione
-    } = dati;
-    se (data.hasOwnCanvas || rotazione === 0) {
-      container.style.width = `${100 * larghezza / larghezzapagina}%`;
-      container.style.height = `${100 * altezza / altezzapagina}%`;
-    } altro {
-      this.setRotation(rotazione, contenitore);
+    const {
+      rotation
+    } = data;
+    if (data.hasOwnCanvas || rotation === 0) {
+      container.style.width = `${100 * width / pageWidth}%`;
+      container.style.height = `${100 * height / pageHeight}%`;
+    } else {
+      this.setRotation(rotation, container);
     }
-    restituire il contenitore;
+    return container;
   }
-  setRotation(angolo, contenitore = this.container) {
-    se (!questo.dato.rect) {
-      ritorno;
+  setRotation(angle, container = this.container) {
+    if (!this.data.rect) {
+      return;
     }
-    costante {
-      Larghezza pagina,
-      altezza della pagina
+    const {
+      pageWidth,
+      pageHeight
     } = this.parent.viewport.rawDims;
-    costante {
-      larghezza,
-      altezza
+    const {
+      width,
+      height
     } = getRectDims(this.data.rect);
-    lascia elementWidth, elementHeight;
-    se (angolo % 180 === 0) {
+    let elementWidth, elementHeight;
+    if (angle % 180 === 0) {
       elementWidth = 100 * width / pageWidth;
-      elementHeight = 100 * altezza / pageHeight;
-    } altro {
-      elementWidth = 100 * altezza / pageWidth;
+      elementHeight = 100 * height / pageHeight;
+    } else {
+      elementWidth = 100 * height / pageWidth;
       elementHeight = 100 * width / pageHeight;
     }
-    larghezza.stile.contenitore = `${larghezzaelemento}%`;
-    altezza.stile.contenitore = `${elementHeight}%`;
-    container.setAttribute("data-main-rotation", (360 - angolo) % 360);
+    container.style.width = `${elementWidth}%`;
+    container.style.height = `${elementHeight}%`;
+    container.setAttribute("data-main-rotation", (360 - angle) % 360);
   }
-  ottieni _commonActions() {
+  get _commonActions() {
     const setColor = (jsName, styleName, event) => {
       const color = event.detail[jsName];
       const colorType = color[0];
       const colorArray = color.slice(1);
       event.target.style[styleName] = _scripting_utils.ColorConverters[`${colorType}_HTML`](colorArray);
-      questo.annotazioneStorage.setValue(questo.data.id, {
+      this.annotationStorage.setValue(this.data.id, {
         [styleName]: _scripting_utils.ColorConverters[`${colorType}_rgb`](colorArray)
       });
     };
-    restituisci (0, _util.shadow)(questo, "_commonActions", {
-      visualizzazione: evento => {
-        costante {
+    return (0, _util.shadow)(this, "_commonActions", {
+      display: event => {
+        const {
           display
-        } = evento.dettaglio;
-        const nascosto = visualizza % 2 === 1;
-        this.container.style.visibility = hidden ? "nascosto" : "visibile";
-        questo.annotazioneStorage.setValue(questo.data.id, {
-          noView: nascosto,
-          noPrint: visualizza === 1 || visualizza === 2
+        } = event.detail;
+        const hidden = display % 2 === 1;
+        this.container.style.visibility = hidden ? "hidden" : "visible";
+        this.annotationStorage.setValue(this.data.id, {
+          noView: hidden,
+          noPrint: display === 1 || display === 2
         });
       },
-      stampa: evento => {
-        questo.annotazioneStorage.setValue(questo.data.id, {
-          noPrint: !evento.dettaglio.stampa
+      print: event => {
+        this.annotationStorage.setValue(this.data.id, {
+          noPrint: !event.detail.print
         });
       },
-      nascosto: evento => {
-        costante {
-          nascosto
-        } = evento.dettaglio;
-        this.container.style.visibility = hidden ? "nascosto" : "visibile";
-        questo.annotazioneStorage.setValue(questo.data.id, {
-          noPrint: nascosto,
-          noView: nascosto
+      hidden: event => {
+        const {
+          hidden
+        } = event.detail;
+        this.container.style.visibility = hidden ? "hidden" : "visible";
+        this.annotationStorage.setValue(this.data.id, {
+          noPrint: hidden,
+          noView: hidden
         });
       },
-      focus: evento => {
-        setTimeout(() => evento.target.focus({
-          preventScroll: falso
+      focus: event => {
+        setTimeout(() => event.target.focus({
+          preventScroll: false
         }), 0);
       },
-      Nome utente: evento => {
-        evento.target.title = evento.detail.userName;
+      userName: event => {
+        event.target.title = event.detail.userName;
       },
-      sola lettura: evento => {
-        evento.target.disabled = evento.dettaglio.sola lettura;
+      readonly: event => {
+        event.target.disabled = event.detail.readonly;
       },
-      richiesto: evento => {
-        this._setRequired(evento.target, evento.detail.required);
+      required: event => {
+        this._setRequired(event.target, event.detail.required);
       },
-      bgColor: evento => {
-        setColor("bgColor", "backgroundColor", evento);
+      bgColor: event => {
+        setColor("bgColor", "backgroundColor", event);
       },
-      fillColor: evento => {
+      fillColor: event => {
         setColor("fillColor", "backgroundColor", event);
       },
-      fgColor: evento => {
-        setColor("fgColor", "colore", evento);
+      fgColor: event => {
+        setColor("fgColor", "color", event);
       },
-      textColor: evento => {
-        setColor("textColor", "colore", evento);
+      textColor: event => {
+        setColor("textColor", "color", event);
       },
-      borderColor: evento => {
-        setColor("borderColor", "borderColor", evento);
+      borderColor: event => {
+        setColor("borderColor", "borderColor", event);
       },
-      strokeColor: evento => {
-        setColor("strokeColor", "borderColor", evento);
+      strokeColor: event => {
+        setColor("strokeColor", "borderColor", event);
       },
-      rotazione: evento => {
-        angolo costante = evento.dettaglio.rotazione;
-        this.setRotation(angolo);
-        questo.annotazioneStorage.setValue(questo.data.id, {
-          rotazione: angolo
+      rotation: event => {
+        const angle = event.detail.rotation;
+        this.setRotation(angle);
+        this.annotationStorage.setValue(this.data.id, {
+          rotation: angle
         });
       }
     });
   }
-  _dispatchEventFromSandbox(azioni, jsEvent) {
+  _dispatchEventFromSandbox(actions, jsEvent) {
     const commonActions = this._commonActions;
-    per (const nome di Object.keys(jsEvent.detail)) {
-      const action = azioni[nome] || azionicomuni[nome];
-      azione?.(jsEvent);
+    for (const name of Object.keys(jsEvent.detail)) {
+      const action = actions[name] || commonActions[name];
+      action?.(jsEvent);
     }
   }
-  _setDefaultPropertiesFromJS(elemento) {
-    se (!this.enableScripting) {
-      ritorno;
+  _setDefaultPropertiesFromJS(element) {
+    if (!this.enableScripting) {
+      return;
     }
     const storedData = this.annotationStorage.getRawValue(this.data.id);
-    se (!storedData) {
-      ritorno;
+    if (!storedData) {
+      return;
     }
     const commonActions = this._commonActions;
-    per (const [actionName, detail] di Object.entries(storedData)) {
+    for (const [actionName, detail] of Object.entries(storedData)) {
       const action = commonActions[actionName];
-      se (azione) {
+      if (action) {
         const eventProxy = {
-          dettaglio: {
-            [actionName]: dettaglio
+          detail: {
+            [actionName]: detail
           },
-          target: elemento
+          target: element
         };
-        azione(eventoProxy);
-        elimina storedData[actionName];
+        action(eventProxy);
+        delete storedData[actionName];
       }
     }
   }
-  _creaQuadrilaterali() {
-    se (!questo.contenitore) {
-      ritorno;
+  _createQuadrilaterals() {
+    if (!this.container) {
+      return;
     }
-    costante {
-      Punti quadrupli
-    } = questo.dato;
-    se (!quadPoints) {
-      ritorno;
+    const {
+      quadPoints
+    } = this.data;
+    if (!quadPoints) {
+      return;
     }
     const [rectBlX, rectBlY, rectTrX, rectTrY] = this.data.rect;
-    se (quadPoints.length === 1) {
-      costante [, {
+    if (quadPoints.length === 1) {
+      const [, {
         x: trX,
-        y: provare
+        y: trY
       }, {
         x: blX,
         y: blY
       }] = quadPoints[0];
-      se (rectTrX === trX e rectTrY === trY e rectBlX === blX e rectBlY === blY) {
-        ritorno;
+      if (rectTrX === trX && rectTrY === trY && rectBlX === blX && rectBlY === blY) {
+        return;
       }
     }
-    costante {
-      stile
-    } = questo.contenitore;
-    lascia svgBuffer;
-    se (questo.#hasBorder) {
-      costante {
-        colore del bordo,
-        Larghezza del bordo
-      } = stile;
-      stile.borderWidth = 0;
+    const {
+      style
+    } = this.container;
+    let svgBuffer;
+    if (this.#hasBorder) {
+      const {
+        borderColor,
+        borderWidth
+      } = style;
+      style.borderWidth = 0;
       svgBuffer = ["url('data:image/svg+xml;utf8,", `<svg xmlns="http://www.w3.org/2000/svg"`, ` preserveAspectRatio="none" viewBox="0 0 1 1">`, `<g fill="transparent" stroke="${borderColor}" stroke-width="${borderWidth}">`];
       this.container.classList.add("hasBorder");
     }
-    larghezza costante = rectTrX - rectBlX;
-    altezza costante = rectTrY - rectBlY;
-    costante {
+    const width = rectTrX - rectBlX;
+    const height = rectTrY - rectBlY;
+    const {
       svgFactory
-    } = questo;
+    } = this;
     const svg = svgFactory.createElement("svg");
-    svg.classList.add("quadrilateriContainer");
-    svg.setAttribute("larghezza", 0);
-    svg.setAttribute("altezza", 0);
+    svg.classList.add("quadrilateralsContainer");
+    svg.setAttribute("width", 0);
+    svg.setAttribute("height", 0);
     const defs = svgFactory.createElement("defs");
     svg.append(defs);
     const clipPath = svgFactory.createElement("clipPath");
@@ -14266,521 +14266,521 @@ classe AnnotationElement {
     clipPath.setAttribute("id", id);
     clipPath.setAttribute("clipPathUnits", "objectBoundingBox");
     defs.append(clipPath);
-    per (const [, {
+    for (const [, {
       x: trX,
-      y: provare
+      y: trY
     }, {
       x: blX,
       y: blY
-    }] di quadPoints) {
+    }] of quadPoints) {
       const rect = svgFactory.createElement("rect");
-      const x = (blX - rectBlX) / larghezza;
-      const y = (rectTrY - trY) / altezza;
-      const rectWidth = (trX - blX) / larghezza;
-      const rectHeight = (trY - blY) / altezza;
+      const x = (blX - rectBlX) / width;
+      const y = (rectTrY - trY) / height;
+      const rectWidth = (trX - blX) / width;
+      const rectHeight = (trY - blY) / height;
       rect.setAttribute("x", x);
       rect.setAttribute("y", y);
-      rect.setAttribute("larghezza", rectWidth);
-      rect.setAttribute("altezza", rectHeight);
+      rect.setAttribute("width", rectWidth);
+      rect.setAttribute("height", rectHeight);
       clipPath.append(rect);
       svgBuffer?.push(`<rect vector-effect="non-scaling-stroke" x="${x}" y="${y}" width="${rectWidth}" height="${rectHeight}"/>`);
     }
-    se (questo.#hasBorder) {
+    if (this.#hasBorder) {
       svgBuffer.push(`</g></svg>')`);
-      stile.immagine di sfondo = svgBuffer.join("");
+      style.backgroundImage = svgBuffer.join("");
     }
-    questo.contenitore.aggiungi(svg);
-    questo.contenitore.stile.clipPath = `url(#${id})`;
+    this.container.append(svg);
+    this.container.style.clipPath = `url(#${id})`;
   }
-  _creaPopup() {
-    costante {
-      contenitore,
-      dati
-    } = questo;
+  _createPopup() {
+    const {
+      container,
+      data
+    } = this;
     container.setAttribute("aria-haspopup", "dialog");
     const popup = new PopupAnnotationElement({
-      dati: {
-        colore: data.color,
-        titleObj: dati.titleObj,
-        data di modifica: data.data di modifica,
-        contentsObj: dati.contentsObj,
-        richText: dati.richText,
+      data: {
+        color: data.color,
+        titleObj: data.titleObj,
+        modificationDate: data.modificationDate,
+        contentsObj: data.contentsObj,
+        richText: data.richText,
         parentRect: data.rect,
-        Stile bordo: 0,
+        borderStyle: 0,
         id: `popup_${data.id}`,
-        rotazione: dati.rotazione
+        rotation: data.rotation
       },
-      genitore: questo.genitore,
-      elementi: [questo]
+      parent: this.parent,
+      elements: [this]
     });
     this.parent.div.append(popup.render());
   }
   render() {
-    (0, _util.unreachable)("Metodo astratto `AnnotationElement.render` chiamato");
+    (0, _util.unreachable)("Abstract method `AnnotationElement.render` called");
   }
-  _getElementsByName(nome, skipId = null) {
-    campi costanti = [];
-    se (this._fieldObjects) {
-      const fieldObj = this._fieldObjects[nome];
-      se (campoObj) {
-        per (cost {
-          pagina,
+  _getElementsByName(name, skipId = null) {
+    const fields = [];
+    if (this._fieldObjects) {
+      const fieldObj = this._fieldObjects[name];
+      if (fieldObj) {
+        for (const {
+          page,
           id,
-          valori di esportazione
-        } di fieldObj) {
-          se (pagina === -1) {
-            continuare;
+          exportValues
+        } of fieldObj) {
+          if (page === -1) {
+            continue;
           }
-          se (id === skipId) {
-            continuare;
+          if (id === skipId) {
+            continue;
           }
-          const exportValue = typeof exportValues ​​=== "stringa" ? exportValues ​​: null;
+          const exportValue = typeof exportValues === "string" ? exportValues : null;
           const domElement = document.querySelector(`[data-element-id="${id}"]`);
-          se (domElement && !GetElementsByNameSet.has(domElement)) {
-            (0, _util.warn)(`_getElementsByName - elemento non consentito: ${id}`);
-            continuare;
+          if (domElement && !GetElementsByNameSet.has(domElement)) {
+            (0, _util.warn)(`_getElementsByName - element not allowed: ${id}`);
+            continue;
           }
-          campi.push({
+          fields.push({
             id,
-            valore di esportazione,
+            exportValue,
             domElement
           });
         }
       }
-      campi di ritorno;
+      return fields;
     }
-    per (const domElement di document.getElementsByName(nome)) {
-      costante {
-        valore di esportazione
+    for (const domElement of document.getElementsByName(name)) {
+      const {
+        exportValue
       } = domElement;
-      const id = domElement.getAttribute("id-elemento-dati");
-      se (id === skipId) {
-        continuare;
+      const id = domElement.getAttribute("data-element-id");
+      if (id === skipId) {
+        continue;
       }
-      se (!GetElementsByNameSet.has(domElement)) {
-        continuare;
+      if (!GetElementsByNameSet.has(domElement)) {
+        continue;
       }
-      campi.push({
+      fields.push({
         id,
-        valore di esportazione,
+        exportValue,
         domElement
       });
     }
-    campi di ritorno;
+    return fields;
   }
-  spettacolo() {
-    se (questo.contenitore) {
-      questo.contenitore.nascosto = falso;
+  show() {
+    if (this.container) {
+      this.container.hidden = false;
     }
-    questo.popup?.forseMostra();
+    this.popup?.maybeShow();
   }
-  nascondere() {
-    se (questo.contenitore) {
-      questo.contenitore.nascosto = vero;
+  hide() {
+    if (this.container) {
+      this.container.hidden = true;
     }
-    questo.popup?.forceHide();
+    this.popup?.forceHide();
   }
   getElementsToTriggerPopup() {
-    restituisci questo.contenitore;
+    return this.container;
   }
-  aggiungiEvidenziaArea() {
-    const trigger = this.getElementsToTriggerPopup();
-    se (Array.isArray(trigger)) {
-      per (elemento costante dei trigger) {
-        elemento.classList.add("highlightArea");
+  addHighlightArea() {
+    const triggers = this.getElementsToTriggerPopup();
+    if (Array.isArray(triggers)) {
+      for (const element of triggers) {
+        element.classList.add("highlightArea");
       }
-    } altro {
+    } else {
       triggers.classList.add("highlightArea");
     }
   }
   _editOnDoubleClick() {
-    costante {
-      annotationEditorType: modalità,
-      dati: {
+    const {
+      annotationEditorType: mode,
+      data: {
         id: editId
       }
-    } = questo;
+    } = this;
     this.container.addEventListener("dblclick", () => {
       this.linkService.eventBus?.dispatch("switchannotationeditormode", {
-        fonte: questo,
-        modalità,
-        ID di modifica
+        source: this,
+        mode,
+        editId
       });
     });
   }
 }
-classe LinkAnnotationElement estende AnnotationElement {
-  costruttore(parametri, opzioni = null) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: !!opzioni?.ignoreBorder,
+class LinkAnnotationElement extends AnnotationElement {
+  constructor(parameters, options = null) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: !!options?.ignoreBorder,
       createQuadrilaterals: true
     });
-    this.isTooltipOnly = parametri.dati.isTooltipOnly;
+    this.isTooltipOnly = parameters.data.isTooltipOnly;
   }
   render() {
-    costante {
-      dati,
+    const {
+      data,
       linkService
-    } = questo;
+    } = this;
     const link = document.createElement("a");
-    link.setAttribute("id-elemento-dati", data.id);
-    lascia che isBound = false;
-    se (data.url) {
+    link.setAttribute("data-element-id", data.id);
+    let isBound = false;
+    if (data.url) {
       linkService.addLinkAttributes(link, data.url, data.newWindow);
-      è Limitato = vero;
-    } altrimenti se (dati.azione) {
+      isBound = true;
+    } else if (data.action) {
       this._bindNamedAction(link, data.action);
-      è Limitato = vero;
-    } altrimenti se (data.attachment) {
+      isBound = true;
+    } else if (data.attachment) {
       this._bindAttachment(link, data.attachment);
-      è Limitato = vero;
-    } altrimenti se (data.setOCGState) {
-      questo.#bindSetOCGState(link, data.setOCGState);
-      è Limitato = vero;
-    } altrimenti se (data.dest) {
+      isBound = true;
+    } else if (data.setOCGState) {
+      this.#bindSetOCGState(link, data.setOCGState);
+      isBound = true;
+    } else if (data.dest) {
       this._bindLink(link, data.dest);
-      è Limitato = vero;
-    } altro {
-      if (data.actions && (data.actions.Action || data.actions["Mouse su"] || data.actions["Mouse giù"]) && this.enableScripting && this.hasJSActions) {
-        this._bindJSAction(link, dati);
-        è Limitato = vero;
+      isBound = true;
+    } else {
+      if (data.actions && (data.actions.Action || data.actions["Mouse Up"] || data.actions["Mouse Down"]) && this.enableScripting && this.hasJSActions) {
+        this._bindJSAction(link, data);
+        isBound = true;
       }
-      se (data.resetForm) {
+      if (data.resetForm) {
         this._bindResetFormAction(link, data.resetForm);
-        è Limitato = vero;
-      } altrimenti se (this.isTooltipOnly && !isBound) {
-        this._bindLink(collegamento, "");
-        è Limitato = vero;
+        isBound = true;
+      } else if (this.isTooltipOnly && !isBound) {
+        this._bindLink(link, "");
+        isBound = true;
       }
     }
     this.container.classList.add("linkAnnotation");
-    se (è vincolato) {
-      questo.contenitore.aggiungi(collegamento);
+    if (isBound) {
+      this.container.append(link);
     }
-    restituisci questo.contenitore;
+    return this.container;
   }
   #setInternalLink() {
-    this.container.setAttribute("collegamento-interno-dati", "");
+    this.container.setAttribute("data-internal-link", "");
   }
-  _bindLink(collegamento, destinazione) {
-    link.href = this.linkService.getDestinationHash(destinazione);
+  _bindLink(link, destination) {
+    link.href = this.linkService.getDestinationHash(destination);
     link.onclick = () => {
-      se (destinazione) {
-        this.linkService.goToDestination(destinazione);
+      if (destination) {
+        this.linkService.goToDestination(destination);
       }
-      restituisci falso;
+      return false;
     };
-    se (destinazione || destinazione === "") {
-      questo.#setInternalLink();
+    if (destination || destination === "") {
+      this.#setInternalLink();
     }
   }
-  _bindNamedAction(collegamento, azione) {
+  _bindNamedAction(link, action) {
     link.href = this.linkService.getAnchorUrl("");
     link.onclick = () => {
-      this.linkService.executeNamedAction(azione);
-      restituisci falso;
+      this.linkService.executeNamedAction(action);
+      return false;
     };
-    questo.#setInternalLink();
+    this.#setInternalLink();
   }
-  _bindAttachment(collegamento, allegato) {
+  _bindAttachment(link, attachment) {
     link.href = this.linkService.getAnchorUrl("");
     link.onclick = () => {
       this.downloadManager?.openOrDownloadData(this.container, attachment.content, attachment.filename);
-      restituisci falso;
+      return false;
     };
-    questo.#setInternalLink();
+    this.#setInternalLink();
   }
-  #bindSetOCGState(collegamento, azione) {
+  #bindSetOCGState(link, action) {
     link.href = this.linkService.getAnchorUrl("");
     link.onclick = () => {
-      this.linkService.executeSetOCGState(azione);
-      restituisci falso;
+      this.linkService.executeSetOCGState(action);
+      return false;
     };
-    questo.#setInternalLink();
+    this.#setInternalLink();
   }
-  _bindJSAction(collegamento, dati) {
+  _bindJSAction(link, data) {
     link.href = this.linkService.getAnchorUrl("");
-    const map = new Map([["Azione", "onclick"], ["Mouse su", "onmouseup"], ["Mouse giù", "onmousedown"]]);
-    per (const nome di Object.keys(data.actions)) {
-      const jsName = map.get(nome);
-      se (!jsName) {
-        continuare;
+    const map = new Map([["Action", "onclick"], ["Mouse Up", "onmouseup"], ["Mouse Down", "onmousedown"]]);
+    for (const name of Object.keys(data.actions)) {
+      const jsName = map.get(name);
+      if (!jsName) {
+        continue;
       }
-      link[nomejs] = () => {
+      link[jsName] = () => {
         this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-          fonte: questo,
-          dettaglio: {
+          source: this,
+          detail: {
             id: data.id,
-            nome
+            name
           }
         });
-        restituisci falso;
+        return false;
       };
     }
-    se (!link.onclick) {
-      link.onclick = () => falso;
+    if (!link.onclick) {
+      link.onclick = () => false;
     }
-    questo.#setInternalLink();
+    this.#setInternalLink();
   }
-  _bindResetFormAction(collegamento, resetForm) {
+  _bindResetFormAction(link, resetForm) {
     const otherClickAction = link.onclick;
-    se (!altroClickAction) {
+    if (!otherClickAction) {
       link.href = this.linkService.getAnchorUrl("");
     }
-    questo.#setInternalLink();
-    se (!this._fieldObjects) {
-      (0, _util.warn)(`_bindResetFormAction - azione "resetForm" non supportata, ` + "assicurarsi che sia fornito il parametro `fieldObjects`.");
-      se (!altroClickAction) {
-        link.onclick = () => falso;
+    this.#setInternalLink();
+    if (!this._fieldObjects) {
+      (0, _util.warn)(`_bindResetFormAction - "resetForm" action not supported, ` + "ensure that the `fieldObjects` parameter is provided.");
+      if (!otherClickAction) {
+        link.onclick = () => false;
       }
-      ritorno;
+      return;
     }
     link.onclick = () => {
-      altraazioneClick?.();
-      costante {
-        campi: resetFormFields,
-        riferimenti: resetFormRefs,
-        includere
+      otherClickAction?.();
+      const {
+        fields: resetFormFields,
+        refs: resetFormRefs,
+        include
       } = resetForm;
-      const tutti i campi = [];
-      se (resetFormFields.length !== 0 || resetFormRefs.length !== 0) {
+      const allFields = [];
+      if (resetFormFields.length !== 0 || resetFormRefs.length !== 0) {
         const fieldIds = new Set(resetFormRefs);
-        per (const fieldName di resetFormFields) {
+        for (const fieldName of resetFormFields) {
           const fields = this._fieldObjects[fieldName] || [];
-          per (cost {
+          for (const {
             id
-          } di campi) {
+          } of fields) {
             fieldIds.add(id);
           }
         }
-        per (campi costanti di Object.values(this._fieldObjects)) {
-          per (const campo di campi) {
-            se (fieldIds.has(field.id) === include) {
-              allFields.push(campo);
+        for (const fields of Object.values(this._fieldObjects)) {
+          for (const field of fields) {
+            if (fieldIds.has(field.id) === include) {
+              allFields.push(field);
             }
           }
         }
-      } altro {
-        per (campi costanti di Object.values(this._fieldObjects)) {
-          allFields.push(...campi);
+      } else {
+        for (const fields of Object.values(this._fieldObjects)) {
+          allFields.push(...fields);
         }
       }
       const storage = this.annotationStorage;
       const allIds = [];
-      per (campo costante di tutti i campi) {
-        costante {
+      for (const field of allFields) {
+        const {
           id
-        } = campo;
-        tutti gli ID.push(id);
-        switch (campo.tipo) {
-          caso "testo":
+        } = field;
+        allIds.push(id);
+        switch (field.type) {
+          case "text":
             {
-              valore costante = campo.valorepredefinito || "";
+              const value = field.defaultValue || "";
               storage.setValue(id, {
-                valore
+                value
               });
-              rottura;
+              break;
             }
-          caso "casella di controllo":
-          caso "radiobutton":
+          case "checkbox":
+          case "radiobutton":
             {
-              valore costante = campo.valorepredefinito === campo.valoriesportazione;
+              const value = field.defaultValue === field.exportValues;
               storage.setValue(id, {
-                valore
+                value
               });
-              rottura;
+              break;
             }
-          caso "combobox":
-          caso "listbox":
+          case "combobox":
+          case "listbox":
             {
-              valore costante = campo.valorepredefinito || "";
+              const value = field.defaultValue || "";
               storage.setValue(id, {
-                valore
+                value
               });
-              rottura;
+              break;
             }
-          predefinito:
-            continuare;
+          default:
+            continue;
         }
         const domElement = document.querySelector(`[data-element-id="${id}"]`);
-        se (!domElement) {
-          continuare;
-        } altrimenti se (!GetElementsByNameSet.has(domElement)) {
-          (0, _util.warn)(`_bindResetFormAction - elemento non consentito: ${id}`);
-          continuare;
+        if (!domElement) {
+          continue;
+        } else if (!GetElementsByNameSet.has(domElement)) {
+          (0, _util.warn)(`_bindResetFormAction - element not allowed: ${id}`);
+          continue;
         }
-        domElement.dispatchEvent(nuovo evento("resetform"));
+        domElement.dispatchEvent(new Event("resetform"));
       }
-      se (this.enableScripting) {
+      if (this.enableScripting) {
         this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-          fonte: questo,
-          dettaglio: {
+          source: this,
+          detail: {
             id: "app",
-            id: tutti gli ID,
-            nome: "ResetForm"
+            ids: allIds,
+            name: "ResetForm"
           }
         });
       }
-      restituisci falso;
+      return false;
     };
   }
 }
-classe TextAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      isRenderable: vero
+class TextAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true
     });
   }
   render() {
     this.container.classList.add("textAnnotation");
     const image = document.createElement("img");
     image.src = this.imageResourcesPath + "annotation-" + this.data.name.toLowerCase() + ".svg";
-    image.alt = "[{{type}} Annotazione]";
+    image.alt = "[{{type}} Annotation]";
     image.dataset.l10nId = "text_annotation_type";
-    immagine.dataset.l10nArgs = JSON.stringify({
-      tipo: questo.nome.dati
+    image.dataset.l10nArgs = JSON.stringify({
+      type: this.data.name
     });
-    se (!this.data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    if (!this.data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
-    questo.contenitore.aggiungi(immagine);
-    restituisci questo.contenitore;
+    this.container.append(image);
+    return this.container;
   }
 }
-classe WidgetAnnotationElement estende AnnotationElement {
+class WidgetAnnotationElement extends AnnotationElement {
   render() {
-    se (questo.dati.testo alternativo) {
-      questo.contenitore.titolo = questo.dati.testo alternativo;
+    if (this.data.alternativeText) {
+      this.container.title = this.data.alternativeText;
     }
-    restituisci questo.contenitore;
+    return this.container;
   }
-  showElementAndHideCanvas(elemento) {
-    se (this.data.hasOwnCanvas) {
-      se (element.previousSibling?.nodeName === "CANVAS") {
-        elemento.precedenteSibling.nascosto = vero;
+  showElementAndHideCanvas(element) {
+    if (this.data.hasOwnCanvas) {
+      if (element.previousSibling?.nodeName === "CANVAS") {
+        element.previousSibling.hidden = true;
       }
-      elemento.nascosto = falso;
+      element.hidden = false;
     }
   }
-  _getKeyModifier(evento) {
-    costante {
-      èWin,
-      èMac
+  _getKeyModifier(event) {
+    const {
+      isWin,
+      isMac
     } = _util.FeatureTest.platform;
-    restituisci isWin && event.ctrlKey || isMac && event.metaKey;
+    return isWin && event.ctrlKey || isMac && event.metaKey;
   }
-  _setEventListener(elemento, elementData, baseName, eventName, valueGetter) {
-    se (baseName.includes("mouse")) {
+  _setEventListener(element, elementData, baseName, eventName, valueGetter) {
+    if (baseName.includes("mouse")) {
       element.addEventListener(baseName, event => {
         this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-          fonte: questo,
-          dettaglio: {
-            id: questo.data.id,
-            nome: eventName,
-            valore: valueGetter(evento),
-            spostamento: evento.shiftKey,
-            modificatore: this._getKeyModifier(evento)
+          source: this,
+          detail: {
+            id: this.data.id,
+            name: eventName,
+            value: valueGetter(event),
+            shift: event.shiftKey,
+            modifier: this._getKeyModifier(event)
           }
         });
       });
-    } altro {
+    } else {
       element.addEventListener(baseName, event => {
-        se (baseName === "sfocatura") {
-          se (!elementData.focused || !event.relatedTarget) {
-            ritorno;
+        if (baseName === "blur") {
+          if (!elementData.focused || !event.relatedTarget) {
+            return;
           }
           elementData.focused = false;
-        } altrimenti se (baseName === "focus") {
-          se (elementData.focused) {
-            ritorno;
+        } else if (baseName === "focus") {
+          if (elementData.focused) {
+            return;
           }
           elementData.focused = true;
         }
-        se (!valueGetter) {
-          ritorno;
+        if (!valueGetter) {
+          return;
         }
         this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-          fonte: questo,
-          dettaglio: {
-            id: questo.data.id,
-            nome: eventName,
-            valore: valueGetter(evento)
+          source: this,
+          detail: {
+            id: this.data.id,
+            name: eventName,
+            value: valueGetter(event)
           }
         });
       });
     }
   }
-  _setEventListeners(elemento, dati dell'elemento, nomi, getter) {
-    per (const [baseName, eventName] di nomi) {
-      se (nomeevento === "Azione" || questo.dati.azioni?.[nomeevento]) {
+  _setEventListeners(element, elementData, names, getter) {
+    for (const [baseName, eventName] of names) {
+      if (eventName === "Action" || this.data.actions?.[eventName]) {
         if (eventName === "Focus" || eventName === "Blur") {
           elementData ||= {
-            focalizzato: falso
+            focused: false
           };
         }
-        this._setEventListener(elemento, datielemento, nomebase, nomeevento, getter);
-        se (eventName === "Focus" && !this.data.actions?.Blur) {
-          this._setEventListener(elemento, elementData, "blur", "Blur", null);
-        } else if (eventName === "Sfocatura" && !this.data.actions?.Focus) {
-          this._setEventListener(elemento, elementData, "focus", "Focus", null);
+        this._setEventListener(element, elementData, baseName, eventName, getter);
+        if (eventName === "Focus" && !this.data.actions?.Blur) {
+          this._setEventListener(element, elementData, "blur", "Blur", null);
+        } else if (eventName === "Blur" && !this.data.actions?.Focus) {
+          this._setEventListener(element, elementData, "focus", "Focus", null);
         }
       }
     }
   }
-  _setBackgroundColor(elemento) {
+  _setBackgroundColor(element) {
     const color = this.data.backgroundColor || null;
-    element.style.backgroundColor = color === null ? "trasparente" : _util.Util.makeHexColor(color[0], color[1], color[2]);
+    element.style.backgroundColor = color === null ? "transparent" : _util.Util.makeHexColor(color[0], color[1], color[2]);
   }
-  _setTextStyle(elemento) {
-    const TEXT_ALIGNMENT = ["sinistra", "centro", "destra"];
-    costante {
-      colore del carattere
-    } = questo.dati.datiApparenzaPredefiniti;
+  _setTextStyle(element) {
+    const TEXT_ALIGNMENT = ["left", "center", "right"];
+    const {
+      fontColor
+    } = this.data.defaultAppearanceData;
     const fontSize = this.data.defaultAppearanceData.fontSize || DEFAULT_FONT_SIZE;
-    const style = elemento.stile;
-    lascia computedFontSize;
-    const DIMENSIONE_BORDO = 2;
+    const style = element.style;
+    let computedFontSize;
+    const BORDER_SIZE = 2;
     const roundToOneDecimal = x => Math.round(10 * x) / 10;
-    se (questo.dati.multilinea) {
-      altezza costante = Math.abs(this.data.rect[3] - this.data.rect[1] - BORDER_SIZE);
-      const numberOfLines = Math.round(altezza / (_util.LINE_FACTOR * fontSize)) || 1;
-      const lineHeight = altezza / numeroRighe;
+    if (this.data.multiLine) {
+      const height = Math.abs(this.data.rect[3] - this.data.rect[1] - BORDER_SIZE);
+      const numberOfLines = Math.round(height / (_util.LINE_FACTOR * fontSize)) || 1;
+      const lineHeight = height / numberOfLines;
       computedFontSize = Math.min(fontSize, roundToOneDecimal(lineHeight / _util.LINE_FACTOR));
-    } altro {
-      altezza costante = Math.abs(this.data.rect[3] - this.data.rect[1] - BORDER_SIZE);
+    } else {
+      const height = Math.abs(this.data.rect[3] - this.data.rect[1] - BORDER_SIZE);
       computedFontSize = Math.min(fontSize, roundToOneDecimal(height / _util.LINE_FACTOR));
     }
     style.fontSize = `calc(${computedFontSize}px * var(--scale-factor))`;
     style.color = _util.Util.makeHexColor(fontColor[0], fontColor[1], fontColor[2]);
-    se (this.data.textAlignment !== null) {
+    if (this.data.textAlignment !== null) {
       style.textAlign = TEXT_ALIGNMENT[this.data.textAlignment];
     }
   }
-  _setRequired(elemento, è obbligatorio) {
-    se (è obbligatorio) {
-      element.setAttribute("obbligatorio", true);
-    } altro {
-      elemento.removeAttribute("obbligatorio");
+  _setRequired(element, isRequired) {
+    if (isRequired) {
+      element.setAttribute("required", true);
+    } else {
+      element.removeAttribute("required");
     }
     element.setAttribute("aria-required", isRequired);
   }
 }
-classe TextWidgetAnnotationElement estende WidgetAnnotationElement {
-  costruttore(parametri) {
+class TextWidgetAnnotationElement extends WidgetAnnotationElement {
+  constructor(parameters) {
     const isRenderable = parameters.renderForms || !parameters.data.hasAppearance && !!parameters.data.fieldValue;
-    super(parametri, {
-      èRenderizzabile
+    super(parameters, {
+      isRenderable
     });
   }
-  setPropertyOnSiblings(base, chiave, valore, chiaveInMemoria) {
+  setPropertyOnSiblings(base, key, value, keyInStorage) {
     const storage = this.annotationStorage;
-    per (elemento costante di this._getElementsByName(base.name, base.id)) {
-      se (elemento.domElement) {
-        elemento.domElement[chiave] = valore;
+    for (const element of this._getElementsByName(base.name, base.id)) {
+      if (element.domElement) {
+        element.domElement[key] = value;
       }
-      storage.setValue(elemento.id, {
-        [keyInStorage]: valore
+      storage.setValue(element.id, {
+        [keyInStorage]: value
       });
     }
   }
@@ -14788,86 +14788,86 @@ classe TextWidgetAnnotationElement estende WidgetAnnotationElement {
     const storage = this.annotationStorage;
     const id = this.data.id;
     this.container.classList.add("textWidgetAnnotation");
-    lascia elemento = null;
-    se (this.renderForms) {
+    let element = null;
+    if (this.renderForms) {
       const storedData = storage.getValue(id, {
-        valore: this.data.fieldValue
+        value: this.data.fieldValue
       });
       let textContent = storedData.value || "";
       const maxLen = storage.getValue(id, {
         charLimit: this.data.maxLen
       }).charLimit;
-      se (maxLen && textContent.length > maxLen) {
+      if (maxLen && textContent.length > maxLen) {
         textContent = textContent.slice(0, maxLen);
       }
-      lascia fieldFormattedValues ​​= storedData.formattedValue || this.data.textContent?.join("\n") || null;
-      se (fieldFormattedValues ​​&& this.data.comb) {
-        fieldFormattedValues ​​= fieldFormattedValues.replaceAll(/\s+/g, "");
+      let fieldFormattedValues = storedData.formattedValue || this.data.textContent?.join("\n") || null;
+      if (fieldFormattedValues && this.data.comb) {
+        fieldFormattedValues = fieldFormattedValues.replaceAll(/\s+/g, "");
       }
       const elementData = {
         userValue: textContent,
         formattedValue: fieldFormattedValues,
         lastCommittedValue: null,
         commitKey: 1,
-        focalizzato: falso
+        focused: false
       };
-      se (questo.dati.multilinea) {
-        elemento = document.createElement("textarea");
-        element.textContent = fieldFormattedValues ​​?? contenutotesto;
-        se (this.data.doNotScroll) {
-          element.style.overflowY = "nascosto";
+      if (this.data.multiLine) {
+        element = document.createElement("textarea");
+        element.textContent = fieldFormattedValues ?? textContent;
+        if (this.data.doNotScroll) {
+          element.style.overflowY = "hidden";
         }
-      } altro {
-        elemento = document.createElement("input");
-        elemento.tipo = "testo";
-        element.setAttribute("valore", fieldFormattedValues ​​?? textContent);
-        se (this.data.doNotScroll) {
-          element.style.overflowX = "nascosto";
+      } else {
+        element = document.createElement("input");
+        element.type = "text";
+        element.setAttribute("value", fieldFormattedValues ?? textContent);
+        if (this.data.doNotScroll) {
+          element.style.overflowX = "hidden";
         }
       }
-      se (this.data.hasOwnCanvas) {
-        elemento.nascosto = vero;
+      if (this.data.hasOwnCanvas) {
+        element.hidden = true;
       }
-      GetElementsByNameSet.add(elemento);
-      element.setAttribute("id-elemento-dati", id);
-      elemento.disabilitato = questo.dati.sola lettura;
-      nome.elemento = questo.nome.campo.dati;
-      elemento.tabIndex = DEFAULT_TAB_INDEX;
-      this._setRequired(elemento, this.data.required);
-      se (maxLen) {
-        elemento.maxLength = maxLen;
+      GetElementsByNameSet.add(element);
+      element.setAttribute("data-element-id", id);
+      element.disabled = this.data.readOnly;
+      element.name = this.data.fieldName;
+      element.tabIndex = DEFAULT_TAB_INDEX;
+      this._setRequired(element, this.data.required);
+      if (maxLen) {
+        element.maxLength = maxLen;
       }
-      element.addEventListener("input", evento => {
+      element.addEventListener("input", event => {
         storage.setValue(id, {
-          valore: evento.valore.destinazione
+          value: event.target.value
         });
-        this.setPropertyOnSiblings(elemento, "valore", evento.valore di destinazione, "valore");
+        this.setPropertyOnSiblings(element, "value", event.target.value, "value");
         elementData.formattedValue = null;
       });
-      element.addEventListener("resetform", evento => {
+      element.addEventListener("resetform", event => {
         const defaultValue = this.data.defaultFieldValue ?? "";
-        elemento.valore = elementData.valoreutente = valorepredefinito;
+        element.value = elementData.userValue = defaultValue;
         elementData.formattedValue = null;
       });
-      lascia blurListener = evento => {
-        costante {
-          valoreformattato
+      let blurListener = event => {
+        const {
+          formattedValue
         } = elementData;
-        se (formattedValue !== null && formattedValue !== indefinito) {
-          evento.valore.destinazione = valoreformattato;
+        if (formattedValue !== null && formattedValue !== undefined) {
+          event.target.value = formattedValue;
         }
-        evento.target.scrollLeft = 0;
+        event.target.scrollLeft = 0;
       };
-      se (this.enableScripting && this.hasJSActions) {
-        element.addEventListener("focus", evento => {
-          se (elementData.focused) {
-            ritorno;
+      if (this.enableScripting && this.hasJSActions) {
+        element.addEventListener("focus", event => {
+          if (elementData.focused) {
+            return;
           }
-          costante {
-            bersaglio
-          } = evento;
-          se (elementData.userValue) {
-            valore.destinazione = elementData.valore.utente;
+          const {
+            target
+          } = event;
+          if (elementData.userValue) {
+            target.value = elementData.userValue;
           }
           elementData.lastCommittedValue = target.value;
           elementData.commitKey = 1;
@@ -14875,57 +14875,57 @@ classe TextWidgetAnnotationElement estende WidgetAnnotationElement {
         });
         element.addEventListener("updatefromsandbox", jsEvent => {
           this.showElementAndHideCanvas(jsEvent.target);
-          azioni costanti = {
-            valore(evento) {
+          const actions = {
+            value(event) {
               elementData.userValue = event.detail.value ?? "";
               storage.setValue(id, {
-                valore: elementData.userValue.toString()
+                value: elementData.userValue.toString()
               });
-              evento.valore.destinazione = elementData.valoreutente;
+              event.target.value = elementData.userValue;
             },
-            formattedValue(evento) {
-              costante {
-                valoreformattato
-              } = evento.dettaglio;
+            formattedValue(event) {
+              const {
+                formattedValue
+              } = event.detail;
               elementData.formattedValue = formattedValue;
               if (formattedValue !== null && formattedValue !== undefined && event.target !== document.activeElement) {
-                evento.valore.destinazione = valoreformattato;
+                event.target.value = formattedValue;
               }
               storage.setValue(id, {
-                valoreformattato
+                formattedValue
               });
             },
-            selRange(evento) {
-              evento.target.setSelectionRange(...evento.dettaglio.selRange);
+            selRange(event) {
+              event.target.setSelectionRange(...event.detail.selRange);
             },
-            charLimit: evento => {
-              costante {
+            charLimit: event => {
+              const {
                 charLimit
-              } = evento.dettaglio;
-              costante {
-                bersaglio
-              } = evento;
-              se (charLimit === 0) {
+              } = event.detail;
+              const {
+                target
+              } = event;
+              if (charLimit === 0) {
                 target.removeAttribute("maxLength");
-                ritorno;
+                return;
               }
               target.setAttribute("maxLength", charLimit);
-              lascia valore = elementData.userValue;
-              se (!valore || valore.lunghezza <= charLimit) {
-                ritorno;
+              let value = elementData.userValue;
+              if (!value || value.length <= charLimit) {
+                return;
               }
-              valore = valore.slice(0, charLimit);
-              target.value = elementData.userValue = valore;
+              value = value.slice(0, charLimit);
+              target.value = elementData.userValue = value;
               storage.setValue(id, {
-                valore
+                value
               });
               this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-                fonte: questo,
-                dettaglio: {
+                source: this,
+                detail: {
                   id,
-                  nome: "battitura di tasti",
-                  valore,
-                  willCommit: vero,
+                  name: "Keystroke",
+                  value,
+                  willCommit: true,
                   commitKey: 1,
                   selStart: target.selectionStart,
                   selEnd: target.selectionEnd
@@ -14933,235 +14933,235 @@ classe TextWidgetAnnotationElement estende WidgetAnnotationElement {
               });
             }
           };
-          this._dispatchEventFromSandbox(azioni, jsEvent);
+          this._dispatchEventFromSandbox(actions, jsEvent);
         });
-        element.addEventListener("keydown", evento => {
+        element.addEventListener("keydown", event => {
           elementData.commitKey = 1;
-          lascia commitKey = -1;
-          se (evento.chiave === "Escape") {
+          let commitKey = -1;
+          if (event.key === "Escape") {
             commitKey = 0;
-          } else if (event.key === "Invio" && !this.data.multiLine) {
+          } else if (event.key === "Enter" && !this.data.multiLine) {
             commitKey = 2;
-          } altrimenti se (evento.chiave === "Tab") {
+          } else if (event.key === "Tab") {
             elementData.commitKey = 3;
           }
-          se (commitKey === -1) {
-            ritorno;
+          if (commitKey === -1) {
+            return;
           }
-          costante {
-            valore
-          } = evento.target;
-          se (elementData.lastCommittedValue === valore) {
-            ritorno;
+          const {
+            value
+          } = event.target;
+          if (elementData.lastCommittedValue === value) {
+            return;
           }
-          elementData.lastCommittedValue = valore;
-          elementData.userValue = valore;
+          elementData.lastCommittedValue = value;
+          elementData.userValue = value;
           this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-            fonte: questo,
-            dettaglio: {
+            source: this,
+            detail: {
               id,
-              nome: "battitura di tasti",
-              valore,
-              willCommit: vero,
+              name: "Keystroke",
+              value,
+              willCommit: true,
               commitKey,
-              selStart: evento.target.selectionStart,
-              selEnd: evento.target.selectionEnd
+              selStart: event.target.selectionStart,
+              selEnd: event.target.selectionEnd
             }
           });
         });
         const _blurListener = blurListener;
         blurListener = null;
-        element.addEventListener("sfocatura", evento => {
-          se (!elementData.focused || !event.relatedTarget) {
-            ritorno;
+        element.addEventListener("blur", event => {
+          if (!elementData.focused || !event.relatedTarget) {
+            return;
           }
           elementData.focused = false;
-          costante {
-            valore
-          } = evento.target;
-          elementData.userValue = valore;
-          se (elementData.lastCommittedValue !== valore) {
+          const {
+            value
+          } = event.target;
+          elementData.userValue = value;
+          if (elementData.lastCommittedValue !== value) {
             this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-              fonte: questo,
-              dettaglio: {
+              source: this,
+              detail: {
                 id,
-                nome: "battitura di tasti",
-                valore,
-                willCommit: vero,
+                name: "Keystroke",
+                value,
+                willCommit: true,
                 commitKey: elementData.commitKey,
-                selStart: evento.target.selectionStart,
-                selEnd: evento.target.selectionEnd
+                selStart: event.target.selectionStart,
+                selEnd: event.target.selectionEnd
               }
             });
           }
-          _blurListener(evento);
+          _blurListener(event);
         });
-        se (questo.dati.azioni?.battitura) {
-          element.addEventListener("prima dell'input", evento => {
+        if (this.data.actions?.Keystroke) {
+          element.addEventListener("beforeinput", event => {
             elementData.lastCommittedValue = null;
-            costante {
-              dati,
-              bersaglio
-            } = evento;
-            costante {
-              valore,
-              selezioneInizio,
-              selezioneFine
-            } = destinazione;
-            lascia che selInizio = inizioselezione,
-              selEnd = selezioneEnd;
-            switch (evento.inputType) {
-              caso "deleteWordBackward":
+            const {
+              data,
+              target
+            } = event;
+            const {
+              value,
+              selectionStart,
+              selectionEnd
+            } = target;
+            let selStart = selectionStart,
+              selEnd = selectionEnd;
+            switch (event.inputType) {
+              case "deleteWordBackward":
                 {
                   const match = value.substring(0, selectionStart).match(/\w*[^\w]*$/);
-                  se (corrispondenza) {
+                  if (match) {
                     selStart -= match[0].length;
                   }
-                  rottura;
+                  break;
                 }
-              caso "deleteWordForward":
+              case "deleteWordForward":
                 {
                   const match = value.substring(selectionStart).match(/^[^\w]*\w*/);
-                  se (corrispondenza) {
+                  if (match) {
                     selEnd += match[0].length;
                   }
-                  rottura;
+                  break;
                 }
-              caso "deleteContentBackward":
-                se (selezioneInizio === selezioneFine) {
+              case "deleteContentBackward":
+                if (selectionStart === selectionEnd) {
                   selStart -= 1;
                 }
-                rottura;
-              caso "deleteContentForward":
-                se (selezioneInizio === selezioneFine) {
+                break;
+              case "deleteContentForward":
+                if (selectionStart === selectionEnd) {
                   selEnd += 1;
                 }
-                rottura;
+                break;
             }
-            evento.prevenzioneDefault();
+            event.preventDefault();
             this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-              fonte: questo,
-              dettaglio: {
+              source: this,
+              detail: {
                 id,
-                nome: "battitura di tasti",
-                valore,
-                modifica: dati || "",
-                willCommit: falso,
+                name: "Keystroke",
+                value,
+                change: data || "",
+                willCommit: false,
                 selStart,
                 selEnd
               }
             });
           });
         }
-        this._setEventListeners(element, elementData, [["focus", "Focus"], ["blur", "Sfocatura"], ["mousedown", "Mouse giù"], ["mouseenter", "Invio mouse"], ["mouseleave", "Esci mouse"], ["mouseup", "Mouse su"]], event => event.target.value);
+        this._setEventListeners(element, elementData, [["focus", "Focus"], ["blur", "Blur"], ["mousedown", "Mouse Down"], ["mouseenter", "Mouse Enter"], ["mouseleave", "Mouse Exit"], ["mouseup", "Mouse Up"]], event => event.target.value);
       }
-      se (blurListener) {
-        elemento.addEventListener("blur", blurListener);
+      if (blurListener) {
+        element.addEventListener("blur", blurListener);
       }
-      se (this.data.comb) {
+      if (this.data.comb) {
         const fieldWidth = this.data.rect[2] - this.data.rect[0];
         const combWidth = fieldWidth / maxLen;
-        element.classList.add("pettine");
+        element.classList.add("comb");
         element.style.letterSpacing = `calc(${combWidth}px * var(--scale-factor) - 1ch)`;
       }
-    } altro {
-      elemento = document.createElement("div");
-      elemento.textContent = this.data.fieldValue;
+    } else {
+      element = document.createElement("div");
+      element.textContent = this.data.fieldValue;
       element.style.verticalAlign = "middle";
-      element.style.display = "cella-tabella";
+      element.style.display = "table-cell";
     }
-    this._setTextStyle(elemento);
-    this._setBackgroundColor(elemento);
-    this._setDefaultPropertiesFromJS(elemento);
-    questo.contenitore.aggiungi(elemento);
-    restituisci questo.contenitore;
+    this._setTextStyle(element);
+    this._setBackgroundColor(element);
+    this._setDefaultPropertiesFromJS(element);
+    this.container.append(element);
+    return this.container;
   }
 }
-classe SignatureWidgetAnnotationElement estende WidgetAnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
+class SignatureWidgetAnnotationElement extends WidgetAnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
       isRenderable: !!parameters.data.hasOwnCanvas
     });
   }
 }
-classe CheckboxWidgetAnnotationElement estende WidgetAnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      isRenderable: parametri.renderForms
+class CheckboxWidgetAnnotationElement extends WidgetAnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: parameters.renderForms
     });
   }
   render() {
     const storage = this.annotationStorage;
     const data = this.data;
     const id = data.id;
-    lascia valore = storage.getValue(id, {
-      valore: data.exportValue === data.fieldValue
-    }).valore;
-    se (tipo di valore === "stringa") {
-      valore = valore !== "Spento";
+    let value = storage.getValue(id, {
+      value: data.exportValue === data.fieldValue
+    }).value;
+    if (typeof value === "string") {
+      value = value !== "Off";
       storage.setValue(id, {
-        valore
+        value
       });
     }
     this.container.classList.add("buttonWidgetAnnotation", "checkBox");
-    elemento costante = document.createElement("input");
-    GetElementsByNameSet.add(elemento);
-    element.setAttribute("id-elemento-dati", id);
-    elemento.disabilitato = dati.sola lettura;
-    this._setRequired(elemento, this.data.required);
-    element.type = "casella di controllo";
-    nome.elemento = nome.campo.dati;
-    se (valore) {
-      element.setAttribute("selezionato", true);
+    const element = document.createElement("input");
+    GetElementsByNameSet.add(element);
+    element.setAttribute("data-element-id", id);
+    element.disabled = data.readOnly;
+    this._setRequired(element, this.data.required);
+    element.type = "checkbox";
+    element.name = data.fieldName;
+    if (value) {
+      element.setAttribute("checked", true);
     }
     element.setAttribute("exportValue", data.exportValue);
-    elemento.tabIndex = DEFAULT_TAB_INDEX;
-    element.addEventListener("cambia", evento => {
-      costante {
-        nome,
-        controllato
-      } = evento.target;
-      per (const checkbox di this._getElementsByName(name, id)) {
+    element.tabIndex = DEFAULT_TAB_INDEX;
+    element.addEventListener("change", event => {
+      const {
+        name,
+        checked
+      } = event.target;
+      for (const checkbox of this._getElementsByName(name, id)) {
         const curChecked = checked && checkbox.exportValue === data.exportValue;
-        se (checkbox.domElement) {
+        if (checkbox.domElement) {
           checkbox.domElement.checked = curChecked;
         }
         storage.setValue(checkbox.id, {
-          valore: curChecked
+          value: curChecked
         });
       }
       storage.setValue(id, {
-        valore: selezionato
+        value: checked
       });
     });
-    element.addEventListener("resetform", evento => {
-      const defaultValue = data.defaultFieldValue || "Spento";
-      evento.target.controllato = defaultValue === dati.exportValue;
+    element.addEventListener("resetform", event => {
+      const defaultValue = data.defaultFieldValue || "Off";
+      event.target.checked = defaultValue === data.exportValue;
     });
-    se (this.enableScripting && this.hasJSActions) {
+    if (this.enableScripting && this.hasJSActions) {
       element.addEventListener("updatefromsandbox", jsEvent => {
-        azioni costanti = {
-          valore(evento) {
-            event.target.checked = event.detail.value !== "Spento";
+        const actions = {
+          value(event) {
+            event.target.checked = event.detail.value !== "Off";
             storage.setValue(id, {
-              valore: evento.target.controllato
+              value: event.target.checked
             });
           }
         };
-        this._dispatchEventFromSandbox(azioni, jsEvent);
+        this._dispatchEventFromSandbox(actions, jsEvent);
       });
       this._setEventListeners(element, null, [["change", "Validate"], ["change", "Action"], ["focus", "Focus"], ["blur", "Blur"], ["mousedown", "Mouse Down"], ["mouseenter", "Mouse Enter"], ["mouseleave", "Mouse Exit"], ["mouseup", "Mouse Up"]], event => event.target.checked);
     }
-    this._setBackgroundColor(elemento);
-    this._setDefaultPropertiesFromJS(elemento);
-    questo.contenitore.aggiungi(elemento);
-    restituisci questo.contenitore;
+    this._setBackgroundColor(element);
+    this._setDefaultPropertiesFromJS(element);
+    this.container.append(element);
+    return this.container;
   }
 }
-class RadioButtonWidgetAnnotationElement estende WidgetAnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      isRenderable: parametri.renderForms
+class RadioButtonWidgetAnnotationElement extends WidgetAnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: parameters.renderForms
     });
   }
   render() {
@@ -15169,97 +15169,97 @@ class RadioButtonWidgetAnnotationElement estende WidgetAnnotationElement {
     const storage = this.annotationStorage;
     const data = this.data;
     const id = data.id;
-    lascia valore = storage.getValue(id, {
-      valore: data.fieldValue === data.buttonValue
-    }).valore;
-    se (tipo di valore === "stringa") {
-      valore = valore !== dati.buttonValue;
+    let value = storage.getValue(id, {
+      value: data.fieldValue === data.buttonValue
+    }).value;
+    if (typeof value === "string") {
+      value = value !== data.buttonValue;
       storage.setValue(id, {
-        valore
+        value
       });
     }
-    elemento costante = document.createElement("input");
-    GetElementsByNameSet.add(elemento);
-    element.setAttribute("id-elemento-dati", id);
-    elemento.disabilitato = dati.sola lettura;
-    this._setRequired(elemento, this.data.required);
-    elemento.tipo = "radio";
-    nome.elemento = nome.campo.dati;
-    se (valore) {
-      element.setAttribute("selezionato", true);
+    const element = document.createElement("input");
+    GetElementsByNameSet.add(element);
+    element.setAttribute("data-element-id", id);
+    element.disabled = data.readOnly;
+    this._setRequired(element, this.data.required);
+    element.type = "radio";
+    element.name = data.fieldName;
+    if (value) {
+      element.setAttribute("checked", true);
     }
-    elemento.tabIndex = DEFAULT_TAB_INDEX;
-    element.addEventListener("cambia", evento => {
-      costante {
-        nome,
-        controllato
-      } = evento.target;
-      per (const radio di this._getElementsByName(name, id)) {
+    element.tabIndex = DEFAULT_TAB_INDEX;
+    element.addEventListener("change", event => {
+      const {
+        name,
+        checked
+      } = event.target;
+      for (const radio of this._getElementsByName(name, id)) {
         storage.setValue(radio.id, {
-          valore: falso
+          value: false
         });
       }
       storage.setValue(id, {
-        valore: selezionato
+        value: checked
       });
     });
-    element.addEventListener("resetform", evento => {
+    element.addEventListener("resetform", event => {
       const defaultValue = data.defaultFieldValue;
       event.target.checked = defaultValue !== null && defaultValue !== undefined && defaultValue === data.buttonValue;
     });
-    se (this.enableScripting && this.hasJSActions) {
+    if (this.enableScripting && this.hasJSActions) {
       const pdfButtonValue = data.buttonValue;
       element.addEventListener("updatefromsandbox", jsEvent => {
-        azioni costanti = {
-          valore: evento => {
+        const actions = {
+          value: event => {
             const checked = pdfButtonValue === event.detail.value;
-            per (const radio di this._getElementsByName(event.target.name)) {
+            for (const radio of this._getElementsByName(event.target.name)) {
               const curChecked = checked && radio.id === id;
-              se (radio.domElement) {
+              if (radio.domElement) {
                 radio.domElement.checked = curChecked;
               }
               storage.setValue(radio.id, {
-                valore: curChecked
+                value: curChecked
               });
             }
           }
         };
-        this._dispatchEventFromSandbox(azioni, jsEvent);
+        this._dispatchEventFromSandbox(actions, jsEvent);
       });
       this._setEventListeners(element, null, [["change", "Validate"], ["change", "Action"], ["focus", "Focus"], ["blur", "Blur"], ["mousedown", "Mouse Down"], ["mouseenter", "Mouse Enter"], ["mouseleave", "Mouse Exit"], ["mouseup", "Mouse Up"]], event => event.target.checked);
     }
-    this._setBackgroundColor(elemento);
-    this._setDefaultPropertiesFromJS(elemento);
-    questo.contenitore.aggiungi(elemento);
-    restituisci questo.contenitore;
+    this._setBackgroundColor(element);
+    this._setDefaultPropertiesFromJS(element);
+    this.container.append(element);
+    return this.container;
   }
 }
-classe PushButtonWidgetAnnotationElement estende LinkAnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      ignoreBorder: parametri.dati.hasAppearance
+class PushButtonWidgetAnnotationElement extends LinkAnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      ignoreBorder: parameters.data.hasAppearance
     });
   }
   render() {
-    const contenitore = super.render();
-    contenitore.classList.add("buttonWidgetAnnotation", "pushButton");
-    se (questo.dati.testo alternativo) {
-      contenitore.titolo = questo.dati.testo alternativo;
+    const container = super.render();
+    container.classList.add("buttonWidgetAnnotation", "pushButton");
+    if (this.data.alternativeText) {
+      container.title = this.data.alternativeText;
     }
     const linkElement = container.lastChild;
-    se (this.enableScripting && this.hasJSActions && linkElement) {
+    if (this.enableScripting && this.hasJSActions && linkElement) {
       this._setDefaultPropertiesFromJS(linkElement);
       linkElement.addEventListener("updatefromsandbox", jsEvent => {
         this._dispatchEventFromSandbox({}, jsEvent);
       });
     }
-    restituire il contenitore;
+    return container;
   }
 }
-classe ChoiceWidgetAnnotationElement estende WidgetAnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      isRenderable: parametri.renderForms
+class ChoiceWidgetAnnotationElement extends WidgetAnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: parameters.renderForms
     });
   }
   render() {
@@ -15267,46 +15267,46 @@ classe ChoiceWidgetAnnotationElement estende WidgetAnnotationElement {
     const storage = this.annotationStorage;
     const id = this.data.id;
     const storedData = storage.getValue(id, {
-      valore: this.data.fieldValue
+      value: this.data.fieldValue
     });
     const selectElement = document.createElement("select");
     GetElementsByNameSet.add(selectElement);
-    selectElement.setAttribute("id-elemento-dati", id);
+    selectElement.setAttribute("data-element-id", id);
     selectElement.disabled = this.data.readOnly;
     this._setRequired(selectElement, this.data.required);
     selectElement.name = this.data.fieldName;
     selectElement.tabIndex = DEFAULT_TAB_INDEX;
-    lascia addAnEmptyEntry = this.data.combo && this.data.options.length > 0;
-    se (!this.data.combo) {
+    let addAnEmptyEntry = this.data.combo && this.data.options.length > 0;
+    if (!this.data.combo) {
       selectElement.size = this.data.options.length;
-      se (this.data.multiSelect) {
+      if (this.data.multiSelect) {
         selectElement.multiple = true;
       }
     }
-    selectElement.addEventListener("resetform", evento => {
+    selectElement.addEventListener("resetform", event => {
       const defaultValue = this.data.defaultFieldValue;
-      per (opzione costante di selectElement.options) {
-        opzione.selezionata = opzione.valore === valorepredefinito;
+      for (const option of selectElement.options) {
+        option.selected = option.value === defaultValue;
       }
     });
-    per (opzione costante di this.data.options) {
-      const optionElement = document.createElement("opzione");
+    for (const option of this.data.options) {
+      const optionElement = document.createElement("option");
       optionElement.textContent = option.displayValue;
       optionElement.value = option.exportValue;
-      se (storedData.value.includes(option.exportValue)) {
-        optionElement.setAttribute("selezionato", true);
+      if (storedData.value.includes(option.exportValue)) {
+        optionElement.setAttribute("selected", true);
         addAnEmptyEntry = false;
       }
       selectElement.append(optionElement);
     }
-    lascia removeEmptyEntry = null;
-    se (aggiungiUnaVoceVuota) {
-      const noneOptionElement = document.createElement("opzione");
+    let removeEmptyEntry = null;
+    if (addAnEmptyEntry) {
+      const noneOptionElement = document.createElement("option");
       noneOptionElement.value = " ";
-      noneOptionElement.setAttribute("nascosto", true);
-      noneOptionElement.setAttribute("selezionato", true);
+      noneOptionElement.setAttribute("hidden", true);
+      noneOptionElement.setAttribute("selected", true);
       selectElement.prepend(noneOptionElement);
-      rimuoviVoceVuota = () => {
+      removeEmptyEntry = () => {
         noneOptionElement.remove();
         selectElement.removeEventListener("input", removeEmptyEntry);
         removeEmptyEntry = null;
@@ -15315,960 +15315,960 @@ classe ChoiceWidgetAnnotationElement estende WidgetAnnotationElement {
     }
     const getValue = isExport => {
       const name = isExport ? "value" : "textContent";
-      costante {
-        opzioni,
-        multiplo
-      } = selezionaElemento;
-      se (!multiplo) {
-        restituisci opzioni.selectedIndex === -1 ? null : opzioni[opzioni.selectedIndex][nome];
+      const {
+        options,
+        multiple
+      } = selectElement;
+      if (!multiple) {
+        return options.selectedIndex === -1 ? null : options[options.selectedIndex][name];
       }
-      restituisci Array.prototype.filter.call(opzioni, opzione => opzione.selezionata).map(opzione => opzione[nome]);
+      return Array.prototype.filter.call(options, option => option.selected).map(option => option[name]);
     };
-    lascia che i valori selezionati = getValue(false);
-    const getItems = evento => {
-      const opzioni = evento.target.opzioni;
-      restituisci Array.prototype.map.call(opzioni, opzione => {
-        ritorno {
-          displayValue: opzione.textContent,
-          exportValue: opzione.valore
+    let selectedValues = getValue(false);
+    const getItems = event => {
+      const options = event.target.options;
+      return Array.prototype.map.call(options, option => {
+        return {
+          displayValue: option.textContent,
+          exportValue: option.value
         };
       });
     };
-    se (this.enableScripting && this.hasJSActions) {
+    if (this.enableScripting && this.hasJSActions) {
       selectElement.addEventListener("updatefromsandbox", jsEvent => {
-        azioni costanti = {
-          valore(evento) {
-            rimuoviVoceVuota?.();
-            valore costante = evento.dettaglio.valore;
-            valori costanti = nuovo Set(Array.isArray(valore) ? valore : [valore]);
-            per (opzione costante di selectElement.options) {
-              opzione.selezionata = valori.has(opzione.valore);
+        const actions = {
+          value(event) {
+            removeEmptyEntry?.();
+            const value = event.detail.value;
+            const values = new Set(Array.isArray(value) ? value : [value]);
+            for (const option of selectElement.options) {
+              option.selected = values.has(option.value);
             }
             storage.setValue(id, {
-              valore: getValue(true)
+              value: getValue(true)
             });
-            selectedValues ​​= getValue(false);
+            selectedValues = getValue(false);
           },
-          multipleSelection(evento) {
+          multipleSelection(event) {
             selectElement.multiple = true;
           },
-          rimuovi(evento) {
-            const opzioni = selectElement.options;
-            indice costante = evento.dettaglio.rimuovi;
-            opzioni[indice].selezionato = falso;
-            selectElement.remove(indice);
-            se (opzioni.lunghezza > 0) {
-              const i = Array.prototype.findIndex.call(opzioni, opzione => opzione.selezionata);
-              se (i === -1) {
-                opzioni[0].selezionato = vero;
+          remove(event) {
+            const options = selectElement.options;
+            const index = event.detail.remove;
+            options[index].selected = false;
+            selectElement.remove(index);
+            if (options.length > 0) {
+              const i = Array.prototype.findIndex.call(options, option => option.selected);
+              if (i === -1) {
+                options[0].selected = true;
               }
             }
             storage.setValue(id, {
-              valore: getValue(true),
-              elementi: getItems(evento)
+              value: getValue(true),
+              items: getItems(event)
             });
-            selectedValues ​​= getValue(false);
+            selectedValues = getValue(false);
           },
-          clear(evento) {
-            mentre (selectElement.length !== 0) {
-              selezionaElemento.rimuovi(0);
+          clear(event) {
+            while (selectElement.length !== 0) {
+              selectElement.remove(0);
             }
             storage.setValue(id, {
-              valore: nullo,
-              elementi: []
+              value: null,
+              items: []
             });
-            selectedValues ​​= getValue(false);
+            selectedValues = getValue(false);
           },
-          inserisci(evento) {
-            costante {
-              indice,
-              valore di visualizzazione,
-              valore di esportazione
-            } = evento.dettaglio.inserimento;
-            const selectChild = selectElement.children[indice];
-            const optionElement = document.createElement("opzione");
+          insert(event) {
+            const {
+              index,
+              displayValue,
+              exportValue
+            } = event.detail.insert;
+            const selectChild = selectElement.children[index];
+            const optionElement = document.createElement("option");
             optionElement.textContent = displayValue;
             optionElement.value = exportValue;
-            se (selezionaFiglio) {
+            if (selectChild) {
               selectChild.before(optionElement);
-            } altro {
+            } else {
               selectElement.append(optionElement);
             }
             storage.setValue(id, {
-              valore: getValue(true),
-              elementi: getItems(evento)
+              value: getValue(true),
+              items: getItems(event)
             });
-            selectedValues ​​= getValue(false);
+            selectedValues = getValue(false);
           },
-          elementi(evento) {
-            costante {
-              elementi
-            } = evento.dettaglio;
-            mentre (selectElement.length !== 0) {
-              selezionaElemento.rimuovi(0);
+          items(event) {
+            const {
+              items
+            } = event.detail;
+            while (selectElement.length !== 0) {
+              selectElement.remove(0);
             }
-            per (const elemento di elementi) {
-              costante {
-                valore di visualizzazione,
-                valore di esportazione
-              } = elemento;
-              const optionElement = document.createElement("opzione");
+            for (const item of items) {
+              const {
+                displayValue,
+                exportValue
+              } = item;
+              const optionElement = document.createElement("option");
               optionElement.textContent = displayValue;
               optionElement.value = exportValue;
               selectElement.append(optionElement);
             }
-            se (selectElement.options.length > 0) {
+            if (selectElement.options.length > 0) {
               selectElement.options[0].selected = true;
             }
             storage.setValue(id, {
-              valore: getValue(true),
-              elementi: getItems(evento)
+              value: getValue(true),
+              items: getItems(event)
             });
-            selectedValues ​​= getValue(false);
+            selectedValues = getValue(false);
           },
-          indici(evento) {
-            const indici = new Set(event.detail.indices);
-            per (opzione costante di event.target.options) {
-              opzione.selezionata = indices.has(opzione.indice);
+          indices(event) {
+            const indices = new Set(event.detail.indices);
+            for (const option of event.target.options) {
+              option.selected = indices.has(option.index);
             }
             storage.setValue(id, {
-              valore: getValue(true)
+              value: getValue(true)
             });
-            selectedValues ​​= getValue(false);
+            selectedValues = getValue(false);
           },
-          modificabile(evento) {
-            evento.target.disabled = !evento.dettaglio.modificabile;
+          editable(event) {
+            event.target.disabled = !event.detail.editable;
           }
         };
-        this._dispatchEventFromSandbox(azioni, jsEvent);
+        this._dispatchEventFromSandbox(actions, jsEvent);
       });
-      selectElement.addEventListener("input", evento => {
+      selectElement.addEventListener("input", event => {
         const exportValue = getValue(true);
         storage.setValue(id, {
-          valore: exportValue
+          value: exportValue
         });
-        evento.prevenzioneDefault();
+        event.preventDefault();
         this.linkService.eventBus?.dispatch("dispatcheventinsandbox", {
-          fonte: questo,
-          dettaglio: {
+          source: this,
+          detail: {
             id,
-            nome: "battitura di tasti",
-            valore: valoriselezionati,
+            name: "Keystroke",
+            value: selectedValues,
             changeEx: exportValue,
-            willCommit: falso,
+            willCommit: false,
             commitKey: 1,
-            tastoGiù: falso
+            keyDown: false
           }
         });
       });
-      this._setEventListeners(selectElement, null, [["focus", "Focus"], ["blur", "Sfocatura"], ["mousedown", "Mouse giù"], ["mouseenter", "Invio mouse"], ["mouseleave", "Esci mouse"], ["mouseup", "Mouse su"], ["input", "Azione"], ["input", "Convalida"]], event => event.target.value);
-    } altro {
-      selectElement.addEventListener("input", funzione (evento) {
+      this._setEventListeners(selectElement, null, [["focus", "Focus"], ["blur", "Blur"], ["mousedown", "Mouse Down"], ["mouseenter", "Mouse Enter"], ["mouseleave", "Mouse Exit"], ["mouseup", "Mouse Up"], ["input", "Action"], ["input", "Validate"]], event => event.target.value);
+    } else {
+      selectElement.addEventListener("input", function (event) {
         storage.setValue(id, {
-          valore: getValue(true)
+          value: getValue(true)
         });
       });
     }
-    se (questo.data.combo) {
+    if (this.data.combo) {
       this._setTextStyle(selectElement);
-    } altro {}
+    } else {}
     this._setBackgroundColor(selectElement);
     this._setDefaultPropertiesFromJS(selectElement);
-    questo.contenitore.append(selectElement);
-    restituisci questo.contenitore;
+    this.container.append(selectElement);
+    return this.container;
   }
 }
-classe PopupAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    costante {
-      dati,
-      elementi
-    } = parametri;
-    super(parametri, {
-      isRenderable: AnnotationElement._hasPopupData(dati)
+class PopupAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    const {
+      data,
+      elements
+    } = parameters;
+    super(parameters, {
+      isRenderable: AnnotationElement._hasPopupData(data)
     });
-    this.elements = elementi;
+    this.elements = elements;
   }
   render() {
     this.container.classList.add("popupAnnotation");
     const popup = new PopupElement({
-      contenitore: questo.contenitore,
-      colore: questo.dati.colore,
-      titleObj: questo.dato.titleObj,
-      datadimodifica: questo.dato.datadimodifica,
-      contentsObj: questo.dati.contentsObj,
-      richText: questo.dati.richText,
-      rect: questo.dato.rect,
-      parentRect: questo.dati.parentRect || null,
-      genitore: questo.genitore,
-      elementi: questo.elementi,
-      aperto: questo.dati.apri
+      container: this.container,
+      color: this.data.color,
+      titleObj: this.data.titleObj,
+      modificationDate: this.data.modificationDate,
+      contentsObj: this.data.contentsObj,
+      richText: this.data.richText,
+      rect: this.data.rect,
+      parentRect: this.data.parentRect || null,
+      parent: this.parent,
+      elements: this.elements,
+      open: this.data.open
     });
     const elementIds = [];
-    per (elemento costante di this.elements) {
-      elemento.popup = popup;
-      elementIds.push(elemento.data.id);
-      elemento.addHighlightArea();
+    for (const element of this.elements) {
+      element.popup = popup;
+      elementIds.push(element.data.id);
+      element.addHighlightArea();
     }
     this.container.setAttribute("aria-controls", elementIds.map(id => `${_util.AnnotationPrefix}${id}`).join(","));
-    restituisci questo.contenitore;
+    return this.container;
   }
 }
-classe PopupElement {
+class PopupElement {
   #dateTimePromise = null;
   #boundKeyDown = this.#keyDown.bind(this);
-  #boundHide = questo.#hide.bind(questo);
+  #boundHide = this.#hide.bind(this);
   #boundShow = this.#show.bind(this);
-  #boundToggle = questo.#toggle.bind(questo);
-  #colore = null;
-  #contenitore = null;
+  #boundToggle = this.#toggle.bind(this);
+  #color = null;
+  #container = null;
   #contentsObj = null;
-  #elementi = null;
-  #genitore = null;
+  #elements = null;
+  #parent = null;
   #parentRect = null;
-  #pinned = falso;
+  #pinned = false;
   #popup = null;
   #rect = null;
   #richText = null;
   #titleObj = null;
   #wasVisible = false;
-  costruttore({
-    contenitore,
-    colore,
-    elementi,
-    titoloObj,
-    data di modifica,
-    contenutiObj,
-    RichText,
-    genitore,
-    dritto,
+  constructor({
+    container,
+    color,
+    elements,
+    titleObj,
+    modificationDate,
+    contentsObj,
+    richText,
+    parent,
+    rect,
     parentRect,
-    aprire
+    open
   }) {
-    questo.#contenitore = contenitore;
-    questo.#titleObj = titleObj;
-    questo.#contentsObj = contentsObj;
-    questo.#richText = richText;
-    questo.#genitore = genitore;
-    questo.#colore = colore;
-    questo.#rect = rect;
-    questo.#parentRect = parentRect;
-    questo.#elementi = elementi;
+    this.#container = container;
+    this.#titleObj = titleObj;
+    this.#contentsObj = contentsObj;
+    this.#richText = richText;
+    this.#parent = parent;
+    this.#color = color;
+    this.#rect = rect;
+    this.#parentRect = parentRect;
+    this.#elements = elements;
     const dateObject = _display_utils.PDFDateString.toDateObject(modificationDate);
-    se (dateObject) {
-      questo.#dateTimePromise = parent.l10n.get("annotation_date_string", {
-        data: dateObject.toLocaleDateString(),
-        ora: dateObject.toLocaleTimeString()
+    if (dateObject) {
+      this.#dateTimePromise = parent.l10n.get("annotation_date_string", {
+        date: dateObject.toLocaleDateString(),
+        time: dateObject.toLocaleTimeString()
       });
     }
     this.trigger = elements.flatMap(e => e.getElementsToTriggerPopup());
-    per (elemento costante di this.trigger) {
-      element.addEventListener("clic", this.#boundToggle);
+    for (const element of this.trigger) {
+      element.addEventListener("click", this.#boundToggle);
       element.addEventListener("mouseenter", this.#boundShow);
       element.addEventListener("mouseleave", this.#boundHide);
       element.classList.add("popupTriggerArea");
     }
-    per (elemento costante di elementi) {
+    for (const element of elements) {
       element.container?.addEventListener("keydown", this.#boundKeyDown);
     }
-    questo.#contenitore.nascosto = vero;
-    se (aperto) {
-      questo.#toggle();
+    this.#container.hidden = true;
+    if (open) {
+      this.#toggle();
     }
   }
   render() {
-    se (questo.#popup) {
-      ritorno;
+    if (this.#popup) {
+      return;
     }
-    costante {
-      pagina: {
-        visualizzazione
+    const {
+      page: {
+        view
       },
-      finestra di visualizzazione: {
+      viewport: {
         rawDims: {
-          Larghezza pagina,
-          altezza della pagina,
-          paginaX,
-          paginaY
+          pageWidth,
+          pageHeight,
+          pageX,
+          pageY
         }
       }
-    } = questo.#genitore;
+    } = this.#parent;
     const popup = this.#popup = document.createElement("div");
     popup.className = "popup";
-    se (questo.#colore) {
+    if (this.#color) {
       const baseColor = popup.style.outlineColor = _util.Util.makeHexColor(...this.#color);
-      if (CSS.supports("background-color", "color-mix(in srgb, rosso 30%, bianco)")) {
-        popup.style.backgroundColor = `color-mix(in srgb, ${baseColor} 30%, bianco)`;
-      } altro {
+      if (CSS.supports("background-color", "color-mix(in srgb, red 30%, white)")) {
+        popup.style.backgroundColor = `color-mix(in srgb, ${baseColor} 30%, white)`;
+      } else {
         const BACKGROUND_ENLIGHT = 0.7;
         popup.style.backgroundColor = _util.Util.makeHexColor(...this.#color.map(c => Math.floor(BACKGROUND_ENLIGHT * (255 - c) + c)));
       }
     }
     const header = document.createElement("span");
-    header.className = "intestazione";
-    const titolo = document.createElement("h1");
-    intestazione.append(titolo);
+    header.className = "header";
+    const title = document.createElement("h1");
+    header.append(title);
     ({
-      dir: titolo.dir,
-      str: titolo.testoContenuto
-    } = questo.#titleObj);
-    popup.append(intestazione);
-    se (questo.#dateTimePromise) {
+      dir: title.dir,
+      str: title.textContent
+    } = this.#titleObj);
+    popup.append(header);
+    if (this.#dateTimePromise) {
       const modificationDate = document.createElement("span");
       modificationDate.classList.add("popupDate");
-      questo.#dateTimePromise.then(localizzato => {
-        modificationDate.textContent = localizzato;
+      this.#dateTimePromise.then(localized => {
+        modificationDate.textContent = localized;
       });
-      header.append(datadimodifica);
+      header.append(modificationDate);
     }
     const contentsObj = this.#contentsObj;
     const richText = this.#richText;
-    se (richText?.str && (!contentsObj?.str || contentsObj.str === richText.str)) {
+    if (richText?.str && (!contentsObj?.str || contentsObj.str === richText.str)) {
       _xfa_layer.XfaLayer.render({
         xfaHtml: richText.html,
-        intento: "richText",
+        intent: "richText",
         div: popup
       });
       popup.lastChild.classList.add("richText", "popupContent");
-    } altro {
-      const contenuti = this._formatContents(contentsObj);
-      popup.append(contenuto);
+    } else {
+      const contents = this._formatContents(contentsObj);
+      popup.append(contents);
     }
-    lascia che useParentRect = !!this.#parentRect;
-    lascia rect = usaParentRect ? questo.#parentRect : questo.#rect;
-    per (elemento costante di questo.#elementi) {
-      se (!rect || _util.Util.intersect(element.data.rect, rect) !== null) {
-        rect = elemento.dati.rect;
+    let useParentRect = !!this.#parentRect;
+    let rect = useParentRect ? this.#parentRect : this.#rect;
+    for (const element of this.#elements) {
+      if (!rect || _util.Util.intersect(element.data.rect, rect) !== null) {
+        rect = element.data.rect;
         useParentRect = true;
-        rottura;
+        break;
       }
     }
     const normalizedRect = _util.Util.normalizeRect([rect[0], view[3] - rect[1] + view[1], rect[2], view[3] - rect[3] + view[1]]);
-    const SPAZIO_ORIZZONTALE_DOPO_ANNOTAZIONE = 5;
+    const HORIZONTAL_SPACE_AFTER_ANNOTATION = 5;
     const parentWidth = useParentRect ? rect[2] - rect[0] + HORIZONTAL_SPACE_AFTER_ANNOTATION : 0;
     const popupLeft = normalizedRect[0] + parentWidth;
     const popupTop = normalizedRect[1];
-    costante {
-      stile
-    } = questo.#contenitore;
+    const {
+      style
+    } = this.#container;
     style.left = `${100 * (popupLeft - pageX) / pageWidth}%`;
     style.top = `${100 * (popupTop - pageY) / pageHeight}%`;
-    questo.#contenitore.append(popup);
+    this.#container.append(popup);
   }
   _formatContents({
     str,
-    direzione
+    dir
   }) {
     const p = document.createElement("p");
     p.classList.add("popupContent");
     p.dir = dir;
-    linee costanti = str.split(/(?:\r\n?|\n)/);
-    per (lascia che i = 0, ii = lunghezza linee; i < ii; ++i) {
+    const lines = str.split(/(?:\r\n?|\n)/);
+    for (let i = 0, ii = lines.length; i < ii; ++i) {
       const line = lines[i];
       p.append(document.createTextNode(line));
-      se (i < ii - 1) {
+      if (i < ii - 1) {
         p.append(document.createElement("br"));
       }
     }
-    restituisci p;
+    return p;
   }
-  #keyDown(evento) {
-    se (evento.altKey || evento.shiftKey || evento.ctrlKey || evento.metaKey) {
-      ritorno;
+  #keyDown(event) {
+    if (event.altKey || event.shiftKey || event.ctrlKey || event.metaKey) {
+      return;
     }
-    if (event.key === "Invio" || event.key === "Esc" && this.#pinned) {
-      questo.#toggle();
-    }
-  }
-  #attiva() {
-    questo.#pinned = !questo.#pinned;
-    se (questo.#bloccato) {
-      questo.#mostra();
-      questo.#container.addEventListener("clic", questo.#boundToggle);
-      questo.#container.addEventListener("keydown", questo.#boundKeyDown);
-    } altro {
-      questo.#nascondi();
-      questo.#container.removeEventListener("clic", questo.#boundToggle);
-      questo.#container.removeEventListener("keydown", questo.#boundKeyDown);
+    if (event.key === "Enter" || event.key === "Escape" && this.#pinned) {
+      this.#toggle();
     }
   }
-  #spettacolo() {
-    se (!questo.#popup) {
-      questo.render();
-    }
-    se (!questo.èVisibile) {
-      questo.#contenitore.nascosto = falso;
-      questo.#container.style.zIndex = parseInt(questo.#container.style.zIndex) + 1000;
-    } altrimenti se (questo.#bloccato) {
-      questo.#container.classList.add("focalizzato");
+  #toggle() {
+    this.#pinned = !this.#pinned;
+    if (this.#pinned) {
+      this.#show();
+      this.#container.addEventListener("click", this.#boundToggle);
+      this.#container.addEventListener("keydown", this.#boundKeyDown);
+    } else {
+      this.#hide();
+      this.#container.removeEventListener("click", this.#boundToggle);
+      this.#container.removeEventListener("keydown", this.#boundKeyDown);
     }
   }
-  #nascondere() {
-    questo.#container.classList.remove("focalizzato");
-    se (questo.#bloccato || !questo.èVisibile) {
-      ritorno;
+  #show() {
+    if (!this.#popup) {
+      this.render();
     }
-    questo.#contenitore.nascosto = vero;
-    questo.#container.style.zIndex = parseInt(questo.#container.style.zIndex) - 1000;
-  }
-  forzaNascondi() {
-    questo.#eraVisibile = questo.èVisibile;
-    se (!questo.#eraVisibile) {
-      ritorno;
+    if (!this.isVisible) {
+      this.#container.hidden = false;
+      this.#container.style.zIndex = parseInt(this.#container.style.zIndex) + 1000;
+    } else if (this.#pinned) {
+      this.#container.classList.add("focused");
     }
-    questo.#contenitore.nascosto = vero;
   }
-  forseMostra() {
-    se (!questo.#eraVisibile) {
-      ritorno;
+  #hide() {
+    this.#container.classList.remove("focused");
+    if (this.#pinned || !this.isVisible) {
+      return;
     }
-    questo.#wasVisible = false;
-    questo.#contenitore.nascosto = falso;
+    this.#container.hidden = true;
+    this.#container.style.zIndex = parseInt(this.#container.style.zIndex) - 1000;
   }
-  ottieni isVisible() {
-    restituisci questo.#container.hidden === false;
+  forceHide() {
+    this.#wasVisible = this.isVisible;
+    if (!this.#wasVisible) {
+      return;
+    }
+    this.#container.hidden = true;
+  }
+  maybeShow() {
+    if (!this.#wasVisible) {
+      return;
+    }
+    this.#wasVisible = false;
+    this.#container.hidden = false;
+  }
+  get isVisible() {
+    return this.#container.hidden === false;
   }
 }
-classe FreeTextAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero
+class FreeTextAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true
     });
-    questo.textContent = parametri.dati.textContent;
-    this.textPosition = parametri.dati.textPosition;
+    this.textContent = parameters.data.textContent;
+    this.textPosition = parameters.data.textPosition;
     this.annotationEditorType = _util.AnnotationEditorType.FREETEXT;
   }
   render() {
     this.container.classList.add("freeTextAnnotation");
-    se (questo.testoContenuto) {
-      contenuto costante = document.createElement("div");
-      contenuto.classList.add("annotationTextContent");
-      content.setAttribute("ruolo", "commento");
-      per (riga costante di this.textContent) {
+    if (this.textContent) {
+      const content = document.createElement("div");
+      content.classList.add("annotationTextContent");
+      content.setAttribute("role", "comment");
+      for (const line of this.textContent) {
         const lineSpan = document.createElement("span");
-        lineSpan.textContent = riga;
-        contenuto.append(lineSpan);
+        lineSpan.textContent = line;
+        content.append(lineSpan);
       }
-      questo.contenitore.aggiungi(contenuto);
+      this.container.append(content);
     }
-    se (!this.data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    if (!this.data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
-    questo._editOnDoubleClick();
-    restituisci questo.contenitore;
+    this._editOnDoubleClick();
+    return this.container;
   }
 }
-esportazioni.FreeTextAnnotationElement = FreeTextAnnotationElement;
-classe LineAnnotationElement estende AnnotationElement {
+exports.FreeTextAnnotationElement = FreeTextAnnotationElement;
+class LineAnnotationElement extends AnnotationElement {
   #line = null;
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true
     });
   }
   render() {
     this.container.classList.add("lineAnnotation");
     const data = this.data;
-    costante {
-      larghezza,
-      altezza
+    const {
+      width,
+      height
     } = getRectDims(data.rect);
-    const svg = this.svgFactory.create(larghezza, altezza, true);
+    const svg = this.svgFactory.create(width, height, true);
     const line = this.#line = this.svgFactory.createElement("svg:line");
-    riga.setAttribute("x1", dati.rect[2] - dati.lineCoordinates[0]);
-    riga.setAttribute("y1", dati.rect[3] - dati.lineCoordinates[1]);
-    riga.setAttribute("x2", dati.rect[2] - dati.lineCoordinates[2]);
-    riga.setAttribute("y2", dati.rect[3] - dati.lineCoordinates[3]);
-    line.setAttribute("larghezza-tratto", data.borderStyle.width || 1);
-    line.setAttribute("stroke", "trasparente");
-    line.setAttribute("riempimento", "trasparente");
-    svg.append(linea);
-    questo.contenitore.aggiungi(svg);
-    se (!data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    line.setAttribute("x1", data.rect[2] - data.lineCoordinates[0]);
+    line.setAttribute("y1", data.rect[3] - data.lineCoordinates[1]);
+    line.setAttribute("x2", data.rect[2] - data.lineCoordinates[2]);
+    line.setAttribute("y2", data.rect[3] - data.lineCoordinates[3]);
+    line.setAttribute("stroke-width", data.borderStyle.width || 1);
+    line.setAttribute("stroke", "transparent");
+    line.setAttribute("fill", "transparent");
+    svg.append(line);
+    this.container.append(svg);
+    if (!data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
-    restituisci questo.contenitore;
+    return this.container;
   }
   getElementsToTriggerPopup() {
-    restituisci questo.#line;
+    return this.#line;
   }
-  aggiungiEvidenziaArea() {
+  addHighlightArea() {
     this.container.classList.add("highlightArea");
   }
 }
-classe SquareAnnotationElement estende AnnotationElement {
-  #quadrato = nullo;
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero
+class SquareAnnotationElement extends AnnotationElement {
+  #square = null;
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true
     });
   }
   render() {
     this.container.classList.add("squareAnnotation");
     const data = this.data;
-    costante {
-      larghezza,
-      altezza
+    const {
+      width,
+      height
     } = getRectDims(data.rect);
-    const svg = this.svgFactory.create(larghezza, altezza, true);
+    const svg = this.svgFactory.create(width, height, true);
     const borderWidth = data.borderStyle.width;
-    const quadrato = questo.#quadrato = questo.svgFactory.createElement("svg:rect");
+    const square = this.#square = this.svgFactory.createElement("svg:rect");
     square.setAttribute("x", borderWidth / 2);
     square.setAttribute("y", borderWidth / 2);
-    square.setAttribute("larghezza", larghezza - borderWidth);
-    square.setAttribute("altezza", altezza - larghezzadelbordo);
-    square.setAttribute("larghezza-tratto", borderWidth || 1);
-    square.setAttribute("stroke", "trasparente");
-    square.setAttribute("riempimento", "trasparente");
-    svg.append(quadrato);
-    questo.contenitore.aggiungi(svg);
-    se (!data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    square.setAttribute("width", width - borderWidth);
+    square.setAttribute("height", height - borderWidth);
+    square.setAttribute("stroke-width", borderWidth || 1);
+    square.setAttribute("stroke", "transparent");
+    square.setAttribute("fill", "transparent");
+    svg.append(square);
+    this.container.append(svg);
+    if (!data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
-    restituisci questo.contenitore;
+    return this.container;
   }
   getElementsToTriggerPopup() {
-    restituisci questo.#square;
+    return this.#square;
   }
-  aggiungiEvidenziaArea() {
+  addHighlightArea() {
     this.container.classList.add("highlightArea");
   }
 }
-classe CircleAnnotationElement estende AnnotationElement {
-  #cerchio = null;
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero
+class CircleAnnotationElement extends AnnotationElement {
+  #circle = null;
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true
     });
   }
   render() {
     this.container.classList.add("circleAnnotation");
     const data = this.data;
-    costante {
-      larghezza,
-      altezza
+    const {
+      width,
+      height
     } = getRectDims(data.rect);
-    const svg = this.svgFactory.create(larghezza, altezza, true);
+    const svg = this.svgFactory.create(width, height, true);
     const borderWidth = data.borderStyle.width;
     const circle = this.#circle = this.svgFactory.createElement("svg:ellipse");
-    circle.setAttribute("cx", larghezza / 2);
-    circle.setAttribute("cy", altezza / 2);
-    circle.setAttribute("rx", larghezza / 2 - larghezzadelbordo / 2);
-    circle.setAttribute("ry", altezza / 2 - larghezza bordo / 2);
-    circle.setAttribute("larghezza-tratto", borderWidth || 1);
-    circle.setAttribute("stroke", "trasparente");
-    circle.setAttribute("riempimento", "trasparente");
-    svg.append(cerchio);
-    questo.contenitore.aggiungi(svg);
-    se (!data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    circle.setAttribute("cx", width / 2);
+    circle.setAttribute("cy", height / 2);
+    circle.setAttribute("rx", width / 2 - borderWidth / 2);
+    circle.setAttribute("ry", height / 2 - borderWidth / 2);
+    circle.setAttribute("stroke-width", borderWidth || 1);
+    circle.setAttribute("stroke", "transparent");
+    circle.setAttribute("fill", "transparent");
+    svg.append(circle);
+    this.container.append(svg);
+    if (!data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
-    restituisci questo.contenitore;
+    return this.container;
   }
   getElementsToTriggerPopup() {
-    restituisci questo.#cerchio;
+    return this.#circle;
   }
-  aggiungiEvidenziaArea() {
+  addHighlightArea() {
     this.container.classList.add("highlightArea");
   }
 }
-classe PolylineAnnotationElement estende AnnotationElement {
-  #polilinea = null;
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero
+class PolylineAnnotationElement extends AnnotationElement {
+  #polyline = null;
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true
     });
     this.containerClassName = "polylineAnnotation";
-    this.svgElementName = "svg:polilinea";
+    this.svgElementName = "svg:polyline";
   }
   render() {
-    questo.contenitore.elencoclassi.aggiungi(questo.nomeclassecontainer);
+    this.container.classList.add(this.containerClassName);
     const data = this.data;
-    costante {
-      larghezza,
-      altezza
+    const {
+      width,
+      height
     } = getRectDims(data.rect);
-    const svg = this.svgFactory.create(larghezza, altezza, true);
-    lascia punti = [];
-    per (coordinata costante di dati.vertici) {
+    const svg = this.svgFactory.create(width, height, true);
+    let points = [];
+    for (const coordinate of data.vertices) {
       const x = coordinate.x - data.rect[0];
       const y = data.rect[3] - coordinate.y;
-      punti.push(x + "," + y);
+      points.push(x + "," + y);
     }
-    punti = punti.join(" ");
+    points = points.join(" ");
     const polyline = this.#polyline = this.svgFactory.createElement(this.svgElementName);
-    polyline.setAttribute("punti", punti);
-    polyline.setAttribute("larghezza-tratto", data.borderStyle.width || 1);
-    polyline.setAttribute("stroke", "trasparente");
-    polyline.setAttribute("riempimento", "trasparente");
-    svg.append(polilinea);
-    questo.contenitore.aggiungi(svg);
-    se (!data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    polyline.setAttribute("points", points);
+    polyline.setAttribute("stroke-width", data.borderStyle.width || 1);
+    polyline.setAttribute("stroke", "transparent");
+    polyline.setAttribute("fill", "transparent");
+    svg.append(polyline);
+    this.container.append(svg);
+    if (!data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
-    restituisci questo.contenitore;
+    return this.container;
   }
   getElementsToTriggerPopup() {
-    restituisci questo.#polyline;
+    return this.#polyline;
   }
-  aggiungiEvidenziaArea() {
+  addHighlightArea() {
     this.container.classList.add("highlightArea");
   }
 }
-classe PolygonAnnotationElement estende PolylineAnnotationElement {
-  costruttore(parametri) {
-    super(parametri);
+class PolygonAnnotationElement extends PolylineAnnotationElement {
+  constructor(parameters) {
+    super(parameters);
     this.containerClassName = "polygonAnnotation";
-    this.svgElementName = "svg:poligono";
+    this.svgElementName = "svg:polygon";
   }
 }
-classe CaretAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero
+class CaretAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true
     });
   }
   render() {
     this.container.classList.add("caretAnnotation");
-    se (!this.data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    if (!this.data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
-    restituisci questo.contenitore;
+    return this.container;
   }
 }
-classe InkAnnotationElement estende AnnotationElement {
-  #polilinee = [];
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero
+class InkAnnotationElement extends AnnotationElement {
+  #polylines = [];
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true
     });
     this.containerClassName = "inkAnnotation";
-    this.svgElementName = "svg:polilinea";
-    questo.tipo di editor di annotazioni = _util.tipo di editor di annotazioni.INK;
+    this.svgElementName = "svg:polyline";
+    this.annotationEditorType = _util.AnnotationEditorType.INK;
   }
   render() {
-    questo.contenitore.elencoclassi.aggiungi(questo.nomeclassecontainer);
+    this.container.classList.add(this.containerClassName);
     const data = this.data;
-    costante {
-      larghezza,
-      altezza
+    const {
+      width,
+      height
     } = getRectDims(data.rect);
-    const svg = this.svgFactory.create(larghezza, altezza, true);
-    per (const inkList di data.inkLists) {
-      lascia punti = [];
-      per (coordinata costante di inkList) {
+    const svg = this.svgFactory.create(width, height, true);
+    for (const inkList of data.inkLists) {
+      let points = [];
+      for (const coordinate of inkList) {
         const x = coordinate.x - data.rect[0];
         const y = data.rect[3] - coordinate.y;
-        punti.push(`${x},${y}`);
+        points.push(`${x},${y}`);
       }
-      punti = punti.join(" ");
+      points = points.join(" ");
       const polyline = this.svgFactory.createElement(this.svgElementName);
-      questo.#polilinee.push(polilinea);
-      polyline.setAttribute("punti", punti);
-      polyline.setAttribute("larghezza-tratto", data.borderStyle.width || 1);
-      polyline.setAttribute("stroke", "trasparente");
-      polyline.setAttribute("riempimento", "trasparente");
-      se (!data.popupRef && this.hasPopupData) {
-        questo._creaPopup();
+      this.#polylines.push(polyline);
+      polyline.setAttribute("points", points);
+      polyline.setAttribute("stroke-width", data.borderStyle.width || 1);
+      polyline.setAttribute("stroke", "transparent");
+      polyline.setAttribute("fill", "transparent");
+      if (!data.popupRef && this.hasPopupData) {
+        this._createPopup();
       }
-      svg.append(polilinea);
+      svg.append(polyline);
     }
-    questo.contenitore.aggiungi(svg);
-    restituisci questo.contenitore;
+    this.container.append(svg);
+    return this.container;
   }
   getElementsToTriggerPopup() {
-    restituisci questo.#polilinee;
+    return this.#polylines;
   }
-  aggiungiEvidenziaArea() {
+  addHighlightArea() {
     this.container.classList.add("highlightArea");
   }
 }
-esportazioni.InkAnnotationElement = InkAnnotationElement;
-classe HighlightAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero,
+exports.InkAnnotationElement = InkAnnotationElement;
+class HighlightAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true,
       createQuadrilaterals: true
     });
   }
   render() {
-    se (!this.data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    if (!this.data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
     this.container.classList.add("highlightAnnotation");
-    restituisci questo.contenitore;
+    return this.container;
   }
 }
-classe UnderlineAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero,
+class UnderlineAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true,
       createQuadrilaterals: true
     });
   }
   render() {
-    se (!this.data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    if (!this.data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
     this.container.classList.add("underlineAnnotation");
-    restituisci questo.contenitore;
+    return this.container;
   }
 }
-classe SquigglyAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero,
+class SquigglyAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true,
       createQuadrilaterals: true
     });
   }
   render() {
-    se (!this.data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    if (!this.data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
     this.container.classList.add("squigglyAnnotation");
-    restituisci questo.contenitore;
+    return this.container;
   }
 }
-classe StrikeOutAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero,
+class StrikeOutAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true,
       createQuadrilaterals: true
     });
   }
   render() {
-    se (!this.data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    if (!this.data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
     this.container.classList.add("strikeoutAnnotation");
-    restituisci questo.contenitore;
+    return this.container;
   }
 }
-classe StampAnnotationElement estende AnnotationElement {
-  costruttore(parametri) {
-    super(parametri, {
-      èRenderizzabile: vero,
-      ignoreBorder: vero
+class StampAnnotationElement extends AnnotationElement {
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true,
+      ignoreBorder: true
     });
   }
   render() {
     this.container.classList.add("stampAnnotation");
-    se (!this.data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
+    if (!this.data.popupRef && this.hasPopupData) {
+      this._createPopup();
     }
-    restituisci questo.contenitore;
+    return this.container;
   }
 }
-esportazioni.StampAnnotationElement = StampAnnotationElement;
-classe FileAttachmentAnnotationElement estende AnnotationElement {
+exports.StampAnnotationElement = StampAnnotationElement;
+class FileAttachmentAnnotationElement extends AnnotationElement {
   #trigger = null;
-  costruttore(parametri) {
-    super(parametri, {
-      isRenderable: vero
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: true
     });
-    costante {
-      nome del file,
-      contenuto
-    } = questo.file.dati;
+    const {
+      filename,
+      content
+    } = this.data.file;
     this.filename = (0, _display_utils.getFilenameFromUrl)(filename, true);
-    questo.contenuto = contenuto;
+    this.content = content;
     this.linkService.eventBus?.dispatch("fileattachmentannotation", {
-      fonte: questo,
-      nome del file,
-      contenuto
+      source: this,
+      filename,
+      content
     });
   }
   render() {
     this.container.classList.add("fileAttachmentAnnotation");
-    costante {
-      contenitore,
-      dati
-    } = questo;
-    lascia innescare;
-    se (data.hasAppearance || data.fillAlpha === 0) {
+    const {
+      container,
+      data
+    } = this;
+    let trigger;
+    if (data.hasAppearance || data.fillAlpha === 0) {
       trigger = document.createElement("div");
-    } altro {
+    } else {
       trigger = document.createElement("img");
-      trigger.src = `${this.imageResourcesPath}annotation-${/paperclip/i.test(data.name) ? "graffetta" : "puntina da disegno"}.svg`;
-      se (data.fillAlpha && data.fillAlpha < 1) {
+      trigger.src = `${this.imageResourcesPath}annotation-${/paperclip/i.test(data.name) ? "paperclip" : "pushpin"}.svg`;
+      if (data.fillAlpha && data.fillAlpha < 1) {
         trigger.style = `filter: opacity(${Math.round(data.fillAlpha * 100)}%);`;
       }
     }
     trigger.addEventListener("dblclick", this.#download.bind(this));
-    questo.#trigger = trigger;
-    costante {
-      èMac
+    this.#trigger = trigger;
+    const {
+      isMac
     } = _util.FeatureTest.platform;
-    contenitore.addEventListener("keydown", evt => {
-      if (evt.key === "Invio" && (isMac ? evt.metaKey : evt.ctrlKey)) {
-        questo.#scarica();
+    container.addEventListener("keydown", evt => {
+      if (evt.key === "Enter" && (isMac ? evt.metaKey : evt.ctrlKey)) {
+        this.#download();
       }
     });
-    se (!data.popupRef && this.hasPopupData) {
-      questo._creaPopup();
-    } altro {
+    if (!data.popupRef && this.hasPopupData) {
+      this._createPopup();
+    } else {
       trigger.classList.add("popupTriggerArea");
     }
-    contenitore.append(trigger);
-    restituire il contenitore;
+    container.append(trigger);
+    return container;
   }
   getElementsToTriggerPopup() {
-    restituisci questo.#trigger;
+    return this.#trigger;
   }
-  aggiungiEvidenziaArea() {
+  addHighlightArea() {
     this.container.classList.add("highlightArea");
   }
-  #scaricamento() {
+  #download() {
     this.downloadManager?.openOrDownloadData(this.container, this.content, this.filename);
   }
 }
-classe AnnotationLayer {
+class AnnotationLayer {
   #accessibilityManager = null;
   #annotationCanvasMap = null;
-  #editableAnnotations = nuova mappa();
-  costruttore({
-    divisione,
-    responsabile dell'accessibilità,
-    annotazioneCanvasMap,
+  #editableAnnotations = new Map();
+  constructor({
+    div,
+    accessibilityManager,
+    annotationCanvasMap,
     l10n,
-    pagina,
-    finestra
+    page,
+    viewport
   }) {
-    questo.div = div;
-    questo.#accessibilityManager = accessibilityManager;
-    questo.#annotationCanvasMap = annotationCanvasMap;
-    questo.l10n = l10n;
-    this.page = pagina;
-    this.viewport = finestra di visualizzazione;
-    questo.zIndex = 0;
-    questo.l10n ||= _displayL10n_utils.NullL10n;
+    this.div = div;
+    this.#accessibilityManager = accessibilityManager;
+    this.#annotationCanvasMap = annotationCanvasMap;
+    this.l10n = l10n;
+    this.page = page;
+    this.viewport = viewport;
+    this.zIndex = 0;
+    this.l10n ||= _displayL10n_utils.NullL10n;
   }
-  #appendElement(elemento, id) {
-    const contentElement = element.firstChild || elemento;
+  #appendElement(element, id) {
+    const contentElement = element.firstChild || element;
     contentElement.id = `${_util.AnnotationPrefix}${id}`;
-    this.div.append(elemento);
-    questo.#accessibilityManager?.moveElementInDOM(questo.div, elemento, contentElement, false);
+    this.div.append(element);
+    this.#accessibilityManager?.moveElementInDOM(this.div, element, contentElement, false);
   }
-  rendering asincrono (parametri) {
-    costante {
-      annotazioni
-    } = parametri;
+  async render(params) {
+    const {
+      annotations
+    } = params;
     const layer = this.div;
     (0, _display_utils.setLayerDimensions)(layer, this.viewport);
     const popupToElements = new Map();
     const elementParams = {
-      dati: nulli,
-      strato,
+      data: null,
+      layer,
       linkService: params.linkService,
       downloadManager: params.downloadManager,
       imageResourcesPath: params.imageResourcesPath || "",
       renderForms: params.renderForms !== false,
-      svgFactory: nuovo _display_utils.DOMSVGFactory(),
-      annotationStorage: params.annotationStorage || nuovo _annotation_storage.AnnotationStorage(),
+      svgFactory: new _display_utils.DOMSVGFactory(),
+      annotationStorage: params.annotationStorage || new _annotation_storage.AnnotationStorage(),
       enableScripting: params.enableScripting === true,
-      haJSActions: params.hasJSActions,
+      hasJSActions: params.hasJSActions,
       fieldObjects: params.fieldObjects,
-      genitore: questo,
-      elementi: null
+      parent: this,
+      elements: null
     };
-    per (dati costanti delle annotazioni) {
-      se (data.noHTML) {
-        continuare;
+    for (const data of annotations) {
+      if (data.noHTML) {
+        continue;
       }
       const isPopupAnnotation = data.annotationType === _util.AnnotationType.POPUP;
-      se (!isPopupAnnotation) {
-        costante {
-          larghezza,
-          altezza
+      if (!isPopupAnnotation) {
+        const {
+          width,
+          height
         } = getRectDims(data.rect);
-        se (larghezza <= 0 || altezza <= 0) {
-          continuare;
+        if (width <= 0 || height <= 0) {
+          continue;
         }
-      } altro {
-        elementi costanti = popupToElements.get(data.id);
-        se (!elementi) {
-          continuare;
+      } else {
+        const elements = popupToElements.get(data.id);
+        if (!elements) {
+          continue;
         }
-        elementParams.elements = elementi;
+        elementParams.elements = elements;
       }
-      elementParams.data = dati;
-      elemento costante = AnnotationElementFactory.create(elementParams);
-      se (!element.isRenderable) {
-        continuare;
+      elementParams.data = data;
+      const element = AnnotationElementFactory.create(elementParams);
+      if (!element.isRenderable) {
+        continue;
       }
-      se (!isPopupAnnotation && data.popupRef) {
-        elementi costanti = popupToElements.get(data.popupRef);
-        se (!elementi) {
-          popupToElements.set(data.popupRef, [elemento]);
-        } altro {
-          elementi.push(elemento);
+      if (!isPopupAnnotation && data.popupRef) {
+        const elements = popupToElements.get(data.popupRef);
+        if (!elements) {
+          popupToElements.set(data.popupRef, [element]);
+        } else {
+          elements.push(element);
         }
       }
-      se (elemento.annotazioneEditorType > 0) {
-        questo.#editableAnnotations.set(element.data.id, element);
+      if (element.annotationEditorType > 0) {
+        this.#editableAnnotations.set(element.data.id, element);
       }
       const rendered = element.render();
-      se (dati.nascosti) {
-        rendered.style.visibility = "nascosto";
+      if (data.hidden) {
+        rendered.style.visibility = "hidden";
       }
-      questo.#appendElement(renderizzato, dati.id);
+      this.#appendElement(rendered, data.id);
     }
-    questo.#setAnnotationCanvasMap();
-    attendi questo.l10n.translate(layer);
+    this.#setAnnotationCanvasMap();
+    await this.l10n.translate(layer);
   }
-  aggiornamento({
-    finestra
+  update({
+    viewport
   }) {
     const layer = this.div;
-    this.viewport = finestra di visualizzazione;
-    (0, _display_utils.setLayerDimensions)(strato, {
-      rotazione: viewport.rotation
+    this.viewport = viewport;
+    (0, _display_utils.setLayerDimensions)(layer, {
+      rotation: viewport.rotation
     });
-    questo.#setAnnotationCanvasMap();
+    this.#setAnnotationCanvasMap();
     layer.hidden = false;
   }
   #setAnnotationCanvasMap() {
-    se (!this.#annotationCanvasMap) {
-      ritorno;
+    if (!this.#annotationCanvasMap) {
+      return;
     }
     const layer = this.div;
-    per (const [id, canvas] di questo.#annotationCanvasMap) {
-      elemento costante = layer.querySelector(`[data-annotation-id="${id}"]`);
-      se (!elemento) {
-        continuare;
+    for (const [id, canvas] of this.#annotationCanvasMap) {
+      const element = layer.querySelector(`[data-annotation-id="${id}"]`);
+      if (!element) {
+        continue;
       }
-      costante {
-        primo bambino
-      } = elemento;
-      se (!primofiglio) {
-        elemento.append(canvas);
-      } altrimenti se (firstChild.nodeName === "CANVAS") {
+      const {
+        firstChild
+      } = element;
+      if (!firstChild) {
+        element.append(canvas);
+      } else if (firstChild.nodeName === "CANVAS") {
         firstChild.replaceWith(canvas);
-      } altro {
+      } else {
         firstChild.before(canvas);
       }
     }
-    questo.#annotazioneCanvasMap.clear();
+    this.#annotationCanvasMap.clear();
   }
   getEditableAnnotations() {
-    restituisci Array.from(this.#editableAnnotations.values());
+    return Array.from(this.#editableAnnotations.values());
   }
   getEditableAnnotation(id) {
-    restituisci questo.#editableAnnotations.get(id);
+    return this.#editableAnnotations.get(id);
   }
 }
-esportazioni.AnnotationLayer = AnnotationLayer;
+exports.AnnotationLayer = AnnotationLayer;
 
 /***/ }),
 /* 30 */
@@ -16276,68 +16276,68 @@ esportazioni.AnnotationLayer = AnnotationLayer;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.ColorConverters = void 0;
-funzione makeColorComp(n) {
-  restituisci Math.floor(Math.max(0, Math.min(1, n)) * 255).toString(16).padStart(2, "0");
+exports.ColorConverters = void 0;
+function makeColorComp(n) {
+  return Math.floor(Math.max(0, Math.min(1, n)) * 255).toString(16).padStart(2, "0");
 }
-funzione scaleAndClamp(x) {
-  restituisci Math.max(0, Math.min(255, 255 * x));
+function scaleAndClamp(x) {
+  return Math.max(0, Math.min(255, 255 * x));
 }
-classe ColorConverters {
-  statico CMYK_G([c, y, m, k]) {
-    ritorno ["G", 1 - Math.min(1, 0,3 * c + 0,59 * m + 0,11 * y + k)];
+class ColorConverters {
+  static CMYK_G([c, y, m, k]) {
+    return ["G", 1 - Math.min(1, 0.3 * c + 0.59 * m + 0.11 * y + k)];
   }
-  statico G_CMYK([g]) {
-    ritorno ["CMYK", 0, 0, 0, 1 - g];
+  static G_CMYK([g]) {
+    return ["CMYK", 0, 0, 0, 1 - g];
   }
-  statico G_RGB([g]) {
-    ritorno ["RGB", g, g, g];
+  static G_RGB([g]) {
+    return ["RGB", g, g, g];
   }
-  statico G_rgb([g]) {
-    g = scalaEMorsetto(g);
-    ritorno [g, g, g];
+  static G_rgb([g]) {
+    g = scaleAndClamp(g);
+    return [g, g, g];
   }
-  statico G_HTML([g]) {
+  static G_HTML([g]) {
     const G = makeColorComp(g);
-    restituisci `#${G}${G}${G}`;
+    return `#${G}${G}${G}`;
   }
-  statico RGB_G([r, g, b]) {
-    ritorno ["G", 0,3 * r + 0,59 * g + 0,11 * b];
+  static RGB_G([r, g, b]) {
+    return ["G", 0.3 * r + 0.59 * g + 0.11 * b];
   }
-  statico RGB_rgb(colore) {
-    restituisci color.map(scaleAndClamp);
+  static RGB_rgb(color) {
+    return color.map(scaleAndClamp);
   }
-  statico RGB_HTML(colore) {
-    restituisci `#${color.map(makeColorComp).join("")}`;
+  static RGB_HTML(color) {
+    return `#${color.map(makeColorComp).join("")}`;
   }
-  statico T_HTML() {
-    restituisci "#00000000";
+  static T_HTML() {
+    return "#00000000";
   }
-  statico T_rgb() {
-    ritorno [null];
+  static T_rgb() {
+    return [null];
   }
-  statico CMYK_RGB([c, y, m, k]) {
-    ritorno ["RGB", 1 - Math.min(1, c + k), 1 - Math.min(1, m + k), 1 - Math.min(1, y + k)];
+  static CMYK_RGB([c, y, m, k]) {
+    return ["RGB", 1 - Math.min(1, c + k), 1 - Math.min(1, m + k), 1 - Math.min(1, y + k)];
   }
-  statico CMYK_rgb([c, y, m, k]) {
-    ritorna [scaleAndClamp(1 - Math.min(1, c + k)), scaleAndClamp(1 - Math.min(1, m + k)), scaleAndClamp(1 - Math.min(1, y + k))];
+  static CMYK_rgb([c, y, m, k]) {
+    return [scaleAndClamp(1 - Math.min(1, c + k)), scaleAndClamp(1 - Math.min(1, m + k)), scaleAndClamp(1 - Math.min(1, y + k))];
   }
-  statico CMYK_HTML(componenti) {
-    const rgb = this.CMYK_RGB(componenti).slice(1);
-    restituisci questo.RGB_HTML(rgb);
+  static CMYK_HTML(components) {
+    const rgb = this.CMYK_RGB(components).slice(1);
+    return this.RGB_HTML(rgb);
   }
-  statico RGB_CMYK([r, g, b]) {
-    costante c = 1 - r;
-    costante m = 1 - g;
-    costante y = 1 - b;
+  static RGB_CMYK([r, g, b]) {
+    const c = 1 - r;
+    const m = 1 - g;
+    const y = 1 - b;
     const k = Math.min(c, m, y);
-    ritorno ["CMYK", c, m, y, k];
+    return ["CMYK", c, m, y, k];
   }
 }
-esportazioni.ColorConverters = ColorConverters;
+exports.ColorConverters = ColorConverters;
 
 /***/ }),
 /* 31 */
@@ -16345,97 +16345,97 @@ esportazioni.ColorConverters = ColorConverters;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.NullL10n = void 0;
-esportazioni.getL10nFallback = getL10nFallback;
+exports.NullL10n = void 0;
+exports.getL10nFallback = getL10nFallback;
 const DEFAULT_L10N_STRINGS = {
-  of_pages: "di {{pagesCount}}",
-  page_of_pages: "({{pageNumber}} di {{pagesCount}})",
-  document_properties_kb: "{{size_kb}} KB ({{size_b}} byte)",
-  document_properties_mb: "{{size_mb}} MB ({{size_b}} byte)",
-  document_properties_date_string: "{{data}}, {{ora}}",
+  of_pages: "of {{pagesCount}}",
+  page_of_pages: "({{pageNumber}} of {{pagesCount}})",
+  document_properties_kb: "{{size_kb}} KB ({{size_b}} bytes)",
+  document_properties_mb: "{{size_mb}} MB ({{size_b}} bytes)",
+  document_properties_date_string: "{{date}}, {{time}}",
   document_properties_page_size_unit_inches: "in",
   document_properties_page_size_unit_millimeters: "mm",
-  document_properties_page_size_orientation_portrait: "ritratto",
-  document_properties_page_size_orientation_landscape: "paesaggio",
+  document_properties_page_size_orientation_portrait: "portrait",
+  document_properties_page_size_orientation_landscape: "landscape",
   document_properties_page_size_name_a3: "A3",
   document_properties_page_size_name_a4: "A4",
-  document_properties_page_size_name_letter: "Lettera",
-  document_properties_page_size_name_legal: "Legale",
-  document_properties_page_size_dimension_string: "{{larghezza}} × {{altezza}} {{unità}} ({{orientamento}})",
+  document_properties_page_size_name_letter: "Letter",
+  document_properties_page_size_name_legal: "Legal",
+  document_properties_page_size_dimension_string: "{{width}} × {{height}} {{unit}} ({{orientation}})",
   document_properties_page_size_dimension_name_string: "{{width}} × {{height}} {{unit}} ({{name}}, {{orientation}})",
-  document_properties_linearized_yes: "Sì",
+  document_properties_linearized_yes: "Yes",
   document_properties_linearized_no: "No",
-  additional_layers: "Livelli aggiuntivi",
-  page_landmark: "Pagina {{page}}",
-  thumb_page_title: "Pagina {{page}}",
-  thumb_page_canvas: "Miniatura della pagina {{page}}",
-  find_reached_top: "Raggiunto l'inizio del documento, continua dal basso",
-  find_reached_bottom: "Raggiunta la fine del documento, continua dall'inizio",
-  "find_match_count[one]": "{{current}} di {{total}} corrispondenze",
-  "find_match_count[other]": "{{current}} di {{total}} corrispondenze",
-  "find_match_count_limit[one]": "Più di {{limit}} corrispondenze",
-  "find_match_count_limit[other]": "Più di {{limit}} corrispondenze",
-  find_not_found: "Frase non trovata",
-  page_scale_width: "Larghezza pagina",
-  page_scale_fit: "Adattamento pagina",
-  page_scale_auto: "Zoom automatico",
-  page_scale_actual: "Dimensioni reali",
-  page_scale_percent: "{{scala}}%",
-  loading_error: "Si è verificato un errore durante il caricamento del PDF.",
-  invalid_file_error: "File PDF non valido o danneggiato.",
-  missing_file_error: "File PDF mancante.",
-  unexpected_response_error: "Risposta imprevista del server.",
-  rendering_error: "Si è verificato un errore durante il rendering della pagina.",
-  annotation_date_string: "{{data}}, {{ora}}",
-  printing_not_supported: "Attenzione: la stampa non è completamente supportata da questo browser.",
-  printing_not_ready: "Attenzione: il PDF non è completamente caricato per la stampa.",
-  web_fonts_disabled: "I font Web sono disabilitati: impossibile utilizzare i font PDF incorporati.",
-  free_text2_default_content: "Inizia a digitare...",
-  editor_free_text2_aria_label: "Editor di testo",
-  editor_ink2_aria_label: "Editor di disegno",
-  editor_ink_canvas_aria_label: "Immagine creata dall'utente",
-  editor_alt_text_button_label: "Testo alternativo",
-  editor_alt_text_edit_button_label: "Modifica testo alternativo",
-  editor_alt_text_decorative_tooltip: "Contrassegnato come decorativo"
+  additional_layers: "Additional Layers",
+  page_landmark: "Page {{page}}",
+  thumb_page_title: "Page {{page}}",
+  thumb_page_canvas: "Thumbnail of Page {{page}}",
+  find_reached_top: "Reached top of document, continued from bottom",
+  find_reached_bottom: "Reached end of document, continued from top",
+  "find_match_count[one]": "{{current}} of {{total}} match",
+  "find_match_count[other]": "{{current}} of {{total}} matches",
+  "find_match_count_limit[one]": "More than {{limit}} match",
+  "find_match_count_limit[other]": "More than {{limit}} matches",
+  find_not_found: "Phrase not found",
+  page_scale_width: "Page Width",
+  page_scale_fit: "Page Fit",
+  page_scale_auto: "Automatic Zoom",
+  page_scale_actual: "Actual Size",
+  page_scale_percent: "{{scale}}%",
+  loading_error: "An error occurred while loading the PDF.",
+  invalid_file_error: "Invalid or corrupted PDF file.",
+  missing_file_error: "Missing PDF file.",
+  unexpected_response_error: "Unexpected server response.",
+  rendering_error: "An error occurred while rendering the page.",
+  annotation_date_string: "{{date}}, {{time}}",
+  printing_not_supported: "Warning: Printing is not fully supported by this browser.",
+  printing_not_ready: "Warning: The PDF is not fully loaded for printing.",
+  web_fonts_disabled: "Web fonts are disabled: unable to use embedded PDF fonts.",
+  free_text2_default_content: "Start typing…",
+  editor_free_text2_aria_label: "Text Editor",
+  editor_ink2_aria_label: "Draw Editor",
+  editor_ink_canvas_aria_label: "User-created image",
+  editor_alt_text_button_label: "Alt text",
+  editor_alt_text_edit_button_label: "Edit alt text",
+  editor_alt_text_decorative_tooltip: "Marked as decorative"
 };
 {
   DEFAULT_L10N_STRINGS.print_progress_percent = "{{progress}}%";
 }
-funzione getL10nFallback(chiave, argomenti) {
-  interruttore (chiave) {
-    caso "find_match_count":
-      chiave = `find_match_count[${args.total === 1 ? "uno" : "altro"}]`;
-      rottura;
-    caso "find_match_count_limit":
-      chiave = `find_match_count_limit[${args.limit === 1 ? "uno" : "altro"}]`;
-      rottura;
+function getL10nFallback(key, args) {
+  switch (key) {
+    case "find_match_count":
+      key = `find_match_count[${args.total === 1 ? "one" : "other"}]`;
+      break;
+    case "find_match_count_limit":
+      key = `find_match_count_limit[${args.limit === 1 ? "one" : "other"}]`;
+      break;
   }
-  restituisci DEFAULT_L10N_STRINGS[chiave] || "";
+  return DEFAULT_L10N_STRINGS[key] || "";
 }
-funzione formatL10nValue(testo, argomenti) {
-  se (!arg) {
-    restituisci il testo;
+function formatL10nValue(text, args) {
+  if (!args) {
+    return text;
   }
-  restituisci text.replaceAll(/\{\{\s*(\w+)\s*\}\}/g, (tutto, nome) => {
-    restituisci il nome in args ? args[name] : "{{" + name + "}}";
+  return text.replaceAll(/\{\{\s*(\w+)\s*\}\}/g, (all, name) => {
+    return name in args ? args[name] : "{{" + name + "}}";
   });
 }
-costante NullL10n = {
-  asincrono getLanguage() {
-    restituisci "en-us";
+const NullL10n = {
+  async getLanguage() {
+    return "en-us";
   },
-  getDirection() asincrono {
-    restituisci "ltr";
+  async getDirection() {
+    return "ltr";
   },
-  async get(chiave, argomenti = null, fallback = getL10nFallback(chiave, argomenti)) {
-    restituisci formatL10nValue(fallback, argomenti);
+  async get(key, args = null, fallback = getL10nFallback(key, args)) {
+    return formatL10nValue(fallback, args);
   },
-  async translate(elemento) {}
+  async translate(element) {}
 };
-esportazioni.NullL10n = NullL10n;
+exports.NullL10n = NullL10n;
 
 /***/ }),
 /* 32 */
@@ -16443,207 +16443,207 @@ esportazioni.NullL10n = NullL10n;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.XfaLayer = void 0;
+exports.XfaLayer = void 0;
 var _xfa_text = __w_pdfjs_require__(25);
-classe XfaLayer {
-  static setupStorage(html, id, elemento, storage, intent) {
+class XfaLayer {
+  static setupStorage(html, id, element, storage, intent) {
     const storedData = storage.getValue(id, {
-      valore: nullo
+      value: null
     });
-    switch (nome elemento) {
-      caso "textarea":
-        se (storedData.value !== null) {
-          html.textContent = memorizzatiData.valore;
+    switch (element.name) {
+      case "textarea":
+        if (storedData.value !== null) {
+          html.textContent = storedData.value;
         }
-        se (intento === "stampa") {
-          rottura;
+        if (intent === "print") {
+          break;
         }
-        html.addEventListener("input", evento => {
+        html.addEventListener("input", event => {
           storage.setValue(id, {
-            valore: evento.valore.destinazione
+            value: event.target.value
           });
         });
-        rottura;
-      caso "input":
-        se (element.attributes.type === "radio" || element.attributes.type === "checkbox") {
-          se (storedData.value === element.attributes.xfaOn) {
-            html.setAttribute("selezionato", true);
-          } altrimenti se (storedData.value === element.attributes.xfaOff) {
-            html.removeAttribute("selezionato");
+        break;
+      case "input":
+        if (element.attributes.type === "radio" || element.attributes.type === "checkbox") {
+          if (storedData.value === element.attributes.xfaOn) {
+            html.setAttribute("checked", true);
+          } else if (storedData.value === element.attributes.xfaOff) {
+            html.removeAttribute("checked");
           }
-          se (intento === "stampa") {
-            rottura;
+          if (intent === "print") {
+            break;
           }
-          html.addEventListener("cambiamento", evento => {
+          html.addEventListener("change", event => {
             storage.setValue(id, {
-              valore: event.target.checked ? event.target.getAttribute("xfaOn") : event.target.getAttribute("xfaOff")
+              value: event.target.checked ? event.target.getAttribute("xfaOn") : event.target.getAttribute("xfaOff")
             });
           });
-        } altro {
-          se (storedData.value !== null) {
-            html.setAttribute("valore", storedData.value);
+        } else {
+          if (storedData.value !== null) {
+            html.setAttribute("value", storedData.value);
           }
-          se (intento === "stampa") {
-            rottura;
+          if (intent === "print") {
+            break;
           }
-          html.addEventListener("input", evento => {
+          html.addEventListener("input", event => {
             storage.setValue(id, {
-              valore: evento.valore.destinazione
+              value: event.target.value
             });
           });
         }
-        rottura;
-      caso "seleziona":
-        se (storedData.value !== null) {
-          html.setAttribute("valore", storedData.value);
-          per (opzione const di element.children) {
-            se (opzione.attributi.valore === storedData.valore) {
-              opzione.attributi.selezionati = vero;
-            } altrimenti se (option.attributes.hasOwnProperty("selezionato")) {
-              elimina opzione.attributi.selezionati;
+        break;
+      case "select":
+        if (storedData.value !== null) {
+          html.setAttribute("value", storedData.value);
+          for (const option of element.children) {
+            if (option.attributes.value === storedData.value) {
+              option.attributes.selected = true;
+            } else if (option.attributes.hasOwnProperty("selected")) {
+              delete option.attributes.selected;
             }
           }
         }
-        html.addEventListener("input", evento => {
-          const opzioni = evento.target.opzioni;
-          valore costante = opzioni.indiceselezionato === -1 ? "" : opzioni[opzioni.indiceselezionato].valore;
+        html.addEventListener("input", event => {
+          const options = event.target.options;
+          const value = options.selectedIndex === -1 ? "" : options[options.selectedIndex].value;
           storage.setValue(id, {
-            valore
+            value
           });
         });
-        rottura;
+        break;
     }
   }
-  setAttributes statico({
+  static setAttributes({
     html,
-    elemento,
-    archiviazione = null,
-    intento,
+    element,
+    storage = null,
+    intent,
     linkService
   }) {
-    costante {
-      attributi
-    } = elemento;
+    const {
+      attributes
+    } = element;
     const isHTMLAnchorElement = html instanceof HTMLAnchorElement;
-    se (attributi.tipo === "radio") {
-      attributi.nome = `${attributi.nome}-${intento}`;
+    if (attributes.type === "radio") {
+      attributes.name = `${attributes.name}-${intent}`;
     }
-    per (const [chiave, valore] di Object.entries(attributi)) {
-      se (valore === null || valore === indefinito) {
-        continuare;
+    for (const [key, value] of Object.entries(attributes)) {
+      if (value === null || value === undefined) {
+        continue;
       }
-      interruttore (chiave) {
-        caso "classe":
-          se (valore.lunghezza) {
-            html.setAttribute(chiave, valore.join(" "));
+      switch (key) {
+        case "class":
+          if (value.length) {
+            html.setAttribute(key, value.join(" "));
           }
-          rottura;
-        caso "dataId":
-          rottura;
-        caso "id":
-          html.setAttribute("id-elemento-dati", valore);
-          rottura;
-        caso "stile":
-          Oggetto.assegna(html.stile, valore);
-          rottura;
-        caso "textContent":
-          html.textContent = valore;
-          rottura;
-        predefinito:
-          se (!isHTMLAnchorElement || chiave !== "href" && chiave !== "nuovaFinestra") {
-            html.setAttribute(chiave, valore);
+          break;
+        case "dataId":
+          break;
+        case "id":
+          html.setAttribute("data-element-id", value);
+          break;
+        case "style":
+          Object.assign(html.style, value);
+          break;
+        case "textContent":
+          html.textContent = value;
+          break;
+        default:
+          if (!isHTMLAnchorElement || key !== "href" && key !== "newWindow") {
+            html.setAttribute(key, value);
           }
       }
     }
-    se (isHTMLAnchorElement) {
-      linkService.addLinkAttributes(html, attributi.href, attributi.newWindow);
+    if (isHTMLAnchorElement) {
+      linkService.addLinkAttributes(html, attributes.href, attributes.newWindow);
     }
-    se (archiviazione e attributi.dataId) {
+    if (storage && attributes.dataId) {
       this.setupStorage(html, attributes.dataId, element, storage);
     }
   }
-  rendering statico(parametri) {
-    const storage = parametri.annotazioneStorage;
-    const linkService = parametri.linkService;
-    const root = parametri.xfaHtml;
-    const intent = parametri.intent || "visualizza";
+  static render(parameters) {
+    const storage = parameters.annotationStorage;
+    const linkService = parameters.linkService;
+    const root = parameters.xfaHtml;
+    const intent = parameters.intent || "display";
     const rootHtml = document.createElement(root.name);
-    se (root.attributi ) {
-      questo.setAttributes({
-        html: radiceHtml,
-        elemento: radice,
-        intento,
+    if (root.attributes) {
+      this.setAttributes({
+        html: rootHtml,
+        element: root,
+        intent,
         linkService
       });
     }
     const stack = [[root, -1, rootHtml]];
-    const rootDiv = parametri.div;
+    const rootDiv = parameters.div;
     rootDiv.append(rootHtml);
-    se (parametri.viewport) {
+    if (parameters.viewport) {
       const transform = `matrix(${parameters.viewport.transform.join(",")})`;
-      rootDiv.style.transform = trasforma;
+      rootDiv.style.transform = transform;
     }
-    se (intento !== "richText") {
-      rootDiv.setAttribute("classe", "xfaLayer xfaFont");
+    if (intent !== "richText") {
+      rootDiv.setAttribute("class", "xfaLayer xfaFont");
     }
     const textDivs = [];
-    mentre (lunghezza pila > 0) {
-      const [genitore, i, html] = stack.at(-1);
-      se (i + 1 === lunghezza genitori.figli) {
-        pila.pop();
-        continuare;
+    while (stack.length > 0) {
+      const [parent, i, html] = stack.at(-1);
+      if (i + 1 === parent.children.length) {
+        stack.pop();
+        continue;
       }
-      const figlio = genitore.figli[++stack.at(-1)[1]];
-      se (figlio === null) {
-        continuare;
+      const child = parent.children[++stack.at(-1)[1]];
+      if (child === null) {
+        continue;
       }
-      costante {
-        nome
-      } = bambino;
-      se (nome === "#testo") {
+      const {
+        name
+      } = child;
+      if (name === "#text") {
         const node = document.createTextNode(child.value);
-        textDivs.push(nodo);
-        html.append(nodo);
-        continuare;
+        textDivs.push(node);
+        html.append(node);
+        continue;
       }
       const childHtml = child?.attributes?.xmlns ? document.createElementNS(child.attributes.xmlns, name) : document.createElement(name);
       html.append(childHtml);
-      se (child.attributes) {
-        questo.setAttributes({
+      if (child.attributes) {
+        this.setAttributes({
           html: childHtml,
-          elemento: bambino,
-          magazzinaggio,
-          intento,
+          element: child,
+          storage,
+          intent,
           linkService
         });
       }
-      se (bambino.bambini e bambino.bambini.lunghezza > 0) {
-        stack.push([figlio, -1, figlioHtml]);
-      } altrimenti se (valore.figlio) {
+      if (child.children && child.children.length > 0) {
+        stack.push([child, -1, childHtml]);
+      } else if (child.value) {
         const node = document.createTextNode(child.value);
-        se (_xfa_text.XfaText.shouldBuildText(nome)) {
-          textDivs.push(nodo);
+        if (_xfa_text.XfaText.shouldBuildText(name)) {
+          textDivs.push(node);
         }
-        childHtml.append(nodo);
+        childHtml.append(node);
       }
     }
-    per (const el di rootDiv.querySelectorAll(".xfaNonInteractive input, .xfaNonInteractive textarea")) {
+    for (const el of rootDiv.querySelectorAll(".xfaNonInteractive input, .xfaNonInteractive textarea")) {
       el.setAttribute("readOnly", true);
     }
-    ritorno {
+    return {
       textDivs
     };
   }
-  aggiornamento statico (parametri) {
+  static update(parameters) {
     const transform = `matrix(${parameters.viewport.transform.join(",")})`;
-    parametri.div.stile.trasformazione = trasforma;
-    parametri.div.nascosto = falso;
+    parameters.div.style.transform = transform;
+    parameters.div.hidden = false;
   }
 }
-esportazioni.XfaLayer = XfaLayer;
+exports.XfaLayer = XfaLayer;
 
 /***/ }),
 /* 33 */
@@ -16651,759 +16651,759 @@ esportazioni.XfaLayer = XfaLayer;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.InkEditor = void 0;
+exports.InkEditor = void 0;
 var _util = __w_pdfjs_require__(1);
 var _editor = __w_pdfjs_require__(4);
 var _annotation_layer = __w_pdfjs_require__(29);
 var _display_utils = __w_pdfjs_require__(6);
 var _tools = __w_pdfjs_require__(5);
-classe InkEditor estende _editor.AnnotationEditor {
+class InkEditor extends _editor.AnnotationEditor {
   #baseHeight = 0;
   #baseWidth = 0;
   #boundCanvasPointermove = this.canvasPointermove.bind(this);
   #boundCanvasPointerleave = this.canvasPointerleave.bind(this);
   #boundCanvasPointerup = this.canvasPointerup.bind(this);
   #boundCanvasPointerdown = this.canvasPointerdown.bind(this);
-  #currentPath2D = nuovo Path2D();
+  #currentPath2D = new Path2D();
   #disableEditing = false;
   #hasSomethingToDraw = false;
   #isCanvasInitialized = false;
-  #osservatore = null;
-  #larghezzareale = 0;
-  #altezzareale = 0;
+  #observer = null;
+  #realWidth = 0;
+  #realHeight = 0;
   #requestFrameCallback = null;
-  statico _defaultColor = null;
-  statico _defaultOpacity = 1;
-  statico _defaultThickness = 1;
-  static _type = "inchiostro";
-  costruttore(parametri) {
+  static _defaultColor = null;
+  static _defaultOpacity = 1;
+  static _defaultThickness = 1;
+  static _type = "ink";
+  constructor(params) {
     super({
-      ...parametri,
-      nome: "inkEditor"
+      ...params,
+      name: "inkEditor"
     });
-    questo.colore = parametri.colore || null;
-    questo.spessore = parametri.spessore || null;
+    this.color = params.color || null;
+    this.thickness = params.thickness || null;
     this.opacity = params.opacity || null;
-    questo.percorsi = [];
-    questo.bezierPath2D = [];
-    questo.tutti i percorsi grezzi = [];
-    questo.percorsocorrente = [];
-    questo.fattore di scala = 1;
-    questa.traduzioneX = questa.traduzioneY = 0;
-    questo.x = 0;
-    questo.y = 0;
+    this.paths = [];
+    this.bezierPath2D = [];
+    this.allRawPaths = [];
+    this.currentPath = [];
+    this.scaleFactor = 1;
+    this.translationX = this.translationY = 0;
+    this.x = 0;
+    this.y = 0;
     this._willKeepAspectRatio = true;
   }
-  inizializzazione statica (l10n) {
+  static initialize(l10n) {
     _editor.AnnotationEditor.initialize(l10n, {
-      stringhe: ["editor_ink_canvas_aria_label", "editor_ink2_aria_label"]
+      strings: ["editor_ink_canvas_aria_label", "editor_ink2_aria_label"]
     });
   }
-  static updateDefaultParams(tipo, valore) {
-    interruttore (tipo) {
-      caso _util.AnnotationEditorParamsType.INK_THICKNESS:
-        InkEditor._defaultThickness = valore;
-        rottura;
-      caso _util.AnnotationEditorParamsType.INK_COLOR:
-        InkEditor._defaultColor = valore;
-        rottura;
-      caso _util.AnnotationEditorParamsType.INK_OPACITY:
-        InkEditor._defaultOpacity = valore / 100;
-        rottura;
+  static updateDefaultParams(type, value) {
+    switch (type) {
+      case _util.AnnotationEditorParamsType.INK_THICKNESS:
+        InkEditor._defaultThickness = value;
+        break;
+      case _util.AnnotationEditorParamsType.INK_COLOR:
+        InkEditor._defaultColor = value;
+        break;
+      case _util.AnnotationEditorParamsType.INK_OPACITY:
+        InkEditor._defaultOpacity = value / 100;
+        break;
     }
   }
-  updateParams(tipo, valore) {
-    interruttore (tipo) {
-      caso _util.AnnotationEditorParamsType.INK_THICKNESS:
-        questo.#updateThickness(valore);
-        rottura;
-      caso _util.AnnotationEditorParamsType.INK_COLOR:
-        questo.#updateColor(valore);
-        rottura;
-      caso _util.AnnotationEditorParamsType.INK_OPACITY:
-        questo.#updateOpacity(valore);
-        rottura;
+  updateParams(type, value) {
+    switch (type) {
+      case _util.AnnotationEditorParamsType.INK_THICKNESS:
+        this.#updateThickness(value);
+        break;
+      case _util.AnnotationEditorParamsType.INK_COLOR:
+        this.#updateColor(value);
+        break;
+      case _util.AnnotationEditorParamsType.INK_OPACITY:
+        this.#updateOpacity(value);
+        break;
     }
   }
-  statico ottieni defaultPropertiesToUpdate() {
-    restituisci [[_util.AnnotationEditorParamsType.INK_THICKNESS, InkEditor._defaultThickness], [_util.AnnotationEditorParamsType.INK_COLOR, InkEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor], [_util.AnnotationEditorParamsType.INK_OPACITY, Math.round(InkEditor._defaultOpacity * 100)]];
+  static get defaultPropertiesToUpdate() {
+    return [[_util.AnnotationEditorParamsType.INK_THICKNESS, InkEditor._defaultThickness], [_util.AnnotationEditorParamsType.INK_COLOR, InkEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor], [_util.AnnotationEditorParamsType.INK_OPACITY, Math.round(InkEditor._defaultOpacity * 100)]];
   }
-  ottieni propertiesToUpdate() {
-    restituisci [[_util.AnnotationEditorParamsType.INK_THICKNESS, this.thickness || InkEditor._defaultThickness], [_util.AnnotationEditorParamsType.INK_COLOR, this.color || InkEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor], [_util.AnnotationEditorParamsType.INK_OPACITY, Math.round(100 * (this.opacity ?? InkEditor._defaultOpacity))]];
+  get propertiesToUpdate() {
+    return [[_util.AnnotationEditorParamsType.INK_THICKNESS, this.thickness || InkEditor._defaultThickness], [_util.AnnotationEditorParamsType.INK_COLOR, this.color || InkEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor], [_util.AnnotationEditorParamsType.INK_OPACITY, Math.round(100 * (this.opacity ?? InkEditor._defaultOpacity))]];
   }
-  #updateThickness(spessore) {
+  #updateThickness(thickness) {
     const savedThickness = this.thickness;
-    questo.aggiungiComandi({
-      comando: () => {
-        questo.spessore = spessore;
-        questo.#fitToContent();
+    this.addCommands({
+      cmd: () => {
+        this.thickness = thickness;
+        this.#fitToContent();
       },
-      annulla: () => {
-        questo.spessore = salvatoSpessore;
-        questo.#fitToContent();
+      undo: () => {
+        this.thickness = savedThickness;
+        this.#fitToContent();
       },
-      mustExec: vero,
-      tipo: _util.AnnotationEditorParamsType.INK_THICKNESS,
-      sovrascriviSeSameType: vero,
-      keepUndo: vero
+      mustExec: true,
+      type: _util.AnnotationEditorParamsType.INK_THICKNESS,
+      overwriteIfSameType: true,
+      keepUndo: true
     });
   }
-  #updateColor(colore) {
+  #updateColor(color) {
     const savedColor = this.color;
-    questo.aggiungiComandi({
-      comando: () => {
-        questo.colore = colore;
-        questo.#ridisegna();
+    this.addCommands({
+      cmd: () => {
+        this.color = color;
+        this.#redraw();
       },
-      annulla: () => {
-        questo.colore = colore salvato;
-        questo.#ridisegna();
+      undo: () => {
+        this.color = savedColor;
+        this.#redraw();
       },
-      mustExec: vero,
-      tipo: _util.AnnotationEditorParamsType.INK_COLOR,
-      sovrascriviSeSameType: vero,
-      keepUndo: vero
+      mustExec: true,
+      type: _util.AnnotationEditorParamsType.INK_COLOR,
+      overwriteIfSameType: true,
+      keepUndo: true
     });
   }
-  #updateOpacity(opacità) {
-    opacità /= 100;
+  #updateOpacity(opacity) {
+    opacity /= 100;
     const savedOpacity = this.opacity;
-    questo.aggiungiComandi({
-      comando: () => {
-        this.opacity = opacità;
-        questo.#ridisegna();
+    this.addCommands({
+      cmd: () => {
+        this.opacity = opacity;
+        this.#redraw();
       },
-      annulla: () => {
+      undo: () => {
         this.opacity = savedOpacity;
-        questo.#ridisegna();
+        this.#redraw();
       },
-      mustExec: vero,
-      tipo: _util.AnnotationEditorParamsType.INK_OPACITY,
-      sovrascriviSeSameType: vero,
-      keepUndo: vero
+      mustExec: true,
+      type: _util.AnnotationEditorParamsType.INK_OPACITY,
+      overwriteIfSameType: true,
+      keepUndo: true
     });
   }
-  ricostruisci() {
-    se (!questo.genitore) {
-      ritorno;
+  rebuild() {
+    if (!this.parent) {
+      return;
     }
-    super.ricostruzione();
-    se (this.div === null) {
-      ritorno;
+    super.rebuild();
+    if (this.div === null) {
+      return;
     }
-    se (!this.canvas) {
-      questo.#createCanvas();
-      questo.#createObserver();
+    if (!this.canvas) {
+      this.#createCanvas();
+      this.#createObserver();
     }
-    se (!this.isAttachedToDOM) {
-      questo.genitore.aggiungi(questo);
-      questo.#setCanvasDims();
+    if (!this.isAttachedToDOM) {
+      this.parent.add(this);
+      this.#setCanvasDims();
     }
-    questo.#fitToContent();
+    this.#fitToContent();
   }
-  rimuovi() {
-    se (this.canvas === null) {
-      ritorno;
+  remove() {
+    if (this.canvas === null) {
+      return;
     }
-    se (!this.isEmpty()) {
-      questo.commit();
+    if (!this.isEmpty()) {
+      this.commit();
     }
-    questa.larghezza.tela = questa.altezza.tela = 0;
-    questa.tela.rimuovi();
+    this.canvas.width = this.canvas.height = 0;
+    this.canvas.remove();
     this.canvas = null;
-    questo.#osservatore.disconnetti();
-    questo.#osservatore = null;
-    super.rimuovi();
+    this.#observer.disconnect();
+    this.#observer = null;
+    super.remove();
   }
-  setParent(genitore) {
-    se (!questo.genitore && genitore) {
+  setParent(parent) {
+    if (!this.parent && parent) {
       this._uiManager.removeShouldRescale(this);
-    } altrimenti se (questo.genitore && genitore === null) {
+    } else if (this.parent && parent === null) {
       this._uiManager.addShouldRescale(this);
     }
-    super.setParent(genitore);
+    super.setParent(parent);
   }
   onScaleChanging() {
     const [parentWidth, parentHeight] = this.parentDimensions;
     const width = this.width * parentWidth;
-    const altezza = this.height * parentHeight;
-    this.setDimensions(larghezza, altezza);
+    const height = this.height * parentHeight;
+    this.setDimensions(width, height);
   }
   enableEditMode() {
-    se (questo.#disableEditing || questo.canvas === null) {
-      ritorno;
+    if (this.#disableEditing || this.canvas === null) {
+      return;
     }
     super.enableEditMode();
     this._isDraggable = false;
-    this.canvas.addEventListener("puntatore in basso", this.#boundCanvasPointerdown);
+    this.canvas.addEventListener("pointerdown", this.#boundCanvasPointerdown);
   }
   disableEditMode() {
-    se (!this.isInEditMode() || this.canvas === null) {
-      ritorno;
+    if (!this.isInEditMode() || this.canvas === null) {
+      return;
     }
     super.disableEditMode();
     this._isDraggable = !this.isEmpty();
-    this.div.classList.remove("modifica");
-    this.canvas.removeEventListener("puntatore in basso", this.#boundCanvasPointerdown);
+    this.div.classList.remove("editing");
+    this.canvas.removeEventListener("pointerdown", this.#boundCanvasPointerdown);
   }
-  una voltaAggiunto() {
+  onceAdded() {
     this._isDraggable = !this.isEmpty();
   }
-  èVuoto() {
-    restituisci this.paths.length === 0 || this.paths.length === 1 && this.paths[0].length === 0;
+  isEmpty() {
+    return this.paths.length === 0 || this.paths.length === 1 && this.paths[0].length === 0;
   }
   #getInitialBBox() {
-    costante {
+    const {
       parentRotation,
-      parentDimensions: [larghezza, altezza]
-    } = questo;
+      parentDimensions: [width, height]
+    } = this;
     switch (parentRotation) {
-      caso 90:
-        ritorno [0, altezza, altezza, larghezza];
-      caso 180:
-        ritorno [larghezza, altezza, larghezza, altezza];
-      caso 270:
-        ritorno [larghezza, 0, altezza, larghezza];
-      predefinito:
-        ritorno [0, 0, larghezza, altezza];
+      case 90:
+        return [0, height, height, width];
+      case 180:
+        return [width, height, width, height];
+      case 270:
+        return [width, 0, height, width];
+      default:
+        return [0, 0, width, height];
     }
   }
   #setStroke() {
-    costante {
+    const {
       ctx,
-      colore,
-      opacità,
-      spessore,
+      color,
+      opacity,
+      thickness,
       parentScale,
-      fattore di scala
-    } = questo;
-    ctx.lineWidth = spessore * parentScale / scaleFactor;
-    ctx.lineCap = "arrotondato";
-    ctx.lineJoin = "arrotonda";
+      scaleFactor
+    } = this;
+    ctx.lineWidth = thickness * parentScale / scaleFactor;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
     ctx.miterLimit = 10;
     ctx.strokeStyle = `${color}${(0, _tools.opacityToHex)(opacity)}`;
   }
   #startDrawing(x, y) {
-    this.canvas.addEventListener("menu contestuale", _display_utils.noContextMenu);
+    this.canvas.addEventListener("contextmenu", _display_utils.noContextMenu);
     this.canvas.addEventListener("pointerleave", this.#boundCanvasPointerleave);
     this.canvas.addEventListener("pointermove", this.#boundCanvasPointermove);
-    this.canvas.addEventListener("puntatoresu", this.#boundCanvasPointerup);
-    this.canvas.removeEventListener("puntatore in basso", this.#boundCanvasPointerdown);
+    this.canvas.addEventListener("pointerup", this.#boundCanvasPointerup);
+    this.canvas.removeEventListener("pointerdown", this.#boundCanvasPointerdown);
     this.isEditing = true;
-    se (!this.#isCanvasInitialized) {
-      questo.#isCanvasInitialized = true;
-      questo.#setCanvasDims();
-      questo.spessore ||= InkEditor._defaultThickness;
-      questo.colore ||= InkEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor;
+    if (!this.#isCanvasInitialized) {
+      this.#isCanvasInitialized = true;
+      this.#setCanvasDims();
+      this.thickness ||= InkEditor._defaultThickness;
+      this.color ||= InkEditor._defaultColor || _editor.AnnotationEditor._defaultLineColor;
       this.opacity ??= InkEditor._defaultOpacity;
     }
-    questo.percorsocorrente.push([x, y]);
-    questo.#hasSomethingToDraw = false;
-    questo.#setStroke();
-    questo.#requestFrameCallback = () => {
-      questo.#disegnaPunti();
-      se (questo.#requestFrameCallback) {
-        finestra.requestAnimationFrame(this.#requestFrameCallback);
+    this.currentPath.push([x, y]);
+    this.#hasSomethingToDraw = false;
+    this.#setStroke();
+    this.#requestFrameCallback = () => {
+      this.#drawPoints();
+      if (this.#requestFrameCallback) {
+        window.requestAnimationFrame(this.#requestFrameCallback);
       }
     };
-    finestra.requestAnimationFrame(this.#requestFrameCallback);
+    window.requestAnimationFrame(this.#requestFrameCallback);
   }
-  #disegna(x, y) {
+  #draw(x, y) {
     const [lastX, lastY] = this.currentPath.at(-1);
-    se (this.currentPath.length > 1 && x === lastX && y === lastY) {
-      ritorno;
+    if (this.currentPath.length > 1 && x === lastX && y === lastY) {
+      return;
     }
     const currentPath = this.currentPath;
-    lascia path2D = this.#currentPath2D;
+    let path2D = this.#currentPath2D;
     currentPath.push([x, y]);
-    questo.#hasSomethingToDraw = true;
-    se (lunghezza del percorso corrente <= 2) {
-      percorso2D.sposta in(...percorsocorrente[0]);
-      percorso2D.lineaSu(x, y);
-      ritorno;
+    this.#hasSomethingToDraw = true;
+    if (currentPath.length <= 2) {
+      path2D.moveTo(...currentPath[0]);
+      path2D.lineTo(x, y);
+      return;
     }
-    se (currentPath.length === 3) {
-      questo.#currentPath2D = path2D = nuovo Path2D();
-      percorso2D.sposta in(...percorsocorrente[0]);
+    if (currentPath.length === 3) {
+      this.#currentPath2D = path2D = new Path2D();
+      path2D.moveTo(...currentPath[0]);
     }
-    questo.#makeBezierCurve(path2D, ...currentPath.at(-3), ...currentPath.at(-2), x, y);
+    this.#makeBezierCurve(path2D, ...currentPath.at(-3), ...currentPath.at(-2), x, y);
   }
   #endPath() {
-    se (questo.percorsocorrente.lunghezza === 0) {
-      ritorno;
+    if (this.currentPath.length === 0) {
+      return;
     }
     const lastPoint = this.currentPath.at(-1);
-    questo.#currentPath2D.lineTo(...lastPoint);
+    this.#currentPath2D.lineTo(...lastPoint);
   }
   #stopDrawing(x, y) {
-    questo.#requestFrameCallback = null;
+    this.#requestFrameCallback = null;
     x = Math.min(Math.max(x, 0), this.canvas.width);
     y = Math.min(Math.max(y, 0), this.canvas.height);
-    questo.#disegna(x, y);
-    questo.#endPath();
-    lascia bezier;
-    se (questo.currentPath.length !== 1) {
-      bezier = questo.#generateBezierPoints();
-    } altro {
-      costante xy = [x, y];
+    this.#draw(x, y);
+    this.#endPath();
+    let bezier;
+    if (this.currentPath.length !== 1) {
+      bezier = this.#generateBezierPoints();
+    } else {
+      const xy = [x, y];
       bezier = [[xy, xy.slice(), xy.slice(), xy]];
     }
     const path2D = this.#currentPath2D;
     const currentPath = this.currentPath;
-    questo.percorsocorrente = [];
-    questo.#currentPath2D = nuovo Path2D();
+    this.currentPath = [];
+    this.#currentPath2D = new Path2D();
     const cmd = () => {
       this.allRawPaths.push(currentPath);
-      questo.percorsi.push(bezier);
+      this.paths.push(bezier);
       this.bezierPath2D.push(path2D);
-      questo.ricostruisci();
+      this.rebuild();
     };
     const undo = () => {
-      questo.tutti i percorsi grezzi.pop();
-      questo.percorsi.pop();
+      this.allRawPaths.pop();
+      this.paths.pop();
       this.bezierPath2D.pop();
-      se (questa lunghezza dei percorsi === 0) {
-        questo.rimuovi();
-      } altro {
-        se (!this.canvas) {
-          questo.#createCanvas();
-          questo.#createObserver();
+      if (this.paths.length === 0) {
+        this.remove();
+      } else {
+        if (!this.canvas) {
+          this.#createCanvas();
+          this.#createObserver();
         }
-        questo.#fitToContent();
+        this.#fitToContent();
       }
     };
-    questo.aggiungiComandi({
-      comando,
-      disfare,
-      mustExec: vero
+    this.addCommands({
+      cmd,
+      undo,
+      mustExec: true
     });
   }
-  #disegnaPunti() {
-    se (!questo.#hasSomethingToDraw) {
-      ritorno;
+  #drawPoints() {
+    if (!this.#hasSomethingToDraw) {
+      return;
     }
-    questo.#hasSomethingToDraw = false;
-    spessore costante = Math.ceil(this.thickness * this.parentScale);
+    this.#hasSomethingToDraw = false;
+    const thickness = Math.ceil(this.thickness * this.parentScale);
     const lastPoints = this.currentPath.slice(-3);
     const x = lastPoints.map(xy => xy[0]);
     const y = lastPoints.map(xy => xy[1]);
-    const xMin = Math.min(...x) - spessore;
-    const xMax = Math.max(...x) + spessore;
-    const yMin = Math.min(...y) - spessore;
-    const yMax = Math.max(...y) + spessore;
-    costante {
+    const xMin = Math.min(...x) - thickness;
+    const xMax = Math.max(...x) + thickness;
+    const yMin = Math.min(...y) - thickness;
+    const yMax = Math.max(...y) + thickness;
+    const {
       ctx
-    } = questo;
+    } = this;
     ctx.save();
-    ctx.clearRect(0, 0, questa.tela.larghezza, questa.tela.altezza);
-    per (percorso costante di this.bezierPath2D) {
-      ctx.stroke(percorso);
+    ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    for (const path of this.bezierPath2D) {
+      ctx.stroke(path);
     }
     ctx.stroke(this.#currentPath2D);
     ctx.restore();
   }
-  #makeBezierCurve(percorso2D, x0, y0, x1, y1, x2, y2) {
+  #makeBezierCurve(path2D, x0, y0, x1, y1, x2, y2) {
     const prevX = (x0 + x1) / 2;
     const prevY = (y0 + y1) / 2;
-    costante x3 = (x1 + x2) / 2;
-    costante y3 = (y1 + y2) / 2;
+    const x3 = (x1 + x2) / 2;
+    const y3 = (y1 + y2) / 2;
     path2D.bezierCurveTo(prevX + 2 * (x1 - prevX) / 3, prevY + 2 * (y1 - prevY) / 3, x3 + 2 * (x1 - x3) / 3, y3 + 2 * (y1 - y3) / 3, x3, y3);
   }
-  #generaPuntiBezier() {
+  #generateBezierPoints() {
     const path = this.currentPath;
-    se (lunghezza del percorso <= 2) {
-      ritorna [[percorso[0], percorso[0], percorso.at(-1), percorso.at(-1)]];
+    if (path.length <= 2) {
+      return [[path[0], path[0], path.at(-1), path.at(-1)]];
     }
     const bezierPoints = [];
-    lascia che io;
-    lascia [x0, y0] = percorso[0];
-    per (i = 1; i < lunghezza del percorso - 2; i++) {
-      const [x1, y1] = percorso[i];
-      const [x2, y2] = percorso[i + 1];
-      costante x3 = (x1 + x2) / 2;
-      costante y3 = (y1 + y2) / 2;
-      controllo costante1 = [x0 + 2 * (x1 - x0) / 3, y0 + 2 * (y1 - y0) / 3];
-      controllo costante2 = [x3 + 2 * (x1 - x3) / 3, y3 + 2 * (y1 - y3) / 3];
-      bezierPoints.push([[x0, y0], controllo1, controllo2, [x3, y3]]);
+    let i;
+    let [x0, y0] = path[0];
+    for (i = 1; i < path.length - 2; i++) {
+      const [x1, y1] = path[i];
+      const [x2, y2] = path[i + 1];
+      const x3 = (x1 + x2) / 2;
+      const y3 = (y1 + y2) / 2;
+      const control1 = [x0 + 2 * (x1 - x0) / 3, y0 + 2 * (y1 - y0) / 3];
+      const control2 = [x3 + 2 * (x1 - x3) / 3, y3 + 2 * (y1 - y3) / 3];
+      bezierPoints.push([[x0, y0], control1, control2, [x3, y3]]);
       [x0, y0] = [x3, y3];
     }
-    const [x1, y1] = percorso[i];
-    const [x2, y2] = percorso[i + 1];
-    controllo costante1 = [x0 + 2 * (x1 - x0) / 3, y0 + 2 * (y1 - y0) / 3];
-    controllo costante2 = [x2 + 2 * (x1 - x2) / 3, y2 + 2 * (y1 - y2) / 3];
-    bezierPoints.push([[x0, y0], controllo1, controllo2, [x2, y2]]);
-    restituisci bezierPoints;
+    const [x1, y1] = path[i];
+    const [x2, y2] = path[i + 1];
+    const control1 = [x0 + 2 * (x1 - x0) / 3, y0 + 2 * (y1 - y0) / 3];
+    const control2 = [x2 + 2 * (x1 - x2) / 3, y2 + 2 * (y1 - y2) / 3];
+    bezierPoints.push([[x0, y0], control1, control2, [x2, y2]]);
+    return bezierPoints;
   }
-  #ridisegna() {
-    se (questo.èVuoto()) {
-      questo.#updateTransform();
-      ritorno;
+  #redraw() {
+    if (this.isEmpty()) {
+      this.#updateTransform();
+      return;
     }
-    questo.#setStroke();
-    costante {
-      tela,
+    this.#setStroke();
+    const {
+      canvas,
       ctx
-    } = questo;
+    } = this;
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, larghezza tela, altezza tela);
-    questo.#updateTransform();
-    per (percorso costante di this.bezierPath2D) {
-      ctx.stroke(percorso);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    this.#updateTransform();
+    for (const path of this.bezierPath2D) {
+      ctx.stroke(path);
     }
   }
-  commetti() {
-    se (questo.#disableEditing) {
-      ritorno;
+  commit() {
+    if (this.#disableEditing) {
+      return;
     }
     super.commit();
     this.isEditing = false;
-    questo.disableEditMode();
-    questo.impostaInPrimoPiano();
-    questo.#disableEditing = true;
-    this.div.classList.add("disabilitato");
-    questo.#fitToContent(true);
-    questo.rendiridimensionabile();
+    this.disableEditMode();
+    this.setInForeground();
+    this.#disableEditing = true;
+    this.div.classList.add("disabled");
+    this.#fitToContent(true);
+    this.makeResizable();
     this.parent.addInkEditorIfNeeded(true);
-    questo.moveInDOM();
-    questo.div.focus({
-      preventScroll: vero
+    this.moveInDOM();
+    this.div.focus({
+      preventScroll: true
     });
   }
-  focusin(evento) {
-    se (!this._focusEventsAllowed) {
-      ritorno;
+  focusin(event) {
+    if (!this._focusEventsAllowed) {
+      return;
     }
-    super.focusin(evento);
-    questo.abilitaModalitàModifica();
+    super.focusin(event);
+    this.enableEditMode();
   }
-  canvasPointerdown(evento) {
-    se (evento.pulsante !== 0 || !questo.èInModalitàEdit() || questo.#disabilitaModifica) {
-      ritorno;
+  canvasPointerdown(event) {
+    if (event.button !== 0 || !this.isInEditMode() || this.#disableEditing) {
+      return;
     }
-    questo.impostaInPrimoPiano();
-    evento.prevenzioneDefault();
-    se (evento.tipo !== "mouse") {
-      questo.div.focus();
+    this.setInForeground();
+    event.preventDefault();
+    if (event.type !== "mouse") {
+      this.div.focus();
     }
-    questo.#startDrawing(evento.offsetX, evento.offsetY);
+    this.#startDrawing(event.offsetX, event.offsetY);
   }
-  canvasPointermove(evento) {
-    evento.prevenzioneDefault();
-    questo.#disegna(evento.offsetX, evento.offsetY);
+  canvasPointermove(event) {
+    event.preventDefault();
+    this.#draw(event.offsetX, event.offsetY);
   }
-  canvasPointerup(evento) {
-    evento.prevenzioneDefault();
-    questo.#endDrawing(evento);
+  canvasPointerup(event) {
+    event.preventDefault();
+    this.#endDrawing(event);
   }
-  canvasPointerleave(evento) {
-    questo.#endDrawing(evento);
+  canvasPointerleave(event) {
+    this.#endDrawing(event);
   }
-  #endDrawing(evento) {
+  #endDrawing(event) {
     this.canvas.removeEventListener("pointerleave", this.#boundCanvasPointerleave);
     this.canvas.removeEventListener("pointermove", this.#boundCanvasPointermove);
-    this.canvas.removeEventListener("puntatore su", this.#boundCanvasPointerup);
-    this.canvas.addEventListener("puntatore in basso", this.#boundCanvasPointerdown);
-    impostaTimeout(() => {
-      this.canvas.removeEventListener("menu contestuale", _display_utils.noContextMenu);
+    this.canvas.removeEventListener("pointerup", this.#boundCanvasPointerup);
+    this.canvas.addEventListener("pointerdown", this.#boundCanvasPointerdown);
+    setTimeout(() => {
+      this.canvas.removeEventListener("contextmenu", _display_utils.noContextMenu);
     }, 10);
-    questo.#stopDrawing(evento.offsetX, evento.offsetY);
+    this.#stopDrawing(event.offsetX, event.offsetY);
     this.addToAnnotationStorage();
-    questo.impostaInSfondo();
+    this.setInBackground();
   }
-  #creaCanvas() {
+  #createCanvas() {
     this.canvas = document.createElement("canvas");
-    questa.larghezza.tela = questa.altezza.tela = 0;
+    this.canvas.width = this.canvas.height = 0;
     this.canvas.className = "inkEditorCanvas";
     _editor.AnnotationEditor._l10nPromise.get("editor_ink_canvas_aria_label").then(msg => this.canvas?.setAttribute("aria-label", msg));
-    questo.div.append(questo.tela);
-    questo.ctx = questo.canvas.getContext("2d");
+    this.div.append(this.canvas);
+    this.ctx = this.canvas.getContext("2d");
   }
-  #creaOsservatore() {
-    questo.#osservatore = nuovo ResizeObserver(voci => {
+  #createObserver() {
+    this.#observer = new ResizeObserver(entries => {
       const rect = entries[0].contentRect;
-      se (larghezza rettangolo e altezza rettangolo) {
+      if (rect.width && rect.height) {
         this.setDimensions(rect.width, rect.height);
       }
     });
-    questo.#osservatore.osserva(questo.div);
+    this.#observer.observe(this.div);
   }
-  ottieni isResizable() {
-    restituisci !this.isEmpty() && this.#disableEditing;
+  get isResizable() {
+    return !this.isEmpty() && this.#disableEditing;
   }
   render() {
-    se (questo.div) {
-      restituisci questo.div;
+    if (this.div) {
+      return this.div;
     }
-    lascia baseX, baseY;
-    se (questa larghezza) {
-      baseX = questo.x;
+    let baseX, baseY;
+    if (this.width) {
+      baseX = this.x;
       baseY = this.y;
     }
     super.render();
     _editor.AnnotationEditor._l10nPromise.get("editor_ink2_aria_label").then(msg => this.div?.setAttribute("aria-label", msg));
     const [x, y, w, h] = this.#getInitialBBox();
-    questo.setAt(x, y, 0, 0);
+    this.setAt(x, y, 0, 0);
     this.setDims(w, h);
-    questo.#createCanvas();
-    se (questa larghezza) {
+    this.#createCanvas();
+    if (this.width) {
       const [parentWidth, parentHeight] = this.parentDimensions;
       this.setAspectRatio(this.width * parentWidth, this.height * parentHeight);
       this.setAt(baseX * parentWidth, baseY * parentHeight, this.width * parentWidth, this.height * parentHeight);
-      questo.#isCanvasInitialized = true;
-      questo.#setCanvasDims();
+      this.#isCanvasInitialized = true;
+      this.#setCanvasDims();
       this.setDims(this.width * parentWidth, this.height * parentHeight);
-      questo.#ridisegna();
-      this.div.classList.add("disabilitato");
-    } altro {
-      this.div.classList.add("modifica");
-      questo.abilitaModalitàModifica();
+      this.#redraw();
+      this.div.classList.add("disabled");
+    } else {
+      this.div.classList.add("editing");
+      this.enableEditMode();
     }
-    questo.#createObserver();
-    restituisci questo.div;
+    this.#createObserver();
+    return this.div;
   }
   #setCanvasDims() {
-    se (!this.#isCanvasInitialized) {
-      ritorno;
+    if (!this.#isCanvasInitialized) {
+      return;
     }
     const [parentWidth, parentHeight] = this.parentDimensions;
     this.canvas.width = Math.ceil(this.width * parentWidth);
     this.canvas.height = Math.ceil(this.height * parentHeight);
-    questo.#updateTransform();
+    this.#updateTransform();
   }
-  setDimensions(larghezza, altezza) {
+  setDimensions(width, height) {
     const roundedWidth = Math.round(width);
-    const roundedHeight = Math.round(altezza);
-    se (questo.#realWidth === roundedWidth e questo.#realHeight === roundedHeight) {
-      ritorno;
+    const roundedHeight = Math.round(height);
+    if (this.#realWidth === roundedWidth && this.#realHeight === roundedHeight) {
+      return;
     }
-    questo.#realWidth = roundedWidth;
-    questo.#realHeight = roundedHeight;
-    this.canvas.style.visibility = "nascosto";
+    this.#realWidth = roundedWidth;
+    this.#realHeight = roundedHeight;
+    this.canvas.style.visibility = "hidden";
     const [parentWidth, parentHeight] = this.parentDimensions;
-    this.width = larghezza / parentWidth;
-    this.height = altezza / parentHeight;
-    questo.fixAndSetPosition();
-    se (questo.#disableEditing) {
-      questo.#setScaleFactor(larghezza, altezza);
+    this.width = width / parentWidth;
+    this.height = height / parentHeight;
+    this.fixAndSetPosition();
+    if (this.#disableEditing) {
+      this.#setScaleFactor(width, height);
     }
-    questo.#setCanvasDims();
-    questo.#ridisegna();
-    this.canvas.style.visibility = "visibile";
-    questo.fixDims();
+    this.#setCanvasDims();
+    this.#redraw();
+    this.canvas.style.visibility = "visible";
+    this.fixDims();
   }
-  #setScaleFactor(larghezza, altezza) {
+  #setScaleFactor(width, height) {
     const padding = this.#getPadding();
-    const scaleFactorW = (larghezza - imbottitura) / this.#baseWidth;
-    const scaleFactorH = (altezza - imbottitura) / this.#baseHeight;
+    const scaleFactorW = (width - padding) / this.#baseWidth;
+    const scaleFactorH = (height - padding) / this.#baseHeight;
     this.scaleFactor = Math.min(scaleFactorW, scaleFactorH);
   }
-  #aggiornaTrasformazione() {
+  #updateTransform() {
     const padding = this.#getPadding() / 2;
     this.ctx.setTransform(this.scaleFactor, 0, 0, this.scaleFactor, this.translationX * this.scaleFactor + padding, this.translationY * this.scaleFactor + padding);
   }
-  statico #buildPath2D(bezier) {
-    const path2D = nuovo Path2D();
-    per (lascia che i = 0, ii = bezier.length; i < ii; i++) {
-      const [primo, controllo1, controllo2, secondo] = bezier[i];
-      se (i === 0) {
-        path2D.moveTo(...primo);
+  static #buildPath2D(bezier) {
+    const path2D = new Path2D();
+    for (let i = 0, ii = bezier.length; i < ii; i++) {
+      const [first, control1, control2, second] = bezier[i];
+      if (i === 0) {
+        path2D.moveTo(...first);
       }
-      path2D.bezierCurveTo(control1[0], control1[1], control2[0], control2[1], secondo[0], secondo[1]);
+      path2D.bezierCurveTo(control1[0], control1[1], control2[0], control2[1], second[0], second[1]);
     }
-    percorso di ritorno2D;
+    return path2D;
   }
-  static #toPDFCoordinates(punti, rettangolo, rotazione) {
+  static #toPDFCoordinates(points, rect, rotation) {
     const [blX, blY, trX, trY] = rect;
-    interruttore (rotazione) {
-      caso 0:
-        per (lascia che i = 0, ii = punti.lunghezza; i < ii; i += 2) {
-          punti[i] += blX;
-          punti[i + 1] = trY - punti[i + 1];
+    switch (rotation) {
+      case 0:
+        for (let i = 0, ii = points.length; i < ii; i += 2) {
+          points[i] += blX;
+          points[i + 1] = trY - points[i + 1];
         }
-        rottura;
-      caso 90:
-        per (lascia che i = 0, ii = punti.lunghezza; i < ii; i += 2) {
-          const x = punti[i];
-          punti[i] = punti[i + 1] + blX;
-          punti[i + 1] = x + blY;
+        break;
+      case 90:
+        for (let i = 0, ii = points.length; i < ii; i += 2) {
+          const x = points[i];
+          points[i] = points[i + 1] + blX;
+          points[i + 1] = x + blY;
         }
-        rottura;
-      caso 180:
-        per (lascia che i = 0, ii = punti.lunghezza; i < ii; i += 2) {
-          punti[i] = trX - punti[i];
-          punti[i + 1] += blY;
+        break;
+      case 180:
+        for (let i = 0, ii = points.length; i < ii; i += 2) {
+          points[i] = trX - points[i];
+          points[i + 1] += blY;
         }
-        rottura;
-      caso 270:
-        per (lascia che i = 0, ii = punti.lunghezza; i < ii; i += 2) {
-          const x = punti[i];
-          punti[i] = trX - punti[i + 1];
-          punti[i + 1] = trY - x;
+        break;
+      case 270:
+        for (let i = 0, ii = points.length; i < ii; i += 2) {
+          const x = points[i];
+          points[i] = trX - points[i + 1];
+          points[i + 1] = trY - x;
         }
-        rottura;
-      predefinito:
-        genera un nuovo errore("Rotazione non valida");
+        break;
+      default:
+        throw new Error("Invalid rotation");
     }
-    punti di ritorno;
+    return points;
   }
-  static #fromPDFCoordinates(punti, rettangolo, rotazione) {
+  static #fromPDFCoordinates(points, rect, rotation) {
     const [blX, blY, trX, trY] = rect;
-    interruttore (rotazione) {
-      caso 0:
-        per (lascia che i = 0, ii = punti.lunghezza; i < ii; i += 2) {
-          punti[i] -= blX;
-          punti[i + 1] = trY - punti[i + 1];
+    switch (rotation) {
+      case 0:
+        for (let i = 0, ii = points.length; i < ii; i += 2) {
+          points[i] -= blX;
+          points[i + 1] = trY - points[i + 1];
         }
-        rottura;
-      caso 90:
-        per (lascia che i = 0, ii = punti.lunghezza; i < ii; i += 2) {
-          const x = punti[i];
-          punti[i] = punti[i + 1] - blY;
-          punti[i + 1] = x - blX;
+        break;
+      case 90:
+        for (let i = 0, ii = points.length; i < ii; i += 2) {
+          const x = points[i];
+          points[i] = points[i + 1] - blY;
+          points[i + 1] = x - blX;
         }
-        rottura;
-      caso 180:
-        per (lascia che i = 0, ii = punti.lunghezza; i < ii; i += 2) {
-          punti[i] = trX - punti[i];
-          punti[i + 1] -= blY;
+        break;
+      case 180:
+        for (let i = 0, ii = points.length; i < ii; i += 2) {
+          points[i] = trX - points[i];
+          points[i + 1] -= blY;
         }
-        rottura;
-      caso 270:
-        per (lascia che i = 0, ii = punti.lunghezza; i < ii; i += 2) {
-          const x = punti[i];
-          punti[i] = trY - punti[i + 1];
-          punti[i + 1] = trX - x;
+        break;
+      case 270:
+        for (let i = 0, ii = points.length; i < ii; i += 2) {
+          const x = points[i];
+          points[i] = trY - points[i + 1];
+          points[i + 1] = trX - x;
         }
-        rottura;
-      predefinito:
-        genera un nuovo errore("Rotazione non valida");
+        break;
+      default:
+        throw new Error("Invalid rotation");
     }
-    punti di ritorno;
+    return points;
   }
   #serializePaths(s, tx, ty, rect) {
-    percorsi costanti = [];
+    const paths = [];
     const padding = this.thickness / 2;
     const shiftX = s * tx + padding;
     const shiftY = s * ty + padding;
-    per (const bezier di questo.percorsi) {
-      buffer costante = [];
-      punti costanti = [];
-      per (lascia che j = 0, jj = lunghezza di bezier; j < jj; j++) {
-        const [primo, controllo1, controllo2, secondo] = bezier[j];
-        const p10 = s * primo[0] + shiftX;
+    for (const bezier of this.paths) {
+      const buffer = [];
+      const points = [];
+      for (let j = 0, jj = bezier.length; j < jj; j++) {
+        const [first, control1, control2, second] = bezier[j];
+        const p10 = s * first[0] + shiftX;
         const p11 = s * first[1] + shiftY;
         const p20 = s * control1[0] + shiftX;
         const p21 = s * control1[1] + shiftY;
         const p30 = s * control2[0] + shiftX;
         const p31 = s * control2[1] + shiftY;
-        const p40 = s * secondo[0] + shiftX;
-        const p41 = s * secondo[1] + shiftY;
-        se (j === 0) {
+        const p40 = s * second[0] + shiftX;
+        const p41 = s * second[1] + shiftY;
+        if (j === 0) {
           buffer.push(p10, p11);
-          punti.push(p10, p11);
+          points.push(p10, p11);
         }
         buffer.push(p20, p21, p30, p31, p40, p41);
-        punti.push(p20, p21);
-        se (j === jj - 1) {
-          punti.push(p40, p41);
+        points.push(p20, p21);
+        if (j === jj - 1) {
+          points.push(p40, p41);
         }
       }
-      percorsi.push({
+      paths.push({
         bezier: InkEditor.#toPDFCoordinates(buffer, rect, this.rotation),
-        punti: InkEditor.#toPDFCoordinates(punti, rettangolo, questa.rotazione)
+        points: InkEditor.#toPDFCoordinates(points, rect, this.rotation)
       });
     }
-    percorsi di ritorno;
+    return paths;
   }
   #getBbox() {
-    lascia xMin = Infinito;
-    lascia xMax = -Infinito;
-    lascia yMin = Infinito;
-    lascia yMax = -Infinito;
-    per (percorso costante di questo.percorsi) {
-      per (const [primo, controllo1, controllo2, secondo] del percorso) {
-        const bbox = _util.Util.bezierBoundingBox(...primo, ...controllo1, ...controllo2, ...secondo);
+    let xMin = Infinity;
+    let xMax = -Infinity;
+    let yMin = Infinity;
+    let yMax = -Infinity;
+    for (const path of this.paths) {
+      for (const [first, control1, control2, second] of path) {
+        const bbox = _util.Util.bezierBoundingBox(...first, ...control1, ...control2, ...second);
         xMin = Math.min(xMin, bbox[0]);
         yMin = Math.min(yMin, bbox[1]);
         xMax = Math.max(xMax, bbox[2]);
         yMax = Math.max(yMax, bbox[3]);
       }
     }
-    ritorna [xMin, yMin, xMax, yMax];
+    return [xMin, yMin, xMax, yMax];
   }
   #getPadding() {
-    restituisci questo.#disableEditing ? Math.ceil(this.thickness * this.parentScale) : 0;
+    return this.#disableEditing ? Math.ceil(this.thickness * this.parentScale) : 0;
   }
   #fitToContent(firstTime = false) {
-    se (questo.èVuoto()) {
-      ritorno;
+    if (this.isEmpty()) {
+      return;
     }
-    se (!this.#disableEditing) {
-      questo.#ridisegna();
-      ritorno;
+    if (!this.#disableEditing) {
+      this.#redraw();
+      return;
     }
     const bbox = this.#getBbox();
     const padding = this.#getPadding();
-    questo.#baseWidth = Math.max(_editor.AnnotationEditor.MIN_SIZE, bbox[2] - bbox[0]);
-    questo.#baseHeight = Math.max(_editor.AnnotationEditor.MIN_SIZE, bbox[3] - bbox[1]);
+    this.#baseWidth = Math.max(_editor.AnnotationEditor.MIN_SIZE, bbox[2] - bbox[0]);
+    this.#baseHeight = Math.max(_editor.AnnotationEditor.MIN_SIZE, bbox[3] - bbox[1]);
     const width = Math.ceil(padding + this.#baseWidth * this.scaleFactor);
-    const altezza = Math.ceil(padding + this.#baseHeight * this.scaleFactor);
+    const height = Math.ceil(padding + this.#baseHeight * this.scaleFactor);
     const [parentWidth, parentHeight] = this.parentDimensions;
-    this.width = larghezza / parentWidth;
-    this.height = altezza / parentHeight;
-    this.setAspectRatio(larghezza, altezza);
+    this.width = width / parentWidth;
+    this.height = height / parentHeight;
+    this.setAspectRatio(width, height);
     const prevTranslationX = this.translationX;
     const prevTranslationY = this.translationY;
     this.translationX = -bbox[0];
     this.translationY = -bbox[1];
-    questo.#setCanvasDims();
-    questo.#ridisegna();
-    questo.#realWidth = larghezza;
-    questo.#realHeight = altezza;
-    this.setDims(larghezza, altezza);
+    this.#setCanvasDims();
+    this.#redraw();
+    this.#realWidth = width;
+    this.#realHeight = height;
+    this.setDims(width, height);
     const unscaledPadding = firstTime ? padding / this.scaleFactor / 2 : 0;
     this.translate(prevTranslationX - this.translationX - unscaledPadding, prevTranslationY - this.translationY - unscaledPadding);
   }
-  deserialize statico (dati, genitore, uiManager) {
-    se (istanza di dati di _annotation_layer.InkAnnotationElement) {
-      restituisci null;
+  static deserialize(data, parent, uiManager) {
+    if (data instanceof _annotation_layer.InkAnnotationElement) {
+      return null;
     }
     const editor = super.deserialize(data, parent, uiManager);
-    editor.thickness = dati.thickness;
+    editor.thickness = data.thickness;
     editor.color = _util.Util.makeHexColor(...data.color);
-    editor.opacità = dati.opacità;
-    const [larghezzapagina, altezzapagina] = editor.dimensionipagina;
+    editor.opacity = data.opacity;
+    const [pageWidth, pageHeight] = editor.pageDimensions;
     const width = editor.width * pageWidth;
-    const altezza = editor.height * pageHeight;
+    const height = editor.height * pageHeight;
     const scaleFactor = editor.parentScale;
-    const padding = dati.spessore / 2;
+    const padding = data.thickness / 2;
     editor.#disableEditing = true;
-    editor.#realWidth = Math.round(larghezza);
-    editor.#realHeight = Math.round(altezza);
-    costante {
-      percorsi,
-      dritto,
-      rotazione
-    } = dati;
-    per (lascia {
-      Bézier
-    } di percorsi) {
-      bezier = InkEditor.#fromPDFCoordinates(bezier, rettangolo, rotazione);
-      percorso costante = [];
-      editor.paths.push(percorso);
-      lascia p0 = scaleFactor * (bezier[0] - padding);
-      lascia p1 = fattorescala * (bezier[1] - riempimento);
-      per (lascia che i = 2, ii = lunghezza di bezier; i < ii; i += 6) {
+    editor.#realWidth = Math.round(width);
+    editor.#realHeight = Math.round(height);
+    const {
+      paths,
+      rect,
+      rotation
+    } = data;
+    for (let {
+      bezier
+    } of paths) {
+      bezier = InkEditor.#fromPDFCoordinates(bezier, rect, rotation);
+      const path = [];
+      editor.paths.push(path);
+      let p0 = scaleFactor * (bezier[0] - padding);
+      let p1 = scaleFactor * (bezier[1] - padding);
+      for (let i = 2, ii = bezier.length; i < ii; i += 6) {
         const p10 = scaleFactor * (bezier[i] - padding);
         const p11 = scaleFactor * (bezier[i + 1] - padding);
         const p20 = scaleFactor * (bezier[i + 2] - padding);
         const p21 = scaleFactor * (bezier[i + 3] - padding);
         const p30 = scaleFactor * (bezier[i + 4] - padding);
         const p31 = scaleFactor * (bezier[i + 5] - padding);
-        percorso.push([[p0, p1], [p10, p11], [p20, p21], [p30, p31]]);
+        path.push([[p0, p1], [p10, p11], [p20, p21], [p30, p31]]);
         p0 = p30;
         p1 = p31;
       }
@@ -17413,29 +17413,29 @@ classe InkEditor estende _editor.AnnotationEditor {
     const bbox = editor.#getBbox();
     editor.#baseWidth = Math.max(_editor.AnnotationEditor.MIN_SIZE, bbox[2] - bbox[0]);
     editor.#baseHeight = Math.max(_editor.AnnotationEditor.MIN_SIZE, bbox[3] - bbox[1]);
-    editor.#setScaleFactor(larghezza, altezza);
-    editor di ritorno;
+    editor.#setScaleFactor(width, height);
+    return editor;
   }
-  serializzare() {
-    se (questo.èVuoto()) {
-      restituisci null;
+  serialize() {
+    if (this.isEmpty()) {
+      return null;
     }
     const rect = this.getRect(0, 0);
     const color = _editor.AnnotationEditor._colorManager.convert(this.ctx.strokeStyle);
-    ritorno {
+    return {
       annotationType: _util.AnnotationEditorType.INK,
-      colore,
-      spessore: questo.spessore,
-      opacità: this.opacity,
-      percorsi: this.#serializePaths(this.scaleFactor / this.parentScale, this.translationX, this.translationY, rect),
+      color,
+      thickness: this.thickness,
+      opacity: this.opacity,
+      paths: this.#serializePaths(this.scaleFactor / this.parentScale, this.translationX, this.translationY, rect),
       pageIndex: this.pageIndex,
-      dritto,
-      rotazione: questa.rotazione,
+      rect,
+      rotation: this.rotation,
       structTreeParentId: this._structTreeParentId
     };
   }
 }
-esportazioni.InkEditor = InkEditor;
+exports.InkEditor = InkEditor;
 
 /***/ }),
 /* 34 */
@@ -17443,250 +17443,250 @@ esportazioni.InkEditor = InkEditor;
 
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-esportazioni.StampEditor = void 0;
+exports.StampEditor = void 0;
 var _util = __w_pdfjs_require__(1);
 var _editor = __w_pdfjs_require__(4);
 var _display_utils = __w_pdfjs_require__(6);
 var _annotation_layer = __w_pdfjs_require__(29);
-classe StampEditor estende _editor.AnnotationEditor {
+class StampEditor extends _editor.AnnotationEditor {
   #bitmap = null;
   #bitmapId = null;
   #bitmapPromise = null;
   #bitmapUrl = null;
   #bitmapFile = null;
   #canvas = null;
-  #osservatore = null;
+  #observer = null;
   #resizeTimeoutId = null;
-  #isSvg = falso;
+  #isSvg = false;
   #hasBeenAddedInUndoStack = false;
-  static _type = "timbro";
-  costruttore(parametri) {
+  static _type = "stamp";
+  constructor(params) {
     super({
-      ...parametri,
-      nome: "stampEditor"
+      ...params,
+      name: "stampEditor"
     });
-    questo.#bitmapUrl = params.bitmapUrl;
-    questo.#bitmapFile = params.bitmapFile;
+    this.#bitmapUrl = params.bitmapUrl;
+    this.#bitmapFile = params.bitmapFile;
   }
-  inizializzazione statica (l10n) {
+  static initialize(l10n) {
     _editor.AnnotationEditor.initialize(l10n);
   }
-  static ottieni i tipi supportati() {
-    tipi costanti = ["apng", "avif", "bmp", "gif", "jpeg", "png", "svg+xml", "webp", "x-icon"];
+  static get supportedTypes() {
+    const types = ["apng", "avif", "bmp", "gif", "jpeg", "png", "svg+xml", "webp", "x-icon"];
     return (0, _util.shadow)(this, "supportedTypes", types.map(type => `image/${type}`));
   }
-  statico ottieni supportatiTypesStr() {
+  static get supportedTypesStr() {
     return (0, _util.shadow)(this, "supportedTypesStr", this.supportedTypes.join(","));
   }
-  statico isHandlingMimeForPasting(mime) {
-    restituisci this.supportedTypes.includes(mime);
+  static isHandlingMimeForPasting(mime) {
+    return this.supportedTypes.includes(mime);
   }
-  static paste(elemento, genitore) {
+  static paste(item, parent) {
     parent.pasteEditor(_util.AnnotationEditorType.STAMP, {
       bitmapFile: item.getAsFile()
     });
   }
-  #getBitmapFetched(dati, fromId = false) {
-    se (!dati) {
-      questo.rimuovi();
-      ritorno;
+  #getBitmapFetched(data, fromId = false) {
+    if (!data) {
+      this.remove();
+      return;
     }
-    questo.#bitmap = dati.bitmap;
-    se (!daId) {
-      questo.#bitmapId = dati.id;
-      questo.#isSvg = dati.isSvg;
+    this.#bitmap = data.bitmap;
+    if (!fromId) {
+      this.#bitmapId = data.id;
+      this.#isSvg = data.isSvg;
     }
-    questo.#createCanvas();
+    this.#createCanvas();
   }
   #getBitmapDone() {
-    questo.#bitmapPromise = null;
+    this.#bitmapPromise = null;
     this._uiManager.enableWaiting(false);
-    se (questo.#tela) {
-      questo.div.focus();
+    if (this.#canvas) {
+      this.div.focus();
     }
   }
   #getBitmap() {
-    se (questo.#bitmapId) {
+    if (this.#bitmapId) {
       this._uiManager.enableWaiting(true);
       this._uiManager.imageManager.getFromId(this.#bitmapId).then(data => this.#getBitmapFetched(data, true)).finally(() => this.#getBitmapDone());
-      ritorno;
+      return;
     }
-    se (questo.#bitmapUrl) {
+    if (this.#bitmapUrl) {
       const url = this.#bitmapUrl;
-      questo.#bitmapUrl = null;
+      this.#bitmapUrl = null;
       this._uiManager.enableWaiting(true);
-      questo.#bitmapPromise = questo._uiManager.imageManager.getFromUrl(url).then(dati => questo.#getBitmapFetched(dati)).finally(() => questo.#getBitmapDone());
-      ritorno;
+      this.#bitmapPromise = this._uiManager.imageManager.getFromUrl(url).then(data => this.#getBitmapFetched(data)).finally(() => this.#getBitmapDone());
+      return;
     }
-    se (questo.#bitmapFile) {
+    if (this.#bitmapFile) {
       const file = this.#bitmapFile;
-      questo.#bitmapFile = null;
+      this.#bitmapFile = null;
       this._uiManager.enableWaiting(true);
-      questo.#bitmapPromise = questo._uiManager.imageManager.getFromFile(file).then(dati => questo.#getBitmapFetched(dati)).finally(() => questo.#getBitmapDone());
-      ritorno;
+      this.#bitmapPromise = this._uiManager.imageManager.getFromFile(file).then(data => this.#getBitmapFetched(data)).finally(() => this.#getBitmapDone());
+      return;
     }
     const input = document.createElement("input");
     input.type = "file";
     input.accept = StampEditor.supportedTypesStr;
-    questo.#bitmapPromise = nuova promessa(risolvi => {
-      input.addEventListener("modifica", async () => {
-        se (!input.files || input.files.length === 0) {
-          questo.rimuovi();
-        } altro {
+    this.#bitmapPromise = new Promise(resolve => {
+      input.addEventListener("change", async () => {
+        if (!input.files || input.files.length === 0) {
+          this.remove();
+        } else {
           this._uiManager.enableWaiting(true);
-          const data = attendi questo._uiManager.imageManager.getFromFile(input.files[0]);
-          questo.#getBitmapFetched(dati);
+          const data = await this._uiManager.imageManager.getFromFile(input.files[0]);
+          this.#getBitmapFetched(data);
         }
-        risolvere();
+        resolve();
       });
-      input.addEventListener("annulla", () => {
-        questo.rimuovi();
-        risolvere();
+      input.addEventListener("cancel", () => {
+        this.remove();
+        resolve();
       });
     }).finally(() => this.#getBitmapDone());
     input.click();
   }
-  rimuovi() {
-    se (questo.#bitmapId) {
-      questo.#bitmap = null;
+  remove() {
+    if (this.#bitmapId) {
+      this.#bitmap = null;
       this._uiManager.imageManager.deleteId(this.#bitmapId);
-      questo.#canvas?.remove();
-      questo.#canvas = null;
-      questo.#osservatore?.disconnetti();
-      questo.#osservatore = null;
+      this.#canvas?.remove();
+      this.#canvas = null;
+      this.#observer?.disconnect();
+      this.#observer = null;
     }
-    super.rimuovi();
+    super.remove();
   }
-  ricostruisci() {
-    se (!questo.genitore) {
-      se (questo.#bitmapId) {
-        questo.#getBitmap();
+  rebuild() {
+    if (!this.parent) {
+      if (this.#bitmapId) {
+        this.#getBitmap();
       }
-      ritorno;
+      return;
     }
-    super.ricostruzione();
-    se (this.div === null) {
-      ritorno;
+    super.rebuild();
+    if (this.div === null) {
+      return;
     }
-    se (questo.#bitmapId) {
-      questo.#getBitmap();
+    if (this.#bitmapId) {
+      this.#getBitmap();
     }
-    se (!this.isAttachedToDOM) {
-      questo.genitore.aggiungi(questo);
+    if (!this.isAttachedToDOM) {
+      this.parent.add(this);
     }
   }
-  una voltaAggiunto() {
+  onceAdded() {
     this._isDraggable = true;
-    questo.div.focus();
+    this.div.focus();
   }
-  èVuoto() {
-    restituisci !(this.#bitmapPromise || this.#bitmap || this.#bitmapUrl || this.#bitmapFile);
+  isEmpty() {
+    return !(this.#bitmapPromise || this.#bitmap || this.#bitmapUrl || this.#bitmapFile);
   }
-  ottieni isResizable() {
-    restituisci vero;
+  get isResizable() {
+    return true;
   }
   render() {
-    se (questo.div) {
-      restituisci questo.div;
+    if (this.div) {
+      return this.div;
     }
-    lascia baseX, baseY;
-    se (questa larghezza) {
-      baseX = questo.x;
+    let baseX, baseY;
+    if (this.width) {
+      baseX = this.x;
       baseY = this.y;
     }
     super.render();
     this.div.hidden = true;
-    se (questo.#bitmap) {
-      questo.#createCanvas();
-    } altro {
-      questo.#getBitmap();
+    if (this.#bitmap) {
+      this.#createCanvas();
+    } else {
+      this.#getBitmap();
     }
-    se (questa larghezza) {
+    if (this.width) {
       const [parentWidth, parentHeight] = this.parentDimensions;
       this.setAt(baseX * parentWidth, baseY * parentHeight, this.width * parentWidth, this.height * parentHeight);
     }
-    restituisci questo.div;
+    return this.div;
   }
-  #creaCanvas() {
-    costante {
-      divisione
-    } = questo;
-    permettere {
-      larghezza,
-      altezza
-    } = questo.#bitmap;
-    const [larghezzapagina, altezzapagina] = this.pageDimensions;
-    const MAX_RATIO = 0,75;
-    se (questa larghezza) {
-      larghezza = this.width * pageWidth;
-      altezza = this.height * pageHeight;
-    } else if (larghezza > MAX_RATIO * larghezzapagina || altezza > MAX_RATIO * altezzapagina) {
-      fattore costante = Math.min(MAX_RATIO * pageWidth / larghezza, MAX_RATIO * pageHeight / altezza);
-      larghezza *= fattore;
-      altezza *= fattore;
+  #createCanvas() {
+    const {
+      div
+    } = this;
+    let {
+      width,
+      height
+    } = this.#bitmap;
+    const [pageWidth, pageHeight] = this.pageDimensions;
+    const MAX_RATIO = 0.75;
+    if (this.width) {
+      width = this.width * pageWidth;
+      height = this.height * pageHeight;
+    } else if (width > MAX_RATIO * pageWidth || height > MAX_RATIO * pageHeight) {
+      const factor = Math.min(MAX_RATIO * pageWidth / width, MAX_RATIO * pageHeight / height);
+      width *= factor;
+      height *= factor;
     }
     const [parentWidth, parentHeight] = this.parentDimensions;
-    this.setDims(larghezza * larghezza genitore / larghezza pagina, altezza * altezza genitore / altezza pagina);
+    this.setDims(width * parentWidth / pageWidth, height * parentHeight / pageHeight);
     this._uiManager.enableWaiting(false);
     const canvas = this.#canvas = document.createElement("canvas");
     div.append(canvas);
     div.hidden = false;
-    questo.#drawBitmap(larghezza, altezza);
-    questo.#createObserver();
-    se (!this.#hasBeenAddedInUndoStack) {
-      questo.genitore.aggiungiUndoableEditor(questo);
-      questo.#hasBeenAddedInUndoStack = true;
+    this.#drawBitmap(width, height);
+    this.#createObserver();
+    if (!this.#hasBeenAddedInUndoStack) {
+      this.parent.addUndoableEditor(this);
+      this.#hasBeenAddedInUndoStack = true;
     }
     this._uiManager._eventBus.dispatch("reporttelemetry", {
-      fonte: questo,
-      dettagli: {
-        tipo: "modifica",
-        sottotipo: this.editorType,
-        dati: {
-          azione: "immagine_inserita"
+      source: this,
+      details: {
+        type: "editing",
+        subtype: this.editorType,
+        data: {
+          action: "inserted_image"
         }
       }
     });
-    questo.aggiungiAltTextButton();
+    this.addAltTextButton();
   }
-  #setDimensions(larghezza, altezza) {
+  #setDimensions(width, height) {
     const [parentWidth, parentHeight] = this.parentDimensions;
-    this.width = larghezza / parentWidth;
-    this.height = altezza / parentHeight;
-    this.setDims(larghezza, altezza);
-    se (this._initialOptions?.isCentered) {
-      questo.centro();
-    } altro {
-      questo.fixAndSetPosition();
+    this.width = width / parentWidth;
+    this.height = height / parentHeight;
+    this.setDims(width, height);
+    if (this._initialOptions?.isCentered) {
+      this.center();
+    } else {
+      this.fixAndSetPosition();
     }
     this._initialOptions = null;
-    se (questo.#resizeTimeoutId !== null) {
+    if (this.#resizeTimeoutId !== null) {
       clearTimeout(this.#resizeTimeoutId);
     }
-    const TEMPO_DI_ATTESA = 200;
-    questo.#resizeTimeoutId = setTimeout(() => {
-      questo.#resizeTimeoutId = null;
-      questo.#drawBitmap(larghezza, altezza);
-    }, TEMPO_DI_ATTESA);
+    const TIME_TO_WAIT = 200;
+    this.#resizeTimeoutId = setTimeout(() => {
+      this.#resizeTimeoutId = null;
+      this.#drawBitmap(width, height);
+    }, TIME_TO_WAIT);
   }
-  #scaleBitmap(larghezza, altezza) {
-    costante {
-      larghezza: bitmapWidth,
-      altezza: bitmapHeight
-    } = questo.#bitmap;
-    lascia nuovaLarghezza = bitmapLarghezza;
-    lascia nuovaAltezza = bitmapAltezza;
-    lascia bitmap = questo.#bitmap;
+  #scaleBitmap(width, height) {
+    const {
+      width: bitmapWidth,
+      height: bitmapHeight
+    } = this.#bitmap;
+    let newWidth = bitmapWidth;
+    let newHeight = bitmapHeight;
+    let bitmap = this.#bitmap;
     while (newWidth > 2 * width || newHeight > 2 * height) {
       const prevWidth = newWidth;
       const prevHeight = newHeight;
-      se (nuovaLarghezza > 2 * larghezza) {
+      if (newWidth > 2 * width) {
         newWidth = newWidth >= 16384 ? Math.floor(newWidth / 2) - 1 : Math.ceil(newWidth / 2);
       }
-      se (nuovaaltezza > 2 * altezza) {
+      if (newHeight > 2 * height) {
         newHeight = newHeight >= 16384 ? Math.floor(newHeight / 2) - 1 : Math.ceil(newHeight / 2);
       }
       const offscreen = new OffscreenCanvas(newWidth, newHeight);
@@ -17694,440 +17694,440 @@ classe StampEditor estende _editor.AnnotationEditor {
       ctx.drawImage(bitmap, 0, 0, prevWidth, prevHeight, 0, 0, newWidth, newHeight);
       bitmap = offscreen.transferToImageBitmap();
     }
-    restituisci bitmap;
+    return bitmap;
   }
-  #drawBitmap(larghezza, altezza) {
-    larghezza = Math.ceil(larghezza);
-    altezza = Math.ceil(altezza);
+  #drawBitmap(width, height) {
+    width = Math.ceil(width);
+    height = Math.ceil(height);
     const canvas = this.#canvas;
-    se (!canvas || canvas.width === larghezza && canvas.height === altezza) {
-      ritorno;
+    if (!canvas || canvas.width === width && canvas.height === height) {
+      return;
     }
-    canvas.width = larghezza;
-    canvas.height = altezza;
-    const bitmap = this.#isSvg ? this.#bitmap : this.#scaleBitmap(larghezza, altezza);
+    canvas.width = width;
+    canvas.height = height;
+    const bitmap = this.#isSvg ? this.#bitmap : this.#scaleBitmap(width, height);
     const ctx = canvas.getContext("2d");
     ctx.filter = this._uiManager.hcmFilter;
-    ctx.drawImage(bitmap, 0, 0, bitmap.larghezza, bitmap.altezza, 0, 0, larghezza, altezza);
+    ctx.drawImage(bitmap, 0, 0, bitmap.width, bitmap.height, 0, 0, width, height);
   }
   #serializeBitmap(toUrl) {
-    se (toUrl) {
-      se (questo.#isSvg) {
+    if (toUrl) {
+      if (this.#isSvg) {
         const url = this._uiManager.imageManager.getSvgUrl(this.#bitmapId);
-        se (url) {
-          URL di ritorno;
+        if (url) {
+          return url;
         }
       }
       const canvas = document.createElement("canvas");
       ({
-        larghezza: canvas.width,
-        altezza: canvas.height
-      } = questo.#bitmap);
+        width: canvas.width,
+        height: canvas.height
+      } = this.#bitmap);
       const ctx = canvas.getContext("2d");
       ctx.drawImage(this.#bitmap, 0, 0);
-      restituisci canvas.toDataURL();
+      return canvas.toDataURL();
     }
-    se (questo.#isSvg) {
-      const [larghezzapagina, altezzapagina] = this.pageDimensions;
+    if (this.#isSvg) {
+      const [pageWidth, pageHeight] = this.pageDimensions;
       const width = Math.round(this.width * pageWidth * _display_utils.PixelsPerInch.PDF_TO_CSS_UNITS);
-      altezza costante = Math.round(this.height * pageHeight * _display_utils.PixelsPerInch.PDF_TO_CSS_UNITS);
-      const offscreen = new OffscreenCanvas(larghezza, altezza);
+      const height = Math.round(this.height * pageHeight * _display_utils.PixelsPerInch.PDF_TO_CSS_UNITS);
+      const offscreen = new OffscreenCanvas(width, height);
       const ctx = offscreen.getContext("2d");
       ctx.drawImage(this.#bitmap, 0, 0, this.#bitmap.width, this.#bitmap.height, 0, 0, width, height);
-      restituisci offscreen.transferToImageBitmap();
+      return offscreen.transferToImageBitmap();
     }
-    restituisci structuredClone(this.#bitmap);
+    return structuredClone(this.#bitmap);
   }
-  #creaOsservatore() {
-    questo.#osservatore = nuovo ResizeObserver(voci => {
+  #createObserver() {
+    this.#observer = new ResizeObserver(entries => {
       const rect = entries[0].contentRect;
-      se (larghezza rettangolo e altezza rettangolo) {
-        questo.#setDimensions(rect.larghezza, rect.altezza);
+      if (rect.width && rect.height) {
+        this.#setDimensions(rect.width, rect.height);
       }
     });
-    questo.#osservatore.osserva(questo.div);
+    this.#observer.observe(this.div);
   }
-  deserialize statico (dati, genitore, uiManager) {
-    se (istanza di dati di _annotation_layer.StampAnnotationElement) {
-      restituisci null;
+  static deserialize(data, parent, uiManager) {
+    if (data instanceof _annotation_layer.StampAnnotationElement) {
+      return null;
     }
     const editor = super.deserialize(data, parent, uiManager);
-    costante {
-      dritto,
+    const {
+      rect,
       bitmapUrl,
       bitmapId,
-      èSvg,
-      accessibilitàDati
-    } = dati;
-    se (bitmapId && uiManager.imageManager.isValidId(bitmapId)) {
+      isSvg,
+      accessibilityData
+    } = data;
+    if (bitmapId && uiManager.imageManager.isValidId(bitmapId)) {
       editor.#bitmapId = bitmapId;
-    } altro {
+    } else {
       editor.#bitmapUrl = bitmapUrl;
     }
     editor.#isSvg = isSvg;
     const [parentWidth, parentHeight] = editor.pageDimensions;
     editor.width = (rect[2] - rect[0]) / parentWidth;
     editor.height = (rect[3] - rect[1]) / parentHeight;
-    se (accessibilityData) {
+    if (accessibilityData) {
       editor.altTextData = accessibilityData;
     }
-    editor di ritorno;
+    return editor;
   }
   serialize(isForCopying = false, context = null) {
-    se (questo.èVuoto()) {
-      restituisci null;
+    if (this.isEmpty()) {
+      return null;
     }
-    const serializzato = {
+    const serialized = {
       annotationType: _util.AnnotationEditorType.STAMP,
-      bitmapId: questo.#bitmapId,
+      bitmapId: this.#bitmapId,
       pageIndex: this.pageIndex,
-      rettangolo: this.getRect(0, 0),
-      rotazione: questa.rotazione,
-      isSvg: questo.#isSvg,
+      rect: this.getRect(0, 0),
+      rotation: this.rotation,
+      isSvg: this.#isSvg,
       structTreeParentId: this._structTreeParentId
     };
-    se (èPerCopiare) {
+    if (isForCopying) {
       serialized.bitmapUrl = this.#serializeBitmap(true);
       serialized.accessibilityData = this.altTextData;
-      restituisci serializzato;
+      return serialized;
     }
-    costante {
-      decorativo,
-      testo alternativo
+    const {
+      decorative,
+      altText
     } = this.altTextData;
-    se (!decorativo && testo alternativo) {
+    if (!decorative && altText) {
       serialized.accessibilityData = {
-        tipo: "Figura",
-        alt: testo alternativo
+        type: "Figure",
+        alt: altText
       };
     }
-    se (contesto === null) {
-      restituisci serializzato;
+    if (context === null) {
+      return serialized;
     }
-    contesto.timbri ||= nuova mappa();
+    context.stamps ||= new Map();
     const area = this.#isSvg ? (serialized.rect[2] - serialized.rect[0]) * (serialized.rect[3] - serialized.rect[1]) : null;
-    se (!context.stamps.has(this.#bitmapId)) {
-      contesto.stamps.set(this.#bitmapId, {
-        zona,
-        serializzato
+    if (!context.stamps.has(this.#bitmapId)) {
+      context.stamps.set(this.#bitmapId, {
+        area,
+        serialized
       });
       serialized.bitmap = this.#serializeBitmap(false);
-    } altrimenti se (questo.#isSvg) {
+    } else if (this.#isSvg) {
       const prevData = context.stamps.get(this.#bitmapId);
-      se (area > prevData.area) {
+      if (area > prevData.area) {
         prevData.area = area;
         prevData.serialized.bitmap.close();
         prevData.serialized.bitmap = this.#serializeBitmap(false);
       }
     }
-    restituisci serializzato;
+    return serialized;
   }
 }
-esportazioni.StampEditor = StampEditor;
+exports.StampEditor = StampEditor;
 
 /***/ })
-/******/ ]);
-/****************************************************************************/
-/******/ // La cache del modulo
-/******/ var __webpack_module_cache__ = {};
+/******/ 	]);
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
 /******/ 	
-/******/ // La funzione require
-/******/ funzione __w_pdfjs_require__(moduleId) {
-/******/ // Controlla se il modulo è nella cache
-/******/ var cachedModule = __webpack_module_cache__[moduleId];
-/******/ if (cachedModule !== indefinito) {
-/******/ restituisce cachedModule.exports;
-/******/ }
-/******/ // Crea un nuovo modulo (e mettilo nella cache)
-/******/ var modulo = __webpack_module_cache__[moduleId] = {
-/******/ // non è necessario alcun module.id
-/******/ // nessun modulo caricato necessario
-/******/ esporta: {}
-/******/ };
+/******/ 	// The require function
+/******/ 	function __w_pdfjs_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
 /******/ 	
-/******/ // Esegue la funzione del modulo
-/******/ __webpack_modules__[moduleId](modulo, modulo.esportazioni, __w_pdfjs_require__);
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __w_pdfjs_require__);
 /******/ 	
-/******/ // Restituisce le esportazioni del modulo
-/******/ restituisce il modulo.esportazioni;
-/******/ }
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 /******/ 	
-/****************************************************************************/
+/************************************************************************/
 var __webpack_exports__ = {};
-// Questa voce deve essere racchiusa in un IIFE perché deve essere isolata dagli altri moduli nel blocco.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-var esportazioni = __webpack_exports__;
+var exports = __webpack_exports__;
 
 
-Object.defineProperty(esporta, "__esModule", ({
-  valore: vero
+Object.defineProperty(exports, "__esModule", ({
+  value: true
 }));
-Object.defineProperty(esporta, "AbortException", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.AbortException;
+Object.defineProperty(exports, "AbortException", ({
+  enumerable: true,
+  get: function () {
+    return _util.AbortException;
   }
 }));
-Object.defineProperty(esporta, "AnnotationEditorLayer", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _annotation_editor_layer.AnnotationEditorLayer;
+Object.defineProperty(exports, "AnnotationEditorLayer", ({
+  enumerable: true,
+  get: function () {
+    return _annotation_editor_layer.AnnotationEditorLayer;
   }
 }));
-Object.defineProperty(esporta, "AnnotationEditorParamsType", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.AnnotationEditorParamsType;
+Object.defineProperty(exports, "AnnotationEditorParamsType", ({
+  enumerable: true,
+  get: function () {
+    return _util.AnnotationEditorParamsType;
   }
 }));
-Object.defineProperty(esporta, "AnnotationEditorType", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.AnnotationEditorType;
+Object.defineProperty(exports, "AnnotationEditorType", ({
+  enumerable: true,
+  get: function () {
+    return _util.AnnotationEditorType;
   }
 }));
-Object.defineProperty(esporta, "AnnotationEditorUIManager", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _tools.AnnotationEditorUIManager;
+Object.defineProperty(exports, "AnnotationEditorUIManager", ({
+  enumerable: true,
+  get: function () {
+    return _tools.AnnotationEditorUIManager;
   }
 }));
-Object.defineProperty(esporta, "AnnotationLayer", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _annotation_layer.AnnotationLayer;
+Object.defineProperty(exports, "AnnotationLayer", ({
+  enumerable: true,
+  get: function () {
+    return _annotation_layer.AnnotationLayer;
   }
 }));
-Object.defineProperty(esporta, "AnnotationMode", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.AnnotationMode;
+Object.defineProperty(exports, "AnnotationMode", ({
+  enumerable: true,
+  get: function () {
+    return _util.AnnotationMode;
   }
 }));
-Object.defineProperty(esporta, "CMapCompressionType", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.CMapCompressionType;
+Object.defineProperty(exports, "CMapCompressionType", ({
+  enumerable: true,
+  get: function () {
+    return _util.CMapCompressionType;
   }
 }));
-Object.defineProperty(esporta, "DOMSVGFactory", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.DOMSVGFactory;
+Object.defineProperty(exports, "DOMSVGFactory", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.DOMSVGFactory;
   }
 }));
-Object.defineProperty(esporta, "FeatureTest", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.FeatureTest;
+Object.defineProperty(exports, "FeatureTest", ({
+  enumerable: true,
+  get: function () {
+    return _util.FeatureTest;
   }
 }));
-Object.defineProperty(esporta, "GlobalWorkerOptions", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _worker_options.GlobalWorkerOptions;
+Object.defineProperty(exports, "GlobalWorkerOptions", ({
+  enumerable: true,
+  get: function () {
+    return _worker_options.GlobalWorkerOptions;
   }
 }));
-Object.defineProperty(esporta, "ImageKind", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.ImageKind;
+Object.defineProperty(exports, "ImageKind", ({
+  enumerable: true,
+  get: function () {
+    return _util.ImageKind;
   }
 }));
-Object.defineProperty(esporta, "InvalidPDFException", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.InvalidPDFException;
+Object.defineProperty(exports, "InvalidPDFException", ({
+  enumerable: true,
+  get: function () {
+    return _util.InvalidPDFException;
   }
 }));
-Object.defineProperty(esporta, "MissingPDFException", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.MissingPDFException;
+Object.defineProperty(exports, "MissingPDFException", ({
+  enumerable: true,
+  get: function () {
+    return _util.MissingPDFException;
   }
 }));
-Object.defineProperty(esporta, "OPS", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.OPS;
+Object.defineProperty(exports, "OPS", ({
+  enumerable: true,
+  get: function () {
+    return _util.OPS;
   }
 }));
-Object.defineProperty(esporta, "PDFDataRangeTransport", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    ritorno _api.PDFDataRangeTransport;
+Object.defineProperty(exports, "PDFDataRangeTransport", ({
+  enumerable: true,
+  get: function () {
+    return _api.PDFDataRangeTransport;
   }
 }));
-Object.defineProperty(esporta, "PDFDateString", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.PDFDateString;
+Object.defineProperty(exports, "PDFDateString", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.PDFDateString;
   }
 }));
-Object.defineProperty(esporta, "PDFWorker", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _api.PDFWorker;
+Object.defineProperty(exports, "PDFWorker", ({
+  enumerable: true,
+  get: function () {
+    return _api.PDFWorker;
   }
 }));
-Object.defineProperty(esporta, "PasswordResponses", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.PasswordResponses;
+Object.defineProperty(exports, "PasswordResponses", ({
+  enumerable: true,
+  get: function () {
+    return _util.PasswordResponses;
   }
 }));
-Object.defineProperty(esporta, "PermissionFlag", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.PermissionFlag;
+Object.defineProperty(exports, "PermissionFlag", ({
+  enumerable: true,
+  get: function () {
+    return _util.PermissionFlag;
   }
 }));
-Object.defineProperty(esporta, "Pixel per pollice", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.PixelsPerInch;
+Object.defineProperty(exports, "PixelsPerInch", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.PixelsPerInch;
   }
 }));
-Object.defineProperty(esporta, "PromiseCapability", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.PromiseCapability;
+Object.defineProperty(exports, "PromiseCapability", ({
+  enumerable: true,
+  get: function () {
+    return _util.PromiseCapability;
   }
 }));
-Object.defineProperty(esporta, "RenderingCancelledException", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.RenderingCancelledException;
+Object.defineProperty(exports, "RenderingCancelledException", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.RenderingCancelledException;
   }
 }));
-Object.defineProperty(esporta, "SVGGraphics", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _api.SVGGraphics;
+Object.defineProperty(exports, "SVGGraphics", ({
+  enumerable: true,
+  get: function () {
+    return _api.SVGGraphics;
   }
 }));
-Object.defineProperty(esporta, "UnexpectedResponseException", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.UnexpectedResponseException;
+Object.defineProperty(exports, "UnexpectedResponseException", ({
+  enumerable: true,
+  get: function () {
+    return _util.UnexpectedResponseException;
   }
 }));
-Object.defineProperty(esporta, "Util", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.Util;
+Object.defineProperty(exports, "Util", ({
+  enumerable: true,
+  get: function () {
+    return _util.Util;
   }
 }));
-Object.defineProperty(esporta, "Livello di verbosità", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.VerbosityLevel;
+Object.defineProperty(exports, "VerbosityLevel", ({
+  enumerable: true,
+  get: function () {
+    return _util.VerbosityLevel;
   }
 }));
-Object.defineProperty(esporta, "XfaLayer", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _xfa_layer.XfaLayer;
+Object.defineProperty(exports, "XfaLayer", ({
+  enumerable: true,
+  get: function () {
+    return _xfa_layer.XfaLayer;
   }
 }));
-Object.defineProperty(esporta, "build", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _api.build;
+Object.defineProperty(exports, "build", ({
+  enumerable: true,
+  get: function () {
+    return _api.build;
   }
 }));
-Object.defineProperty(esporta, "createValidAbsoluteUrl", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.createValidAbsoluteUrl;
+Object.defineProperty(exports, "createValidAbsoluteUrl", ({
+  enumerable: true,
+  get: function () {
+    return _util.createValidAbsoluteUrl;
   }
 }));
-Object.defineProperty(esporta, "getDocument", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _api.getDocument;
+Object.defineProperty(exports, "getDocument", ({
+  enumerable: true,
+  get: function () {
+    return _api.getDocument;
   }
 }));
-Object.defineProperty(esporta, "getFilenameFromUrl", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.getFilenameFromUrl;
+Object.defineProperty(exports, "getFilenameFromUrl", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.getFilenameFromUrl;
   }
 }));
-Object.defineProperty(esporta, "getPdfFilenameFromUrl", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.getPdfFilenameFromUrl;
+Object.defineProperty(exports, "getPdfFilenameFromUrl", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.getPdfFilenameFromUrl;
   }
 }));
-Object.defineProperty(esporta, "getXfaPageViewport", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.getXfaPageViewport;
+Object.defineProperty(exports, "getXfaPageViewport", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.getXfaPageViewport;
   }
 }));
-Object.defineProperty(esporta, "isDataScheme", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.isDataScheme;
+Object.defineProperty(exports, "isDataScheme", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.isDataScheme;
   }
 }));
-Object.defineProperty(esporta, "isPdfFile", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.isPdfFile;
+Object.defineProperty(exports, "isPdfFile", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.isPdfFile;
   }
 }));
-Object.defineProperty(esporta, "loadScript", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.loadScript;
+Object.defineProperty(exports, "loadScript", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.loadScript;
   }
 }));
-Object.defineProperty(esporta, "noContextMenu", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.noContextMenu;
+Object.defineProperty(exports, "noContextMenu", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.noContextMenu;
   }
 }));
-Object.defineProperty(esporta, "normalizzaUnicode", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.normalizeUnicode;
+Object.defineProperty(exports, "normalizeUnicode", ({
+  enumerable: true,
+  get: function () {
+    return _util.normalizeUnicode;
   }
 }));
-Object.defineProperty(esporta, "renderTextLayer", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _text_layer.renderTextLayer;
+Object.defineProperty(exports, "renderTextLayer", ({
+  enumerable: true,
+  get: function () {
+    return _text_layer.renderTextLayer;
   }
 }));
-Object.defineProperty(esporta, "setLayerDimensions", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _display_utils.setLayerDimensions;
+Object.defineProperty(exports, "setLayerDimensions", ({
+  enumerable: true,
+  get: function () {
+    return _display_utils.setLayerDimensions;
   }
 }));
-Object.defineProperty(esporta, "ombra", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _util.shadow;
+Object.defineProperty(exports, "shadow", ({
+  enumerable: true,
+  get: function () {
+    return _util.shadow;
   }
 }));
-Object.defineProperty(esporta, "updateTextLayer", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _text_layer.updateTextLayer;
+Object.defineProperty(exports, "updateTextLayer", ({
+  enumerable: true,
+  get: function () {
+    return _text_layer.updateTextLayer;
   }
 }));
-Object.defineProperty(esporta, "versione", ({
-  enumerabile: vero,
-  ottenere: funzione () {
-    restituisci _api.version;
+Object.defineProperty(exports, "version", ({
+  enumerable: true,
+  get: function () {
+    return _api.version;
   }
 }));
 var _util = __w_pdfjs_require__(1);
-variabile _api = __w_pdfjs_require__(2);
+var _api = __w_pdfjs_require__(2);
 var _display_utils = __w_pdfjs_require__(6);
 var _text_layer = __w_pdfjs_require__(26);
 var _annotation_editor_layer = __w_pdfjs_require__(27);
@@ -18139,7 +18139,7 @@ const pdfjsVersion = '3.11.174';
 const pdfjsBuild = 'ce8716743';
 })();
 
-/******/ restituisce __webpack_exports__;
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
 });
