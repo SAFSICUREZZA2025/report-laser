@@ -81,3 +81,6 @@ $("sign-clear").onclick=()=>sctx.clearRect(0,0,sign.width,sign.height);
 
 $("autoDoc1").onclick=()=>autoDetectHighlights($("doc1"));
 $("autoDoc2").onclick=()=>autoDetectHighlights($("doc2"));
+// Precarica PDF di default se presenti sul sito
+fetch("VALUTAZIONE ROA LASER ESTETICO.pdf").then(r=>r.ok&&r.arrayBuffer()).then(b=>{ if(b){ renderBufferToHost(b,"doc1"); document.getElementById("autoDoc1").disabled=false; }});
+fetch("Relazione_ESL_II_modello_editabile 2025.pdf").then(r=>r.ok&&r.arrayBuffer()).then(b=>{ if(b){ renderBufferToHost(b,"doc2"); document.getElementById("autoDoc2").disabled=false; }});
