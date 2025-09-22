@@ -1,4 +1,4 @@
-const CACHE = "editor-embedded-v12";
+const CACHE = "editor-embedded-v13";
 const ASSETS = ["./","./index.html","./style.css?v=6","./script.js?v=6","./manifest.json?v=6","./favicon.ico","./icon-192.png","./icon-512.png","./libs/pdfjs/pdf.js","./libs/pdfjs/pdf.worker.js","https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js","https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js","https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js","https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS).catch(()=>{}))); self.skipWaiting(); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(keys => Promise.all(keys.map(k => k !== CACHE && caches.delete(k))))); self.clients.claim(); });
