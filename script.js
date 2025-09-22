@@ -38,46 +38,93 @@ function overlayClick(ev, ov){
   const x = ev.clientX - r.left;
   const y = ev.clientY - r.top;
 
-  if(activeTool==="check"){
-    const c=document.createElement("div");
-    c.className="checkbox";
-    c.style.left=(x-10)+"px";
-    c.style.top =(y-10)+"px";
-    c.addEventListener("click",e=>{e.stopPropagation();c.classList.toggle("checked");});
+  if (activeTool === "check"){
+    const c = document.createElement("div");
+    c.className = "checkbox";
+    c.style.left = (x-10) + "px";
+    c.style.top  = (y-10) + "px";
+    c.addEventListener("click", e => { e.stopPropagation(); c.classList.toggle("checked"); });
     ov.appendChild(c);
     return;
   }
+  if (activeTool !== "text") return;
 
-  const f=document.createElement("div");
-  f.className="field";
-  f.contentEditable="true";
-  f.style.left=x+"px";
-  f.style.top =y+"px";
+  const f = document.createElement("div");
+  f.className = "field";
+  f.contentEditable = "true";
+  f.style.left = x + "px";
+  f.style.top  = y + "px";
   ov.appendChild(f);
   f.focus();
-  const sel=window.getSelection();
-  if(sel){ const rg=document.createRange(); rg.selectNodeContents(f); rg.collapse(false); sel.removeAllRanges(); sel.addRange(rg); }
+  const sel = window.getSelection();
+  if (sel){ const rg = document.createRange(); rg.selectNodeContents(f); rg.collapse(false); sel.removeAllRanges(); sel.addRange(rg); }
 }
 
 document.addEventListener("pointerdown",function(e){var el=e.target;if(!el.classList)return;if(el.classList.contains("field")||el.classList.contains("checkbox")){if(activeTool==="del"){el.remove();return;}if(activeTool!=="move")return;var sx=e.clientX,sy=e.clientY,sl=parseFloat(el.style.left||"0"),st=parseFloat(el.style.top||"0");function mv(ev){el.style.left=(sl+(ev.clientX-sx))+"px";el.style.top=(st+(ev.clientY-sy))+"px";}function up(){document.removeEventListener("pointermove",mv);document.removeEventListener("pointerup",up);}document.addEventListener("pointermove",mv);document.addEventListener("pointerup",up);}});
 
-function autoDetectHighlights(host){var pages=host.querySelectorAll(".page");pages.forEach(page=>{var canvas=page.querySelector("canvas"),ov=page.querySelector(".overlay"); if(!canvas||!ov)return;var ctx=canvas.getContext("2d"),W=canvas.width,H=canvas.height,data=ctx.getImageData(0,0,W,H).data;var step=4,gw=Math.floor(W/step)+1,gh=Math.floor(H/step)+1,seen=new Uint8Array(gw*gh);function idx(x,y){return y*gw+x;}function isFluo(r,g,b){return (r>220&&g>220&&b<140)||(r>200&&g>200&&b<120);}for(var ys=0;ys<H;ys+=step){for(var xs=0;xs<W;xs+=step){var gx=Math.floor(xs/step),gy=Math.floor(ys/step),id=idx(gx,gy); if(seen[id])continue;var i=(ys*W+xs)*4,r=data[i],g=data[i+1],b=data[i+2]; if(!isFluo(r,g,b)){seen[id]=1;continue;}var q=[[gx,gy]];seen[id]=1;var minx=gx,miny=gy,maxx=gx,maxy=gy;while(q.length){var p=q.pop(),cx=p[0],cy=p[1];if(cx<minx)minx=cx;if(cy<miny)miny=cy;if(cx>maxx)maxx=cx;if(cy>maxy)maxy=cy;[[cx+1,cy],[cx-1,cy],[cx,cy+1],[cx,cy-1]].forEach(nb=>{var nx=nb[0],ny=nb[1];if(nx<0||ny<0||nx>=gw||ny>=gh)return;var nid=idx(nx,ny);if(seen[nid])return;var px=nx*step,py=ny*step,pi=(py*W+px)*4,rr=data[pi],gg=data[pi+1],bb=data[pi+2];if(isFluo(rr,gg,bb)){seen[nid]=1;q.push([nx,ny]);}else seen[nid]=1;});}var bx=minx*step,by=miny*step,bw=(maxx-minx+1)*step,bh=(maxy-miny+1)*step;if(bw*bh<600||bw<16||bh<10)continue;if(bw<50&&bh<40){var c=document.createElement("div");c.className="checkbox";c.style.left=bx+"px";c.style.top=by+"px";c.addEventListener("click",e=>{e.stopPropagation();c.classList.toggle("checked");});ov.appendChild(c);} else {var f=document.createElement("div");f.className="field";f.contentEditable="true";f.style.left=bx+"px";f.style.top=by+"px";f.style.width=Math.max(100,bw-6)+"px";f.style.height=Math.max(24,bh-6)+"px";ov.appendChild(f);} }}});}
+function autoDetectHighlights(host){
+  const pages = host.querySelectorAll(".page");
+  pages.forEach(page=>{
+    const canvas = page.querySelector("canvas");
+    const ov     = page.querySelector(".overlay");
+    if(!canvas || !ov) return;
 
-async function renderBufferToHost(buf,hostId){
-  await ensurePdfjsReady();
-  if(!window.pdfjsLib || !window.pdfjsLib.getDocument){ alert("PDF.js non caricato. Controlla libs/pdfjs/"); return; }
-  var host=$(hostId); host.innerHTML="";
-  window.pdfjsLib.getDocument({data:buf}).promise.then(pdf=>{
-    let p=1;(function next(){ if(p>pdf.numPages)return; pdf.getPage(p).then(page=>{
-      var vp=page.getViewport({scale:1.5});
-      var sect=document.createElement("div");sect.className="page";
-      var hold=document.createElement("div");hold.className="canvas-holder";
-      var c=document.createElement("canvas");c.width=vp.width;c.height=vp.height;var ctx=c.getContext("2d");
-      page.render({canvasContext:ctx,viewport:vp}).promise.then(()=>{
-        var ov=document.createElement("div");ov.className="overlay";ov.addEventListener("click",ev=>overlayClick(ev,ov));
-        hold.appendChild(c);hold.appendChild(ov);sect.appendChild(hold);host.appendChild(sect);p++;next();
-      });}); })();
-  }).catch(e=>{console.error(e);host.innerHTML='<div class="page"><div style="padding:12px;color:#b00">Errore PDF: '+e.message+'</div></div>';});
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const data = ctx.getImageData(0,0,W,H).data;
+
+    const step = 3;                                 // più fine
+    const gw = Math.floor(W/step)+1, gh = Math.floor(H/step)+1;
+    const seen = new Uint8Array(gw*gh);
+    const idx = (x,y)=> y*gw + x;
+    const isFluo = (r,g,b)=>
+      (r>200&&g>200&&b<170) || (r>230&&g>210&&b<160) || (r<120&&g>200&&b<130);
+
+    for(let ys=0; ys<H; ys+=step){
+      for(let xs=0; xs<W; xs+=step){
+        const gx=Math.floor(xs/step), gy=Math.floor(ys/step), id=idx(gx,gy);
+        if(seen[id]) continue;
+
+        const i=(ys*W+xs)*4, r=data[i], g=data[i+1], b=data[i+2];
+        if(!isFluo(r,g,b)){ seen[id]=1; continue; }
+
+        const q=[[gx,gy]]; seen[id]=1;
+        let minx=gx,miny=gy,maxx=gx,maxy=gy;
+        while(q.length){
+          const [cx,cy]=q.pop();
+          if(cx<minx)minx=cx; if(cy<miny)miny=cy; if(cx>maxx)maxx=cx; if(cy>maxy)maxy=cy;
+          [[cx+1,cy],[cx-1,cy],[cx,cy+1],[cx,cy-1]].forEach(([nx,ny])=>{
+            if(nx<0||ny<0||nx>=gw||ny>=gh) return;
+            const nid=idx(nx,ny); if(seen[nid]) return;
+            const px=nx*step, py=ny*step, pi=(py*W+px)*4;
+            if(isFluo(data[pi],data[pi+1],data[pi+2])){ seen[nid]=1; q.push([nx,ny]); }
+            else seen[nid]=1;
+          });
+        }
+
+        const pad=3;
+        let bx=minx*step+pad, by=miny*step+pad;
+        let bw=(maxx-minx+1)*step-2*pad, bh=(maxy-miny+1)*step-2*pad;
+
+        if (bw*bh < 250 || bw < 50 || bh < 12) continue;
+
+        if (bw < 50 && bh < 40){
+          const c=document.createElement("div");
+          c.className="checkbox";
+          c.style.left=bx+"px"; c.style.top=by+"px";
+          c.addEventListener("click",e=>{e.stopPropagation();c.classList.toggle("checked");});
+          ov.appendChild(c);
+        } else {
+          const f=document.createElement("div");
+          f.className="field"; f.contentEditable="true";
+          f.style.left=bx+"px"; f.style.top=by+"px";
+          f.style.width=Math.max(70,bw)+"px";
+          f.style.height=Math.max(20,bh)+"px";
+          ov.appendChild(f);
+        }
+      }
+    }
+  });
 }
 
 function wireUpload(btnId,inputId,hostId){
