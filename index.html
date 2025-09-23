@@ -4,36 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Editor PDF – Modelli integrati</title>
-  <link rel="manifest" href="manifest.json?v=6">
+  <link rel="manifest" href="manifest.json?v=15">
   <meta name="theme-color" content="#2f89ff">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=6" />
-  <script src="libs/pdfjs/pdf.js" defer></script>
-  <script defer>
-    window.addEventListener("error", function(e){
-      if (String(e.filename||"").includes("libs/pdfjs/pdf.js")) {
-        var s = document.createElement("script");
-        s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
-        document.head.appendChild(s);
-        var w = document.createElement("link");
-        w.rel="preload"; w.as="script";
-        w.href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
-        document.head.appendChild(w);
-      }
-    }, true);
-  </script>
+  <link rel="stylesheet" href="style.css?v=15" />
+
+  <!-- PDF.js dal CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+  <!-- html2canvas + jsPDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-  <script src="script.js?v=6" defer></script>
-  <style>.ver{position:fixed;right:10px;bottom:10px;font-size:12px;color:#9db6e6}</style>
+
+  <script src="script.js?v=15" defer></script>
 </head>
 <body>
-<header>
-  <h1>Editor PDF – Modelli integrati</h1>
-  <button id="installPWA" class="ghost">Installa</button>
-</header>
+<header><h1>Editor PDF – Modelli integrati</h1></header>
 <main>
   <section class="controls">
     <div class="row">
@@ -60,31 +47,9 @@
       <button class="tool" id="tool-move">Sposta</button>
       <button class="tool" id="tool-del">Elimina</button>
     </div>
-    <div class="row">
-      <div class="col">
-        <label class="lbl">Foto sezione 1</label>
-        <input id="photos1" type="file" accept="image/*" multiple capture="environment">
-        <div id="photos1-preview" class="preview"></div>
-      </div>
-      <div class="col">
-        <label class="lbl">Foto sezione 2</label>
-        <input id="photos2" type="file" accept="image/*" multiple capture="environment">
-        <div id="photos2-preview" class="preview"></div>
-      </div>
-    </div>
-    <div class="row notes">
-      <label for="notes">Note</label>
-      <textarea id="notes" rows="5" placeholder="Annotazioni operative..."></textarea>
-    </div>
-    <div class="row sign">
-      <div class="col">
-        <label>Firma Datore di Lavoro</label>
-        <canvas id="sign" width="820" height="180"></canvas>
-        <div class="btns"><button id="sign-clear">Pulisci firma</button></div>
-      </div>
-    </div>
     <div class="row final">
-      <button id="make-pdf">Genera PDF Unico</button>
+      <button id="make-pdf-1">Esporta PDF Doc 1</button>
+      <button id="make-pdf-2">Esporta PDF Doc 2</button>
     </div>
   </section>
   <section class="docs">
@@ -92,21 +57,13 @@
     <div id="doc2" class="doc"></div>
   </section>
 </main>
-<footer><small>v6 • Offline dopo primo avvio. Su iOS: aggiungi a Home.</small></footer>
+<footer>Build v15</footer>
 <script>
-  let deferredPrompt=null;
-  window.addEventListener("beforeinstallprompt", (e)=>{
-    e.preventDefault(); deferredPrompt=e;
-    const b=document.getElementById("installPWA");
-    b.style.display="inline-block";
-    b.onclick=()=>{ deferredPrompt.prompt(); };
-  });
-  if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./service-worker.js?v=6");
+      navigator.serviceWorker.register("./service-worker.js?v=15");
     });
   }
 </script>
-<div class="ver">Build index.html v6</div>
 </body>
 </html>
