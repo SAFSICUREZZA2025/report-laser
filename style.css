@@ -1,46 +1,16 @@
-*{box-sizing:border-box}html,body{margin:0;padding:0;height:100%;background:#0b1c2c;color:#e9f1ff;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#11263c;position:sticky;top:0;z-index:10}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%;background:#0b1c2c;color:#e9f1ff;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
+header{padding:12px 16px;background:#11263c}
 h1{font-size:18px;margin:0}
-button{background:#2f89ff;border:0;color:white;padding:8px 12px;border-radius:10px;cursor:pointer}
-button.ghost{background:transparent;border:1px solid #2f89ff;color:#2f89ff;display:none}
-button:disabled{opacity:.5;cursor:not-allowed}
 main{display:grid;grid-template-columns:360px 1fr;gap:16px;padding:12px}
-section.controls{background:#0e2238;border:1px solid #1a3350;border-radius:14px;padding:12px;position:sticky;top:58px;height:calc(100dvh - 74px);overflow:auto}
-section.docs{overflow:auto;max-height:calc(100dvh - 24px)}
-.row{display:flex;gap:10px;align-items:center;margin:8px 0;flex-wrap:wrap}
-.col{flex:1 1 0}
-.tools .tool{min-width:70px}
-.tools .tool.active{background:#1bbf72}
-.lbl{display:block;margin-bottom:4px;font-size:12px;color:#bcd1ff}
-.preview{display:flex;gap:8px;flex-wrap:wrap}
-.preview .thumb{width:84px;height:84px;object-fit:cover;border-radius:8px;border:1px solid #274a7a}
-.notes textarea{width:100%;border-radius:10px;border:1px solid #274a7a;background:#09192a;color:#e9f1ff;padding:8px}
-.sign canvas{width:100%;max-width:820px;background:#fff;border-radius:8px;border:1px dashed #274a7a}
-.final{justify-content:center}
+section.controls{background:#0e2238;border:1px solid #1a3350;border-radius:14px;padding:12px;position:sticky;top:12px;height:calc(100dvh - 36px);overflow:auto}
 .docs .doc{padding:8px}
 .page{background:#fff;margin:0 0 12px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,.25);overflow:hidden}
 .canvas-holder{position:relative}
 .overlay{position:absolute;left:0;top:0;right:0;bottom:0}
-.field{position:absolute;min-width:120px;min-height:24px;border:1px dashed #2f89ff;background:rgba(47,137,255,.06);padding:4px;border-radius:6px;outline:none}
+button{background:#2f89ff;border:0;color:white;padding:8px 12px;border-radius:10px;cursor:pointer}
+button:disabled{opacity:.5;cursor:not-allowed}
+.tool.active{background:#1bbf72}
+.field{position:absolute;min-width:80px;min-height:20px;padding:2px 6px;border:1px dashed #2f89ff;border-radius:6px;background:rgba(255,255,255,.9);color:#111;font-size:13px;line-height:1.2;outline:none}
 .checkbox{position:absolute;width:18px;height:18px;border:2px solid #2f89ff;border-radius:4px;background:#fff}
 .checkbox.checked{background:#2f89ff}
-footer{padding:10px 16px;color:#9db6e6}
-.signing{cursor:crosshair}
-.bigbtn{min-width:130px}
-.field{
-  position:absolute;
-  min-width:80px;
-  min-height:20px;
-  padding:2px 6px;
-  border:1px dashed #2f89ff;
-  border-radius:6px;
-  background:rgba(255,255,255,.85);
-  color:#111;
-  font-size:13px;
-  line-height:1.2;
-  outline:none;
-}
-.field:focus{
-  background:rgba(255,255,255,0.92);
-  box-shadow:0 0 0 2px rgba(47,137,255,.25) inset;
-}
