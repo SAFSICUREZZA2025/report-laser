@@ -1,4 +1,4 @@
-const CACHE = "editor-embedded-v15";
+const CACHE = "editor-embedded-v16";
 
 const ASSETS = [
   "./",
