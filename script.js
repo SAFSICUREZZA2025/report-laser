@@ -206,3 +206,95 @@ function wireUpload(btnId,inputId,hostId){
   inp.addEventListener("change",()=>{
     const f=inp.files&&inp.files[0];
     if(!f) return;
+    const fr=new FileReader();
+    fr.onload=()=>{
+      renderBufferToHost(fr.result,hostId);
+      const ab=document.getElementById(btnId.replace("btn-","auto"));
+      if(ab) ab.disabled=false;
+    };
+    fr.readAsArrayBuffer(f);
+  });
+}
+wireUpload("btn-file1","file1","doc1");
+wireUpload("btn-file2","file2","doc2");
+
+document.getElementById("autoDoc1").onclick=()=>autoDetectHighlights(document.getElementById("doc1"));
+document.getElementById("autoDoc2").onclick=()=>autoDetectHighlights(document.getElementById("doc2"));
+
+// Export PDF singoli
+async function rasterizePageWithOverlays(pageEl){
+  const base=pageEl.querySelector("canvas");
+  const W=base.width,H=base.height;
+  const out=document.createElement("canvas");
+  out.width=W; out.height=H;
+  const ctx=out.getContext("2d");
+  ctx.drawImage(base,0,0);
+
+  const ov=pageEl.querySelector(".overlay");
+  ov.querySelectorAll(".field,.checkbox").forEach(el=>{
+    const rect=el.getBoundingClientRect(),
+          ref=ov.getBoundingClientRect();
+    const x=rect.left-ref.left,
+          y=rect.top-ref.top;
+    if(el.classList.contains("checkbox")){
+      ctx.fillStyle=el.classList.contains("checked")?"#2f89ff":"#fff";
+      ctx.strokeStyle="#2f89ff"; ctx.lineWidth=2;
+      ctx.strokeRect(x,y,18,18);
+      if(el.classList.contains("checked")) ctx.fillRect(x,y,18,18);
+    } else {
+      ctx.fillStyle="rgba(255,255,255,0.95)";
+      ctx.fillRect(x,y,el.offsetWidth,el.offsetHeight);
+      ctx.strokeStyle="rgba(47,137,255,0.6)";
+      ctx.strokeRect(x,y,el.offsetWidth,el.offsetHeight);
+      const txt=(el.innerText||"").trim();
+      if(txt){
+        ctx.fillStyle="#111";
+        ctx.font="14px system-ui, Segoe UI, Roboto, Arial";
+        ctx.textBaseline="top";
+        const pad=6;
+        ctx.fillText(txt,x+pad,y+4,el.offsetWidth-2*pad);
+      }
+    }
+  });
+  return out;
+}
+
+async function exportSingle(hostId, filename){
+  const host=document.getElementById(hostId);
+  const pages=host.querySelectorAll(".page");
+  if (!pages.length){
+    alert("Nessuna pagina da esportare.");
+    return;
+  }
+  const { jsPDF } = window.jspdf;
+  const first=pages[0].querySelector("canvas");
+  const pdf=new jsPDF({unit:"pt",format:[first.width,first.height]});
+  for(let i=0;i<pages.length;i++){
+    const outCanvas=await rasterizePageWithOverlays(pages[i]);
+    if(i>0) pdf.addPage([outCanvas.width,outCanvas.height]);
+    const img=outCanvas.toDataURL("image/jpeg",0.92);
+    pdf.addImage(img,"JPEG",0,0,outCanvas.width,outCanvas.height);
+  }
+  pdf.save(filename);
+}
+
+document.getElementById("make-pdf-1").onclick=()=>exportSingle("doc1","documento1.pdf");
+document.getElementById("make-pdf-2").onclick=()=>exportSingle("doc2","documento2.pdf");
+
+// --- Caricamento automatico dei PDF presenti in root ---
+async function loadPreloadedPDF(url, hostId, autoBtnId){
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error("File non trovato: " + url);
+    const buf = await resp.arrayBuffer();
+    await renderBufferToHost(buf, hostId);
+    const ab = document.getElementById(autoBtnId);
+    if (ab) ab.disabled = false;
+  } catch (e) {
+    console.warn("PDF non precaricato:", url, e.message);
+  }
+}
+
+// Richiama i due PDF precaricati
+loadPreloadedPDF("VALUTAZIONE ROA LASER ESTETICO.pdf", "doc1", "autoDoc1");
+loadPreloadedPDF("Relazione_ESL_II_modello_editabile 2025.pdf", "doc2", "autoDoc2");
