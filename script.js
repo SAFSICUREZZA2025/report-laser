@@ -70,90 +70,72 @@ document.addEventListener("pointerdown",function(e){
 });
 
 // Evidenzia fluo → campi
+// SOSTITUISCI TUTTA la funzione con questa
 function autoDetectHighlights(host){
   const pages = host.querySelectorAll(".page");
   pages.forEach(page=>{
-    const canvas=page.querySelector("canvas"),
-          ov=page.querySelector(".overlay");
-    if(!canvas||!ov) return;
+    const canvas = page.querySelector("canvas");
+    const ov     = page.querySelector(".overlay");
+    if(!canvas || !ov) return;
 
-    const ctx=canvas.getContext("2d");
-    const W=canvas.width, H=canvas.height;
-    const data=ctx.getImageData(0,0,W,H).data;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const data = ctx.getImageData(0,0,W,H).data;
 
-    const step=3;
-    const gw=Math.floor(W/step)+1,
-          gh=Math.floor(H/step)+1;
-    const seen=new Uint8Array(gw*gh);
-    const idx=(x,y)=>y*gw+x;
-    const isFluo=(r,g,b)=>
-      (r>200&&g>200&&b<170)||
-      (r>230&&g>210&&b<160)||
-      (r<120&&g>200&&b<130);
+    const step = 3;
+    const gw = Math.floor(W/step)+1, gh = Math.floor(H/step)+1;
+    const seen = new Uint8Array(gw*gh);
+    const idx = (x,y)=> y*gw + x;
+
+    // giallo/verde fluo
+    const isFluo = (r,g,b)=>
+      (r>200&&g>200&&b<170) || (r>230&&g>210&&b<160) || (r<120&&g>200&&b<130);
 
     for(let ys=0; ys<H; ys+=step){
       for(let xs=0; xs<W; xs+=step){
-        const gx=Math.floor(xs/step),
-              gy=Math.floor(ys/step),
-              id=idx(gx,gy);
+        const gx=Math.floor(xs/step), gy=Math.floor(ys/step), id=idx(gx,gy);
         if(seen[id]) continue;
 
-        const i=(ys*W+xs)*4,
-              r=data[i], g=data[i+1], b=data[i+2];
+        const i=(ys*W+xs)*4, r=data[i], g=data[i+1], b=data[i+2];
         if(!isFluo(r,g,b)){ seen[id]=1; continue; }
 
+        // flood-fill
         const q=[[gx,gy]]; seen[id]=1;
         let minx=gx,miny=gy,maxx=gx,maxy=gy;
-
         while(q.length){
           const [cx,cy]=q.pop();
-          if(cx<minx)minx=cx;
-          if(cy<miny)miny=cy;
-          if(cx>maxx)maxx=cx;
-          if(cy>maxy)maxy=cy;
+          minx=Math.min(minx,cx); miny=Math.min(miny,cy);
+          maxx=Math.max(maxx,cx); maxy=Math.max(maxy,cy);
           [[cx+1,cy],[cx-1,cy],[cx,cy+1],[cx,cy-1]].forEach(([nx,ny])=>{
             if(nx<0||ny<0||nx>=gw||ny>=gh) return;
-            const nid=idx(nx,ny);
-            if(seen[nid]) return;
-            const px=nx*step, py=ny*step,
-                  pi=(py*W+px)*4;
-            if(isFluo(data[pi],data[pi+1],data[pi+2])){
-              seen[nid]=1;
-              q.push([nx,ny]);
-            } else seen[nid]=1;
+            const nid=idx(nx,ny); if(seen[nid]) return;
+            const px=nx*step, py=ny*step, pi=(py*W+px)*4;
+            if(isFluo(data[pi],data[pi+1],data[pi+2])){ seen[nid]=1; q.push([nx,ny]); }
+            else seen[nid]=1;
           });
         }
 
-        const pad=3;
-        let bx=minx*step+pad,
-            by=miny*step+pad,
-            bw=(maxx-minx+1)*step-2*pad,
-            bh=(maxy-miny+1)*step-2*pad;
+        // bounding box in px
+        const pad=2;
+        const bx=minx*step+pad, by=miny*step+pad;
+        const bw=(maxx-minx+1)*step-2*pad, bh=(maxy-miny+1)*step-2*pad;
 
-        if (bw*bh < 250 || bw < 50 || bh < 12) continue;
-
-        if (bw < 50 && bh < 40){
+        // CREA SOLO QUADRATINI: piccole aree quasi quadrate (case da barrare)
+        const area = bw*bh;
+        const ratio = bw/bh;
+        const isSquareLike = ratio>0.7 && ratio<1.4;
+        if (area>100 && area<1800 && bh>=10 && bh<=40 && isSquareLike){
           const c=document.createElement("div");
           c.className="checkbox";
-          c.style.left=bx+"px";
-          c.style.top=by+"px";
+          c.style.left=bx+"px"; c.style.top=by+"px";
           c.addEventListener("click",e=>{e.stopPropagation();c.classList.toggle("checked");});
           ov.appendChild(c);
-        } else {
-          const f=document.createElement("div");
-          f.className="field";
-          f.contentEditable="true";
-          f.style.left=bx+"px";
-          f.style.top=by+"px";
-          f.style.width=Math.max(70,bw)+"px";
-          f.style.height=Math.max(20,bh)+"px";
-          ov.appendChild(f);
         }
+        // NIENTE campi testo automatici: li aggiungi tu con il click.
       }
     }
   });
 }
-
 // Render PDF con PDF.js
 async function renderBufferToHost(buf,hostId){
   await new Promise(res=>{
