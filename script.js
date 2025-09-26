@@ -281,34 +281,17 @@ async function exportSingle(hostId, filename){
 document.getElementById("make-pdf-1").onclick=()=>exportSingle("doc1","documento1.pdf");
 document.getElementById("make-pdf-2").onclick=()=>exportSingle("doc2","documento2.pdf");
 
-// --- Caricamento automatico dei PDF presenti in root ---
-async function loadPreloadedPDF(url, hostId, autoBtnId){
-  try {
-    const resp = await fetch(url);
-    if (!resp.ok) throw new Error("File non trovato: " + url);
-    const buf = await resp.arrayBuffer();
-    await renderBufferToHost(buf, hostId);
-    const ab = document.getElementById(autoBtnId);
-    if (ab) ab.disabled = false;
-  } catch (e) {
-    console.warn("PDF non precaricato:", url, e.message);
-  }
-}
-
-// Richiama i due PDF precaricati
-loadPreloadedPDF("VALUTAZIONE ROA LASER ESTETICO.pdf", "doc1", "autoDoc1");
-loadPreloadedPDF("Relazione_ESL_II_modello_editabile 2025.pdf", "doc2", "autoDoc2");
 // Export PDF unico (Doc1 + Doc2)
 document.getElementById("make-pdf-all").onclick = async ()=>{
   const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF({ unit:"pt", format:[595,842] }); // default A4, sarà ridimensionato
+  const pdf = new jsPDF({ unit:"pt", format:[595,842] });
 
   async function addHost(hostId){
     const host=document.getElementById(hostId);
     const pages=host.querySelectorAll(".page");
     for(let i=0;i<pages.length;i++){
       const outCanvas=await rasterizePageWithOverlays(pages[i]);
-      if(pdf.getNumberOfPages()>0 || (hostId!=="doc1" || i>0)) pdf.addPage([outCanvas.width,outCanvas.height]);
+      if (pdf.getNumberOfPages()>0) pdf.addPage([outCanvas.width,outCanvas.height]);
       pdf.setPage(pdf.getNumberOfPages());
       const img=outCanvas.toDataURL("image/jpeg",0.92);
       pdf.addImage(img,"JPEG",0,0,outCanvas.width,outCanvas.height);
@@ -318,5 +301,29 @@ document.getElementById("make-pdf-all").onclick = async ()=>{
   if(document.getElementById("doc1").children.length) await addHost("doc1");
   if(document.getElementById("doc2").children.length) await addHost("doc2");
 
+  // rimuovi la prima pagina vuota se presente
+  if (pdf.getNumberOfPages()>1){
+    pdf.deletePage(1);
+  }
   pdf.save("documento_unico.pdf");
 };
+
+// --- Caricamento automatico dei PDF presenti in root + stato UI ---
+async function loadPreloadedPDF(url, hostId, autoBtnId, statusId){
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error("File non trovato: " + url);
+    const buf = await resp.arrayBuffer();
+    await renderBufferToHost(buf, hostId);
+    const ab = document.getElementById(autoBtnId);
+    if (ab) ab.disabled = false;
+    const st = document.getElementById(statusId);
+    if (st) st.textContent = "Documento precaricato";
+  } catch (e) {
+    console.warn("PDF non precaricato:", url, e.message);
+  }
+}
+
+// Richiama i due PDF precaricati (se presenti in root del sito)
+loadPreloadedPDF("VALUTAZIONE ROA LASER ESTETICO.pdf", "doc1", "autoDoc1", "status1");
+loadPreloadedPDF("Relazione_ESL_II_modello_editabile 2025.pdf", "doc2", "autoDoc2", "status2");
