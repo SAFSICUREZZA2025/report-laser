@@ -11,6 +11,19 @@ section.controls{background:#0e2238;border:1px solid #1a3350;border-radius:14px;
 button{background:#2f89ff;border:0;color:white;padding:8px 12px;border-radius:10px;cursor:pointer}
 button:disabled{opacity:.5;cursor:not-allowed}
 .tool.active{background:#1bbf72}
-.field{position:absolute;min-width:80px;min-height:20px;padding:2px 6px;border:1px dashed #2f89ff;border-radius:6px;background:rgba(255,255,255,.9);color:#111;font-size:13px;line-height:1.2;outline:none}
+.field{
+  position:absolute;
+  min-width:80px;
+  min-height:18px;
+  padding:0 2px;
+  border:1px dashed transparent;  /* invisibile finché non attivi */
+  border-radius:4px;
+  background:transparent;          /* non copre il PDF */
+  color:#111;
+  font-size:13px;
+  line-height:1.2;
+  outline:none;
+}
+.field:focus{ border-color:#2f89ff; background:rgba(255,255,255,.15); }
 .checkbox{position:absolute;width:18px;height:18px;border:2px solid #2f89ff;border-radius:4px;background:#fff}
 .checkbox.checked{background:#2f89ff}
