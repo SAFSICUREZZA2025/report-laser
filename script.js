@@ -298,3 +298,25 @@ async function loadPreloadedPDF(url, hostId, autoBtnId){
 // Richiama i due PDF precaricati
 loadPreloadedPDF("VALUTAZIONE ROA LASER ESTETICO.pdf", "doc1", "autoDoc1");
 loadPreloadedPDF("Relazione_ESL_II_modello_editabile 2025.pdf", "doc2", "autoDoc2");
+// Export PDF unico (Doc1 + Doc2)
+document.getElementById("make-pdf-all").onclick = async ()=>{
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF({ unit:"pt", format:[595,842] }); // default A4, sarà ridimensionato
+
+  async function addHost(hostId){
+    const host=document.getElementById(hostId);
+    const pages=host.querySelectorAll(".page");
+    for(let i=0;i<pages.length;i++){
+      const outCanvas=await rasterizePageWithOverlays(pages[i]);
+      if(pdf.getNumberOfPages()>0 || (hostId!=="doc1" || i>0)) pdf.addPage([outCanvas.width,outCanvas.height]);
+      pdf.setPage(pdf.getNumberOfPages());
+      const img=outCanvas.toDataURL("image/jpeg",0.92);
+      pdf.addImage(img,"JPEG",0,0,outCanvas.width,outCanvas.height);
+    }
+  }
+
+  if(document.getElementById("doc1").children.length) await addHost("doc1");
+  if(document.getElementById("doc2").children.length) await addHost("doc2");
+
+  pdf.save("documento_unico.pdf");
+};
