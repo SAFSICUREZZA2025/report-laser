@@ -4,20 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Editor PDF – Modelli integrati</title>
-  <link rel="manifest" href="manifest.json?v=15">
+  <link rel="manifest" href="manifest.json?v=16">
   <meta name="theme-color" content="#2f89ff">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=15" />
-
-  <!-- PDF.js dal CDN -->
+  <link rel="stylesheet" href="style.css?v=16" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
-  <!-- html2canvas + jsPDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-
-  <script src="script.js?v=15" defer></script>
+  <script src="script.js?v=16" defer></script>
 </head>
 <body>
 <header><h1>Editor PDF – Modelli integrati</h1></header>
@@ -41,4 +37,38 @@
           <button id="autoDoc2" disabled>Evidenzia → Campi</button>
         </div>
         <div id="status2" class="status"></div>
-        <input id="file2" type="f
+        <input id="file2" type="file" accept="application/pdf" hidden>
+      </div>
+    </div>
+
+    <div class="row tools">
+      <button class="tool active" id="tool-text">Testo</button>
+      <button class="tool" id="tool-check">✔</button>
+      <button class="tool" id="tool-move">Sposta</button>
+      <button class="tool" id="tool-del">Elimina</button>
+    </div>
+
+    <div class="row final">
+      <button id="make-pdf-1">Esporta PDF Doc 1</button>
+      <button id="make-pdf-2">Esporta PDF Doc 2</button>
+      <button id="make-pdf-all">Esporta PDF Unico (Doc1+Doc2)</button>
+    </div>
+  </section>
+
+  <section class="docs">
+    <div id="doc1" class="doc"></div>
+    <div id="doc2" class="doc"></div>
+  </section>
+</main>
+
+<footer>Build v16</footer>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js?v=16");
+    });
+  }
+</script>
+</body>
+</html>
